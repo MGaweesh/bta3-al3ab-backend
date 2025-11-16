@@ -68,6 +68,22 @@ const writeGamesData = (data) => {
 
 // Routes
 
+// GET /api - API info route
+app.get('/api', (req, res) => {
+  res.json({ 
+    message: 'API is running!',
+    endpoints: {
+      health: '/api/health',
+      allGames: '/api/games',
+      gamesByCategory: '/api/games/:category',
+      addGame: 'POST /api/games/:category',
+      updateGame: 'PUT /api/games/:category/:id',
+      deleteGame: 'DELETE /api/games/:category/:id'
+    },
+    version: '1.0.0'
+  });
+});
+
 // GET all games by category
 app.get('/api/games/:category', (req, res) => {
   try {
@@ -89,11 +105,23 @@ app.get('/api/games/:category', (req, res) => {
 
 // GET all games
 app.get('/api/games', (req, res) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+  
   try {
     const data = readGamesData();
+    console.log('📊 Games data loaded:', {
+      readyToPlay: data.readyToPlay?.length || 0,
+      repack: data.repack?.length || 0,
+      online: data.online?.length || 0,
+      filePath: DATA_FILE,
+      fileExists: existsSync(DATA_FILE)
+    });
     res.json(data);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch games' });
+    console.error('❌ Error fetching games:', error);
+    res.status(500).json({ error: 'Failed to fetch games', details: error.message });
   }
 });
 
