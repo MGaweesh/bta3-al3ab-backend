@@ -51,6 +51,22 @@ const readGamesData = () => {
   }
 };
 
+// Helper function to write games data
+const writeGamesData = (data) => {
+  try {
+    // Ensure data directory exists
+    const dataDir = join(__dirname, 'data');
+    if (!existsSync(dataDir)) {
+      mkdirSync(dataDir, { recursive: true });
+    }
+    writeFileSync(DATA_FILE, JSON.stringify(data, null, 2), 'utf8');
+    return true;
+  } catch (error) {
+    console.error('Error writing games data:', error);
+    return false;
+  }
+};
+
 // Helper function to read movies data
 const readMoviesData = () => {
   try {
@@ -89,22 +105,6 @@ const writeMoviesData = (data) => {
   }
 };
 
-// Helper function to write games data
-const writeGamesData = (data) => {
-  try {
-    // Ensure data directory exists
-    const dataDir = join(__dirname, 'data');
-    if (!existsSync(dataDir)) {
-      mkdirSync(dataDir, { recursive: true });
-    }
-    writeFileSync(DATA_FILE, JSON.stringify(data, null, 2), 'utf8');
-    return true;
-  } catch (error) {
-    console.error('Error writing games data:', error);
-    return false;
-  }
-};
-
 // Routes
 
 // GET /api - API info route
@@ -117,7 +117,12 @@ app.get('/api', (req, res) => {
       gamesByCategory: '/api/games/:category',
       addGame: 'POST /api/games/:category',
       updateGame: 'PUT /api/games/:category/:id',
-      deleteGame: 'DELETE /api/games/:category/:id'
+      deleteGame: 'DELETE /api/games/:category/:id',
+      allMovies: '/api/movies',
+      moviesByType: '/api/movies/:type',
+      addMovie: 'POST /api/movies/:type',
+      updateMovie: 'PUT /api/movies/:type/:id',
+      deleteMovie: 'DELETE /api/movies/:type/:id'
     },
     version: '1.0.0'
   });
@@ -276,11 +281,6 @@ app.delete('/api/games/:category/:id', (req, res) => {
   } catch (error) {
     res.status(500).json({ error: 'Failed to delete game' });
   }
-});
-
-// Health check
-app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', message: 'API is running' });
 });
 
 // ============ MOVIES, TV SHOWS, ANIME ROUTES ============
@@ -446,6 +446,11 @@ app.delete('/api/movies/:type/:id', (req, res) => {
     console.error('❌ Error deleting item:', error);
     res.status(500).json({ error: 'Failed to delete item', details: error.message });
   }
+});
+
+// Health check
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok', message: 'API is running' });
 });
 
 // ----- Serve frontend build (optional) -----
