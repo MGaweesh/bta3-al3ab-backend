@@ -208,24 +208,24 @@ app.post('/api/games/:category', async (req, res) => {
     
     data[category].push(newGame);
     
-    // Write to file IMMEDIATELY and synchronously
-    const writeSuccess = writeGamesData(data);
+    // Write to MongoDB IMMEDIATELY
+    const writeSuccess = await writeGamesData(data);
     
     if (writeSuccess) {
-      // Verify the write by reading the file again
-      const verifyData = readGamesData();
+      // Verify the write by reading from MongoDB again
+      const verifyData = await readGamesData();
       const savedGame = verifyData[category]?.find(g => g.id === newGame.id);
       
       if (savedGame) {
-        console.log(`✅ [${new Date().toISOString()}] Game saved and verified in JSON file: ${newGame.name} (ID: ${newGame.id})`);
+        console.log(`✅ [${new Date().toISOString()}] Game saved and verified in MongoDB: ${newGame.name} (ID: ${newGame.id})`);
         res.status(201).json(newGame);
       } else {
         console.error(`❌ [${new Date().toISOString()}] Game write verification failed: ${newGame.name}`);
-        res.status(500).json({ error: 'Failed to verify game save', details: 'File write verification failed' });
+        res.status(500).json({ error: 'Failed to verify game save', details: 'MongoDB write verification failed' });
       }
     } else {
-      console.error(`❌ [${new Date().toISOString()}] Failed to save game to JSON file: ${newGame.name}`);
-      res.status(500).json({ error: 'Failed to save game', details: 'File write operation failed' });
+      console.error(`❌ [${new Date().toISOString()}] Failed to save game to MongoDB: ${newGame.name}`);
+      res.status(500).json({ error: 'Failed to save game', details: 'MongoDB write operation failed' });
     }
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error adding game:`, error);
@@ -270,24 +270,24 @@ app.put('/api/games/:category/:id', async (req, res) => {
       updatedAt: new Date().toISOString()
     };
     
-    // Write to file IMMEDIATELY and synchronously
-    const writeSuccess = writeGamesData(data);
+    // Write to MongoDB IMMEDIATELY
+    const writeSuccess = await writeGamesData(data);
     
     if (writeSuccess) {
-      // Verify the write by reading the file again
-      const verifyData = readGamesData();
+      // Verify the write by reading from MongoDB again
+      const verifyData = await readGamesData();
       const savedGame = verifyData[category]?.find(g => g.id === gameId);
       
       if (savedGame && JSON.stringify(savedGame) === JSON.stringify(data[category][gameIndex])) {
-        console.log(`✅ [${new Date().toISOString()}] Game updated and verified in JSON file: ${data[category][gameIndex].name} (ID: ${gameId})`);
+        console.log(`✅ [${new Date().toISOString()}] Game updated and verified in MongoDB: ${data[category][gameIndex].name} (ID: ${gameId})`);
         res.json(data[category][gameIndex]);
       } else {
         console.error(`❌ [${new Date().toISOString()}] Game update verification failed: ${oldGame.name} (ID: ${gameId})`);
-        res.status(500).json({ error: 'Failed to verify game update', details: 'File write verification failed' });
+        res.status(500).json({ error: 'Failed to verify game update', details: 'MongoDB write verification failed' });
       }
     } else {
-      console.error(`❌ [${new Date().toISOString()}] Failed to update game in JSON file: ${oldGame.name} (ID: ${gameId})`);
-      res.status(500).json({ error: 'Failed to update game', details: 'File write operation failed' });
+      console.error(`❌ [${new Date().toISOString()}] Failed to update game in MongoDB: ${oldGame.name} (ID: ${gameId})`);
+      res.status(500).json({ error: 'Failed to update game', details: 'MongoDB write operation failed' });
     }
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error updating game:`, error);
@@ -335,15 +335,15 @@ app.delete('/api/games/:category/:id', async (req, res) => {
       const stillExists = verifyData[category]?.find(g => g.id === gameId);
       
       if (!stillExists) {
-        console.log(`✅ [${new Date().toISOString()}] Game deleted and verified from JSON file: ${deletedGame.name} (ID: ${gameId})`);
+        console.log(`✅ [${new Date().toISOString()}] Game deleted and verified from MongoDB: ${deletedGame.name} (ID: ${gameId})`);
         res.json({ message: 'Game deleted successfully' });
       } else {
         console.error(`❌ [${new Date().toISOString()}] Game deletion verification failed: ${deletedGame.name} (ID: ${gameId})`);
-        res.status(500).json({ error: 'Failed to verify game deletion', details: 'File write verification failed' });
+        res.status(500).json({ error: 'Failed to verify game deletion', details: 'MongoDB write verification failed' });
       }
     } else {
-      console.error(`❌ [${new Date().toISOString()}] Failed to delete game from JSON file: ${deletedGame.name} (ID: ${gameId})`);
-      res.status(500).json({ error: 'Failed to delete game', details: 'File write operation failed' });
+      console.error(`❌ [${new Date().toISOString()}] Failed to delete game from MongoDB: ${deletedGame.name} (ID: ${gameId})`);
+      res.status(500).json({ error: 'Failed to delete game', details: 'MongoDB write operation failed' });
     }
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error deleting game:`, error);
@@ -426,24 +426,24 @@ app.post('/api/movies/:type', async (req, res) => {
     
     data[type].push(newItem);
     
-    // Write to file IMMEDIATELY and synchronously
-    const writeSuccess = writeMoviesData(data);
+    // Write to MongoDB IMMEDIATELY
+    const writeSuccess = await writeMoviesData(data);
     
     if (writeSuccess) {
-      // Verify the write by reading the file again
-      const verifyData = readMoviesData();
+      // Verify the write by reading from MongoDB again
+      const verifyData = await readMoviesData();
       const savedItem = verifyData[type]?.find(item => item.id === newItem.id);
       
       if (savedItem) {
-        console.log(`✅ [${new Date().toISOString()}] Item saved and verified in JSON file: ${newItem.name} (ID: ${newItem.id})`);
+        console.log(`✅ [${new Date().toISOString()}] Item saved and verified in MongoDB: ${newItem.name} (ID: ${newItem.id})`);
         res.status(201).json(newItem);
       } else {
         console.error(`❌ [${new Date().toISOString()}] Item write verification failed: ${newItem.name}`);
-        res.status(500).json({ error: 'Failed to verify item save', details: 'File write verification failed' });
+        res.status(500).json({ error: 'Failed to verify item save', details: 'MongoDB write verification failed' });
       }
     } else {
-      console.error(`❌ [${new Date().toISOString()}] Failed to save item to JSON file: ${newItem.name}`);
-      res.status(500).json({ error: 'Failed to save item', details: 'File write operation failed' });
+      console.error(`❌ [${new Date().toISOString()}] Failed to save item to MongoDB: ${newItem.name}`);
+      res.status(500).json({ error: 'Failed to save item', details: 'MongoDB write operation failed' });
     }
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error adding item:`, error);
@@ -488,24 +488,24 @@ app.put('/api/movies/:type/:id', async (req, res) => {
       updatedAt: new Date().toISOString()
     };
     
-    // Write to file IMMEDIATELY and synchronously
-    const writeSuccess = writeMoviesData(data);
+    // Write to MongoDB IMMEDIATELY
+    const writeSuccess = await writeMoviesData(data);
     
     if (writeSuccess) {
-      // Verify the write by reading the file again
-      const verifyData = readMoviesData();
+      // Verify the write by reading from MongoDB again
+      const verifyData = await readMoviesData();
       const savedItem = verifyData[type]?.find(item => item.id === itemId);
       
       if (savedItem && JSON.stringify(savedItem) === JSON.stringify(data[type][itemIndex])) {
-        console.log(`✅ [${new Date().toISOString()}] Item updated and verified in JSON file: ${data[type][itemIndex].name} (ID: ${itemId})`);
+        console.log(`✅ [${new Date().toISOString()}] Item updated and verified in MongoDB: ${data[type][itemIndex].name} (ID: ${itemId})`);
         res.json(data[type][itemIndex]);
       } else {
         console.error(`❌ [${new Date().toISOString()}] Item update verification failed: ${oldItem.name} (ID: ${itemId})`);
-        res.status(500).json({ error: 'Failed to verify item update', details: 'File write verification failed' });
+        res.status(500).json({ error: 'Failed to verify item update', details: 'MongoDB write verification failed' });
       }
     } else {
-      console.error(`❌ [${new Date().toISOString()}] Failed to update item in JSON file: ${oldItem.name} (ID: ${itemId})`);
-      res.status(500).json({ error: 'Failed to update item', details: 'File write operation failed' });
+      console.error(`❌ [${new Date().toISOString()}] Failed to update item in MongoDB: ${oldItem.name} (ID: ${itemId})`);
+      res.status(500).json({ error: 'Failed to update item', details: 'MongoDB write operation failed' });
     }
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error updating item:`, error);
@@ -553,15 +553,15 @@ app.delete('/api/movies/:type/:id', async (req, res) => {
       const stillExists = verifyData[type]?.find(item => item.id === itemId);
       
       if (!stillExists) {
-        console.log(`✅ [${new Date().toISOString()}] Item deleted and verified from JSON file: ${deletedItem.name} (ID: ${itemId})`);
+        console.log(`✅ [${new Date().toISOString()}] Item deleted and verified from MongoDB: ${deletedItem.name} (ID: ${itemId})`);
         res.json({ message: 'Item deleted successfully' });
       } else {
         console.error(`❌ [${new Date().toISOString()}] Item deletion verification failed: ${deletedItem.name} (ID: ${itemId})`);
-        res.status(500).json({ error: 'Failed to verify item deletion', details: 'File write verification failed' });
+        res.status(500).json({ error: 'Failed to verify item deletion', details: 'MongoDB write verification failed' });
       }
     } else {
-      console.error(`❌ [${new Date().toISOString()}] Failed to delete item from JSON file: ${deletedItem.name} (ID: ${itemId})`);
-      res.status(500).json({ error: 'Failed to delete item', details: 'File write operation failed' });
+      console.error(`❌ [${new Date().toISOString()}] Failed to delete item from MongoDB: ${deletedItem.name} (ID: ${itemId})`);
+      res.status(500).json({ error: 'Failed to delete item', details: 'MongoDB write operation failed' });
     }
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error deleting item:`, error);
@@ -614,45 +614,12 @@ app.get('/api/db/status', async (req, res) => {
       }
     }
     
-    // Check file-based storage
-    const gamesFileExists = existsSync(DATA_FILE);
-    const moviesFileExists = existsSync(MOVIES_FILE);
-    
-    let fileStats = null;
-    if (gamesFileExists || moviesFileExists) {
-      try {
-        const gamesData = await readGamesData();
-        const moviesData = await readMoviesData();
-        
-        fileStats = {
-          games: {
-            exists: gamesFileExists,
-            readyToPlay: gamesData.readyToPlay?.length || 0,
-            repack: gamesData.repack?.length || 0,
-            online: gamesData.online?.length || 0
-          },
-          movies: {
-            exists: moviesFileExists,
-            movies: moviesData.movies?.length || 0,
-            tvShows: moviesData.tvShows?.length || 0,
-            anime: moviesData.anime?.length || 0
-          }
-        };
-      } catch (error) {
-        fileStats = { error: error.message };
-      }
-    }
-    
     res.json({
       status: 'ok',
       mongodb: {
         configured: !!process.env.MONGODB_URI,
         connected: hasMongoDB,
         stats: mongoStats
-      },
-      files: {
-        using: !hasMongoDB,
-        stats: fileStats
       },
       timestamp: new Date().toISOString()
     });
@@ -665,70 +632,44 @@ app.get('/api/db/status', async (req, res) => {
   }
 });
 
-// Data status endpoint - Check file status
+// Data status endpoint - Check MongoDB status only
 app.get('/api/data/status', async (req, res) => {
   try {
-    const gamesExists = existsSync(DATA_FILE);
-    const moviesExists = existsSync(MOVIES_FILE);
+    const db = await getDB();
+    const hasMongoDB = !!db;
     
-    let gamesData = null;
-    let moviesData = null;
-    let gamesStats = null;
-    let moviesStats = null;
-    
-    if (gamesExists) {
-      try {
-        gamesData = await readGamesData();
-        const stats = require('fs').statSync(DATA_FILE);
-        gamesStats = {
-          size: stats.size,
-          modified: stats.mtime.toISOString(),
-          readyToPlay: gamesData.readyToPlay?.length || 0,
-          repack: gamesData.repack?.length || 0,
-          online: gamesData.online?.length || 0
-        };
-      } catch (error) {
-        console.error('Error reading games stats:', error);
-      }
+    if (!hasMongoDB) {
+      return res.status(503).json({
+        status: 'error',
+        message: 'MongoDB is required but not available',
+        error: 'Please set MONGODB_URI environment variable'
+      });
     }
     
-    if (moviesExists) {
-      try {
-        moviesData = await readMoviesData();
-        const stats = require('fs').statSync(MOVIES_FILE);
-        moviesStats = {
-          size: stats.size,
-          modified: stats.mtime.toISOString(),
-          movies: moviesData.movies?.length || 0,
-          tvShows: moviesData.tvShows?.length || 0,
-          anime: moviesData.anime?.length || 0
-        };
-      } catch (error) {
-        console.error('Error reading movies stats:', error);
-      }
-    }
+    const gamesCollection = db.collection('games');
+    const moviesCollection = db.collection('movies');
     
-    // Check if we're on Render (temporary filesystem warning)
-    const isRender = process.env.RENDER || process.env.RENDER_SERVICE_NAME;
-    const warning = isRender ? 
-      '⚠️ WARNING: You are on Render. Filesystem is TEMPORARY. Data will be lost on redeploy. Use a database instead!' : 
-      null;
+    const gamesData = await gamesCollection.findOne({ _id: 'main' });
+    const moviesData = await moviesCollection.findOne({ _id: 'main' });
     
     res.json({
       status: 'ok',
-      warning,
-      platform: isRender ? 'Render (Temporary Filesystem)' : 'Local/Persistent',
-      autoCommitEnabled: process.env.AUTO_COMMIT_DATA !== 'false',
-      files: {
+      platform: 'MongoDB Atlas (Persistent)',
+      mongodb: {
+        connected: true,
         games: {
-          exists: gamesExists,
-          path: DATA_FILE,
-          stats: gamesStats
+          exists: !!gamesData,
+          readyToPlay: gamesData?.readyToPlay?.length || 0,
+          repack: gamesData?.repack?.length || 0,
+          online: gamesData?.online?.length || 0,
+          lastUpdated: gamesData?.updatedAt || null
         },
         movies: {
-          exists: moviesExists,
-          path: MOVIES_FILE,
-          stats: moviesStats
+          exists: !!moviesData,
+          movies: moviesData?.movies?.length || 0,
+          tvShows: moviesData?.tvShows?.length || 0,
+          anime: moviesData?.anime?.length || 0,
+          lastUpdated: moviesData?.updatedAt || null
         }
       },
       timestamp: new Date().toISOString()
