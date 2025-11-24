@@ -1,3 +1,4 @@
+import 'dotenv/config'; // Load environment variables from .env file
 import express from 'express';
 import cors from 'cors';
 import compression from 'compression';
@@ -570,8 +571,26 @@ app.delete('/api/movies/:type/:id', async (req, res) => {
 });
 
 // Health check
-app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', message: 'API is running' });
+app.get('/api/health', async (req, res) => {
+  try {
+    const db = await getDB();
+    const mongodbConnected = !!db;
+    
+    res.json({ 
+      status: 'ok', 
+      message: 'API is running',
+      mongodb: {
+        configured: !!process.env.MONGODB_URI,
+        connected: mongodbConnected
+      }
+    });
+  } catch (error) {
+    res.status(503).json({ 
+      status: 'error', 
+      message: 'API is running but MongoDB connection failed',
+      error: error.message 
+    });
+  }
 });
 
 // Database status endpoint - Check MongoDB connection and data
@@ -684,25 +703,32 @@ app.get('/api/data/status', async (req, res) => {
 });
 
 // ----- Serve frontend build (optional) -----
-// لو عايز تسيرف build بتاع الفرونت بعد ما تعمل build
+// IMPORTANT: This must be AFTER all API routes
 const frontendBuildPath = join(__dirname, '..', 'frontend', 'dist');
 
-// Serve static files from frontend/dist
+// Serve static files from frontend/dist (ONLY for non-API routes)
 if (existsSync(frontendBuildPath)) {
-  app.use(express.static(frontendBuildPath));
+  // Serve static files, but skip API routes
+  app.use((req, res, next) => {
+    if (req.path.startsWith('/api')) {
+      return next(); // Skip static files for API routes
+    }
+    express.static(frontendBuildPath)(req, res, next);
+  });
   
-  // Catch-all route for SPA routing
-  // لو الطلب مش API يبقى نرجع index.html من build
+  // Catch-all route for SPA routing (ONLY for non-API routes)
+  // This must be the LAST route
   app.get('*', (req, res) => {
-    // لو الطلب API route مش موجود، نرجع 404
+    // API routes should have been handled above - return 404 if we reach here
     if (req.path.startsWith('/api')) {
       return res.status(404).json({ error: 'API route not found' });
     }
-    // غير كده نرجع index.html للـ SPA routing
+    // Return index.html for SPA routing
     res.sendFile(join(frontendBuildPath, 'index.html'));
   });
 } else {
-  // لو مش موجود build، نعطي رسالة
+  // لو مش موجود build، نعطي رسالة (ONLY for non-API routes)
+  // This must be the LAST route
   app.get('*', (req, res) => {
     if (req.path.startsWith('/api')) {
       return res.status(404).json({ error: 'API route not found' });
