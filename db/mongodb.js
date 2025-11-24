@@ -2,47 +2,110 @@ import { MongoClient } from 'mongodb';
 
 let client = null;
 let db = null;
+let isConnecting = false;
+let connectionAttempts = 0;
+const MAX_RETRIES = 3;
 
-// MongoDB connection
-const connectDB = async () => {
+// MongoDB connection with retry logic
+const connectDB = async (retry = false) => {
   try {
     const uri = process.env.MONGODB_URI;
     
     if (!uri) {
-      console.log('⚠️  MONGODB_URI not set, using file-based storage');
+      console.error('❌ MONGODB_URI not set. Please set MONGODB_URI environment variable.');
       return null;
     }
 
+    // If already connected, return existing connection
     if (client && db) {
-      return db;
+      try {
+        // Test connection
+        await client.db().admin().ping();
+        return db;
+      } catch (err) {
+        // Connection lost, reset and reconnect
+        console.log('🔄 MongoDB connection lost, reconnecting...');
+        client = null;
+        db = null;
+      }
     }
+
+    // Prevent multiple simultaneous connection attempts
+    if (isConnecting) {
+      console.log('⏳ MongoDB connection in progress, waiting...');
+      // Wait up to 5 seconds for existing connection attempt
+      for (let i = 0; i < 50; i++) {
+        await new Promise(resolve => setTimeout(resolve, 100));
+        if (db) return db;
+      }
+    }
+
+    isConnecting = true;
+    connectionAttempts++;
 
     // Connection options for better performance
     const options = {
       maxPoolSize: 10, // Maintain up to 10 socket connections
-      serverSelectionTimeoutMS: 5000, // Keep trying to send operations for 5 seconds
+      serverSelectionTimeoutMS: 10000, // Keep trying to send operations for 10 seconds
       socketTimeoutMS: 45000, // Close sockets after 45 seconds of inactivity
       connectTimeoutMS: 10000, // Give up initial connection after 10 seconds
+      retryWrites: true,
+      retryReads: true,
     };
     
     client = new MongoClient(uri, options);
     await client.connect();
-    // Use database name from URI or default to 'bta3al3ab'
-    const dbName = uri.match(/mongodb\+srv:\/\/[^/]+\/([^?]+)/)?.[1] || 'bta3al3ab';
+    
+    // Use database name from URI or default to 'cluster0'
+    const dbName = uri.match(/mongodb\+srv:\/\/[^/]+\/([^?]+)/)?.[1] || 
+                   uri.match(/mongodb:\/\/[^/]+\/([^?]+)/)?.[1] || 
+                   'cluster0';
     db = client.db(dbName);
     
+    // Test the connection
+    await db.admin().ping();
+    
     console.log(`✅ Connected to MongoDB - Database: ${dbName}`);
+    connectionAttempts = 0; // Reset on success
+    isConnecting = false;
     return db;
   } catch (error) {
-    console.error('❌ MongoDB connection error:', error);
+    isConnecting = false;
+    console.error(`❌ MongoDB connection error (attempt ${connectionAttempts}/${MAX_RETRIES}):`, error.message);
+    
+    // Retry logic
+    if (connectionAttempts < MAX_RETRIES && !retry) {
+      console.log(`🔄 Retrying MongoDB connection in 2 seconds...`);
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      return await connectDB(true);
+    }
+    
+    // Reset connection state on final failure
+    if (connectionAttempts >= MAX_RETRIES) {
+      client = null;
+      db = null;
+      connectionAttempts = 0;
+      console.error('❌ MongoDB connection failed after maximum retries');
+    }
+    
     return null;
   }
 };
 
-// Get database instance
+// Get database instance with automatic reconnection
 const getDB = async () => {
   if (!db) {
-    await connectDB();
+    db = await connectDB();
+  } else {
+    // Verify connection is still alive
+    try {
+      await db.admin().ping();
+    } catch (error) {
+      console.log('🔄 MongoDB connection lost, reconnecting...');
+      client = null;
+      db = null;
+      db = await connectDB();
+    }
   }
   return db;
 };
