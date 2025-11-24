@@ -1,45 +1,74 @@
 import express from 'express';
 import cors from 'cors';
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
+import compression from 'compression';
+import { existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 // Import database functions (with fallback to files)
 import { readGamesData as readGamesFromDB, writeGamesData as writeGamesToDB } from './db/games-db.js';
 import { readMoviesData as readMoviesFromDB, writeMoviesData as writeMoviesToDB } from './db/movies-db.js';
-import { connectDB } from './db/mongodb.js';
+import { connectDB, getDB } from './db/mongodb.js';
 
-// Optional auto-commit function (only if script exists)
-const commitDataFiles = async () => {
-  try {
-    // Dynamic import - only loads if file exists
-    const { commitDataFiles: commitFn } = await import('./scripts/auto-commit-data.js');
-    return await commitFn();
-  } catch (error) {
-    // File doesn't exist or error - this is OK, auto-commit is optional
-    if (error.code === 'ERR_MODULE_NOT_FOUND') {
-      // Silently ignore - auto-commit is optional
-      return false;
-    }
-    console.log('⚠️  Auto-commit failed (non-critical):', error.message);
-    return false;
-  }
+// In-memory cache for faster responses
+const cache = {
+  games: null,
+  movies: null,
+  lastUpdated: {
+    games: null,
+    movies: null
+  },
+  // Cache TTL: 30 seconds (refresh every 30 seconds)
+  ttl: 30000
 };
+
+// Helper to check if cache is valid
+const isCacheValid = (type) => {
+  if (!cache[type] || !cache.lastUpdated[type]) return false;
+  const now = Date.now();
+  const lastUpdate = cache.lastUpdated[type];
+  return (now - lastUpdate) < cache.ttl;
+};
+
+// Helper to get cached data or fetch fresh
+const getCachedData = async (type, fetchFn) => {
+  if (isCacheValid(type)) {
+    console.log(`⚡ Using cached ${type} data`);
+    return cache[type];
+  }
+  
+  console.log(`🔄 Fetching fresh ${type} data`);
+  const data = await fetchFn();
+  cache[type] = data;
+  cache.lastUpdated[type] = Date.now();
+  return data;
+};
+
+// Invalidate cache when data is updated
+const invalidateCache = (type) => {
+  cache[type] = null;
+  cache.lastUpdated[type] = null;
+  console.log(`🗑️  Cache invalidated for ${type}`);
+};
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-const DATA_FILE = join(__dirname, 'data', 'games.json');
-const MOVIES_FILE = join(__dirname, 'data', 'movies.json');
 
-// Initialize database connection on startup
-connectDB().catch(err => {
-  console.log('⚠️  MongoDB not available, using file-based storage:', err.message);
+// Initialize database connection on startup - REQUIRED
+connectDB().then(() => {
+  console.log('✅ MongoDB connection initialized - Data is safe and persistent!');
+}).catch(err => {
+  console.error('❌ CRITICAL: MongoDB connection failed:', err.message);
+  console.error('❌ System will not work without MongoDB. Please set MONGODB_URI environment variable.');
+  // Don't exit - let it fail on first request with clear error message
 });
 
 // Middleware
 app.use(cors({ origin: '*' })); // بعد رفع الفرونت غيّرها للدومين فقط
+app.use(compression()); // Compress responses for faster transfer
 app.use(express.json());
 
 // ----- ROOT route -----
@@ -54,52 +83,38 @@ app.get('/', (req, res) => {
   });
 });
 
-// Helper function to read games data (uses MongoDB if available, falls back to file)
-const readGamesData = async () => {
-  try {
-    return await readGamesFromDB();
-  } catch (error) {
-    console.error('Error reading games data:', error);
-    return {
-      readyToPlay: [],
-      repack: [],
-      online: []
-    };
+// Helper function to read games data (uses cache + MongoDB ONLY)
+const readGamesData = async (useCache = true) => {
+  if (useCache) {
+    return await getCachedData('games', readGamesFromDB);
   }
+  return await readGamesFromDB();
 };
 
-// Helper function to write games data (uses MongoDB if available, falls back to file)
+// Helper function to write games data (MongoDB ONLY + invalidates cache)
 const writeGamesData = async (data) => {
-  try {
-    return await writeGamesToDB(data);
-  } catch (error) {
-    console.error('❌ Error writing games data:', error);
-    return false;
+  const result = await writeGamesToDB(data);
+  if (result) {
+    invalidateCache('games'); // Invalidate cache after write
   }
+  return result;
 };
 
-// Helper function to read movies data (uses MongoDB if available, falls back to file)
-const readMoviesData = async () => {
-  try {
-    return await readMoviesFromDB();
-  } catch (error) {
-    console.error('Error reading movies data:', error);
-    return {
-      movies: [],
-      tvShows: [],
-      anime: []
-    };
+// Helper function to read movies data (uses cache + MongoDB ONLY)
+const readMoviesData = async (useCache = true) => {
+  if (useCache) {
+    return await getCachedData('movies', readMoviesFromDB);
   }
+  return await readMoviesFromDB();
 };
 
-// Helper function to write movies data (uses MongoDB if available, falls back to file)
+// Helper function to write movies data (MongoDB ONLY + invalidates cache)
 const writeMoviesData = async (data) => {
-  try {
-    return await writeMoviesToDB(data);
-  } catch (error) {
-    console.error('❌ Error writing movies data:', error);
-    return false;
+  const result = await writeMoviesToDB(data);
+  if (result) {
+    invalidateCache('movies'); // Invalidate cache after write
   }
+  return result;
 };
 
 // Routes
@@ -559,6 +574,97 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'API is running' });
 });
 
+// Database status endpoint - Check MongoDB connection and data
+app.get('/api/db/status', async (req, res) => {
+  try {
+    const db = await getDB();
+    const hasMongoDB = !!db;
+    
+    let mongoStats = null;
+    if (hasMongoDB) {
+      try {
+        const gamesCollection = db.collection('games');
+        const moviesCollection = db.collection('movies');
+        
+        const gamesData = await gamesCollection.findOne({ _id: 'main' });
+        const moviesData = await moviesCollection.findOne({ _id: 'main' });
+        
+        mongoStats = {
+          connected: true,
+          games: {
+            exists: !!gamesData,
+            readyToPlay: gamesData?.readyToPlay?.length || 0,
+            repack: gamesData?.repack?.length || 0,
+            online: gamesData?.online?.length || 0,
+            lastUpdated: gamesData?.updatedAt || null
+          },
+          movies: {
+            exists: !!moviesData,
+            movies: moviesData?.movies?.length || 0,
+            tvShows: moviesData?.tvShows?.length || 0,
+            anime: moviesData?.anime?.length || 0,
+            lastUpdated: moviesData?.updatedAt || null
+          }
+        };
+      } catch (error) {
+        mongoStats = {
+          connected: true,
+          error: error.message
+        };
+      }
+    }
+    
+    // Check file-based storage
+    const gamesFileExists = existsSync(DATA_FILE);
+    const moviesFileExists = existsSync(MOVIES_FILE);
+    
+    let fileStats = null;
+    if (gamesFileExists || moviesFileExists) {
+      try {
+        const gamesData = await readGamesData();
+        const moviesData = await readMoviesData();
+        
+        fileStats = {
+          games: {
+            exists: gamesFileExists,
+            readyToPlay: gamesData.readyToPlay?.length || 0,
+            repack: gamesData.repack?.length || 0,
+            online: gamesData.online?.length || 0
+          },
+          movies: {
+            exists: moviesFileExists,
+            movies: moviesData.movies?.length || 0,
+            tvShows: moviesData.tvShows?.length || 0,
+            anime: moviesData.anime?.length || 0
+          }
+        };
+      } catch (error) {
+        fileStats = { error: error.message };
+      }
+    }
+    
+    res.json({
+      status: 'ok',
+      mongodb: {
+        configured: !!process.env.MONGODB_URI,
+        connected: hasMongoDB,
+        stats: mongoStats
+      },
+      files: {
+        using: !hasMongoDB,
+        stats: fileStats
+      },
+      timestamp: new Date().toISOString()
+    });
+  } catch (error) {
+    res.status(500).json({ 
+      status: 'error', 
+      message: 'Failed to check database status',
+      error: error.message 
+    });
+  }
+});
+
 // Data status endpoint - Check file status
 app.get('/api/data/status', async (req, res) => {
   try {
@@ -670,7 +776,7 @@ if (existsSync(frontendBuildPath)) {
 // Start server
 app.listen(PORT, () => {
   console.log(`🚀 Server is running on http://localhost:${PORT}`);
-  console.log(`📁 Data file: ${DATA_FILE}`);
+  console.log(`🗄️  Using MongoDB as primary data storage`);
   if (existsSync(frontendBuildPath)) {
     console.log(`✅ Frontend build found: Serving static files from ${frontendBuildPath}`);
   } else {
