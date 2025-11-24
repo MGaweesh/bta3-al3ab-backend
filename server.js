@@ -5,52 +5,10 @@ import compression from 'compression';
 import { existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
-// Import database functions (with fallback to files)
-import { readGamesData as readGamesFromDB, writeGamesData as writeGamesToDB } from './db/games-db.js';
-import { readMoviesData as readMoviesFromDB, writeMoviesData as writeMoviesToDB } from './db/movies-db.js';
-import { connectDB, getDB } from './db/mongodb.js';
-
-// In-memory cache for faster responses
-const cache = {
-  games: null,
-  movies: null,
-  lastUpdated: {
-    games: null,
-    movies: null
-  },
-  // Cache TTL: 30 seconds (refresh every 30 seconds)
-  ttl: 30000
-};
-
-// Helper to check if cache is valid
-const isCacheValid = (type) => {
-  if (!cache[type] || !cache.lastUpdated[type]) return false;
-  const now = Date.now();
-  const lastUpdate = cache.lastUpdated[type];
-  return (now - lastUpdate) < cache.ttl;
-};
-
-// Helper to get cached data or fetch fresh
-const getCachedData = async (type, fetchFn) => {
-  if (isCacheValid(type)) {
-    console.log(`⚡ Using cached ${type} data`);
-    return cache[type];
-  }
-  
-  console.log(`🔄 Fetching fresh ${type} data`);
-  const data = await fetchFn();
-  cache[type] = data;
-  cache.lastUpdated[type] = Date.now();
-  return data;
-};
-
-// Invalidate cache when data is updated
-const invalidateCache = (type) => {
-  cache[type] = null;
-  cache.lastUpdated[type] = null;
-  console.log(`🗑️  Cache invalidated for ${type}`);
-};
-
+// Import JSON file functions
+import { readGamesData as readGamesFromFile, writeGamesData as writeGamesToFile } from './db/games-db.js';
+import { readMoviesData as readMoviesFromFile, writeMoviesData as writeMoviesToFile } from './db/movies-db.js';
+import { commitFileToGitHub, testGitHubConnection } from './db/github-sync.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -58,18 +16,9 @@ const __dirname = dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Initialize database connection on startup - REQUIRED
-connectDB().then(() => {
-  console.log('✅ MongoDB connection initialized - Data is safe and persistent!');
-}).catch(err => {
-  console.error('❌ CRITICAL: MongoDB connection failed:', err.message);
-  console.error('❌ System will not work without MongoDB. Please set MONGODB_URI environment variable.');
-  // Don't exit - let it fail on first request with clear error message
-});
-
 // Middleware
-app.use(cors({ origin: '*' })); // بعد رفع الفرونت غيّرها للدومين فقط
-app.use(compression()); // Compress responses for faster transfer
+app.use(cors({ origin: '*' }));
+app.use(compression());
 app.use(express.json());
 
 // ----- ROOT route -----
@@ -79,86 +28,37 @@ app.get('/', (req, res) => {
     api: {
       health: '/api/health',
       games: '/api/games',
-      gamesByCategory: '/api/games/:category'
-    }
-  });
-});
-
-// Helper function to read games data (uses cache + MongoDB ONLY)
-const readGamesData = async (useCache = true) => {
-  if (useCache) {
-    return await getCachedData('games', readGamesFromDB);
-  }
-  return await readGamesFromDB();
-};
-
-// Helper function to write games data (MongoDB ONLY + invalidates cache)
-const writeGamesData = async (data) => {
-  const result = await writeGamesToDB(data);
-  if (result) {
-    invalidateCache('games'); // Invalidate cache after write
-  }
-  return result;
-};
-
-// Helper function to read movies data (uses cache + MongoDB ONLY)
-const readMoviesData = async (useCache = true) => {
-  if (useCache) {
-    return await getCachedData('movies', readMoviesFromDB);
-  }
-  return await readMoviesFromDB();
-};
-
-// Helper function to write movies data (MongoDB ONLY + invalidates cache)
-const writeMoviesData = async (data) => {
-  const result = await writeMoviesToDB(data);
-  if (result) {
-    invalidateCache('movies'); // Invalidate cache after write
-  }
-  return result;
-};
-
-// Routes
-
-// GET /api - API info route
-app.get('/api', (req, res) => {
-  res.json({ 
-    message: 'API is running!',
-    endpoints: {
-      health: '/api/health',
-      allGames: '/api/games',
       gamesByCategory: '/api/games/:category',
-      addGame: 'POST /api/games/:category',
-      updateGame: 'PUT /api/games/:category/:id',
-      deleteGame: 'DELETE /api/games/:category/:id',
-      allMovies: '/api/movies',
-      moviesByType: '/api/movies/:type',
-      addMovie: 'POST /api/movies/:type',
-      updateMovie: 'PUT /api/movies/:type/:id',
-      deleteMovie: 'DELETE /api/movies/:type/:id'
+      movies: '/api/movies',
+      moviesByType: '/api/movies/:type'
     },
-    version: '1.0.0'
+    storage: 'JSON files with GitHub sync'
   });
 });
 
-// GET all games by category
-app.get('/api/games/:category', async (req, res) => {
-  try {
-    const { category } = req.params;
-    const validCategories = ['readyToPlay', 'repack', 'online'];
-    
-    if (!validCategories.includes(category)) {
-      return res.status(400).json({ 
-        error: 'Invalid category. Must be one of: readyToPlay, repack, online' 
-      });
-    }
-    
-    const data = await readGamesData();
-    res.json(data[category] || []);
-  } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch games' });
-  }
-});
+// Helper function to read games data
+const readGamesData = async () => {
+  return await readGamesFromFile();
+};
+
+// Helper function to write games data
+const writeGamesData = async (data, action = 'update') => {
+  const result = await writeGamesToFile(data, action);
+  return result;
+};
+
+// Helper function to read movies data
+const readMoviesData = async () => {
+  return await readMoviesFromFile();
+};
+
+// Helper function to write movies data
+const writeMoviesData = async (data, action = 'update') => {
+  const result = await writeMoviesToFile(data, action);
+  return result;
+};
+
+// ============ GAMES ROUTES ============
 
 // GET all games
 app.get('/api/games', async (req, res) => {
@@ -180,6 +80,25 @@ app.get('/api/games', async (req, res) => {
   }
 });
 
+// GET games by category
+app.get('/api/games/:category', async (req, res) => {
+  try {
+    const { category } = req.params;
+    const validCategories = ['readyToPlay', 'repack', 'online'];
+    
+    if (!validCategories.includes(category)) {
+      return res.status(400).json({ 
+        error: 'Invalid category. Must be one of: readyToPlay, repack, online' 
+      });
+    }
+    
+    const data = await readGamesData();
+    res.json(data[category] || []);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch games' });
+  }
+});
+
 // POST - Add a new game
 app.post('/api/games/:category', async (req, res) => {
   try {
@@ -193,19 +112,9 @@ app.post('/api/games/:category', async (req, res) => {
     }
     
     console.log(`📝 [${new Date().toISOString()}] Adding new game to category: ${category}`);
-    console.log(`📦 Game data:`, req.body);
     
-    // Check MongoDB connection first
-    const db = await getDB();
-    if (!db) {
-      return res.status(503).json({ 
-        error: 'MongoDB is not available', 
-        details: 'Please check MONGODB_URI environment variable and MongoDB connection' 
-      });
-    }
-    
-    // Read data from database IMMEDIATELY (no caching)
-    const data = await readGamesData(false); // Force fresh read
+    // Read data from file
+    const data = await readGamesData();
     const newGame = {
       id: Date.now(),
       ...req.body,
@@ -218,31 +127,33 @@ app.post('/api/games/:category', async (req, res) => {
     
     data[category].push(newGame);
     
-    // Write to MongoDB IMMEDIATELY
-    const writeSuccess = await writeGamesData(data);
+    // Write to file and commit to GitHub
+    const writeResult = await writeGamesData(data, `add game: ${newGame.name || 'unnamed'}`);
     
-    if (writeSuccess) {
-      // Verify the write by reading from MongoDB again
-      const verifyData = await readGamesData(false); // Force fresh read
-      const savedGame = verifyData[category]?.find(g => g.id === newGame.id);
-      
-      if (savedGame) {
-        console.log(`✅ [${new Date().toISOString()}] Game saved and verified in MongoDB: ${newGame.name} (ID: ${newGame.id})`);
-        res.status(201).json(newGame);
-      } else {
-        console.error(`❌ [${new Date().toISOString()}] Game write verification failed: ${newGame.name}`);
-        res.status(500).json({ error: 'Failed to verify game save', details: 'MongoDB write verification failed' });
+    if (writeResult.success) {
+      console.log(`✅ [${new Date().toISOString()}] Game saved: ${newGame.name} (ID: ${newGame.id})`);
+      if (writeResult.github) {
+        console.log(`✅ Committed to GitHub: ${writeResult.commitUrl}`);
       }
+      
+      res.status(201).json({
+        ...newGame,
+        _github: writeResult.github ? { committed: true, commitUrl: writeResult.commitUrl } : { committed: false, message: writeResult.message }
+      });
     } else {
-      console.error(`❌ [${new Date().toISOString()}] Failed to save game to MongoDB: ${newGame.name}`);
-      res.status(500).json({ error: 'Failed to save game', details: 'MongoDB write operation failed' });
+      console.error(`❌ [${new Date().toISOString()}] Failed to save game: ${newGame.name}`);
+      res.status(500).json({ 
+        status: 'error',
+        error: 'Failed to save game', 
+        details: writeResult.error || 'Unknown error'
+      });
     }
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error adding game:`, error);
     res.status(500).json({ 
+      status: 'error',
       error: 'Failed to add game', 
-      details: error.message,
-      type: error.name || 'UnknownError'
+      details: error.message
     });
   }
 });
@@ -260,9 +171,8 @@ app.put('/api/games/:category/:id', async (req, res) => {
     }
     
     console.log(`📝 [${new Date().toISOString()}] Updating game in category: ${category}, ID: ${id}`);
-    console.log(`📦 Update data:`, req.body);
     
-    // Read data from database/file IMMEDIATELY (no caching)
+    // Read data from file
     const data = await readGamesData();
     const gameId = parseInt(id);
     
@@ -284,28 +194,34 @@ app.put('/api/games/:category/:id', async (req, res) => {
       updatedAt: new Date().toISOString()
     };
     
-    // Write to MongoDB IMMEDIATELY
-    const writeSuccess = await writeGamesData(data);
+    // Write to file and commit to GitHub
+    const writeResult = await writeGamesData(data, `update game: ${data[category][gameIndex].name || 'unnamed'}`);
     
-    if (writeSuccess) {
-      // Verify the write by reading from MongoDB again
-      const verifyData = await readGamesData();
-      const savedGame = verifyData[category]?.find(g => g.id === gameId);
-      
-      if (savedGame && JSON.stringify(savedGame) === JSON.stringify(data[category][gameIndex])) {
-        console.log(`✅ [${new Date().toISOString()}] Game updated and verified in MongoDB: ${data[category][gameIndex].name} (ID: ${gameId})`);
-        res.json(data[category][gameIndex]);
-      } else {
-        console.error(`❌ [${new Date().toISOString()}] Game update verification failed: ${oldGame.name} (ID: ${gameId})`);
-        res.status(500).json({ error: 'Failed to verify game update', details: 'MongoDB write verification failed' });
+    if (writeResult.success) {
+      console.log(`✅ [${new Date().toISOString()}] Game updated: ${data[category][gameIndex].name} (ID: ${gameId})`);
+      if (writeResult.github) {
+        console.log(`✅ Committed to GitHub: ${writeResult.commitUrl}`);
       }
+      
+      res.json({
+        ...data[category][gameIndex],
+        _github: writeResult.github ? { committed: true, commitUrl: writeResult.commitUrl } : { committed: false, message: writeResult.message }
+      });
     } else {
-      console.error(`❌ [${new Date().toISOString()}] Failed to update game in MongoDB: ${oldGame.name} (ID: ${gameId})`);
-      res.status(500).json({ error: 'Failed to update game', details: 'MongoDB write operation failed' });
+      console.error(`❌ [${new Date().toISOString()}] Failed to update game: ${oldGame.name}`);
+      res.status(500).json({ 
+        status: 'error',
+        error: 'Failed to update game', 
+        details: writeResult.error || 'Unknown error'
+      });
     }
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error updating game:`, error);
-    res.status(500).json({ error: 'Failed to update game', details: error.message });
+    res.status(500).json({ 
+      status: 'error',
+      error: 'Failed to update game', 
+      details: error.message 
+    });
   }
 });
 
@@ -323,17 +239,8 @@ app.delete('/api/games/:category/:id', async (req, res) => {
     
     console.log(`🗑️  [${new Date().toISOString()}] Deleting game from category: ${category}, ID: ${id}`);
     
-    // Check MongoDB connection first
-    const db = await getDB();
-    if (!db) {
-      return res.status(503).json({ 
-        error: 'MongoDB is not available', 
-        details: 'Please check MONGODB_URI environment variable and MongoDB connection' 
-      });
-    }
-    
-    // Read data from database IMMEDIATELY (no caching)
-    const data = await readGamesData(false); // Force fresh read
+    // Read data from file
+    const data = await readGamesData();
     const gameId = parseInt(id);
     
     if (!data[category]) {
@@ -349,28 +256,35 @@ app.delete('/api/games/:category/:id', async (req, res) => {
     const deletedGame = data[category][gameIndex];
     data[category].splice(gameIndex, 1);
     
-    // Write to database IMMEDIATELY
-    const writeSuccess = await writeGamesData(data);
+    // Write to file and commit to GitHub
+    const writeResult = await writeGamesData(data, `delete game: ${deletedGame.name || 'unnamed'}`);
     
-    if (writeSuccess) {
-      // Verify the write by reading the database/file again
-      const verifyData = await readGamesData();
-      const stillExists = verifyData[category]?.find(g => g.id === gameId);
-      
-      if (!stillExists) {
-        console.log(`✅ [${new Date().toISOString()}] Game deleted and verified from MongoDB: ${deletedGame.name} (ID: ${gameId})`);
-        res.json({ message: 'Game deleted successfully' });
-      } else {
-        console.error(`❌ [${new Date().toISOString()}] Game deletion verification failed: ${deletedGame.name} (ID: ${gameId})`);
-        res.status(500).json({ error: 'Failed to verify game deletion', details: 'MongoDB write verification failed' });
+    if (writeResult.success) {
+      console.log(`✅ [${new Date().toISOString()}] Game deleted: ${deletedGame.name} (ID: ${gameId})`);
+      if (writeResult.github) {
+        console.log(`✅ Committed to GitHub: ${writeResult.commitUrl}`);
       }
+      
+      res.json({ 
+        status: 'ok',
+        message: 'Game deleted successfully',
+        _github: writeResult.github ? { committed: true, commitUrl: writeResult.commitUrl } : { committed: false, message: writeResult.message }
+      });
     } else {
-      console.error(`❌ [${new Date().toISOString()}] Failed to delete game from MongoDB: ${deletedGame.name} (ID: ${gameId})`);
-      res.status(500).json({ error: 'Failed to delete game', details: 'MongoDB write operation failed' });
+      console.error(`❌ [${new Date().toISOString()}] Failed to delete game: ${deletedGame.name}`);
+      res.status(500).json({ 
+        status: 'error',
+        error: 'Failed to delete game', 
+        details: writeResult.error || 'Unknown error'
+      });
     }
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error deleting game:`, error);
-    res.status(500).json({ error: 'Failed to delete game', details: error.message });
+    res.status(500).json({ 
+      status: 'error',
+      error: 'Failed to delete game', 
+      details: error.message 
+    });
   }
 });
 
@@ -433,19 +347,9 @@ app.post('/api/movies/:type', async (req, res) => {
     }
     
     console.log(`📝 [${new Date().toISOString()}] Adding new item to type: ${type}`);
-    console.log(`📦 Item data:`, req.body);
     
-    // Check MongoDB connection first
-    const db = await getDB();
-    if (!db) {
-      return res.status(503).json({ 
-        error: 'MongoDB is not available', 
-        details: 'Please check MONGODB_URI environment variable and MongoDB connection' 
-      });
-    }
-    
-    // Read data from database IMMEDIATELY (no caching)
-    const data = await readMoviesData(false); // Force fresh read
+    // Read data from file
+    const data = await readMoviesData();
     const newItem = {
       id: Date.now(),
       ...req.body,
@@ -458,31 +362,33 @@ app.post('/api/movies/:type', async (req, res) => {
     
     data[type].push(newItem);
     
-    // Write to MongoDB IMMEDIATELY
-    const writeSuccess = await writeMoviesData(data);
+    // Write to file and commit to GitHub
+    const writeResult = await writeMoviesData(data, `add ${type}: ${newItem.name || 'unnamed'}`);
     
-    if (writeSuccess) {
-      // Verify the write by reading from MongoDB again
-      const verifyData = await readMoviesData(false); // Force fresh read
-      const savedItem = verifyData[type]?.find(item => item.id === newItem.id);
-      
-      if (savedItem) {
-        console.log(`✅ [${new Date().toISOString()}] Item saved and verified in MongoDB: ${newItem.name} (ID: ${newItem.id})`);
-        res.status(201).json(newItem);
-      } else {
-        console.error(`❌ [${new Date().toISOString()}] Item write verification failed: ${newItem.name}`);
-        res.status(500).json({ error: 'Failed to verify item save', details: 'MongoDB write verification failed' });
+    if (writeResult.success) {
+      console.log(`✅ [${new Date().toISOString()}] Item saved: ${newItem.name} (ID: ${newItem.id})`);
+      if (writeResult.github) {
+        console.log(`✅ Committed to GitHub: ${writeResult.commitUrl}`);
       }
+      
+      res.status(201).json({
+        ...newItem,
+        _github: writeResult.github ? { committed: true, commitUrl: writeResult.commitUrl } : { committed: false, message: writeResult.message }
+      });
     } else {
-      console.error(`❌ [${new Date().toISOString()}] Failed to save item to MongoDB: ${newItem.name}`);
-      res.status(500).json({ error: 'Failed to save item', details: 'MongoDB write operation failed' });
+      console.error(`❌ [${new Date().toISOString()}] Failed to save item: ${newItem.name}`);
+      res.status(500).json({ 
+        status: 'error',
+        error: 'Failed to save item', 
+        details: writeResult.error || 'Unknown error'
+      });
     }
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error adding item:`, error);
     res.status(500).json({ 
+      status: 'error',
       error: 'Failed to add item', 
-      details: error.message,
-      type: error.name || 'UnknownError'
+      details: error.message
     });
   }
 });
@@ -500,9 +406,8 @@ app.put('/api/movies/:type/:id', async (req, res) => {
     }
     
     console.log(`📝 [${new Date().toISOString()}] Updating item in type: ${type}, ID: ${id}`);
-    console.log(`📦 Update data:`, req.body);
     
-    // Read data from database/file IMMEDIATELY (no caching)
+    // Read data from file
     const data = await readMoviesData();
     const itemId = parseInt(id);
     
@@ -524,28 +429,34 @@ app.put('/api/movies/:type/:id', async (req, res) => {
       updatedAt: new Date().toISOString()
     };
     
-    // Write to MongoDB IMMEDIATELY
-    const writeSuccess = await writeMoviesData(data);
+    // Write to file and commit to GitHub
+    const writeResult = await writeMoviesData(data, `update ${type}: ${data[type][itemIndex].name || 'unnamed'}`);
     
-    if (writeSuccess) {
-      // Verify the write by reading from MongoDB again
-      const verifyData = await readMoviesData();
-      const savedItem = verifyData[type]?.find(item => item.id === itemId);
-      
-      if (savedItem && JSON.stringify(savedItem) === JSON.stringify(data[type][itemIndex])) {
-        console.log(`✅ [${new Date().toISOString()}] Item updated and verified in MongoDB: ${data[type][itemIndex].name} (ID: ${itemId})`);
-        res.json(data[type][itemIndex]);
-      } else {
-        console.error(`❌ [${new Date().toISOString()}] Item update verification failed: ${oldItem.name} (ID: ${itemId})`);
-        res.status(500).json({ error: 'Failed to verify item update', details: 'MongoDB write verification failed' });
+    if (writeResult.success) {
+      console.log(`✅ [${new Date().toISOString()}] Item updated: ${data[type][itemIndex].name} (ID: ${itemId})`);
+      if (writeResult.github) {
+        console.log(`✅ Committed to GitHub: ${writeResult.commitUrl}`);
       }
+      
+      res.json({
+        ...data[type][itemIndex],
+        _github: writeResult.github ? { committed: true, commitUrl: writeResult.commitUrl } : { committed: false, message: writeResult.message }
+      });
     } else {
-      console.error(`❌ [${new Date().toISOString()}] Failed to update item in MongoDB: ${oldItem.name} (ID: ${itemId})`);
-      res.status(500).json({ error: 'Failed to update item', details: 'MongoDB write operation failed' });
+      console.error(`❌ [${new Date().toISOString()}] Failed to update item: ${oldItem.name}`);
+      res.status(500).json({ 
+        status: 'error',
+        error: 'Failed to update item', 
+        details: writeResult.error || 'Unknown error'
+      });
     }
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error updating item:`, error);
-    res.status(500).json({ error: 'Failed to update item', details: error.message });
+    res.status(500).json({ 
+      status: 'error',
+      error: 'Failed to update item', 
+      details: error.message 
+    });
   }
 });
 
@@ -563,17 +474,8 @@ app.delete('/api/movies/:type/:id', async (req, res) => {
     
     console.log(`🗑️  [${new Date().toISOString()}] Deleting item from type: ${type}, ID: ${id}`);
     
-    // Check MongoDB connection first
-    const db = await getDB();
-    if (!db) {
-      return res.status(503).json({ 
-        error: 'MongoDB is not available', 
-        details: 'Please check MONGODB_URI environment variable and MongoDB connection' 
-      });
-    }
-    
-    // Read data from database IMMEDIATELY (no caching)
-    const data = await readMoviesData(false); // Force fresh read
+    // Read data from file
+    const data = await readMoviesData();
     const itemId = parseInt(id);
     
     if (!data[type]) {
@@ -589,151 +491,128 @@ app.delete('/api/movies/:type/:id', async (req, res) => {
     const deletedItem = data[type][itemIndex];
     data[type].splice(itemIndex, 1);
     
-    // Write to database IMMEDIATELY
-    const writeSuccess = await writeMoviesData(data);
+    // Write to file and commit to GitHub
+    const writeResult = await writeMoviesData(data, `delete ${type}: ${deletedItem.name || 'unnamed'}`);
     
-    if (writeSuccess) {
-      // Verify the write by reading the database/file again
-      const verifyData = await readMoviesData();
-      const stillExists = verifyData[type]?.find(item => item.id === itemId);
-      
-      if (!stillExists) {
-        console.log(`✅ [${new Date().toISOString()}] Item deleted and verified from MongoDB: ${deletedItem.name} (ID: ${itemId})`);
-        res.json({ message: 'Item deleted successfully' });
-      } else {
-        console.error(`❌ [${new Date().toISOString()}] Item deletion verification failed: ${deletedItem.name} (ID: ${itemId})`);
-        res.status(500).json({ error: 'Failed to verify item deletion', details: 'MongoDB write verification failed' });
+    if (writeResult.success) {
+      console.log(`✅ [${new Date().toISOString()}] Item deleted: ${deletedItem.name} (ID: ${itemId})`);
+      if (writeResult.github) {
+        console.log(`✅ Committed to GitHub: ${writeResult.commitUrl}`);
       }
+      
+      res.json({ 
+        status: 'ok',
+        message: 'Item deleted successfully',
+        _github: writeResult.github ? { committed: true, commitUrl: writeResult.commitUrl } : { committed: false, message: writeResult.message }
+      });
     } else {
-      console.error(`❌ [${new Date().toISOString()}] Failed to delete item from MongoDB: ${deletedItem.name} (ID: ${itemId})`);
-      res.status(500).json({ error: 'Failed to delete item', details: 'MongoDB write operation failed' });
+      console.error(`❌ [${new Date().toISOString()}] Failed to delete item: ${deletedItem.name}`);
+      res.status(500).json({ 
+        status: 'error',
+        error: 'Failed to delete item', 
+        details: writeResult.error || 'Unknown error'
+      });
     }
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error deleting item:`, error);
-    res.status(500).json({ error: 'Failed to delete item', details: error.message });
+    res.status(500).json({ 
+      status: 'error',
+      error: 'Failed to delete item', 
+      details: error.message 
+    });
   }
 });
+
+// ============ HEALTH & DEBUG ROUTES ============
 
 // Health check
 app.get('/api/health', async (req, res) => {
   try {
-    const db = await getDB();
-    const mongodbConnected = !!db;
+    const githubTest = await testGitHubConnection();
     
     res.json({ 
       status: 'ok', 
       message: 'API is running',
-      mongodb: {
-        configured: !!process.env.MONGODB_URI,
-        connected: mongodbConnected
+      storage: 'JSON files',
+      github: {
+        configured: !!process.env.GITHUB_TOKEN && !!process.env.GITHUB_OWNER && !!process.env.GITHUB_REPO,
+        connection: githubTest.success ? 'ok' : 'failed',
+        error: githubTest.error || null
       }
     });
   } catch (error) {
     res.status(503).json({ 
       status: 'error', 
-      message: 'API is running but MongoDB connection failed',
+      message: 'API is running but health check failed',
       error: error.message 
     });
   }
 });
 
-// Database status endpoint - Check MongoDB connection and data
-app.get('/api/db/status', async (req, res) => {
+// Debug: Test GitHub commit
+app.post('/api/debug/commit-test', async (req, res) => {
   try {
-    const db = await getDB();
-    const hasMongoDB = !!db;
+    const testData = { test: true, timestamp: new Date().toISOString() };
+    const testFilePath = join(__dirname, '..', 'data', 'test-commit.json');
+    const testRepoPath = 'test/test-commit.json';
     
-    let mongoStats = null;
-    if (hasMongoDB) {
-      try {
-        const gamesCollection = db.collection('games');
-        const moviesCollection = db.collection('movies');
-        
-        const gamesData = await gamesCollection.findOne({ _id: 'main' });
-        const moviesData = await moviesCollection.findOne({ _id: 'main' });
-        
-        mongoStats = {
-          connected: true,
-          games: {
-            exists: !!gamesData,
-            readyToPlay: gamesData?.readyToPlay?.length || 0,
-            repack: gamesData?.repack?.length || 0,
-            online: gamesData?.online?.length || 0,
-            lastUpdated: gamesData?.updatedAt || null
-          },
-          movies: {
-            exists: !!moviesData,
-            movies: moviesData?.movies?.length || 0,
-            tvShows: moviesData?.tvShows?.length || 0,
-            anime: moviesData?.anime?.length || 0,
-            lastUpdated: moviesData?.updatedAt || null
-          }
-        };
-      } catch (error) {
-        mongoStats = {
-          connected: true,
-          error: error.message
-        };
-      }
-    }
+    // Write test file
+    const fs = await import('fs');
+    fs.writeFileSync(testFilePath, JSON.stringify(testData, null, 2), 'utf8');
+    
+    // Try to commit
+    const commitMessage = `Test commit from dashboard — ${new Date().toISOString()}`;
+    const result = await commitFileToGitHub(testFilePath, testRepoPath, commitMessage);
     
     res.json({
       status: 'ok',
-      mongodb: {
-        configured: !!process.env.MONGODB_URI,
-        connected: hasMongoDB,
-        stats: mongoStats
-      },
-      timestamp: new Date().toISOString()
+      message: 'Test commit successful',
+      result: {
+        commitUrl: result.commitUrl,
+        sha: result.sha,
+        commitSha: result.commitSha
+      }
     });
   } catch (error) {
-    res.status(500).json({ 
-      status: 'error', 
-      message: 'Failed to check database status',
-      error: error.message 
+    console.error('❌ Test commit failed:', error);
+    res.status(500).json({
+      status: 'error',
+      error: 'Test commit failed',
+      details: error.message,
+      hint: 'Check GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO, and GITHUB_BRANCH environment variables'
     });
   }
 });
 
-// Data status endpoint - Check MongoDB status only
+// Data status endpoint
 app.get('/api/data/status', async (req, res) => {
   try {
-    const db = await getDB();
-    const hasMongoDB = !!db;
-    
-    if (!hasMongoDB) {
-      return res.status(503).json({
-        status: 'error',
-        message: 'MongoDB is required but not available',
-        error: 'Please set MONGODB_URI environment variable'
-      });
-    }
-    
-    const gamesCollection = db.collection('games');
-    const moviesCollection = db.collection('movies');
-    
-    const gamesData = await gamesCollection.findOne({ _id: 'main' });
-    const moviesData = await moviesCollection.findOne({ _id: 'main' });
+    const gamesData = await readGamesData();
+    const moviesData = await readMoviesData();
+    const githubTest = await testGitHubConnection();
     
     res.json({
       status: 'ok',
-      platform: 'MongoDB Atlas (Persistent)',
-      mongodb: {
-        connected: true,
+      platform: 'JSON files with GitHub sync',
+      files: {
         games: {
-          exists: !!gamesData,
-          readyToPlay: gamesData?.readyToPlay?.length || 0,
-          repack: gamesData?.repack?.length || 0,
-          online: gamesData?.online?.length || 0,
-          lastUpdated: gamesData?.updatedAt || null
+          exists: true,
+          readyToPlay: gamesData.readyToPlay?.length || 0,
+          repack: gamesData.repack?.length || 0,
+          online: gamesData.online?.length || 0
         },
         movies: {
-          exists: !!moviesData,
-          movies: moviesData?.movies?.length || 0,
-          tvShows: moviesData?.tvShows?.length || 0,
-          anime: moviesData?.anime?.length || 0,
-          lastUpdated: moviesData?.updatedAt || null
+          exists: true,
+          movies: moviesData.movies?.length || 0,
+          tvShows: moviesData.tvShows?.length || 0,
+          anime: moviesData.anime?.length || 0
         }
+      },
+      github: {
+        configured: !!process.env.GITHUB_TOKEN,
+        connected: githubTest.success,
+        repo: githubTest.repo || null,
+        error: githubTest.error || null
       },
       timestamp: new Date().toISOString()
     });
@@ -787,11 +666,11 @@ if (existsSync(frontendBuildPath)) {
 // Start server
 app.listen(PORT, () => {
   console.log(`🚀 Server is running on http://localhost:${PORT}`);
-  console.log(`🗄️  Using MongoDB as primary data storage`);
+  console.log(`📁 Using JSON files with GitHub sync`);
+  console.log(`🔗 GitHub: ${process.env.GITHUB_OWNER || 'not configured'}/${process.env.GITHUB_REPO || 'not configured'}`);
   if (existsSync(frontendBuildPath)) {
     console.log(`✅ Frontend build found: Serving static files from ${frontendBuildPath}`);
   } else {
     console.log(`⚠️  Frontend build not found. Run "npm run build" in frontend folder to serve frontend.`);
   }
 });
-
