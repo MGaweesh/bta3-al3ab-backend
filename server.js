@@ -3,7 +3,23 @@ import cors from 'cors';
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
-import { commitDataFiles } from './scripts/auto-commit-data.js';
+
+// Optional auto-commit function (only if script exists)
+const commitDataFiles = async () => {
+  try {
+    // Dynamic import - only loads if file exists
+    const { commitDataFiles: commitFn } = await import('./scripts/auto-commit-data.js');
+    return await commitFn();
+  } catch (error) {
+    // File doesn't exist or error - this is OK, auto-commit is optional
+    if (error.code === 'ERR_MODULE_NOT_FOUND') {
+      // Silently ignore - auto-commit is optional
+      return false;
+    }
+    console.log('⚠️  Auto-commit failed (non-critical):', error.message);
+    return false;
+  }
+};
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
