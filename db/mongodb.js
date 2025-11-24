@@ -56,10 +56,23 @@ const connectDB = async (retry = false) => {
     client = new MongoClient(uri, options);
     await client.connect();
     
-    // Use database name from URI or default to 'cluster0'
-    const dbName = uri.match(/mongodb\+srv:\/\/[^/]+\/([^?]+)/)?.[1] || 
-                   uri.match(/mongodb:\/\/[^/]+\/([^?]+)/)?.[1] || 
-                   'cluster0';
+    // Extract database name from URI
+    // Format: mongodb+srv://user:pass@cluster.mongodb.net/dbname?options
+    let dbName = 'cluster0'; // Default database name
+    
+    // Try to extract from URI path
+    const uriPathMatch = uri.match(/mongodb\+srv:\/\/[^/]+\/([^?]+)/);
+    if (uriPathMatch && uriPathMatch[1]) {
+      dbName = uriPathMatch[1];
+    } else {
+      // If no database in path, check if it's in query params or use default
+      const uriQueryMatch = uri.match(/[?&]db=([^&]+)/);
+      if (uriQueryMatch && uriQueryMatch[1]) {
+        dbName = uriQueryMatch[1];
+      }
+    }
+    
+    console.log(`🔗 Connecting to MongoDB database: ${dbName}`);
     db = client.db(dbName);
     
     // Test the connection
