@@ -195,8 +195,17 @@ app.post('/api/games/:category', async (req, res) => {
     console.log(`📝 [${new Date().toISOString()}] Adding new game to category: ${category}`);
     console.log(`📦 Game data:`, req.body);
     
-    // Read data from database/file IMMEDIATELY (no caching)
-    const data = await readGamesData();
+    // Check MongoDB connection first
+    const db = await getDB();
+    if (!db) {
+      return res.status(503).json({ 
+        error: 'MongoDB is not available', 
+        details: 'Please check MONGODB_URI environment variable and MongoDB connection' 
+      });
+    }
+    
+    // Read data from database IMMEDIATELY (no caching)
+    const data = await readGamesData(false); // Force fresh read
     const newGame = {
       id: Date.now(),
       ...req.body,
@@ -214,7 +223,7 @@ app.post('/api/games/:category', async (req, res) => {
     
     if (writeSuccess) {
       // Verify the write by reading from MongoDB again
-      const verifyData = await readGamesData();
+      const verifyData = await readGamesData(false); // Force fresh read
       const savedGame = verifyData[category]?.find(g => g.id === newGame.id);
       
       if (savedGame) {
@@ -230,7 +239,11 @@ app.post('/api/games/:category', async (req, res) => {
     }
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error adding game:`, error);
-    res.status(500).json({ error: 'Failed to add game', details: error.message });
+    res.status(500).json({ 
+      error: 'Failed to add game', 
+      details: error.message,
+      type: error.name || 'UnknownError'
+    });
   }
 });
 
@@ -310,8 +323,17 @@ app.delete('/api/games/:category/:id', async (req, res) => {
     
     console.log(`🗑️  [${new Date().toISOString()}] Deleting game from category: ${category}, ID: ${id}`);
     
-    // Read data from database/file IMMEDIATELY (no caching)
-    const data = await readGamesData();
+    // Check MongoDB connection first
+    const db = await getDB();
+    if (!db) {
+      return res.status(503).json({ 
+        error: 'MongoDB is not available', 
+        details: 'Please check MONGODB_URI environment variable and MongoDB connection' 
+      });
+    }
+    
+    // Read data from database IMMEDIATELY (no caching)
+    const data = await readGamesData(false); // Force fresh read
     const gameId = parseInt(id);
     
     if (!data[category]) {
@@ -327,7 +349,7 @@ app.delete('/api/games/:category/:id', async (req, res) => {
     const deletedGame = data[category][gameIndex];
     data[category].splice(gameIndex, 1);
     
-    // Write to database/file IMMEDIATELY
+    // Write to database IMMEDIATELY
     const writeSuccess = await writeGamesData(data);
     
     if (writeSuccess) {
@@ -413,8 +435,17 @@ app.post('/api/movies/:type', async (req, res) => {
     console.log(`📝 [${new Date().toISOString()}] Adding new item to type: ${type}`);
     console.log(`📦 Item data:`, req.body);
     
-    // Read data from database/file IMMEDIATELY (no caching)
-    const data = await readMoviesData();
+    // Check MongoDB connection first
+    const db = await getDB();
+    if (!db) {
+      return res.status(503).json({ 
+        error: 'MongoDB is not available', 
+        details: 'Please check MONGODB_URI environment variable and MongoDB connection' 
+      });
+    }
+    
+    // Read data from database IMMEDIATELY (no caching)
+    const data = await readMoviesData(false); // Force fresh read
     const newItem = {
       id: Date.now(),
       ...req.body,
@@ -432,7 +463,7 @@ app.post('/api/movies/:type', async (req, res) => {
     
     if (writeSuccess) {
       // Verify the write by reading from MongoDB again
-      const verifyData = await readMoviesData();
+      const verifyData = await readMoviesData(false); // Force fresh read
       const savedItem = verifyData[type]?.find(item => item.id === newItem.id);
       
       if (savedItem) {
@@ -448,7 +479,11 @@ app.post('/api/movies/:type', async (req, res) => {
     }
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error adding item:`, error);
-    res.status(500).json({ error: 'Failed to add item', details: error.message });
+    res.status(500).json({ 
+      error: 'Failed to add item', 
+      details: error.message,
+      type: error.name || 'UnknownError'
+    });
   }
 });
 
@@ -528,8 +563,17 @@ app.delete('/api/movies/:type/:id', async (req, res) => {
     
     console.log(`🗑️  [${new Date().toISOString()}] Deleting item from type: ${type}, ID: ${id}`);
     
-    // Read data from database/file IMMEDIATELY (no caching)
-    const data = await readMoviesData();
+    // Check MongoDB connection first
+    const db = await getDB();
+    if (!db) {
+      return res.status(503).json({ 
+        error: 'MongoDB is not available', 
+        details: 'Please check MONGODB_URI environment variable and MongoDB connection' 
+      });
+    }
+    
+    // Read data from database IMMEDIATELY (no caching)
+    const data = await readMoviesData(false); // Force fresh read
     const itemId = parseInt(id);
     
     if (!data[type]) {
@@ -545,7 +589,7 @@ app.delete('/api/movies/:type/:id', async (req, res) => {
     const deletedItem = data[type][itemIndex];
     data[type].splice(itemIndex, 1);
     
-    // Write to database/file IMMEDIATELY
+    // Write to database IMMEDIATELY
     const writeSuccess = await writeMoviesData(data);
     
     if (writeSuccess) {
