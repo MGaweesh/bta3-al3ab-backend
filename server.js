@@ -3,6 +3,7 @@ import cors from 'cors';
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { commitDataFiles } from './scripts/auto-commit-data.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -59,10 +60,53 @@ const writeGamesData = (data) => {
     if (!existsSync(dataDir)) {
       mkdirSync(dataDir, { recursive: true });
     }
-    writeFileSync(DATA_FILE, JSON.stringify(data, null, 2), 'utf8');
+    
+    // Create backup before writing
+    const backupDir = join(__dirname, 'data', 'backups');
+    if (!existsSync(backupDir)) {
+      mkdirSync(backupDir, { recursive: true });
+    }
+    
+    if (existsSync(DATA_FILE)) {
+      const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+      const backupFile = join(backupDir, `games-backup-${timestamp}.json`);
+      const currentData = readFileSync(DATA_FILE, 'utf8');
+      writeFileSync(backupFile, currentData, 'utf8');
+      console.log(`📦 Backup created: ${backupFile}`);
+    }
+    
+    // Write new data
+    const jsonData = JSON.stringify(data, null, 2);
+    writeFileSync(DATA_FILE, jsonData, 'utf8');
+    
+    // Verify write was successful
+    const verifyData = readFileSync(DATA_FILE, 'utf8');
+    const parsed = JSON.parse(verifyData);
+    
+    console.log(`✅ Games data saved successfully at ${new Date().toISOString()}`);
+    console.log(`📊 Data summary:`, {
+      readyToPlay: parsed.readyToPlay?.length || 0,
+      repack: parsed.repack?.length || 0,
+      online: parsed.online?.length || 0,
+      filePath: DATA_FILE
+    });
+    
+    // Try to commit to Git (non-blocking, runs in background)
+    // This helps preserve data on Render and other platforms
+    if (process.env.AUTO_COMMIT_DATA !== 'false') {
+      commitDataFiles().catch(err => {
+        console.log('⚠️  Auto-commit failed (non-critical):', err.message);
+      });
+    }
+    
     return true;
   } catch (error) {
-    console.error('Error writing games data:', error);
+    console.error('❌ Error writing games data:', error);
+    console.error('Error details:', {
+      message: error.message,
+      stack: error.stack,
+      filePath: DATA_FILE
+    });
     return false;
   }
 };
@@ -97,10 +141,53 @@ const writeMoviesData = (data) => {
     if (!existsSync(dataDir)) {
       mkdirSync(dataDir, { recursive: true });
     }
-    writeFileSync(MOVIES_FILE, JSON.stringify(data, null, 2), 'utf8');
+    
+    // Create backup before writing
+    const backupDir = join(__dirname, 'data', 'backups');
+    if (!existsSync(backupDir)) {
+      mkdirSync(backupDir, { recursive: true });
+    }
+    
+    if (existsSync(MOVIES_FILE)) {
+      const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+      const backupFile = join(backupDir, `movies-backup-${timestamp}.json`);
+      const currentData = readFileSync(MOVIES_FILE, 'utf8');
+      writeFileSync(backupFile, currentData, 'utf8');
+      console.log(`📦 Backup created: ${backupFile}`);
+    }
+    
+    // Write new data
+    const jsonData = JSON.stringify(data, null, 2);
+    writeFileSync(MOVIES_FILE, jsonData, 'utf8');
+    
+    // Verify write was successful
+    const verifyData = readFileSync(MOVIES_FILE, 'utf8');
+    const parsed = JSON.parse(verifyData);
+    
+    console.log(`✅ Movies data saved successfully at ${new Date().toISOString()}`);
+    console.log(`📊 Data summary:`, {
+      movies: parsed.movies?.length || 0,
+      tvShows: parsed.tvShows?.length || 0,
+      anime: parsed.anime?.length || 0,
+      filePath: MOVIES_FILE
+    });
+    
+    // Try to commit to Git (non-blocking, runs in background)
+    // This helps preserve data on Render and other platforms
+    if (process.env.AUTO_COMMIT_DATA !== 'false') {
+      commitDataFiles().catch(err => {
+        console.log('⚠️  Auto-commit failed (non-critical):', err.message);
+      });
+    }
+    
     return true;
   } catch (error) {
-    console.error('Error writing movies data:', error);
+    console.error('❌ Error writing movies data:', error);
+    console.error('Error details:', {
+      message: error.message,
+      stack: error.stack,
+      filePath: MOVIES_FILE
+    });
     return false;
   }
 };
@@ -181,6 +268,10 @@ app.post('/api/games/:category', (req, res) => {
       });
     }
     
+    console.log(`📝 [${new Date().toISOString()}] Adding new game to category: ${category}`);
+    console.log(`📦 Game data:`, req.body);
+    
+    // Read data from file IMMEDIATELY (no caching)
     const data = readGamesData();
     const newGame = {
       id: Date.now(),
@@ -194,13 +285,28 @@ app.post('/api/games/:category', (req, res) => {
     
     data[category].push(newGame);
     
-    if (writeGamesData(data)) {
-      res.status(201).json(newGame);
+    // Write to file IMMEDIATELY and synchronously
+    const writeSuccess = writeGamesData(data);
+    
+    if (writeSuccess) {
+      // Verify the write by reading the file again
+      const verifyData = readGamesData();
+      const savedGame = verifyData[category]?.find(g => g.id === newGame.id);
+      
+      if (savedGame) {
+        console.log(`✅ [${new Date().toISOString()}] Game saved and verified in JSON file: ${newGame.name} (ID: ${newGame.id})`);
+        res.status(201).json(newGame);
+      } else {
+        console.error(`❌ [${new Date().toISOString()}] Game write verification failed: ${newGame.name}`);
+        res.status(500).json({ error: 'Failed to verify game save', details: 'File write verification failed' });
+      }
     } else {
-      res.status(500).json({ error: 'Failed to save game' });
+      console.error(`❌ [${new Date().toISOString()}] Failed to save game to JSON file: ${newGame.name}`);
+      res.status(500).json({ error: 'Failed to save game', details: 'File write operation failed' });
     }
   } catch (error) {
-    res.status(500).json({ error: 'Failed to add game' });
+    console.error(`❌ [${new Date().toISOString()}] Error adding game:`, error);
+    res.status(500).json({ error: 'Failed to add game', details: error.message });
   }
 });
 
@@ -216,6 +322,10 @@ app.put('/api/games/:category/:id', (req, res) => {
       });
     }
     
+    console.log(`📝 [${new Date().toISOString()}] Updating game in category: ${category}, ID: ${id}`);
+    console.log(`📦 Update data:`, req.body);
+    
+    // Read data from file IMMEDIATELY (no caching)
     const data = readGamesData();
     const gameId = parseInt(id);
     
@@ -229,6 +339,7 @@ app.put('/api/games/:category/:id', (req, res) => {
       return res.status(404).json({ error: 'Game not found' });
     }
     
+    const oldGame = { ...data[category][gameIndex] };
     data[category][gameIndex] = {
       ...data[category][gameIndex],
       ...req.body,
@@ -236,13 +347,28 @@ app.put('/api/games/:category/:id', (req, res) => {
       updatedAt: new Date().toISOString()
     };
     
-    if (writeGamesData(data)) {
-      res.json(data[category][gameIndex]);
+    // Write to file IMMEDIATELY and synchronously
+    const writeSuccess = writeGamesData(data);
+    
+    if (writeSuccess) {
+      // Verify the write by reading the file again
+      const verifyData = readGamesData();
+      const savedGame = verifyData[category]?.find(g => g.id === gameId);
+      
+      if (savedGame && JSON.stringify(savedGame) === JSON.stringify(data[category][gameIndex])) {
+        console.log(`✅ [${new Date().toISOString()}] Game updated and verified in JSON file: ${data[category][gameIndex].name} (ID: ${gameId})`);
+        res.json(data[category][gameIndex]);
+      } else {
+        console.error(`❌ [${new Date().toISOString()}] Game update verification failed: ${oldGame.name} (ID: ${gameId})`);
+        res.status(500).json({ error: 'Failed to verify game update', details: 'File write verification failed' });
+      }
     } else {
-      res.status(500).json({ error: 'Failed to update game' });
+      console.error(`❌ [${new Date().toISOString()}] Failed to update game in JSON file: ${oldGame.name} (ID: ${gameId})`);
+      res.status(500).json({ error: 'Failed to update game', details: 'File write operation failed' });
     }
   } catch (error) {
-    res.status(500).json({ error: 'Failed to update game' });
+    console.error(`❌ [${new Date().toISOString()}] Error updating game:`, error);
+    res.status(500).json({ error: 'Failed to update game', details: error.message });
   }
 });
 
@@ -258,6 +384,9 @@ app.delete('/api/games/:category/:id', (req, res) => {
       });
     }
     
+    console.log(`🗑️  [${new Date().toISOString()}] Deleting game from category: ${category}, ID: ${id}`);
+    
+    // Read data from file IMMEDIATELY (no caching)
     const data = readGamesData();
     const gameId = parseInt(id);
     
@@ -271,15 +400,31 @@ app.delete('/api/games/:category/:id', (req, res) => {
       return res.status(404).json({ error: 'Game not found' });
     }
     
+    const deletedGame = data[category][gameIndex];
     data[category].splice(gameIndex, 1);
     
-    if (writeGamesData(data)) {
-      res.json({ message: 'Game deleted successfully' });
+    // Write to file IMMEDIATELY and synchronously
+    const writeSuccess = writeGamesData(data);
+    
+    if (writeSuccess) {
+      // Verify the write by reading the file again
+      const verifyData = readGamesData();
+      const stillExists = verifyData[category]?.find(g => g.id === gameId);
+      
+      if (!stillExists) {
+        console.log(`✅ [${new Date().toISOString()}] Game deleted and verified from JSON file: ${deletedGame.name} (ID: ${gameId})`);
+        res.json({ message: 'Game deleted successfully' });
+      } else {
+        console.error(`❌ [${new Date().toISOString()}] Game deletion verification failed: ${deletedGame.name} (ID: ${gameId})`);
+        res.status(500).json({ error: 'Failed to verify game deletion', details: 'File write verification failed' });
+      }
     } else {
-      res.status(500).json({ error: 'Failed to delete game' });
+      console.error(`❌ [${new Date().toISOString()}] Failed to delete game from JSON file: ${deletedGame.name} (ID: ${gameId})`);
+      res.status(500).json({ error: 'Failed to delete game', details: 'File write operation failed' });
     }
   } catch (error) {
-    res.status(500).json({ error: 'Failed to delete game' });
+    console.error(`❌ [${new Date().toISOString()}] Error deleting game:`, error);
+    res.status(500).json({ error: 'Failed to delete game', details: error.message });
   }
 });
 
@@ -343,6 +488,10 @@ app.post('/api/movies/:type', (req, res) => {
       });
     }
     
+    console.log(`📝 [${new Date().toISOString()}] Adding new item to type: ${type}`);
+    console.log(`📦 Item data:`, req.body);
+    
+    // Read data from file IMMEDIATELY (no caching)
     const data = readMoviesData();
     const newItem = {
       id: Date.now(),
@@ -356,13 +505,27 @@ app.post('/api/movies/:type', (req, res) => {
     
     data[type].push(newItem);
     
-    if (writeMoviesData(data)) {
-      res.status(201).json(newItem);
+    // Write to file IMMEDIATELY and synchronously
+    const writeSuccess = writeMoviesData(data);
+    
+    if (writeSuccess) {
+      // Verify the write by reading the file again
+      const verifyData = readMoviesData();
+      const savedItem = verifyData[type]?.find(item => item.id === newItem.id);
+      
+      if (savedItem) {
+        console.log(`✅ [${new Date().toISOString()}] Item saved and verified in JSON file: ${newItem.name} (ID: ${newItem.id})`);
+        res.status(201).json(newItem);
+      } else {
+        console.error(`❌ [${new Date().toISOString()}] Item write verification failed: ${newItem.name}`);
+        res.status(500).json({ error: 'Failed to verify item save', details: 'File write verification failed' });
+      }
     } else {
-      res.status(500).json({ error: 'Failed to save item' });
+      console.error(`❌ [${new Date().toISOString()}] Failed to save item to JSON file: ${newItem.name}`);
+      res.status(500).json({ error: 'Failed to save item', details: 'File write operation failed' });
     }
   } catch (error) {
-    console.error('❌ Error adding item:', error);
+    console.error(`❌ [${new Date().toISOString()}] Error adding item:`, error);
     res.status(500).json({ error: 'Failed to add item', details: error.message });
   }
 });
@@ -379,6 +542,10 @@ app.put('/api/movies/:type/:id', (req, res) => {
       });
     }
     
+    console.log(`📝 [${new Date().toISOString()}] Updating item in type: ${type}, ID: ${id}`);
+    console.log(`📦 Update data:`, req.body);
+    
+    // Read data from file IMMEDIATELY (no caching)
     const data = readMoviesData();
     const itemId = parseInt(id);
     
@@ -392,6 +559,7 @@ app.put('/api/movies/:type/:id', (req, res) => {
       return res.status(404).json({ error: 'Item not found' });
     }
     
+    const oldItem = { ...data[type][itemIndex] };
     data[type][itemIndex] = {
       ...data[type][itemIndex],
       ...req.body,
@@ -399,13 +567,27 @@ app.put('/api/movies/:type/:id', (req, res) => {
       updatedAt: new Date().toISOString()
     };
     
-    if (writeMoviesData(data)) {
-      res.json(data[type][itemIndex]);
+    // Write to file IMMEDIATELY and synchronously
+    const writeSuccess = writeMoviesData(data);
+    
+    if (writeSuccess) {
+      // Verify the write by reading the file again
+      const verifyData = readMoviesData();
+      const savedItem = verifyData[type]?.find(item => item.id === itemId);
+      
+      if (savedItem && JSON.stringify(savedItem) === JSON.stringify(data[type][itemIndex])) {
+        console.log(`✅ [${new Date().toISOString()}] Item updated and verified in JSON file: ${data[type][itemIndex].name} (ID: ${itemId})`);
+        res.json(data[type][itemIndex]);
+      } else {
+        console.error(`❌ [${new Date().toISOString()}] Item update verification failed: ${oldItem.name} (ID: ${itemId})`);
+        res.status(500).json({ error: 'Failed to verify item update', details: 'File write verification failed' });
+      }
     } else {
-      res.status(500).json({ error: 'Failed to update item' });
+      console.error(`❌ [${new Date().toISOString()}] Failed to update item in JSON file: ${oldItem.name} (ID: ${itemId})`);
+      res.status(500).json({ error: 'Failed to update item', details: 'File write operation failed' });
     }
   } catch (error) {
-    console.error('❌ Error updating item:', error);
+    console.error(`❌ [${new Date().toISOString()}] Error updating item:`, error);
     res.status(500).json({ error: 'Failed to update item', details: error.message });
   }
 });
@@ -422,6 +604,9 @@ app.delete('/api/movies/:type/:id', (req, res) => {
       });
     }
     
+    console.log(`🗑️  [${new Date().toISOString()}] Deleting item from type: ${type}, ID: ${id}`);
+    
+    // Read data from file IMMEDIATELY (no caching)
     const data = readMoviesData();
     const itemId = parseInt(id);
     
@@ -435,15 +620,30 @@ app.delete('/api/movies/:type/:id', (req, res) => {
       return res.status(404).json({ error: 'Item not found' });
     }
     
+    const deletedItem = data[type][itemIndex];
     data[type].splice(itemIndex, 1);
     
-    if (writeMoviesData(data)) {
-      res.json({ message: 'Item deleted successfully' });
+    // Write to file IMMEDIATELY and synchronously
+    const writeSuccess = writeMoviesData(data);
+    
+    if (writeSuccess) {
+      // Verify the write by reading the file again
+      const verifyData = readMoviesData();
+      const stillExists = verifyData[type]?.find(item => item.id === itemId);
+      
+      if (!stillExists) {
+        console.log(`✅ [${new Date().toISOString()}] Item deleted and verified from JSON file: ${deletedItem.name} (ID: ${itemId})`);
+        res.json({ message: 'Item deleted successfully' });
+      } else {
+        console.error(`❌ [${new Date().toISOString()}] Item deletion verification failed: ${deletedItem.name} (ID: ${itemId})`);
+        res.status(500).json({ error: 'Failed to verify item deletion', details: 'File write verification failed' });
+      }
     } else {
-      res.status(500).json({ error: 'Failed to delete item' });
+      console.error(`❌ [${new Date().toISOString()}] Failed to delete item from JSON file: ${deletedItem.name} (ID: ${itemId})`);
+      res.status(500).json({ error: 'Failed to delete item', details: 'File write operation failed' });
     }
   } catch (error) {
-    console.error('❌ Error deleting item:', error);
+    console.error(`❌ [${new Date().toISOString()}] Error deleting item:`, error);
     res.status(500).json({ error: 'Failed to delete item', details: error.message });
   }
 });
@@ -451,6 +651,83 @@ app.delete('/api/movies/:type/:id', (req, res) => {
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'API is running' });
+});
+
+// Data status endpoint - Check file status
+app.get('/api/data/status', (req, res) => {
+  try {
+    const gamesExists = existsSync(DATA_FILE);
+    const moviesExists = existsSync(MOVIES_FILE);
+    
+    let gamesData = null;
+    let moviesData = null;
+    let gamesStats = null;
+    let moviesStats = null;
+    
+    if (gamesExists) {
+      try {
+        gamesData = readGamesData();
+        const stats = require('fs').statSync(DATA_FILE);
+        gamesStats = {
+          size: stats.size,
+          modified: stats.mtime.toISOString(),
+          readyToPlay: gamesData.readyToPlay?.length || 0,
+          repack: gamesData.repack?.length || 0,
+          online: gamesData.online?.length || 0
+        };
+      } catch (error) {
+        console.error('Error reading games stats:', error);
+      }
+    }
+    
+    if (moviesExists) {
+      try {
+        moviesData = readMoviesData();
+        const stats = require('fs').statSync(MOVIES_FILE);
+        moviesStats = {
+          size: stats.size,
+          modified: stats.mtime.toISOString(),
+          movies: moviesData.movies?.length || 0,
+          tvShows: moviesData.tvShows?.length || 0,
+          anime: moviesData.anime?.length || 0
+        };
+      } catch (error) {
+        console.error('Error reading movies stats:', error);
+      }
+    }
+    
+    // Check if we're on Render (temporary filesystem warning)
+    const isRender = process.env.RENDER || process.env.RENDER_SERVICE_NAME;
+    const warning = isRender ? 
+      '⚠️ WARNING: You are on Render. Filesystem is TEMPORARY. Data will be lost on redeploy. Use a database instead!' : 
+      null;
+    
+    res.json({
+      status: 'ok',
+      warning,
+      platform: isRender ? 'Render (Temporary Filesystem)' : 'Local/Persistent',
+      autoCommitEnabled: process.env.AUTO_COMMIT_DATA !== 'false',
+      files: {
+        games: {
+          exists: gamesExists,
+          path: DATA_FILE,
+          stats: gamesStats
+        },
+        movies: {
+          exists: moviesExists,
+          path: MOVIES_FILE,
+          stats: moviesStats
+        }
+      },
+      timestamp: new Date().toISOString()
+    });
+  } catch (error) {
+    res.status(500).json({ 
+      status: 'error', 
+      message: 'Failed to check data status',
+      error: error.message 
+    });
+  }
 });
 
 // ----- Serve frontend build (optional) -----
