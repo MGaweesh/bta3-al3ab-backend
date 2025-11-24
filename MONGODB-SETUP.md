@@ -10,7 +10,7 @@
 4. اضغط على **Add Environment Variable**
 5. أضف:
    - **Key**: `MONGODB_URI`
-   - **Value**: `mongodb+srv://gawesh1112_db_user:utolQ3ovK8XnludE@bta3al3ab.bbmscxa.mongodb.net/?appName=bta3Al3ab`
+   - **Value**: `mongodb+srv://gawesh:DrGaweesh@bta3al3ab.hl8xdgd.mongodb.net/bta3al3ab?retryWrites=true&w=majority&appName=bta3al3ab`
 6. اضغط **Save Changes**
 
 ### 2. إعادة نشر الخدمة

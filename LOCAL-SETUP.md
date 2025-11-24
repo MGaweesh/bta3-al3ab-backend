@@ -23,7 +23,7 @@ MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/bta3al3ab?retryW
 **مثال:**
 ```env
 PORT=3001
-MONGODB_URI=mongodb+srv://gawesh1112_db_user:utolQ3ovK8XnludE@bta3al3ab.bbmscxa.mongodb.net/bta3al3ab?retryWrites=true&w=majority
+MONGODB_URI=mongodb+srv://gawesh:DrGaweesh@bta3al3ab.hl8xdgd.mongodb.net/bta3al3ab?retryWrites=true&w=majority&appName=bta3al3ab
 ```
 
 ### 2. تثبيت Dependencies
