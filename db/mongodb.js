@@ -58,7 +58,7 @@ const connectDB = async (retry = false) => {
     
     // Extract database name from URI
     // Format: mongodb+srv://user:pass@cluster.mongodb.net/dbname?options
-    let dbName = 'cluster0'; // Default database name
+    let dbName = 'bta3al3ab'; // Default database name
     
     // Try to extract from URI path
     const uriPathMatch = uri.match(/mongodb\+srv:\/\/[^/]+\/([^?]+)/);
