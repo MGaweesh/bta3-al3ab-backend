@@ -3,6 +3,10 @@ import cors from 'cors';
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+// Import database functions (with fallback to files)
+import { readGamesData as readGamesFromDB, writeGamesData as writeGamesToDB } from './db/games-db.js';
+import { readMoviesData as readMoviesFromDB, writeMoviesData as writeMoviesToDB } from './db/movies-db.js';
+import { connectDB } from './db/mongodb.js';
 
 // Optional auto-commit function (only if script exists)
 const commitDataFiles = async () => {
@@ -29,6 +33,11 @@ const PORT = process.env.PORT || 3001;
 const DATA_FILE = join(__dirname, 'data', 'games.json');
 const MOVIES_FILE = join(__dirname, 'data', 'movies.json');
 
+// Initialize database connection on startup
+connectDB().catch(err => {
+  console.log('⚠️  MongoDB not available, using file-based storage:', err.message);
+});
+
 // Middleware
 app.use(cors({ origin: '*' })); // بعد رفع الفرونت غيّرها للدومين فقط
 app.use(express.json());
@@ -45,19 +54,10 @@ app.get('/', (req, res) => {
   });
 });
 
-// Helper function to read games data
-const readGamesData = () => {
+// Helper function to read games data (uses MongoDB if available, falls back to file)
+const readGamesData = async () => {
   try {
-    if (existsSync(DATA_FILE)) {
-      const data = readFileSync(DATA_FILE, 'utf8');
-      return JSON.parse(data);
-    }
-    // Return default structure if file doesn't exist
-    return {
-      readyToPlay: [],
-      repack: [],
-      online: []
-    };
+    return await readGamesFromDB();
   } catch (error) {
     console.error('Error reading games data:', error);
     return {
@@ -68,78 +68,20 @@ const readGamesData = () => {
   }
 };
 
-// Helper function to write games data
-const writeGamesData = (data) => {
+// Helper function to write games data (uses MongoDB if available, falls back to file)
+const writeGamesData = async (data) => {
   try {
-    // Ensure data directory exists
-    const dataDir = join(__dirname, 'data');
-    if (!existsSync(dataDir)) {
-      mkdirSync(dataDir, { recursive: true });
-    }
-    
-    // Create backup before writing
-    const backupDir = join(__dirname, 'data', 'backups');
-    if (!existsSync(backupDir)) {
-      mkdirSync(backupDir, { recursive: true });
-    }
-    
-    if (existsSync(DATA_FILE)) {
-      const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-      const backupFile = join(backupDir, `games-backup-${timestamp}.json`);
-      const currentData = readFileSync(DATA_FILE, 'utf8');
-      writeFileSync(backupFile, currentData, 'utf8');
-      console.log(`📦 Backup created: ${backupFile}`);
-    }
-    
-    // Write new data
-    const jsonData = JSON.stringify(data, null, 2);
-    writeFileSync(DATA_FILE, jsonData, 'utf8');
-    
-    // Verify write was successful
-    const verifyData = readFileSync(DATA_FILE, 'utf8');
-    const parsed = JSON.parse(verifyData);
-    
-    console.log(`✅ Games data saved successfully at ${new Date().toISOString()}`);
-    console.log(`📊 Data summary:`, {
-      readyToPlay: parsed.readyToPlay?.length || 0,
-      repack: parsed.repack?.length || 0,
-      online: parsed.online?.length || 0,
-      filePath: DATA_FILE
-    });
-    
-    // Try to commit to Git (non-blocking, runs in background)
-    // This helps preserve data on Render and other platforms
-    if (process.env.AUTO_COMMIT_DATA !== 'false') {
-      commitDataFiles().catch(err => {
-        console.log('⚠️  Auto-commit failed (non-critical):', err.message);
-      });
-    }
-    
-    return true;
+    return await writeGamesToDB(data);
   } catch (error) {
     console.error('❌ Error writing games data:', error);
-    console.error('Error details:', {
-      message: error.message,
-      stack: error.stack,
-      filePath: DATA_FILE
-    });
     return false;
   }
 };
 
-// Helper function to read movies data
-const readMoviesData = () => {
+// Helper function to read movies data (uses MongoDB if available, falls back to file)
+const readMoviesData = async () => {
   try {
-    if (existsSync(MOVIES_FILE)) {
-      const data = readFileSync(MOVIES_FILE, 'utf8');
-      return JSON.parse(data);
-    }
-    // Return default structure if file doesn't exist
-    return {
-      movies: [],
-      tvShows: [],
-      anime: []
-    };
+    return await readMoviesFromDB();
   } catch (error) {
     console.error('Error reading movies data:', error);
     return {
@@ -150,60 +92,12 @@ const readMoviesData = () => {
   }
 };
 
-// Helper function to write movies data
-const writeMoviesData = (data) => {
+// Helper function to write movies data (uses MongoDB if available, falls back to file)
+const writeMoviesData = async (data) => {
   try {
-    const dataDir = join(__dirname, 'data');
-    if (!existsSync(dataDir)) {
-      mkdirSync(dataDir, { recursive: true });
-    }
-    
-    // Create backup before writing
-    const backupDir = join(__dirname, 'data', 'backups');
-    if (!existsSync(backupDir)) {
-      mkdirSync(backupDir, { recursive: true });
-    }
-    
-    if (existsSync(MOVIES_FILE)) {
-      const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-      const backupFile = join(backupDir, `movies-backup-${timestamp}.json`);
-      const currentData = readFileSync(MOVIES_FILE, 'utf8');
-      writeFileSync(backupFile, currentData, 'utf8');
-      console.log(`📦 Backup created: ${backupFile}`);
-    }
-    
-    // Write new data
-    const jsonData = JSON.stringify(data, null, 2);
-    writeFileSync(MOVIES_FILE, jsonData, 'utf8');
-    
-    // Verify write was successful
-    const verifyData = readFileSync(MOVIES_FILE, 'utf8');
-    const parsed = JSON.parse(verifyData);
-    
-    console.log(`✅ Movies data saved successfully at ${new Date().toISOString()}`);
-    console.log(`📊 Data summary:`, {
-      movies: parsed.movies?.length || 0,
-      tvShows: parsed.tvShows?.length || 0,
-      anime: parsed.anime?.length || 0,
-      filePath: MOVIES_FILE
-    });
-    
-    // Try to commit to Git (non-blocking, runs in background)
-    // This helps preserve data on Render and other platforms
-    if (process.env.AUTO_COMMIT_DATA !== 'false') {
-      commitDataFiles().catch(err => {
-        console.log('⚠️  Auto-commit failed (non-critical):', err.message);
-      });
-    }
-    
-    return true;
+    return await writeMoviesToDB(data);
   } catch (error) {
     console.error('❌ Error writing movies data:', error);
-    console.error('Error details:', {
-      message: error.message,
-      stack: error.stack,
-      filePath: MOVIES_FILE
-    });
     return false;
   }
 };
@@ -232,7 +126,7 @@ app.get('/api', (req, res) => {
 });
 
 // GET all games by category
-app.get('/api/games/:category', (req, res) => {
+app.get('/api/games/:category', async (req, res) => {
   try {
     const { category } = req.params;
     const validCategories = ['readyToPlay', 'repack', 'online'];
@@ -243,7 +137,7 @@ app.get('/api/games/:category', (req, res) => {
       });
     }
     
-    const data = readGamesData();
+    const data = await readGamesData();
     res.json(data[category] || []);
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch games' });
@@ -251,19 +145,17 @@ app.get('/api/games/:category', (req, res) => {
 });
 
 // GET all games
-app.get('/api/games', (req, res) => {
+app.get('/api/games', async (req, res) => {
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   res.set('Pragma', 'no-cache');
   res.set('Expires', '0');
   
   try {
-    const data = readGamesData();
+    const data = await readGamesData();
     console.log('📊 Games data loaded:', {
       readyToPlay: data.readyToPlay?.length || 0,
       repack: data.repack?.length || 0,
-      online: data.online?.length || 0,
-      filePath: DATA_FILE,
-      fileExists: existsSync(DATA_FILE)
+      online: data.online?.length || 0
     });
     res.json(data);
   } catch (error) {
@@ -273,7 +165,7 @@ app.get('/api/games', (req, res) => {
 });
 
 // POST - Add a new game
-app.post('/api/games/:category', (req, res) => {
+app.post('/api/games/:category', async (req, res) => {
   try {
     const { category } = req.params;
     const validCategories = ['readyToPlay', 'repack', 'online'];
@@ -287,8 +179,8 @@ app.post('/api/games/:category', (req, res) => {
     console.log(`📝 [${new Date().toISOString()}] Adding new game to category: ${category}`);
     console.log(`📦 Game data:`, req.body);
     
-    // Read data from file IMMEDIATELY (no caching)
-    const data = readGamesData();
+    // Read data from database/file IMMEDIATELY (no caching)
+    const data = await readGamesData();
     const newGame = {
       id: Date.now(),
       ...req.body,
@@ -327,7 +219,7 @@ app.post('/api/games/:category', (req, res) => {
 });
 
 // PUT - Update a game
-app.put('/api/games/:category/:id', (req, res) => {
+app.put('/api/games/:category/:id', async (req, res) => {
   try {
     const { category, id } = req.params;
     const validCategories = ['readyToPlay', 'repack', 'online'];
@@ -341,8 +233,8 @@ app.put('/api/games/:category/:id', (req, res) => {
     console.log(`📝 [${new Date().toISOString()}] Updating game in category: ${category}, ID: ${id}`);
     console.log(`📦 Update data:`, req.body);
     
-    // Read data from file IMMEDIATELY (no caching)
-    const data = readGamesData();
+    // Read data from database/file IMMEDIATELY (no caching)
+    const data = await readGamesData();
     const gameId = parseInt(id);
     
     if (!data[category]) {
@@ -389,7 +281,7 @@ app.put('/api/games/:category/:id', (req, res) => {
 });
 
 // DELETE - Delete a game
-app.delete('/api/games/:category/:id', (req, res) => {
+app.delete('/api/games/:category/:id', async (req, res) => {
   try {
     const { category, id } = req.params;
     const validCategories = ['readyToPlay', 'repack', 'online'];
@@ -402,8 +294,8 @@ app.delete('/api/games/:category/:id', (req, res) => {
     
     console.log(`🗑️  [${new Date().toISOString()}] Deleting game from category: ${category}, ID: ${id}`);
     
-    // Read data from file IMMEDIATELY (no caching)
-    const data = readGamesData();
+    // Read data from database/file IMMEDIATELY (no caching)
+    const data = await readGamesData();
     const gameId = parseInt(id);
     
     if (!data[category]) {
@@ -419,12 +311,12 @@ app.delete('/api/games/:category/:id', (req, res) => {
     const deletedGame = data[category][gameIndex];
     data[category].splice(gameIndex, 1);
     
-    // Write to file IMMEDIATELY and synchronously
-    const writeSuccess = writeGamesData(data);
+    // Write to database/file IMMEDIATELY
+    const writeSuccess = await writeGamesData(data);
     
     if (writeSuccess) {
-      // Verify the write by reading the file again
-      const verifyData = readGamesData();
+      // Verify the write by reading the database/file again
+      const verifyData = await readGamesData();
       const stillExists = verifyData[category]?.find(g => g.id === gameId);
       
       if (!stillExists) {
@@ -447,19 +339,17 @@ app.delete('/api/games/:category/:id', (req, res) => {
 // ============ MOVIES, TV SHOWS, ANIME ROUTES ============
 
 // GET all movies data
-app.get('/api/movies', (req, res) => {
+app.get('/api/movies', async (req, res) => {
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   res.set('Pragma', 'no-cache');
   res.set('Expires', '0');
   
   try {
-    const data = readMoviesData();
+    const data = await readMoviesData();
     console.log('📊 Movies data loaded:', {
       movies: data.movies?.length || 0,
       tvShows: data.tvShows?.length || 0,
-      anime: data.anime?.length || 0,
-      filePath: MOVIES_FILE,
-      fileExists: existsSync(MOVIES_FILE)
+      anime: data.anime?.length || 0
     });
     res.json(data);
   } catch (error) {
@@ -469,7 +359,7 @@ app.get('/api/movies', (req, res) => {
 });
 
 // GET movies by type (movies, tvShows, anime)
-app.get('/api/movies/:type', (req, res) => {
+app.get('/api/movies/:type', async (req, res) => {
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   res.set('Pragma', 'no-cache');
   res.set('Expires', '0');
@@ -484,7 +374,7 @@ app.get('/api/movies/:type', (req, res) => {
       });
     }
     
-    const data = readMoviesData();
+    const data = await readMoviesData();
     res.json(data[type] || []);
   } catch (error) {
     console.error('❌ Error fetching movies by type:', error);
@@ -493,7 +383,7 @@ app.get('/api/movies/:type', (req, res) => {
 });
 
 // POST - Add a new movie/tv show/anime
-app.post('/api/movies/:type', (req, res) => {
+app.post('/api/movies/:type', async (req, res) => {
   try {
     const { type } = req.params;
     const validTypes = ['movies', 'tvShows', 'anime'];
@@ -507,8 +397,8 @@ app.post('/api/movies/:type', (req, res) => {
     console.log(`📝 [${new Date().toISOString()}] Adding new item to type: ${type}`);
     console.log(`📦 Item data:`, req.body);
     
-    // Read data from file IMMEDIATELY (no caching)
-    const data = readMoviesData();
+    // Read data from database/file IMMEDIATELY (no caching)
+    const data = await readMoviesData();
     const newItem = {
       id: Date.now(),
       ...req.body,
@@ -547,7 +437,7 @@ app.post('/api/movies/:type', (req, res) => {
 });
 
 // PUT - Update a movie/tv show/anime
-app.put('/api/movies/:type/:id', (req, res) => {
+app.put('/api/movies/:type/:id', async (req, res) => {
   try {
     const { type, id } = req.params;
     const validTypes = ['movies', 'tvShows', 'anime'];
@@ -561,8 +451,8 @@ app.put('/api/movies/:type/:id', (req, res) => {
     console.log(`📝 [${new Date().toISOString()}] Updating item in type: ${type}, ID: ${id}`);
     console.log(`📦 Update data:`, req.body);
     
-    // Read data from file IMMEDIATELY (no caching)
-    const data = readMoviesData();
+    // Read data from database/file IMMEDIATELY (no caching)
+    const data = await readMoviesData();
     const itemId = parseInt(id);
     
     if (!data[type]) {
@@ -609,7 +499,7 @@ app.put('/api/movies/:type/:id', (req, res) => {
 });
 
 // DELETE - Delete a movie/tv show/anime
-app.delete('/api/movies/:type/:id', (req, res) => {
+app.delete('/api/movies/:type/:id', async (req, res) => {
   try {
     const { type, id } = req.params;
     const validTypes = ['movies', 'tvShows', 'anime'];
@@ -622,8 +512,8 @@ app.delete('/api/movies/:type/:id', (req, res) => {
     
     console.log(`🗑️  [${new Date().toISOString()}] Deleting item from type: ${type}, ID: ${id}`);
     
-    // Read data from file IMMEDIATELY (no caching)
-    const data = readMoviesData();
+    // Read data from database/file IMMEDIATELY (no caching)
+    const data = await readMoviesData();
     const itemId = parseInt(id);
     
     if (!data[type]) {
@@ -639,12 +529,12 @@ app.delete('/api/movies/:type/:id', (req, res) => {
     const deletedItem = data[type][itemIndex];
     data[type].splice(itemIndex, 1);
     
-    // Write to file IMMEDIATELY and synchronously
-    const writeSuccess = writeMoviesData(data);
+    // Write to database/file IMMEDIATELY
+    const writeSuccess = await writeMoviesData(data);
     
     if (writeSuccess) {
-      // Verify the write by reading the file again
-      const verifyData = readMoviesData();
+      // Verify the write by reading the database/file again
+      const verifyData = await readMoviesData();
       const stillExists = verifyData[type]?.find(item => item.id === itemId);
       
       if (!stillExists) {
@@ -670,7 +560,7 @@ app.get('/api/health', (req, res) => {
 });
 
 // Data status endpoint - Check file status
-app.get('/api/data/status', (req, res) => {
+app.get('/api/data/status', async (req, res) => {
   try {
     const gamesExists = existsSync(DATA_FILE);
     const moviesExists = existsSync(MOVIES_FILE);
@@ -682,7 +572,7 @@ app.get('/api/data/status', (req, res) => {
     
     if (gamesExists) {
       try {
-        gamesData = readGamesData();
+        gamesData = await readGamesData();
         const stats = require('fs').statSync(DATA_FILE);
         gamesStats = {
           size: stats.size,
@@ -698,7 +588,7 @@ app.get('/api/data/status', (req, res) => {
     
     if (moviesExists) {
       try {
-        moviesData = readMoviesData();
+        moviesData = await readMoviesData();
         const stats = require('fs').statSync(MOVIES_FILE);
         moviesStats = {
           size: stats.size,
