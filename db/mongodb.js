@@ -57,13 +57,16 @@ const connectDB = async (retry = false) => {
     await client.connect();
     
     // Extract database name from URI
+    // Supports both mongodb:// and mongodb+srv:// formats
+    // Format: mongodb://user:pass@host:port/dbname?options
     // Format: mongodb+srv://user:pass@cluster.mongodb.net/dbname?options
     let dbName = 'bta3al3ab'; // Default database name
     
-    // Try to extract from URI path
-    const uriPathMatch = uri.match(/mongodb\+srv:\/\/[^/]+\/([^?]+)/);
-    if (uriPathMatch && uriPathMatch[1]) {
-      dbName = uriPathMatch[1];
+    // Try to extract from URI path (works for both mongodb:// and mongodb+srv://)
+    // Pattern: protocol://credentials@hosts/dbname?options
+    const uriPathMatch = uri.match(/mongodb(\+srv)?:\/\/[^/]+\/([^?]+)/);
+    if (uriPathMatch && uriPathMatch[2]) {
+      dbName = uriPathMatch[2];
     } else {
       // If no database in path, check if it's in query params or use default
       const uriQueryMatch = uri.match(/[?&]db=([^&]+)/);
