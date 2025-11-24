@@ -2,19 +2,25 @@ import 'dotenv/config'; // Load environment variables from .env file
 import express from 'express';
 import cors from 'cors';
 import compression from 'compression';
-import { existsSync } from 'fs';
+import { existsSync, readFileSync, writeFileSync, renameSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
-// Import JSON file functions
-import { readGamesData as readGamesFromFile, writeGamesData as writeGamesToFile } from './db/games-db.js';
-import { readMoviesData as readMoviesFromFile, writeMoviesData as writeMoviesToFile } from './db/movies-db.js';
-import { commitFileToGitHub, testGitHubConnection } from './db/github-sync.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+// Determine data directory path
+// On Render: /mnt/data, locally: backend/data
+const DATA_DIR = process.env.DATA_DIR || 
+  (existsSync('/mnt/data') ? '/mnt/data' : join(__dirname, 'data'));
+const GAMES_FILE = join(DATA_DIR, 'games.json');
+const GAMES_FILE_TMP = join(DATA_DIR, 'games.json.tmp');
+
+// Write queue to prevent concurrent writes
+let writeQueue = Promise.resolve();
 
 // Middleware
 app.use(cors({ origin: '*' }));
@@ -28,39 +34,220 @@ app.get('/', (req, res) => {
     api: {
       health: '/api/health',
       games: '/api/games',
-      gamesByCategory: '/api/games/:category',
-      movies: '/api/movies',
-      moviesByType: '/api/movies/:type'
+      gamesByType: '/api/games/:type'
     },
     storage: 'JSON files with GitHub sync'
   });
 });
 
-// Helper function to read games data
-const readGamesData = async () => {
-  return await readGamesFromFile();
+// Helper function to read games data from JSON file
+const readGamesData = () => {
+  try {
+    if (!existsSync(GAMES_FILE)) {
+      console.log('📊 games.json not found, returning empty structure');
+      return {
+        movies: [],
+        tvShows: [],
+        anime: []
+      };
+    }
+
+    const fileContent = readFileSync(GAMES_FILE, 'utf8');
+    const data = JSON.parse(fileContent);
+    
+    // Ensure structure exists
+    if (!data.movies) data.movies = [];
+    if (!data.tvShows) data.tvShows = [];
+    if (!data.anime) data.anime = [];
+    
+    return data;
+  } catch (error) {
+    console.error(`❌ Error reading games.json: ${error.message}`);
+    return {
+      movies: [],
+      tvShows: [],
+      anime: []
+    };
+  }
 };
 
-// Helper function to write games data
+// Helper function to commit file to GitHub
+const commitFileToGitHub = async (localFilePath, repoPath, commitMessage) => {
+  const token = process.env.GITHUB_TOKEN;
+  const owner = process.env.GITHUB_OWNER;
+  const repo = process.env.GITHUB_REPO;
+  const branch = process.env.GITHUB_BRANCH || 'main';
+
+  if (!token || !owner || !repo) {
+    throw new Error('GitHub credentials not configured');
+  }
+
+  try {
+    const fileContent = readFileSync(localFilePath, 'utf8');
+    const contentBase64 = Buffer.from(fileContent).toString('base64');
+
+    // Get current file SHA (if exists)
+    let currentSha = null;
+    try {
+      const getFileResponse = await fetch(
+        `https://api.github.com/repos/${owner}/${repo}/contents/${repoPath}`,
+        {
+          headers: {
+            'Authorization': `token ${token}`,
+            'Accept': 'application/vnd.github.v3+json'
+          }
+        }
+      );
+
+      if (getFileResponse.ok) {
+        const fileData = await getFileResponse.json();
+        currentSha = fileData.sha;
+      }
+    } catch (error) {
+      // File doesn't exist yet
+    }
+
+    // Commit file
+    const commitResponse = await fetch(
+      `https://api.github.com/repos/${owner}/${repo}/contents/${repoPath}`,
+      {
+        method: 'PUT',
+        headers: {
+          'Authorization': `token ${token}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: commitMessage,
+          content: contentBase64,
+          branch: branch,
+          ...(currentSha && { sha: currentSha })
+        })
+      }
+    );
+
+    if (!commitResponse.ok) {
+      const errorData = await commitResponse.json();
+      throw new Error(`GitHub API error: ${errorData.message || commitResponse.statusText}`);
+    }
+
+    const commitData = await commitResponse.json();
+    
+    return {
+      commitUrl: commitData.commit.html_url,
+      sha: commitData.content.sha,
+      commitSha: commitData.commit.sha
+    };
+  } catch (error) {
+    console.error(`❌ GitHub commit error: ${error.message}`);
+    throw error;
+  }
+};
+
+// Helper function to test GitHub connection
+const testGitHubConnection = async () => {
+  const token = process.env.GITHUB_TOKEN;
+  const owner = process.env.GITHUB_OWNER;
+  const repo = process.env.GITHUB_REPO;
+
+  if (!token || !owner || !repo) {
+    return {
+      success: false,
+      error: 'GitHub credentials not configured',
+      repo: null
+    };
+  }
+
+  try {
+    const response = await fetch(
+      `https://api.github.com/repos/${owner}/${repo}`,
+      {
+        headers: {
+          'Authorization': `token ${token}`,
+          'Accept': 'application/vnd.github.v3+json'
+        }
+      }
+    );
+
+    if (response.ok) {
+      return {
+        success: true,
+        error: null,
+        repo: `${owner}/${repo}`
+      };
+    } else {
+      const errorData = await response.json();
+      return {
+        success: false,
+        error: errorData.message || 'Failed to connect to GitHub',
+        repo: null
+      };
+    }
+  } catch (error) {
+    return {
+      success: false,
+      error: error.message,
+      repo: null
+    };
+  }
+};
+
+// Helper function to write games data to JSON file and commit to GitHub
 const writeGamesData = async (data, action = 'update') => {
-  const result = await writeGamesToFile(data, action);
-  return result;
+  return writeQueue = writeQueue.then(async () => {
+    try {
+      // Ensure structure
+      if (!data.movies) data.movies = [];
+      if (!data.tvShows) data.tvShows = [];
+      if (!data.anime) data.anime = [];
+
+      const jsonContent = JSON.stringify(data, null, 2);
+      
+      // Atomic write: write to temp file, then rename
+      writeFileSync(GAMES_FILE_TMP, jsonContent, 'utf8');
+      renameSync(GAMES_FILE_TMP, GAMES_FILE);
+      
+      console.log(`✅ Saved games.json locally`);
+
+      // Try to commit to GitHub (non-blocking)
+      let githubResult = null;
+      if (process.env.GITHUB_TOKEN && process.env.GITHUB_OWNER && process.env.GITHUB_REPO) {
+        try {
+          const commitMessage = `Update games.json from dashboard — ${action} — ${new Date().toISOString()}`;
+          githubResult = await commitFileToGitHub(GAMES_FILE, 'data/games.json', commitMessage);
+          
+          if (githubResult && githubResult.commitUrl) {
+            console.log(`✅ Committed games.json to GitHub: ${githubResult.commitUrl}`);
+          }
+        } catch (githubError) {
+          console.error(`⚠️  GitHub commit failed: ${githubError.message}`);
+          // Don't fail the operation if GitHub commit fails
+        }
+      }
+
+      return {
+        success: true,
+        github: !!githubResult,
+        commitUrl: githubResult?.commitUrl || null,
+        sha: githubResult?.sha || null,
+        commitSha: githubResult?.commitSha || null,
+        message: githubResult ? 'Saved and committed to GitHub' : 'Saved locally (GitHub not configured or failed)'
+      };
+    } catch (error) {
+      console.error(`❌ Error writing games.json: ${error.message}`);
+      return {
+        success: false,
+        error: error.message,
+        github: false,
+        message: `Failed to save: ${error.message}`
+      };
+    }
+  });
 };
 
-// Helper function to read movies data
-const readMoviesData = async () => {
-  return await readMoviesFromFile();
-};
+// ============ GAMES ROUTES (Movies, TV Shows, Anime) ============
 
-// Helper function to write movies data
-const writeMoviesData = async (data, action = 'update') => {
-  const result = await writeMoviesToFile(data, action);
-  return result;
-};
-
-// ============ GAMES ROUTES ============
-
-// GET all games
+// GET all games data (movies, tvShows, anime)
 app.get('/api/games', async (req, res) => {
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   res.set('Pragma', 'no-cache');
@@ -69,249 +256,19 @@ app.get('/api/games', async (req, res) => {
   try {
     const data = await readGamesData();
     console.log('📊 Games data loaded:', {
-      readyToPlay: data.readyToPlay?.length || 0,
-      repack: data.repack?.length || 0,
-      online: data.online?.length || 0
-    });
-    res.json(data);
-  } catch (error) {
-    console.error('❌ Error fetching games:', error);
-    res.status(500).json({ error: 'Failed to fetch games', details: error.message });
-  }
-});
-
-// GET games by category
-app.get('/api/games/:category', async (req, res) => {
-  try {
-    const { category } = req.params;
-    const validCategories = ['readyToPlay', 'repack', 'online'];
-    
-    if (!validCategories.includes(category)) {
-      return res.status(400).json({ 
-        error: 'Invalid category. Must be one of: readyToPlay, repack, online' 
-      });
-    }
-    
-    const data = await readGamesData();
-    res.json(data[category] || []);
-  } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch games' });
-  }
-});
-
-// POST - Add a new game
-app.post('/api/games/:category', async (req, res) => {
-  try {
-    const { category } = req.params;
-    const validCategories = ['readyToPlay', 'repack', 'online'];
-    
-    if (!validCategories.includes(category)) {
-      return res.status(400).json({ 
-        error: 'Invalid category. Must be one of: readyToPlay, repack, online' 
-      });
-    }
-    
-    console.log(`📝 [${new Date().toISOString()}] Adding new game to category: ${category}`);
-    
-    // Read data from file
-    const data = await readGamesData();
-    const newGame = {
-      id: Date.now(),
-      ...req.body,
-      createdAt: new Date().toISOString()
-    };
-    
-    if (!data[category]) {
-      data[category] = [];
-    }
-    
-    data[category].push(newGame);
-    
-    // Write to file and commit to GitHub
-    const writeResult = await writeGamesData(data, `add game: ${newGame.name || 'unnamed'}`);
-    
-    if (writeResult.success) {
-      console.log(`✅ [${new Date().toISOString()}] Game saved: ${newGame.name} (ID: ${newGame.id})`);
-      if (writeResult.github) {
-        console.log(`✅ Committed to GitHub: ${writeResult.commitUrl}`);
-      }
-      
-      res.status(201).json({
-        ...newGame,
-        _github: writeResult.github ? { committed: true, commitUrl: writeResult.commitUrl } : { committed: false, message: writeResult.message }
-      });
-    } else {
-      console.error(`❌ [${new Date().toISOString()}] Failed to save game: ${newGame.name}`);
-      res.status(500).json({ 
-        status: 'error',
-        error: 'Failed to save game', 
-        details: writeResult.error || 'Unknown error'
-      });
-    }
-  } catch (error) {
-    console.error(`❌ [${new Date().toISOString()}] Error adding game:`, error);
-    res.status(500).json({ 
-      status: 'error',
-      error: 'Failed to add game', 
-      details: error.message
-    });
-  }
-});
-
-// PUT - Update a game
-app.put('/api/games/:category/:id', async (req, res) => {
-  try {
-    const { category, id } = req.params;
-    const validCategories = ['readyToPlay', 'repack', 'online'];
-    
-    if (!validCategories.includes(category)) {
-      return res.status(400).json({ 
-        error: 'Invalid category. Must be one of: readyToPlay, repack, online' 
-      });
-    }
-    
-    console.log(`📝 [${new Date().toISOString()}] Updating game in category: ${category}, ID: ${id}`);
-    
-    // Read data from file
-    const data = await readGamesData();
-    const gameId = parseInt(id);
-    
-    if (!data[category]) {
-      return res.status(404).json({ error: 'Category not found' });
-    }
-    
-    const gameIndex = data[category].findIndex(g => g.id === gameId);
-    
-    if (gameIndex === -1) {
-      return res.status(404).json({ error: 'Game not found' });
-    }
-    
-    const oldGame = { ...data[category][gameIndex] };
-    data[category][gameIndex] = {
-      ...data[category][gameIndex],
-      ...req.body,
-      id: gameId,
-      updatedAt: new Date().toISOString()
-    };
-    
-    // Write to file and commit to GitHub
-    const writeResult = await writeGamesData(data, `update game: ${data[category][gameIndex].name || 'unnamed'}`);
-    
-    if (writeResult.success) {
-      console.log(`✅ [${new Date().toISOString()}] Game updated: ${data[category][gameIndex].name} (ID: ${gameId})`);
-      if (writeResult.github) {
-        console.log(`✅ Committed to GitHub: ${writeResult.commitUrl}`);
-      }
-      
-      res.json({
-        ...data[category][gameIndex],
-        _github: writeResult.github ? { committed: true, commitUrl: writeResult.commitUrl } : { committed: false, message: writeResult.message }
-      });
-    } else {
-      console.error(`❌ [${new Date().toISOString()}] Failed to update game: ${oldGame.name}`);
-      res.status(500).json({ 
-        status: 'error',
-        error: 'Failed to update game', 
-        details: writeResult.error || 'Unknown error'
-      });
-    }
-  } catch (error) {
-    console.error(`❌ [${new Date().toISOString()}] Error updating game:`, error);
-    res.status(500).json({ 
-      status: 'error',
-      error: 'Failed to update game', 
-      details: error.message 
-    });
-  }
-});
-
-// DELETE - Delete a game
-app.delete('/api/games/:category/:id', async (req, res) => {
-  try {
-    const { category, id } = req.params;
-    const validCategories = ['readyToPlay', 'repack', 'online'];
-    
-    if (!validCategories.includes(category)) {
-      return res.status(400).json({ 
-        error: 'Invalid category. Must be one of: readyToPlay, repack, online' 
-      });
-    }
-    
-    console.log(`🗑️  [${new Date().toISOString()}] Deleting game from category: ${category}, ID: ${id}`);
-    
-    // Read data from file
-    const data = await readGamesData();
-    const gameId = parseInt(id);
-    
-    if (!data[category]) {
-      return res.status(404).json({ error: 'Category not found' });
-    }
-    
-    const gameIndex = data[category].findIndex(g => g.id === gameId);
-    
-    if (gameIndex === -1) {
-      return res.status(404).json({ error: 'Game not found' });
-    }
-    
-    const deletedGame = data[category][gameIndex];
-    data[category].splice(gameIndex, 1);
-    
-    // Write to file and commit to GitHub
-    const writeResult = await writeGamesData(data, `delete game: ${deletedGame.name || 'unnamed'}`);
-    
-    if (writeResult.success) {
-      console.log(`✅ [${new Date().toISOString()}] Game deleted: ${deletedGame.name} (ID: ${gameId})`);
-      if (writeResult.github) {
-        console.log(`✅ Committed to GitHub: ${writeResult.commitUrl}`);
-      }
-      
-      res.json({ 
-        status: 'ok',
-        message: 'Game deleted successfully',
-        _github: writeResult.github ? { committed: true, commitUrl: writeResult.commitUrl } : { committed: false, message: writeResult.message }
-      });
-    } else {
-      console.error(`❌ [${new Date().toISOString()}] Failed to delete game: ${deletedGame.name}`);
-      res.status(500).json({ 
-        status: 'error',
-        error: 'Failed to delete game', 
-        details: writeResult.error || 'Unknown error'
-      });
-    }
-  } catch (error) {
-    console.error(`❌ [${new Date().toISOString()}] Error deleting game:`, error);
-    res.status(500).json({ 
-      status: 'error',
-      error: 'Failed to delete game', 
-      details: error.message 
-    });
-  }
-});
-
-// ============ MOVIES, TV SHOWS, ANIME ROUTES ============
-
-// GET all movies data
-app.get('/api/movies', async (req, res) => {
-  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
-  res.set('Pragma', 'no-cache');
-  res.set('Expires', '0');
-  
-  try {
-    const data = await readMoviesData();
-    console.log('📊 Movies data loaded:', {
       movies: data.movies?.length || 0,
       tvShows: data.tvShows?.length || 0,
       anime: data.anime?.length || 0
     });
     res.json(data);
   } catch (error) {
-    console.error('❌ Error fetching movies data:', error);
-    res.status(500).json({ error: 'Failed to fetch movies data', details: error.message });
+    console.error('❌ Error fetching games data:', error);
+    res.status(500).json({ error: 'Failed to fetch games data', details: error.message });
   }
 });
 
-// GET movies by type (movies, tvShows, anime)
-app.get('/api/movies/:type', async (req, res) => {
+// GET games by type (movies, tvShows, anime)
+app.get('/api/games/:type', async (req, res) => {
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   res.set('Pragma', 'no-cache');
   res.set('Expires', '0');
@@ -326,16 +283,16 @@ app.get('/api/movies/:type', async (req, res) => {
       });
     }
     
-    const data = await readMoviesData();
+    const data = await readGamesData();
     res.json(data[type] || []);
   } catch (error) {
-    console.error('❌ Error fetching movies by type:', error);
-    res.status(500).json({ error: 'Failed to fetch movies', details: error.message });
+    console.error('❌ Error fetching games by type:', error);
+    res.status(500).json({ error: 'Failed to fetch games', details: error.message });
   }
 });
 
 // POST - Add a new movie/tv show/anime
-app.post('/api/movies/:type', async (req, res) => {
+app.post('/api/games/:type', async (req, res) => {
   try {
     const { type } = req.params;
     const validTypes = ['movies', 'tvShows', 'anime'];
@@ -349,7 +306,7 @@ app.post('/api/movies/:type', async (req, res) => {
     console.log(`📝 [${new Date().toISOString()}] Adding new item to type: ${type}`);
     
     // Read data from file
-    const data = await readMoviesData();
+    const data = await readGamesData();
     const newItem = {
       id: Date.now(),
       ...req.body,
@@ -363,7 +320,7 @@ app.post('/api/movies/:type', async (req, res) => {
     data[type].push(newItem);
     
     // Write to file and commit to GitHub
-    const writeResult = await writeMoviesData(data, `add ${type}: ${newItem.name || 'unnamed'}`);
+    const writeResult = await writeGamesData(data, `add ${type}: ${newItem.name || 'unnamed'}`);
     
     if (writeResult.success) {
       console.log(`✅ [${new Date().toISOString()}] Item saved: ${newItem.name} (ID: ${newItem.id})`);
@@ -394,7 +351,7 @@ app.post('/api/movies/:type', async (req, res) => {
 });
 
 // PUT - Update a movie/tv show/anime
-app.put('/api/movies/:type/:id', async (req, res) => {
+app.put('/api/games/:type/:id', async (req, res) => {
   try {
     const { type, id } = req.params;
     const validTypes = ['movies', 'tvShows', 'anime'];
@@ -408,7 +365,7 @@ app.put('/api/movies/:type/:id', async (req, res) => {
     console.log(`📝 [${new Date().toISOString()}] Updating item in type: ${type}, ID: ${id}`);
     
     // Read data from file
-    const data = await readMoviesData();
+    const data = await readGamesData();
     const itemId = parseInt(id);
     
     if (!data[type]) {
@@ -430,7 +387,7 @@ app.put('/api/movies/:type/:id', async (req, res) => {
     };
     
     // Write to file and commit to GitHub
-    const writeResult = await writeMoviesData(data, `update ${type}: ${data[type][itemIndex].name || 'unnamed'}`);
+    const writeResult = await writeGamesData(data, `update ${type}: ${data[type][itemIndex].name || 'unnamed'}`);
     
     if (writeResult.success) {
       console.log(`✅ [${new Date().toISOString()}] Item updated: ${data[type][itemIndex].name} (ID: ${itemId})`);
@@ -461,7 +418,7 @@ app.put('/api/movies/:type/:id', async (req, res) => {
 });
 
 // DELETE - Delete a movie/tv show/anime
-app.delete('/api/movies/:type/:id', async (req, res) => {
+app.delete('/api/games/:type/:id', async (req, res) => {
   try {
     const { type, id } = req.params;
     const validTypes = ['movies', 'tvShows', 'anime'];
@@ -475,7 +432,7 @@ app.delete('/api/movies/:type/:id', async (req, res) => {
     console.log(`🗑️  [${new Date().toISOString()}] Deleting item from type: ${type}, ID: ${id}`);
     
     // Read data from file
-    const data = await readMoviesData();
+    const data = await readGamesData();
     const itemId = parseInt(id);
     
     if (!data[type]) {
@@ -492,7 +449,7 @@ app.delete('/api/movies/:type/:id', async (req, res) => {
     data[type].splice(itemIndex, 1);
     
     // Write to file and commit to GitHub
-    const writeResult = await writeMoviesData(data, `delete ${type}: ${deletedItem.name || 'unnamed'}`);
+    const writeResult = await writeGamesData(data, `delete ${type}: ${deletedItem.name || 'unnamed'}`);
     
     if (writeResult.success) {
       console.log(`✅ [${new Date().toISOString()}] Item deleted: ${deletedItem.name} (ID: ${itemId})`);
@@ -588,7 +545,6 @@ app.post('/api/debug/commit-test', async (req, res) => {
 app.get('/api/data/status', async (req, res) => {
   try {
     const gamesData = await readGamesData();
-    const moviesData = await readMoviesData();
     const githubTest = await testGitHubConnection();
     
     res.json({
@@ -597,15 +553,9 @@ app.get('/api/data/status', async (req, res) => {
       files: {
         games: {
           exists: true,
-          readyToPlay: gamesData.readyToPlay?.length || 0,
-          repack: gamesData.repack?.length || 0,
-          online: gamesData.online?.length || 0
-        },
-        movies: {
-          exists: true,
-          movies: moviesData.movies?.length || 0,
-          tvShows: moviesData.tvShows?.length || 0,
-          anime: moviesData.anime?.length || 0
+          movies: gamesData.movies?.length || 0,
+          tvShows: gamesData.tvShows?.length || 0,
+          anime: gamesData.anime?.length || 0
         }
       },
       github: {
