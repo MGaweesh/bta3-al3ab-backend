@@ -3541,13 +3541,24 @@
       "id": 2108,
       "name": "Silent Hill f",
       "size": "28.2 GB",
-      "image": null,
+      "image": "https://media.rawg.io/media/games/e7f/e7f2f571761abd7b3c0598c719ae8893.jpg",
       "categories": [
         "horror",
         "adventure",
-        "survival"
+        "survival",
+        "action",
+        "single-player"
       ],
-      "createdAt": "2025-01-15T22:55:00.000Z"
+      "createdAt": "2025-01-15T22:55:00.000Z",
+      "rating": "3.64",
+      "released": "2025-09-24",
+      "description": "SILENT HILL f – will be a completely new story set in 1960's Japan featuring a beautiful, yet horrifying world. Written by Ryūkishi07, famed for Japanese visual novels dealing with murder mysteries, psychological and supernatural horror.",
+      "platforms": "PC, PlayStation 5, Xbox Series S/X",
+      "developers": "NeoBards Entertainment",
+      "publishers": "Konami",
+      "playtime": "36 ساعة",
+      "website": "https://www.konami.com/games/silenthill/f/",
+      "updatedAt": "2025-11-25T21:45:29.743Z"
     },
     {
       "id": 2109,
