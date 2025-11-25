@@ -2039,15 +2039,23 @@
     },
     {
       "id": 2048,
-      "name": "God of War Ragnarok",
+      "name": "God of War: Ragnarök",
       "size": "70.8 GB",
-      "image": null,
+      "image": "https://media.rawg.io/media/games/1c3/1c305096502c475c00276c827f0fd697.jpg",
       "categories": [
         "action",
         "adventure",
         "single-player"
       ],
-      "createdAt": "2025-01-15T17:55:00.000Z"
+      "createdAt": "2025-01-15T17:55:00.000Z",
+      "rating": "4.42",
+      "released": "2022-11-09",
+      "description": "Kratos and Atreus must journey to each of the Nine Realms in search of answers as they prepare for the prophesied battle that will end the world. Together, Kratos and Atreus venture deep into the Nine Realms in search of answers as Asgardian forces prepare for war.\r\n \r\nAlong the way they will explore stunning, mythical landscapes, gather allies from across the realms, and face fearsome enemies in the form of Norse gods and monsters. As the threat of Ragnarök grows ever closer, Kratos and Atreus find themselves choosing between the safety of their family and the safety of the realms...",
+      "platforms": "PC, PlayStation 4, PlayStation 5",
+      "developers": "SCE Santa Monica Studio",
+      "publishers": "Sony Interactive Entertainment, PlayStation PC",
+      "website": "https://blog.playstation.com/2021/09/09/first-look-at-god-of-war-ragnarok/",
+      "updatedAt": "2025-11-25T19:36:33.124Z"
     },
     {
       "id": 2049,
