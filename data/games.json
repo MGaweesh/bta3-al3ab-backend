@@ -1714,17 +1714,32 @@
     },
     {
       "id": 2033,
-      "name": "Dying Light - The Following EE",
+      "name": "Dying Light: The Following - Enhanced Edition",
       "size": "12.8 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/534380/header.jpg",
+      "image": "https://media.rawg.io/media/games/c11/c11a0b92b4c28f2e0db489f430142653.jpg",
       "categories": [
         "action",
         "adventure",
         "horror",
         "survival",
-        "multiplayer"
+        "multiplayer",
+        "rpg",
+        "single-player",
+        "open-world",
+        "shooter",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T16:40:00.000Z"
+      "createdAt": "2025-01-15T16:40:00.000Z",
+      "rating": "4.13",
+      "released": "2015-01-26",
+      "description": "Dying Light series introduces a world that was hit by a zombie virus outbreak. Under the daylight, zombies are weak and slow, but after the sunset, they become fast, strong and hungry for human flesh. You play as Kyle Crane, a special operative sent to the Harran city, which became a quarantined zone after the outbreak. In the expansion pack The Following, he learns about a cure for the plague, supposedly invented by a sect, and sets off to find out more about it. Crane will travel the countryside open world that is twice the size of the original game’s map. To fight off zombies, Crane will use not only a variety of weapons but also parkour movements, which are the definitive feature in Dying Light gameplay.\nThe Following introduces new weapons, several new game modes, such as bounty hunting which gives the player a new mission every day. The expansion allows the player to drive a buggy to run zombies over. There is a four-person multiplayer mode, and also the “Be the Zombie” mode, in which players can assume the role of a huge, powerful zombie. The Enhanced Edition includes the original game, the expansion pack, and all the available DLCs, such as Cuisine & Cargo and The Bozak Horde.",
+      "platforms": "macOS, Xbox One, PlayStation 4, PC, Linux",
+      "developers": "Techland",
+      "publishers": "Techland Publishing, Techland",
+      "metacritic": "87",
+      "playtime": "17 ساعة",
+      "website": "http://www.dyinglightgame.com/",
+      "updatedAt": "2025-11-25T19:17:45.479Z"
     },
     {
       "id": 2034,
