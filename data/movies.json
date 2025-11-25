@@ -80,26 +80,14 @@
       "type": "فيلم",
       "year": "1999",
       "rating": "8.8",
-      "image": "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_SX300.jpg",
+      "image": "https://image.tmdb.org/t/p/w780/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
       "description": "فيلم دراما وإثارة من بطولة براد بيت",
       "categories": [
         "drama",
         "thriller",
         "action"
       ],
-      "updatedAt": "2025-11-25T14:45:25.578Z",
-      "rate": "8.8",
-      "genre": "Crime, Drama, Thriller",
-      "director": "David Fincher",
-      "writer": "Chuck Palahniuk, Jim Uhls",
-      "actors": "Edward Norton, Brad Pitt, Meat Loaf",
-      "plot": "A nameless first person narrator (Edward Norton) attends support groups in attempt to subdue his emotional state and relieve his insomniac state. When he meets Marla (Helena Bonham Carter), another fake attendee of support groups, his life seems to become a little more bearable. However when he associates himself with Tyler (Brad Pitt) he is dragged into an underground fight club and soap making scheme. Together the two men spiral out of control and engage in competitive rivalry for love and power.",
-      "runtime": "139 min",
-      "language": "English",
-      "country": "United States, Germany",
-      "awards": "Nominated for 1 Oscar. 12 wins & 38 nominations total",
-      "metascore": "67",
-      "imdbVotes": "2,536,791"
+      "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 7,
@@ -192,30 +180,18 @@
     },
     {
       "id": 14,
-      "name": "Dune: Part One",
+      "name": "Dune",
       "type": "فيلم",
       "year": "2021",
       "rating": "8.0",
-      "image": "https://m.media-amazon.com/images/M/MV5BNWIyNmU5MGYtZDZmNi00ZjAwLWJlYjgtZTc0ZGIxMDE4ZGYwXkEyXkFqcGc@._V1_SX300.jpg",
+      "image": "https://image.tmdb.org/t/p/w780/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
       "description": "فيلم خيال علمي من إخراج دينيس فيلنوف",
       "categories": [
         "sci-fi",
         "adventure",
         "drama"
       ],
-      "updatedAt": "2025-11-25T14:45:11.549Z",
-      "rate": "8.0",
-      "genre": "Action, Adventure, Drama",
-      "director": "Denis Villeneuve",
-      "writer": "Jon Spaihts, Denis Villeneuve, Eric Roth",
-      "actors": "Timothée Chalamet, Rebecca Ferguson, Oscar Isaac",
-      "plot": "A mythic and emotionally charged hero's journey, \"Dune\" tells the story of Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, who must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity's greatest potential-only those who can conquer their fear will survive.",
-      "runtime": "155 min",
-      "language": "English, Mandarin",
-      "country": "United States, Canada",
-      "awards": "Won 6 Oscars. 175 wins & 298 nominations total",
-      "metascore": "74",
-      "imdbVotes": "988,424"
+      "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 15,
@@ -398,27 +374,17 @@
       "id": 1,
       "name": "Better Call Saul",
       "type": "مسلسل",
-      "year": "2015",
+      "year": "2015-2022",
       "rating": "8.8",
-      "seasons": "6",
-      "image": "https://m.media-amazon.com/images/M/MV5BNDdjNTEzMjMtYjM3Mi00NzQ3LWFlNWMtZjdmYWU3ZDkzMjk1XkEyXkFqcGc@._V1_SX300.jpg",
+      "seasons": 6,
+      "image": "https://image.tmdb.org/t/p/w780/fC2HDm5t0kHl7mTm7jxMRFbBqBr.jpg",
       "description": "مسلسل دراما وجريمة من AMC",
       "categories": [
         "drama",
         "crime",
         "thriller"
       ],
-      "updatedAt": "2025-11-25T14:45:55.206Z",
-      "rate": "9.0",
-      "genre": "Crime, Drama",
-      "writer": "Vince Gilligan, Peter Gould",
-      "actors": "Bob Odenkirk, Rhea Seehorn, Jonathan Banks",
-      "plot": "Before Saul Goodman, he was Jimmy McGill. And if you're calling Jimmy, you're in real trouble. The prequel to \"Breaking Bad\" follows small-time attorney Jimmy McGill as he transforms into Walter White's morally challenged lawyer, Saul Goodman.",
-      "runtime": "46 min",
-      "language": "English, Spanish, Vietnamese",
-      "country": "United States",
-      "awards": "Nominated for 53 Primetime Emmys. 66 wins & 317 nominations total",
-      "imdbVotes": "763,470"
+      "updatedAt": "2025-01-16T00:00:00.000Z"
     },
     {
       "id": 2,
@@ -458,13 +424,13 @@
       "year": "2019",
       "rating": "9.4",
       "seasons": 1,
-      "image": "https://image.tmdb.org/t/p/w780/hlLXt2tOPT6RRnjiUmoxyG1qxFi.jpg",
+      "image": "https://www.imdb.com/fr/title/tt7366338/",
       "description": "مسلسل دراما تاريخي من HBO",
       "categories": [
         "drama",
         "thriller"
       ],
-      "updatedAt": "2025-01-16T00:15:00.000Z"
+      "updatedAt": "2025-11-25T14:46:34.008Z"
     },
     {
       "id": 5,
