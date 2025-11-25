@@ -3251,16 +3251,26 @@
     },
     {
       "id": 2096,
-      "name": "Ratchet & Clank - Rift Apart",
+      "name": "Ratchet & Clank: Rift Apart",
       "size": "33 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2344520/header.jpg",
+      "image": "https://media.rawg.io/media/games/ccf/ccfd3fd488a8ed61145a3da96c080131.jpg",
       "categories": [
         "action",
         "adventure",
         "platformer",
-        "single-player"
+        "single-player",
+        "open-world"
       ],
-      "createdAt": "2025-01-15T21:55:00.000Z"
+      "createdAt": "2025-01-15T21:55:00.000Z",
+      "rating": "4.39",
+      "released": "2021-06-11",
+      "description": "BLAST YOUR WAY THROUGH AN INTERDIMENSIONAL ADVENTURE\nThe intergalactic adventurers are back with a bang. Help them stop a robotic emperor intent on conquering cross-dimensional worlds, with their own universe next in the firing line.\n- Blast your way home with an arsenal of outrageous weaponry.\n- Experience the shuffle of dimensional rifts and dynamic gameplay.\n- Explore never-before-seen planets and alternate dimension versions of old favorites.",
+      "platforms": "PC, PlayStation 5",
+      "developers": "Insomniac Games, Nixxes software",
+      "publishers": "Sony Interactive Entertainment, PlayStation PC",
+      "metacritic": "88",
+      "playtime": "13 ساعة",
+      "updatedAt": "2025-11-25T21:22:07.290Z"
     },
     {
       "id": 2097,
