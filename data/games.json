@@ -4186,14 +4186,21 @@
       "id": 2135,
       "name": "Watch Dogs 2 Gold Edition",
       "size": "25.2 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/447040/header.jpg",
+      "image": "https://media.rawg.io/media/screenshots/46b/46bfdcbd76387c3a8c08cc149a07b6f1_JXKhj8T.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
         "single-player"
       ],
-      "createdAt": "2025-01-16T01:10:00.000Z"
+      "createdAt": "2025-01-16T01:10:00.000Z",
+      "released": "2016-11-15",
+      "description": "Get the ultimate Watch Dogs Experience with the Watch Dogs 2 Gold Edition, which includes the base game + Season Pass subscription which continues your hacker's journey with special missions, customization items and more great DLC. Gold Edition also contains the two Deluxe Packs filled with premium customization items to personalize your character, weapons, vehicles, drones and more.",
+      "platforms": "PC, PlayStation 4, Xbox One",
+      "developers": "Ubisoft",
+      "publishers": "Ubisoft Entertainment",
+      "website": "https://www.ubisoft.com/en-gb/game/watch-dogs-2/",
+      "updatedAt": "2025-11-25T22:37:28.234Z"
     },
     {
       "id": 2136,
