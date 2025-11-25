@@ -16,21 +16,6 @@
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 10,
-      "name": "The Avengers",
-      "type": "فيلم",
-      "year": "2012",
-      "rating": "8.0",
-      "image": "https://image.tmdb.org/t/p/w780/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg",
-      "description": "فيلم أكشن وخيال علمي من مارفل",
-      "categories": [
-        "action",
-        "sci-fi",
-        "adventure"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
       "id": 19,
       "name": "The Lion King",
       "type": "فيلم",
