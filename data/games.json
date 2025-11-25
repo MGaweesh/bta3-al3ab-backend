@@ -1502,27 +1502,15 @@
       "id": 2024,
       "name": "Dead Island 2",
       "size": "37 GB",
-      "image": "https://media.rawg.io/media/games/9cd/9cd22ae5aebd922f96f2bc50efab83df.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/534380/header.jpg",
       "categories": [
         "action",
         "adventure",
         "horror",
         "survival",
-        "multiplayer",
-        "single-player",
-        "shooter"
+        "multiplayer"
       ],
-      "createdAt": "2025-01-15T15:55:00.000Z",
-      "rating": "3.71",
-      "released": "2023-04-21",
-      "description": "A deadly virus is spreading across Los Angeles, California, turning its inhabitants into ravenous zombies. The city is in quarantine and the military have retreated. Bitten, infected, but more than just immune, you learn to harness the zombie inside. Only you, and the handful of other swaggering fellows who happen to be resistant to the pathogen, holds the future of LA (and humanity), in the balance. As you uncover the truth behind the outbreak you’ll discover who – or what – you are. Survive, evolve, save the world – just another day in LA! The much-loved zombie saga is back with a unique formula of horror, dark humor and over the top zombie-slaying, spanning an epic pulp adventure. Dead Island 2 is a thrilling First-Person Action RPG that takes players across a brand-new playground. Stylish, vibrant and flooded with zombie infection, explore iconic, gore-drenched Los Angeles. Meet larger-than-life characters. Slay countless foes in exquisitely bloody detail. And evolve to become the ultimate Zombie Slayer. See you in HELL-A!",
-      "platforms": "PC, Xbox Series S/X, PlayStation 4, PlayStation 5, Xbox One",
-      "developers": "Dambuster Studios",
-      "publishers": "Deep Silver",
-      "metacritic": "75",
-      "playtime": "11 ساعة",
-      "website": "http://deadisland2.deepsilver.com/",
-      "updatedAt": "2025-11-25T19:11:46.363Z"
+      "createdAt": "2025-01-15T15:55:00.000Z"
     },
     {
       "id": 2025,
@@ -1622,15 +1610,25 @@
     },
     {
       "id": 2029,
-      "name": "Detroit - Become Human",
+      "name": "Detroit: Become Human",
       "size": "23 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1222140/header.jpg",
+      "image": "https://media.rawg.io/media/games/951/951572a3dd1e42544bd39a5d5b42d234.jpg",
       "categories": [
         "adventure",
         "action",
         "single-player"
       ],
-      "createdAt": "2025-01-15T16:20:00.000Z"
+      "createdAt": "2025-01-15T16:20:00.000Z",
+      "rating": "4.33",
+      "released": "2018-05-25",
+      "description": "In the future world, androids do almost everything that people do - they even start to think and feel. Although no one taught them this.\r\n\r\nThe plot of \"Become Human\" is built around three characters, each with a separate storyline, but they eventually merge into a single picture.\r\n\r\nConnor is a police investigator and android. He has a simple task - to find androids, deviated from the path given by humans. He has a special vision, it allows him to see events as they happened. And the more information he collects, the higher his chances of acting correctly.\r\n\r\nKara is an android-housekeeper which spontaneously develops self-consciousness. As a result, Kara assumes responsibility for the fate of the little girl whom she worked as a sitter for. She, along with the girl, escapes from the house as a result of a conflict with her father, the owner of Kara.\r\n\r\nMarkus is a caretaker android. He also acquired self-consciousness and came to the idea that androids need freedom. He has the ability to grant androids free will and to calculate the consequences of some actions.\r\n\r\nThe story develops depending on the decisions taken by the characters. Some decisions have to be made quickly. Sometimes a player can return to the moment of making a choice and replay the situation.",
+      "platforms": "PC, PlayStation 4",
+      "developers": "Quantic Dream",
+      "publishers": "Sony Computer Entertainment, Quantic Dream",
+      "metacritic": "79",
+      "playtime": "10 ساعة",
+      "website": "https://www.quanticdream.com/en/detroit-become-human",
+      "updatedAt": "2025-11-25T19:12:16.335Z"
     },
     {
       "id": 2030,
