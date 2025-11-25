@@ -2008,15 +2008,24 @@
     },
     {
       "id": 2047,
-      "name": "God of War 1&2",
-      "size": "300 MB",
-      "image": null,
+      "name": "God of War (2005)",
+      "size": "120 MB",
+      "image": "https://media.rawg.io/media/games/1aa/1aa4ca34a8a6bb57a2e065c8332dc230.jpg",
       "categories": [
         "action",
         "adventure",
         "single-player"
       ],
-      "createdAt": "2025-01-15T17:50:00.000Z"
+      "createdAt": "2025-01-15T17:50:00.000Z",
+      "rating": "4.36",
+      "released": "2005-03-22",
+      "description": "Unleash the power of the Gods and embark on a merciless quest as Kratos, an ex-Spartan warrior driven to destroy Ares, the God of War. Armed with lethal double chainblades, Kratos must carve through mythology's darkest creatures including Medusa, Cyclops, the Hydra and more, while solving intricate puzzles in breathtaking environments. Driven by pure revenge, nothing can stop Kratos from achieving absolution.",
+      "platforms": "PS Vita, PlayStation 2, PlayStation 3",
+      "developers": "SCE Santa Monica Studio",
+      "publishers": "Sony Computer Entertainment",
+      "metacritic": "94",
+      "playtime": "11 ساعة",
+      "updatedAt": "2025-11-25T19:33:05.856Z"
     },
     {
       "id": 2048,
