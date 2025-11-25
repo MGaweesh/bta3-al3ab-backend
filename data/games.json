@@ -1632,17 +1632,29 @@
     },
     {
       "id": 2030,
-      "name": "Deus Ex - Mankind Divided",
+      "name": "Deus Ex: Mankind Divided",
       "size": "25.1 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/337000/header.jpg",
+      "image": "https://media.rawg.io/media/games/00d/00d374f12a3ab5f96c500a2cfa901e15.jpg",
       "categories": [
         "shooter",
         "action",
         "adventure",
         "rpg",
-        "single-player"
+        "single-player",
+        "open-world",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T16:25:00.000Z"
+      "createdAt": "2025-01-15T16:25:00.000Z",
+      "rating": "3.96",
+      "released": "2016-08-22",
+      "description": "Deus Ex: Mankind Divided is currently the last entry in the Deus Ex franchise. It was two years after the accident in Human Revolution, where augmented people started to act uncontrollable and aggressive. As it turns out, a rogue group called Illuminati made it look like a proof for their instability and now augmented people are living like outcasts. \r\n\r\nWe follow Adam Jensen once again as he works as a double agent for Interpol and a hackers group called Juggernaut Collective to confront the Illuminati and reveal the truth.\r\n\r\nThe core gameplay of Mankind Divided hasn't changed much except minor changes like no need for batteries anymore because your energy bar slowly regenerates itself back and a non-killing politic. You can beat the game without killing anyone making Mankind Divided a big morality question for the player as he walks it through.",
+      "platforms": "Linux, PC, Xbox One, macOS, PlayStation 4",
+      "developers": "Eidos Montreal",
+      "publishers": "Square Enix, Feral Interactive",
+      "metacritic": "83",
+      "playtime": "7 ساعة",
+      "website": "http://www.deusex.com/",
+      "updatedAt": "2025-11-25T19:12:38.280Z"
     },
     {
       "id": 2031,
