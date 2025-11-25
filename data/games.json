@@ -2178,16 +2178,24 @@
     },
     {
       "id": 2053,
-      "name": "GTA San Andreas Definitive Edition",
+      "name": "Grand Theft Auto: San Andreas – The Definitive Edition",
       "size": "13 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1546970/header.jpg",
+      "image": "https://media.rawg.io/media/games/ae3/ae3ba4e4d73ab8ec9dd6bfd8ab9d4efb.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
         "single-player"
       ],
-      "createdAt": "2025-01-15T18:20:00.000Z"
+      "createdAt": "2025-01-15T18:20:00.000Z",
+      "rating": "3.08",
+      "released": "2021-11-11",
+      "description": "Five years ago, Carl ‘CJ’ Johnson escaped the haze of Los Santos, San Andreas...a city tearing itself apart with gang trouble, drugs, and corruption. Now, it's the early 90s. CJ’s got to go home - his mother has been murdered, his family has fallen apart, and his childhood friends are all heading towards disaster. On his return to the neighborhood, a couple of cops frame him for homicide, forcing CJ on a journey that takes him across the entire state of San Andreas, to save his family and to take control of the streets in the next iteration of the series that changed everything.",
+      "platforms": "PlayStation 5, Xbox Series S/X, PC, PlayStation 4, Nintendo Switch, Xbox One, PS Vita",
+      "developers": "Rockstar Games, Grove Street Games",
+      "publishers": "Rockstar Games",
+      "playtime": "3 ساعة",
+      "updatedAt": "2025-11-25T19:55:33.182Z"
     },
     {
       "id": 2054,
