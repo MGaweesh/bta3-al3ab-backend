@@ -58,14 +58,25 @@
       "id": 1005,
       "name": "Assassin's Creed",
       "size": "6.8 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/15100/header.jpg",
+      "image": "https://media.rawg.io/media/games/0bc/0bcc108295a244b488d5c25f7d867220.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
-        "single-player"
+        "single-player",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T10:20:00.000Z"
+      "createdAt": "2025-01-15T10:20:00.000Z",
+      "rating": "3.92",
+      "released": "2007-11-13",
+      "description": "The game takes place in 1191. In the present time, 2012, bartender Desmond Miles, the main character, kidnapped by the Corporation \"Abstergo industries\", which with the help of a machine called \"Animus\" wants to find an artefact. He learns that he is a descendant of the assassin Altair, who discovered this artefact. They need Desmond to know the location of the treasure through him.\r\n\r\nThe game belongs to the category of open world projects. It means that the world can be explored by the player in a free manner there. All the game space is a simplified model of the Holy Land. The area is divided into seven main sections. \r\n\r\nThe player will have to climb on a lot of different buildings and towers. The architecture of the cities in Assassin's Creed is specially designed so that Altair can jump on any roof. Throughout the game, these skills will not just be used to perform additional tasks.\r\n\r\nAn essential part of the game is the investigation and the associated need to merge with the crowd. Each time, getting to the big city, Altair has to look around properly and find the office of assassins. The head of the Bureau will tell him about his future victim and will bring to some people who have useful information.",
+      "platforms": "PC, PlayStation 3, Xbox 360, Xbox One",
+      "developers": "Ubisoft",
+      "publishers": "Ubisoft Entertainment",
+      "metacritic": "80",
+      "playtime": "5 ساعة",
+      "website": "https://www.ubisoft.com/en-us/game/assassins-creed-1/",
+      "updatedAt": "2025-11-25T14:11:27.977Z"
     },
     {
       "id": 1006,
