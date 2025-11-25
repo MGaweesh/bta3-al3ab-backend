@@ -562,16 +562,27 @@
     },
     {
       "id": 1024,
-      "name": "Hellblade Senuas Sacrifice",
+      "name": "Hellblade: Senua's Sacrifice",
       "size": "21.6 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/414340/header.jpg",
+      "image": "https://media.rawg.io/media/games/63f/63f0e68688cad279ed38cde931dbfcdb.jpg",
       "categories": [
         "action",
         "adventure",
         "horror",
-        "single-player"
+        "single-player",
+        "indie"
       ],
-      "createdAt": "2025-01-15T11:55:00.000Z"
+      "createdAt": "2025-01-15T11:55:00.000Z",
+      "rating": "4.22",
+      "released": "2017-08-07",
+      "description": "A dark fantasy game that takes inspiration from Scandinavian and Celtic folklore, Hellblade is set in a gritty barbarian world full of weird wooden structures and creepily masked enemies. \r\n\r\nThe player assumes the role of Senua, a traumatized female warrior from the Pict tribe. She suffers from a growing psychosis after her lover Dillion was brutally murdered by Vikings. Carrying his severed head, Senua sets out to Helheim, the underworld of the dead, to bring her lover's soul back. Her grim and bloody journey mirrors her descent into madness. It becomes increasingly difficult for her (and, thus, the player) to tell fact from fantasy, as she hears voices in her head and sees hallucinations. \r\n\r\nWhen not fighting her enemies, Senua has to solve puzzles to move forward. This is where her distorted perception actually comes out handy, enabling her to \"focus\" and see what regular people can not. The ghostly voices, recorded using the binaural method to create an eery effect, also help to guide Senua or to warn her about dangers. All of Senua movements, expressions and reactions were recorded through motion capture to make them more realistic and emotional.",
+      "platforms": "Xbox One, Nintendo Switch, PlayStation 4, PC",
+      "developers": "Ninja Theory",
+      "publishers": "Ninja Theory",
+      "metacritic": "83",
+      "playtime": "6 ساعة",
+      "website": "http://www.hellblade.com/",
+      "updatedAt": "2025-11-25T15:33:25.916Z"
     },
     {
       "id": 1025,
