@@ -3276,13 +3276,25 @@
       "id": 2097,
       "name": "Ready or Not",
       "size": "23.6 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1144200/header.jpg",
+      "image": "https://media.rawg.io/media/games/807/80722b59580f564352362b78cd53755b.jpg",
       "categories": [
         "shooter",
         "action",
-        "multiplayer"
+        "multiplayer",
+        "adventure",
+        "indie",
+        "single-player"
       ],
-      "createdAt": "2025-01-15T22:00:00.000Z"
+      "createdAt": "2025-01-15T22:00:00.000Z",
+      "rating": "3.98",
+      "released": "2023-12-13",
+      "description": "Ready or Not is an intense, tactical, first-person shooter that depicts a modern-day world in which SWAT police units are called to defuse hostile and confronting situations.\n\nPlease remember that the Beta build is still an incomplete version of the game. It will still have bugs and quirks, and will require lots of additional content before it is ready for full release. Because of our Supporters and with your help, we will continue to push Ready or Not, adding more content (new maps, missions, characters, weapons, etc.), and further refining it to get the game up to the standard that you deserve. We ultimately want you to be able to turn the lights out, crank up the volume, and be immersed in the action – bringing order to chaos.",
+      "platforms": "PC",
+      "developers": "VOID Interactive",
+      "publishers": "VOID Interactive",
+      "playtime": "6 ساعة",
+      "website": "https://voidinteractive.net/",
+      "updatedAt": "2025-11-25T21:22:21.814Z"
     },
     {
       "id": 2098,
