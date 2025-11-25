@@ -3629,16 +3629,26 @@
     },
     {
       "id": 2112,
-      "name": "Star Wars Jedi - Fallen Order",
+      "name": "Star Wars Jedi: Fallen Order",
       "size": "37.5 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1172380/header.jpg",
+      "image": "https://media.rawg.io/media/games/559/559bc0768f656ad0c63c54b80a82d680.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
         "single-player"
       ],
-      "createdAt": "2025-01-15T23:15:00.000Z"
+      "createdAt": "2025-01-15T23:15:00.000Z",
+      "rating": "4.14",
+      "released": "2019-11-15",
+      "description": "Cal Kestis—one of the last surviving members of the Jedi Order after the purge of Order 66—is now a Padawan on the run. \n\nStar Wars Jedi: Fallen Order is an action-adventure game set after Star Wars: Episode III — Revenge of the Sith™. Develop your Force abilities, hone your lightsaber techniques, and explore the ancient mysteries of a long-lost civilization—all while staying one step ahead of the Empire and its deadly Inquisitors. an",
+      "platforms": "PlayStation 4, PC, PlayStation 5, Xbox One",
+      "developers": "Respawn Entertainment",
+      "publishers": "Electronic Arts",
+      "metacritic": "80",
+      "playtime": "8 ساعة",
+      "website": "https://www.ea.com/games/starwars/jedi-fallen-order",
+      "updatedAt": "2025-11-25T21:50:44.515Z"
     },
     {
       "id": 2113,
