@@ -2274,14 +2274,25 @@
       "id": 2058,
       "name": "High on Life",
       "size": "30 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1583230/header.jpg",
+      "image": "https://media.rawg.io/media/games/2e7/2e732a02c29c84ca177855848932a5aa.jpg",
       "categories": [
         "shooter",
         "action",
         "adventure",
-        "single-player"
+        "single-player",
+        "multiplayer",
+        "open-world"
       ],
-      "createdAt": "2025-01-15T18:45:00.000Z"
+      "createdAt": "2025-01-15T18:45:00.000Z",
+      "rating": "3.82",
+      "released": "2022-12-13",
+      "description": "From the mind of Justin Roiland (Rick and Morty, Solar Opposites) comes High On Life. Humanity is being threatened by an alien cartel who wants to use them as drugs. It’s up to you to rescue and partner with charismatic, talking guns, take down Garmantuous and his gang, and save the world!",
+      "platforms": "PlayStation 5, PC, PlayStation 4, Xbox Series S/X",
+      "developers": "Squanch Games",
+      "publishers": "Squanch Games",
+      "playtime": "4 ساعة",
+      "website": "https://squanchgames.com/high-on-life/",
+      "updatedAt": "2025-11-25T19:57:46.558Z"
     },
     {
       "id": 2059,
