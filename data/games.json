@@ -958,16 +958,27 @@
   "repack": [
     {
       "id": 2001,
-      "name": "A Plague Tale - Innocence",
+      "name": "A Plague Tale: Innocence",
       "size": "10 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/752590/header.jpg",
+      "image": "https://media.rawg.io/media/games/b4a/b4adf80c36e267b35acc3497ed2af19c.jpg",
       "categories": [
         "action",
         "adventure",
         "horror",
-        "single-player"
+        "single-player",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T14:00:00.000Z"
+      "createdAt": "2025-01-15T14:00:00.000Z",
+      "rating": "4.15",
+      "released": "2019-05-13",
+      "description": "A Plague Tale: Innocence, on PlayStation 4, Xbox One and PC, tells the grim story of two siblings fighting together for survival in the darkest hours of History. This new video game from Asobo Studio sends you on an emotional journey through the 14th century France, with gameplay combining adventure, action and stealth, supported by a compelling story. Follow the young Amicia and her little brother Hugo, who face the brutality of a ravaged world as they discover their purpose to expose a dark secret. On the run from the Inquisition's soldiers, surrounded by unstoppable swarms of rats incarnating the Black Death, Amicia and Hugo will learn to know and trust each other as they struggle for their lives against all odds.\r\n• An original, powerful tale following the trip of the young noble Amicia de Runes and her adorable yet smart brother Hugo\r\n• Survive a great, enigmatic danger in a brutal, unforgiving world. With the Black Plague appeared deadly swarms of rats, indiscriminately devouring everything in their path.\r\n• A seamless blend of adventure and stealth gameplay, deeply embedded in dark medieval mystery.",
+      "platforms": "PC, Xbox Series S/X, PlayStation 4, PlayStation 5, Xbox One, Nintendo Switch",
+      "developers": "Focus Home Interactive, Asobo Studio",
+      "publishers": "Focus Home Interactive",
+      "metacritic": "82",
+      "playtime": "7 ساعة",
+      "website": "https://aplaguetale.com",
+      "updatedAt": "2025-11-25T16:58:00.937Z"
     },
     {
       "id": 2002,
