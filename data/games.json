@@ -2593,16 +2593,28 @@
     },
     {
       "id": 2069,
-      "name": "Left for Dead",
+      "name": "Left 4 Dead",
       "size": "2.8 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/500/header.jpg",
+      "image": "https://media.rawg.io/media/games/476/476178ef18ab0534771d099f51cdc694.jpg",
       "categories": [
         "shooter",
         "action",
         "horror",
-        "multiplayer"
+        "multiplayer",
+        "single-player",
+        "survival"
       ],
-      "createdAt": "2025-01-15T19:40:00.000Z"
+      "createdAt": "2025-01-15T19:40:00.000Z",
+      "rating": "4.1",
+      "released": "2008-11-17",
+      "description": "Left 4 Dead is set in a zombie apocalypse situation. You play as one of four different characters - Louis, Zoe, Bill or Francis - and try to go to safety zones at each of the levels or leaving the infected areas. The main story follows four protagonists in their attempts to escape the hordes of zombies and other infected mutants. Every single time though something goes wrong. \n\nAt every single chapter, players must defend themselves from a horde of zombies as well as completing different tasks in order to leave the location - power up the generator, contact military service via radio or some other objects. Every level you start in a safe room with melee and firearms weapon, like UZI, Katana, AK-47, supplies and medicaments like the first-aid kit which will heal you or your partner and painkillers which will give you some amount of health that you will lose over time. Ordinary zombies are not the only enemies you are going to face, as Smokers, Hunters, Tanks and other mutated monsters are about to stop you from getting to the end of the level.",
+      "platforms": "PC, Xbox 360, macOS",
+      "developers": "Valve Software, Turtle Rock Studios",
+      "publishers": "Electronic Arts, Valve",
+      "metacritic": "89",
+      "playtime": "5 ساعة",
+      "website": "http://www.l4d.com/",
+      "updatedAt": "2025-11-25T20:49:53.523Z"
     },
     {
       "id": 2070,
