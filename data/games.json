@@ -140,14 +140,24 @@
       "id": 1007,
       "name": "Assassin's Creed Chronicles - Trilogy",
       "size": "7.3 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/359610/header.jpg",
+      "image": "https://media.rawg.io/media/games/b86/b86c1a368a97b1fb0b757429f7659c70.jpg",
       "categories": [
         "action",
         "adventure",
         "platformer",
-        "single-player"
+        "single-player",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T10:30:00.000Z"
+      "createdAt": "2025-01-15T10:30:00.000Z",
+      "rating": "2.96",
+      "released": "2016-02-09",
+      "description": "Explore three distinct civilizations and periods throughout history including the Ming dynasty's downfall in China, the Sikh Empire in India, and the aftermath of the Red October revolution in Russia.\nTHREE UNIQUE EPISODES\nEmbody Assassins Shao Jun, Arbaaz Mir, and Nikolaï Orelov in a 2.5D reimagining of the Assassin’s Creed universe. Slay from the shadows, master the art of parkour, and take the leap of faith in a collection of stunning, living paintings.\nMASTER THREE DIFFERENT COMBAT STYLES\nEach Assassin is equipped with a powerful range of weapons and distinct gadgets, making every experience unique, with a wide assortment of abilities in your arsenal.\nSTEALTH TAKES ON A NEW DIMENSION\nThe thrill of being a Master Assassin in 2.5D. Scout, sneak, and hide to avoid detection. Fool your enemies by using whistles and disguises. Find your target, kill, and escape.\nIncludes: Assassin's Creed Chronices: China, Assassin's Creed Chronicles: India, and Assassin's Creed Chronicles: Russia\n1 player\n1080p HD Video Output\nSoftware subject to license (us.playstation.com/softwarelicense).  Online activity subject to Terms of Services and User Agreement (www.playstationnetwork.com/terms-of-service). One-time license fee for play on account’s designated primary PS4™ system and other PS4™ systems when signed in with that account.\n© 2015 Ubisoft Entertainment. All Rights Reserved. Assassin’s Creed, Ubisoft, and the Ubisoft logo are trademarks of Ubisoft Entertainment in the US and/or other countries.",
+      "platforms": "Xbox One, PC, PlayStation 4, PS Vita",
+      "developers": "Ubisoft, Ubisoft Montreal, Climax Group",
+      "publishers": "Ubisoft Entertainment",
+      "metacritic": "70",
+      "website": "http://assassinscreed.ubi.com/ru-ru/games/chronicles/index.aspx",
+      "updatedAt": "2025-11-25T14:16:05.696Z"
     },
     {
       "id": 1008,
