@@ -31,21 +31,6 @@
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 15,
-      "name": "The Good, the Bad and the Ugly",
-      "type": "فيلم",
-      "year": "1966",
-      "rating": "8.8",
-      "image": "https://image.tmdb.org/t/p/w780/bX2xnavhMYjWDoZp1VM6VnU1xwe.jpg",
-      "description": "فيلم وسترن كلاسيكي من أفضل أفلام المغامرات",
-      "categories": [
-        "action",
-        "adventure",
-        "drama"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
       "id": 19,
       "name": "The Lion King",
       "type": "فيلم",
