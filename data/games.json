@@ -3181,16 +3181,27 @@
     },
     {
       "id": 2093,
-      "name": "Prince of Persia Warrior Within",
+      "name": "Prince of Persia: Warrior Within",
       "size": "2.2 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/13530/header.jpg",
+      "image": "https://media.rawg.io/media/games/459/459ac8745027643ed7338516c0025cf7.jpg",
       "categories": [
         "action",
         "adventure",
         "platformer",
-        "single-player"
+        "single-player",
+        "open-world"
       ],
-      "createdAt": "2025-01-15T21:40:00.000Z"
+      "createdAt": "2025-01-15T21:40:00.000Z",
+      "rating": "4.39",
+      "released": "2004-11-30",
+      "description": "Prince of Persia: Warrior Within is an action adventure game and a part of the vast Prince of Persia series which includes ten titles overall. Sands of Time precede it and followed by The Two Thrones\n\n###Gameplay\nAll the big titles in the series feature pretty much the same mechanics: 3D platforming with a heavy focus on the fighting elements and parkour. The game is the first in the group to have a non-linear structure with the protagonist returning to the previously visited areas and opening hidden paths with the new tools acquired along the way. \nThe fighting system presents wielding two weapons at a time with the latter being divided into two main categories: melee — primary weapons and throwable — secondary ones. \n\n###Gameplay\nThe events depicted in the game take place seven years after the previous game in the series — The Sands of Time. The narrative centers around the antagonism of the protagonist of The Prince and Dahaka — the mystical beast, hunting him because he released the Sands of Time in the previous installment. \nThe game features two endings: a canonical \"good\" one the storyline of which is transferred in the next chapter of The Prince's journey and the \"bad\" one. The difference lies in the Water Sword achievable through gathering all the collectibles for upgrading the life meter.",
+      "platforms": "GameCube, Xbox, PC, iOS, PlayStation 2, PlayStation 3",
+      "developers": "Ubisoft, Ubisoft Montreal, Pipeworks Software",
+      "publishers": "Ubisoft Entertainment",
+      "metacritic": "83",
+      "playtime": "2 ساعة",
+      "website": "http://www.princeofpersiagame.com/uk/ww/home.php",
+      "updatedAt": "2025-11-25T21:21:15.547Z"
     },
     {
       "id": 2094,
