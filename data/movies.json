@@ -14,21 +14,6 @@
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 8,
-      "name": "The Matrix",
-      "type": "فيلم",
-      "year": "1999",
-      "rating": "8.7",
-      "image": "https://image.tmdb.org/t/p/w780/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
-      "description": "فيلم خيال علمي وإثارة من بطولة كيانو ريفز",
-      "categories": [
-        "sci-fi",
-        "action",
-        "thriller"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
       "id": 14,
       "name": "Dune",
       "type": "فيلم",
