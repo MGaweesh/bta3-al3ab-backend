@@ -519,14 +519,23 @@
       "id": 1022,
       "name": "FIFA 19",
       "size": "35.7 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/841370/header.jpg",
+      "image": "https://media.rawg.io/media/games/b59/b59560a7277b16b53e4786b4abe45baa.jpg",
       "categories": [
         "sports",
         "simulation",
         "multiplayer",
         "single-player"
       ],
-      "createdAt": "2025-01-15T11:45:00.000Z"
+      "createdAt": "2025-01-15T11:45:00.000Z",
+      "rating": "3.3",
+      "released": "2018-09-28",
+      "description": "Powered by Frostbite™*, EA SPORTS™ FIFA 19 delivers a champion's caliber-experience on and off the pitch. Led by the prestigious UEFA Champions League, FIFA 19 offers enhanced gameplay tools that allow you to control the pitch in every moment with unrivaled ways to play. FIFA 19 includes a dramatic finale to the story of Alex Hunter in The Journey: Champions, a new mode in the ever-popular FIFA Ultimate Team™, and more. Champions Rise in FIFA 19.",
+      "platforms": "PlayStation 4, PlayStation 3, Xbox 360, Nintendo Switch, Xbox One, PC",
+      "developers": "Electronic Arts Vancouver",
+      "publishers": "EA SPORTS",
+      "metacritic": "80",
+      "website": "https://www.ea.com/games/fifa/fifa-19",
+      "updatedAt": "2025-11-25T14:59:42.930Z"
     },
     {
       "id": 1023,
