@@ -485,16 +485,26 @@
       "id": 7,
       "name": "Dark",
       "type": "مسلسل",
-      "year": "2017-2020",
+      "year": "2017",
       "rating": "8.8",
-      "seasons": 3,
-      "image": "https://image.tmdb.org/t/p/w780/5TR6G2dbAnBKRxGJEm6h6i3bdN8.jpg",
+      "seasons": "3",
+      "image": "https://m.media-amazon.com/images/M/MV5BOWJjMGViY2UtNTAzNS00ZGFjLWFkNTMtMDBiMDMyZTM1NTY3XkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "sci-fi",
         "thriller",
         "drama"
       ],
-      "updatedAt": "2025-01-16T00:30:00.000Z"
+      "updatedAt": "2025-11-25T15:14:05.169Z",
+      "rate": "8.7",
+      "genre": "Crime, Drama, Mystery",
+      "writer": "Baran bo Odar, Jantje Friese",
+      "actors": "Louis Hofmann, Karoline Eichhorn, Lisa Vicari",
+      "plot": "The first German production from the world's leading Internet TV Network is set in a German town in present day where the disappearance of two young children exposes the double lives and fractured relationships among four families. In ten hour-long episodes, the story takes on a surprising twist that ties back to the same town in 1986.",
+      "runtime": "60 min",
+      "language": "German, English, German Sign ",
+      "country": "Germany, United States",
+      "awards": "8 wins & 23 nominations total",
+      "imdbVotes": "514,206"
     },
     {
       "id": 8,
