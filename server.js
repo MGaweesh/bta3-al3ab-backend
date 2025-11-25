@@ -143,28 +143,78 @@ const commitFileToGitHub = async (localFilePath, repoPath, commitMessage) => {
       // File doesn't exist yet
     }
 
-    // Commit file
-    const commitResponse = await fetch(
-      `https://api.github.com/repos/${owner}/${repo}/contents/${repoPath}`,
-      {
-        method: 'PUT',
-        headers: {
-          'Authorization': `token ${token}`,
-          'Accept': 'application/vnd.github.v3+json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          message: commitMessage,
-          content: contentBase64,
-          branch: branch,
-          ...(currentSha && { sha: currentSha })
-        })
-      }
-    );
+    // Commit file with retry mechanism
+    let commitResponse;
+    let retries = 3;
+    let lastError = null;
+    
+    while (retries > 0) {
+      try {
+        commitResponse = await fetch(
+          `https://api.github.com/repos/${owner}/${repo}/contents/${repoPath}`,
+          {
+            method: 'PUT',
+            headers: {
+              'Authorization': `token ${token}`,
+              'Accept': 'application/vnd.github.v3+json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              message: commitMessage,
+              content: contentBase64,
+              branch: branch,
+              ...(currentSha && { sha: currentSha })
+            })
+          }
+        );
 
-    if (!commitResponse.ok) {
-      const errorData = await commitResponse.json();
-      throw new Error(`GitHub API error: ${errorData.message || commitResponse.statusText}`);
+        if (commitResponse.ok) {
+          break; // Success, exit retry loop
+        }
+
+        // If 409 conflict, get fresh SHA and retry
+        if (commitResponse.status === 409 && retries > 1) {
+          console.log(`⚠️  GitHub conflict detected, fetching fresh SHA and retrying...`);
+          const conflictData = await commitResponse.json();
+          // Get fresh SHA
+          const freshFileResponse = await fetch(
+            `https://api.github.com/repos/${owner}/${repo}/contents/${repoPath}?ref=${branch}`,
+            {
+              headers: {
+                'Authorization': `token ${token}`,
+                'Accept': 'application/vnd.github.v3+json'
+              }
+            }
+          );
+          if (freshFileResponse.ok) {
+            const freshFileData = await freshFileResponse.json();
+            currentSha = freshFileData.sha;
+            // Re-read file content
+            const freshFileContent = readFileSync(localFilePath, 'utf8');
+            contentBase64 = Buffer.from(freshFileContent).toString('base64');
+            retries--;
+            await new Promise(resolve => setTimeout(resolve, 1000 * (4 - retries))); // Exponential backoff
+            continue;
+          }
+        }
+
+        const errorData = await commitResponse.json();
+        lastError = new Error(`GitHub API error: ${errorData.message || commitResponse.statusText}`);
+        retries--;
+        if (retries > 0) {
+          await new Promise(resolve => setTimeout(resolve, 1000 * (4 - retries))); // Exponential backoff
+        }
+      } catch (error) {
+        lastError = error;
+        retries--;
+        if (retries > 0) {
+          await new Promise(resolve => setTimeout(resolve, 1000 * (4 - retries))); // Exponential backoff
+        }
+      }
+    }
+
+    if (!commitResponse || !commitResponse.ok) {
+      throw lastError || new Error(`GitHub API error: Failed after 3 retries`);
     }
 
     const commitData = await commitResponse.json();
@@ -972,6 +1022,101 @@ app.get('/api/anime', async (req, res) => {
   } catch (error) {
     console.error('❌ Error fetching anime data:', error);
     res.status(500).json({ error: 'Failed to fetch anime data', details: error.message });
+  }
+});
+
+// GET /api/github/last-commit → Get last commit info for games.json and movies.json
+app.get('/api/github/last-commit', async (req, res) => {
+  try {
+    const token = process.env.GITHUB_TOKEN;
+    const owner = process.env.GITHUB_OWNER;
+    const repo = process.env.GITHUB_REPO;
+    const branch = process.env.GITHUB_BRANCH || 'main';
+
+    if (!token || !owner || !repo) {
+      return res.status(400).json({
+        error: 'GitHub not configured',
+        message: 'GITHUB_TOKEN, GITHUB_OWNER, and GITHUB_REPO must be set'
+      });
+    }
+
+    const files = ['data/games.json', 'data/movies.json'];
+    const commits = {};
+
+    for (const filePath of files) {
+      try {
+        // Get file info
+        const fileResponse = await fetch(
+          `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}?ref=${branch}`,
+          {
+            headers: {
+              'Authorization': `token ${token}`,
+              'Accept': 'application/vnd.github.v3+json'
+            }
+          }
+        );
+
+        if (fileResponse.ok) {
+          const fileData = await fileResponse.json();
+          
+          // Get commit info
+          const commitResponse = await fetch(
+            `https://api.github.com/repos/${owner}/${repo}/commits?path=${filePath}&per_page=1`,
+            {
+              headers: {
+                'Authorization': `token ${token}`,
+                'Accept': 'application/vnd.github.v3+json'
+              }
+            }
+          );
+
+          if (commitResponse.ok) {
+            const commitData = await commitResponse.json();
+            if (commitData.length > 0) {
+              commits[filePath] = {
+                exists: true,
+                lastCommit: {
+                  sha: commitData[0].sha.substring(0, 7),
+                  message: commitData[0].commit.message,
+                  author: commitData[0].commit.author.name,
+                  date: commitData[0].commit.author.date,
+                  url: commitData[0].html_url
+                },
+                fileSha: fileData.sha.substring(0, 7),
+                size: fileData.size
+              };
+            }
+          }
+        } else {
+          commits[filePath] = {
+            exists: false,
+            error: 'File not found on GitHub'
+          };
+        }
+      } catch (error) {
+        commits[filePath] = {
+          exists: false,
+          error: error.message
+        };
+      }
+    }
+
+    res.json({
+      status: 'ok',
+      github: {
+        configured: true,
+        owner,
+        repo,
+        branch
+      },
+      files: commits,
+      timestamp: new Date().toISOString()
+    });
+  } catch (error) {
+    res.status(500).json({
+      status: 'error',
+      error: error.message
+    });
   }
 });
 
