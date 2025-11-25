@@ -605,16 +605,29 @@
     },
     {
       "id": 1040,
-      "name": "Watch Dogs Legion",
+      "name": "Watch Dogs: Legion",
       "size": "54.8 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2239550/header.jpg",
+      "image": "https://media.rawg.io/media/games/415/41563ce6cb061a210160687a4e5d39f6.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
-        "single-player"
+        "single-player",
+        "shooter",
+        "multiplayer",
+        "rpg"
       ],
-      "createdAt": "2025-01-15T13:15:00.000Z"
+      "createdAt": "2025-01-15T13:15:00.000Z",
+      "rating": "3.12",
+      "released": "2020-10-29",
+      "description": "In Watch Dogs Legion, you get to build a resistance from virtually anyone you see as you hack, infiltrate, and fight to take back a near-future London that is facing its downfall, courtesy of state surveillance, private military, and organized crime.\n\nRecruit a well-rounded team to overthrow the wankers ruining this once-great city. The fate of London lies with you.\n\nEach character has their own backstory, personality, and skill set—all of which comes into play as you personalize your team. Swap between characters as you explore an open world online with friends. Enjoy free updates of new modes, rewards, and themed events.\n\nExplore a massive urban open world and visit London’s many famous landmarks – including Trafalgar Square, Big Ben, Tower Bridge, Camden, Piccadilly Circus, or the London Eye.\n\nWelcome to the Resistance.",
+      "platforms": "PC, Xbox One, Xbox Series S/X, PlayStation 4, PlayStation 5",
+      "developers": "Ubisoft, Ubisoft Toronto",
+      "publishers": "Ubisoft Entertainment",
+      "metacritic": "72",
+      "playtime": "2 ساعة",
+      "website": "https://watchdogs.ubisoft.com/game/",
+      "updatedAt": "2025-11-25T14:28:43.375Z"
     }
   ],
   "repack": [
