@@ -2917,16 +2917,29 @@
     },
     {
       "id": 2082,
-      "name": "Metal Gear Solid V The Phantom Pain",
+      "name": "Metal Gear Solid V: The Phantom Pain",
       "size": "21.6 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/287700/header.jpg",
+      "image": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg",
       "categories": [
         "action",
         "adventure",
         "stealth",
-        "single-player"
+        "single-player",
+        "shooter",
+        "multiplayer",
+        "open-world"
       ],
-      "createdAt": "2025-01-15T20:45:00.000Z"
+      "createdAt": "2025-01-15T20:45:00.000Z",
+      "rating": "4.16",
+      "released": "2015-09-01",
+      "description": "Metal Gear Solid 5 continues the story of MGS: Peace Walker and MGS V: Ground Zeroes. Snake seeks revenge for the attack on the MSF group 9 years ago, that placed Big Boss into a coma. After the failed assassination attempt, Big Boss takes the code name Venom Snake, delving back into the world of superhumans and espionage.\r\nA large-scale story that includes 5 hours of cinematic cutscenes compliments open world exploration with hundreds of audio logs and side missions, forming the atmosphere of military drama with sci-fi elements. MGS5: Phantom Pain has an advanced AI system that will allow enemy soldiers constantly call for reinforcements if they see that something is wrong, forcing players to take down communications and fight or retreat and try again. \r\nPlayers will manage the base by gathering and managing staff, weaponry, and resources, in order to upgrade their personal arsenal and companions.",
+      "platforms": "PlayStation 4, PC, Xbox One, PlayStation 3, Xbox 360",
+      "developers": "Kojima Productions",
+      "publishers": "Konami",
+      "metacritic": "91",
+      "playtime": "22 ساعة",
+      "website": "http://www.metalgearsolid.com",
+      "updatedAt": "2025-11-25T20:55:53.577Z"
     },
     {
       "id": 2083,
