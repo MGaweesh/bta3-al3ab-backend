@@ -1,21 +1,6 @@
 {
   "movies": [
     {
-      "id": 3,
-      "name": "The Dark Knight",
-      "type": "فيلم",
-      "year": "2008",
-      "rating": "9.0",
-      "image": "https://image.tmdb.org/t/p/w780/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
-      "description": "فيلم حركة وإثارة من بطولة كريستيان بيل",
-      "categories": [
-        "action",
-        "thriller",
-        "crime"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
       "id": 4,
       "name": "Pulp Fiction",
       "type": "فيلم",
