@@ -75,21 +75,6 @@
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 6,
-      "name": "Fight Club",
-      "type": "فيلم",
-      "year": "1999",
-      "rating": "8.8",
-      "image": "https://image.tmdb.org/t/p/w780/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
-      "description": "فيلم دراما وإثارة من بطولة براد بيت",
-      "categories": [
-        "drama",
-        "thriller",
-        "action"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
       "id": 7,
       "name": "Inception",
       "type": "فيلم",
