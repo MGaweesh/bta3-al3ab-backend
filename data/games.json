@@ -3802,26 +3802,15 @@
       "id": 2119,
       "name": "The Evil Within 2",
       "size": "12.6 GB",
-      "image": "https://media.rawg.io/media/games/d5f/d5fd2f970f48d0877a53aec98825faba.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/601430/header.jpg",
       "categories": [
         "horror",
         "action",
         "adventure",
         "survival",
-        "single-player",
-        "shooter"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T23:50:00.000Z",
-      "rating": "4.14",
-      "released": "2017-10-11",
-      "description": "The Evil Within 2 is survival horror game with an accent to the cinematic gameplay and crafting mechanics. This is the second title in the series by Tango Gameworks.\n\n###Gameplay\nThe game is experienced in the third person, \"behind-the-shoulder\" view. One of the title's main attractions is the auteur game design by Shinji Mikami who inspired both games of the series.\nHis style mixes absurdist plots, dark, horror movie-like environments, and almost absent jumpscares. The player must explore the vast maps in search of clues, collectibles, and story-related events. The game is highly non-linear and allows completing mandatory missions whenever one likes it. The time between the quests may be spent on crafting materials out of available resources, completing side quests and develop Sebastian Castellanos' — the protagonist's — abilities. There is a total of five skill trees each corresponding to playstyle and physical characteristics.\n\n###Plot\nThe game follows a story of a haunted mental hospital which was the setting for the first part of the series. The narrative circles around the presumable death of the policeman's daughter and the opportunities that she is not dead yet. Mental illnesses of his wife — Myra accompanies the protagonist's on his way through the story. The game does not feature various endings — no matter how one tries to alter the storyline, it does not affect the outcome of the ending.",
-      "platforms": "PlayStation 4, PC, Xbox One",
-      "developers": "Bethesda Softworks, Tango Gameworks",
-      "publishers": "Bethesda Softworks",
-      "metacritic": "82",
-      "playtime": "11 ساعة",
-      "website": "https://evilwithin2.bethesda.net/?utm_source=Steam",
-      "updatedAt": "2025-11-25T22:00:22.561Z"
+      "createdAt": "2025-01-15T23:50:00.000Z"
     },
     {
       "id": 2120,
@@ -3854,30 +3843,20 @@
       "id": 2121,
       "name": "The Last of Us Part II Remastered",
       "size": "49.6 GB",
-      "image": "https://media.rawg.io/media/games/d09/d099b508a1cfb5bd2f2928b50e0784a5.jpg",
+      "image": null,
       "categories": [
         "action",
         "adventure",
         "horror",
-        "single-player",
-        "survival",
-        "stealth"
+        "single-player"
       ],
-      "createdAt": "2025-01-16T00:00:00.000Z",
-      "rating": "4.49",
-      "released": "2024-01-19",
-      "description": "Play the winner of over 300 Game of the Year awards, now remastered for the PlayStation®5 console. Experience for the first time or relive Ellie and Abby’s story with graphical enhancements, new gameplay modes like the roguelike survival experience No Return, full DualSense™ wireless controller integration, and more.",
-      "platforms": "PC, PlayStation 5",
-      "developers": "Naughty Dog, Iron Galaxy Studios, Nixxes software",
-      "publishers": "Sony Interactive Entertainment, PlayStation Publishing",
-      "playtime": "33 ساعة",
-      "updatedAt": "2025-11-25T22:00:55.087Z"
+      "createdAt": "2025-01-16T00:00:00.000Z"
     },
     {
       "id": 2122,
-      "name": "The Last Of Us",
+      "name": "The Last of Us",
       "size": "46.8 GB",
-      "image": "https://media.rawg.io/media/games/a5a/a5a7fb8d9cb8063a8b42ee002b410db6.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1888930/header.jpg",
       "categories": [
         "action",
         "adventure",
@@ -3885,30 +3864,30 @@
         "survival",
         "single-player"
       ],
-      "createdAt": "2025-01-16T00:05:00.000Z",
-      "rating": "4.54",
-      "released": "2013-06-14",
-      "description": "The population of the Earth almost disappeared as a result of a pandemic caused by a mutated fungus. The disease causes irreversible changes in the human body, a person loses his mind and behaves aggressively, like a zombie. Civilization no longer exists, few survivors live in isolation under the protection of the military.\nCities outside the zones are dangerous ruins inhabited by infected people and people who have almost lost humanity.\nHeroes, the smuggler Joel and teenage girl Ellie, are trying to cross the continent, colliding in depopulated cities with all the set of dangers. The game requires hidden actions, the combat capability and the number of ammunition of the heroes are small, and it is best for them to avoid fighting. For most of the game, the player controls Joel, while Ellie and Joel's other companions are controlled by artificial intelligence.\nThe levels of the game are very extensive, at each level the task is the same - to reach a certain point alive.\n\nCharacters have something like a shotgun pistol, bow and arrow, as well as improvised items - pipes, sticks, baseball bats.\nFrom time to time, it is necessary to solve the problem of perceptiveness.\nArtificial intelligence, which controls opponents, can behave differently depending on the situation.",
-      "platforms": "PlayStation 3, PlayStation 4",
-      "developers": "Naughty Dog",
-      "publishers": "Sony Computer Entertainment",
-      "metacritic": "95",
-      "playtime": "15 ساعة",
-      "website": "http://www.thelastofus.playstation.com/",
-      "updatedAt": "2025-11-25T22:00:37.309Z"
+      "createdAt": "2025-01-16T00:05:00.000Z"
     },
     {
       "id": 2123,
       "name": "The Legend of Zelda Breath of the Wild (Portable)",
       "size": "15.8 GB",
-      "image": null,
+      "image": "https://media.rawg.io/media/games/cc1/cc196a5ad763955d6532cdba236f730c.jpg",
       "categories": [
         "action",
         "adventure",
         "rpg",
         "open-world"
       ],
-      "createdAt": "2025-01-16T00:10:00.000Z"
+      "createdAt": "2025-01-16T00:10:00.000Z",
+      "rating": "4.48",
+      "released": "2017-03-03",
+      "description": "The Legend of Zelda: Breath of the Wild is an adventure game developed by Nintendo. It is the nineteenth installment in the series.\n\nAfter awakening from a hundred year sleep, memoryless Link hears a mysterious female voice that guides him to a destroyed kingdom of Hyrule. He finds a Wiseman who says that a ruthless creature, Calamity Ganon, was imprisoned for 100 years. Even though the creature is trapped, it is still gaining power. Link sets out to kill Ganon before he frees himself and destroys the world.\n\nIn contrast to the previous titles in the series, Breath of the Wild the player to explore a vast open world. At the beginning of the game, a small tutorial is given to the players and they are free to travel the world at the pace they see fit. Link can climb almost every surface in the world, cook food to restore health. Fast travel to certain places in the world is also available for the players. The world is highly interactive thanks to the chemistry engine.",
+      "platforms": "Nintendo Switch, Wii U",
+      "developers": "Nintendo",
+      "publishers": "Nintendo",
+      "metacritic": "97",
+      "playtime": "121 ساعة",
+      "website": "https://www.nintendo.com/games/detail/the-legend-of-zelda-breath-of-the-wild-switch",
+      "updatedAt": "2025-11-25T22:05:26.907Z"
     },
     {
       "id": 2124,
