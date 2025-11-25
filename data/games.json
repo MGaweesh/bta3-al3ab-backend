@@ -3816,15 +3816,28 @@
       "id": 2120,
       "name": "The Evil Within",
       "size": "12.9 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/268050/header.jpg",
+      "image": "https://media.rawg.io/media/games/157/1570121f5c4d240504f1eae5c3854733.jpg",
       "categories": [
         "horror",
         "action",
         "adventure",
         "survival",
-        "single-player"
+        "single-player",
+        "shooter",
+        "open-world",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T23:55:00.000Z"
+      "createdAt": "2025-01-15T23:55:00.000Z",
+      "rating": "3.97",
+      "released": "2014-10-12",
+      "description": "The Evil Within is a third-person survival horror action game developed by Tango Gameworks.\n\nDetective Sebastian Castellanos and two of his and two of his partners come on call to the Beacon mental hospital. The hospital is filled with dead bodies upon the police arrival. Castellanos has to find out what is going on in the Beacon.\n\nBeing a survival horror, looking for supplies is crucial in The Evil Within. The game teaches the player when should they run away from the enemy or pick up the fight. Terrible monsters are not the only dangers in the game as there are a lot of traps scattered around the level that can be either used by Sebastian or trap him causing a lot of damage. The game world transforms during the game as a result of player actions.\n\nPlayers can use a safe house named 'Safe Haven' that is accessed either further into the plot development or by finding mirrors during the game. This safe house features a save room, an upgrade room, and several storage safes.\n\nAlthough the ammunition is hard to find in the game, players have access to a wide variety of firearms which include but are not limited to a revolver, shotgun, and a sniper rifle.",
+      "platforms": "PlayStation 3, PlayStation 4, Xbox 360, PC, Xbox One",
+      "developers": "Bethesda Softworks, Tango Gameworks",
+      "publishers": "Bethesda Softworks",
+      "metacritic": "68",
+      "playtime": "6 ساعة",
+      "website": "http://www.theevilwithin.com",
+      "updatedAt": "2025-11-25T22:00:07.559Z"
     },
     {
       "id": 2121,
