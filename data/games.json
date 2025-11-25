@@ -4023,14 +4023,28 @@
       "id": 2128,
       "name": "Thief",
       "size": "14.7 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/239160/header.jpg",
+      "image": "https://media.rawg.io/media/games/59a/59a3ebcba3d08c51532c6ca877aff256.jpg",
       "categories": [
         "action",
         "adventure",
         "stealth",
-        "single-player"
+        "single-player",
+        "rpg",
+        "open-world",
+        "horror",
+        "shooter"
       ],
-      "createdAt": "2025-01-16T00:35:00.000Z"
+      "createdAt": "2025-01-16T00:35:00.000Z",
+      "rating": "3.26",
+      "released": "2014-02-25",
+      "description": "Thief is a stealth-action game, the 4th installment in the Thief series and the first game since 2004 Thief: Deadly Shadows. The game was made as an attempt to reboot the franchise. \nJust as previous entries, the game takes place in the dark fantasy world with notable steampunk and Victorian era influence. You play as Garrett, the master thief who awakens after one-year slumber caused by accident in one of his missions. He finds out that his hometown is plagued by a mysterious disease “The Gloom.” \nThe gameplay can be described as first-person stealth-action with the heavy emphasis on the variability of completing missions. Sneaking behind the enemies is usually a more effective way of performing tasks than openly fighting with them. Garrett possesses several different tools and weapons like lockpicks, prybar, etc. One of Garrett’s few weapons is bow which has 8 types of arrows and the full range of application from killing and poisoning enemies to putting out torches and distracting guards.",
+      "platforms": "PlayStation 4, PlayStation 3, Xbox 360, Xbox One, macOS, PC",
+      "developers": "Feral Interactive, Square Enix, Eidos Montreal",
+      "publishers": "Square Enix",
+      "metacritic": "70",
+      "playtime": "5 ساعة",
+      "website": "http://www.thiefgame.com",
+      "updatedAt": "2025-11-25T22:23:29.426Z"
     },
     {
       "id": 2129,
