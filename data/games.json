@@ -2,16 +2,29 @@
   "readyToPlay": [
     {
       "id": 1001,
-      "name": "Assassin`s Creed Unity",
+      "name": "Assassin's Creed Unity",
       "size": "40.3 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/289650/header.jpg",
+      "image": "https://media.rawg.io/media/games/59f/59fc1c5de1d29cb9234741c97d250150.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
-        "single-player"
+        "single-player",
+        "multiplayer",
+        "rpg",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T10:00:00.000Z"
+      "createdAt": "2025-01-15T10:00:00.000Z",
+      "rating": "3.63",
+      "released": "2014-11-11",
+      "description": "The game takes place in Paris, during the Great French Revolution, from the capture of the Bastille in 1789 to the Thermidorian coup. Behind all action, there is an intrigue connected with the change of the Great Master of the Order of Templars. The game has a new assassin, Arno Victor Dorian.\nThe setting provides an abundance of locations - from Versailles to the Parisian multi-level catacombs.\nThe mission system is entirely different from the previous games of the series. In this game, there is a cooperative mode for a maximum of 4 people.\nParkour now allows you to climb walls without any troubles at all. A system of shelters and the ability to manipulate the crowd are added.\nThe player has an influence on the character improvement scenario.\nAn interesting detail - before the murder of the primary victim, her whole life flashes before the eyes of the assassin.",
+      "platforms": "PlayStation 4, PC, Xbox One",
+      "developers": "Ubisoft, Ubisoft Montreal, Ubisoft Toronto, Ubisoft Montpellier",
+      "publishers": "Ubisoft Entertainment",
+      "metacritic": "71",
+      "playtime": "14 ساعة",
+      "website": "http://www.assassinscreed.com",
+      "updatedAt": "2025-11-25T14:40:18.156Z"
     },
     {
       "id": 1002,
