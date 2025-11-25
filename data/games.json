@@ -4162,15 +4162,25 @@
     },
     {
       "id": 2134,
-      "name": "UNCHARTED 4",
+      "name": "Uncharted 4: A Thief’s End",
       "size": "46.5 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1659420/header.jpg",
+      "image": "https://media.rawg.io/media/games/709/709bf81f874ce5d25d625b37b014cb63.jpg",
       "categories": [
         "action",
         "adventure",
-        "single-player"
+        "single-player",
+        "shooter"
       ],
-      "createdAt": "2025-01-16T01:05:00.000Z"
+      "createdAt": "2025-01-16T01:05:00.000Z",
+      "rating": "4.48",
+      "released": "2016-05-10",
+      "description": "Uncharted 4 is the final installment in the Uncharted series. The story follows Nathan Drake for the last time as he now searches for Captain Henry Avery's treasure. \r\n\r\nIntroducing new characters such as Samuel Drake, with Sam and Sully Nathan agrees to find the treasure of the Gunsway heist in 1695. As antagonists, Nathan must face Rafe Adler and Nadine Ross while they are also trying to find this treasure and Nathan must face details about Sam's past.\r\n\r\nNow changing the game's concept, Naughty Dog made locations much bigger and more explorable. Expanding the story behind Henry Avery's actions in history the story once again feels like Indiana Jones kind of adventure. The grappling hook, climbing on rocks and mountains, or diving from the top, Nathan still engages into hand to hand combat with his enemies as well as using firearms. Nolan North, Emily Rose, and Richard McGonagle return to the final installment in the series to say farewell to the story of Nathan Drake for the last time.",
+      "platforms": "PlayStation 5, PlayStation 4",
+      "developers": "Naughty Dog",
+      "publishers": "Sony Computer Entertainment",
+      "metacritic": "93",
+      "website": "https://www.unchartedthegame.com/en-us/games/uncharted-4/",
+      "updatedAt": "2025-11-25T22:37:11.783Z"
     },
     {
       "id": 2135,
