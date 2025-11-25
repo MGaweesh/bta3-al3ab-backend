@@ -2506,15 +2506,26 @@
     },
     {
       "id": 2065,
-      "name": "Kingdom Come Deliverance II",
+      "name": "Kingdom Come: Deliverance II",
       "size": "70 GB",
-      "image": null,
+      "image": "https://media.rawg.io/media/games/d84/d842fec4ae7bbd782d330f678c980f7f.jpg",
       "categories": [
         "rpg",
         "action",
-        "adventure"
+        "adventure",
+        "single-player",
+        "open-world"
       ],
-      "createdAt": "2025-01-15T19:20:00.000Z"
+      "createdAt": "2025-01-15T19:20:00.000Z",
+      "rating": "4.34",
+      "released": "2025-02-03",
+      "description": "Kingdom of Bohemia, Early 15th Century: chaos has befallen the kingdom.  As invaders pillage this ungoverned land, sowing fear and terror, Henry of Skalitz seeks revenge for his murdered family.\n\nNow a trusted member of the rightful king’s allies, Henry is sent to escort Sir Hans Capon on a diplomatic mission. After they are ambushed and nearly killed, the two young men embark on a series of perilous adventures, putting their skills, character and friendship to the ultimate test.",
+      "platforms": "PC, PlayStation 5, Xbox Series S/X",
+      "developers": "Warhorse Studios",
+      "publishers": "Deep Silver",
+      "playtime": "28 ساعة",
+      "website": "https://www.kingdomcomerpg.com/",
+      "updatedAt": "2025-11-25T20:33:48.770Z"
     },
     {
       "id": 2066,
