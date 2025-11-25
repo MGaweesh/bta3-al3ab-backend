@@ -3854,14 +3854,27 @@
       "id": 2121,
       "name": "The Last of Us Part II Remastered",
       "size": "49.6 GB",
-      "image": null,
+      "image": "https://media.rawg.io/media/games/d09/d099b508a1cfb5bd2f2928b50e0784a5.jpg",
       "categories": [
         "action",
         "adventure",
         "horror",
-        "single-player"
+        "single-player",
+        "shooter",
+        "survival",
+        "stealth"
       ],
-      "createdAt": "2025-01-16T00:00:00.000Z"
+      "createdAt": "2025-01-16T00:00:00.000Z",
+      "rating": "4.49",
+      "released": "2024-01-19",
+      "description": "Play the winner of over 300 Game of the Year awards, now remastered for the PlayStation®5 console. Experience for the first time or relive Ellie and Abby’s story with graphical enhancements, new gameplay modes like the roguelike survival experience No Return, full DualSense™ wireless controller integration, and more.",
+      "platforms": "PC, PlayStation 5",
+      "developers": "Naughty Dog, Iron Galaxy Studios, Nixxes software",
+      "publishers": "Sony Interactive Entertainment, PlayStation Publishing",
+      "metacritic": "93",
+      "playtime": "33 ساعة",
+      "website": "https://www.thelastofus.playstation.com/",
+      "updatedAt": "2025-11-25T22:10:41.718Z"
     },
     {
       "id": 2122,
