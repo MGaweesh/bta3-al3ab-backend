@@ -3350,15 +3350,27 @@
       "id": 2100,
       "name": "Resident Evil 3",
       "size": "13 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/952060/header.jpg",
+      "image": "https://media.rawg.io/media/games/a4b/a4bb55f42fe837ae7bf1307e7b41cc85.jpg",
       "categories": [
         "horror",
         "action",
         "adventure",
         "survival",
-        "single-player"
+        "single-player",
+        "shooter",
+        "multiplayer"
       ],
-      "createdAt": "2025-01-15T22:15:00.000Z"
+      "createdAt": "2025-01-15T22:15:00.000Z",
+      "rating": "4.04",
+      "released": "2020-04-02",
+      "description": "Taking a trip back to Raccoon City won’t be a walk in the park, of course. The city is in the throes of an outbreak, with the shuffling undead wandering the streets and the urban jungle becoming a tangle of overturned cars and crumbling buildings. Picturesque, isn’t it? It’s against this backdrop that Jill Valentine prepares to make her escape, though there’s a bit of a twist in the timeline for those of you who aren’t familiar with the original. If you played Resident Evil 2 earlier this year, you may know that Leon and Claire arrived in the city on September 29th. Jill’s story, however, starts a few days earlier. As an accomplished member of S.T.A.R.S. and a survivor of the incident in the Arklay Mountains (the site of the original Resident Evil), Jill has some experience with the horrors that await.",
+      "platforms": "Nintendo Switch, PC, Xbox Series S/X, PlayStation 5, PlayStation 4, Xbox One",
+      "developers": "Capcom, GOG",
+      "publishers": "Capcom",
+      "metacritic": "80",
+      "playtime": "8 ساعة",
+      "website": "https://www.residentevil.com/re3",
+      "updatedAt": "2025-11-25T21:25:43.127Z"
     },
     {
       "id": 2101,
