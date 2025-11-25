@@ -3519,14 +3519,23 @@
       "id": 2107,
       "name": "Silent Hill 2",
       "size": "26 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2124490/header.jpg",
+      "image": "https://media.rawg.io/media/games/09b/09b41c1a2c5761c5b1772a4ae238bb0e.jpg",
       "categories": [
         "horror",
         "adventure",
         "survival",
-        "single-player"
+        "single-player",
+        "action"
       ],
-      "createdAt": "2025-01-15T22:50:00.000Z"
+      "createdAt": "2025-01-15T22:50:00.000Z",
+      "rating": "4.5",
+      "released": "2024-10-08",
+      "description": "Having received a letter from his deceased wife,\nJames heads to where they shared so many memories,\nin the hope of seeing her one more time: Silent Hill.\nThere, by the lake, he finds a woman eerily similar to her...\n\"My name...is Maria,\" the woman smiles. Her face, her voice... She's just like her.\nExperience a master-class in psychological survival horror―lauded as the best in the series―on the latest hardware with chilling visuals and visceral sounds.",
+      "platforms": "PC, PlayStation 5",
+      "developers": "Bloober Team",
+      "publishers": "Konami",
+      "playtime": "1 ساعة",
+      "updatedAt": "2025-11-25T21:44:15.527Z"
     },
     {
       "id": 2108,
