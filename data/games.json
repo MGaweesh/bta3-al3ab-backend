@@ -1075,14 +1075,26 @@
       "id": 2006,
       "name": "Aragami 2 Digital Deluxe Edition",
       "size": "3.6 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1158370/header.jpg",
+      "image": "https://media.rawg.io/media/games/0d4/0d483b51813737f40163c501ed123cb5.jpg",
       "categories": [
         "action",
         "adventure",
         "stealth",
-        "single-player"
+        "single-player",
+        "shooter",
+        "multiplayer"
       ],
-      "createdAt": "2025-01-15T14:25:00.000Z"
+      "createdAt": "2025-01-15T14:25:00.000Z",
+      "rating": "3.12",
+      "released": "2021-09-17",
+      "description": "You are one of the last elite warriors of your kin, the Aragami. Victims of a supernatural affliction which corrodes the body and devours the mind, the Aragami control Shadow Essence - a mystical power which grants the ability to control the shadows. With this power the Aragami carry out their tasks and quests - assignments made all along the valley to ensure the subsistence of the village and to free the Aragami enslaved by the invader armies.\r\nPLAY IN SINGLE MODE OR IN CO-OP WITH YOUR FRIENDS\r\n\r\nDiscover a full campaign and join the assassin squad up to 3 players in co-op.\r\nENGAGE IN FAST-PACED STEALTH ACTIONS\r\n\r\nManage covers and powers with agility. Take down your enemies with stealth kills and non-lethal takedowns.\r\nENTER INTO COMBAT AS A TACTICAL DECISION\r\n\r\nBecome the master of a skill based combat with high risk and high reward.\r\nBUILD YOUR SHADOW ASSASSIN\r\n\r\nCraft your weapons and armors and upgrade your elite warrior with three skill trees of 42 abilities and shadow powers.\r\nPROTECT THE RASHOMON VALLEY\r\n\r\nSave your people and defeat the curse before it ends with you and discover how the Aragami became a legend.",
+      "platforms": "PlayStation 5, Xbox Series S/X, PC, Nintendo Switch, PlayStation 4, Xbox One",
+      "developers": "Lince Works",
+      "publishers": "Lince Works, Yooreka Studio",
+      "metacritic": "68",
+      "playtime": "4 ساعة",
+      "website": "https://linceworks.com/games/aragami-2/",
+      "updatedAt": "2025-11-25T17:16:09.560Z"
     },
     {
       "id": 2007,
