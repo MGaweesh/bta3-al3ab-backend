@@ -1147,27 +1147,16 @@
     },
     {
       "id": 2009,
-      "name": "Baldur's Gate III",
+      "name": "Baldurs Gate 3",
       "size": "89.7 GB",
-      "image": "https://media.rawg.io/media/games/699/69907ecf13f172e9e144069769c3be73.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg",
       "categories": [
         "rpg",
         "adventure",
         "strategy",
-        "multiplayer",
-        "single-player"
+        "multiplayer"
       ],
-      "createdAt": "2025-01-15T14:40:00.000Z",
-      "rating": "4.43",
-      "released": "2023-08-03",
-      "description": "Gather your party, and return to the Forgotten Realms in a tale of fellowship and betrayal, sacrifice and survival, and the lure of absolute power.\r\n\r\nMysterious abilities are awakening inside you, drawn from a Mind Flayer parasite planted in your brain. Resist, and turn darkness against itself. Or embrace corruption, and become ultimate evil.\r\n\r\nFrom the creators of Divinity: Original Sin 2 comes a next-generation RPG, set in the world of Dungeons and Dragons.\r\n\r\nChoose from a wide selection of D&D races and classes, or play as an origin character with a hand-crafted background. Adventure, loot, battle and romance as you journey through the Forgotten Realms and beyond. Play alone, and select your companions carefully, or as a party of up to four in multiplayer.\r\n\r\nAbducted, infected, lost. You are turning into a monster, but as the corruption inside you grows, so does your power. That power may help you to survive, but there will be a price to pay, and more than any ability, the bonds of trust that you build within your party could be your greatest strength. Caught in a conflict between devils, deities, and sinister otherworldly forces, you will determine the fate of the Forgotten Realms together.\r\n\r\nForged with the new Divinity 4.0 engine, Baldur’s Gate 3 gives you unprecedented freedom to explore, experiment, and interact with a world that reacts to your choices. A grand, cinematic narrative brings you closer to your characters than ever before, as you venture through our biggest world yet.\r\n\r\nThe Forgotten Realms are a vast, detailed and diverse world, and there are secrets to be discovered all around you -- verticality is a vital part of exploration. Sneak, dip, shove, climb, and jump as you journey from the depths of the Underdark to the glittering rooftops of the Upper City. How you survive, and the mark you leave on the world, is up to you.",
-      "platforms": "macOS, PC, Xbox Series S/X, PlayStation 5",
-      "developers": "Larian Studios",
-      "publishers": "Larian Studios",
-      "metacritic": "97",
-      "playtime": "19 ساعة",
-      "website": "https://baldursgate3.game/",
-      "updatedAt": "2025-11-25T17:37:33.555Z"
+      "createdAt": "2025-01-15T14:40:00.000Z"
     },
     {
       "id": 2010,
@@ -1249,39 +1238,40 @@
       "id": 2013,
       "name": "BioShock 2 Remastered",
       "size": "7 GB",
-      "image": "https://media.rawg.io/media/games/7c4/7c448374df84b607f67ce9182a3a3ca7.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/409720/header.jpg",
       "categories": [
         "shooter",
         "action",
         "adventure",
         "horror",
-        "single-player",
-        "rpg",
-        "multiplayer"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T15:00:00.000Z",
-      "rating": "4",
-      "released": "2016-09-15",
-      "description": "Bioshock 2 is a shooter with RPG elements, centered around resource-management to a great extent: more like an RPG than a shooter. The game is made by 2K studios and represents the final part of a dystopia dilogy — preceded by the original Bioshock. Its successor is Bioshock Infinite.\nYou play as Big Daddy — a giant mech with a drill replacing one of the hands. The game, while they both are telling the story of a charming Rapture — the city descended from Orwell's and Zamyatin's pages where the society's greatest mind have suffered a severe decline.\nThe central feature of the game is the unique abandoned city's aesthetics — minding the time Bioshock 2 is still a beautiful title, with detailed drawn water and strange surroundings, never mind the variety of foes.\nThe remaster introduces a 4k resolution — it is now more enjoyable to explore Rapture and enjoy its various landscapes and sea-filled quarters. Among the other features: high-res textures and a set of Protector Trials,  which can give the player freakish weaponry and ammunition.",
-      "platforms": "PlayStation 4, macOS, PC, Xbox One, Nintendo Switch",
-      "developers": "Digital Extremes, 2K Australia, 2K Marin, Virtuos, 2K China, Blind Squirrel",
-      "publishers": "2K Games, Take Two Interactive",
-      "playtime": "4 ساعة",
-      "website": "https://2k.com/en-US/game/bioshock-the-collection",
-      "updatedAt": "2025-11-25T17:37:58.380Z"
+      "createdAt": "2025-01-15T15:00:00.000Z"
     },
     {
       "id": 2014,
       "name": "Borderlands 2 - Remastered",
       "size": "11.9 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/49520/header.jpg",
+      "image": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg",
       "categories": [
         "shooter",
         "action",
         "rpg",
-        "multiplayer"
+        "multiplayer",
+        "single-player",
+        "open-world"
       ],
-      "createdAt": "2025-01-15T15:05:00.000Z"
+      "createdAt": "2025-01-15T15:05:00.000Z",
+      "rating": "4.02",
+      "released": "2012-09-18",
+      "description": "Sequel to the 4-player cooperative FPS RPG Borderlands, where the new team of Vault Hunters arrives on the infamous planet Pandora in order to get the riches, hidden inside the Vault, and help to free the planet from the Handsome Jack, President of Hyperion. Clear out the endless waves and groups and marauders with various weapon types and character abilities.\r\nUnlike the first game, Borderlands 2 provided DLC not only expanding the world of Pandora with stand-alone story campaigns but adding 2 more characters. Now the main cast consists of Gunzerker Salvador(dual-wields guns at command), Siren Maya (holds and paralyzes the enemy), Commando Axton (summons turrets) and Zer0 the Assasin (invisible sniper ninja). But with the DLC players can try out summoning giant flying robots with Gaige the Mechromancer and Krieg the Psycho. \r\nMost of the game charm and popularity of Borderlands 2 comes from the supporting cast and the personalities of the NPC, making this fast-paced shooter with optional cover stand out.",
+      "platforms": "PlayStation 3, macOS, PC, Android, Linux, PS Vita, Xbox 360",
+      "developers": "Aspyr Media, 2K, Gearbox Software, Sony Computer Entertainment America",
+      "publishers": "2K Games, Aspyr",
+      "metacritic": "89",
+      "playtime": "11 ساعة",
+      "website": "http://www.borderlands2.com/",
+      "updatedAt": "2025-11-25T17:38:24.853Z"
     },
     {
       "id": 2015,
@@ -1330,128 +1320,135 @@
     },
     {
       "id": 2017,
-      "name": "Call of Duty Modern Warfare 3",
+      "name": "Call of Duty: Modern Warfare III",
       "size": "21.6 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2519060/header.jpg",
+      "image": "https://media.rawg.io/media/games/b17/b17ce7ab3187cc3f42d263d9511adac0.jpg",
       "categories": [
         "shooter",
         "action",
-        "multiplayer"
+        "multiplayer",
+        "single-player",
+        "open-world"
       ],
-      "createdAt": "2025-01-15T15:20:00.000Z"
+      "createdAt": "2025-01-15T15:20:00.000Z",
+      "rating": "3.16",
+      "released": "2023-11-09",
+      "description": "ADAPT OR DIE IN A FIGHT AGAINST THE ULTIMATE THREAT\n\nIn the direct sequel to the record-breaking Call of Duty®: Modern Warfare® II, Captain Price and Task Force 141 face off against the ultimate threat. The ultranationalist war criminal Vladimir Makarov is extending his grasp across the world causing Task Force 141 to fight like never before.\n\nIT’S TIME TO SETTLE OLD SCORES AND START NEW ONES\n\nModern Warfare® III celebrates the 20th anniversary of Call of Duty® with one of the greatest collections of Multiplayer maps ever assembled - both fan favorites and all new ones. All 16 launch maps from the original Modern Warfare® 2 (2009) have been modernized with new modes and gameplay features and will be available at launch to get everyone started, while over 12 all-new core 6v6 maps will fuel post-launch live seasons.\n\nALL NEW OPEN WORLD ZOMBIES\n\nFor the first time, team up with other squads to survive and fight massive hordes of the undead in the largest Call of Duty® Zombies map ever. Modern Warfare® Zombies (MWZ) tells a new Treyarch Zombies story with missions, core Zombies features, and secrets to discover.",
+      "platforms": "PC, Xbox One, PlayStation 5, Xbox Series S/X, PlayStation 4",
+      "developers": "Raven Software, Treyarch, Infinity Ward, Beenox, Sledgehammer Games, High Moon Studios, Demonware",
+      "publishers": "Activision Blizzard, Activision Value Publishing",
+      "website": "https://www.callofduty.com",
+      "updatedAt": "2025-11-25T17:38:53.980Z"
     },
     {
       "id": 2018,
-      "name": "Clair Obscur Expedition 33",
+      "name": "Clair Obscur: Expedition 33",
       "size": "36.7 GB",
-      "image": null,
+      "image": "https://media.rawg.io/media/games/466/4667f17fdee9ebbcea2049e54f8e2b96.jpg",
       "categories": [
         "action",
-        "adventure"
+        "adventure",
+        "rpg",
+        "single-player"
       ],
-      "createdAt": "2025-01-15T15:25:00.000Z"
+      "createdAt": "2025-01-15T15:25:00.000Z",
+      "rating": "4.52",
+      "released": "2025-04-24",
+      "description": "Once a year, the Paintress wakes and paints upon her monolith. Paints her cursed number. And everyone of that age turns to smoke and fades away. Year by year, that number ticks down and more of us are erased. Tomorrow she’ll wake and paint “33.” And tomorrow we depart on our final mission - Destroy the Paintress, so she can never paint death again.\n\nWe are Expedition 33.",
+      "platforms": "PC, PlayStation 5, Xbox Series S/X",
+      "developers": "Sundial Interactive, Sandfall Interactive",
+      "publishers": "Kepler Interactive",
+      "playtime": "47 ساعة",
+      "website": "https://www.expedition33.com",
+      "updatedAt": "2025-11-25T17:39:19.000Z"
     },
     {
       "id": 2019,
       "name": "Control DLC",
       "size": "18 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/870780/header.jpg",
+      "image": "https://media.rawg.io/media/games/253/2534a46f3da7fa7c315f1387515ca393.jpg",
       "categories": [
         "action",
         "adventure",
         "horror",
-        "single-player"
+        "single-player",
+        "shooter"
       ],
-      "createdAt": "2025-01-15T15:30:00.000Z"
+      "createdAt": "2025-01-15T15:30:00.000Z",
+      "rating": "4.15",
+      "released": "2019-08-27",
+      "description": "Control is a surrealist low-fantasy game about a secret organization that deals with the paranormal activities.\r\n\r\n###Plot\r\nThe game follows Jesse Faden, a woman with superhuman powers. She works with the Federal Bureau of Control, a secret governmental organization that deals with the paranormal phenomena, often by annihilating it as a threat. The Bureau headquarters, known as the Oldest House, is taken over by a supernatural power called the Hiss. The director of Bureau, Zachariah Trench, is killed, and Faden is unexpectedly promoted to his place, while the ghost of her predecessor haunts her. She has to travel the endless corridors of the Oldest House and defeat the Hiss using magical Director's Pistol. \r\n\r\n###Setting\r\nMost of the game takes place in the FBC building, which is a high-rise on Manhattan. The Oldest House is a non-euclidian space, which is larger on the inside. Its corridors and rooms change shape and positions depending on the rituals its inhabitants perform. The Oldest House stores the magical artifacts called Altered Items.\r\n\r\n###Gameplay\r\nThe player controls Faden from the third person view. To defeat her enemies, she uses various superhuman powers, such as telekinesis or levitation. She also wields the shape-shifting Director's Pistol and the magic artifacts she can obtain as a reward for completing quests. Jesse's skills grow throughout the game. \r\n\r\nThere is no multiplayer mode.",
+      "platforms": "Xbox Series S/X, PlayStation 5, Xbox One, PlayStation 4, PC",
+      "developers": "505 Games, Remedy Entertainment",
+      "publishers": "505 Games",
+      "metacritic": "84",
+      "playtime": "6 ساعة",
+      "website": "https://www.controlgame.com",
+      "updatedAt": "2025-11-25T17:39:40.121Z"
     },
     {
       "id": 2020,
-      "name": "Cronos: The New Dawn",
+      "name": "Cronos The New Dawn",
       "size": "17.4 GB",
-      "image": "https://media.rawg.io/media/games/370/370a27962e860e9b01709ef3de60fffe.jpg",
+      "image": null,
       "categories": [
         "action",
-        "adventure",
-        "single-player",
-        "horror"
+        "adventure"
       ],
-      "createdAt": "2025-01-15T15:35:00.000Z",
-      "rating": "3.87",
-      "released": "2025-09-04",
-      "description": "Cronos: The New Dawn is a pulse-pounding, third-person survival horror game where time is your deadliest weapon — and your worst enemy. Survive a brutal future, dive back in time, and stop nightmarish creatures from merging into unstoppable abominations.",
-      "platforms": "Linux, PC, Xbox Series S/X, PlayStation 5",
-      "developers": "Bloober Team",
-      "publishers": "Bloober Team",
-      "playtime": "6 ساعة",
-      "website": "http://cronosnewdawn.com",
-      "updatedAt": "2025-11-25T17:39:58.221Z"
+      "createdAt": "2025-01-15T15:35:00.000Z"
     },
     {
       "id": 2021,
       "name": "Cyberpunk 2077",
       "size": "66 GB",
-      "image": "https://media.rawg.io/media/games/26d/26d4437715bee60138dab4a7c8c59c92.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg",
       "categories": [
         "rpg",
         "action",
         "adventure",
         "open-world",
-        "single-player",
-        "shooter"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T15:40:00.000Z",
-      "rating": "4.22",
-      "released": "2020-12-10",
-      "description": "Cyberpunk 2077 is a science fiction game loosely based on the role-playing game Cyberpunk 2020.\r\n\r\n###Setting\r\nThe game is set in the year 2077 in a fictional futuristic metropolis Night City in California. In the world of the game, there are developed cybernetic augmentations that enhance people's strength, agility, and memory. The city is governed by corporations. Many jobs are taken over by the robots, leaving a lot of people poor and homeless. Night City has a roaring underworld, with black markets, underground surgeons, drug dealers, and street gangs abound.\r\n\r\n###Characters\r\nThe main protagonist is fully customizable, including his or her sex and appearance, and goes by the nickname V. He or she is an underground mercenary who does “dirty business” for the various contractors. An NPC companion named Jackie joins the protagonist early at the game, and various other companions may join the player on certain missions as the plot demands. However, the game has no parties and no companion system.\r\n\r\n###Gameplay\r\nThe player controls V from the first person view, with the third-person view used for cutscenes only. The protagonist can travel across the city on feet or using various vehicles, in a manner some observers compared to GTA series. There are many options for the character customization, including three character classes, and a variety of augmentations V can install to enhance his or her abilities.",
-      "platforms": "Nintendo Switch, PlayStation 4, PC, Xbox Series S/X, PlayStation 5, Xbox One",
-      "developers": "CD PROJEKT RED, CD PROJEKT",
-      "publishers": "CD PROJEKT RED",
-      "metacritic": "73",
-      "playtime": "29 ساعة",
-      "website": "https://www.cyberpunk.net/",
-      "updatedAt": "2025-11-25T17:40:13.196Z"
+      "createdAt": "2025-01-15T15:40:00.000Z"
     },
     {
       "id": 2022,
       "name": "Days Gone",
       "size": "21.5 GB",
-      "image": "https://media.rawg.io/media/games/a79/a79d2fc90c4dbf07a8580b19600fd61d.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1259420/header.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
         "survival",
-        "single-player",
-        "multiplayer",
-        "rpg",
-        "horror",
-        "stealth"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T15:45:00.000Z",
-      "rating": "3.97",
-      "released": "2019-04-26",
-      "description": "Days Gone is an open-world action-adventure game set in a harsh wilderness two years after a devastating global pandemic. Play as Deacon St. John, a drifter and bounty hunter who rides the broken road, fighting to survive while searching for a reason to live. \n\nHarsh Open World: Using the power of PlayStation 4 and Unreal Engine 4, Days Gone offers an incredibly realistic and detailed open-world experience. Immerse yourself in vast and hostile environments, and explore their secrets. Search abandoned vehicles, houses, truck stops and towns as you scavenge for resources. But be careful— day and night cycles, along with dynamic weather systems, all affect gameplay and enemy behaviour. \n\nBrutal Sandbox Combat: Perfect your gameplay with an endless combination of strategy and play in every situation. Craft customized items using pieces and parts found in the field, from brutal melee weapons to traps and more. Act wisely, as every choice can be the difference between life and death.",
-      "platforms": "PC, PlayStation 4",
-      "developers": "Bend Studio, SIE Bend Studio",
-      "publishers": "Sony Interactive Entertainment, PlayStation PC, PlayStation Mobile",
-      "metacritic": "74",
-      "playtime": "10 ساعة",
-      "website": "https://www.bendstudio.com/game/days-gone",
-      "updatedAt": "2025-11-25T17:40:56.109Z"
+      "createdAt": "2025-01-15T15:45:00.000Z"
     },
     {
       "id": 2023,
       "name": "Dead Cells",
       "size": "2 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/588650/header.jpg",
+      "image": "https://media.rawg.io/media/games/f90/f90ee1a4239247a822771c40488e68c5.jpg",
       "categories": [
         "action",
         "indie",
         "platformer",
         "roguelike",
-        "single-player"
+        "single-player",
+        "rpg"
       ],
-      "createdAt": "2025-01-15T15:50:00.000Z"
+      "createdAt": "2025-01-15T15:50:00.000Z",
+      "rating": "4.24",
+      "released": "2018-08-07",
+      "description": "Dead Cells is a roguelike adventure title developed by Motion Twin.\n\n###Story\nNot much story is present in the game, as only bits of any information are given out to the players. The game takes place at a remote island, where the players take place of the Prisoner. The Prisoner does not speak, yet he can express confusion and frustration using his body language. The Prisoner is basically immortal, as, in case of death, his head disconnects itself from the Prisoner's body, and gets back to the game's starting area. \n\n###Gameplay\nThe game's heavily inspired by The Binding of Isaac, as stated by the developers.\n\nDead Cells features the procedurally generated environments that are typical for roguelike games, yet it puts a strong emphasis on exploration that is typically found in metroidvanias.\n\nThe players set out to explore the island where a prison was built. As the players come down into the dungeons of the island, they find various loot, fight dangerous creatures, collect armor, abilities, and power-ups. Upon death, the players lose all the loot they had on them. It is possible to find a shopkeep somewhere in the dungeons to purchase new equipment or have some rest. \n\nThe game uses death as a learning experience, as it randomizes the placement of enemies, so the players can't take multiple attempts to complete a level. The developers want the player to examine the enemy behavior and learn how to combat the enemies themselves.",
+      "platforms": "Xbox One, Nintendo Switch, PlayStation 4, macOS, Linux, iOS, PC",
+      "developers": "Plug In Digital, Playdigious, Motion Twin",
+      "publishers": "Plug In Digital, Playdigious, Motion Twin",
+      "metacritic": "88",
+      "playtime": "10 ساعة",
+      "website": "https://dead-cells.com/",
+      "updatedAt": "2025-11-25T17:41:12.203Z"
     },
     {
       "id": 2024,
