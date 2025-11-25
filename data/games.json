@@ -2627,15 +2627,27 @@
       "id": 2072,
       "name": "Little Nightmares II",
       "size": "2.7 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/860510/header.jpg",
+      "image": "https://media.rawg.io/media/games/c2a/c2a7dc4540eb79aaff7099ae691105d3.jpg",
       "categories": [
         "horror",
         "adventure",
         "indie",
         "platformer",
-        "single-player"
+        "single-player",
+        "action",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T19:55:00.000Z"
+      "createdAt": "2025-01-15T19:55:00.000Z",
+      "rating": "4.37",
+      "released": "2021-02-10",
+      "description": "Return to the world of charming horror that has terrified over 1 million fans. Face a completely new set of distorted enemies as Mono, and learn how to be as courageous as a child.",
+      "platforms": "PlayStation 5, Xbox Series S/X, PlayStation 4, Nintendo Switch, PC, Xbox One",
+      "developers": "Tarsier Studios",
+      "publishers": "Bandai Namco Entertainment",
+      "metacritic": "82",
+      "playtime": "6 ساعة",
+      "website": "https://en.bandainamcoent.eu/little-nightmares/little-nightmares-ii",
+      "updatedAt": "2025-11-25T20:25:27.783Z"
     },
     {
       "id": 2073,
