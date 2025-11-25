@@ -628,14 +628,24 @@
       "type": "مسلسل",
       "year": "2021",
       "rating": "7.5",
-      "seasons": 3,
-      "image": "https://image.tmdb.org/t/p/w780/6x0sYx1Z6qGf0WxLKq2Zqkgyp2k.jpg",
+      "seasons": "4",
+      "image": "https://m.media-amazon.com/images/M/MV5BMDJhODQ3ZDEtN2JmMS00Yjk5LTk1ZTUtMzI3YTU0NTNjMjAyXkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "crime",
         "thriller",
         "drama"
       ],
-      "updatedAt": "2025-01-16T01:10:00.000Z"
+      "updatedAt": "2025-11-25T15:15:09.716Z",
+      "rate": "7.5",
+      "genre": "Action, Crime, Drama",
+      "writer": "George Kay",
+      "actors": "Omar Sy, Ludivine Sagnier, Soufiane Guerrab",
+      "plot": "Inspired by the adventures of Arsène Lupin, gentleman thief Assane Diop sets out to avenge his father for an injustice inflicted by a wealthy family.",
+      "runtime": "231 min",
+      "language": "French",
+      "country": "France, United States",
+      "awards": "Nominated for 1 BAFTA Award4 wins & 22 nominations total",
+      "imdbVotes": "151,662"
     },
     {
       "id": 16,
