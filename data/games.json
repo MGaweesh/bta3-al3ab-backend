@@ -1771,17 +1771,30 @@
     },
     {
       "id": 2035,
-      "name": "Dying Light The Beast",
+      "name": "Dying Light: The Beast",
       "size": "35.5 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/534380/header.jpg",
+      "image": "https://media.rawg.io/media/games/b20/b2055f1b6d12a6342deec3565e465852.jpg",
       "categories": [
         "action",
         "adventure",
         "horror",
         "survival",
-        "multiplayer"
+        "multiplayer",
+        "shooter",
+        "rpg",
+        "single-player",
+        "open-world"
       ],
-      "createdAt": "2025-01-15T16:50:00.000Z"
+      "createdAt": "2025-01-15T16:50:00.000Z",
+      "rating": "3.91",
+      "released": "2025-09-18",
+      "description": "Pre-Order BonusPre-order the Standard Edition now to get the exclusive Hero of Harran Bundle, which contains:- Ultimate Survivor Outfit\n- Harran Combat Knife (+ Upgradable Blueprint)\n- The Follower Crossbow (+ Upgradable Blueprint)\n- In Jade’s Memory Pistol (+ Upgradable Blueprint)\n- Castor Woods Patrol\nDeluxe EditionTake your Dying Light: The Beast experience to another level with the Deluxe Edition. You'll receive the Official Soundtrack, wallpapers, and the Castor Woods Prepper Bundle, as well as a detailed tourist map that highlights locations worth exploring.INCLUDES:\n– Official Soundtrack\n– Wallpaper Pack\n– Castor Woods Tourist Map\n– Castor Woods Prepper Bundle\n– Castor Woods Prepper Outfit\n– Survivalist SMG\n– Roadhog\nEditions\nAbout the GameGet ready for a unique blend of open world and action survival horror with Dying Light: The Beast.You are Kyle Crane. After being captured by the Baron and enduring his painful experiments for years, you escape. But now, a battle rages inside you: zombie DNA clashes with human, and you struggle to control the beast within. You want revenge... but first you must tame it. It's your only option.Once you enter the zombie-infested Castor Woods, every battle will be a fight for survival… especially when night falls. Play as Kyle Crane, a hero with the DNA of both man and beast. Freely switch between two playstyles and face a fierce conflict that lead to the acceptance of the monster within.\nPush the brutality of Dying Light’s combat to the extreme. Crush skulls, rip heads off, and tear enemies in half as you constantly fight to control your evolving beastly powers.\nThe distinct experiences of night and day, a signature of the Dying Light series, merge into one unique whole. Explore and scavenge by day, but remember the constantly ticking clock. Because once the sun sets, the night unleashes horrors that leave you with just three choices: run, hide or fight for your life.\nFeel the adrenaline rush of best-in-class first-person parkour. Jump from rooftop to rooftop and overcome any obstacle. And when that’s not enough, grab the wheel of an off-road vehicle and ruthlessly tear through hordes of zombies. The advanced movement system is easily accessible, but rewards those who master it. Next-gen visuals bring the hand-crafted zombie apocalypse to life. Every detail tells a story of survival. Lose yourself in the majesty of Castor Woods: explore the tourist town, industrial area, national park, farmland, swamps and more. All full of beauty… and decay.\nBand together with up to three other players in co-op! Brave the dangers of Castor Woods, where you can experience every encounter, every discovery and every twist as a unit with shared progress.\nImportant: Anyone who purchased the Ultimate Edition of Dying Light 2 Stay Human will receive Dying Light: The Beast at no additional charge.",
+      "platforms": "PC, Xbox Series S/X, PlayStation 5",
+      "developers": "Techland",
+      "publishers": "Techland",
+      "playtime": "3 ساعة",
+      "website": "https://dyinglightgame.com/the-beast/pre-order?page_index=usps001110&amp;utm_medium=usps001110",
+      "updatedAt": "2025-11-25T19:28:08.510Z"
     },
     {
       "id": 2036,
