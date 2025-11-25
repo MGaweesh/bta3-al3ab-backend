@@ -2065,14 +2065,22 @@
       "id": 2046,
       "name": "Ghostrunner",
       "size": "7.5 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1139900/header.jpg",
+      "image": "https://media.rawg.io/media/games/957/957154d665ae676b00c0859551c733b1.jpg",
       "categories": [
         "action",
         "adventure",
         "platformer",
         "single-player"
       ],
-      "createdAt": "2025-01-15T17:45:00.000Z"
+      "createdAt": "2025-01-15T17:45:00.000Z",
+      "rating": "3.84",
+      "released": "2020-10-27",
+      "platforms": "PlayStation 5, Xbox Series S/X, PlayStation 4, Nintendo Switch, PC, Xbox One",
+      "developers": "3D Realms, One More Level, Slipgate Ironworks™",
+      "publishers": "All in! Games",
+      "playtime": "4 ساعة",
+      "website": "https://ghostrunnergame.com/",
+      "updatedAt": "2025-11-25T20:02:41.309Z"
     },
     {
       "id": 2047,
