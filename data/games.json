@@ -2378,14 +2378,23 @@
       "id": 2060,
       "name": "Hogwarts Legacy",
       "size": "58.6 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/990080/header.jpg",
+      "image": "https://media.rawg.io/media/games/044/044b2ee023930ca138deda151f40c18c.jpg",
       "categories": [
         "rpg",
         "adventure",
         "open-world",
-        "single-player"
+        "single-player",
+        "action"
       ],
-      "createdAt": "2025-01-15T18:55:00.000Z"
+      "createdAt": "2025-01-15T18:55:00.000Z",
+      "rating": "3.93",
+      "released": "2023-02-10",
+      "platforms": "PC, PlayStation 5, Xbox Series S/X, PlayStation 4, Nintendo Switch, Xbox One",
+      "developers": "Avalanche Software, Portkey Games",
+      "publishers": "Warner Bros. Interactive, Wizarding World",
+      "playtime": "30 ساعة",
+      "website": "https://www.hogwartslegacy.com/",
+      "updatedAt": "2025-11-25T20:10:18.361Z"
     },
     {
       "id": 2061,
