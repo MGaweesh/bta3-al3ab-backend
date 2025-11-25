@@ -322,6 +322,18 @@
         "drama"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 1764037947314,
+      "name": "تجربة مهمة",
+      "year": "2025",
+      "rating": "7",
+      "size": "3",
+      "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1DOYrj.img?w=350&h=300&m=6&x=245&y=145&s=275&d=175",
+      "description": "",
+      "type": "فيلم",
+      "categories": [],
+      "createdAt": "2025-11-25T02:32:27.314Z"
     }
   ],
   "tvShows": [
