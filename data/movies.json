@@ -105,20 +105,6 @@
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 11,
-      "name": "Parasite",
-      "type": "فيلم",
-      "year": "2019",
-      "rating": "8.5",
-      "image": "https://image.tmdb.org/t/p/w780/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
-      "description": "فيلم إثارة ودراما كوري فاز بجائزة الأوسكار",
-      "categories": [
-        "thriller",
-        "drama"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
       "id": 14,
       "name": "Dune",
       "type": "فيلم",
