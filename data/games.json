@@ -3755,12 +3755,24 @@
       "id": 2117,
       "name": "The Conjuring House",
       "size": "2.7 GB",
-      "image": null,
+      "image": "https://media.rawg.io/media/screenshots/a20/a20130a5cc91fcd9056f658ac2ed7677.jpg",
       "categories": [
         "horror",
-        "adventure"
+        "adventure",
+        "action",
+        "indie",
+        "single-player"
       ],
-      "createdAt": "2025-01-15T23:40:00.000Z"
+      "createdAt": "2025-01-15T23:40:00.000Z",
+      "rating": "3.62",
+      "released": "2018-09-25",
+      "description": "The Conjuring House is a psychological driven horror game that puts players in a constant state of anxiety that crescendos into raw panic and terror. The game takes place in a decaying manor with demonic entities and strong ties to the occult. You will encounter grotesque creatures, who will take your life at any moment. Your only goal -- survive.\nIn The Conjuring House, players will enter the game exploring a seemingly abandoned house that is consumed with demonic activity. Players are sent to the Atkinson House to investigate unusual happenings surrounding the death of the owner. Upon entering the house, players discover that they are unable to leave and are haunted by an incessant demonic woman who stalks them with murderous intent. Demonic artifacts must be destroyed in order to survive. Players must be hyper-aware of every move, twist and turn, as the woman is always lurking. The Conjuring House fully immerses players in an environment filled with anxiety, panic, and real consequences that scar.\nKey Features:\nPsychological Horror Game\nThe Conjuring House is a horror game featuring a demonic woman who is tracking your every move, ready to strike! Destroy artifacts to escape, but watch your back, as the nightmare becomes more desperate the closer you get to liberation.\nPrepare to Panic\nThe main enemy is a demonic woman, not tied to any specific location or timing, leaving a constant sense of impending danger… and the opportunity for you to jump out of your seat at any given moment!\nFree Exploration\nExplore The Conjuring House in a non-linear progression style, with multiple paths through the house. Quests can be approached in a different order from one player to another, providing a unique and different gameplay experience each time.\nEerie Atmosphere\nThe game utilizes environmental tools, such as detailed visuals, perfectly timed audio, and a Gothic setting to convey and promote fear and panic in the player. Players will find many moments where their eyes will play tricks on them, causing them to think there’s a creature lurking at the end of the hall when in fact it’s just a side table stacked with items.",
+      "platforms": "PC",
+      "developers": "RYM GAMES",
+      "publishers": "RYM GAMES",
+      "playtime": "4 ساعة",
+      "website": "http://www.rymgames.com/",
+      "updatedAt": "2025-11-25T21:54:07.447Z"
     },
     {
       "id": 2118,
