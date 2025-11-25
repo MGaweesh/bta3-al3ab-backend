@@ -3008,16 +3008,28 @@
     },
     {
       "id": 2086,
-      "name": "Ori and the Blind Forest - Definitive Edition",
+      "name": "Ori and the Blind Forest: Definitive Edition",
       "size": "3.5 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/387290/header.jpg",
+      "image": "https://media.rawg.io/media/games/04a/04a7e7e185fb51493bdcbe1693a8b3dc.jpg",
       "categories": [
         "adventure",
         "indie",
         "platformer",
-        "single-player"
+        "single-player",
+        "rpg",
+        "open-world"
       ],
-      "createdAt": "2025-01-15T21:05:00.000Z"
+      "createdAt": "2025-01-15T21:05:00.000Z",
+      "rating": "4.42",
+      "released": "2016-04-27",
+      "description": "NEW IN THE DEFINITIVE EDITION\n• Packed with new and additional content: New areas, new secrets, new abilities, more story sequences, multiple difficulty modes, full backtracking support and much more!\n• Discover Naru’s past in two brand new environments.\n• Master two powerful new abilities – Dash and Light Burst.\n• Find new secret areas and explore Nibel faster by teleporting between Spirit Wells.\nThe forest of Nibel is dying. After a powerful storm sets a series of devastating events in motion, Ori must journey to find courage and confront a dark nemesis to save the forest of Nibel. “Ori and the Blind Forest” tells the tale of a young orphan destined for heroics, through a visually stunning Action-Platformer crafted by Moon Studios. Featuring hand-painted artwork, meticulously animated character performance, a fully orchestrated score and dozens of new features in the Definitive Edition, “Ori and the Blind Forest” explores a deeply emotional story about love and sacrifice, and the hope that exists in us all.",
+      "platforms": "Xbox One, PC, Nintendo Switch, Xbox 360",
+      "developers": "Moon Studios",
+      "publishers": "Microsoft Studios",
+      "metacritic": "88",
+      "playtime": "6 ساعة",
+      "website": "http://www.oriblindforest.com/",
+      "updatedAt": "2025-11-25T20:57:22.010Z"
     },
     {
       "id": 2087,
