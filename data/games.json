@@ -2245,16 +2245,26 @@
     },
     {
       "id": 2054,
-      "name": "GTA Vice City Definitive Edition",
+      "name": "Grand Theft Auto: Vice City – The Definitive Edition",
       "size": "6.5 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1546970/header.jpg",
+      "image": "https://media.rawg.io/media/games/a0d/a0d4405596639b3fe4de603f4489755e.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
-        "single-player"
+        "single-player",
+        "shooter",
+        "racing"
       ],
-      "createdAt": "2025-01-15T18:25:00.000Z"
+      "createdAt": "2025-01-15T18:25:00.000Z",
+      "rating": "3.7",
+      "released": "2021-11-11",
+      "description": "Welcome to the 1980s. From the decade of big hair and pastel suits comes the story of one man's rise to the top of the criminal pile. Grand Theft Auto returns with Tommy Vercetti’s tale of betrayal and revenge in a neon-soaked tropical town full of excess and brimming with possibilities.",
+      "platforms": "PlayStation 5, Xbox Series S/X, PlayStation 4, PC, Xbox One, Nintendo Switch",
+      "developers": "Rockstar Games, Grove Street Games",
+      "publishers": "Rockstar Games",
+      "playtime": "4 ساعة",
+      "updatedAt": "2025-11-25T20:06:20.428Z"
     },
     {
       "id": 2055,
