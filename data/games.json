@@ -1927,13 +1927,26 @@
       "id": 2043,
       "name": "Forza Horizon 3",
       "size": "27.4 GB",
-      "image": null,
+      "image": "https://media.rawg.io/media/games/30a/30afe3a3cb06849dc032ef3b9295f180.jpg",
       "categories": [
         "racing",
         "sports",
-        "simulation"
+        "simulation",
+        "action",
+        "single-player",
+        "multiplayer",
+        "open-world"
       ],
-      "createdAt": "2025-01-15T17:30:00.000Z"
+      "createdAt": "2025-01-15T17:30:00.000Z",
+      "rating": "4.37",
+      "released": "2016-09-27",
+      "description": "Forza Horizon 3 is a racing open-world game developed by Playground Games. It is a part of a large Forza series including 11 titles in it with Horizon 3 being the 9th heading in the row. It is, however, uncertain to claim that there is a unified narrative in racing games, so all 11 titles more likely represent one universe, but do not come in specific order.\r\nAs mentioned earlier, the title series does not follow a distinct storyline. Speaking of surroundings, nonetheless, it is safe to say, that the Horizon 3's scene is an Australia. The previous chapters of racing have pushed a narrative about the players being a participator of Horizon Festival. Now the protagonist becomes a host of the event, so they must play organizing roles, too. For example, hire drivers and adjust the racing grounds.\r\nThere are some events players can be a part of.  For example, drifting competition, Bucket List challenges and time trials. All of them utilize the same mechanics of getting to the finish line as fast as possible. There are more than 350 cars available, let alone DLC ones. 4-person co-op included along with multiplatform races between PC and Xbox One.",
+      "platforms": "PC, Xbox One",
+      "developers": "Playground Games",
+      "publishers": "Microsoft Studios",
+      "metacritic": "88",
+      "website": "https://forza.net/horizon",
+      "updatedAt": "2025-11-25T19:30:11.015Z"
     },
     {
       "id": 2044,
