@@ -569,13 +569,21 @@
       "type": "مسلسل",
       "year": "2024",
       "rating": "7.5",
-      "seasons": 1,
-      "image": null,
+      "seasons": "1",
+      "image": "https://m.media-amazon.com/images/M/MV5BNzI0NjllMTItNzQ1OC00YjQzLWFhMTgtNDM5MmQ5OGUwZmRkXkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "action",
         "drama"
       ],
-      "updatedAt": "2025-01-16T00:50:00.000Z"
+      "updatedAt": "2025-11-25T15:14:42.269Z",
+      "rate": "7.1",
+      "genre": "Action, Drama, Thriller",
+      "writer": "Dave Boyle",
+      "actors": "Kento Kaku, Yôsuke Eguchi, Tae Kimura",
+      "plot": "The Tawara family, the last shinobi clan. It had abandoned its roots after an incident in the past, but now the family must take on the greatest crisis in Japanese history, one that threatens to shake the nation to its core.",
+      "language": "Japanese",
+      "country": "Japan",
+      "imdbVotes": "8,290"
     },
     {
       "id": 12,
