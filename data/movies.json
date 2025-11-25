@@ -180,18 +180,30 @@
     },
     {
       "id": 14,
-      "name": "Dune",
+      "name": "Dune: Part One",
       "type": "فيلم",
       "year": "2021",
       "rating": "8.0",
-      "image": "https://image.tmdb.org/t/p/w780/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
+      "image": "https://m.media-amazon.com/images/M/MV5BNWIyNmU5MGYtZDZmNi00ZjAwLWJlYjgtZTc0ZGIxMDE4ZGYwXkEyXkFqcGc@._V1_SX300.jpg",
       "description": "فيلم خيال علمي من إخراج دينيس فيلنوف",
       "categories": [
         "sci-fi",
         "adventure",
         "drama"
       ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
+      "updatedAt": "2025-11-25T14:45:11.549Z",
+      "rate": "8.0",
+      "genre": "Action, Adventure, Drama",
+      "director": "Denis Villeneuve",
+      "writer": "Jon Spaihts, Denis Villeneuve, Eric Roth",
+      "actors": "Timothée Chalamet, Rebecca Ferguson, Oscar Isaac",
+      "plot": "A mythic and emotionally charged hero's journey, \"Dune\" tells the story of Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, who must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity's greatest potential-only those who can conquer their fear will survive.",
+      "runtime": "155 min",
+      "language": "English, Mandarin",
+      "country": "United States, Canada",
+      "awards": "Won 6 Oscars. 175 wins & 298 nominations total",
+      "metascore": "74",
+      "imdbVotes": "988,424"
     },
     {
       "id": 15,
