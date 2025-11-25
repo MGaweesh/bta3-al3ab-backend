@@ -107,21 +107,6 @@
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 14,
-      "name": "Dune",
-      "type": "فيلم",
-      "year": "2021",
-      "rating": "8.0",
-      "image": "https://image.tmdb.org/t/p/w780/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
-      "description": "فيلم خيال علمي من إخراج دينيس فيلنوف",
-      "categories": [
-        "sci-fi",
-        "adventure",
-        "drama"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
       "id": 15,
       "name": "The Good, the Bad and the Ugly",
       "type": "فيلم",
