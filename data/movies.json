@@ -510,16 +510,26 @@
       "id": 8,
       "name": "Dexter",
       "type": "مسلسل",
-      "year": "2006-2013",
+      "year": "2006",
       "rating": "8.6",
-      "seasons": 8,
-      "image": "https://image.tmdb.org/t/p/w780/1j9s2DlClQABlpKXDbOyX7V8SDt.jpg",
+      "seasons": "8",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTQ3YmQ4YzMtOTkyZC00YmM5LThhZjEtM2E0MjFkNTc0OGJhXkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "crime",
         "drama",
         "thriller"
       ],
-      "updatedAt": "2025-01-16T00:35:00.000Z"
+      "updatedAt": "2025-11-25T15:14:26.037Z",
+      "rate": "8.6",
+      "genre": "Crime, Drama, Mystery",
+      "writer": "James Manos Jr.",
+      "actors": "Michael C. Hall, Jennifer Carpenter, David Zayas",
+      "plot": "He's smart, he's good looking, and he's got a great sense of humor. He's Dexter Morgan, everyone's favorite serial killer. As a Miami forensics expert, he spends his days solving crimes, and nights committing them. But Dexter lives by a strict code of honor that is both his saving grace and lifelong burden. Torn between his deadly compulsion and his desire for true happiness, Dexter is a man in profound conflict with the world and himself. Golden Globe winner Michael C. Hall stars in the hit SHOWTIME Original Series.",
+      "runtime": "53 min",
+      "language": "English, Spanish",
+      "country": "United States",
+      "awards": "Won 4 Primetime Emmys. 56 wins & 202 nominations total",
+      "imdbVotes": "892,729"
     },
     {
       "id": 9,
