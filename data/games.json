@@ -2602,16 +2602,26 @@
     },
     {
       "id": 2071,
-      "name": "Lies of P",
+      "name": "Lies Of P",
       "size": "36 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1627720/header.jpg",
+      "image": "https://media.rawg.io/media/games/458/45838becd01e929b6be8b88d655cebfc.jpg",
       "categories": [
         "action",
         "rpg",
         "adventure",
-        "single-player"
+        "single-player",
+        "open-world"
       ],
-      "createdAt": "2025-01-15T19:50:00.000Z"
+      "createdAt": "2025-01-15T19:50:00.000Z",
+      "rating": "4.17",
+      "released": "2023-09-19",
+      "description": "You wake up at an abandoned train station in Krat, a city overwhelmed by madness and bloodlust. In front of you lies a single note that reads:\r\n\"Find Mr. Geppetto. He's here in the city.\"\r\nPlay as Pinocchio, a puppet mechanoid, and fight through everything in your path to find this mystery person. But don't expect any help along the way and don't make the mistake of trusting anyone.\r\nYou must always lie to others if you hope to become human.\r\nInspired by the familiar story of Pinocchio, Lies of P is an action souls-like game set in a cruel, dark Belle Époque world.\r\nAll of humanity is lost in a once beautiful city that has now become a living hell filled with unspeakable horrors.\r\nLies of P offers an elegant world filled with tension, deep combat system and a gripping story.\r\nGuide Pinocchio's and experience his unrelenting journey to become human.A Dark Fairytale RetoldThe timeless tale of Pinocchio has been reimagined with dark and striking visuals.\r\nSet in the fallen city of Krat, Pinnochio desperately fights to become human against all odds.Visual ConceptThe city of Krat was insipired by the Belle Époque Era in Europe (late 19th Century to the early 20th Century) and is the epitome of a collapsed city bereft of prosperity.'Lying' Quests and Multiple EndingsExperience interconnected procedural quests that play out depending on how you lie. These choices will then affect how the story ends.Weapon-Making SystemYou can combine weapons in a multitude of ways to create something new altogether. Research to find the best combinations and make something truly special.Special Skill SystemWith Pinocchio being a doll, you can change parts of his body to gain new skills and hopefully an edge in battle. But not all of the enhancements are for fighting though, they can also provide several other unique and useful features.",
+      "platforms": "PlayStation 5, Xbox Series S/X, PlayStation 4, PC, macOS, Xbox One",
+      "developers": "Round8 Studio",
+      "publishers": "NEOWIZ",
+      "playtime": "27 ساعة",
+      "website": "https://www.liesofp.com/",
+      "updatedAt": "2025-11-25T20:25:00.751Z"
     },
     {
       "id": 2072,
