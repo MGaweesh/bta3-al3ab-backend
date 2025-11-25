@@ -161,20 +161,6 @@
       "updatedAt": "2025-11-25T14:40:21.972Z"
     },
     {
-      "id": 24,
-      "name": "The Green Mile",
-      "type": "فيلم",
-      "year": "1999",
-      "rating": "8.6",
-      "image": "https://image.tmdb.org/t/p/w780/velWPhVMQeQKcxggNEU8YmIo52R.jpg",
-      "description": "فيلم دراما وفانتازيا من بطولة توم هانكس",
-      "categories": [
-        "drama",
-        "fantasy"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
       "id": 25,
       "name": "Saving Private Ryan",
       "type": "فيلم",
