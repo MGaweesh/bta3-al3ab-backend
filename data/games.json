@@ -319,17 +319,29 @@
     },
     {
       "id": 1014,
-      "name": "Assassins Creed Valhalla",
+      "name": "Assassin's Creed Valhalla",
       "size": "62.3 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2208920/header.jpg",
+      "image": "https://media.rawg.io/media/games/934/9346092ae11bf7582c883869468171cc.jpg",
       "categories": [
         "action",
         "adventure",
         "rpg",
         "open-world",
-        "single-player"
+        "single-player",
+        "multiplayer",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T11:05:00.000Z"
+      "createdAt": "2025-01-15T11:05:00.000Z",
+      "rating": "3.69",
+      "released": "2020-11-10",
+      "description": "Become Eivor, a mighty Viking raider and lead your clan from the harsh shores of Norway to a new home amid the lush farmlands of ninth-century England. Explore a beautiful, mysterious open world where you'll face brutal enemies, raid fortresses, build your clan's new settlement, and forge alliances to win glory and earn a place in Valhalla.\n\nEngland in the age of the Vikings is a fractured nation of petty lords and warring kingdoms. Beneath the chaos lies a rich and untamed land waiting for a new conqueror. Will it be you?",
+      "platforms": "PC, Xbox One, PlayStation 5, PlayStation 4, Xbox Series S/X",
+      "developers": "Ubisoft Montreal",
+      "publishers": "Ubisoft Entertainment",
+      "metacritic": "82",
+      "playtime": "5 ساعة",
+      "website": "https://www.ubisoft.com/en-us/game/assassins-creed/valhalla",
+      "updatedAt": "2025-11-25T14:42:04.829Z"
     },
     {
       "id": 1015,
