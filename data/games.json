@@ -15,34 +15,9 @@
     },
     {
       "id": 1002,
-      "name": "Assassin's Creed Odyssey",
+      "name": "Assassin's Creed - Odyssey",
       "size": "51.2 GB",
-      "image": "https://media.rawg.io/media/games/c6b/c6bd26767c1053fef2b10bb852943559.jpg",
-      "categories": [
-        "action",
-        "adventure",
-        "rpg",
-        "open-world",
-        "single-player",
-        "stealth"
-      ],
-      "createdAt": "2025-01-15T10:05:00.000Z",
-      "rating": "3.98",
-      "released": "2018-10-05",
-      "description": "Assassin's Creed Odyssey is the twentieth game in its series. It is the earliest game in the Assassin's Creed universe chronology and the prequel to Assassin's Creed Origins.\n\n###Plot\nThe events of Assassin's Creed Odyssey's take place in the Classical Era of Ancient Greece, in 431 BC, before the Brotherhood of Assassins was even formed. The plot follows a fictionalized story of the Peloponnesian War between city-states of Sparta and Athens that left Greece devastated. The player can choose to control either a male (named Alexios) or female (named Kassandra) protagonist, both of them being descendants of the famous Spartan king Leonidas. The player enters the plot as a mercenary and can side with either Athens or its rival Sparta. There's also the frame story set in the contemporary age. Its protagonist is Layla Hassan, who was also the main character in the frame story of Assassin's Creed Origins.\n\n###Gameplay\nUnlike most earlier installments of Assassin's Creed, which put the emphasis solely on action, Odyssey has a strong role-playing element in it. Dialogue options and the non-linear plot allow the player to reach several alternate endings. The game also has a reputation system and multiple options for romancing, including same-sex romances. The combat system is similar to that in Origins with the addition of new skills. The game also reintroduces naval battles.",
-      "platforms": "PlayStation 4, PC, Xbox One, Nintendo Switch",
-      "developers": "Ubisoft, Ubisoft Montreal, Ubisoft Montpellier, Ubisoft Shanghai, Ubisoft Quebec, Ubisoft Bucharest, Ubisoft Singapore, Ubisoft Kiev",
-      "publishers": "Ubisoft Entertainment",
-      "metacritic": "85",
-      "playtime": "31 ساعة",
-      "website": "https://assassinscreed.ubisoft.com/game/en-us/home/",
-      "updatedAt": "2025-11-25T14:14:43.653Z"
-    },
-    {
-      "id": 1003,
-      "name": "Assassin's Creed Origins",
-      "size": "70 GB",
-      "image": "https://media.rawg.io/media/games/336/336c6bd63d83cf8e59937ab8895d1240.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/812140/header.jpg",
       "categories": [
         "action",
         "adventure",
@@ -50,17 +25,21 @@
         "open-world",
         "single-player"
       ],
-      "createdAt": "2025-01-15T10:10:00.000Z",
-      "rating": "3.97",
-      "released": "2017-10-27",
-      "description": "Assassin's Creed Origins is an open-world action game developed by Ubisoft. It further continues the series after Assassin's Creed Syndicate.\r\n\r\nThe story is set in two time periods simultaneously. In 2017, the order of Templars has recovered an ancient artifact that will allow them to seize control over humanity. Assassins plan to get the artifact back in their hands. Layla Hassan relieves the memories of two ancient Egyptians named Bayek and Aya who create the Assassins order.\r\n\r\nLevels are open-ended which allows both stealth or open combat approaches. Players are put in an open world in which they can complete quests in order to either progress through the story, level their character up or upgrade their equipment. The \"eagle vision\" mode was replaced by an eagle by the name of Senu. Players can use Senu to scout the area ahead and highlight enemies.\r\n\r\nThe game features a heavily revised combat system that relies on hit-box mechanics rather than pre-determined animations as it did in the previous titles. Origins focuses on introducing various types of enemies that the players will have to learn about in order to defeat them.",
-      "platforms": "Xbox One, PC, PlayStation 4",
-      "developers": "Ubisoft, Ubisoft Montreal",
-      "publishers": "Ubisoft Entertainment",
-      "metacritic": "81",
-      "playtime": "28 ساعة",
-      "website": "https://www.assassinscreed.ubi.com",
-      "updatedAt": "2025-11-25T14:13:12.894Z"
+      "createdAt": "2025-01-15T10:05:00.000Z"
+    },
+    {
+      "id": 1003,
+      "name": "Assassin's Creed - Origins",
+      "size": "70 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/582160/header.jpg",
+      "categories": [
+        "action",
+        "adventure",
+        "rpg",
+        "open-world",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T10:10:00.000Z"
     },
     {
       "id": 1004,
@@ -85,7 +64,7 @@
       "metacritic": "74",
       "playtime": "22 ساعة",
       "website": "http://assassinscreed.ubi.com",
-      "updatedAt": "2025-11-25T14:15:04.169Z"
+      "updatedAt": "2025-11-25T14:14:03.907Z"
     },
     {
       "id": 1005,
@@ -113,51 +92,29 @@
     },
     {
       "id": 1006,
-      "name": "Assassin’s Creed Brotherhood",
+      "name": "Assassin's Creed Brotherhood",
       "size": "7.1 GB",
-      "image": "https://media.rawg.io/media/games/116/116b93c6876a361a96b2eee3ee58ab13.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/48190/header.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
-        "single-player",
-        "multiplayer",
-        "stealth"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T10:25:00.000Z",
-      "rating": "4.27",
-      "released": "2010-11-16",
-      "description": "Digital Deluxe Edition2 Exclusive Single-Player Maps: The Trajan Market & The Aqueduct\n2 Multiplayer Characters:The Officer - Death's Finest Ally: Few have seen him. Even fewer have lived to tell about it. Fear is his friend, and Death is his ally.\nThe Harlequin - The Walking Nightmare: Behind the gaudy costume and twisted smile lies the soul of a merciless Assassin.img.padding {padding-right: 10px;}\n1 Ezio Skin - Helmschmied Drachen Armor: Fashioned by the Helmschmied Armory in 1489, only a few sets were completed due to the weight of the metal. Very few men proved strong enough to wear it.\n\nimg.padding {padding-right: 10px;}\nThe Original Codex Written by Altaïr: Take a closer look at the history of the Assassins and art of Assassin’s Creed Brotherhood.\nMultiplayer Characters Collectible Trading Cards: A set of trading cards featuring all the characters of Assassin's Creed Brotherhood Multiplayer, including their kill moves and biographies.\nMap of Rome\nAssassin’s Creed Lineage - The Complete Movie: Explore the events that revolve around Ezio’s father, Giovanni Auditore da Firenze, and gain insight on the Assassin’s Creed story and universe.\nMaking-Of Assassin’s Creed Brotherhood - Behind the Brotherhood: Go behind the scenes with the development team to learn about how the game was made and Ezio’s continuing story.\nGame Soundtrack: 22 songs from the original game soundtrack by Jesper Kyd.\nDigital Premium Edition content is only available via download\nAbout the GameLive and breathe as Ezio, a legendary Master Assassin, in his enduring struggle against the powerful Templar Order. He must journey into Italy’s greatest city, Rome, center of power, greed and corruption to strike at the heart of the enemy.\nDefeating the corrupt tyrants entrenched there will require not only strength, but leadership, as Ezio commands an entire Brotherhood who will rally to his side. Only by working together can the Assassins defeat their mortal enemies.\nAnd for the first time, introducing an award-winning multiplayer layer that allows you to choose from a wide range of unique characters, each with their own signature weapons and assassination techniques, and match your skills against other players from around the world.\nIt’s time to join the Brotherhood.\nKey FeaturesBE A LEGEND – Take Ezio, now a legendary Assassin, on a new adventure with 15+ hours of story-driven single-player gameplay.\nLEAD AND CONTROL A LEGENDARY BROTHERHOOD – Recruit and customize your own guild. Train and level up assassins and command them to aid you in your quest.\nDEPLOY SECRET WEAPONS – Swiftly eliminate your enemies using tools such as poison darts, parachutes, double hidden blades, hidden guns, and an advanced flying machine at your disposal.\nWIN THE HEART OF A CITY – Use your hard-won currency to revitalize the crumbling capitol city. Rally the citizens to your cause and unlock extra factions and missions.\nAWARD-WINNING MULTIPLAYER – Choose from multiple authentic character classes, each with their own signature weapons and killing moves. With richly detailed maps and a wide variety of unique multiplayer modes, you’ll never fight the same way twice.\nBONUS CONTENT:Project Animus Update #1 Multiplayer DLC:\nTo survive the treacherous, narrow roads and the multi-leveled architecture of the Mont Saint-Michel map and the challenging Advanced Alliance multiplayer mode, Abstero recruits will need to use free-running and refined hunting skills to their advantage.\nProject Animus Update #2 Multiplayer DLC:\nThe Pienza Map provides the perfect free-running playground where predators and targets can blend and disappear. In the Chest Capture Multiplayer Mode two teams comprised of three players each partner with fellow Templars to either defend or capture Chests. Also included is the new Templar Score feature to reward diligent work by Abstergo recruits.\nThe Da Vinci Disappearance Single-Player and Multiplayer DLC:\nAfter the fall of the Borgias, Leonardo Da Vinci is kidnapped and Ezio will embark on a relentless quest to recover him discovering new locations and gameplay features. The multiplayer addition is the biggest expansion to the award-winning multiplayer yet, including a new map, new characters and game modes.",
-      "platforms": "macOS, PC, PlayStation 3, Xbox 360, Xbox One, PlayStation 4",
-      "developers": "Ubisoft Montreal",
-      "publishers": "Ubisoft Entertainment",
-      "metacritic": "88",
-      "playtime": "16 ساعة",
-      "website": "http://www.assassinscreed.com",
-      "updatedAt": "2025-11-25T14:15:22.536Z"
+      "createdAt": "2025-01-15T10:25:00.000Z"
     },
     {
       "id": 1007,
       "name": "Assassin's Creed Chronicles - Trilogy",
       "size": "7.3 GB",
-      "image": "https://media.rawg.io/media/games/b86/b86c1a368a97b1fb0b757429f7659c70.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/359610/header.jpg",
       "categories": [
         "action",
         "adventure",
         "platformer",
-        "single-player",
-        "stealth"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T10:30:00.000Z",
-      "rating": "2.96",
-      "released": "2016-02-09",
-      "description": "Explore three distinct civilizations and periods throughout history including the Ming dynasty's downfall in China, the Sikh Empire in India, and the aftermath of the Red October revolution in Russia.\nTHREE UNIQUE EPISODES\nEmbody Assassins Shao Jun, Arbaaz Mir, and Nikolaï Orelov in a 2.5D reimagining of the Assassin’s Creed universe. Slay from the shadows, master the art of parkour, and take the leap of faith in a collection of stunning, living paintings.\nMASTER THREE DIFFERENT COMBAT STYLES\nEach Assassin is equipped with a powerful range of weapons and distinct gadgets, making every experience unique, with a wide assortment of abilities in your arsenal.\nSTEALTH TAKES ON A NEW DIMENSION\nThe thrill of being a Master Assassin in 2.5D. Scout, sneak, and hide to avoid detection. Fool your enemies by using whistles and disguises. Find your target, kill, and escape.\nIncludes: Assassin's Creed Chronices: China, Assassin's Creed Chronicles: India, and Assassin's Creed Chronicles: Russia\n1 player\n1080p HD Video Output\nSoftware subject to license (us.playstation.com/softwarelicense).  Online activity subject to Terms of Services and User Agreement (www.playstationnetwork.com/terms-of-service). One-time license fee for play on account’s designated primary PS4™ system and other PS4™ systems when signed in with that account.\n© 2015 Ubisoft Entertainment. All Rights Reserved. Assassin’s Creed, Ubisoft, and the Ubisoft logo are trademarks of Ubisoft Entertainment in the US and/or other countries.",
-      "platforms": "Xbox One, PC, PlayStation 4, PS Vita",
-      "developers": "Ubisoft, Ubisoft Montreal, Climax Group",
-      "publishers": "Ubisoft Entertainment",
-      "metacritic": "70",
-      "website": "http://assassinscreed.ubi.com/ru-ru/games/chronicles/index.aspx",
-      "updatedAt": "2025-11-25T14:16:05.696Z"
+      "createdAt": "2025-01-15T10:30:00.000Z"
     },
     {
       "id": 1008,
@@ -187,16 +144,29 @@
     },
     {
       "id": 1010,
-      "name": "Assassin's Creed IV  Black Flag",
+      "name": "Assassin’s Creed IV: Black Flag",
       "size": "14.2 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/242050/header.jpg",
+      "image": "https://media.rawg.io/media/games/849/849414b978db37d4563ff9e4b0d3a787.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
-        "single-player"
+        "single-player",
+        "multiplayer",
+        "rpg",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T10:45:00.000Z"
+      "createdAt": "2025-01-15T10:45:00.000Z",
+      "rating": "4.15",
+      "released": "2013-10-29",
+      "description": "Assasin's Creed IV: Black Flag is a pirate game. Being the fourth “numbered” instalment in the series, the story follows a new protagonist, Edward Kenway, who tries to build his Pirate Republic. Help legendary pirates like \"Blackbeard\", Charles Vane and other well-known pirates establish their empire while fighting the mystery of the Observatory - something very valuable for the Templars. Also, you will have to continue your infiltration in Abstergo and discover some new details about itself.\n\nAlthough being in the Assasin's Creed series, the game provides you with some new mechanics. Giving the player full control of the ship, you will have to cross the open-world sea and fight for your piracy. Ships will be sinking, destroyed and massacred. If you prefer exploring, a whole new underwater world is ready for you with its beauty and danger lurking in the streams of Carribeans. Experience the pirate life at its best. (?) (needs a better ending)",
+      "platforms": "Xbox 360, Xbox One, PC, Nintendo Switch, Wii U, PlayStation 3, PlayStation 4",
+      "developers": "Ubisoft, Ubisoft Montreal, Ubisoft Toronto, Ubisoft Bucharest",
+      "publishers": "Ubisoft Entertainment",
+      "metacritic": "85",
+      "playtime": "25 ساعة",
+      "website": "http://www.assassinscreed.com",
+      "updatedAt": "2025-11-25T14:16:45.736Z"
     },
     {
       "id": 1011,
