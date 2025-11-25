@@ -3776,17 +3776,27 @@
     },
     {
       "id": 2118,
-      "name": "The Elder Scrolls - Skyrim - Special Edition",
+      "name": "The Elder Scrolls V: Skyrim Special Edition",
       "size": "8.6 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/489830/header.jpg",
+      "image": "https://media.rawg.io/media/games/62c/62c7c8b28a27b83680b22fb9d33fc619.jpg",
       "categories": [
         "rpg",
         "action",
         "adventure",
         "open-world",
-        "single-player"
+        "single-player",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T23:45:00.000Z"
+      "createdAt": "2025-01-15T23:45:00.000Z",
+      "rating": "4.45",
+      "released": "2016-10-27",
+      "description": "The Elder Scrolls V: Skyrim Special Edition is the 2016 reinstallment of the open world fantasy RPG, developed by Bethesda Game Studios. Following the original release of 2011, Special Edition focuses on reshaping every sword and ax, polishing every stone in the high castles and the suburbs of the low, overall bringing a renewed experience to its fans and newcomer players.\nAfter 5 years of the original’s glory, this collection of all the content, available with the game itself, offers to once again set foot on the snowy mountains of the Skyrim province of Tamriel. The magnificent open world, full of breathtaking environments and landscapes, welcomes all its players to embark on another journey. Explore the even more beautiful flora of Skyrim, fight the most dangerous fauna, and many more.\nThe Elder Scrolls V: Skyrim Special Edition now includes full support of community-made and developer-approved mods, allowing for even more exploration and experiments with the in-game contents. Continually expanding, the database of various new quests, characters, and locations not disappointing any player, while some modifications try to focus on enhancing the vanilla experience to the maximum.",
+      "platforms": "PlayStation 4, PC, Xbox One",
+      "developers": "Bethesda Game Studios",
+      "publishers": "Bethesda Softworks",
+      "metacritic": "74",
+      "playtime": "9 ساعة",
+      "updatedAt": "2025-11-25T21:54:29.195Z"
     },
     {
       "id": 2119,
