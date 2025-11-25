@@ -1046,16 +1046,30 @@
     },
     {
       "id": 2005,
-      "name": "Amnesia The Bunker",
+      "name": "Amnesia: The Bunker",
       "size": "6.2 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1944430/header.jpg",
+      "image": "https://media.rawg.io/media/games/a45/a45abc50643f0fa355f5cb24cbb94744.jpg",
       "categories": [
         "horror",
         "adventure",
         "survival",
-        "single-player"
+        "single-player",
+        "action",
+        "indie",
+        "open-world",
+        "shooter",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T14:20:00.000Z"
+      "createdAt": "2025-01-15T14:20:00.000Z",
+      "rating": "3.78",
+      "released": "2023-06-06",
+      "description": "Amnesia: The Bunker is a first-person horror game from the makers of SOMA and Amnesia.\r\nLeft all alone in a desolate WW1 bunker with only one bullet remaining in the barrel, it’s up to you to face the oppressing terrors in the dark. Keep the lights on at all costs, persevere, and make your way out alive. A truly intense horror experience.\r\nRISING TENSION\r\nImmerse yourself in the multiple ways of tackling survival. In the shoes of the French soldier Henri Clément, you are armed with a revolver gun, a noisy dynamo flashlight, and other scarce supplies to scavenge and craft along the way. With randomization and unpredictable behavior, no play-through is the same.\r\nHunted by an ever-present threat reacting to your every move and sound, you must adapt your play-style to face hell. Every decision will change the outcome of how the game responds. Actions bear consequences.\r\nESCAPING THE NIGHTMARE\r\nSolve things your own way in a semi-open world. You must explore and experiment to make your way out. Figure out what’s going on down here - what has happened to the other soldiers? Where have all the officers gone? What diabolical nightmare lurks underneath this hellscape? Unravel the mysteries of the Bunker and get to know the nooks and crannies of this cruel sandbox to up your odds of survival.\r\nFEATURES\r\nDynamic and ever-present monster that reacts to player actions.\r\nConstant tension - Time is not on your side.\r\nTactile and physics based interactions with the world.\r\nScavenge for resources and craft tools to aid your survival.\r\nMultiple solutions to problem solving in a non-linear open world.",
+      "platforms": "PC, Xbox Series S/X, PlayStation 4, Xbox One",
+      "developers": "Frictional Games",
+      "publishers": "Frictional Games",
+      "playtime": "5 ساعة",
+      "website": "https://amnesiathebunker.com/",
+      "updatedAt": "2025-11-25T17:05:47.586Z"
     },
     {
       "id": 2006,
