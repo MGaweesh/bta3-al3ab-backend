@@ -149,21 +149,6 @@
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 12,
-      "name": "Gladiator",
-      "type": "فيلم",
-      "year": "2000",
-      "rating": "8.5",
-      "image": "https://image.tmdb.org/t/p/w780/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg",
-      "description": "فيلم أكشن ودراما من بطولة راسل كرو",
-      "categories": [
-        "action",
-        "drama",
-        "adventure"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
       "id": 14,
       "name": "Dune",
       "type": "فيلم",
