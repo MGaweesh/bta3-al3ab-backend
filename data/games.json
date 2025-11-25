@@ -1694,14 +1694,23 @@
       "id": 2032,
       "name": "Disco Elysium",
       "size": "6.8 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/632470/header.jpg",
+      "image": "https://media.rawg.io/media/games/840/8408ad3811289a6a5830cae60fb0b62a.jpg",
       "categories": [
         "rpg",
         "adventure",
         "indie",
         "single-player"
       ],
-      "createdAt": "2025-01-15T16:35:00.000Z"
+      "createdAt": "2025-01-15T16:35:00.000Z",
+      "rating": "4.37",
+      "released": "2019-10-14",
+      "description": "Disco Elysium is a groundbreaking blend of hardboiled cop show and isometric RPG. Solve a massive, open ended case in a unique urban fantasy setting. Kick in doors, interrogate suspects, or just get lost exploring the gorgeously rendered city of Revachol and unraveling its mysteries. Tough choices need to be made. What kind of cop you are — is up to you.\r\n\r\nYou play a disgraced lieutenant detective in Revachol West, a shore town where corruption’s out of control, murders go unsolved, and the kids just wanna dance. Kick in doors, interrogate suspects, or get lost exploring a gorgeously rendered city and unraveling its mysteries. All the while, tensions rise around you as Revachol threatens to explode.\r\n\r\nDisco Elysium’s completely original skill system makes your innermost feelings, doubts, and memories an integral part of every conversation. Level up your rational faculties, sharpen your wits, or give in to your basest instincts. What kind of cop you are is up to you.",
+      "platforms": "PC, macOS, Xbox One, Nintendo Switch, PlayStation 4, Xbox Series S/X, PlayStation 5",
+      "developers": "ZA/UM",
+      "metacritic": "91",
+      "playtime": "6 ساعة",
+      "website": "http://zaumstudio.com/",
+      "updatedAt": "2025-11-25T19:17:26.873Z"
     },
     {
       "id": 2033,
