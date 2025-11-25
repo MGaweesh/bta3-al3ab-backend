@@ -562,27 +562,16 @@
     },
     {
       "id": 1024,
-      "name": "Hellblade: Senua's Sacrifice",
+      "name": "Hellblade Senuas Sacrifice",
       "size": "21.6 GB",
-      "image": "https://media.rawg.io/media/games/63f/63f0e68688cad279ed38cde931dbfcdb.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/414340/header.jpg",
       "categories": [
         "action",
         "adventure",
         "horror",
-        "single-player",
-        "indie"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T11:55:00.000Z",
-      "rating": "4.22",
-      "released": "2017-08-07",
-      "description": "A dark fantasy game that takes inspiration from Scandinavian and Celtic folklore, Hellblade is set in a gritty barbarian world full of weird wooden structures and creepily masked enemies. \r\n\r\nThe player assumes the role of Senua, a traumatized female warrior from the Pict tribe. She suffers from a growing psychosis after her lover Dillion was brutally murdered by Vikings. Carrying his severed head, Senua sets out to Helheim, the underworld of the dead, to bring her lover's soul back. Her grim and bloody journey mirrors her descent into madness. It becomes increasingly difficult for her (and, thus, the player) to tell fact from fantasy, as she hears voices in her head and sees hallucinations. \r\n\r\nWhen not fighting her enemies, Senua has to solve puzzles to move forward. This is where her distorted perception actually comes out handy, enabling her to \"focus\" and see what regular people can not. The ghostly voices, recorded using the binaural method to create an eery effect, also help to guide Senua or to warn her about dangers. All of Senua movements, expressions and reactions were recorded through motion capture to make them more realistic and emotional.",
-      "platforms": "Xbox One, Nintendo Switch, PlayStation 4, PC",
-      "developers": "Ninja Theory",
-      "publishers": "Ninja Theory",
-      "metacritic": "83",
-      "playtime": "6 ساعة",
-      "website": "http://www.hellblade.com/",
-      "updatedAt": "2025-11-25T15:27:35.181Z"
+      "createdAt": "2025-01-15T11:55:00.000Z"
     },
     {
       "id": 1025,
@@ -640,38 +629,40 @@
       "id": 1027,
       "name": "Layers of Fear",
       "size": "3.3 GB",
-      "image": "https://media.rawg.io/media/games/6a2/6a2e48933245e2cd3c92248c75c925e1.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/391720/header.jpg",
       "categories": [
         "horror",
         "adventure",
         "indie",
         "single-player"
       ],
-      "createdAt": "2025-01-15T12:10:00.000Z",
-      "rating": "3.54",
-      "released": "2016-02-16",
-      "description": "Layers of Fear is the horror game with a focus on exploring and puzzles. It is the only installment in the IP, featuring one DLC which expands the storyline further and one port to the Nintendo Switch, which adds multiple features like accelerated controllers' support and touchscreen assistance.\r\nThe primary goal of the player is to guide the genius and psychopath painter on the way to complete the painting. The problem is the player does not know how to do so — they start exploring the house, which is changing the layouts repeatedly and find out many jump-scares along the way.\r\nGetting through all of the six chapters the player may reach of the three endings: bad, average and good. The end is decided not by momentarily choice but by a series of decisions throughout the game. While the player is uncovering the truth about the premises of the hero's masterpiece, the DLC tells a story of his daughter which returns to her memories of the past. The DLC also features three endings in the same fashion as the original game.",
-      "platforms": "PlayStation 4, Linux, macOS, PC, iOS, Xbox One",
-      "developers": "Bloober Team, Anshar Studios",
-      "publishers": "Aspyr, Bloober Team",
-      "metacritic": "72",
-      "playtime": "3 ساعة",
-      "website": "http://layersoffear.com",
-      "updatedAt": "2025-11-25T15:27:52.302Z"
+      "createdAt": "2025-01-15T12:10:00.000Z"
     },
     {
       "id": 1028,
       "name": "Little Nightmares",
       "size": "6.5 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/424840/header.jpg",
+      "image": "https://media.rawg.io/media/games/8a0/8a02f84a5916ede2f923b88d5f8217ba.jpg",
       "categories": [
         "horror",
         "adventure",
         "indie",
         "platformer",
-        "single-player"
+        "single-player",
+        "action",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T12:15:00.000Z"
+      "createdAt": "2025-01-15T12:15:00.000Z",
+      "rating": "4.03",
+      "released": "2017-04-27",
+      "description": "Heavily inspired by Limbo and Inside, Little Nightmares are telling a story of another lost child. Six is a starving little girl in a yellow raincoat, which is trapped in a mysterious vessel named the Maw. Players are taking control of Six’s movement, in order to help her escape the ship and dangerous inhabitants, that’s been kidnaping and preparing children to be served as a feast for the Guests. \nThe control scheme is not including any combat moves, leaving players defenseless against any threat. Six can run, crawl, climb, push or pull, and in rare cases carry an object she can throw to stagger an enemy or solve a puzzle. The game gives players the ability to carry a lighted match at any time, inviting players to explore and search for the collectible statues. \nLittle Nightmares have 3 DLC levels, expanding the game beyond the perspective of Six, where the Runaway Kid, a young boy, who is trying to catch up to Six and having his own adventure, going through the Maw in the extra chapters, named “The Depths”, “The Hideaway” and “The Residence.”",
+      "platforms": "iOS, PlayStation 4, PC, Xbox One, Nintendo Switch",
+      "developers": "BANDAI NAMCO Entertainment America, Playdigious, Tarsier Studios",
+      "publishers": "Bandai Namco Entertainment, BANDAI NAMCO Entertainment US, Playdigious",
+      "metacritic": "81",
+      "playtime": "3 ساعة",
+      "website": "http://www.little-nightmares.com",
+      "updatedAt": "2025-11-25T15:29:08.785Z"
     },
     {
       "id": 1029,
