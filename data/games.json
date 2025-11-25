@@ -539,213 +539,135 @@
     },
     {
       "id": 1023,
-      "name": "FIFA 22",
+      "name": "fifa 22",
       "size": "43 GB",
-      "image": "https://media.rawg.io/media/games/355/355d2ec5d6b87518228dc30a9bb0e70d.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1506830/header.jpg",
       "categories": [
         "sports",
         "simulation",
         "multiplayer",
         "single-player"
       ],
-      "createdAt": "2025-01-15T11:50:00.000Z",
-      "rating": "3.38",
-      "released": "2021-09-27",
-      "description": "HyperMotion integrates advanced full-team mocap data and machine learning to heighten gameplay in every match in FIFA 22, harnessing the power of next generation consoles to deliver the most realistic, responsive and fluid gameplay experience we’ve ever built. FIFA 22 brings a new season of innovation across every mode in the game; enjoy more consistency between the posts with a goalkeeper rewrite that brings more composure to the most important position on the pitch, live out your football dreams as you create and manage your custom club to glory in Career Mode, get rewarded for your flair with restyled gameplay in VOLTA FOOTBALL, welcome back football’s most memorable players as FIFA Ultimate Team™ Heroes, and feel the atmosphere of your next big game with the most immersive matchday experience ever seen in EA SPORTS FIFA.",
-      "platforms": "PlayStation 5, Nintendo Switch, Xbox One, PC, PlayStation 4, Xbox Series S/X",
-      "developers": "Electronic Arts Vancouver",
-      "publishers": "Electronic Arts",
-      "metacritic": "76",
-      "playtime": "21 ساعة",
-      "website": "https://www.ea.com/games/fifa",
-      "updatedAt": "2025-11-25T14:59:57.041Z"
+      "createdAt": "2025-01-15T11:50:00.000Z"
     },
     {
       "id": 1024,
-      "name": "Hellblade: Senua's Sacrifice",
+      "name": "Hellblade Senuas Sacrifice",
       "size": "21.6 GB",
-      "image": "https://media.rawg.io/media/games/63f/63f0e68688cad279ed38cde931dbfcdb.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/414340/header.jpg",
       "categories": [
         "action",
         "adventure",
         "horror",
-        "single-player",
-        "indie"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T11:55:00.000Z",
-      "rating": "4.22",
-      "released": "2017-08-07",
-      "description": "A dark fantasy game that takes inspiration from Scandinavian and Celtic folklore, Hellblade is set in a gritty barbarian world full of weird wooden structures and creepily masked enemies. \r\n\r\nThe player assumes the role of Senua, a traumatized female warrior from the Pict tribe. She suffers from a growing psychosis after her lover Dillion was brutally murdered by Vikings. Carrying his severed head, Senua sets out to Helheim, the underworld of the dead, to bring her lover's soul back. Her grim and bloody journey mirrors her descent into madness. It becomes increasingly difficult for her (and, thus, the player) to tell fact from fantasy, as she hears voices in her head and sees hallucinations. \r\n\r\nWhen not fighting her enemies, Senua has to solve puzzles to move forward. This is where her distorted perception actually comes out handy, enabling her to \"focus\" and see what regular people can not. The ghostly voices, recorded using the binaural method to create an eery effect, also help to guide Senua or to warn her about dangers. All of Senua movements, expressions and reactions were recorded through motion capture to make them more realistic and emotional.",
-      "platforms": "Xbox One, Nintendo Switch, PlayStation 4, PC",
-      "developers": "Ninja Theory",
-      "publishers": "Ninja Theory",
-      "metacritic": "83",
-      "playtime": "6 ساعة",
-      "website": "http://www.hellblade.com/",
-      "updatedAt": "2025-11-25T15:00:11.428Z"
+      "createdAt": "2025-01-15T11:55:00.000Z"
     },
     {
       "id": 1025,
-      "name": "Horizon Zero Dawn",
+      "name": "Horizon - Zero Down",
       "size": "55 GB",
-      "image": "https://media.rawg.io/media/games/b7d/b7d3f1715fa8381a4e780173a197a615.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1151640/header.jpg",
       "categories": [
         "action",
         "adventure",
         "rpg",
         "open-world",
-        "single-player",
-        "stealth"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T12:00:00.000Z",
-      "rating": "4.28",
-      "released": "2017-02-28",
-      "description": "Horizon Zero Dawn is an experiment. A very impressive experiment that actually succeeded. \r\nHaving a very curious mix of cyberpunk and prehistorical styles and esthetic, the game provides us with quite a unique experience. We need to arm ourselves with arrows and a bow, with a spear or any other prehistorical-ish weapon in order to defeat out enemies - dinosaur-mechanisms that are spread around the world. If that wasn't enough, Aloy our main protagonist can control an AI named GAIA. What we're having here is an exciting connection with \"very old times\" and \"near future\", even though the game is set up in the 31st century. \r\nBeing an outcast with her father Rost, Aloy must restore her position in the tribe and save the world by stopping the Eclipse, a cult that wants to rule the world. Join her on that journey, exploring the world and people that live in such hard surroundings.",
-      "platforms": "PC, PlayStation 4",
-      "developers": "Guerrilla Games",
-      "publishers": "Sony Computer Entertainment",
-      "metacritic": "89",
-      "playtime": "11 ساعة",
-      "website": "https://www.guerrilla-games.com/play/horizon",
-      "updatedAt": "2025-11-25T15:00:34.916Z"
+      "createdAt": "2025-01-15T12:00:00.000Z"
     },
     {
       "id": 1026,
-      "name": "INSIDE",
+      "name": "Inside",
       "size": "2.5 GB",
-      "image": "https://media.rawg.io/media/games/d5a/d5a24f9f71315427fa6e966fdd98dfa6.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/304430/header.jpg",
       "categories": [
         "adventure",
         "puzzle",
         "indie",
         "platformer",
-        "single-player",
-        "action",
-        "horror",
-        "stealth"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T12:05:00.000Z",
-      "rating": "4.39",
-      "released": "2016-06-28",
-      "description": "INSIDE is a platform adventure game that transfers the atmosphere of a dystopic world. Players assume the role of a lonely boy, who walks through the monochromatic 2.5D environment and solves various puzzles. By the time main antagonists of the character pursue him throughout the whole world. The main storyline follows the unnamed boy through the in-game world locations including a forest, a farm, and a fictional laboratory, where experiments on bodies are held. The gameplay is divided into levels tied to each location. While completing them, the boy, controlled by players, has to swim, run, climb the obstacles and use his supernatural ability to control bodies with his special helmet. In the course of the travel, the protagonist also comes across a siren-like creature, who gives him gear for breathing underwater. The death occurs in several ways ranging from drowning to being shot with a tranquilizer dart. In addition to the basic ending, the storyline features an alternate one, which unlocks after collecting all the hidden glowing orbs.",
-      "platforms": "Nintendo Switch, PC, iOS, macOS, Xbox One, PlayStation 4",
-      "developers": "Playdead",
-      "publishers": "Playdead",
-      "metacritic": "87",
-      "playtime": "4 ساعة",
-      "website": "http://www.playdead.com/",
-      "updatedAt": "2025-11-25T15:00:49.340Z"
+      "createdAt": "2025-01-15T12:05:00.000Z"
     },
     {
       "id": 1027,
       "name": "Layers of Fear",
       "size": "3.3 GB",
-      "image": "https://media.rawg.io/media/games/6a2/6a2e48933245e2cd3c92248c75c925e1.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/391720/header.jpg",
       "categories": [
         "horror",
         "adventure",
         "indie",
         "single-player"
       ],
-      "createdAt": "2025-01-15T12:10:00.000Z",
-      "rating": "3.54",
-      "released": "2016-02-16",
-      "description": "Layers of Fear is the horror game with a focus on exploring and puzzles. It is the only installment in the IP, featuring one DLC which expands the storyline further and one port to the Nintendo Switch, which adds multiple features like accelerated controllers' support and touchscreen assistance.\r\nThe primary goal of the player is to guide the genius and psychopath painter on the way to complete the painting. The problem is the player does not know how to do so — they start exploring the house, which is changing the layouts repeatedly and find out many jump-scares along the way.\r\nGetting through all of the six chapters the player may reach of the three endings: bad, average and good. The end is decided not by momentarily choice but by a series of decisions throughout the game. While the player is uncovering the truth about the premises of the hero's masterpiece, the DLC tells a story of his daughter which returns to her memories of the past. The DLC also features three endings in the same fashion as the original game.",
-      "platforms": "PlayStation 4, Linux, macOS, PC, iOS, Xbox One",
-      "developers": "Bloober Team, Anshar Studios",
-      "publishers": "Aspyr, Bloober Team",
-      "metacritic": "72",
-      "playtime": "3 ساعة",
-      "website": "http://layersoffear.com",
-      "updatedAt": "2025-11-25T15:01:02.666Z"
+      "createdAt": "2025-01-15T12:10:00.000Z"
     },
     {
       "id": 1028,
       "name": "Little Nightmares",
       "size": "6.5 GB",
-      "image": "https://media.rawg.io/media/games/8a0/8a02f84a5916ede2f923b88d5f8217ba.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/424840/header.jpg",
       "categories": [
         "horror",
         "adventure",
         "indie",
         "platformer",
-        "single-player",
-        "action",
-        "stealth"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T12:15:00.000Z",
-      "rating": "4.03",
-      "released": "2017-04-27",
-      "description": "Heavily inspired by Limbo and Inside, Little Nightmares are telling a story of another lost child. Six is a starving little girl in a yellow raincoat, which is trapped in a mysterious vessel named the Maw. Players are taking control of Six’s movement, in order to help her escape the ship and dangerous inhabitants, that’s been kidnaping and preparing children to be served as a feast for the Guests. \nThe control scheme is not including any combat moves, leaving players defenseless against any threat. Six can run, crawl, climb, push or pull, and in rare cases carry an object she can throw to stagger an enemy or solve a puzzle. The game gives players the ability to carry a lighted match at any time, inviting players to explore and search for the collectible statues. \nLittle Nightmares have 3 DLC levels, expanding the game beyond the perspective of Six, where the Runaway Kid, a young boy, who is trying to catch up to Six and having his own adventure, going through the Maw in the extra chapters, named “The Depths”, “The Hideaway” and “The Residence.”",
-      "platforms": "iOS, PlayStation 4, PC, Xbox One, Nintendo Switch",
-      "developers": "BANDAI NAMCO Entertainment America, Playdigious, Tarsier Studios",
-      "publishers": "Bandai Namco Entertainment, BANDAI NAMCO Entertainment US, Playdigious",
-      "metacritic": "81",
-      "playtime": "3 ساعة",
-      "website": "http://www.little-nightmares.com",
-      "updatedAt": "2025-11-25T15:01:22.134Z"
+      "createdAt": "2025-01-15T12:15:00.000Z"
     },
     {
       "id": 1029,
-      "name": "Mafia: Definitive Edition",
+      "name": "Mafia - Definitive Edition",
       "size": "28.7 GB",
-      "image": "https://media.rawg.io/media/games/345/3452d9d4483686c602372e0e6b3bb4cc.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1030840/header.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
-        "single-player",
-        "shooter"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T12:20:00.000Z",
-      "rating": "4.24",
-      "released": "2020-09-25",
-      "description": "Part one of the Mafia crime saga - 1930s, Lost Heaven, IL\nRe-made from the ground up, rise through the ranks of the Mafia during the Prohibition era of organized crime. After a run-in with the mob, cab driver Tommy Angelo is thrust into a deadly underworld. Initially uneasy about falling in with the Salieri crime family, Tommy soon finds that the rewards are too big to ignore.\n\nPlay a Mob Movie:\nLive the life of a Prohibition-era gangster and rise through the ranks of the Mafia.\n\nLost Heaven, IL:\n\nRecreated 1930's cityscape, filled with interwar architecture, cars and culture to see, hear and interact with.\n\nRe-Made Classic:\nFaithfully recreated, with expanded story, gameplay and original score. This is the Mafia you remembered and much more.",
-      "platforms": "PC, Xbox Series S/X, Xbox One, PlayStation 4",
-      "developers": "Hangar 13",
-      "publishers": "2K Games",
-      "metacritic": "78",
-      "playtime": "10 ساعة",
-      "website": "https://www.mafiagame.com",
-      "updatedAt": "2025-11-25T15:01:37.362Z"
+      "createdAt": "2025-01-15T12:20:00.000Z"
     },
     {
       "id": 1031,
       "name": "Outlast 2",
       "size": "25.5 GB",
-      "image": "https://media.rawg.io/media/games/880/880f6aa65fe9d786f1a455963df76180.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/414700/header.jpg",
       "categories": [
         "horror",
         "adventure",
         "survival",
-        "single-player",
-        "action",
-        "indie"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T12:30:00.000Z",
-      "rating": "3.68",
-      "released": "2017-04-24",
-      "description": "Outlast 2 is a first-person survival horror game developed by Red Barrels. While continuing the ideas of the first Outlast, the game's story does not continue the plot of the first title in the series. \n\n###Plot\nBlake and his wife Lynn are journalists that investigate a case involving the murder of a pregnant woman. The set out to visit the crime scene in the remote Arizona village by a helicopter that breaks down mid-air and crashes. Blake has to find his wife and figure out what is going on in the village.\n\n###Gameplay\nAs the first game in the series and it's expansion pack, Outlast 2 is a single-player survival horror experience. The main protagonist is unable to fight his enemies, so stealth is used to avoid confrontation. Unlike the previous titles, Outlast 2 features a stamina bar and new additions to the movement system, such as sliding and going prone. \n\nBlake has a camera with him at all times. This camera is used for activating night vision, eavesdropping to distant conversations with its microphone. The camera requires batteries for it to work, so the players have to look for them on the levels. \n\nThere is no automatic health regeneration present in the game. So when the player suffers some damage, they need to find a medkit in order to restore their agility and health.",
-      "platforms": "Xbox One, PlayStation 4, PC, Nintendo Switch",
-      "developers": "Red Barrels",
-      "publishers": "Red Barrels",
-      "metacritic": "76",
-      "playtime": "5 ساعة",
-      "website": "http://www.redbarrelsgames.com/games/outlast-2/",
-      "updatedAt": "2025-11-25T15:01:54.352Z"
+      "createdAt": "2025-01-15T12:30:00.000Z"
     },
     {
       "id": 1032,
       "name": "Portal Collection",
       "size": "31.9 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/400/header.jpg",
+      "image": "https://media.rawg.io/media/games/7fa/7fa0b586293c5861ee32490e953a4996.jpg",
       "categories": [
         "puzzle",
         "adventure",
         "indie",
-        "single-player"
+        "single-player",
+        "action",
+        "shooter"
       ],
-      "createdAt": "2025-01-15T12:35:00.000Z"
+      "createdAt": "2025-01-15T12:35:00.000Z",
+      "rating": "4.49",
+      "released": "2007-10-09",
+      "description": "Every single time you click your mouse while holding a gun, you expect bullets to fly and enemies to fall. But here you will try out the FPS game filled with environmental puzzles and engaging story. \r\nSilent template for your adventures, Chell, wakes up in a testing facility. She’s a subject of experiments on instant travel device, supervised by snarky and hostile GLaDOS.\r\nPlayers will have to complete the tests, room by room, expecting either reward, freedom or more tests. By using the gun, that shoots portals (Portal-Gun™), players will move blocks, travel great distance quickly and learn about your current situation, which is unraveled through environmental storytelling. What you will be told might be different from what you will see.\r\nWhite environments will guide the player’s portal placement, forcing them to pay attention to the surroundings.  Portal creates tension, allowing either solving puzzles at your own leisure or moving quickly, due to the time limit or threats.",
+      "platforms": "macOS, PC, Android, PlayStation 3, Xbox 360, Linux, Nintendo Switch",
+      "developers": "Valve Software, NVIDIA Lightspeed Studios",
+      "publishers": "Valve, Buka Entertainment, NVIDIA, CyberFront",
+      "metacritic": "90",
+      "playtime": "4 ساعة",
+      "website": "http://www.whatistheorangebox.com/",
+      "updatedAt": "2025-11-25T15:02:24.241Z"
     },
     {
       "id": 1033,
