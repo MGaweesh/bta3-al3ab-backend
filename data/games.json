@@ -1924,15 +1924,29 @@
       "id": 2041,
       "name": "Far Cry 3",
       "size": "4.9 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/220240/header.jpg",
+      "image": "https://media.rawg.io/media/games/15c/15c95a4915f88a3e89c821526afe05fc.jpg",
       "categories": [
         "shooter",
         "action",
         "open-world",
         "adventure",
-        "single-player"
+        "single-player",
+        "multiplayer",
+        "rpg",
+        "survival",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T17:20:00.000Z"
+      "createdAt": "2025-01-15T17:20:00.000Z",
+      "rating": "4.25",
+      "released": "2012-11-28",
+      "description": "Far Cry 3 is absolute madness. Being the third instalment of the franchise, it has a unique plot. Playing as Jason Brody, you will understand what it is like, to be a Rambo. Vacation on Rook Islands with your friends and family quickly turned into a complete nightmare after Vaas Montenegro kidnapping everyone from the party. Jason manages to escape the cruel pirate lord with a little help from a native supporter called Dennis. Now Brody has to save all his friends and get out of the island.\r\n\r\nTo help Jason save his friends, he will need to learn new skills. Hunting animals, crafting new weapons or different abilities in killing pirates. Skill tree has plenty to offer for the player. There are all kinds of firearms for any player, from a knife to a grenade launcher. This mechanic adds pure madness for the game process, making it very fun, fluent and full of adrenaline. Stunning views of the island, excellent surroundings and a great story make Far Cry 3 an absolute fun to play.",
+      "platforms": "Xbox One, Xbox 360, PlayStation 3, PC, PlayStation 4",
+      "developers": "Ubisoft, Ubisoft Montreal",
+      "publishers": "Ubisoft Entertainment",
+      "metacritic": "88",
+      "playtime": "16 ساعة",
+      "website": "http://farcrygame.com",
+      "updatedAt": "2025-11-25T19:35:09.703Z"
     },
     {
       "id": 2042,
@@ -3185,27 +3199,6 @@
         "single-player"
       ],
       "createdAt": "2025-01-16T01:15:00.000Z"
-    },
-    {
-      "id": 1764099240952,
-      "name": "God of War II",
-      "size": "180 MB",
-      "image": "https://media.rawg.io/media/games/615/615e9fc0a325e0d87b84dad029b8b7b9.jpg",
-      "categories": [
-        "action",
-        "single-player",
-        "adventure"
-      ],
-      "rating": "4.4",
-      "released": "2007-03-13",
-      "description": "The second installment in the God of War franchise and exclusive for the Sony PlayStation 2 console. The game uses basics from the hack-and-slash genre, like its predecessor, and was developed by Santa Monica studio, which is a subsidiary of Sony Entertainment. The game is recognized as one of the best for the console from Sony and the best game in action genre in 2007. The game was released on Sony Playstation 2 already at the moment when the third version of the console was already selling for four months. The developers explained their decision: one hundred million people already playing on PlayStation 2, whereas on the next-generation console gamers were just going to adopt the new hardware.\n\n###Key features\nThe player controls Kratos, who in the first part killed the god of war Ares and took his place. The game heavily relies on the ancient Greek mythology and uses it as inspiration and the main source for enemies and NPC design as well as locations design. However, the game is not a great source of accurate historical facts: Ancient Greece history was rewritten for the sake of the genre and the game universe, the rules of which were established in the first part.\n\n###The story\nKing of the gods Zeus betrays Kratos and kills him, but the Spartan is saved from the Underworld by another goddess Gaia, who invites Kratos to find the Sisters of Fate and go to the past and prevent his own murder. The gameplay remained the same: the player can use several attacks, which can be combined and improved with the help of the in-game currency collected from enemies. The game has a lot of Quick-Time-Events, mostly they are used in battles with bosses and in finishing combo-moves. Bosses in the game, in comparison with the first part, significantly increased.",
-      "platforms": "PlayStation 2, PS Vita, PlayStation 3",
-      "developers": "SCE Studios Santa Monica",
-      "publishers": "Sony Computer Entertainment, ak tronic Software & Services",
-      "metacritic": "93",
-      "playtime": "17 ساعة",
-      "website": "http://godofwar.playstation.com",
-      "createdAt": "2025-11-25T19:34:00.952Z"
     }
   ],
   "online": [
