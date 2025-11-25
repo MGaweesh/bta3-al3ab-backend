@@ -4118,15 +4118,25 @@
     },
     {
       "id": 2132,
-      "name": "Tomb Raider Legend",
+      "name": "Tomb Raider: Legend",
       "size": "2.2 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/7000/header.jpg",
+      "image": "https://media.rawg.io/media/games/9d4/9d45e22df640fcb6f4b754aa3491ae09.jpg",
       "categories": [
         "action",
         "adventure",
         "single-player"
       ],
-      "createdAt": "2025-01-16T00:55:00.000Z"
+      "createdAt": "2025-01-16T00:55:00.000Z",
+      "rating": "3.9",
+      "released": "2006-04-06",
+      "description": "The gaming world's sexiest and most intrepid adventurer makes her triumphant return in Lara Croft Tomb Raider: Legend!\nFollow Lara down a path of discovery as she travels the globe to remote, exotic locales in search of one of history's greatest artifacts that unleash unwelcome figures from Lara's mysterious past. With guns blazing, Lara must use her athletic ability and intellectual wits to explore vast, treacherous tombs, riddled with challenging puzzles and deadly traps.  Experience the beginning of the new Legend in the most adrenaline-fueled Tomb Raider adventure ever!\nLara Croft evolved! - the sexy, dual-pistol wielding heroine is presented like never before with new graphic and animation sets, presenting Lara in the finest fidelity to date\nReturn to the tombs! - discover and explore living breathing, lost ancient realms that hold clues to the secrets of Lara's past. Physics, Water and Fire systems bring the perilous environments of Lara's world alive, and challenge the player to improvise solutions to obstacles\nThe Intuitive and Fluid Control System movement allows you to keep Lara in continuous motion; seamlessly handle any obstacle and interact dynamically with any surface\nExperience the new legend of the Tomb Raider series! - the future of the adrenaline-fueled adventure meets the promise of the next generation gaming systems.\nUtilize strength and intelligence on your quest! - use the grappling hook, an arsenal of new weapons, communications devices, and other tools to achieve your goals.\nTravel the globe to the world's most exotic locales! - explore ancient tombs, treacherous jungles, snowy mountain ranges, and much more.",
+      "platforms": "Xbox, PSP, PlayStation 3, PC, GameCube, PlayStation 2, Xbox 360",
+      "developers": "Crystal Dynamics, Eidos Interactive",
+      "publishers": "Square Enix, Eidos Interactive",
+      "metacritic": "82",
+      "playtime": "2 ساعة",
+      "website": "http://www.tombraider.com/legend/",
+      "updatedAt": "2025-11-25T22:32:09.532Z"
     },
     {
       "id": 2133,
