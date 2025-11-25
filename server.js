@@ -34,7 +34,9 @@ app.get('/', (req, res) => {
     api: {
       health: '/api/health',
       games: '/api/games',
-      gamesByType: '/api/games/:type'
+      gamesByType: '/api/games/:type (readyToPlay, repack, online)',
+      movies: '/api/movies',
+      moviesByType: '/api/movies/:type (movies, tvShows, anime)'
     },
     storage: 'JSON files with GitHub sync'
   });
@@ -247,18 +249,18 @@ const writeGamesData = async (data, action = 'update') => {
 
 // ============ GAMES ROUTES (Movies, TV Shows, Anime) ============
 
-// GET all games data (movies, tvShows, anime)
+// GET all games data (readyToPlay, repack, online)
 app.get('/api/games', async (req, res) => {
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   res.set('Pragma', 'no-cache');
   res.set('Expires', '0');
   
   try {
-    const data = await readGamesData();
+    const data = readGamesData();
     console.log('📊 Games data loaded:', {
-      movies: data.movies?.length || 0,
-      tvShows: data.tvShows?.length || 0,
-      anime: data.anime?.length || 0
+      readyToPlay: data.readyToPlay?.length || 0,
+      repack: data.repack?.length || 0,
+      online: data.online?.length || 0
     });
     res.json(data);
   } catch (error) {
@@ -283,7 +285,7 @@ app.get('/api/games/:type', async (req, res) => {
       });
     }
     
-    const data = await readGamesData();
+    const data = readGamesData();
     res.json(data[type] || []);
   } catch (error) {
     console.error('❌ Error fetching games by type:', error);
@@ -306,7 +308,7 @@ app.post('/api/games/:type', async (req, res) => {
     console.log(`📝 [${new Date().toISOString()}] Adding new item to type: ${type}`);
     
     // Read data from file
-    const data = await readGamesData();
+    const data = readGamesData();
     const newItem = {
       id: Date.now(),
       ...req.body,
@@ -365,7 +367,7 @@ app.put('/api/games/:type/:id', async (req, res) => {
     console.log(`📝 [${new Date().toISOString()}] Updating item in type: ${type}, ID: ${id}`);
     
     // Read data from file
-    const data = await readGamesData();
+    const data = readGamesData();
     const itemId = parseInt(id);
     
     if (!data[type]) {
@@ -432,7 +434,7 @@ app.delete('/api/games/:type/:id', async (req, res) => {
     console.log(`🗑️  [${new Date().toISOString()}] Deleting item from type: ${type}, ID: ${id}`);
     
     // Read data from file
-    const data = await readGamesData();
+    const data = readGamesData();
     const itemId = parseInt(id);
     
     if (!data[type]) {
@@ -544,7 +546,7 @@ app.post('/api/debug/commit-test', async (req, res) => {
 // Data status endpoint
 app.get('/api/data/status', async (req, res) => {
   try {
-    const gamesData = await readGamesData();
+    const gamesData = readGamesData();
     const githubTest = await testGitHubConnection();
     
     res.json({
