@@ -997,14 +997,26 @@
       "id": 2003,
       "name": "ABZU",
       "size": "1 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/384190/header.jpg",
+      "image": "https://media.rawg.io/media/games/ba9/ba9ad92b6d04825bd15a407c6059db94.jpg",
       "categories": [
         "adventure",
         "indie",
         "puzzle",
-        "single-player"
+        "single-player",
+        "simulation",
+        "open-world"
       ],
-      "createdAt": "2025-01-15T14:10:00.000Z"
+      "createdAt": "2025-01-15T14:10:00.000Z",
+      "rating": "3.92",
+      "released": "2016-08-02",
+      "description": "Abzu is a classic adventure game, the action of which unfolds in the endless ocean. The protagonist is a female diver, wakes up alone drifting on the ocean surface.\n\nThe main gameplay is aimed at exploring the surrounding world: the main character finds the ruins and traces of an ancient civilization that existed in symbiosis with the world's ocean. The outside world reacts to the player's actions and changes under his/her influence. However, it will not only be necessary to explore the underwater world: ground fragments also come into play in the game. Despite the simplicity and serenity of the game, there are dangers in the form of sea predators.\n\nThe story is told without a single word and the silence only helps to create a unique atmosphere of peace and tranquillity that reigns in the world of the game. The mosaic of the game setting is completed by the implementation of the game camera and the opportunity to look at the world through the eyes of fish - you need to enter the meditation mode for this.",
+      "platforms": "PlayStation 4, Nintendo Switch, Xbox One, PC",
+      "developers": "Giant Squid",
+      "publishers": "505 Games",
+      "metacritic": "83",
+      "playtime": "3 ساعة",
+      "website": "https://abzugame.com/",
+      "updatedAt": "2025-11-25T17:01:51.316Z"
     },
     {
       "id": 2004,
