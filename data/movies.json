@@ -1,15 +1,152 @@
 {
   "movies": [
     {
-      "id": 1,
-      "name": "The Shawshank Redemption",
+      "id": 2,
+      "name": "The Godfather",
+      "type": "فيلم",
+      "year": "1972",
+      "rating": "9.2",
+      "image": "https://image.tmdb.org/t/p/w780/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+      "description": "فيلم جريمة من أفضل الأفلام في التاريخ",
+      "categories": [
+        "crime",
+        "drama",
+        "thriller"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "The Dark Knight",
+      "type": "فيلم",
+      "year": "2008",
+      "rating": "9.0",
+      "image": "https://image.tmdb.org/t/p/w780/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+      "description": "فيلم حركة وإثارة من بطولة كريستيان بيل",
+      "categories": [
+        "action",
+        "thriller",
+        "crime"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "name": "Pulp Fiction",
       "type": "فيلم",
       "year": "1994",
-      "rating": "9.3",
-      "image": "https://image.tmdb.org/t/p/w780/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
-      "description": "فيلم دراما كلاسيكي من أفضل الأفلام على الإطلاق",
+      "rating": "8.9",
+      "image": "https://image.tmdb.org/t/p/w780/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg",
+      "description": "فيلم جريمة وإثارة من إخراج كوينتن تارانتينو",
       "categories": [
+        "crime",
+        "thriller",
         "drama"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "name": "The Lord of the Rings: The Return of the King",
+      "type": "فيلم",
+      "year": "2003",
+      "rating": "8.9",
+      "image": "https://image.tmdb.org/t/p/w780/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
+      "description": "فيلم خيال علمي ومغامرات من سلسلة سيد الخواتم",
+      "categories": [
+        "fantasy",
+        "sci-fi",
+        "adventure",
+        "action"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "name": "Inception",
+      "type": "فيلم",
+      "year": "2010",
+      "rating": "8.8",
+      "image": "https://image.tmdb.org/t/p/w780/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg",
+      "description": "فيلم خيال علمي وإثارة من إخراج كريستوفر نولان",
+      "categories": [
+        "sci-fi",
+        "thriller",
+        "action"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 8,
+      "name": "The Matrix",
+      "type": "فيلم",
+      "year": "1999",
+      "rating": "8.7",
+      "image": "https://image.tmdb.org/t/p/w780/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
+      "description": "فيلم خيال علمي وإثارة من بطولة كيانو ريفز",
+      "categories": [
+        "sci-fi",
+        "action",
+        "thriller"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 9,
+      "name": "Interstellar",
+      "type": "فيلم",
+      "year": "2014",
+      "rating": "8.6",
+      "image": "https://image.tmdb.org/t/p/w780/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+      "description": "فيلم خيال علمي من إخراج كريستوفر نولان",
+      "categories": [
+        "sci-fi",
+        "drama",
+        "adventure"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 10,
+      "name": "The Avengers",
+      "type": "فيلم",
+      "year": "2012",
+      "rating": "8.0",
+      "image": "https://image.tmdb.org/t/p/w780/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg",
+      "description": "فيلم أكشن وخيال علمي من مارفل",
+      "categories": [
+        "action",
+        "sci-fi",
+        "adventure"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 11,
+      "name": "Parasite",
+      "type": "فيلم",
+      "year": "2019",
+      "rating": "8.5",
+      "image": "https://image.tmdb.org/t/p/w780/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+      "description": "فيلم إثارة ودراما كوري فاز بجائزة الأوسكار",
+      "categories": [
+        "thriller",
+        "drama"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 12,
+      "name": "Gladiator",
+      "type": "فيلم",
+      "year": "2000",
+      "rating": "8.5",
+      "image": "https://image.tmdb.org/t/p/w780/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg",
+      "description": "فيلم أكشن ودراما من بطولة راسل كرو",
+      "categories": [
+        "action",
+        "drama",
+        "adventure"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
@@ -29,6 +166,21 @@
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
+      "id": 15,
+      "name": "The Good, the Bad and the Ugly",
+      "type": "فيلم",
+      "year": "1966",
+      "rating": "8.8",
+      "image": "https://image.tmdb.org/t/p/w780/bX2xnavhMYjWDoZp1VM6VnU1xwe.jpg",
+      "description": "فيلم وسترن كلاسيكي من أفضل أفلام المغامرات",
+      "categories": [
+        "action",
+        "adventure",
+        "drama"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
       "id": 17,
       "name": "The Silence of the Lambs",
       "type": "فيلم",
@@ -40,6 +192,104 @@
         "thriller",
         "horror",
         "crime"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 18,
+      "name": "Schindler's List",
+      "type": "فيلم",
+      "year": "1993",
+      "rating": "8.9",
+      "image": "https://image.tmdb.org/t/p/w780/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
+      "description": "فيلم دراما تاريخي من إخراج ستيفن سبيلبرغ",
+      "categories": [
+        "drama"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 19,
+      "name": "The Lion King",
+      "type": "فيلم",
+      "year": "1994",
+      "rating": "8.5",
+      "image": "https://m.media-amazon.com/images/M/MV5BZGRiZDZhZjItM2M3ZC00Y2IyLTk3Y2MtMWY5YjliNDFkZTJlXkEyXkFqcGc@._V1_SX300.jpg",
+      "description": "فيلم رسوم متحركة موسيقي من أفضل أفلام ديزني",
+      "categories": [
+        "animation",
+        "adventure",
+        "drama"
+      ],
+      "updatedAt": "2025-11-25T14:39:48.017Z",
+      "rate": "8.5",
+      "genre": "Animation, Adventure, Drama",
+      "director": "Roger Allers, Rob Minkoff",
+      "writer": "Irene Mecchi, Jonathan Roberts, Linda Woolverton",
+      "actors": "Rowan Atkinson, Matthew Broderick, Niketa Calame-Harris",
+      "plot": "A young lion prince is cast out of his pride by his cruel uncle, who claims he killed his father. While the uncle rules with an iron paw, the prince grows up beyond the Savannah, living by a philosophy: No worries for the rest of your days. But when his past comes to haunt him, the young prince must decide his fate: Will he remain an outcast or face his demons and become what he needs to be?",
+      "runtime": "88 min",
+      "language": "English, Swahili, Xhosa, Zulu",
+      "country": "United States",
+      "awards": "Won 2 Oscars. 43 wins & 35 nominations total",
+      "metascore": "88",
+      "imdbVotes": "1,231,775"
+    },
+    {
+      "id": 21,
+      "name": "Goodfellas",
+      "type": "فيلم",
+      "year": "1990",
+      "rating": "8.7",
+      "image": "https://image.tmdb.org/t/p/w780/aKuFiU82s5ISJpGZp7YkIr3kCUd.jpg",
+      "description": "فيلم جريمة ودراما من إخراج مارتن سكورسيزي",
+      "categories": [
+        "crime",
+        "drama",
+        "thriller"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 23,
+      "name": "The Prestige",
+      "type": "فيلم",
+      "year": "2006",
+      "rating": "8.5",
+      "image": "https://m.media-amazon.com/images/I/81AdI6L6nAL._AC_UF1000,1000_QL80_.jpg",
+      "description": "فيلم إثارة وخيال علمي من إخراج كريستوفر نولان",
+      "categories": [
+        "thriller",
+        "sci-fi",
+        "drama"
+      ],
+      "updatedAt": "2025-11-25T14:40:21.972Z"
+    },
+    {
+      "id": 24,
+      "name": "The Green Mile",
+      "type": "فيلم",
+      "year": "1999",
+      "rating": "8.6",
+      "image": "https://image.tmdb.org/t/p/w780/velWPhVMQeQKcxggNEU8YmIo52R.jpg",
+      "description": "فيلم دراما وفانتازيا من بطولة توم هانكس",
+      "categories": [
+        "drama",
+        "fantasy"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 25,
+      "name": "Saving Private Ryan",
+      "type": "فيلم",
+      "year": "1998",
+      "rating": "8.6",
+      "image": "https://image.tmdb.org/t/p/w780/uqx37cS8cpHg8U35f9U5IBlrCV3.jpg",
+      "description": "فيلم حرب ودراما من إخراج ستيفن سبيلبرغ",
+      "categories": [
+        "action",
+        "drama"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
