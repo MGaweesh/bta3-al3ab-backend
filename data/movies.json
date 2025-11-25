@@ -75,21 +75,6 @@
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 7,
-      "name": "Inception",
-      "type": "فيلم",
-      "year": "2010",
-      "rating": "8.8",
-      "image": "https://image.tmdb.org/t/p/w780/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg",
-      "description": "فيلم خيال علمي وإثارة من إخراج كريستوفر نولان",
-      "categories": [
-        "sci-fi",
-        "thriller",
-        "action"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
       "id": 8,
       "name": "The Matrix",
       "type": "فيلم",
