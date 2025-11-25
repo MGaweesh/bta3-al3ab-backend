@@ -193,6 +193,17 @@
         "single-player"
       ],
       "createdAt": "2025-01-15T11:10:00.000Z"
+    },
+    {
+      "id": 1764066563667,
+      "name": "Captain Claw",
+      "size": "23",
+      "image": "https://media.rawg.io/media/games/dee/deeb1bb161d0b9cf8009213df7ff334d.jpg",
+      "categories": [
+        "action",
+        "platformer"
+      ],
+      "createdAt": "2025-11-25T10:29:23.667Z"
     }
   ],
   "repack": [

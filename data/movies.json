@@ -324,29 +324,25 @@
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 1764037947314,
-      "name": "تجربة مهمة",
-      "year": "2025",
-      "rating": "7",
-      "size": "3",
-      "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1DOYrj.img?w=350&h=300&m=6&x=245&y=145&s=275&d=175",
-      "description": "",
+      "id": 1764065175337,
+      "name": "Avatar",
+      "year": "2009",
       "type": "فيلم",
-      "categories": [],
-      "createdAt": "2025-11-25T02:32:27.314Z"
-    },
-    {
-      "id": 1764037948958,
-      "name": "تجربة مهمة 234",
-      "year": "2025",
-      "rating": "3",
-      "size": "3",
-      "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1DOYrj.img?w=350&h=300&m=6&x=245&y=145&s=275&d=175",
-      "description": "",
-      "type": "فيلم",
-      "categories": [],
-      "createdAt": "2025-11-25T02:32:28.959Z",
-      "updatedAt": "2025-11-25T02:32:43.037Z"
+      "image": "https://m.media-amazon.com/images/M/MV5BMDEzMmQwZjctZWU2My00MWNlLWE0NjItMDJlYTRlNGJiZjcyXkEyXkFqcGc@._V1_SX300.jpg",
+      "createdAt": "2025-11-25T10:06:15.337Z",
+      "rate": "7.9",
+      "genre": "Action, Adventure, Fantasy",
+      "director": "James Cameron",
+      "writer": "James Cameron",
+      "actors": "Sam Worthington, Zoe Saldaña, Sigourney Weaver",
+      "plot": "When his brother is killed in a robbery, paraplegic Marine Jake Sully decides to take his place in a mission on the distant world of Pandora. There he learns of greedy corporate figurehead Parker Selfridge's intentions of driving off the native humanoid \"Na'vi\" in order to mine for the precious material scattered throughout their rich woodland. In exchange for the spinal surgery that will fix his legs, Jake gathers knowledge, of the Indigenous Race and their Culture, for the cooperating military unit spearheaded by gung-ho Colonel Quaritch, while simultaneously attempting to infiltrate the Na'vi people with the use of an \"avatar\" identity. While Jake begins to bond with the native tribe and quickly falls in love with the beautiful alien Neytiri, the restless Colonel moves forward with his ruthless extermination tactics, forcing the soldier to take a stand - and fight back in an epic battle for the fate of Pandora.",
+      "runtime": "162 min",
+      "language": "English, Spanish",
+      "country": "United States, United Kingdom",
+      "awards": "Won 3 Oscars. 91 wins & 131 nominations total",
+      "metascore": "83",
+      "imdbVotes": "1,453,457",
+      "updatedAt": "2025-11-25T10:11:03.547Z"
     }
   ],
   "tvShows": [
@@ -662,6 +658,25 @@
         "thriller"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 1764065519164,
+      "name": "Game of Thrones",
+      "year": "2011",
+      "type": "مسلسل",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTNhMDJmNmYtNDQ5OS00ODdlLWE0ZDAtZTgyYTIwNDY3OTU3XkEyXkFqcGc@._V1_SX300.jpg",
+      "seasons": "8",
+      "rate": "9.2",
+      "genre": "Action, Adventure, Drama",
+      "writer": "David Benioff, D.B. Weiss",
+      "actors": "Peter Dinklage, Lena Headey, Kit Harington",
+      "plot": "In the mythical continent of Westeros, several powerful families fight for control of the Seven Kingdoms. As conflict erupts in the kingdoms of men, an ancient enemy rises once again to threaten them all. Meanwhile, the last heirs of a recently usurped dynasty plot to take back their homeland from across the Narrow Sea.",
+      "runtime": "57 min",
+      "language": "English",
+      "country": "United States, United Kingdom",
+      "awards": "Won 59 Primetime Emmys. 396 wins & 655 nominations total",
+      "imdbVotes": "2,502,145",
+      "createdAt": "2025-11-25T10:11:59.164Z"
     }
   ],
   "anime": [
