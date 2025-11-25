@@ -2268,28 +2268,16 @@
     },
     {
       "id": 2055,
-      "name": "Hades",
+      "name": "HADES",
       "size": "5 GB",
-      "image": "https://media.rawg.io/media/games/1f4/1f47a270b8f241e4676b14d39ec620f7.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/header.jpg",
       "categories": [
         "action",
         "indie",
         "roguelike",
-        "single-player",
-        "adventure",
-        "rpg"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T18:30:00.000Z",
-      "rating": "4.43",
-      "released": "2020-09-17",
-      "description": "Hades is a rogue-like dungeon crawler that combines the best aspects of Supergiant's critically acclaimed titles, including the fast-paced action of Bastion, the rich atmosphere and depth of Transistor, and the character-driven storytelling of Pyre.\n\nBATTLE OUT OF HELL\nAs the immortal Prince of the Underworld, you'll wield the powers and mythic weapons of Olympus to break free from the clutches of the god of the dead himself, while growing stronger and unraveling more of the story with each unique escape attempt.\n\nUNLEASH THE FURY OF OLYMPUS\nThe Olympians have your back! Meet Zeus, Athena, Poseidon, and many more, and choose from their dozens of powerful Boons that enhance your abilities. There are thousands of viable character builds to discover as you go.\n\nBEFRIEND GODS, GHOSTS, AND MONSTERS\nA fully-voiced cast of colorful, larger-than-life characters is waiting to meet you! Grow your relationships with them, and experience hundreds of unique story events as you learn about what's really at stake for this big, dysfunctional family.\n\nBUILT FOR REPLAYABILITY\nNew surprises await each time you delve into the ever-shifting Underworld, whose guardian bosses will remember you. Use the powerful Mirror of Night to grow permanently stronger, and give yourself a leg up the next time you run away from home.\n\nNOTHING IS IMPOSSIBLE\nPermanent upgrades mean you don't have to be a god yourself to experience the exciting combat and gripping story. Though, if you happen to be one, crank up the challenge and get ready for some white-knuckle action that will put your well-practiced skills to the test.\n\nSIGNATURE SUPERGIANT STYLE\nThe rich, atmospheric presentation and unique melding of gameplay and narrative that's been core to Supergiant's games is here in full force: spectacular hand-painted Underworld environments and a blood-pumping original score bring the Underworld to life.",
-      "platforms": "PlayStation 5, Xbox Series S/X, PlayStation 4, Nintendo Switch, PC, Xbox One",
-      "developers": "Supergiant Games",
-      "publishers": "Supergiant Games",
-      "metacritic": "93",
-      "playtime": "10 ساعة",
-      "website": "https://www.supergiantgames.com/games/hades/",
-      "updatedAt": "2025-11-25T20:11:30.669Z"
+      "createdAt": "2025-01-15T18:30:00.000Z"
     },
     {
       "id": 2056,
@@ -2431,7 +2419,7 @@
       "metacritic": "88",
       "playtime": "7 ساعة",
       "website": "http://hollowknight.com",
-      "updatedAt": "2025-11-25T20:12:33.816Z"
+      "updatedAt": "2025-11-25T20:10:36.585Z"
     },
     {
       "id": 2062,
@@ -2454,13 +2442,13 @@
       "publishers": "Team Cherry",
       "playtime": "24 ساعة",
       "website": "http://hollowknightsilksong.com/",
-      "updatedAt": "2025-11-25T20:12:47.048Z"
+      "updatedAt": "2025-11-25T20:10:50.968Z"
     },
     {
       "id": 2063,
-      "name": "Immortals - Fenyx Rising",
+      "name": "Immortals: Fenyx Rising",
       "size": "20.5 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2228760/header.jpg",
+      "image": "https://media.rawg.io/media/games/d51/d51ada3b94bfd617bf91d4344ab81ce9.jpg",
       "categories": [
         "action",
         "adventure",
@@ -2468,7 +2456,17 @@
         "open-world",
         "single-player"
       ],
-      "createdAt": "2025-01-15T19:10:00.000Z"
+      "createdAt": "2025-01-15T19:10:00.000Z",
+      "rating": "3.73",
+      "released": "2020-12-03",
+      "description": "Immortals Fenyx Rising brings grand mythological adventure to life.\nPlay as Fenyx, a new, winged demigod, on a quest to save the Greek gods. The fate of the world is at stake – you are the gods’ last hope.\n\n### Features\n- Wield the powers of the gods like Achilles' sword and Daidalos' wings to battle powerful enemies and solve ancient puzzles.\n- Fight iconic mythological beasts like Cyclops and Medusa in dynamic combat in the air and on the ground.\n- Use your skills and diverse weapons, including selfguided arrows, telekinesis, and more, for devastating damage.\n- Discover a stylized open world across seven unique regions, each inspired by the gods.",
+      "platforms": "PC, PlayStation 5, Xbox One, Nintendo Switch, PlayStation 4, Xbox Series S/X",
+      "developers": "Ubisoft, Ubisoft Quebec",
+      "publishers": "Ubisoft Entertainment",
+      "metacritic": "78",
+      "playtime": "3 ساعة",
+      "website": "https://www.ubisoft.com/en-gb/game/immortals-fenyx-rising",
+      "updatedAt": "2025-11-25T20:13:02.380Z"
     },
     {
       "id": 2064,
