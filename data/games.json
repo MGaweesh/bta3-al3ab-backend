@@ -3450,16 +3450,26 @@
     },
     {
       "id": 2104,
-      "name": "RoboCop - Rogue City",
+      "name": "RoboCop: Rogue City",
       "size": "28.2 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg",
+      "image": "https://media.rawg.io/media/games/2ae/2ae4150474a27f90595c9092917ab2d3.jpg",
       "categories": [
         "shooter",
         "action",
         "adventure",
-        "single-player"
+        "single-player",
+        "rpg"
       ],
-      "createdAt": "2025-01-15T22:35:00.000Z"
+      "createdAt": "2025-01-15T22:35:00.000Z",
+      "rating": "3.96",
+      "released": "2023-11-02",
+      "description": "Become the iconic part man, part machine, all cop hero as you attempt to bring justice to the dangerous, crime-ridden streets of Old Detroit. Armed with your trusty Auto-9, factory-built strength, years of experience on the force and a variety of tools at your disposal, you will fight forces seeking to destroy the city you call home in an all new first-person, explosive hunt for the truth. You have the power to decide how to fulfil prime directives in your own way, but as the story unfolds proceed with caution because corruption and greed know no limits.\r\n\r\nPrepare yourself to...\r\nPROTECT THE INNOCENT AND UPHOLD THE LAW",
+      "platforms": "PC, PlayStation 5, Xbox Series S/X",
+      "developers": "Teyon",
+      "publishers": "Nacon",
+      "playtime": "5 ساعة",
+      "website": "https://teyon.com/games/robocop-rogue-city/",
+      "updatedAt": "2025-11-25T21:30:04.173Z"
     },
     {
       "id": 2105,
