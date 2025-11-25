@@ -64,16 +64,28 @@
     },
     {
       "id": 1004,
-      "name": "Assassin's Creed - Syndicate",
+      "name": "Assassin's Creed Syndicate",
       "size": "62.2 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/368500/header.jpg",
+      "image": "https://media.rawg.io/media/games/9f1/9f189c639f70f91166df415811a8b525.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
-        "single-player"
+        "single-player",
+        "multiplayer",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T10:15:00.000Z"
+      "createdAt": "2025-01-15T10:15:00.000Z",
+      "rating": "3.66",
+      "released": "2015-10-23",
+      "description": "In 2015, the characters Shaun and Rebecca penetrate into one of the offices of \"Abstergo industries\", which is located in London, where they install bugs. There they find information that Abstergo looks through the life of British Assassins Jacob and Evie Frye, hoping to find a Piece of Eden hidden in London.\n\nIn the centre of the story of the past are the twin assassins Jacob and Evie Frye. They go to London to put their orders there and at the same time to find a Piece of Eden.\n\nHowever, a more exciting innovation in the mechanics of Syndicate was the harpoon. It is actively used during a secretive passage - harpoon allows you to change position and save time instantly.\n\nAnother important aspect of the game is the gang. You can spend money and resources not only on yourself but also on your allies. By investing in the development of Rooks, you will help them to sabotage the Gallows. Outside the story, the campaign begins classic Assassin's Creed: towers, the liberation of territories and a lot of third-party jobs.",
+      "platforms": "PC, Xbox One, PlayStation 4",
+      "developers": "Ubisoft Montreal, Ubisoft Quebec, Ubisoft Singapore",
+      "publishers": "Ubisoft Entertainment",
+      "metacritic": "74",
+      "playtime": "22 ساعة",
+      "website": "http://assassinscreed.ubi.com",
+      "updatedAt": "2025-11-25T14:15:04.169Z"
     },
     {
       "id": 1005,
