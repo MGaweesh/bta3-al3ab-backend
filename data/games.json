@@ -820,12 +820,22 @@
       "id": 1039,
       "name": "South of Midnight",
       "size": "60 GB",
-      "image": null,
+      "image": "https://media.rawg.io/media/games/734/73451dc0abd013bee5b7d88faaacec11.jpg",
       "categories": [
         "action",
-        "adventure"
+        "adventure",
+        "single-player",
+        "horror"
       ],
-      "createdAt": "2025-01-15T13:10:00.000Z"
+      "createdAt": "2025-01-15T13:10:00.000Z",
+      "rating": "3.61",
+      "released": "2025-04-08",
+      "description": "South of Midnight is a new action-adventure from Compulsion Games. Explore the mythos and confront mysterious creatures of the Deep South in this modern folktale while learning to weave an ancient power to surmount obstacles and face the pain haunting your hometown.",
+      "platforms": "PC, Xbox Series S/X",
+      "developers": "Compulsion Games",
+      "publishers": "Xbox Game Studios",
+      "website": "https://store.steampowered.com/app/1934570/South_of_Midnight/",
+      "updatedAt": "2025-11-25T15:24:38.639Z"
     },
     {
       "id": 1040,
