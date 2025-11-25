@@ -18,9 +18,12 @@ const DATA_DIR = process.env.DATA_DIR ||
   (existsSync('/mnt/data') ? '/mnt/data' : join(__dirname, 'data'));
 const GAMES_FILE = join(DATA_DIR, 'games.json');
 const GAMES_FILE_TMP = join(DATA_DIR, 'games.json.tmp');
+const MOVIES_FILE = join(DATA_DIR, 'movies.json');
+const MOVIES_FILE_TMP = join(DATA_DIR, 'movies.json.tmp');
 
-// Write queue to prevent concurrent writes
-let writeQueue = Promise.resolve();
+// Write queues to prevent concurrent writes
+let writeQueueGames = Promise.resolve();
+let writeQueueMovies = Promise.resolve();
 
 // Middleware
 app.use(cors({ origin: '*' }));
@@ -48,13 +51,44 @@ const readGamesData = () => {
     if (!existsSync(GAMES_FILE)) {
       console.log('📊 games.json not found, returning empty structure');
       return {
+        readyToPlay: [],
+        repack: [],
+        online: []
+      };
+    }
+
+    const fileContent = readFileSync(GAMES_FILE, 'utf8');
+    const data = JSON.parse(fileContent);
+    
+    // Ensure structure exists
+    if (!data.readyToPlay) data.readyToPlay = [];
+    if (!data.repack) data.repack = [];
+    if (!data.online) data.online = [];
+    
+    return data;
+  } catch (error) {
+    console.error(`❌ Error reading games.json: ${error.message}`);
+    return {
+      readyToPlay: [],
+      repack: [],
+      online: []
+    };
+  }
+};
+
+// Helper function to read movies data from JSON file
+const readMoviesData = () => {
+  try {
+    if (!existsSync(MOVIES_FILE)) {
+      console.log('📊 movies.json not found, returning empty structure');
+      return {
         movies: [],
         tvShows: [],
         anime: []
       };
     }
 
-    const fileContent = readFileSync(GAMES_FILE, 'utf8');
+    const fileContent = readFileSync(MOVIES_FILE, 'utf8');
     const data = JSON.parse(fileContent);
     
     // Ensure structure exists
@@ -64,7 +98,7 @@ const readGamesData = () => {
     
     return data;
   } catch (error) {
-    console.error(`❌ Error reading games.json: ${error.message}`);
+    console.error(`❌ Error reading movies.json: ${error.message}`);
     return {
       movies: [],
       tvShows: [],
@@ -196,12 +230,12 @@ const testGitHubConnection = async () => {
 
 // Helper function to write games data to JSON file and commit to GitHub
 const writeGamesData = async (data, action = 'update') => {
-  return writeQueue = writeQueue.then(async () => {
+  return writeQueueGames = writeQueueGames.then(async () => {
     try {
       // Ensure structure
-      if (!data.movies) data.movies = [];
-      if (!data.tvShows) data.tvShows = [];
-      if (!data.anime) data.anime = [];
+      if (!data.readyToPlay) data.readyToPlay = [];
+      if (!data.repack) data.repack = [];
+      if (!data.online) data.online = [];
 
       const jsonContent = JSON.stringify(data, null, 2);
       
@@ -237,6 +271,59 @@ const writeGamesData = async (data, action = 'update') => {
       };
     } catch (error) {
       console.error(`❌ Error writing games.json: ${error.message}`);
+      return {
+        success: false,
+        error: error.message,
+        github: false,
+        message: `Failed to save: ${error.message}`
+      };
+    }
+  });
+};
+
+// Helper function to write movies data to JSON file and commit to GitHub
+const writeMoviesData = async (data, action = 'update') => {
+  return writeQueueMovies = writeQueueMovies.then(async () => {
+    try {
+      // Ensure structure
+      if (!data.movies) data.movies = [];
+      if (!data.tvShows) data.tvShows = [];
+      if (!data.anime) data.anime = [];
+
+      const jsonContent = JSON.stringify(data, null, 2);
+      
+      // Atomic write: write to temp file, then rename
+      writeFileSync(MOVIES_FILE_TMP, jsonContent, 'utf8');
+      renameSync(MOVIES_FILE_TMP, MOVIES_FILE);
+      
+      console.log(`✅ Saved movies.json locally`);
+
+      // Try to commit to GitHub (non-blocking)
+      let githubResult = null;
+      if (process.env.GITHUB_TOKEN && process.env.GITHUB_OWNER && process.env.GITHUB_REPO) {
+        try {
+          const commitMessage = `Update movies.json from dashboard — ${action} — ${new Date().toISOString()}`;
+          githubResult = await commitFileToGitHub(MOVIES_FILE, 'data/movies.json', commitMessage);
+          
+          if (githubResult && githubResult.commitUrl) {
+            console.log(`✅ Committed movies.json to GitHub: ${githubResult.commitUrl}`);
+          }
+        } catch (githubError) {
+          console.error(`⚠️  GitHub commit failed: ${githubError.message}`);
+          // Don't fail the operation if GitHub commit fails
+        }
+      }
+
+      return {
+        success: true,
+        github: !!githubResult,
+        commitUrl: githubResult?.commitUrl || null,
+        sha: githubResult?.sha || null,
+        commitSha: githubResult?.commitSha || null,
+        message: githubResult ? 'Saved and committed to GitHub' : 'Saved locally (GitHub not configured or failed)'
+      };
+    } catch (error) {
+      console.error(`❌ Error writing movies.json: ${error.message}`);
       return {
         success: false,
         error: error.message,
@@ -484,7 +571,8 @@ app.delete('/api/games/:type/:id', async (req, res) => {
 
 // ============ MOVIES ROUTES (Movies, TV Shows, Anime) ============
 
-// GET all movies data (movies, tvShows, anime)
+// GET all movies data (returns full object with movies, tvShows, anime)
+// Frontend expects: { movies: [], tvShows: [], anime: [] }
 app.get('/api/movies', async (req, res) => {
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   res.set('Pragma', 'no-cache');
@@ -497,7 +585,12 @@ app.get('/api/movies', async (req, res) => {
       tvShows: data.tvShows?.length || 0,
       anime: data.anime?.length || 0
     });
-    res.json(data);
+    // Return full object as frontend expects { movies, tvShows, anime }
+    res.json({
+      movies: data.movies || [],
+      tvShows: data.tvShows || [],
+      anime: data.anime || []
+    });
   } catch (error) {
     console.error('❌ Error fetching movies data:', error);
     res.status(500).json({ error: 'Failed to fetch movies data', details: error.message });
@@ -790,9 +883,15 @@ app.get('/api/data/status', async (req, res) => {
       files: {
         games: {
           exists: true,
-          movies: gamesData.movies?.length || 0,
-          tvShows: gamesData.tvShows?.length || 0,
-          anime: gamesData.anime?.length || 0
+          readyToPlay: gamesData.readyToPlay?.length || 0,
+          repack: gamesData.repack?.length || 0,
+          online: gamesData.online?.length || 0
+        },
+        movies: {
+          exists: true,
+          movies: readMoviesData().movies?.length || 0,
+          tvShows: readMoviesData().tvShows?.length || 0,
+          anime: readMoviesData().anime?.length || 0
         }
       },
       github: {
@@ -809,6 +908,70 @@ app.get('/api/data/status', async (req, res) => {
       message: 'Failed to check data status',
       error: error.message 
     });
+  }
+});
+
+// ============ COMPATIBILITY ROUTES (for frontend compatibility) ============
+// These routes provide compatibility with frontend endpoints that expect different URL patterns
+// IMPORTANT: These routes must be defined BEFORE the catch-all handler
+
+// GET /api/movies/:id → return single movie by id
+app.get('/api/movies/:id', async (req, res) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+  
+  try {
+    const { id } = req.params;
+    const itemId = parseInt(id);
+    const data = readMoviesData();
+    const movies = data.movies || [];
+    const movie = movies.find(item => item.id === itemId);
+    
+    if (!movie) {
+      return res.status(404).json({ error: 'Movie not found' });
+    }
+    
+    res.json(movie);
+  } catch (error) {
+    console.error('❌ Error fetching movie by id:', error);
+    res.status(500).json({ error: 'Failed to fetch movie', details: error.message });
+  }
+});
+
+// GET /api/tv → return tvShows array
+app.get('/api/tv', async (req, res) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+  
+  try {
+    const data = readMoviesData();
+    console.log('📊 TV Shows data loaded (compatibility route):', {
+      tvShows: data.tvShows?.length || 0
+    });
+    res.json(data.tvShows || []);
+  } catch (error) {
+    console.error('❌ Error fetching TV shows data:', error);
+    res.status(500).json({ error: 'Failed to fetch TV shows data', details: error.message });
+  }
+});
+
+// GET /api/anime → return anime array
+app.get('/api/anime', async (req, res) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+  
+  try {
+    const data = readMoviesData();
+    console.log('📊 Anime data loaded (compatibility route):', {
+      anime: data.anime?.length || 0
+    });
+    res.json(data.anime || []);
+  } catch (error) {
+    console.error('❌ Error fetching anime data:', error);
+    res.status(500).json({ error: 'Failed to fetch anime data', details: error.message });
   }
 });
 
