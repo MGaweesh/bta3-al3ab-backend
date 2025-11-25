@@ -588,16 +588,6 @@
       "createdAt": "2025-01-15T12:20:00.000Z"
     },
     {
-      "id": 1030,
-      "name": "old Games",
-      "size": "38 GB",
-      "image": null,
-      "categories": [
-        "action"
-      ],
-      "createdAt": "2025-01-15T12:25:00.000Z"
-    },
-    {
       "id": 1031,
       "name": "Outlast 2",
       "size": "25.5 GB",
