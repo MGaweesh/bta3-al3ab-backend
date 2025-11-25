@@ -2551,14 +2551,24 @@
       "id": 2067,
       "name": "Layers of Fear 2",
       "size": "7.8 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/391720/header.jpg",
+      "image": "https://media.rawg.io/media/games/6ab/6ab50f9a3d3848b6e82d184686e0db1f.jpg",
       "categories": [
         "horror",
         "adventure",
         "indie",
         "single-player"
       ],
-      "createdAt": "2025-01-15T19:30:00.000Z"
+      "createdAt": "2025-01-15T19:30:00.000Z",
+      "rating": "3.32",
+      "released": "2019-05-28",
+      "description": "The cameras are all focused on you; the center of the scene. Not just in character, you are the character. The part to play is singularly yours. Written just for you.You are met with silence. No barking orders from the director. No call to action that you need to become this version of yourself. The demand to act fills your mind, but the script pages hold no words.\nYour past has helped to mold you into what you are, forced upon you the skills required to hone your craft. That same past has scraped deep furrowing scars into you, not on the outside where the world can see, but in a place buried so deep within that it has become shapeless. You push those memories down but let the experiences drive you into who, or what, you must play.\nDarkness surrounds as you stand silently in the spotlight, the only sounds to be heard over your heartbeat are the distant breaking of waves against the hull and the sound of cameras pointed in your direction preserving this moment for eternity.\nA deep and commanding voice rises from the distance. Act.\nWhat part will you play?\nGame Features:\nStory-driven exploration - You must explore the world around you. Discover your past, and expose the reason for your having been cast for this film.\nPsychological horror - Is this part of the film, or are your memories playing tricks on you? Your world may change with the slightest of provocations, you must decide what is real.\nOcean Liner setting - Your explorations into the depths of the ship that play the scenes for the film become ever more incredible, and ever more terrifying.\nClassical, ominous soundtrack - An original score composed by Arkadiusz Reikowski, conducted by George Strezov, and performed by the Sofia Session Orchestra",
+      "platforms": "PlayStation 4, Nintendo Switch, PC, Xbox One",
+      "developers": "Bloober Team, GUN MEDIA HOLDINGS",
+      "publishers": "Bloober Team, Gun Media",
+      "metacritic": "68",
+      "playtime": "4 ساعة",
+      "website": "https://layersoffear2.com/",
+      "updatedAt": "2025-11-25T20:37:01.776Z"
     },
     {
       "id": 2068,
