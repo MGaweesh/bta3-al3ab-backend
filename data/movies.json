@@ -398,17 +398,27 @@
       "id": 1,
       "name": "Better Call Saul",
       "type": "مسلسل",
-      "year": "2015-2022",
+      "year": "2015",
       "rating": "8.8",
-      "seasons": 6,
-      "image": "https://image.tmdb.org/t/p/w780/fC2HDm5t0kHl7mTm7jxMRFbBqBr.jpg",
+      "seasons": "6",
+      "image": "https://m.media-amazon.com/images/M/MV5BNDdjNTEzMjMtYjM3Mi00NzQ3LWFlNWMtZjdmYWU3ZDkzMjk1XkEyXkFqcGc@._V1_SX300.jpg",
       "description": "مسلسل دراما وجريمة من AMC",
       "categories": [
         "drama",
         "crime",
         "thriller"
       ],
-      "updatedAt": "2025-01-16T00:00:00.000Z"
+      "updatedAt": "2025-11-25T14:45:55.206Z",
+      "rate": "9.0",
+      "genre": "Crime, Drama",
+      "writer": "Vince Gilligan, Peter Gould",
+      "actors": "Bob Odenkirk, Rhea Seehorn, Jonathan Banks",
+      "plot": "Before Saul Goodman, he was Jimmy McGill. And if you're calling Jimmy, you're in real trouble. The prequel to \"Breaking Bad\" follows small-time attorney Jimmy McGill as he transforms into Walter White's morally challenged lawyer, Saul Goodman.",
+      "runtime": "46 min",
+      "language": "English, Spanish, Vietnamese",
+      "country": "United States",
+      "awards": "Nominated for 53 Primetime Emmys. 66 wins & 317 nominations total",
+      "imdbVotes": "763,470"
     },
     {
       "id": 2,
