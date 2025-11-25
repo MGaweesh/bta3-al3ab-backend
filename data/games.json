@@ -982,16 +982,26 @@
     },
     {
       "id": 2002,
-      "name": "A Plague Tale Requiem",
+      "name": "A Plague Tale: Requiem",
       "size": "28 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1182900/header.jpg",
+      "image": "https://media.rawg.io/media/games/cd0/cd074f3f6045297cda9ad077273c09b6.jpg",
       "categories": [
         "action",
         "adventure",
         "horror",
-        "single-player"
+        "single-player",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T14:05:00.000Z"
+      "createdAt": "2025-01-15T14:05:00.000Z",
+      "rating": "4.29",
+      "released": "2022-10-17",
+      "description": "Far across the sea, an island calls…\nEmbark on a heartrending journey into a brutal, breathtaking world twisted by supernatural forces.\n\nAfter escaping their devastated homeland, Amicia and Hugo travel far south, to new regions and vibrant cities. There, they attempt to start a new life and control Hugo’s curse.\n\nBut, when Hugo’s powers reawaken, death and destruction return in a flood of devouring rats. Forced to flee once more, the siblings place their hopes in a prophesized island that may hold the key to saving Hugo.\n\nDiscover the cost of saving those you love in a desperate struggle for survival. Strike from the shadows or unleash hell, overcoming foes and challenges with a variety of weapons, tools and unearthly powers.\n\n● Sequel to the award-winning adventure A Plague Tale: Innocence\n● A spectacular grounded tale twisted by supernatural forces\n● Use a variety of tools, sneak, fight, or unleash hell and rats\n● Stunning visuals combine with an enthralling score",
+      "platforms": "Xbox Series S/X, PlayStation 4, Nintendo Switch, PC, PlayStation 5, Xbox One",
+      "developers": "Asobo Studio",
+      "publishers": "Focus Home Interactive, Focus Entertainment",
+      "playtime": "5 ساعة",
+      "website": "https://www.focus-home.com/en-us/games/a-plague-tale-requiem",
+      "updatedAt": "2025-11-25T16:58:16.200Z"
     },
     {
       "id": 2003,
