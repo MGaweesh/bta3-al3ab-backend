@@ -1998,14 +1998,26 @@
       "id": 2044,
       "name": "Forza Horizon 5",
       "size": "84.6 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1551360/header.jpg",
+      "image": "https://media.rawg.io/media/games/082/082365507ff04d456c700157072d35db.jpg",
       "categories": [
         "racing",
         "sports",
         "simulation",
-        "multiplayer"
+        "multiplayer",
+        "action",
+        "single-player",
+        "open-world"
       ],
-      "createdAt": "2025-01-15T17:35:00.000Z"
+      "createdAt": "2025-01-15T17:35:00.000Z",
+      "rating": "4.3",
+      "released": "2021-11-08",
+      "description": "Your Ultimate Horizon Adventure awaits! Explore the vibrant and ever-evolving open world landscapes of Mexico with limitless, fun driving action in hundreds of the world’s greatest cars.\r\nExplore a world of striking contrast and beauty. Discover living deserts, lush jungles, historic cities, hidden ruins, pristine beaches, vast canyons and a towering snow-capped volcano.\r\nImmerse yourself in a deep campaign with hundreds of challenges that reward you for engaging in the activities you love. Meet new characters and choose the outcomes of their Horizon Story missions.\r\nTake on awe-inspiring weather events like towering dust storms and intense tropical storms as Mexico’s unique, dynamic seasons change the world every week. Keep coming back for new events, challenges, collectibles, and rewards, and new areas to explore.\r\nTeam up with other players and enter the Horizon Arcade for a continuing series of fun, over-the-top challenges that keep you and your friends in the action and having fun with no menus, loading screens or lobbies.\r\nCreate your own expressions of fun with the new EventLab gameplay toolset including custom races, challenges, stunts, and new game modes. Customize your cars in more ways than ever before. Use the Gift Drops feature to share your custom creations.",
+      "platforms": "PC, iOS, Xbox One, PlayStation 5, Xbox Series S/X",
+      "developers": "Playground Games",
+      "publishers": "Xbox Game Studios",
+      "playtime": "15 ساعة",
+      "website": "https://forza.net/horizon",
+      "updatedAt": "2025-11-25T19:35:40.056Z"
     },
     {
       "id": 2045,
