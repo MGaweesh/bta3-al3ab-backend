@@ -3610,12 +3610,22 @@
       "id": 2111,
       "name": "Split Fiction",
       "size": "57.4 GB",
-      "image": null,
+      "image": "https://media.rawg.io/media/games/02a/02ac22b3b90717dabaa535640c38534c.jpg",
       "categories": [
         "action",
-        "adventure"
+        "adventure",
+        "multiplayer"
       ],
-      "createdAt": "2025-01-15T23:10:00.000Z"
+      "createdAt": "2025-01-15T23:10:00.000Z",
+      "rating": "4.43",
+      "released": "2025-03-06",
+      "description": "Embrace mind-blowing moments as you’re pulled deep into the many worlds of Split Fiction, a boundary-pushing co-op action adventure from the studio behind 2021 Game of the Year Winner, It Takes Two. Mio and Zoe are contrasting writers – one writes sci-fi and the other writes fantasy – who become trapped in their own stories after being hooked up to a machine designed to steal their creative ideas. They’ll have to rely on each other to break free with their memories in-tact, working together to master a variety of abilities and overcome diverse challenges while jumping between sci-fi and fantasy worlds in this unexpected tale of friendship.\n\nSplit Fiction is a unique action-adventure experience that keeps you on the edge of your couch with unexpected moments. One minute you’re taming adorable dragons and the next you’re fighting as cyber ninjas, escaping terrifying trolls, or dodging hover cars thrown by a robotic parking attendant. It’s weird, it’s wild, and it’s designed to be shared.\n\nGrab your co-op partner and get ready to overcome any obstacle thrown your way.",
+      "platforms": "PlayStation 5, Xbox Series S/X, PC",
+      "developers": "Hazelight",
+      "publishers": "Electronic Arts",
+      "playtime": "5 ساعة",
+      "website": "https://www.ea.com/games/split-fiction/split-fiction",
+      "updatedAt": "2025-11-25T21:50:29.210Z"
     },
     {
       "id": 2112,
