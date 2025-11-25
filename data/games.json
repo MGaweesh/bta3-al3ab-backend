@@ -1848,14 +1848,24 @@
       "id": 2038,
       "name": "Eternights",
       "size": "3.6 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1985810/header.jpg",
+      "image": "https://media.rawg.io/media/games/425/425a58e484eaa1230335d5b0e1732c84.jpg",
       "categories": [
         "action",
         "adventure",
         "rpg",
-        "single-player"
+        "single-player",
+        "indie"
       ],
-      "createdAt": "2025-01-15T17:05:00.000Z"
+      "createdAt": "2025-01-15T17:05:00.000Z",
+      "rating": "3.58",
+      "released": "2023-09-12",
+      "description": "Eternights an dating action game, blending a love story with adrenaline-driven combat as you make the most out of life during the apocalypse. Scavenge for supplies, explore dungeons... and go on dates!\n\nSave the world, and find love along the way.",
+      "platforms": "PC, PlayStation 4, PlayStation 5",
+      "developers": "Studio Sai",
+      "publishers": "Studio Sai",
+      "playtime": "13 ساعة",
+      "website": "https://www.studiosai.dev/eternights",
+      "updatedAt": "2025-11-25T19:28:44.528Z"
     },
     {
       "id": 2039,
