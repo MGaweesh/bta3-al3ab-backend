@@ -2777,13 +2777,23 @@
       "id": 3004,
       "name": "eFootball 2026",
       "size": "48.2 GB",
-      "image": null,
+      "image": "https://media.rawg.io/media/games/eb1/eb1ff1ffdab179ff7f0987d0266d4fe5.jpg",
       "categories": [
         "sports",
         "simulation",
         "multiplayer"
       ],
-      "createdAt": "2025-01-16T01:35:00.000Z"
+      "createdAt": "2025-01-16T01:35:00.000Z",
+      "rating": "2.07",
+      "released": "2021-09-30",
+      "description": "PES, the iconic soccer game series, has been rebranded to \"eFootball™\" this year.\r\nThis change signals a new era of virtual soccer, with enhanced graphics and gameplay.\r\nGet ready to enjoy a brand new soccer experience that only eFootball™ 2022 can offer!\r\nOur ultimate goal has always been to create \"the perfect head-to-head experience\".\r\nTo achieve this ambitious objective, a new engine was implemented, changing the game from the ground up. This engine provides a completely new way to showcase player animations, a focus on 1v1 battles, and updated commands for offense and defense.",
+      "platforms": "PC, Xbox One, PlayStation 4, Xbox Series S/X, PlayStation 5",
+      "developers": "Konami Digital Entertainment",
+      "publishers": "Konami",
+      "metacritic": "30",
+      "playtime": "1 ساعة",
+      "website": "https://www.konami.com/wepes/2020/eu/en/ps4/",
+      "updatedAt": "2025-11-25T16:57:07.529Z"
     }
   ]
 }
