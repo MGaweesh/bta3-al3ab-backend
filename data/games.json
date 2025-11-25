@@ -2985,14 +2985,26 @@
       "id": 2085,
       "name": "My Friend Pedro",
       "size": "1.8 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/557340/header.jpg",
+      "image": "https://media.rawg.io/media/games/21d/21dfa5f7f5c0fa2b85f418c4e1c6ab1b.jpg",
       "categories": [
         "action",
         "indie",
         "platformer",
-        "single-player"
+        "single-player",
+        "shooter",
+        "adventure"
       ],
-      "createdAt": "2025-01-15T21:00:00.000Z"
+      "createdAt": "2025-01-15T21:00:00.000Z",
+      "rating": "3.87",
+      "released": "2019-06-19",
+      "description": "My Friend Pedro is a violent ballet about friendship, imagination, and one man’s struggle to obliterate anyone in his path at the behest of a sentient banana. The strategic use of split aiming, slow motion, and the ol’ stylish window breach create one sensational action sequence after another in an explosive battle through the violent underworld.",
+      "platforms": "PlayStation 4, Xbox One, iOS, PC, Nintendo Switch",
+      "developers": "Devolver, DeadToast Entertainment, Deadtoast",
+      "publishers": "Devolver Digital",
+      "metacritic": "76",
+      "playtime": "3 ساعة",
+      "website": "http://www.deadtoast.com/",
+      "updatedAt": "2025-11-25T20:57:04.851Z"
     },
     {
       "id": 2086,
