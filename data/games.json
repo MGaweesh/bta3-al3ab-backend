@@ -698,16 +698,23 @@
     },
     {
       "id": 1034,
-      "name": "Prince of Persia The Lost Crown",
+      "name": "Prince of Persia: The Lost Crown",
       "size": "7.7 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2708710/header.jpg",
+      "image": "https://media.rawg.io/media/games/cca/ccaa933775fe1ffcebe40a01f52545db.jpg",
       "categories": [
         "action",
         "adventure",
         "platformer",
         "single-player"
       ],
-      "createdAt": "2025-01-15T12:45:00.000Z"
+      "createdAt": "2025-01-15T12:45:00.000Z",
+      "rating": "3.95",
+      "released": "2024-01-18",
+      "description": "UNLEASH YOUR INNER WARRIOR\nUse your Time Powers, combat, and platforming skills to perform deadly combos and defeat time-corrupted enemies and mythological creatures.\n\nLOSE YOURSELF IN THE PRODIGIOUS MOUNT QAF\nDiscover a cursed Persian-inspired world filled with larger-than-life landmarks and explore a variety of highly detailed biomes, each with their own identity, wonder, and danger.\n\nLIVE AN EPIC ADVENTURE\nImmerse yourself in a Persian mythological​ fantasy through an intriguing and original story as you use your wits to solve puzzles, find hidden treasures, and complete quests to learn more about this corrupted place.",
+      "platforms": "PlayStation 5, Xbox Series S/X, PlayStation 4, Xbox One, Nintendo Switch, PC",
+      "publishers": "Ubisoft Entertainment",
+      "website": "https://www.ubisoft.com/en-gb/game/prince-of-persia/the-lost-crown",
+      "updatedAt": "2025-11-25T15:03:02.088Z"
     },
     {
       "id": 1035,
