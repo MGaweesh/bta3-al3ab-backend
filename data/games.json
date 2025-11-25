@@ -3043,14 +3043,26 @@
       "id": 2087,
       "name": "Ori and the Will of the Wisps",
       "size": "3.5 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1057090/header.jpg",
+      "image": "https://media.rawg.io/media/games/718/71891d2484a592d871e91dc826707e1c.jpg",
       "categories": [
         "adventure",
         "indie",
         "platformer",
-        "single-player"
+        "single-player",
+        "action",
+        "open-world"
       ],
-      "createdAt": "2025-01-15T21:10:00.000Z"
+      "createdAt": "2025-01-15T21:10:00.000Z",
+      "rating": "4.43",
+      "released": "2020-03-10",
+      "description": "A New Journey Begins\r\n\r\nEmbark on an adventure with all new combat and customization options while exploring a vast, exotic world encountering larger than life enemies and challenging puzzles. Seek help from discoverable allies on your path to unravel Ori’s true destiny.\r\n\r\nExplore a vast, beautiful, and immersive world\r\nExplore a vast, beautiful, immersive, and dangerous world filled with gripping enemy encounters, challenging puzzles and thrilling escape sequences. Unravel Ori’s true destiny in this emotionally engaging, hand crafted story driven adventure.\r\n\r\nNew combat system\r\n\r\nWield dozens of new spirit weapons, spells and skills offering new dynamic combat mechanics to the world of Ori. Nimbly fight your way through untold danger and ruin with an entirely new arsenal at your disposal.\r\n\r\nCustomize your style of play\r\n\r\nChoose your tools for adventure from dozens of newly acquired attacks, spells, and skills to match your style of play. In addition, utilize an all new shard system to power up Ori’s capabilities.\r\n\r\nEncounter epic adversaries\r\n\r\nFace large epic bosses and seek support from discoverable allies who will provide services and cast optional quests to extend the adventure.",
+      "platforms": "Xbox One, PC, Nintendo Switch, Xbox Series S/X",
+      "developers": "Moon Studios",
+      "publishers": "Microsoft Studios, Xbox Game Studios",
+      "metacritic": "91",
+      "playtime": "11 ساعة",
+      "website": "https://www.orithegame.com",
+      "updatedAt": "2025-11-25T21:17:55.684Z"
     },
     {
       "id": 2088,
