@@ -395,15 +395,25 @@
       "id": 1017,
       "name": "BioShock Remastered",
       "size": "18 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/409710/header.jpg",
+      "image": "https://media.rawg.io/media/games/be0/be01c3d7d8795a45615da139322ca080.jpg",
       "categories": [
         "shooter",
         "action",
         "adventure",
         "horror",
-        "single-player"
+        "single-player",
+        "rpg"
       ],
-      "createdAt": "2025-01-15T11:20:00.000Z"
+      "createdAt": "2025-01-15T11:20:00.000Z",
+      "rating": "4.24",
+      "released": "2016-09-15",
+      "description": "BioShock is set in an alternate dimension in 1960. Our main protagonist Jack is the sole survivor of a plane crash in the Atlantic Ocean. With help, he gets to the Rapture - underwater city created by Andrew Ryan that wanted to create a utopia. After arriving in the city, however, he discovers Little Sisters and Big Daddies, and it is clear to Jack that there is something not okay with the city. \n\nBeing a first-person shooter, BioShock works with an active weapon and a plasmid, on the other hand, giving the player the ability to use some supernatural powers and developing unique combos with it. Many of the weapons have different types of ammunition that are effective against some specific types of enemies. Same goes for plasmids, as you need to know weapon will be effective. By retrieving EVE, you will be able to fill your resources and use plasmid once more. Although the economics of the game is more complicated as you need to gather money for refilling resources and ADAM for purchasing new skills for your plasmid. In Remastered edition, games framerate and technical issues being fully fixed making this a modern-looking game.",
+      "platforms": "PlayStation 4, Nintendo Switch, macOS, PC, Xbox One",
+      "developers": "Feral Interactive, Digital Extremes, 2K Australia, 2K Marin, Virtuos, 2K China, Blind Squirrel, 2K Boston",
+      "publishers": "2K Games, Feral Interactive, Take Two Interactive",
+      "playtime": "4 ساعة",
+      "website": "https://2k.com/en-US/game/bioshock-the-collection",
+      "updatedAt": "2025-11-25T14:45:55.816Z"
     },
     {
       "id": 1018,
