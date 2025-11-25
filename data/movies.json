@@ -42,14 +42,22 @@
       "type": "مسلسل",
       "year": "2023",
       "rating": "8.0",
-      "seasons": 1,
-      "image": "https://image.tmdb.org/t/p/w780/7vjaCdMw15FEbXyLQTVa04URsPm.jpg",
+      "seasons": "1",
+      "image": "https://m.media-amazon.com/images/M/MV5BODc1ODMyNDMtOTU2Yi00NmMyLWJhYzQtODUzMDJkNGVhZDY4XkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "action",
         "drama",
         "thriller"
       ],
-      "updatedAt": "2025-01-16T00:05:00.000Z"
+      "updatedAt": "2025-11-25T23:33:28.481Z",
+      "rate": "8.1",
+      "genre": "Action, Crime, Drama",
+      "writer": "Jeong Chan",
+      "actors": "Woo Do-Hwan, Lee Sang-yi, Huh Joon-ho",
+      "plot": "In order to pay off their debt, three daring youths jump into the money-lending business while confronting the rich and powerful who prey on the weak.",
+      "language": "Korean",
+      "country": "South Korea",
+      "imdbVotes": "21,346"
     },
     {
       "id": 3,
