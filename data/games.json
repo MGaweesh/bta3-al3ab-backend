@@ -2574,27 +2574,47 @@
       "id": 2068,
       "name": "Layers of Fear horror reimagined",
       "size": "12.2 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/391720/header.jpg",
+      "image": "https://media.rawg.io/media/games/c80/c80e579eaa52c593652f3583f00d3d7d.jpg",
       "categories": [
         "horror",
         "adventure",
         "indie",
         "single-player"
       ],
-      "createdAt": "2025-01-15T19:35:00.000Z"
+      "createdAt": "2025-01-15T19:35:00.000Z",
+      "rating": "3.73",
+      "released": "2023-06-15",
+      "description": "Layers of Fears is a first-person psychedelic horror chronicle focused on tense exploration and immersive storytelling - a new game built upon the foundations of Layers of Fear, LOF: Inheritance, and Layers of Fear 2 with a surprising new story and gameplay direction.\n\nCreated with the cutting-edge Unreal Engine 5 technology, the game will support Ray Tracing, HDR effect, 4K resolution, and make use of the Lumen system to offer the most immersive and visceral horror experience.\n\nLayers of Fears will be the complete, definitive and at the same time unpredictable way to discover the stories of artists enslaved by their obsessions. Prepare for an exquisite horror experience thanks to the expanded plot lines that will cast a new light on the overarching narrative.\nGame features:\nBuilt upon the foundations of Layers of Fear, Layers of Fear: Inheritance, and Layers of Fear 2 with a surprising new story direction and new content\nA first-person psychological horror game focused on tense exploration and immersive storytelling\nCreated with the Unreal Engine 5 technology and supporting Ray Tracing, HDR, and 4K resolution /list]",
+      "platforms": "PlayStation 5, Xbox Series S/X, PC",
+      "developers": "Bloober Team, Anshar Studios",
+      "publishers": "Bloober Team",
+      "website": "https://layersoffears.com/",
+      "updatedAt": "2025-11-25T20:38:46.412Z"
     },
     {
       "id": 2069,
-      "name": "Left for Dead",
+      "name": "Left 4 Dead",
       "size": "2.8 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/500/header.jpg",
+      "image": "https://media.rawg.io/media/games/476/476178ef18ab0534771d099f51cdc694.jpg",
       "categories": [
         "shooter",
         "action",
         "horror",
-        "multiplayer"
+        "multiplayer",
+        "single-player",
+        "survival"
       ],
-      "createdAt": "2025-01-15T19:40:00.000Z"
+      "createdAt": "2025-01-15T19:40:00.000Z",
+      "rating": "4.1",
+      "released": "2008-11-17",
+      "description": "Left 4 Dead is set in a zombie apocalypse situation. You play as one of four different characters - Louis, Zoe, Bill or Francis - and try to go to safety zones at each of the levels or leaving the infected areas. The main story follows four protagonists in their attempts to escape the hordes of zombies and other infected mutants. Every single time though something goes wrong. \n\nAt every single chapter, players must defend themselves from a horde of zombies as well as completing different tasks in order to leave the location - power up the generator, contact military service via radio or some other objects. Every level you start in a safe room with melee and firearms weapon, like UZI, Katana, AK-47, supplies and medicaments like the first-aid kit which will heal you or your partner and painkillers which will give you some amount of health that you will lose over time. Ordinary zombies are not the only enemies you are going to face, as Smokers, Hunters, Tanks and other mutated monsters are about to stop you from getting to the end of the level.",
+      "platforms": "PC, Xbox 360, macOS",
+      "developers": "Valve Software, Turtle Rock Studios",
+      "publishers": "Electronic Arts, Valve",
+      "metacritic": "89",
+      "playtime": "5 ساعة",
+      "website": "http://www.l4d.com/",
+      "updatedAt": "2025-11-25T20:39:52.316Z"
     },
     {
       "id": 2070,
@@ -2700,53 +2720,65 @@
       "id": 2074,
       "name": "Mad Max",
       "size": "3.7 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/234140/header.jpg",
+      "image": "https://media.rawg.io/media/games/d7d/d7d33daa1892e2468cd0263d5dfc957e.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
-        "single-player"
+        "single-player",
+        "multiplayer",
+        "rpg",
+        "survival"
       ],
-      "createdAt": "2025-01-15T20:05:00.000Z"
+      "createdAt": "2025-01-15T20:05:00.000Z",
+      "rating": "3.78",
+      "released": "2015-08-31",
+      "description": "Although Mad Max is not related to the film series, it is based on its universe. Max Rockatansky is trying to reach the \"Plains Of Silence\", place in which he believes he will finally find peace. He is confronted by a group of War Boys led by Scabrous Scrotus. Beating Max up and stealing everything from him, they leave him in the desert to face his death. Recovering from his injuries, he chases Scrotus in a duel but fails to defeat him. Wandering in the desert, he meets a technic named Chumbucket that helps him to build a new machine and revenge Scrotus. \n\nBeing in such esthetics, Max is able to travel in an open world post-apocalyptic universe of Mad Max. Utilizing driving as a primary mechanic, you are able to confront and battle your way out on the car while armed with different weapons. Flamethrowers, turbo-boosts, basically anything that may come handy. You can have your preference for playing stealthy or aggressive. To drive, you need gasoline and to customise your car you need experience which you will get over time. Experience all the consequences of being a survivor by driving through the wasteland.",
+      "platforms": "PC, Xbox One, PlayStation 4, Xbox 360, Linux, macOS",
+      "developers": "Avalanche Studios",
+      "publishers": "Feral Interactive, Warner Bros. Interactive",
+      "metacritic": "73",
+      "playtime": "11 ساعة",
+      "updatedAt": "2025-11-25T20:40:40.545Z"
     },
     {
       "id": 2075,
       "name": "MADiSON",
       "size": "3 GB",
-      "image": "https://media.rawg.io/media/games/0d6/0d663de3fb5447f292dd0630d1a93802.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1578970/header.jpg",
       "categories": [
         "horror",
         "adventure",
         "indie",
-        "single-player",
-        "action",
-        "simulation",
-        "survival",
-        "stealth"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T20:10:00.000Z",
-      "rating": "3.62",
-      "released": "2022-07-08",
-      "description": "What would you do if you woke up locked in a dark room, with your hands covered in blood? Play as Luca, and endure the brute torture of MADiSON, a demon that has forced him to continue a gory ritual started decades ago, making him commit abominable acts. Will you be able to finish this sinister ceremony?",
-      "platforms": "PC, Nintendo Switch, Xbox Series S/X, Xbox One, PlayStation 4, PlayStation 5",
-      "developers": "BLOODIOUS GAMES, Nosebleed Games",
-      "publishers": "BLOODIOUS GAMES, Nosebleed Games",
-      "playtime": "5 ساعة",
-      "website": "https://madisongame.com",
-      "updatedAt": "2025-11-25T20:41:36.422Z"
+      "createdAt": "2025-01-15T20:10:00.000Z"
     },
     {
       "id": 2076,
-      "name": "Mafia 2 (classic)",
+      "name": "Mafia II",
       "size": "4 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/50130/header.jpg",
+      "image": "https://media.rawg.io/media/games/9e5/9e5b274c7e3aa5e30beba31b834b0e7e.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
-        "single-player"
+        "single-player",
+        "shooter",
+        "multiplayer",
+        "rpg"
       ],
-      "createdAt": "2025-01-15T20:15:00.000Z"
+      "createdAt": "2025-01-15T20:15:00.000Z",
+      "rating": "4.24",
+      "released": "2010-08-24",
+      "description": "Mafia II is the second game in the franchise about Italian mafia operating in America after World War II. Vito Scalleta returns from the war in Italy being wounded. As he returns and reunites with his friend Joe, he and Henry Tomassino convince Vito to be apart of an Italian mafia in fictional city Empire Bay. Starting to work for Alberto Clemente, Vito must go through every aspect of being a part of the family and become a big thing in it.\r\n\r\nEven though the game has an open world mechanic, you won't probably explore it. Travelling to missions give an opportunity to listen to music of this time in America - Chuck Berry, Muddy Waters, Dean Martin and others, providing the game with a great atmosphere of the USA in its 50s. The gameplay has a variety of missions to offer, in which you can confront your enemies in melee combat, shoot them with different guns like M1911 or Thompson, or stealthily engaging your opponents. The game is pretty strict to the player reaching highest of empathy with Vito and every situation he's in.",
+      "platforms": "PlayStation 3, Xbox 360, PC, Xbox One",
+      "developers": "2K Czech",
+      "publishers": "2K Games, 1C-SoftClub",
+      "metacritic": "77",
+      "playtime": "13 ساعة",
+      "website": "http://www.mafia2game.com",
+      "updatedAt": "2025-11-25T20:41:56.092Z"
     },
     {
       "id": 2077,
