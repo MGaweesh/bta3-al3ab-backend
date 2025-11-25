@@ -234,21 +234,6 @@
       "imdbVotes": "1,231,775"
     },
     {
-      "id": 21,
-      "name": "Goodfellas",
-      "type": "فيلم",
-      "year": "1990",
-      "rating": "8.7",
-      "image": "https://image.tmdb.org/t/p/w780/aKuFiU82s5ISJpGZp7YkIr3kCUd.jpg",
-      "description": "فيلم جريمة ودراما من إخراج مارتن سكورسيزي",
-      "categories": [
-        "crime",
-        "drama",
-        "thriller"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
       "id": 23,
       "name": "The Prestige",
       "type": "فيلم",
