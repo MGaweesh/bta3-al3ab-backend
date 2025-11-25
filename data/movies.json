@@ -510,16 +510,26 @@
       "id": 8,
       "name": "Dexter",
       "type": "مسلسل",
-      "year": "2006-2013",
+      "year": "2006",
       "rating": "8.6",
-      "seasons": 8,
-      "image": "https://image.tmdb.org/t/p/w780/1j9s2DlClQABlpKXDbOyX7V8SDt.jpg",
+      "seasons": "8",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTQ3YmQ4YzMtOTkyZC00YmM5LThhZjEtM2E0MjFkNTc0OGJhXkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "crime",
         "drama",
         "thriller"
       ],
-      "updatedAt": "2025-01-16T00:35:00.000Z"
+      "updatedAt": "2025-11-25T15:14:26.037Z",
+      "rate": "8.6",
+      "genre": "Crime, Drama, Mystery",
+      "writer": "James Manos Jr.",
+      "actors": "Michael C. Hall, Jennifer Carpenter, David Zayas",
+      "plot": "He's smart, he's good looking, and he's got a great sense of humor. He's Dexter Morgan, everyone's favorite serial killer. As a Miami forensics expert, he spends his days solving crimes, and nights committing them. But Dexter lives by a strict code of honor that is both his saving grace and lifelong burden. Torn between his deadly compulsion and his desire for true happiness, Dexter is a man in profound conflict with the world and himself. Golden Globe winner Michael C. Hall stars in the hit SHOWTIME Original Series.",
+      "runtime": "53 min",
+      "language": "English, Spanish",
+      "country": "United States",
+      "awards": "Won 4 Primetime Emmys. 56 wins & 202 nominations total",
+      "imdbVotes": "892,729"
     },
     {
       "id": 9,
@@ -559,13 +569,21 @@
       "type": "مسلسل",
       "year": "2024",
       "rating": "7.5",
-      "seasons": 1,
-      "image": null,
+      "seasons": "1",
+      "image": "https://m.media-amazon.com/images/M/MV5BNzI0NjllMTItNzQ1OC00YjQzLWFhMTgtNDM5MmQ5OGUwZmRkXkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "action",
         "drama"
       ],
-      "updatedAt": "2025-01-16T00:50:00.000Z"
+      "updatedAt": "2025-11-25T15:14:42.269Z",
+      "rate": "7.1",
+      "genre": "Action, Drama, Thriller",
+      "writer": "Dave Boyle",
+      "actors": "Kento Kaku, Yôsuke Eguchi, Tae Kimura",
+      "plot": "The Tawara family, the last shinobi clan. It had abandoned its roots after an incident in the past, but now the family must take on the greatest crisis in Japanese history, one that threatens to shake the nation to its core.",
+      "language": "Japanese",
+      "country": "Japan",
+      "imdbVotes": "8,290"
     },
     {
       "id": 12,
@@ -588,23 +606,14 @@
       "type": "مسلسل",
       "year": "2023",
       "rating": "7.0",
-      "seasons": "1",
-      "image": "https://m.media-amazon.com/images/M/MV5BZmE4ZGMzMzktYzkwMy00NTZiLWFjYzktNzA4MmI4NGEyZTkzXkEyXkFqcGc@._V1_SX300.jpg",
+      "seasons": 1,
+      "image": null,
       "categories": [
         "thriller",
         "crime",
         "drama"
       ],
-      "updatedAt": "2025-11-25T15:14:58.435Z",
-      "rate": "6.6",
-      "genre": "Action, Crime, Drama",
-      "writer": "Eric Garcia",
-      "actors": "Giancarlo Esposito, Rufus Sewell, Paz Vega",
-      "plot": "Spanning 24 years, Jigsaw centers around the largest heist ever attempted, and the vengeance, scheming, loyalties, and betrayals that surround it. It's loosely inspired by the real-life story where seventy billion dollars in bonds went missing in downtown Manhattan during Hurricane Sandy.",
-      "language": "English",
-      "country": "United States",
-      "awards": "3 nominations total",
-      "imdbVotes": "46,300"
+      "updatedAt": "2025-01-16T01:00:00.000Z"
     },
     {
       "id": 14,
@@ -628,24 +637,14 @@
       "type": "مسلسل",
       "year": "2021",
       "rating": "7.5",
-      "seasons": "4",
-      "image": "https://m.media-amazon.com/images/M/MV5BMDJhODQ3ZDEtN2JmMS00Yjk5LTk1ZTUtMzI3YTU0NTNjMjAyXkEyXkFqcGc@._V1_SX300.jpg",
+      "seasons": 3,
+      "image": "https://image.tmdb.org/t/p/w780/6x0sYx1Z6qGf0WxLKq2Zqkgyp2k.jpg",
       "categories": [
         "crime",
         "thriller",
         "drama"
       ],
-      "updatedAt": "2025-11-25T15:15:09.716Z",
-      "rate": "7.5",
-      "genre": "Action, Crime, Drama",
-      "writer": "George Kay",
-      "actors": "Omar Sy, Ludivine Sagnier, Soufiane Guerrab",
-      "plot": "Inspired by the adventures of Arsène Lupin, gentleman thief Assane Diop sets out to avenge his father for an injustice inflicted by a wealthy family.",
-      "runtime": "231 min",
-      "language": "French",
-      "country": "France, United States",
-      "awards": "Nominated for 1 BAFTA Award4 wins & 22 nominations total",
-      "imdbVotes": "151,662"
+      "updatedAt": "2025-01-16T01:10:00.000Z"
     },
     {
       "id": 16,
@@ -664,27 +663,18 @@
     },
     {
       "id": 17,
-      "name": "Loki",
+      "name": "loki",
       "type": "مسلسل",
       "year": "2021",
       "rating": "8.2",
-      "seasons": "2",
-      "image": "https://m.media-amazon.com/images/M/MV5BYzA2YjM2ZWQtYTZhMS00OTI3LTlhYzQtZjBiZWZkMDdlNjA5XkEyXkFqcGc@._V1_SX300.jpg",
+      "seasons": 2,
+      "image": "https://image.tmdb.org/t/p/w780/kEl2t3uXaU6Zq5NSdoav0m3HJ3P.jpg",
       "categories": [
         "sci-fi",
         "action",
         "adventure"
       ],
-      "updatedAt": "2025-11-25T15:16:05.378Z",
-      "rate": "8.2",
-      "genre": "Action, Adventure, Fantasy",
-      "writer": "Michael Waldron",
-      "actors": "Tom Hiddleston, Owen Wilson, Sophia Di Martino",
-      "plot": "The mercurial villain Loki resumes his role as the God of Mischief in a new series that takes place after the events of “Avengers: Endgame.”",
-      "language": "English",
-      "country": "United States",
-      "awards": "Nominated for 9 Primetime Emmys. 16 wins & 96 nominations total",
-      "imdbVotes": "458,017"
+      "updatedAt": "2025-01-16T01:20:00.000Z"
     },
     {
       "id": 18,
@@ -735,15 +725,22 @@
       "id": 21,
       "name": "Mercy for None",
       "type": "مسلسل",
-      "year": "2024",
+      "year": "2025",
       "rating": "7.0",
-      "seasons": 1,
-      "image": null,
+      "seasons": "1",
+      "image": "https://m.media-amazon.com/images/M/MV5BMmY5MzdmYjEtY2RhMS00ZGNkLTliOGEtY2M4NTBmZmU5NDc1XkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "action",
         "drama"
       ],
-      "updatedAt": "2025-01-16T01:40:00.000Z"
+      "updatedAt": "2025-11-25T15:16:15.728Z",
+      "rate": "7.5",
+      "genre": "Action, Crime, Drama",
+      "actors": "So Ji-seob, Huh Joon-ho, Ahn Kil-kang",
+      "plot": "After severing ties with his gang, a former gangster returns to uncover the truth behind his brother's death, embarking on a relentless path of revenge.",
+      "language": "Korean",
+      "country": "South Korea",
+      "imdbVotes": "5,795"
     },
     {
       "id": 22,
