@@ -539,64 +539,54 @@
     },
     {
       "id": 1023,
-      "name": "FIFA 22",
+      "name": "fifa 22",
       "size": "43 GB",
-      "image": "https://media.rawg.io/media/games/355/355d2ec5d6b87518228dc30a9bb0e70d.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1506830/header.jpg",
       "categories": [
         "sports",
         "simulation",
         "multiplayer",
         "single-player"
       ],
-      "createdAt": "2025-01-15T11:50:00.000Z",
-      "rating": "3.38",
-      "released": "2021-09-27",
-      "description": "HyperMotion integrates advanced full-team mocap data and machine learning to heighten gameplay in every match in FIFA 22, harnessing the power of next generation consoles to deliver the most realistic, responsive and fluid gameplay experience we’ve ever built. FIFA 22 brings a new season of innovation across every mode in the game; enjoy more consistency between the posts with a goalkeeper rewrite that brings more composure to the most important position on the pitch, live out your football dreams as you create and manage your custom club to glory in Career Mode, get rewarded for your flair with restyled gameplay in VOLTA FOOTBALL, welcome back football’s most memorable players as FIFA Ultimate Team™ Heroes, and feel the atmosphere of your next big game with the most immersive matchday experience ever seen in EA SPORTS FIFA.",
-      "platforms": "PlayStation 5, Nintendo Switch, Xbox One, PC, PlayStation 4, Xbox Series S/X",
-      "developers": "Electronic Arts Vancouver",
-      "publishers": "Electronic Arts",
-      "metacritic": "76",
-      "playtime": "21 ساعة",
-      "website": "https://www.ea.com/games/fifa",
-      "updatedAt": "2025-11-25T15:23:02.766Z"
+      "createdAt": "2025-01-15T11:50:00.000Z"
     },
     {
       "id": 1024,
-      "name": "Hellblade: Senua's Sacrifice",
+      "name": "Hellblade Senuas Sacrifice",
       "size": "21.6 GB",
-      "image": "https://media.rawg.io/media/games/63f/63f0e68688cad279ed38cde931dbfcdb.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/414340/header.jpg",
       "categories": [
         "action",
         "adventure",
         "horror",
-        "single-player",
-        "indie"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T11:55:00.000Z",
-      "rating": "4.22",
-      "released": "2017-08-07",
-      "description": "A dark fantasy game that takes inspiration from Scandinavian and Celtic folklore, Hellblade is set in a gritty barbarian world full of weird wooden structures and creepily masked enemies. \r\n\r\nThe player assumes the role of Senua, a traumatized female warrior from the Pict tribe. She suffers from a growing psychosis after her lover Dillion was brutally murdered by Vikings. Carrying his severed head, Senua sets out to Helheim, the underworld of the dead, to bring her lover's soul back. Her grim and bloody journey mirrors her descent into madness. It becomes increasingly difficult for her (and, thus, the player) to tell fact from fantasy, as she hears voices in her head and sees hallucinations. \r\n\r\nWhen not fighting her enemies, Senua has to solve puzzles to move forward. This is where her distorted perception actually comes out handy, enabling her to \"focus\" and see what regular people can not. The ghostly voices, recorded using the binaural method to create an eery effect, also help to guide Senua or to warn her about dangers. All of Senua movements, expressions and reactions were recorded through motion capture to make them more realistic and emotional.",
-      "platforms": "Xbox One, Nintendo Switch, PlayStation 4, PC",
-      "developers": "Ninja Theory",
-      "publishers": "Ninja Theory",
-      "metacritic": "83",
-      "playtime": "6 ساعة",
-      "website": "http://www.hellblade.com/",
-      "updatedAt": "2025-11-25T15:23:19.674Z"
+      "createdAt": "2025-01-15T11:55:00.000Z"
     },
     {
       "id": 1025,
-      "name": "Horizon - Zero Down",
+      "name": "Horizon Zero Dawn",
       "size": "55 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1151640/header.jpg",
+      "image": "https://media.rawg.io/media/games/b7d/b7d3f1715fa8381a4e780173a197a615.jpg",
       "categories": [
         "action",
         "adventure",
         "rpg",
         "open-world",
-        "single-player"
+        "single-player",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T12:00:00.000Z"
+      "createdAt": "2025-01-15T12:00:00.000Z",
+      "rating": "4.28",
+      "released": "2017-02-28",
+      "description": "Horizon Zero Dawn is an experiment. A very impressive experiment that actually succeeded. \r\nHaving a very curious mix of cyberpunk and prehistorical styles and esthetic, the game provides us with quite a unique experience. We need to arm ourselves with arrows and a bow, with a spear or any other prehistorical-ish weapon in order to defeat out enemies - dinosaur-mechanisms that are spread around the world. If that wasn't enough, Aloy our main protagonist can control an AI named GAIA. What we're having here is an exciting connection with \"very old times\" and \"near future\", even though the game is set up in the 31st century. \r\nBeing an outcast with her father Rost, Aloy must restore her position in the tribe and save the world by stopping the Eclipse, a cult that wants to rule the world. Join her on that journey, exploring the world and people that live in such hard surroundings.",
+      "platforms": "PC, PlayStation 4",
+      "developers": "Guerrilla Games",
+      "publishers": "Sony Computer Entertainment",
+      "metacritic": "89",
+      "playtime": "11 ساعة",
+      "website": "https://www.guerrilla-games.com/play/horizon",
+      "updatedAt": "2025-11-25T15:23:35.630Z"
     },
     {
       "id": 1026,
