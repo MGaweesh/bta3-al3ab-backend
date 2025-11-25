@@ -348,6 +348,37 @@
   "tvShows": [
     {
       "id": 1,
+      "name": "Better Call Saul",
+      "type": "مسلسل",
+      "year": "2015-2022",
+      "rating": "8.8",
+      "seasons": 6,
+      "image": "https://image.tmdb.org/t/p/w780/fC2HDm5t0kHl7mTm7jxMRFbBqBr.jpg",
+      "description": "مسلسل دراما وجريمة من AMC",
+      "categories": [
+        "drama",
+        "crime",
+        "thriller"
+      ],
+      "updatedAt": "2025-01-16T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Bloodhounds",
+      "type": "مسلسل",
+      "year": "2023",
+      "rating": "8.0",
+      "seasons": 1,
+      "image": "https://image.tmdb.org/t/p/w780/7vjaCdMw15FEbXyLQTVa04URsPm.jpg",
+      "categories": [
+        "action",
+        "drama",
+        "thriller"
+      ],
+      "updatedAt": "2025-01-16T00:05:00.000Z"
+    },
+    {
+      "id": 3,
       "name": "Breaking Bad",
       "type": "مسلسل",
       "year": "2008-2013",
@@ -360,11 +391,110 @@
         "crime",
         "thriller"
       ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
+      "updatedAt": "2025-01-16T00:10:00.000Z"
     },
     {
-      "id": 2,
-      "name": "Game of Thrones",
+      "id": 4,
+      "name": "Chernobyl",
+      "type": "مسلسل",
+      "year": "2019",
+      "rating": "9.4",
+      "seasons": 1,
+      "image": "https://image.tmdb.org/t/p/w780/hlLXt2tOPT6RRnjiUmoxyG1qxFi.jpg",
+      "description": "مسلسل دراما تاريخي من HBO",
+      "categories": [
+        "drama",
+        "thriller"
+      ],
+      "updatedAt": "2025-01-16T00:15:00.000Z"
+    },
+    {
+      "id": 5,
+      "name": "Jeffrey Dahmer: Killer Cannibal",
+      "type": "مسلسل",
+      "year": "2019",
+      "rating": "8.0",
+      "seasons": "1",
+      "image": "https://m.media-amazon.com/images/M/MV5BMjQzNDg3YzEtOTMwMS00M2E5LThlNGQtY2MwOGI4MWNjNDA4XkEyXkFqcGc@._V1_SX300.jpg",
+      "categories": [
+        "drama",
+        "crime",
+        "thriller",
+        "horror"
+      ],
+      "updatedAt": "2025-11-25T13:26:07.886Z",
+      "rate": "6.7",
+      "genre": "Documentary, Crime",
+      "actors": "Eric Tiede, Evan O'Hare, Jesse Deacon",
+      "plot": "Random vintage footage of 'things' and places;irrelevant re-enactments;the narrator: beyond annoying;interviews with random people giving their 2 centsoffering no insight whatsoever.What a waste of fundsi would like to know: why was this made? What was the thought behind this 'project'?If you like documentaries, if you are interested in crime... skip this &amp; save your precious time.",
+      "runtime": "188 min",
+      "language": "English",
+      "country": "United States",
+      "imdbVotes": "55"
+    },
+    {
+      "id": 6,
+      "name": "Daredivil",
+      "type": "مسلسل",
+      "year": "2015-2018",
+      "rating": "8.6",
+      "seasons": 3,
+      "image": "https://image.tmdb.org/t/p/w780/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg",
+      "categories": [
+        "action",
+        "drama",
+        "crime"
+      ],
+      "updatedAt": "2025-01-16T00:25:00.000Z"
+    },
+    {
+      "id": 7,
+      "name": "Dark",
+      "type": "مسلسل",
+      "year": "2017-2020",
+      "rating": "8.8",
+      "seasons": 3,
+      "image": "https://image.tmdb.org/t/p/w780/5TR6G2dbAnBKRxGJEm6h6i3bdN8.jpg",
+      "categories": [
+        "sci-fi",
+        "thriller",
+        "drama"
+      ],
+      "updatedAt": "2025-01-16T00:30:00.000Z"
+    },
+    {
+      "id": 8,
+      "name": "Dexter",
+      "type": "مسلسل",
+      "year": "2006-2013",
+      "rating": "8.6",
+      "seasons": 8,
+      "image": "https://image.tmdb.org/t/p/w780/1j9s2DlClQABlpKXDbOyX7V8SDt.jpg",
+      "categories": [
+        "crime",
+        "drama",
+        "thriller"
+      ],
+      "updatedAt": "2025-01-16T00:35:00.000Z"
+    },
+    {
+      "id": 9,
+      "name": "Friends",
+      "type": "مسلسل",
+      "year": "1994-2004",
+      "rating": "8.9",
+      "seasons": 10,
+      "image": "https://image.tmdb.org/t/p/w780/f496cm9enuEsZkSPzCwnTESEK5s.jpg",
+      "description": "مسلسل كوميديا رومانسية من أشهر المسلسلات",
+      "categories": [
+        "comedy",
+        "romance"
+      ],
+      "updatedAt": "2025-01-16T00:40:00.000Z"
+    },
+    {
+      "id": 10,
+      "name": "Game Of Thrones",
       "type": "مسلسل",
       "year": "2011-2019",
       "rating": "9.2",
@@ -377,145 +507,219 @@
         "drama",
         "action"
       ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
+      "updatedAt": "2025-01-16T00:45:00.000Z"
     },
     {
-      "id": 3,
-      "name": "The Wire",
+      "id": 11,
+      "name": "House of Ninjas",
       "type": "مسلسل",
-      "year": "2002-2008",
-      "rating": "9.3",
-      "seasons": 5,
-      "image": "https://image.tmdb.org/t/p/w780/4lbclF3JQWmos5WsacfI3Q9AP3P.jpg",
-      "description": "مسلسل دراما وجريمة من HBO",
+      "year": "2024",
+      "rating": "7.5",
+      "seasons": 1,
+      "image": null,
       "categories": [
-        "drama",
-        "crime",
-        "thriller"
+        "action",
+        "drama"
       ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
+      "updatedAt": "2025-01-16T00:50:00.000Z"
     },
     {
-      "id": 4,
-      "name": "The Sopranos",
+      "id": 12,
+      "name": "House Of The Dragon",
       "type": "مسلسل",
-      "year": "1999-2007",
-      "rating": "9.2",
-      "seasons": 6,
-      "image": "https://image.tmdb.org/t/p/w780/rTc7ZXdroqjkKivFPvCPXe3f1A3.jpg",
-      "description": "مسلسل جريمة ودراما من HBO",
+      "year": "2022",
+      "rating": "8.5",
+      "seasons": 1,
+      "image": "https://image.tmdb.org/t/p/w780/z2yahl2uefxDCl0nogcRBstwruJ.jpg",
       "categories": [
-        "crime",
+        "fantasy",
         "drama",
-        "thriller"
+        "action"
       ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
+      "updatedAt": "2025-01-16T00:55:00.000Z"
     },
     {
-      "id": 5,
-      "name": "True Detective",
+      "id": 13,
+      "name": "Kaleidoscope",
       "type": "مسلسل",
-      "year": "2014",
-      "rating": "9.0",
-      "seasons": 4,
-      "image": "https://image.tmdb.org/t/p/w780/6x0sYx1Z6qGf0WxLKq2Zqkgyp2k.jpg",
-      "description": "مسلسل إثارة وجريمة من HBO",
+      "year": "2023",
+      "rating": "7.0",
+      "seasons": 1,
+      "image": null,
       "categories": [
         "thriller",
         "crime",
         "drama"
       ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
+      "updatedAt": "2025-01-16T01:00:00.000Z"
     },
     {
-      "id": 6,
-      "name": "The Crown",
+      "id": 14,
+      "name": "la casa de papel",
       "type": "مسلسل",
-      "year": "2016-2023",
-      "rating": "8.7",
-      "seasons": 6,
-      "image": "https://image.tmdb.org/t/p/w780/1M876KPjulVwppEpldhdc8V4o68.jpg",
-      "description": "مسلسل دراما تاريخي من Netflix",
+      "year": "2017-2021",
+      "rating": "8.3",
+      "seasons": 5,
+      "image": "https://image.tmdb.org/t/p/w780/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg",
+      "description": "مسلسل إثارة وجريمة من Netflix",
       "categories": [
-        "drama"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 7,
-      "name": "Stranger Things",
-      "type": "مسلسل",
-      "year": "2016-2022",
-      "rating": "8.7",
-      "seasons": 4,
-      "image": "https://image.tmdb.org/t/p/w780/49WJfeN0moxb9IPfGn8AIqMGskD.jpg",
-      "description": "مسلسل خيال علمي ورعب من Netflix",
-      "categories": [
-        "sci-fi",
-        "horror",
-        "thriller"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 8,
-      "name": "The Last of Us",
-      "type": "مسلسل",
-      "year": "2023",
-      "rating": "8.8",
-      "seasons": 1,
-      "image": "https://image.tmdb.org/t/p/w780/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg",
-      "description": "مسلسل دراما وخيال علمي من HBO",
-      "categories": [
-        "drama",
-        "sci-fi",
+        "thriller",
+        "crime",
         "action"
       ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
+      "updatedAt": "2025-01-16T01:05:00.000Z"
     },
     {
-      "id": 9,
-      "name": "House of Cards",
+      "id": 15,
+      "name": "Lupin",
       "type": "مسلسل",
-      "year": "2013-2018",
-      "rating": "8.7",
-      "seasons": 6,
-      "image": "https://image.tmdb.org/t/p/w780/hKWxWjFwnM5yFKFv3Mu6Ka2F3S9.jpg",
-      "description": "مسلسل دراما سياسية من Netflix",
+      "year": "2021",
+      "rating": "7.5",
+      "seasons": 3,
+      "image": "https://image.tmdb.org/t/p/w780/6x0sYx1Z6qGf0WxLKq2Zqkgyp2k.jpg",
       "categories": [
-        "drama",
-        "thriller"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 10,
-      "name": "Better Call Saul",
-      "type": "مسلسل",
-      "year": "2015",
-      "rating": "8.8",
-      "seasons": "6",
-      "image": "https://m.media-amazon.com/images/M/MV5BNDdjNTEzMjMtYjM3Mi00NzQ3LWFlNWMtZjdmYWU3ZDkzMjk1XkEyXkFqcGc@._V1_SX300.jpg",
-      "description": "مسلسل دراما وجريمة من AMC",
-      "categories": [
-        "drama",
         "crime",
-        "thriller"
+        "thriller",
+        "drama"
       ],
-      "updatedAt": "2025-11-25T10:39:44.244Z",
-      "rate": "9.0",
-      "genre": "Crime, Drama",
-      "writer": "Vince Gilligan, Peter Gould",
-      "actors": "Bob Odenkirk, Rhea Seehorn, Jonathan Banks",
-      "plot": "Before Saul Goodman, he was Jimmy McGill. And if you're calling Jimmy, you're in real trouble. The prequel to \"Breaking Bad\" follows small-time attorney Jimmy McGill as he transforms into Walter White's morally challenged lawyer, Saul Goodman.",
-      "runtime": "46 min",
-      "language": "English, Spanish, Vietnamese",
-      "country": "United States",
-      "awards": "Nominated for 53 Primetime Emmys. 66 wins & 317 nominations total",
-      "imdbVotes": "763,470"
+      "updatedAt": "2025-01-16T01:10:00.000Z"
     },
     {
-      "id": 11,
+      "id": 16,
+      "name": "I Am Groot",
+      "type": "مسلسل",
+      "year": "2022",
+      "rating": "7.0",
+      "seasons": 2,
+      "image": "https://image.tmdb.org/t/p/w780/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg",
+      "categories": [
+        "comedy",
+        "animation",
+        "adventure"
+      ],
+      "updatedAt": "2025-01-16T01:15:00.000Z"
+    },
+    {
+      "id": 17,
+      "name": "loki",
+      "type": "مسلسل",
+      "year": "2021",
+      "rating": "8.2",
+      "seasons": 2,
+      "image": "https://image.tmdb.org/t/p/w780/kEl2t3uXaU6Zq5NSdoav0m3HJ3P.jpg",
+      "categories": [
+        "sci-fi",
+        "action",
+        "adventure"
+      ],
+      "updatedAt": "2025-01-16T01:20:00.000Z"
+    },
+    {
+      "id": 18,
+      "name": "Marvel What If",
+      "type": "مسلسل",
+      "year": "2021",
+      "rating": "7.5",
+      "seasons": 2,
+      "image": "https://image.tmdb.org/t/p/w780/lztz7K1Sx2c8v1rEuH6SLlQZ1m0.jpg",
+      "categories": [
+        "sci-fi",
+        "action",
+        "animation"
+      ],
+      "updatedAt": "2025-01-16T01:25:00.000Z"
+    },
+    {
+      "id": 19,
+      "name": "Moon Knight",
+      "type": "مسلسل",
+      "year": "2022",
+      "rating": "7.3",
+      "seasons": 1,
+      "image": "https://image.tmdb.org/t/p/w780/6LfVuZBiOOCtqch5Ukspjb9K0Ae.jpg",
+      "categories": [
+        "action",
+        "adventure",
+        "drama"
+      ],
+      "updatedAt": "2025-01-16T01:30:00.000Z"
+    },
+    {
+      "id": 20,
+      "name": "WandaVision",
+      "type": "مسلسل",
+      "year": "2021",
+      "rating": "7.9",
+      "seasons": 1,
+      "image": "https://image.tmdb.org/t/p/w780/glKDfE6btIRcVBfz5gBxAS35wbD.jpg",
+      "categories": [
+        "sci-fi",
+        "drama",
+        "comedy"
+      ],
+      "updatedAt": "2025-01-16T01:35:00.000Z"
+    },
+    {
+      "id": 21,
+      "name": "Mercy for None",
+      "type": "مسلسل",
+      "year": "2024",
+      "rating": "7.0",
+      "seasons": 1,
+      "image": null,
+      "categories": [
+        "action",
+        "drama"
+      ],
+      "updatedAt": "2025-01-16T01:40:00.000Z"
+    },
+    {
+      "id": 22,
+      "name": "Mr.Robot",
+      "type": "مسلسل",
+      "year": "2015-2019",
+      "rating": "8.5",
+      "seasons": 4,
+      "image": "https://image.tmdb.org/t/p/w780/hKWxWjFwnM5yFKFv3Mu6Ka2F3S9.jpg",
+      "categories": [
+        "thriller",
+        "drama",
+        "crime"
+      ],
+      "updatedAt": "2025-01-16T01:45:00.000Z"
+    },
+    {
+      "id": 23,
+      "name": "Narcos Mexico",
+      "type": "مسلسل",
+      "year": "2018-2021",
+      "rating": "8.4",
+      "seasons": 3,
+      "image": "https://image.tmdb.org/t/p/w780/7vjaCdMw15FEbXyLQTVa04URsPm.jpg",
+      "categories": [
+        "crime",
+        "drama",
+        "thriller"
+      ],
+      "updatedAt": "2025-01-16T01:50:00.000Z"
+    },
+    {
+      "id": 24,
+      "name": "one piece netflix",
+      "type": "مسلسل",
+      "year": "2023",
+      "rating": "8.5",
+      "seasons": 1,
+      "image": "https://image.tmdb.org/t/p/w780/e3NBGiA10a2u7ntQ6xdL3zQ6lqN.jpg",
+      "categories": [
+        "action",
+        "adventure",
+        "fantasy"
+      ],
+      "updatedAt": "2025-01-16T01:55:00.000Z"
+    },
+    {
+      "id": 25,
       "name": "Peaky Blinders",
       "type": "مسلسل",
       "year": "2013-2022",
@@ -528,118 +732,40 @@
         "drama",
         "thriller"
       ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
+      "updatedAt": "2025-01-16T02:00:00.000Z"
     },
     {
-      "id": 12,
-      "name": "The Boys",
+      "id": 26,
+      "name": "11.22.63",
       "type": "مسلسل",
-      "year": "2019",
-      "rating": "8.7",
-      "seasons": 4,
-      "image": "https://image.tmdb.org/t/p/w780/mY7SeH4HFFxW1hiI6cWuwCRKptN.jpg",
-      "description": "مسلسل أكشن وخيال علمي من Amazon Prime",
-      "categories": [
-        "action",
-        "sci-fi",
-        "comedy"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 13,
-      "name": "Black Mirror",
-      "type": "مسلسل",
-      "year": "2011-2019",
-      "rating": "8.8",
-      "seasons": 5,
-      "image": "https://image.tmdb.org/t/p/w780/5TR6G2dbAnBKRxGJEm6h6i3bdN8.jpg",
-      "description": "مسلسل خيال علمي وإثارة من Netflix",
+      "year": "2016",
+      "rating": "8.1",
+      "seasons": 1,
+      "image": "https://image.tmdb.org/t/p/w780/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg",
       "categories": [
         "sci-fi",
-        "thriller"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 14,
-      "name": "The Mandalorian",
-      "type": "مسلسل",
-      "year": "2019",
-      "rating": "8.7",
-      "seasons": 3,
-      "image": "https://image.tmdb.org/t/p/w780/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg",
-      "description": "مسلسل خيال علمي ومغامرات من Disney+",
-      "categories": [
-        "sci-fi",
-        "action",
-        "adventure"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 15,
-      "name": "Money Heist",
-      "type": "مسلسل",
-      "year": "2017-2021",
-      "rating": "8.3",
-      "seasons": 5,
-      "image": "https://image.tmdb.org/t/p/w780/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg",
-      "description": "مسلسل إثارة وجريمة من Netflix",
-      "categories": [
         "thriller",
-        "crime",
-        "action"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 16,
-      "name": "The Office",
-      "type": "مسلسل",
-      "year": "2005-2013",
-      "rating": "8.9",
-      "seasons": 9,
-      "image": "https://image.tmdb.org/t/p/w780/qWnJzyZhyy74gjpSjIXWmuk0ifX.jpg",
-      "description": "مسلسل كوميديا من أفضل المسلسلات الكوميدية",
-      "categories": [
-        "comedy"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 17,
-      "name": "Friends",
-      "type": "مسلسل",
-      "year": "1994-2004",
-      "rating": "8.9",
-      "seasons": 10,
-      "image": "https://image.tmdb.org/t/p/w780/f496cm9enuEsZkSPzCwnTESEK5s.jpg",
-      "description": "مسلسل كوميديا رومانسية من أشهر المسلسلات",
-      "categories": [
-        "comedy",
-        "romance"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 18,
-      "name": "The Witcher",
-      "type": "مسلسل",
-      "year": "2019",
-      "rating": "8.2",
-      "seasons": 3,
-      "image": "https://image.tmdb.org/t/p/w780/7vjaCdMw15FEbXyLQTVa04URsPm.jpg",
-      "description": "مسلسل فانتازيا ومغامرات من Netflix",
-      "categories": [
-        "fantasy",
-        "action",
         "drama"
       ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
+      "updatedAt": "2025-01-16T02:05:00.000Z"
     },
     {
-      "id": 19,
+      "id": 27,
+      "name": "See",
+      "type": "مسلسل",
+      "year": "2019-2022",
+      "rating": "7.6",
+      "seasons": 3,
+      "image": "https://image.tmdb.org/t/p/w780/5TR6G2dbAnBKRxGJEm6h6i3bdN8.jpg",
+      "categories": [
+        "sci-fi",
+        "drama",
+        "action"
+      ],
+      "updatedAt": "2025-01-16T02:10:00.000Z"
+    },
+    {
+      "id": 28,
       "name": "Sherlock",
       "type": "مسلسل",
       "year": "2010-2017",
@@ -652,64 +778,207 @@
         "crime",
         "drama"
       ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
+      "updatedAt": "2025-01-16T02:15:00.000Z"
     },
     {
-      "id": 20,
-      "name": "Chernobyl",
+      "id": 29,
+      "name": "shogun",
+      "type": "مسلسل",
+      "year": "2024",
+      "rating": "9.0",
+      "seasons": 1,
+      "image": "https://image.tmdb.org/t/p/w780/1M876KPjulVwppEpldhdc8V4o68.jpg",
+      "categories": [
+        "drama",
+        "action",
+        "adventure"
+      ],
+      "updatedAt": "2025-01-16T02:20:00.000Z"
+    },
+    {
+      "id": 30,
+      "name": "Squid Game",
+      "type": "مسلسل",
+      "year": "2021",
+      "rating": "8.0",
+      "seasons": 1,
+      "image": "https://image.tmdb.org/t/p/w780/dDlEmu3EZ0Pgg93K2SVNLCjCSnE.jpg",
+      "categories": [
+        "thriller",
+        "drama",
+        "action"
+      ],
+      "updatedAt": "2025-01-16T02:25:00.000Z"
+    },
+    {
+      "id": 31,
+      "name": "The Boys",
       "type": "مسلسل",
       "year": "2019",
-      "rating": "9.4",
-      "seasons": 1,
-      "image": "https://image.tmdb.org/t/p/w780/hlLXt2tOPT6RRnjiUmoxyG1qxFi.jpg",
-      "description": "مسلسل دراما تاريخي من HBO",
+      "rating": "8.7",
+      "seasons": 4,
+      "image": "https://image.tmdb.org/t/p/w780/mY7SeH4HFFxW1hiI6cWuwCRKptN.jpg",
+      "description": "مسلسل أكشن وخيال علمي من Amazon Prime",
       "categories": [
+        "action",
+        "sci-fi",
+        "comedy"
+      ],
+      "updatedAt": "2025-01-16T02:30:00.000Z"
+    },
+    {
+      "id": 32,
+      "name": "The Office",
+      "type": "مسلسل",
+      "year": "2005-2013",
+      "rating": "8.9",
+      "seasons": 9,
+      "image": "https://image.tmdb.org/t/p/w780/qWnJzyZhyy74gjpSjIXWmuk0ifX.jpg",
+      "description": "مسلسل كوميديا من أفضل المسلسلات الكوميدية",
+      "categories": [
+        "comedy"
+      ],
+      "updatedAt": "2025-01-16T02:35:00.000Z"
+    },
+    {
+      "id": 33,
+      "name": "The Penguin",
+      "type": "مسلسل",
+      "year": "2024",
+      "rating": "8.0",
+      "seasons": 1,
+      "image": null,
+      "categories": [
+        "crime",
         "drama",
         "thriller"
       ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
+      "updatedAt": "2025-01-16T02:40:00.000Z"
     },
     {
-      "id": 1764065519164,
-      "name": "Game of Thrones",
-      "year": "2011",
+      "id": 34,
+      "name": "The Queens Gambit",
       "type": "مسلسل",
-      "image": "https://m.media-amazon.com/images/M/MV5BMTNhMDJmNmYtNDQ5OS00ODdlLWE0ZDAtZTgyYTIwNDY3OTU3XkEyXkFqcGc@._V1_SX300.jpg",
-      "seasons": "8",
-      "rate": "9.2",
-      "genre": "Action, Adventure, Drama",
-      "writer": "David Benioff, D.B. Weiss",
-      "actors": "Peter Dinklage, Lena Headey, Kit Harington",
-      "plot": "In the mythical continent of Westeros, several powerful families fight for control of the Seven Kingdoms. As conflict erupts in the kingdoms of men, an ancient enemy rises once again to threaten them all. Meanwhile, the last heirs of a recently usurped dynasty plot to take back their homeland from across the Narrow Sea.",
-      "runtime": "57 min",
-      "language": "English",
-      "country": "United States, United Kingdom",
-      "awards": "Won 59 Primetime Emmys. 396 wins & 655 nominations total",
-      "imdbVotes": "2,502,145",
-      "createdAt": "2025-11-25T10:11:59.164Z"
+      "year": "2020",
+      "rating": "8.6",
+      "seasons": 1,
+      "image": "https://image.tmdb.org/t/p/w780/zU0htwkhNvBQdV5KB7n6BdF4mZq.jpg",
+      "categories": [
+        "drama"
+      ],
+      "updatedAt": "2025-01-16T02:45:00.000Z"
+    },
+    {
+      "id": 35,
+      "name": "The Witcher",
+      "type": "مسلسل",
+      "year": "2019",
+      "rating": "8.2",
+      "seasons": 3,
+      "image": "https://image.tmdb.org/t/p/w780/7vjaCdMw15FEbXyLQTVa04URsPm.jpg",
+      "description": "مسلسل فانتازيا ومغامرات من Netflix",
+      "categories": [
+        "fantasy",
+        "action",
+        "drama"
+      ],
+      "updatedAt": "2025-01-16T02:50:00.000Z"
+    },
+    {
+      "id": 36,
+      "name": "Vikings",
+      "type": "مسلسل",
+      "year": "2013-2020",
+      "rating": "8.5",
+      "seasons": 6,
+      "image": "https://image.tmdb.org/t/p/w780/bQLrHIRNEkE3PdWQ6OjLU7w0Fy2.jpg",
+      "categories": [
+        "action",
+        "drama",
+        "adventure"
+      ],
+      "updatedAt": "2025-01-16T02:55:00.000Z"
+    },
+    {
+      "id": 37,
+      "name": "Weak Hero Class",
+      "type": "مسلسل",
+      "year": "2022",
+      "rating": "8.5",
+      "seasons": 1,
+      "image": null,
+      "categories": [
+        "action",
+        "drama"
+      ],
+      "updatedAt": "2025-01-16T03:00:00.000Z"
+    },
+    {
+      "id": 38,
+      "name": "wednesday",
+      "type": "مسلسل",
+      "year": "2022",
+      "rating": "8.1",
+      "seasons": 1,
+      "image": "https://image.tmdb.org/t/p/w780/jeGtaGwGx0kH2bgN4d7fv6F3x6b.jpg",
+      "categories": [
+        "comedy",
+        "horror",
+        "mystery"
+      ],
+      "updatedAt": "2025-01-16T03:05:00.000Z"
+    },
+    {
+      "id": 39,
+      "name": "Weird Lawyer Woo Young Woo",
+      "type": "مسلسل",
+      "year": "2022",
+      "rating": "8.5",
+      "seasons": 1,
+      "image": null,
+      "categories": [
+        "drama",
+        "comedy"
+      ],
+      "updatedAt": "2025-01-16T03:10:00.000Z"
     }
   ],
   "anime": [
     {
       "id": 1,
-      "name": "Fullmetal Alchemist: Brotherhood",
+      "name": "another",
       "type": "أنمي",
-      "year": "2009-2010",
-      "rating": "9.1",
-      "episodes": 64,
+      "year": "2012",
+      "rating": "7.5",
+      "episodes": 12,
       "image": "https://image.tmdb.org/t/p/w780/5ZFU5U1L7C8C3loWka93ApRIyhY.jpg",
-      "description": "أنمي أكشن ومغامرات من أفضل الأنميات",
       "categories": [
-        "action",
-        "fantasy",
-        "adventure",
+        "horror",
+        "mystery",
+        "thriller",
         "animation"
       ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
+      "updatedAt": "2025-01-16T03:15:00.000Z"
     },
     {
       "id": 2,
-      "name": "Attack on Titan",
+      "name": "Arcane",
+      "type": "أنمي",
+      "year": "2021",
+      "rating": "9.0",
+      "episodes": 9,
+      "image": "https://image.tmdb.org/t/p/w780/fqldf2t8ZcF5Qw3yHfluG6UTHqR.jpg",
+      "categories": [
+        "action",
+        "adventure",
+        "drama",
+        "animation"
+      ],
+      "updatedAt": "2025-01-16T03:20:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "Attack On Titan",
       "type": "أنمي",
       "year": "2013-2023",
       "rating": "9.0",
@@ -722,10 +991,74 @@
         "thriller",
         "animation"
       ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
+      "updatedAt": "2025-01-16T03:25:00.000Z"
     },
     {
-      "id": 3,
+      "id": 4,
+      "name": "BlackClover",
+      "type": "أنمي",
+      "year": "2017-2021",
+      "rating": "7.5",
+      "episodes": 170,
+      "image": "https://image.tmdb.org/t/p/w780/ucpgmUR1h5Te1BYegKItoPjOeF7.jpg",
+      "categories": [
+        "action",
+        "fantasy",
+        "adventure",
+        "animation"
+      ],
+      "updatedAt": "2025-01-16T03:30:00.000Z"
+    },
+    {
+      "id": 5,
+      "name": "Blue Lock",
+      "type": "أنمي",
+      "year": "2022",
+      "rating": "8.3",
+      "episodes": 24,
+      "image": "https://image.tmdb.org/t/p/w780/qjGrUmKW78MCFG8DDLJWr3xc6cs.jpg",
+      "categories": [
+        "sports",
+        "action",
+        "drama",
+        "animation"
+      ],
+      "updatedAt": "2025-01-16T03:35:00.000Z"
+    },
+    {
+      "id": 6,
+      "name": "Chainsaw Man",
+      "type": "أنمي",
+      "year": "2022",
+      "rating": "8.7",
+      "episodes": 12,
+      "image": "https://image.tmdb.org/t/p/w780/n3M2Y1QJ6kVxXsPWWCpy2dQa9Vx.jpg",
+      "categories": [
+        "action",
+        "horror",
+        "comedy",
+        "animation"
+      ],
+      "updatedAt": "2025-01-16T03:40:00.000Z"
+    },
+    {
+      "id": 7,
+      "name": "Cyberpunk Edgerunners",
+      "type": "أنمي",
+      "year": "2022",
+      "rating": "8.5",
+      "episodes": 10,
+      "image": "https://image.tmdb.org/t/p/w780/v6Krzg7Z3IdYjz07ikFd3zCEev.jpg",
+      "categories": [
+        "sci-fi",
+        "action",
+        "drama",
+        "animation"
+      ],
+      "updatedAt": "2025-01-16T03:45:00.000Z"
+    },
+    {
+      "id": 8,
       "name": "Death Note",
       "type": "أنمي",
       "year": "2006-2007",
@@ -739,29 +1072,43 @@
         "sci-fi",
         "animation"
       ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
+      "updatedAt": "2025-01-16T03:50:00.000Z"
     },
     {
-      "id": 4,
-      "name": "One Piece",
+      "id": 9,
+      "name": "Death Parade",
       "type": "أنمي",
-      "year": "1999",
-      "rating": "9.0",
-      "episodes": 1100,
-      "image": "https://image.tmdb.org/t/p/w780/e3NBGiA10a2u7ntQ6xdL3zQ6lqN.jpg",
-      "description": "أنمي أكشن ومغامرات من أطول الأنميات",
+      "year": "2015",
+      "rating": "8.1",
+      "episodes": 12,
+      "image": "https://image.tmdb.org/t/p/w780/phuYuzqWW9ru8EA3HVjE9W2Rr3M.jpg",
       "categories": [
-        "action",
-        "adventure",
-        "fantasy",
-        "comedy",
+        "drama",
+        "mystery",
+        "thriller",
         "animation"
       ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
+      "updatedAt": "2025-01-16T03:55:00.000Z"
     },
     {
-      "id": 5,
-      "name": "Hunter x Hunter",
+      "id": 10,
+      "name": "Devil May Cry",
+      "type": "أنمي",
+      "year": "2007",
+      "rating": "7.0",
+      "episodes": 12,
+      "image": "https://image.tmdb.org/t/p/w780/7Ir9X8HHD3aOe66HhtxyKE6ZAYX.jpg",
+      "categories": [
+        "action",
+        "horror",
+        "fantasy",
+        "animation"
+      ],
+      "updatedAt": "2025-01-16T04:00:00.000Z"
+    },
+    {
+      "id": 11,
+      "name": "Hunter X Hunter",
       "type": "أنمي",
       "year": "2011-2014",
       "rating": "9.0",
@@ -774,78 +1121,10 @@
         "fantasy",
         "animation"
       ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
+      "updatedAt": "2025-01-16T04:05:00.000Z"
     },
     {
-      "id": 6,
-      "name": "Steins;Gate",
-      "type": "أنمي",
-      "year": "2011",
-      "rating": "9.0",
-      "episodes": 24,
-      "image": "https://image.tmdb.org/t/p/w780/9H7dHpG9cRQF2XpntE8LVdLln4a.jpg",
-      "description": "أنمي خيال علمي وإثارة من أفضل الأنميات",
-      "categories": [
-        "sci-fi",
-        "thriller",
-        "drama",
-        "animation"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 7,
-      "name": "Naruto",
-      "type": "أنمي",
-      "year": "2002-2017",
-      "rating": "8.7",
-      "episodes": 720,
-      "image": "https://image.tmdb.org/t/p/w780/v6Krzg7Z3IdYjz07ikFd3zCEev.jpg",
-      "description": "أنمي أكشن ومغامرات من أشهر الأنميات",
-      "categories": [
-        "action",
-        "adventure",
-        "fantasy",
-        "animation"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 8,
-      "name": "Demon Slayer",
-      "type": "أنمي",
-      "year": "2019",
-      "rating": "8.7",
-      "episodes": 44,
-      "image": "https://image.tmdb.org/t/p/w780/qjGrUmKW78MCFG8DDLJWr3xc6cs.jpg",
-      "description": "أنمي أكشن وخيال علمي من استوديو Ufotable",
-      "categories": [
-        "action",
-        "sci-fi",
-        "fantasy",
-        "animation"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 9,
-      "name": "My Hero Academia",
-      "type": "أنمي",
-      "year": "2016",
-      "rating": "8.4",
-      "episodes": 113,
-      "image": "https://image.tmdb.org/t/p/w780/phuYuzqWW9ru8EA3HVjE9W2Rr3M.jpg",
-      "description": "أنمي أكشن وخيال علمي من استوديو Bones",
-      "categories": [
-        "action",
-        "sci-fi",
-        "comedy",
-        "animation"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 10,
+      "id": 12,
       "name": "Jujutsu Kaisen",
       "type": "أنمي",
       "year": "2020",
@@ -859,10 +1138,122 @@
         "horror",
         "animation"
       ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
+      "updatedAt": "2025-01-16T04:10:00.000Z"
     },
     {
-      "id": 11,
+      "id": 13,
+      "name": "Kaiju No 8",
+      "type": "أنمي",
+      "year": "2024",
+      "rating": "7.8",
+      "episodes": 12,
+      "image": null,
+      "categories": [
+        "action",
+        "sci-fi",
+        "comedy",
+        "animation"
+      ],
+      "updatedAt": "2025-01-16T04:15:00.000Z"
+    },
+    {
+      "id": 14,
+      "name": "demon slayer",
+      "type": "أنمي",
+      "year": "2019",
+      "rating": "8.7",
+      "episodes": 44,
+      "image": "https://image.tmdb.org/t/p/w780/qjGrUmKW78MCFG8DDLJWr3xc6cs.jpg",
+      "description": "أنمي أكشن وخيال علمي من استوديو Ufotable",
+      "categories": [
+        "action",
+        "sci-fi",
+        "fantasy",
+        "animation"
+      ],
+      "updatedAt": "2025-01-16T04:20:00.000Z"
+    },
+    {
+      "id": 15,
+      "name": "Lookism",
+      "type": "أنمي",
+      "year": "2022",
+      "rating": "7.5",
+      "episodes": 8,
+      "image": null,
+      "categories": [
+        "drama",
+        "comedy",
+        "animation"
+      ],
+      "updatedAt": "2025-01-16T04:25:00.000Z"
+    },
+    {
+      "id": 16,
+      "name": "Mashle Magic and Muscles",
+      "type": "أنمي",
+      "year": "2023",
+      "rating": "7.8",
+      "episodes": 12,
+      "image": null,
+      "categories": [
+        "action",
+        "comedy",
+        "fantasy",
+        "animation"
+      ],
+      "updatedAt": "2025-01-16T04:30:00.000Z"
+    },
+    {
+      "id": 17,
+      "name": "Naruto",
+      "type": "أنمي",
+      "year": "2002-2017",
+      "rating": "8.7",
+      "episodes": 720,
+      "image": "https://image.tmdb.org/t/p/w780/v6Krzg7Z3IdYjz07ikFd3zCEev.jpg",
+      "description": "أنمي أكشن ومغامرات من أشهر الأنميات",
+      "categories": [
+        "action",
+        "adventure",
+        "fantasy",
+        "animation"
+      ],
+      "updatedAt": "2025-01-16T04:35:00.000Z"
+    },
+    {
+      "id": 18,
+      "name": "NieRAutomata",
+      "type": "أنمي",
+      "year": "2023",
+      "rating": "8.0",
+      "episodes": 12,
+      "image": null,
+      "categories": [
+        "sci-fi",
+        "action",
+        "drama",
+        "animation"
+      ],
+      "updatedAt": "2025-01-16T04:40:00.000Z"
+    },
+    {
+      "id": 19,
+      "name": "Ninja Kamui",
+      "type": "أنمي",
+      "year": "2024",
+      "rating": "7.5",
+      "episodes": 12,
+      "image": null,
+      "categories": [
+        "action",
+        "thriller",
+        "animation"
+      ],
+      "updatedAt": "2025-01-16T04:45:00.000Z"
+    },
+    {
+      "id": 20,
       "name": "One Punch Man",
       "type": "أنمي",
       "year": "2015",
@@ -876,56 +1267,150 @@
         "sci-fi",
         "animation"
       ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
+      "updatedAt": "2025-01-16T04:50:00.000Z"
     },
     {
-      "id": 12,
-      "name": "Spirited Away",
+      "id": 21,
+      "name": "Ousama Ranking",
       "type": "أنمي",
-      "year": "2001",
-      "rating": "8.6",
-      "episodes": 1,
-      "image": "https://image.tmdb.org/t/p/w780/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
-      "description": "فيلم أنمي من إنتاج Studio Ghibli",
+      "year": "2021",
+      "rating": "8.5",
+      "episodes": 23,
+      "image": "https://image.tmdb.org/t/p/w780/9H7dHpG9cRQF2XpntE8LVdLln4a.jpg",
       "categories": [
+        "adventure",
         "fantasy",
+        "drama",
         "animation"
       ],
-      "updatedAt": "2025-11-22T02:55:24.253Z"
+      "updatedAt": "2025-01-16T04:55:00.000Z"
     },
     {
-      "id": 13,
-      "name": "Your Name",
+      "id": 22,
+      "name": "Rick and Morty",
       "type": "أنمي",
-      "year": "2016",
-      "rating": "8.4",
-      "episodes": 1,
-      "image": "https://image.tmdb.org/t/p/w780/q719jXXEzOoYaps6babgKnONONX.jpg",
-      "description": "فيلم أنمي رومانسي من إنتاج Makoto Shinkai",
+      "year": "2013",
+      "rating": "9.1",
+      "episodes": 70,
+      "image": "https://image.tmdb.org/t/p/w780/cvhNj9eo3O7S1Y4TPvGatI6wH7s.jpg",
       "categories": [
-        "fantasy",
-        "romance",
+        "comedy",
+        "sci-fi",
+        "adventure",
         "animation"
       ],
-      "updatedAt": "2025-11-22T02:55:24.253Z"
+      "updatedAt": "2025-01-16T05:00:00.000Z"
     },
     {
-      "id": 14,
-      "name": "Dragon Ball Z",
+      "id": 23,
+      "name": "Sakamoto Days",
       "type": "أنمي",
-      "year": "1989-1996",
-      "rating": "8.7",
-      "episodes": 291,
-      "image": "https://image.tmdb.org/t/p/w780/2v0xioQ5GnpUMOXyC3Qzjwl6Mqz.jpg",
-      "description": "أنمي أكشن من أشهر الأنميات في التاريخ",
+      "year": "2024",
+      "rating": "8.0",
+      "episodes": 12,
+      "image": null,
       "categories": [
         "action",
-        "fantasy"
+        "comedy",
+        "animation"
       ],
-      "updatedAt": "2025-11-22T02:55:24.253Z"
+      "updatedAt": "2025-01-16T05:05:00.000Z"
     },
     {
-      "id": 15,
+      "id": 24,
+      "name": "scissor seven",
+      "type": "أنمي",
+      "year": "2018",
+      "rating": "8.2",
+      "episodes": 34,
+      "image": null,
+      "categories": [
+        "action",
+        "comedy",
+        "animation"
+      ],
+      "updatedAt": "2025-01-16T05:10:00.000Z"
+    },
+    {
+      "id": 25,
+      "name": "Bunny Girl Senpai",
+      "type": "أنمي",
+      "year": "2018",
+      "rating": "8.3",
+      "episodes": 13,
+      "image": "https://image.tmdb.org/t/p/w780/q719jXXEzOoYaps6babgKnONONX.jpg",
+      "categories": [
+        "romance",
+        "drama",
+        "comedy",
+        "animation"
+      ],
+      "updatedAt": "2025-01-16T05:15:00.000Z"
+    },
+    {
+      "id": 26,
+      "name": "Solo Leveling",
+      "type": "أنمي",
+      "year": "2024",
+      "rating": "8.5",
+      "episodes": 12,
+      "image": "https://image.tmdb.org/t/p/w780/2v0xioQ5GnpUMOXyC3Qzjwl6Mqz.jpg",
+      "categories": [
+        "action",
+        "fantasy",
+        "adventure",
+        "animation"
+      ],
+      "updatedAt": "2025-01-16T05:20:00.000Z"
+    },
+    {
+      "id": 27,
+      "name": "Spy x Family",
+      "type": "أنمي",
+      "year": "2022",
+      "rating": "8.6",
+      "episodes": 25,
+      "image": "https://image.tmdb.org/t/p/w780/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
+      "categories": [
+        "comedy",
+        "action",
+        "drama",
+        "animation"
+      ],
+      "updatedAt": "2025-01-16T05:25:00.000Z"
+    },
+    {
+      "id": 28,
+      "name": "Tekken Bloodline",
+      "type": "أنمي",
+      "year": "2022",
+      "rating": "6.5",
+      "episodes": 6,
+      "image": null,
+      "categories": [
+        "action",
+        "adventure",
+        "animation"
+      ],
+      "updatedAt": "2025-01-16T05:30:00.000Z"
+    },
+    {
+      "id": 29,
+      "name": "To Be Hero X (Tu Bian Yingxiong X)",
+      "type": "أنمي",
+      "year": "2017",
+      "rating": "7.0",
+      "episodes": 12,
+      "image": null,
+      "categories": [
+        "comedy",
+        "action",
+        "animation"
+      ],
+      "updatedAt": "2025-01-16T05:35:00.000Z"
+    },
+    {
+      "id": 30,
       "name": "Tokyo Ghoul",
       "type": "أنمي",
       "year": "2014-2018",
@@ -935,83 +1420,73 @@
       "description": "أنمي رعب وأكشن من استوديو Pierrot",
       "categories": [
         "action",
-        "horror"
+        "horror",
+        "animation"
       ],
-      "updatedAt": "2025-11-22T02:55:24.253Z"
+      "updatedAt": "2025-01-16T05:40:00.000Z"
     },
     {
-      "id": 16,
-      "name": "Bleach",
+      "id": 31,
+      "name": "Uzumaki",
       "type": "أنمي",
-      "year": "2004-2012",
-      "rating": "8.2",
-      "episodes": 366,
-      "image": "https://image.tmdb.org/t/p/w780/2lbclF3JQWmos5WsacfI3Q9AP3P.jpg",
-      "description": "أنمي أكشن وخيال علمي من أشهر الأنميات",
+      "year": "2024",
+      "rating": "7.5",
+      "episodes": 4,
+      "image": null,
+      "categories": [
+        "horror",
+        "thriller",
+        "animation"
+      ],
+      "updatedAt": "2025-01-16T05:45:00.000Z"
+    },
+    {
+      "id": 32,
+      "name": "Vinland Saga",
+      "type": "أنمي",
+      "year": "2019",
+      "rating": "8.8",
+      "episodes": 48,
+      "image": "https://image.tmdb.org/t/p/w780/cqWnxP5fzQkdqYqvFdN6fXbBzPr.jpg",
       "categories": [
         "action",
-        "sci-fi",
-        "fantasy"
+        "drama",
+        "adventure",
+        "animation"
       ],
-      "updatedAt": "2025-11-22T02:55:24.253Z"
+      "updatedAt": "2025-01-16T05:50:00.000Z"
     },
     {
-      "id": 17,
-      "name": "Code Geass",
+      "id": 33,
+      "name": "Wonder Egg Priority",
       "type": "أنمي",
-      "year": "2006-2008",
-      "rating": "8.7",
-      "episodes": 50,
-      "image": "https://image.tmdb.org/t/p/w780/5MXyQfz8xUP3dIFPTubhTsbFY6N.jpg",
-      "description": "أنمي أكشن واستراتيجية من أفضل الأنميات",
-      "categories": [
-        "action"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.253Z"
-    },
-    {
-      "id": 18,
-      "name": "Cowboy Bebop",
-      "type": "أنمي",
-      "year": "1998-1999",
-      "rating": "8.8",
-      "episodes": 26,
-      "image": "https://image.tmdb.org/t/p/w780/cqWnxP5fzQkdqYqvFdN6fXbBzPr.jpg",
-      "description": "أنمي خيال علمي ومغامرات من أفضل الأنميات",
-      "categories": [
-        "sci-fi"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.254Z"
-    },
-    {
-      "id": 19,
-      "name": "Neon Genesis Evangelion",
-      "type": "أنمي",
-      "year": "1995-1996",
-      "rating": "8.5",
-      "episodes": 26,
-      "image": "https://image.tmdb.org/t/p/w780/n3N2Y1QJ6kVxXsPWWCpy2dQa9Vx.jpg",
-      "description": "أنمي خيال علمي ودراما من أفضل الأنميات",
+      "year": "2021",
+      "rating": "7.8",
+      "episodes": 12,
+      "image": null,
       "categories": [
         "drama",
-        "sci-fi"
+        "fantasy",
+        "mystery",
+        "animation"
       ],
-      "updatedAt": "2025-11-22T02:55:24.254Z"
+      "updatedAt": "2025-01-16T05:55:00.000Z"
     },
     {
-      "id": 20,
-      "name": "Mob Psycho 100",
+      "id": 34,
+      "name": "your lie in april",
       "type": "أنمي",
-      "year": "2016",
-      "rating": "8.5",
-      "episodes": 37,
+      "year": "2014",
+      "rating": "8.6",
+      "episodes": 22,
       "image": "https://image.tmdb.org/t/p/w780/mY7SeH4HFFxW1hiI6cWuwCRKptN.jpg",
-      "description": "أنمي أكشن وخيال علمي من استوديو Bones",
       "categories": [
-        "action",
-        "sci-fi"
+        "drama",
+        "romance",
+        "music",
+        "animation"
       ],
-      "updatedAt": "2025-11-22T02:55:24.254Z"
+      "updatedAt": "2025-01-16T06:00:00.000Z"
     }
   ]
 }
