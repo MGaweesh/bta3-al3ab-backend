@@ -1552,16 +1552,29 @@
     },
     {
       "id": 2027,
-      "name": "DeathLoop",
+      "name": "Deathloop",
       "size": "21.7 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1252330/header.jpg",
+      "image": "https://media.rawg.io/media/games/018/01857c5ff9579c48fa8bd76b4d83a946.jpg",
       "categories": [
         "shooter",
         "action",
         "adventure",
-        "single-player"
+        "single-player",
+        "rpg",
+        "multiplayer",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T16:10:00.000Z"
+      "createdAt": "2025-01-15T16:10:00.000Z",
+      "rating": "3.96",
+      "released": "2021-09-14",
+      "description": "“DEATHLOOP” transports players to the lawless island of Blackreef in an eternal struggle between two extraordinary assassins. Explore stunning environments and meticulously designed levels in an immersive gameplay experience that lets you approach every situation any way you like. Hunt down targets all over the island in an effort to put an end to the cycle once and for all, and remember, if at first you don’t succeed… die, die again.",
+      "platforms": "PlayStation 5, PC, Xbox Series S/X",
+      "developers": "Arkane Studios",
+      "publishers": "Bethesda Softworks",
+      "metacritic": "88",
+      "playtime": "6 ساعة",
+      "website": "https://bethesda.net/en/game/deathloop",
+      "updatedAt": "2025-11-25T18:15:41.763Z"
     },
     {
       "id": 2028,
