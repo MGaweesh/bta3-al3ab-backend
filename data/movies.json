@@ -14,22 +14,6 @@
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 5,
-      "name": "The Lord of the Rings: The Return of the King",
-      "type": "فيلم",
-      "year": "2003",
-      "rating": "8.9",
-      "image": "https://image.tmdb.org/t/p/w780/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
-      "description": "فيلم خيال علمي ومغامرات من سلسلة سيد الخواتم",
-      "categories": [
-        "fantasy",
-        "sci-fi",
-        "adventure",
-        "action"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
       "id": 8,
       "name": "The Matrix",
       "type": "فيلم",
