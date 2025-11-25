@@ -2252,16 +2252,28 @@
     },
     {
       "id": 2055,
-      "name": "HADES",
+      "name": "Hades",
       "size": "5 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/header.jpg",
+      "image": "https://media.rawg.io/media/games/1f4/1f47a270b8f241e4676b14d39ec620f7.jpg",
       "categories": [
         "action",
         "indie",
         "roguelike",
-        "single-player"
+        "single-player",
+        "adventure",
+        "rpg"
       ],
-      "createdAt": "2025-01-15T18:30:00.000Z"
+      "createdAt": "2025-01-15T18:30:00.000Z",
+      "rating": "4.43",
+      "released": "2020-09-17",
+      "description": "Hades is a rogue-like dungeon crawler that combines the best aspects of Supergiant's critically acclaimed titles, including the fast-paced action of Bastion, the rich atmosphere and depth of Transistor, and the character-driven storytelling of Pyre.\n\nBATTLE OUT OF HELL\nAs the immortal Prince of the Underworld, you'll wield the powers and mythic weapons of Olympus to break free from the clutches of the god of the dead himself, while growing stronger and unraveling more of the story with each unique escape attempt.\n\nUNLEASH THE FURY OF OLYMPUS\nThe Olympians have your back! Meet Zeus, Athena, Poseidon, and many more, and choose from their dozens of powerful Boons that enhance your abilities. There are thousands of viable character builds to discover as you go.\n\nBEFRIEND GODS, GHOSTS, AND MONSTERS\nA fully-voiced cast of colorful, larger-than-life characters is waiting to meet you! Grow your relationships with them, and experience hundreds of unique story events as you learn about what's really at stake for this big, dysfunctional family.\n\nBUILT FOR REPLAYABILITY\nNew surprises await each time you delve into the ever-shifting Underworld, whose guardian bosses will remember you. Use the powerful Mirror of Night to grow permanently stronger, and give yourself a leg up the next time you run away from home.\n\nNOTHING IS IMPOSSIBLE\nPermanent upgrades mean you don't have to be a god yourself to experience the exciting combat and gripping story. Though, if you happen to be one, crank up the challenge and get ready for some white-knuckle action that will put your well-practiced skills to the test.\n\nSIGNATURE SUPERGIANT STYLE\nThe rich, atmospheric presentation and unique melding of gameplay and narrative that's been core to Supergiant's games is here in full force: spectacular hand-painted Underworld environments and a blood-pumping original score bring the Underworld to life.",
+      "platforms": "PlayStation 5, Xbox Series S/X, PlayStation 4, Nintendo Switch, PC, Xbox One",
+      "developers": "Supergiant Games",
+      "publishers": "Supergiant Games",
+      "metacritic": "93",
+      "playtime": "10 ساعة",
+      "website": "https://www.supergiantgames.com/games/hades/",
+      "updatedAt": "2025-11-25T19:56:43.924Z"
     },
     {
       "id": 2056,
