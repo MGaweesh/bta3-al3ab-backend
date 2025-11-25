@@ -269,7 +269,7 @@ app.get('/api/games', async (req, res) => {
   }
 });
 
-// GET games by type (movies, tvShows, anime)
+// GET games by type (readyToPlay, repack, online)
 app.get('/api/games/:type', async (req, res) => {
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   res.set('Pragma', 'no-cache');
@@ -277,11 +277,11 @@ app.get('/api/games/:type', async (req, res) => {
   
   try {
     const { type } = req.params;
-    const validTypes = ['movies', 'tvShows', 'anime'];
+    const validTypes = ['readyToPlay', 'repack', 'online'];
     
     if (!validTypes.includes(type)) {
       return res.status(400).json({ 
-        error: 'Invalid type. Must be one of: movies, tvShows, anime' 
+        error: 'Invalid type. Must be one of: readyToPlay, repack, online' 
       });
     }
     
@@ -293,19 +293,19 @@ app.get('/api/games/:type', async (req, res) => {
   }
 });
 
-// POST - Add a new movie/tv show/anime
+// POST - Add a new game
 app.post('/api/games/:type', async (req, res) => {
   try {
     const { type } = req.params;
-    const validTypes = ['movies', 'tvShows', 'anime'];
+    const validTypes = ['readyToPlay', 'repack', 'online'];
     
     if (!validTypes.includes(type)) {
       return res.status(400).json({ 
-        error: 'Invalid type. Must be one of: movies, tvShows, anime' 
+        error: 'Invalid type. Must be one of: readyToPlay, repack, online' 
       });
     }
     
-    console.log(`📝 [${new Date().toISOString()}] Adding new item to type: ${type}`);
+    console.log(`📝 [${new Date().toISOString()}] Adding new game to type: ${type}`);
     
     // Read data from file
     const data = readGamesData();
@@ -323,6 +323,241 @@ app.post('/api/games/:type', async (req, res) => {
     
     // Write to file and commit to GitHub
     const writeResult = await writeGamesData(data, `add ${type}: ${newItem.name || 'unnamed'}`);
+    
+    if (writeResult.success) {
+      console.log(`✅ [${new Date().toISOString()}] Game saved: ${newItem.name} (ID: ${newItem.id})`);
+      if (writeResult.github) {
+        console.log(`✅ Committed to GitHub: ${writeResult.commitUrl}`);
+      }
+      
+      res.status(201).json({
+        ...newItem,
+        _github: writeResult.github ? { committed: true, commitUrl: writeResult.commitUrl } : { committed: false, message: writeResult.message }
+      });
+    } else {
+      console.error(`❌ [${new Date().toISOString()}] Failed to save game: ${newItem.name}`);
+      res.status(500).json({ 
+        status: 'error',
+        error: 'Failed to save game', 
+        details: writeResult.error || 'Unknown error'
+      });
+    }
+  } catch (error) {
+    console.error(`❌ [${new Date().toISOString()}] Error adding game:`, error);
+    res.status(500).json({ 
+      status: 'error',
+      error: 'Failed to add game', 
+      details: error.message
+    });
+  }
+});
+
+// PUT - Update a game
+app.put('/api/games/:type/:id', async (req, res) => {
+  try {
+    const { type, id } = req.params;
+    const validTypes = ['readyToPlay', 'repack', 'online'];
+    
+    if (!validTypes.includes(type)) {
+      return res.status(400).json({ 
+        error: 'Invalid type. Must be one of: readyToPlay, repack, online' 
+      });
+    }
+    
+    console.log(`📝 [${new Date().toISOString()}] Updating game in type: ${type}, ID: ${id}`);
+    
+    // Read data from file
+    const data = readGamesData();
+    const itemId = parseInt(id);
+    
+    if (!data[type]) {
+      return res.status(404).json({ error: 'Type not found' });
+    }
+    
+    const itemIndex = data[type].findIndex(item => item.id === itemId);
+    
+    if (itemIndex === -1) {
+      return res.status(404).json({ error: 'Game not found' });
+    }
+    
+    const oldItem = { ...data[type][itemIndex] };
+    data[type][itemIndex] = {
+      ...data[type][itemIndex],
+      ...req.body,
+      id: itemId,
+      updatedAt: new Date().toISOString()
+    };
+    
+    // Write to file and commit to GitHub
+    const writeResult = await writeGamesData(data, `update ${type}: ${data[type][itemIndex].name || 'unnamed'}`);
+    
+    if (writeResult.success) {
+      console.log(`✅ [${new Date().toISOString()}] Game updated: ${data[type][itemIndex].name} (ID: ${itemId})`);
+      if (writeResult.github) {
+        console.log(`✅ Committed to GitHub: ${writeResult.commitUrl}`);
+      }
+      
+      res.json({
+        ...data[type][itemIndex],
+        _github: writeResult.github ? { committed: true, commitUrl: writeResult.commitUrl } : { committed: false, message: writeResult.message }
+      });
+    } else {
+      console.error(`❌ [${new Date().toISOString()}] Failed to update game: ${oldItem.name}`);
+      res.status(500).json({ 
+        status: 'error',
+        error: 'Failed to update game', 
+        details: writeResult.error || 'Unknown error'
+      });
+    }
+  } catch (error) {
+    console.error(`❌ [${new Date().toISOString()}] Error updating game:`, error);
+    res.status(500).json({ 
+      status: 'error',
+      error: 'Failed to update game', 
+      details: error.message 
+    });
+  }
+});
+
+// DELETE - Delete a game
+app.delete('/api/games/:type/:id', async (req, res) => {
+  try {
+    const { type, id } = req.params;
+    const validTypes = ['readyToPlay', 'repack', 'online'];
+    
+    if (!validTypes.includes(type)) {
+      return res.status(400).json({ 
+        error: 'Invalid type. Must be one of: readyToPlay, repack, online' 
+      });
+    }
+    
+    console.log(`🗑️  [${new Date().toISOString()}] Deleting game from type: ${type}, ID: ${id}`);
+    
+    // Read data from file
+    const data = readGamesData();
+    const itemId = parseInt(id);
+    
+    if (!data[type]) {
+      return res.status(404).json({ error: 'Type not found' });
+    }
+    
+    const itemIndex = data[type].findIndex(item => item.id === itemId);
+    
+    if (itemIndex === -1) {
+      return res.status(404).json({ error: 'Game not found' });
+    }
+    
+    const deletedItem = data[type][itemIndex];
+    data[type].splice(itemIndex, 1);
+    
+    // Write to file and commit to GitHub
+    const writeResult = await writeGamesData(data, `delete ${type}: ${deletedItem.name || 'unnamed'}`);
+    
+    if (writeResult.success) {
+      console.log(`✅ [${new Date().toISOString()}] Game deleted: ${deletedItem.name} (ID: ${itemId})`);
+      if (writeResult.github) {
+        console.log(`✅ Committed to GitHub: ${writeResult.commitUrl}`);
+      }
+      
+      res.json({ 
+        status: 'ok',
+        message: 'Game deleted successfully',
+        _github: writeResult.github ? { committed: true, commitUrl: writeResult.commitUrl } : { committed: false, message: writeResult.message }
+      });
+    } else {
+      console.error(`❌ [${new Date().toISOString()}] Failed to delete game: ${deletedItem.name}`);
+      res.status(500).json({ 
+        status: 'error',
+        error: 'Failed to delete game', 
+        details: writeResult.error || 'Unknown error'
+      });
+    }
+  } catch (error) {
+    console.error(`❌ [${new Date().toISOString()}] Error deleting game:`, error);
+    res.status(500).json({ 
+      status: 'error',
+      error: 'Failed to delete game', 
+      details: error.message 
+    });
+  }
+});
+
+// ============ MOVIES ROUTES (Movies, TV Shows, Anime) ============
+
+// GET all movies data (movies, tvShows, anime)
+app.get('/api/movies', async (req, res) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+  
+  try {
+    const data = readMoviesData();
+    console.log('📊 Movies data loaded:', {
+      movies: data.movies?.length || 0,
+      tvShows: data.tvShows?.length || 0,
+      anime: data.anime?.length || 0
+    });
+    res.json(data);
+  } catch (error) {
+    console.error('❌ Error fetching movies data:', error);
+    res.status(500).json({ error: 'Failed to fetch movies data', details: error.message });
+  }
+});
+
+// GET movies by type (movies, tvShows, anime)
+app.get('/api/movies/:type', async (req, res) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+  
+  try {
+    const { type } = req.params;
+    const validTypes = ['movies', 'tvShows', 'anime'];
+    
+    if (!validTypes.includes(type)) {
+      return res.status(400).json({ 
+        error: 'Invalid type. Must be one of: movies, tvShows, anime' 
+      });
+    }
+    
+    const data = readMoviesData();
+    res.json(data[type] || []);
+  } catch (error) {
+    console.error('❌ Error fetching movies by type:', error);
+    res.status(500).json({ error: 'Failed to fetch movies', details: error.message });
+  }
+});
+
+// POST - Add a new movie/tv show/anime
+app.post('/api/movies/:type', async (req, res) => {
+  try {
+    const { type } = req.params;
+    const validTypes = ['movies', 'tvShows', 'anime'];
+    
+    if (!validTypes.includes(type)) {
+      return res.status(400).json({ 
+        error: 'Invalid type. Must be one of: movies, tvShows, anime' 
+      });
+    }
+    
+    console.log(`📝 [${new Date().toISOString()}] Adding new item to type: ${type}`);
+    
+    // Read data from file
+    const data = readMoviesData();
+    const newItem = {
+      id: Date.now(),
+      ...req.body,
+      createdAt: new Date().toISOString()
+    };
+    
+    if (!data[type]) {
+      data[type] = [];
+    }
+    
+    data[type].push(newItem);
+    
+    // Write to file and commit to GitHub
+    const writeResult = await writeMoviesData(data, `add ${type}: ${newItem.name || 'unnamed'}`);
     
     if (writeResult.success) {
       console.log(`✅ [${new Date().toISOString()}] Item saved: ${newItem.name} (ID: ${newItem.id})`);
@@ -353,7 +588,7 @@ app.post('/api/games/:type', async (req, res) => {
 });
 
 // PUT - Update a movie/tv show/anime
-app.put('/api/games/:type/:id', async (req, res) => {
+app.put('/api/movies/:type/:id', async (req, res) => {
   try {
     const { type, id } = req.params;
     const validTypes = ['movies', 'tvShows', 'anime'];
@@ -367,7 +602,7 @@ app.put('/api/games/:type/:id', async (req, res) => {
     console.log(`📝 [${new Date().toISOString()}] Updating item in type: ${type}, ID: ${id}`);
     
     // Read data from file
-    const data = readGamesData();
+    const data = readMoviesData();
     const itemId = parseInt(id);
     
     if (!data[type]) {
@@ -389,7 +624,7 @@ app.put('/api/games/:type/:id', async (req, res) => {
     };
     
     // Write to file and commit to GitHub
-    const writeResult = await writeGamesData(data, `update ${type}: ${data[type][itemIndex].name || 'unnamed'}`);
+    const writeResult = await writeMoviesData(data, `update ${type}: ${data[type][itemIndex].name || 'unnamed'}`);
     
     if (writeResult.success) {
       console.log(`✅ [${new Date().toISOString()}] Item updated: ${data[type][itemIndex].name} (ID: ${itemId})`);
@@ -420,7 +655,7 @@ app.put('/api/games/:type/:id', async (req, res) => {
 });
 
 // DELETE - Delete a movie/tv show/anime
-app.delete('/api/games/:type/:id', async (req, res) => {
+app.delete('/api/movies/:type/:id', async (req, res) => {
   try {
     const { type, id } = req.params;
     const validTypes = ['movies', 'tvShows', 'anime'];
@@ -434,7 +669,7 @@ app.delete('/api/games/:type/:id', async (req, res) => {
     console.log(`🗑️  [${new Date().toISOString()}] Deleting item from type: ${type}, ID: ${id}`);
     
     // Read data from file
-    const data = readGamesData();
+    const data = readMoviesData();
     const itemId = parseInt(id);
     
     if (!data[type]) {
@@ -451,7 +686,7 @@ app.delete('/api/games/:type/:id', async (req, res) => {
     data[type].splice(itemIndex, 1);
     
     // Write to file and commit to GitHub
-    const writeResult = await writeGamesData(data, `delete ${type}: ${deletedItem.name || 'unnamed'}`);
+    const writeResult = await writeMoviesData(data, `delete ${type}: ${deletedItem.name || 'unnamed'}`);
     
     if (writeResult.success) {
       console.log(`✅ [${new Date().toISOString()}] Item deleted: ${deletedItem.name} (ID: ${itemId})`);
