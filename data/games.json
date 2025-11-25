@@ -1113,14 +1113,25 @@
       "id": 2008,
       "name": "Atomic Heart",
       "size": "26.5 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/668580/header.jpg",
+      "image": "https://media.rawg.io/media/games/6ee/6ee5cbe30c6b6c299a3288337d40a0f3.jpg",
       "categories": [
         "shooter",
         "action",
         "adventure",
-        "single-player"
+        "single-player",
+        "horror"
       ],
-      "createdAt": "2025-01-15T14:35:00.000Z"
+      "createdAt": "2025-01-15T14:35:00.000Z",
+      "rating": "3.85",
+      "released": "2023-02-21",
+      "description": "Atomic Heart is an adventure first-person shooter, events of which unfolds in an alternate universe during the high noon of the Soviet Union. The principal character of the game is a special agent P-3, who after an unsuccessful landing on enterprise \"3826\" is trying to figure out what went wrong and to clear up a factory from went mad robots.\nAs of the game P-3 will receive a lot of weapon in his armory, there will be several quests, and he will learn to destroy one robot after another silently in order to clear his way to the event hall, where he will meet a main enemy - a huge robot with tentacles.\nA crazy Soviet setting, a hurricane action and a terrific story will not let you sleep even if you were born in the USSR. Restore peace and order and show us the best you can!",
+      "platforms": "PlayStation 5, Xbox Series S/X, PC, PlayStation 4, Xbox One",
+      "developers": "Mundfish",
+      "publishers": "Focus Entertainment",
+      "metacritic": "73",
+      "playtime": "12 ساعة",
+      "website": "https://www.mundfish.com",
+      "updatedAt": "2025-11-25T17:07:06.824Z"
     },
     {
       "id": 2009,
