@@ -713,14 +713,26 @@
       "id": 1031,
       "name": "Outlast 2",
       "size": "25.5 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/414700/header.jpg",
+      "image": "https://media.rawg.io/media/games/880/880f6aa65fe9d786f1a455963df76180.jpg",
       "categories": [
         "horror",
         "adventure",
         "survival",
-        "single-player"
+        "single-player",
+        "action",
+        "indie"
       ],
-      "createdAt": "2025-01-15T12:30:00.000Z"
+      "createdAt": "2025-01-15T12:30:00.000Z",
+      "rating": "3.68",
+      "released": "2017-04-24",
+      "description": "Outlast 2 is a first-person survival horror game developed by Red Barrels. While continuing the ideas of the first Outlast, the game's story does not continue the plot of the first title in the series. \n\n###Plot\nBlake and his wife Lynn are journalists that investigate a case involving the murder of a pregnant woman. The set out to visit the crime scene in the remote Arizona village by a helicopter that breaks down mid-air and crashes. Blake has to find his wife and figure out what is going on in the village.\n\n###Gameplay\nAs the first game in the series and it's expansion pack, Outlast 2 is a single-player survival horror experience. The main protagonist is unable to fight his enemies, so stealth is used to avoid confrontation. Unlike the previous titles, Outlast 2 features a stamina bar and new additions to the movement system, such as sliding and going prone. \n\nBlake has a camera with him at all times. This camera is used for activating night vision, eavesdropping to distant conversations with its microphone. The camera requires batteries for it to work, so the players have to look for them on the levels. \n\nThere is no automatic health regeneration present in the game. So when the player suffers some damage, they need to find a medkit in order to restore their agility and health.",
+      "platforms": "Xbox One, PlayStation 4, PC, Nintendo Switch",
+      "developers": "Red Barrels",
+      "publishers": "Red Barrels",
+      "metacritic": "76",
+      "playtime": "5 ساعة",
+      "website": "http://www.redbarrelsgames.com/games/outlast-2/",
+      "updatedAt": "2025-11-25T15:01:54.352Z"
     },
     {
       "id": 1032,
