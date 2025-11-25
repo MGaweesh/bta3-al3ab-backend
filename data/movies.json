@@ -204,20 +204,6 @@
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 25,
-      "name": "Saving Private Ryan",
-      "type": "فيلم",
-      "year": "1998",
-      "rating": "8.6",
-      "image": "https://image.tmdb.org/t/p/w780/uqx37cS8cpHg8U35f9U5IBlrCV3.jpg",
-      "description": "فيلم حرب ودراما من إخراج ستيفن سبيلبرغ",
-      "categories": [
-        "action",
-        "drama"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
       "id": 1764065175337,
       "name": "Avatar",
       "year": "2009",
