@@ -2066,14 +2066,23 @@
       "id": 2046,
       "name": "Ghostrunner",
       "size": "7.5 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1139900/header.jpg",
+      "image": "https://media.rawg.io/media/games/957/957154d665ae676b00c0859551c733b1.jpg",
       "categories": [
         "action",
         "adventure",
         "platformer",
         "single-player"
       ],
-      "createdAt": "2025-01-15T17:45:00.000Z"
+      "createdAt": "2025-01-15T17:45:00.000Z",
+      "rating": "3.84",
+      "released": "2020-10-27",
+      "description": "Enter an intense cyberpunk world and experience fierce, dynamic combat! Conquer your enemies in the physical world and in cyberspace. Hunt for answers inhumanity’s last remaining shelter.\n\nAscend humanity’s last remaining shelter, a great tower-city. The tower is torn by violence, poverty, and chaos. Conquer your enemies, discover the secrets of the superstructure and your own origin and obtain the power to challenge The Keymaster. \n\nThe game takes place in the future, after a global cataclysm where the remains of humanity live in a tower built by The Architect, who died mysteriously years ago. Everyone knows the truth, no one says it aloud.\n\nThe world ruled by The Keymaster is harsh. A person’s worth depends on the category of implants they have, defining their whole lives. The implants—given to them in childhood—determine which social group a person belongs to. If you weren’t lucky enough to get a good life, there is nothing you can do.\n\nIt's no surprise that a rebellion starts.\n\nYou are a cyber-warrior, the only one capable of fighting both in the physical world and in cyberspace. Lost and hunted, thrown into the middle of the conflict, you must use this bond with technology to ascend the tower.\n\nAs you climb higher, secrets are revealed. The clock starts ticking on a race to uncover the mystery behind the structure that houses humanity’s last hope. Solve the riddle or be killed—there is no other option.",
+      "platforms": "PlayStation 5, Xbox Series S/X, PlayStation 4, Nintendo Switch, PC, Xbox One",
+      "developers": "3D Realms, One More Level, Slipgate Ironworks™",
+      "publishers": "All in! Games",
+      "playtime": "4 ساعة",
+      "website": "https://ghostrunnergame.com/",
+      "updatedAt": "2025-11-25T19:54:30.587Z"
     },
     {
       "id": 2047,
