@@ -2653,15 +2653,27 @@
       "id": 2073,
       "name": "Little Nightmares III",
       "size": "8.8 GB",
-      "image": null,
+      "image": "https://media.rawg.io/media/games/bc2/bc25f96263d3f206369fd16415688a53.jpg",
       "categories": [
         "horror",
         "adventure",
         "indie",
         "platformer",
-        "single-player"
+        "single-player",
+        "action",
+        "multiplayer",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T20:00:00.000Z"
+      "createdAt": "2025-01-15T20:00:00.000Z",
+      "rating": "3.5",
+      "released": "2025-10-09",
+      "description": "Embark on a new adventure in the unique world of Little Nightmares. In Little Nightmares III, you follow the journey of Low & Alone, as they search for a path that could lead them out of the Nowhere. Face your childhood fears together with a friend in online co-op, or in solo with an AI companion.",
+      "platforms": "PC, PlayStation 5, Xbox Series S/X, PlayStation 4, Nintendo Switch, Xbox One",
+      "developers": "Supermassive Games",
+      "publishers": "Bandai Namco Entertainment, Bandai Namco Europe S.A.S.",
+      "playtime": "4 ساعة",
+      "website": "https://en.bandainamcoent.eu/little-nightmares/little-nightmares-iii",
+      "updatedAt": "2025-11-25T20:25:41.979Z"
     },
     {
       "id": 2074,
