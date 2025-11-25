@@ -2894,14 +2894,26 @@
       "id": 2081,
       "name": "Max Payne 3 - Complete Edition",
       "size": "13.8 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/204100/header.jpg",
+      "image": "https://media.rawg.io/media/games/5bf/5bf88a28de96321c86561a65ee48e6c2.jpg",
       "categories": [
         "shooter",
         "action",
         "adventure",
-        "single-player"
+        "single-player",
+        "multiplayer",
+        "open-world"
       ],
-      "createdAt": "2025-01-15T20:40:00.000Z"
+      "createdAt": "2025-01-15T20:40:00.000Z",
+      "rating": "4.26",
+      "released": "2012-05-15",
+      "description": "In Max Payne III we see Max from a new perspective. Taking place nine years after the second game, Payne left the police department in New York and now serves as a private security contractor in São Paulo, Brazil. Guarding the Branco family - Ricardo, Victor and Marcelo, everything turns into a disaster when a local street gang kidnaps Ricardo's wife. In attempt saving Ricardo's wife, another outlaw involves. In the end, Max has to infiltrate the gang to save Fabiana and perform some justice.\r\n\r\nEven if Max is old, he still can put on a hell of a fight. A cover system provides some good tactical advantages and bullet time is now something iconic for the series. Manipulating with time, Max can perform some amazing tricks to kill his opponent. Also, you can shoot from any angle basically, while lying on the ground. If that isn't enough for you, you can obliterate your enemies with melee attacks or blow them up by using explosives. \r\n\r\nAs another feature of the game, no loading screens are involved. Cut-scenes are also interactive, and with that, the process of the game is absolutely smooth which makes the best experience from an intense shooter.",
+      "platforms": "PlayStation 3, PC, Xbox 360, macOS",
+      "developers": "Rockstar Games",
+      "publishers": "Rockstar Games",
+      "metacritic": "87",
+      "playtime": "10 ساعة",
+      "website": "http://www.rockstargames.com/maxpayne3",
+      "updatedAt": "2025-11-25T21:09:11.617Z"
     },
     {
       "id": 2082,
