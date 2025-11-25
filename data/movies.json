@@ -1,21 +1,6 @@
 {
   "movies": [
     {
-      "id": 2,
-      "name": "The Godfather",
-      "type": "فيلم",
-      "year": "1972",
-      "rating": "9.2",
-      "image": "https://image.tmdb.org/t/p/w780/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
-      "description": "فيلم جريمة من أفضل الأفلام في التاريخ",
-      "categories": [
-        "crime",
-        "drama",
-        "thriller"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
       "id": 3,
       "name": "The Dark Knight",
       "type": "فيلم",
