@@ -3585,16 +3585,26 @@
     },
     {
       "id": 2110,
-      "name": "Splinter Cell - Blacklist",
+      "name": "Tom Clancy’s Splinter Cell Blacklist",
       "size": "11.3 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/235600/header.jpg",
+      "image": "https://media.rawg.io/media/games/de9/de93cd3e51d2c57e33bbf7dade34f25a.jpg",
       "categories": [
         "action",
         "adventure",
         "stealth",
         "single-player"
       ],
-      "createdAt": "2025-01-15T23:05:00.000Z"
+      "createdAt": "2025-01-15T23:05:00.000Z",
+      "rating": "4.08",
+      "released": "2013-08-20",
+      "description": "Tom Clancy’s Splinter Cell Blacklist is a stealth-action game developed by Ubisoft Toronto. It is the sixth main installment in the series.\n\n###Story\nThe game takes place six months after the events of Conviction. The Third Echelon got disbanded, and Sam Fischer became a private security contractor. A terrorist organization known as The Engineers threatens the United States with a series of terrorist attacks if the U.S. Military will not call off their troops stationed in other countries. POTUS comes to Fischer, forms the Fourth Echelon and grants Sam with a Fifth Freedom - the freedom to defend the four first freedoms no matter what it takes.\n\n###Gameplay\nSplinter Cell Blacklist focuses on a stealth mission approach. The player is still free to go in loud, but it will be much harder, as Fischer can sustain a very small amount of damage even on the lowest difficulty.\n\nThe players have a wide range of gadgets at their disposal, such as the snake cam, a throwable sticky camera that can distract enemies, a portable EMP, and a variety of grenades. It is also possible to upgrade Fisher's outfit, making it more stealthy or improve its armor. The players can also upgrade their HQ to gain certain advantages on the battlefield, such as an improved minimap.\n\nThe game evaluates the players' performance. Three play styles are available - Ghost, a complete stealth approach with no kills; Panther - a stealthy approach with enemy kills; Assault - a head-on gunfight with the enemies.",
+      "platforms": "PC, Wii U, Xbox 360, PlayStation 3, Xbox One",
+      "developers": "Ubisoft Toronto",
+      "publishers": "Ubisoft Entertainment",
+      "metacritic": "81",
+      "playtime": "10 ساعة",
+      "website": "http://www.splintercell.com",
+      "updatedAt": "2025-11-25T21:45:58.418Z"
     },
     {
       "id": 2111,
