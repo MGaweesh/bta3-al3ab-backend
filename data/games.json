@@ -3026,16 +3026,26 @@
     },
     {
       "id": 2090,
-      "name": "Prince of Persia The Forgotten Sands Remastered",
+      "name": "Prince of Persia: The Forgotten Sands",
       "size": "2.1 GB",
-      "image": null,
+      "image": "https://media.rawg.io/media/games/9a2/9a2e789046757af843ef0dd2a435adab.jpg",
       "categories": [
         "action",
         "adventure",
         "platformer",
         "single-player"
       ],
-      "createdAt": "2025-01-15T21:25:00.000Z"
+      "createdAt": "2025-01-15T21:25:00.000Z",
+      "rating": "3.63",
+      "released": "2010-05-18",
+      "description": "Prince of Persia: The Forgotten Sands is an action-adventure third-person game developed by Ubisoft Montreal. It is the direct sequel to Prince of Persia: The Two Thrones.\r\n\r\n###Plot\r\nThe Prince decides to visit the kingdom of his elder brother Malik to train in martial arts. Upon the Prince's arrival, the kingdom is found to be under a siege. Trying to repel the invaders, Malik uses an ancient mystic medallion that frees the ancient army of Solomon. Upon breaking free, the army turns the people of the kingdom into sand statues. Only the Prince of Persia can stop the army from destroying the kingdom.\r\n\r\n###Gameplay\r\nThe game uses the usual Action-adventure formula where the player-controlled character traverses the level while avoiding traps, solves puzzles, and fights enemies using aerobatics and special powers. The game features a complex fighting system. \r\n\r\nAs the game progresses, the Prince learns more and more skills. The player is able to control all four nature elements: fire, earth, water, and air. Using such power, it is easy to manipulate the game's environment. It is essential to combine magic skills with the fighting system in order to be most efficient in the game.\r\n\r\nAs in previous games of the series, it is possible to rewind time. If the player makes a mistake and the Prince dies, the player can travel several seconds back into the gameplay. If such a thing is impossible, the player has to restart from the latest checkpoint.",
+      "platforms": "PC, PlayStation 3, Xbox 360",
+      "developers": "Ubisoft Montreal",
+      "publishers": "Ubisoft Entertainment",
+      "metacritic": "75",
+      "playtime": "2 ساعة",
+      "website": "http://www.princeofpersiagame.com",
+      "updatedAt": "2025-11-25T20:58:24.256Z"
     },
     {
       "id": 2091,
