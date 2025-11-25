@@ -4140,15 +4140,25 @@
     },
     {
       "id": 2133,
-      "name": "Tomb Raider Underworld",
+      "name": "Tomb Raider: Underworld",
       "size": "2.5 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/8140/header.jpg",
+      "image": "https://media.rawg.io/media/games/341/3413d7275fb1e919f00a925df8288b77.jpg",
       "categories": [
         "action",
         "adventure",
         "single-player"
       ],
-      "createdAt": "2025-01-16T01:00:00.000Z"
+      "createdAt": "2025-01-16T01:00:00.000Z",
+      "rating": "3.7",
+      "released": "2008-11-18",
+      "description": "Tomb Raider: Underworld is an action game developed by Crystal Dynamics. It is the eighth installment in the series.\n\nUnderworld continues the story of Tomb Raider: Legend and Tomb Raider: Anniversary. Lara tries to unravel the secrets told in the ancient Scandinavian legends in order to find Avalon - a place where her mother disappeared years ago.\n\nTR: Underworld is played from a third-person perspective. The game features a very interactive world. Lara leaves footprints in the snow, mud sticks to her legs if she kneels and could be later washed away with rain, the damage done to the environment is permanent and enemies' bodies do not disappear. A dynamic animation system is present in the game which allows for more character interaction with the world.\n\nThe developers put a strong emphasis on the fact that Lara is able to do anything that the players expect from her from grabbing a ledge to using her grappling hook to pull objects.\n\nThe game is non-linear to some degree as multiple mini-puzzles are present on several levels.",
+      "platforms": "Xbox 360, Wii, macOS, PC, Nintendo DS, PlayStation 3",
+      "developers": "Feral Interactive, Square Enix, Crystal Dynamics, Santa Cruz Games",
+      "publishers": "Square Enix, Feral Interactive, Eidos Interactive",
+      "metacritic": "80",
+      "playtime": "1 ساعة",
+      "website": "http://www.tombraider.com",
+      "updatedAt": "2025-11-25T22:36:16.907Z"
     },
     {
       "id": 2134,
