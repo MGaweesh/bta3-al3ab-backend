@@ -1249,15 +1249,26 @@
       "id": 2013,
       "name": "BioShock 2 Remastered",
       "size": "7 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/409720/header.jpg",
+      "image": "https://media.rawg.io/media/games/7c4/7c448374df84b607f67ce9182a3a3ca7.jpg",
       "categories": [
         "shooter",
         "action",
         "adventure",
         "horror",
-        "single-player"
+        "single-player",
+        "rpg",
+        "multiplayer"
       ],
-      "createdAt": "2025-01-15T15:00:00.000Z"
+      "createdAt": "2025-01-15T15:00:00.000Z",
+      "rating": "4",
+      "released": "2016-09-15",
+      "description": "Bioshock 2 is a shooter with RPG elements, centered around resource-management to a great extent: more like an RPG than a shooter. The game is made by 2K studios and represents the final part of a dystopia dilogy — preceded by the original Bioshock. Its successor is Bioshock Infinite.\nYou play as Big Daddy — a giant mech with a drill replacing one of the hands. The game, while they both are telling the story of a charming Rapture — the city descended from Orwell's and Zamyatin's pages where the society's greatest mind have suffered a severe decline.\nThe central feature of the game is the unique abandoned city's aesthetics — minding the time Bioshock 2 is still a beautiful title, with detailed drawn water and strange surroundings, never mind the variety of foes.\nThe remaster introduces a 4k resolution — it is now more enjoyable to explore Rapture and enjoy its various landscapes and sea-filled quarters. Among the other features: high-res textures and a set of Protector Trials,  which can give the player freakish weaponry and ammunition.",
+      "platforms": "PlayStation 4, macOS, PC, Xbox One, Nintendo Switch",
+      "developers": "Digital Extremes, 2K Australia, 2K Marin, Virtuos, 2K China, Blind Squirrel",
+      "publishers": "2K Games, Take Two Interactive",
+      "playtime": "4 ساعة",
+      "website": "https://2k.com/en-US/game/bioshock-the-collection",
+      "updatedAt": "2025-11-25T17:37:58.380Z"
     },
     {
       "id": 2014,
