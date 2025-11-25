@@ -214,13 +214,25 @@
       "type": "فيلم",
       "year": "1994",
       "rating": "8.8",
-      "image": "https://image.tmdb.org/t/p/w780/arw2vcBve9OVeag5WJ5K1q4ek5T.jpg",
+      "image": "https://m.media-amazon.com/images/M/MV5BNDYwNzVjMTItZmU5YS00YjQ5LTljYjgtMjY2NDVmYWMyNWFmXkEyXkFqcGc@._V1_SX300.jpg",
       "description": "فيلم دراما وكوميديا من بطولة توم هانكس",
       "categories": [
         "drama",
         "comedy"
       ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
+      "updatedAt": "2025-11-25T14:44:52.164Z",
+      "rate": "8.8",
+      "genre": "Drama, Romance",
+      "director": "Robert Zemeckis",
+      "writer": "Winston Groom, Eric Roth",
+      "actors": "Tom Hanks, Robin Wright, Gary Sinise",
+      "plot": "Forrest Gump is a simple man with a low I.Q. but good intentions. He is running through childhood with his best and only friend Jenny. His 'mama' teaches him the ways of life and leaves him to choose his destiny. Forrest joins the army for service in Vietnam, finding new friends called Dan and Bubba, he wins medals, creates a famous shrimp fishing fleet, inspires people to jog, starts a ping-pong craze, creates the smiley, writes bumper stickers and songs, donates to people and meets the president several times. However, this is all irrelevant to Forrest who can only think of his childhood sweetheart Jenny Curran, who has messed up her life. Although in the end all he wants to prove is that anyone can love anyone.",
+      "runtime": "142 min",
+      "language": "English",
+      "country": "United States",
+      "awards": "Won 6 Oscars. 51 wins & 74 nominations total",
+      "metascore": "82",
+      "imdbVotes": "2,432,360"
     },
     {
       "id": 17,
