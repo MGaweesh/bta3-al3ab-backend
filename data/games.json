@@ -3654,15 +3654,26 @@
       "id": 2113,
       "name": "Starfield",
       "size": "62.5 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1716740/header.jpg",
+      "image": "https://media.rawg.io/media/games/ba8/ba82c971336adfd290e4c0eab6504fcf.jpg",
       "categories": [
         "rpg",
         "action",
         "adventure",
         "open-world",
-        "single-player"
+        "single-player",
+        "multiplayer"
       ],
-      "createdAt": "2025-01-15T23:20:00.000Z"
+      "createdAt": "2025-01-15T23:20:00.000Z",
+      "rating": "3.25",
+      "released": "2023-09-06",
+      "description": "Starfield is the first new universe in 25 years from Bethesda Game Studios, the award-winning creators of The Elder Scrolls V: Skyrim and Fallout 4. In this next generation role-playing game set amongst the stars, create any character you want and explore with unparalleled freedom as you embark on an epic journey to answer humanity’s greatest mystery.\n\nThe year is 2330. Humanity has ventured beyond our solar system, settling new planets, and living as a spacefaring people. From humble beginnings as a space miner, you will join Constellation – the last group of space explorers seeking rare artifacts throughout the galaxy – and navigate the vast expanse of the Settled Systems in Bethesda Game Studios’ biggest and most ambitious game.",
+      "platforms": "PC, Xbox Series S/X",
+      "developers": "Bethesda Game Studios",
+      "publishers": "Bethesda Softworks",
+      "metacritic": "88",
+      "playtime": "29 ساعة",
+      "website": "https://bethesda.net/ru/game/starfield",
+      "updatedAt": "2025-11-25T21:50:56.264Z"
     },
     {
       "id": 2114,
