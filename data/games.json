@@ -3118,16 +3118,27 @@
     },
     {
       "id": 2092,
-      "name": "Prince of Persia The Two Thrones",
+      "name": "Prince of Persia: The Two Thrones",
       "size": "1 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/13520/header.jpg",
+      "image": "https://media.rawg.io/media/games/dd7/dd72d8a527cd9245c7eb7cd05aa53efa.jpg",
       "categories": [
         "action",
         "adventure",
         "platformer",
-        "single-player"
+        "single-player",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T21:35:00.000Z"
+      "createdAt": "2025-01-15T21:35:00.000Z",
+      "rating": "4.12",
+      "released": "2005-12-01",
+      "description": "Prince of Persia: The Two Thrones is a third-person fast-paced action game developed by Ubisoft. It is the third installment of the series.\n\n###Plot\nAfter changing his fate, The Prince comes to Babylon accompanied by Kaileena. It turns out that Babylon is under attack. Kaileena gets kidnapped, and The Prince sets out to find her. It is also revealed, that by altering his own fate, The Prince prevented the creation of the Sands of Time from ever happening, so the timeline changes. It is your job to fix it back up.\n\n###Gameplay\nThe gameplay of The Two Thrones is closer to the first installment in the franchise - the acrobatics play an important role. The combat system is almost the same as it was in the second game. The player still has two weapons (one main and one temporary) and can perform combos. For the first time in the series, the Prince does not have his swords, and a dagger is used instead (replaced with the Dagger of Time later). The temporary weapons now have a certain amount of damage they can sustain. \n\nThe Prince can now transform into a Dark Prince, whose health goes down quickly, but can be instantly regenerated with sand. Dark Prince's gameplay changes drastically as it encourages fast-paced combat without relying much on tactics. However, all the transformations happen strictly on plot occasions.",
+      "platforms": "Wii, PlayStation 3, PC, PlayStation 2, PSP, Classic Macintosh, Xbox, GameCube",
+      "developers": "Ubisoft, Ubisoft Montreal, Ubisoft Casablanca",
+      "publishers": "Ubisoft Entertainment",
+      "metacritic": "85",
+      "playtime": "1 ساعة",
+      "website": "http://www.princeofpersiagame.com",
+      "updatedAt": "2025-11-25T20:59:15.059Z"
     },
     {
       "id": 2093,
