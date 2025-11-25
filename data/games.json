@@ -3112,14 +3112,25 @@
     },
     {
       "id": 2095,
-      "name": "Project Nightmares - Case 36",
+      "name": "Project Nightmares Case 36: Henrietta Kedward",
       "size": "3.3 GB",
-      "image": null,
+      "image": "https://media.rawg.io/media/screenshots/c15/c155043a1e3ec8d519d233020f5dea62.jpg",
       "categories": [
         "horror",
-        "adventure"
+        "adventure",
+        "action",
+        "indie",
+        "single-player"
       ],
-      "createdAt": "2025-01-15T21:50:00.000Z"
+      "createdAt": "2025-01-15T21:50:00.000Z",
+      "released": "2018-06-01",
+      "description": "A group of scientists with knowledge of the paranormal, develop a machine that allows them to induce sleep on a patient with psychic abilities and also connect them to a malignant object.\nProject Nightmares is in charge of investigating these objects, discovering their history, and attempting to eradicate their evil.\nIn this first part, we find the case of Henrietta Kedward, a toy with a dark past connects us to this terrible old woman, and we find ourselves in a nightmare set in her era, surround by terror and mystery.\nEvery time you play, Project Nightmares will be different. The design was created so that the gaming experience changes constantly. Beyond the excellent story line, the player will never know what is going to happen.",
+      "platforms": "PC",
+      "developers": "NC Studio, NC",
+      "publishers": "Feardemic, NC",
+      "playtime": "3 ساعة",
+      "website": "https://www.projectnightmares.com",
+      "updatedAt": "2025-11-25T21:00:25.085Z"
     },
     {
       "id": 2096,
