@@ -90,21 +90,6 @@
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 9,
-      "name": "Interstellar",
-      "type": "فيلم",
-      "year": "2014",
-      "rating": "8.6",
-      "image": "https://image.tmdb.org/t/p/w780/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
-      "description": "فيلم خيال علمي من إخراج كريستوفر نولان",
-      "categories": [
-        "sci-fi",
-        "drama",
-        "adventure"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
       "id": 10,
       "name": "The Avengers",
       "type": "فيلم",
