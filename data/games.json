@@ -1800,24 +1800,13 @@
       "id": 2036,
       "name": "EA SPORTS FC 26",
       "size": "54.7 GB",
-      "image": "https://media.rawg.io/media/screenshots/70f/70fb740261ef152d0d3392a9a306c9ca.jpg",
+      "image": null,
       "categories": [
         "sports",
         "simulation",
-        "multiplayer",
-        "single-player",
-        "open-world"
+        "multiplayer"
       ],
-      "createdAt": "2025-01-15T16:55:00.000Z",
-      "rating": "3",
-      "released": "2025-09-25",
-      "description": "The Club is Yours in EA SPORTS FC™ 26.\n\nPlay your way with an overhauled gameplay experience powered by community feedback. The new Authentic Gameplay option delivers the most true-to-football experience ever in Career, while the Competitive Gameplay option — driven by refined fundamentals, added consistency, and enhanced responsiveness — is tailor-made for play in Football Ultimate Team™ and Clubs.\n\nPut your dream squad to the test in Football Ultimate Team™ with new Live Events and Tournament modes, as well as a refreshed Rivals and Champs experience.\n\nExperience Manager Career like never before with all-new Manager Live Challenges. Earn rewards throughout the new season by taking on a variety of real-world scenarios and alternative storylines — ranging from a few minutes of play to multiple seasons.\n\nArchetypes inspired by the greats of the game introduce new classes to Clubs and Player Career, bringing more individuality to your player. Develop your abilities by upgrading attributes and unlocking Archetype Perks to give your player a distinct feel on the pitch.\n\nExperience The World’s Game like never before in EA SPORTS FC™ 26, with match data from the world’s top leagues powering 20,000+ authentic players.\n\nThis game includes optional in-game purchases of virtual currency that can be used to acquire virtual in-game items, including a random selection of virtual in-game items.",
-      "platforms": "PC, Xbox One, PlayStation 5",
-      "developers": "Electronic Arts Canada",
-      "publishers": "Electronic Arts",
-      "playtime": "11 ساعة",
-      "website": "https://www.ea.com/en/games/ea-sports-fc/fc-26",
-      "updatedAt": "2025-11-25T19:28:22.603Z"
+      "createdAt": "2025-01-15T16:55:00.000Z"
     },
     {
       "id": 2037,
@@ -1848,83 +1837,34 @@
       "id": 2038,
       "name": "Eternights",
       "size": "3.6 GB",
-      "image": "https://media.rawg.io/media/games/425/425a58e484eaa1230335d5b0e1732c84.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1985810/header.jpg",
       "categories": [
         "action",
         "adventure",
         "rpg",
-        "single-player",
-        "indie"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T17:05:00.000Z",
-      "rating": "3.58",
-      "released": "2023-09-12",
-      "description": "Eternights an dating action game, blending a love story with adrenaline-driven combat as you make the most out of life during the apocalypse. Scavenge for supplies, explore dungeons... and go on dates!\n\nSave the world, and find love along the way.",
-      "platforms": "PC, PlayStation 4, PlayStation 5",
-      "developers": "Studio Sai",
-      "publishers": "Studio Sai",
-      "playtime": "13 ساعة",
-      "website": "https://www.studiosai.dev/eternights",
-      "updatedAt": "2025-11-25T19:28:44.528Z"
+      "createdAt": "2025-01-15T17:05:00.000Z"
     },
     {
       "id": 2039,
       "name": "Fallout 4",
       "size": "21.6 GB",
-      "image": "https://media.rawg.io/media/games/d82/d82990b9c67ba0d2d09d4e6fa88885a7.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/377160/header.jpg",
       "categories": [
         "rpg",
         "action",
         "adventure",
         "open-world",
-        "single-player",
-        "shooter",
-        "survival"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T17:10:00.000Z",
-      "rating": "3.81",
-      "released": "2015-11-09",
-      "description": "The fourth game in the post-apocalyptic action RPG series from Bethesda studious brings players back to the retro-future. After customizing the facial features of the character, players will be admitted to the Vault 111 with their family, and tricked into entering the cryogenic capsule. After the rude awakening after the unknown amount of time has passed, the child is separated from the parents and the loving partner is killed in front of them – the main quest is settled. Now there’s only the giant open world to explore. Fallout 4 introduces the mechanics of settlement building, where players can build their own little town. Gathering material for crafting and building brings more “survival” elements into the old formula. Within their own settlements, players will be able to build all needed utilities, from storage spaces to power armor stations. Visual upgrade from the previous game brings life to what used to be brown wastelands, now filled with details and color.",
-      "platforms": "PlayStation 4, PC, PlayStation 5, Xbox One",
-      "developers": "Bethesda Game Studios",
-      "publishers": "Bethesda Softworks",
-      "metacritic": "84",
-      "playtime": "38 ساعة",
-      "website": "http://www.fallout4.com",
-      "updatedAt": "2025-11-25T19:29:01.642Z"
+      "createdAt": "2025-01-15T17:10:00.000Z"
     },
     {
       "id": 2040,
-      "name": "Far Cry New Dawn",
+      "name": "Far Cry - New Dawn",
       "size": "16.4 GB",
-      "image": "https://media.rawg.io/media/games/6d2/6d27cf9c22f2b28cf3ae706464d138f9.jpg",
-      "categories": [
-        "shooter",
-        "action",
-        "open-world",
-        "adventure",
-        "single-player",
-        "horror",
-        "survival",
-        "stealth"
-      ],
-      "createdAt": "2025-01-15T17:15:00.000Z",
-      "rating": "3.36",
-      "released": "2019-02-15",
-      "description": "Dive into a transformed vibrant post-apocalyptic Hope County, Montana, 17 years after a global nuclear catastrophe.\r\nJoin fellow survivors and lead the fight against the dangerous new threat the Highwaymen, and their ruthless leaders The Twins, as they seek to take over the last remaining resources. \r\n\r\nFIGHT FOR SURVIVAL IN A POST-APOCALYPTIC WORLD\r\n• Take up arms on your own or with a friend in two player co-op in an unpredictable and transformed world\r\n\r\nCOLLIDE AGAINST TWO ALL NEW VILLAINS\r\n• Recruit an eclectic cast of Guns and Fangs for Hire and form alliances to fight by your side against the Highwaymen's unruly leaders The Twins\r\n\r\nBUILD UP YOUR HOMEBASE AND THE SURVIVORS\r\n• Recruit Specialists to upgrade your homebase, who will help unlock all new features including crafting weapons, gear and more\r\n\r\nBATTLE FOR RESOURCES IN HOPE COUNTY AND BEYOND\r\n• Engage the Highwaymen in Turf Wars and venture on Expeditions to memorable locations across the USA",
-      "platforms": "PlayStation 4, PC, Xbox One",
-      "developers": "Ubisoft, Ubisoft Montreal",
-      "publishers": "Ubisoft Entertainment",
-      "metacritic": "73",
-      "playtime": "12 ساعة",
-      "website": "http://www.farcrygame.com",
-      "updatedAt": "2025-11-25T19:29:21.052Z"
-    },
-    {
-      "id": 2041,
-      "name": "Far Cry 3",
-      "size": "4.9 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/220240/header.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/939960/header.jpg",
       "categories": [
         "shooter",
         "action",
@@ -1932,7 +1872,35 @@
         "adventure",
         "single-player"
       ],
-      "createdAt": "2025-01-15T17:20:00.000Z"
+      "createdAt": "2025-01-15T17:15:00.000Z"
+    },
+    {
+      "id": 2041,
+      "name": "Far Cry 3",
+      "size": "4.9 GB",
+      "image": "https://media.rawg.io/media/games/15c/15c95a4915f88a3e89c821526afe05fc.jpg",
+      "categories": [
+        "shooter",
+        "action",
+        "open-world",
+        "adventure",
+        "single-player",
+        "multiplayer",
+        "rpg",
+        "survival",
+        "stealth"
+      ],
+      "createdAt": "2025-01-15T17:20:00.000Z",
+      "rating": "4.25",
+      "released": "2012-11-28",
+      "description": "Far Cry 3 is absolute madness. Being the third instalment of the franchise, it has a unique plot. Playing as Jason Brody, you will understand what it is like, to be a Rambo. Vacation on Rook Islands with your friends and family quickly turned into a complete nightmare after Vaas Montenegro kidnapping everyone from the party. Jason manages to escape the cruel pirate lord with a little help from a native supporter called Dennis. Now Brody has to save all his friends and get out of the island.\r\n\r\nTo help Jason save his friends, he will need to learn new skills. Hunting animals, crafting new weapons or different abilities in killing pirates. Skill tree has plenty to offer for the player. There are all kinds of firearms for any player, from a knife to a grenade launcher. This mechanic adds pure madness for the game process, making it very fun, fluent and full of adrenaline. Stunning views of the island, excellent surroundings and a great story make Far Cry 3 an absolute fun to play.",
+      "platforms": "Xbox One, Xbox 360, PlayStation 3, PC, PlayStation 4",
+      "developers": "Ubisoft, Ubisoft Montreal",
+      "publishers": "Ubisoft Entertainment",
+      "metacritic": "88",
+      "playtime": "16 ساعة",
+      "website": "http://farcrygame.com",
+      "updatedAt": "2025-11-25T19:29:42.163Z"
     },
     {
       "id": 2042,
