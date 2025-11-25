@@ -2574,14 +2574,22 @@
       "id": 2068,
       "name": "Layers of Fear horror reimagined",
       "size": "12.2 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/391720/header.jpg",
+      "image": "https://media.rawg.io/media/games/c80/c80e579eaa52c593652f3583f00d3d7d.jpg",
       "categories": [
         "horror",
         "adventure",
         "indie",
         "single-player"
       ],
-      "createdAt": "2025-01-15T19:35:00.000Z"
+      "createdAt": "2025-01-15T19:35:00.000Z",
+      "rating": "3.73",
+      "released": "2023-06-15",
+      "description": "Layers of Fears is a first-person psychedelic horror chronicle focused on tense exploration and immersive storytelling - a new game built upon the foundations of Layers of Fear, LOF: Inheritance, and Layers of Fear 2 with a surprising new story and gameplay direction.\n\nCreated with the cutting-edge Unreal Engine 5 technology, the game will support Ray Tracing, HDR effect, 4K resolution, and make use of the Lumen system to offer the most immersive and visceral horror experience.\n\nLayers of Fears will be the complete, definitive and at the same time unpredictable way to discover the stories of artists enslaved by their obsessions. Prepare for an exquisite horror experience thanks to the expanded plot lines that will cast a new light on the overarching narrative.\nGame features:\nBuilt upon the foundations of Layers of Fear, Layers of Fear: Inheritance, and Layers of Fear 2 with a surprising new story direction and new content\nA first-person psychological horror game focused on tense exploration and immersive storytelling\nCreated with the Unreal Engine 5 technology and supporting Ray Tracing, HDR, and 4K resolution /list]",
+      "platforms": "PlayStation 5, Xbox Series S/X, PC",
+      "developers": "Bloober Team, Anshar Studios",
+      "publishers": "Bloober Team",
+      "website": "https://layersoffears.com/",
+      "updatedAt": "2025-11-25T20:38:46.412Z"
     },
     {
       "id": 2069,
