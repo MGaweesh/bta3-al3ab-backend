@@ -1,5 +1,621 @@
 {
-  "readyToPlay": [],
-  "repack": [],
-  "online": []
+  "readyToPlay": [
+    {
+      "id": 1001,
+      "name": "Grand Theft Auto V",
+      "size": "110 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/271590/header.jpg",
+      "categories": [
+        "action",
+        "open-world",
+        "adventure",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T10:00:00.000Z"
+    },
+    {
+      "id": 1002,
+      "name": "The Witcher 3: Wild Hunt",
+      "size": "50 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/header.jpg",
+      "categories": [
+        "rpg",
+        "open-world",
+        "adventure",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T10:05:00.000Z"
+    },
+    {
+      "id": 1003,
+      "name": "Red Dead Redemption 2",
+      "size": "150 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/header.jpg",
+      "categories": [
+        "action",
+        "open-world",
+        "adventure",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T10:10:00.000Z"
+    },
+    {
+      "id": 1004,
+      "name": "Elden Ring",
+      "size": "60 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg",
+      "categories": [
+        "rpg",
+        "action",
+        "open-world",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T10:15:00.000Z"
+    },
+    {
+      "id": 1005,
+      "name": "Cyberpunk 2077",
+      "size": "70 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg",
+      "categories": [
+        "rpg",
+        "action",
+        "open-world",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T10:20:00.000Z"
+    },
+    {
+      "id": 1006,
+      "name": "Assassin's Creed Valhalla",
+      "size": "130 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2208920/header.jpg",
+      "categories": [
+        "action",
+        "open-world",
+        "adventure",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T10:25:00.000Z"
+    },
+    {
+      "id": 1007,
+      "name": "God of War",
+      "size": "70 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/header.jpg",
+      "categories": [
+        "action",
+        "adventure",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T10:30:00.000Z"
+    },
+    {
+      "id": 1008,
+      "name": "Horizon Zero Dawn",
+      "size": "100 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1151640/header.jpg",
+      "categories": [
+        "action",
+        "open-world",
+        "adventure",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T10:35:00.000Z"
+    },
+    {
+      "id": 1009,
+      "name": "Spider-Man Remastered",
+      "size": "75 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1817070/header.jpg",
+      "categories": [
+        "action",
+        "open-world",
+        "adventure",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T10:40:00.000Z"
+    },
+    {
+      "id": 1010,
+      "name": "Resident Evil 4 Remake",
+      "size": "60 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2050650/header.jpg",
+      "categories": [
+        "action",
+        "horror",
+        "adventure",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T10:45:00.000Z"
+    },
+    {
+      "id": 1011,
+      "name": "Baldur's Gate 3",
+      "size": "122 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg",
+      "categories": [
+        "rpg",
+        "adventure",
+        "strategy",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T10:50:00.000Z"
+    },
+    {
+      "id": 1012,
+      "name": "Hogwarts Legacy",
+      "size": "85 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/990080/header.jpg",
+      "categories": [
+        "rpg",
+        "open-world",
+        "adventure",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T10:55:00.000Z"
+    },
+    {
+      "id": 1013,
+      "name": "Starfield",
+      "size": "125 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1716740/header.jpg",
+      "categories": [
+        "rpg",
+        "open-world",
+        "adventure",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T11:00:00.000Z"
+    },
+    {
+      "id": 1014,
+      "name": "Alan Wake 2",
+      "size": "90 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1659590/header.jpg",
+      "categories": [
+        "action",
+        "horror",
+        "adventure",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T11:05:00.000Z"
+    },
+    {
+      "id": 1015,
+      "name": "Marvel's Spider-Man: Miles Morales",
+      "size": "75 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1817190/header.jpg",
+      "categories": [
+        "action",
+        "open-world",
+        "adventure",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T11:10:00.000Z"
+    }
+  ],
+  "repack": [
+    {
+      "id": 2001,
+      "name": "Call of Duty: Modern Warfare III",
+      "size": "200 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2519060/header.jpg",
+      "categories": [
+        "shooter",
+        "action",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": 2002,
+      "name": "Forza Horizon 5",
+      "size": "110 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1551360/header.jpg",
+      "categories": [
+        "racing",
+        "open-world",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T12:05:00.000Z"
+    },
+    {
+      "id": 2003,
+      "name": "Microsoft Flight Simulator",
+      "size": "150 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1250410/header.jpg",
+      "categories": [
+        "simulation",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T12:10:00.000Z"
+    },
+    {
+      "id": 2004,
+      "name": "Final Fantasy VII Remake",
+      "size": "100 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1462040/header.jpg",
+      "categories": [
+        "rpg",
+        "adventure",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T12:15:00.000Z"
+    },
+    {
+      "id": 2005,
+      "name": "Death Stranding",
+      "size": "80 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1190460/header.jpg",
+      "categories": [
+        "action",
+        "adventure",
+        "open-world",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T12:20:00.000Z"
+    },
+    {
+      "id": 2006,
+      "name": "Monster Hunter: World",
+      "size": "50 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/582010/header.jpg",
+      "categories": [
+        "action",
+        "rpg",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T12:25:00.000Z"
+    },
+    {
+      "id": 2007,
+      "name": "The Last of Us Part I",
+      "size": "75 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1888930/header.jpg",
+      "categories": [
+        "action",
+        "adventure",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T12:30:00.000Z"
+    },
+    {
+      "id": 2008,
+      "name": "Final Fantasy XVI",
+      "size": "90 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2509040/header.jpg",
+      "categories": [
+        "rpg",
+        "action",
+        "adventure",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T12:35:00.000Z"
+    },
+    {
+      "id": 2009,
+      "name": "Armored Core VI: Fires of Rubicon",
+      "size": "60 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1888160/header.jpg",
+      "categories": [
+        "action",
+        "shooter",
+        "single-player",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T12:40:00.000Z"
+    },
+    {
+      "id": 2010,
+      "name": "Lies of P",
+      "size": "30 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1627720/header.jpg",
+      "categories": [
+        "action",
+        "rpg",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T12:45:00.000Z"
+    },
+    {
+      "id": 2011,
+      "name": "Remnant II",
+      "size": "85 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1282100/header.jpg",
+      "categories": [
+        "action",
+        "shooter",
+        "rpg",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T12:50:00.000Z"
+    },
+    {
+      "id": 2012,
+      "name": "Diablo IV",
+      "size": "90 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2314300/header.jpg",
+      "categories": [
+        "rpg",
+        "action",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T12:55:00.000Z"
+    },
+    {
+      "id": 2013,
+      "name": "Star Wars Jedi: Survivor",
+      "size": "155 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1774580/header.jpg",
+      "categories": [
+        "action",
+        "adventure",
+        "open-world",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T13:00:00.000Z"
+    },
+    {
+      "id": 2015,
+      "name": "Atomic Heart",
+      "size": "90 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/668580/header.jpg",
+      "categories": [
+        "action",
+        "rpg",
+        "adventure",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T13:10:00.000Z"
+    }
+  ],
+  "online": [
+    {
+      "id": 3001,
+      "name": "Counter-Strike 2",
+      "size": "85 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg",
+      "categories": [
+        "shooter",
+        "action",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T14:00:00.000Z"
+    },
+    {
+      "id": 3002,
+      "name": "Dota 2",
+      "size": "50 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/570/header.jpg",
+      "categories": [
+        "strategy",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T14:05:00.000Z"
+    },
+    {
+      "id": 3003,
+      "name": "PUBG: BATTLEGROUNDS",
+      "size": "40 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/578080/header.jpg",
+      "categories": [
+        "shooter",
+        "action",
+        "multiplayer",
+        "survival"
+      ],
+      "createdAt": "2025-01-15T14:10:00.000Z"
+    },
+    {
+      "id": 3004,
+      "name": "Apex Legends",
+      "size": "75 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1172470/header.jpg",
+      "categories": [
+        "shooter",
+        "action",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T14:15:00.000Z"
+    },
+    {
+      "id": 3005,
+      "name": "Rust",
+      "size": "25 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/252490/header.jpg",
+      "categories": [
+        "survival",
+        "action",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T14:20:00.000Z"
+    },
+    {
+      "id": 3006,
+      "name": "Team Fortress 2",
+      "size": "20 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/440/header.jpg",
+      "categories": [
+        "shooter",
+        "action",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T14:25:00.000Z"
+    },
+    {
+      "id": 3007,
+      "name": "Tom Clancy's Rainbow Six Siege",
+      "size": "60 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/359550/header.jpg",
+      "categories": [
+        "shooter",
+        "action",
+        "multiplayer",
+        "strategy"
+      ],
+      "createdAt": "2025-01-15T14:30:00.000Z"
+    },
+    {
+      "id": 3008,
+      "name": "Valorant",
+      "size": "30 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1274570/header.jpg",
+      "categories": [
+        "shooter",
+        "action",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T14:35:00.000Z"
+    },
+    {
+      "id": 3009,
+      "name": "Destiny 2",
+      "size": "105 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg",
+      "categories": [
+        "shooter",
+        "rpg",
+        "action",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T14:40:00.000Z"
+    },
+    {
+      "id": 3010,
+      "name": "Warframe",
+      "size": "50 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/230410/header.jpg",
+      "categories": [
+        "action",
+        "shooter",
+        "rpg",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T14:45:00.000Z"
+    },
+    {
+      "id": 3011,
+      "name": "Path of Exile",
+      "size": "35 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/238960/header.jpg",
+      "categories": [
+        "rpg",
+        "action",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T14:50:00.000Z"
+    },
+    {
+      "id": 3012,
+      "name": "War Thunder",
+      "size": "45 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/236390/header.jpg",
+      "categories": [
+        "action",
+        "simulation",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T14:55:00.000Z"
+    },
+    {
+      "id": 3013,
+      "name": "Rocket League",
+      "size": "25 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/252950/header.jpg",
+      "categories": [
+        "sports",
+        "racing",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T15:00:00.000Z"
+    },
+    {
+      "id": 3014,
+      "name": "Among Us",
+      "size": "1 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/945360/header.jpg",
+      "categories": [
+        "multiplayer",
+        "puzzle",
+        "indie"
+      ],
+      "createdAt": "2025-01-15T15:05:00.000Z"
+    },
+    {
+      "id": 3015,
+      "name": "Fall Guys",
+      "size": "3 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1097150/header.jpg",
+      "categories": [
+        "multiplayer",
+        "platformer",
+        "indie"
+      ],
+      "createdAt": "2025-01-15T15:10:00.000Z"
+    },
+    {
+      "id": 3016,
+      "name": "Palworld",
+      "size": "40 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1623730/header.jpg",
+      "categories": [
+        "action",
+        "survival",
+        "multiplayer",
+        "open-world"
+      ],
+      "createdAt": "2025-01-15T15:15:00.000Z"
+    },
+    {
+      "id": 3017,
+      "name": "Helldivers 2",
+      "size": "100 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/553850/header.jpg",
+      "categories": [
+        "shooter",
+        "action",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T15:20:00.000Z"
+    },
+    {
+      "id": 3018,
+      "name": "Lost Ark",
+      "size": "85 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1599340/header.jpg",
+      "categories": [
+        "rpg",
+        "action",
+        "adventure",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T15:25:00.000Z"
+    },
+    {
+      "id": 3019,
+      "name": "Genshin Impact",
+      "size": "120 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1518810/header.jpg",
+      "categories": [
+        "rpg",
+        "action",
+        "adventure",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T15:30:00.000Z"
+    },
+    {
+      "id": 3020,
+      "name": "World of Warcraft",
+      "size": "100 GB",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1812820/header.jpg",
+      "categories": [
+        "rpg",
+        "adventure",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T15:35:00.000Z"
+    }
+  ]
 }

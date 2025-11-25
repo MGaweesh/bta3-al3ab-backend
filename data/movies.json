@@ -179,21 +179,6 @@
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 13,
-      "name": "Avatar",
-      "type": "فيلم",
-      "year": "2009",
-      "rating": "7.8",
-      "image": "https://image.tmdb.org/t/p/w780/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg",
-      "description": "فيلم خيال علمي ومغامرات من إخراج جيمس كاميرون",
-      "categories": [
-        "sci-fi",
-        "action",
-        "adventure"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
       "id": 14,
       "name": "Dune",
       "type": "فيلم",
@@ -281,20 +266,6 @@
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 20,
-      "name": "Titanic",
-      "type": "فيلم",
-      "year": "1997",
-      "rating": "7.8",
-      "image": "https://image.tmdb.org/t/p/w780/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
-      "description": "فيلم رومانسي ودراما من إخراج جيمس كاميرون",
-      "categories": [
-        "romance",
-        "drama"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
       "id": 21,
       "name": "Goodfellas",
       "type": "فيلم",
@@ -306,21 +277,6 @@
         "crime",
         "drama",
         "thriller"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 22,
-      "name": "The Departed",
-      "type": "فيلم",
-      "year": "2006",
-      "rating": "8.5",
-      "image": "https://image.tmdb.org/t/p/w780/nT97ifVT2J1yMQme8x9VXXkReXz.jpg",
-      "description": "فيلم جريمة وإثارة من إخراج مارتن سكورسيزي",
-      "categories": [
-        "crime",
-        "thriller",
-        "drama"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
