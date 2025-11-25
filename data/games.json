@@ -2472,12 +2472,25 @@
       "id": 2064,
       "name": "Indiana Jones and the Great Circle",
       "size": "64.2 GB",
-      "image": null,
+      "image": "https://media.rawg.io/media/games/824/824c0f8d6a591ef5828d7546664fc87c.jpg",
       "categories": [
         "action",
-        "adventure"
+        "adventure",
+        "shooter",
+        "single-player",
+        "open-world",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T19:15:00.000Z"
+      "createdAt": "2025-01-15T19:15:00.000Z",
+      "rating": "4.33",
+      "released": "2024-12-09",
+      "description": "Uncover one of history’s greatest mysteries in a first-person, single-player adventure. The year is 1937, sinister forces are scouring the globe for the secret to an ancient power connected to the Great Circle, and only one person can stop them - Indiana Jones™.\n\nLive the adventure as Indy in a thrilling story full of exploration, immersive action, and intriguing puzzles. As the brilliant archaeologist – famed for his keen intellect, cunning resourcefulness, and trademark humor – you will travel the world in a race against enemy forces to discover the secrets to one of the greatest mysteries of all time.\n\nTravel from the halls of Marshall College to the heart of the Vatican, the pyramids of Egypt, the sunken temples of Sukhothai, and beyond. When a break-in in the dead of night ends in a confrontation with a mysterious colossal man, you must set out to discover the world-shattering secret behind the theft of a seemingly unimportant artifact. Forging new alliances and facing familiar enemies, you’ll engage with intriguing characters, use guile and wits to solve ancient riddles, and survive intense set-pieces.",
+      "platforms": "PC, PlayStation 5, Xbox Series S/X",
+      "developers": "Machine Games",
+      "publishers": "Bethesda Softworks",
+      "playtime": "12 ساعة",
+      "website": "https://indianajones.bethesda.net/",
+      "updatedAt": "2025-11-25T20:13:20.204Z"
     },
     {
       "id": 2065,
