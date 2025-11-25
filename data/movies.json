@@ -510,26 +510,16 @@
       "id": 8,
       "name": "Dexter",
       "type": "مسلسل",
-      "year": "2006",
+      "year": "2006-2013",
       "rating": "8.6",
-      "seasons": "8",
-      "image": "https://m.media-amazon.com/images/M/MV5BMTQ3YmQ4YzMtOTkyZC00YmM5LThhZjEtM2E0MjFkNTc0OGJhXkEyXkFqcGc@._V1_SX300.jpg",
+      "seasons": 8,
+      "image": "https://image.tmdb.org/t/p/w780/1j9s2DlClQABlpKXDbOyX7V8SDt.jpg",
       "categories": [
         "crime",
         "drama",
         "thriller"
       ],
-      "updatedAt": "2025-11-25T15:14:26.037Z",
-      "rate": "8.6",
-      "genre": "Crime, Drama, Mystery",
-      "writer": "James Manos Jr.",
-      "actors": "Michael C. Hall, Jennifer Carpenter, David Zayas",
-      "plot": "He's smart, he's good looking, and he's got a great sense of humor. He's Dexter Morgan, everyone's favorite serial killer. As a Miami forensics expert, he spends his days solving crimes, and nights committing them. But Dexter lives by a strict code of honor that is both his saving grace and lifelong burden. Torn between his deadly compulsion and his desire for true happiness, Dexter is a man in profound conflict with the world and himself. Golden Globe winner Michael C. Hall stars in the hit SHOWTIME Original Series.",
-      "runtime": "53 min",
-      "language": "English, Spanish",
-      "country": "United States",
-      "awards": "Won 4 Primetime Emmys. 56 wins & 202 nominations total",
-      "imdbVotes": "892,729"
+      "updatedAt": "2025-01-16T00:35:00.000Z"
     },
     {
       "id": 9,
@@ -569,21 +559,13 @@
       "type": "مسلسل",
       "year": "2024",
       "rating": "7.5",
-      "seasons": "1",
-      "image": "https://m.media-amazon.com/images/M/MV5BNzI0NjllMTItNzQ1OC00YjQzLWFhMTgtNDM5MmQ5OGUwZmRkXkEyXkFqcGc@._V1_SX300.jpg",
+      "seasons": 1,
+      "image": null,
       "categories": [
         "action",
         "drama"
       ],
-      "updatedAt": "2025-11-25T15:14:42.269Z",
-      "rate": "7.1",
-      "genre": "Action, Drama, Thriller",
-      "writer": "Dave Boyle",
-      "actors": "Kento Kaku, Yôsuke Eguchi, Tae Kimura",
-      "plot": "The Tawara family, the last shinobi clan. It had abandoned its roots after an incident in the past, but now the family must take on the greatest crisis in Japanese history, one that threatens to shake the nation to its core.",
-      "language": "Japanese",
-      "country": "Japan",
-      "imdbVotes": "8,290"
+      "updatedAt": "2025-01-16T00:50:00.000Z"
     },
     {
       "id": 12,
@@ -606,14 +588,23 @@
       "type": "مسلسل",
       "year": "2023",
       "rating": "7.0",
-      "seasons": 1,
-      "image": null,
+      "seasons": "1",
+      "image": "https://m.media-amazon.com/images/M/MV5BZmE4ZGMzMzktYzkwMy00NTZiLWFjYzktNzA4MmI4NGEyZTkzXkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "thriller",
         "crime",
         "drama"
       ],
-      "updatedAt": "2025-01-16T01:00:00.000Z"
+      "updatedAt": "2025-11-25T15:14:58.435Z",
+      "rate": "6.6",
+      "genre": "Action, Crime, Drama",
+      "writer": "Eric Garcia",
+      "actors": "Giancarlo Esposito, Rufus Sewell, Paz Vega",
+      "plot": "Spanning 24 years, Jigsaw centers around the largest heist ever attempted, and the vengeance, scheming, loyalties, and betrayals that surround it. It's loosely inspired by the real-life story where seventy billion dollars in bonds went missing in downtown Manhattan during Hurricane Sandy.",
+      "language": "English",
+      "country": "United States",
+      "awards": "3 nominations total",
+      "imdbVotes": "46,300"
     },
     {
       "id": 14,
