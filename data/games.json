@@ -29,9 +29,9 @@
     },
     {
       "id": 1003,
-      "name": "Assassin's Creed - Origins",
+      "name": "Assassin's Creed Origins",
       "size": "70 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/582160/header.jpg",
+      "image": "https://media.rawg.io/media/games/336/336c6bd63d83cf8e59937ab8895d1240.jpg",
       "categories": [
         "action",
         "adventure",
@@ -39,7 +39,17 @@
         "open-world",
         "single-player"
       ],
-      "createdAt": "2025-01-15T10:10:00.000Z"
+      "createdAt": "2025-01-15T10:10:00.000Z",
+      "rating": "3.97",
+      "released": "2017-10-27",
+      "description": "Assassin's Creed Origins is an open-world action game developed by Ubisoft. It further continues the series after Assassin's Creed Syndicate.\r\n\r\nThe story is set in two time periods simultaneously. In 2017, the order of Templars has recovered an ancient artifact that will allow them to seize control over humanity. Assassins plan to get the artifact back in their hands. Layla Hassan relieves the memories of two ancient Egyptians named Bayek and Aya who create the Assassins order.\r\n\r\nLevels are open-ended which allows both stealth or open combat approaches. Players are put in an open world in which they can complete quests in order to either progress through the story, level their character up or upgrade their equipment. The \"eagle vision\" mode was replaced by an eagle by the name of Senu. Players can use Senu to scout the area ahead and highlight enemies.\r\n\r\nThe game features a heavily revised combat system that relies on hit-box mechanics rather than pre-determined animations as it did in the previous titles. Origins focuses on introducing various types of enemies that the players will have to learn about in order to defeat them.",
+      "platforms": "Xbox One, PC, PlayStation 4",
+      "developers": "Ubisoft, Ubisoft Montreal",
+      "publishers": "Ubisoft Entertainment",
+      "metacritic": "81",
+      "playtime": "28 ساعة",
+      "website": "https://www.assassinscreed.ubi.com",
+      "updatedAt": "2025-11-25T14:17:13.822Z"
     },
     {
       "id": 1004,
