@@ -1342,49 +1342,61 @@
     },
     {
       "id": 2017,
-      "name": "Call of Duty: Modern Warfare III",
+      "name": "Call of Duty Modern Warfare 3",
       "size": "21.6 GB",
-      "image": "https://media.rawg.io/media/games/b17/b17ce7ab3187cc3f42d263d9511adac0.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2519060/header.jpg",
       "categories": [
         "shooter",
         "action",
-        "multiplayer",
-        "single-player",
-        "open-world"
+        "multiplayer"
       ],
-      "createdAt": "2025-01-15T15:20:00.000Z",
-      "rating": "3.16",
-      "released": "2023-11-09",
-      "description": "ADAPT OR DIE IN A FIGHT AGAINST THE ULTIMATE THREAT\n\nIn the direct sequel to the record-breaking Call of Duty®: Modern Warfare® II, Captain Price and Task Force 141 face off against the ultimate threat. The ultranationalist war criminal Vladimir Makarov is extending his grasp across the world causing Task Force 141 to fight like never before.\n\nIT’S TIME TO SETTLE OLD SCORES AND START NEW ONES\n\nModern Warfare® III celebrates the 20th anniversary of Call of Duty® with one of the greatest collections of Multiplayer maps ever assembled - both fan favorites and all new ones. All 16 launch maps from the original Modern Warfare® 2 (2009) have been modernized with new modes and gameplay features and will be available at launch to get everyone started, while over 12 all-new core 6v6 maps will fuel post-launch live seasons.\n\nALL NEW OPEN WORLD ZOMBIES\n\nFor the first time, team up with other squads to survive and fight massive hordes of the undead in the largest Call of Duty® Zombies map ever. Modern Warfare® Zombies (MWZ) tells a new Treyarch Zombies story with missions, core Zombies features, and secrets to discover.",
-      "platforms": "PC, Xbox One, PlayStation 5, Xbox Series S/X, PlayStation 4",
-      "developers": "Raven Software, Treyarch, Infinity Ward, Beenox, Sledgehammer Games, High Moon Studios, Demonware",
-      "publishers": "Activision Blizzard, Activision Value Publishing",
-      "website": "https://www.callofduty.com",
-      "updatedAt": "2025-11-25T18:12:04.509Z"
+      "createdAt": "2025-01-15T15:20:00.000Z"
     },
     {
       "id": 2018,
-      "name": "Clair Obscur Expedition 33",
+      "name": "Clair Obscur: Expedition 33",
       "size": "36.7 GB",
-      "image": null,
+      "image": "https://media.rawg.io/media/games/466/4667f17fdee9ebbcea2049e54f8e2b96.jpg",
       "categories": [
         "action",
-        "adventure"
+        "adventure",
+        "rpg",
+        "single-player"
       ],
-      "createdAt": "2025-01-15T15:25:00.000Z"
+      "createdAt": "2025-01-15T15:25:00.000Z",
+      "rating": "4.52",
+      "released": "2025-04-24",
+      "description": "Once a year, the Paintress wakes and paints upon her monolith. Paints her cursed number. And everyone of that age turns to smoke and fades away. Year by year, that number ticks down and more of us are erased. Tomorrow she’ll wake and paint “33.” And tomorrow we depart on our final mission - Destroy the Paintress, so she can never paint death again.\n\nWe are Expedition 33.",
+      "platforms": "PC, PlayStation 5, Xbox Series S/X",
+      "developers": "Sundial Interactive, Sandfall Interactive",
+      "publishers": "Kepler Interactive",
+      "playtime": "47 ساعة",
+      "website": "https://www.expedition33.com",
+      "updatedAt": "2025-11-25T18:12:30.354Z"
     },
     {
       "id": 2019,
       "name": "Control DLC",
       "size": "18 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/870780/header.jpg",
+      "image": "https://media.rawg.io/media/games/253/2534a46f3da7fa7c315f1387515ca393.jpg",
       "categories": [
         "action",
         "adventure",
         "horror",
-        "single-player"
+        "single-player",
+        "shooter"
       ],
-      "createdAt": "2025-01-15T15:30:00.000Z"
+      "createdAt": "2025-01-15T15:30:00.000Z",
+      "rating": "4.15",
+      "released": "2019-08-27",
+      "description": "Control is a surrealist low-fantasy game about a secret organization that deals with the paranormal activities.\r\n\r\n###Plot\r\nThe game follows Jesse Faden, a woman with superhuman powers. She works with the Federal Bureau of Control, a secret governmental organization that deals with the paranormal phenomena, often by annihilating it as a threat. The Bureau headquarters, known as the Oldest House, is taken over by a supernatural power called the Hiss. The director of Bureau, Zachariah Trench, is killed, and Faden is unexpectedly promoted to his place, while the ghost of her predecessor haunts her. She has to travel the endless corridors of the Oldest House and defeat the Hiss using magical Director's Pistol. \r\n\r\n###Setting\r\nMost of the game takes place in the FBC building, which is a high-rise on Manhattan. The Oldest House is a non-euclidian space, which is larger on the inside. Its corridors and rooms change shape and positions depending on the rituals its inhabitants perform. The Oldest House stores the magical artifacts called Altered Items.\r\n\r\n###Gameplay\r\nThe player controls Faden from the third person view. To defeat her enemies, she uses various superhuman powers, such as telekinesis or levitation. She also wields the shape-shifting Director's Pistol and the magic artifacts she can obtain as a reward for completing quests. Jesse's skills grow throughout the game. \r\n\r\nThere is no multiplayer mode.",
+      "platforms": "Xbox Series S/X, PlayStation 5, Xbox One, PlayStation 4, PC",
+      "developers": "505 Games, Remedy Entertainment",
+      "publishers": "505 Games",
+      "metacritic": "84",
+      "playtime": "6 ساعة",
+      "website": "https://www.controlgame.com",
+      "updatedAt": "2025-11-25T18:12:50.080Z"
     },
     {
       "id": 2020,
@@ -1465,52 +1477,29 @@
       "id": 2023,
       "name": "Dead Cells",
       "size": "2 GB",
-      "image": "https://media.rawg.io/media/games/f90/f90ee1a4239247a822771c40488e68c5.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/588650/header.jpg",
       "categories": [
         "action",
         "indie",
         "platformer",
         "roguelike",
-        "single-player",
-        "rpg"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T15:50:00.000Z",
-      "rating": "4.24",
-      "released": "2018-08-07",
-      "description": "Dead Cells is a roguelike adventure title developed by Motion Twin.\n\n###Story\nNot much story is present in the game, as only bits of any information are given out to the players. The game takes place at a remote island, where the players take place of the Prisoner. The Prisoner does not speak, yet he can express confusion and frustration using his body language. The Prisoner is basically immortal, as, in case of death, his head disconnects itself from the Prisoner's body, and gets back to the game's starting area. \n\n###Gameplay\nThe game's heavily inspired by The Binding of Isaac, as stated by the developers.\n\nDead Cells features the procedurally generated environments that are typical for roguelike games, yet it puts a strong emphasis on exploration that is typically found in metroidvanias.\n\nThe players set out to explore the island where a prison was built. As the players come down into the dungeons of the island, they find various loot, fight dangerous creatures, collect armor, abilities, and power-ups. Upon death, the players lose all the loot they had on them. It is possible to find a shopkeep somewhere in the dungeons to purchase new equipment or have some rest. \n\nThe game uses death as a learning experience, as it randomizes the placement of enemies, so the players can't take multiple attempts to complete a level. The developers want the player to examine the enemy behavior and learn how to combat the enemies themselves.",
-      "platforms": "Xbox One, Nintendo Switch, PlayStation 4, macOS, Linux, iOS, PC",
-      "developers": "Plug In Digital, Playdigious, Motion Twin",
-      "publishers": "Plug In Digital, Playdigious, Motion Twin",
-      "metacritic": "88",
-      "playtime": "10 ساعة",
-      "website": "https://dead-cells.com/",
-      "updatedAt": "2025-11-25T18:14:22.602Z"
+      "createdAt": "2025-01-15T15:50:00.000Z"
     },
     {
       "id": 2024,
       "name": "Dead Island 2",
       "size": "37 GB",
-      "image": "https://media.rawg.io/media/games/9cd/9cd22ae5aebd922f96f2bc50efab83df.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/534380/header.jpg",
       "categories": [
         "action",
         "adventure",
         "horror",
         "survival",
-        "multiplayer",
-        "single-player",
-        "shooter"
+        "multiplayer"
       ],
-      "createdAt": "2025-01-15T15:55:00.000Z",
-      "rating": "3.71",
-      "released": "2023-04-21",
-      "description": "A deadly virus is spreading across Los Angeles, California, turning its inhabitants into ravenous zombies. The city is in quarantine and the military have retreated. Bitten, infected, but more than just immune, you learn to harness the zombie inside. Only you, and the handful of other swaggering fellows who happen to be resistant to the pathogen, holds the future of LA (and humanity), in the balance. As you uncover the truth behind the outbreak you’ll discover who – or what – you are. Survive, evolve, save the world – just another day in LA! The much-loved zombie saga is back with a unique formula of horror, dark humor and over the top zombie-slaying, spanning an epic pulp adventure. Dead Island 2 is a thrilling First-Person Action RPG that takes players across a brand-new playground. Stylish, vibrant and flooded with zombie infection, explore iconic, gore-drenched Los Angeles. Meet larger-than-life characters. Slay countless foes in exquisitely bloody detail. And evolve to become the ultimate Zombie Slayer. See you in HELL-A!",
-      "platforms": "PC, Xbox Series S/X, PlayStation 4, PlayStation 5, Xbox One",
-      "developers": "Dambuster Studios",
-      "publishers": "Deep Silver",
-      "metacritic": "75",
-      "playtime": "11 ساعة",
-      "website": "http://deadisland2.deepsilver.com/",
-      "updatedAt": "2025-11-25T18:14:37.803Z"
+      "createdAt": "2025-01-15T15:55:00.000Z"
     },
     {
       "id": 2025,
@@ -1538,16 +1527,28 @@
     },
     {
       "id": 2026,
-      "name": "DEATH STRANDING DIRECTORS CUT",
+      "name": "Death Stranding Director's Cut",
       "size": "46.6 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1850570/header.jpg",
+      "image": "https://media.rawg.io/media/games/b6f/b6fa0cde8a1204c7d6edc2ec3c753df9.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
-        "single-player"
+        "single-player",
+        "multiplayer",
+        "horror",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T16:05:00.000Z"
+      "createdAt": "2025-01-15T16:05:00.000Z",
+      "rating": "4.27",
+      "released": "2021-09-24",
+      "description": "Sam Bridges must brave a world utterly transformed by the Death Stranding. Carrying the stranded remnants of the future in his hands, Sam embarks on a journey to reunite the shattered world one step at a time. What is the mystery of the Death Stranding? What will Sam discover on the road ahead? A genre defining gameplay experience holds these answers and more.",
+      "platforms": "PC, macOS, iOS, PlayStation 5",
+      "developers": "Kojima Productions",
+      "publishers": "Sony Interactive Entertainment, 505 Games",
+      "playtime": "5 ساعة",
+      "website": "https://www.playstation.com/en-us/games/death-stranding-directors-cut/",
+      "updatedAt": "2025-11-25T18:15:26.939Z"
     },
     {
       "id": 2027,
