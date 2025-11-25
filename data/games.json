@@ -2,16 +2,28 @@
   "readyToPlay": [
     {
       "id": 1001,
-      "name": "Assassin`s Creed Unity",
+      "name": "Assassin's Creed Unity",
       "size": "40.3 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/289650/header.jpg",
+      "image": "https://media.rawg.io/media/games/59f/59fc1c5de1d29cb9234741c97d250150.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
-        "single-player"
+        "single-player",
+        "multiplayer",
+        "rpg",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T10:00:00.000Z"
+      "createdAt": "2025-01-15T10:00:00.000Z",
+      "rating": "3.63",
+      "released": "2014-11-11",
+      "platforms": "PlayStation 4, PC, Xbox One",
+      "developers": "Ubisoft, Ubisoft Montreal, Ubisoft Toronto, Ubisoft Montpellier",
+      "publishers": "Ubisoft Entertainment",
+      "metacritic": "71",
+      "playtime": "14 ساعة",
+      "website": "http://www.assassinscreed.com",
+      "updatedAt": "2025-11-25T14:38:36.197Z"
     },
     {
       "id": 1002,
@@ -270,26 +282,16 @@
     },
     {
       "id": 1013,
-      "name": "Assassin’s Creed Rogue",
+      "name": "Assassin's Creed Rogue",
       "size": "11 GB",
-      "image": "https://media.rawg.io/media/games/3c4/3c4a44ed99c87c56e0cdcfaaaf5c3628.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/311560/header.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
-        "single-player",
-        "stealth"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T11:00:00.000Z",
-      "rating": "3.72",
-      "released": "2014-11-11",
-      "platforms": "Xbox 360, PlayStation 3, Nintendo Switch, Xbox One, PlayStation 4, PC",
-      "developers": "Ubisoft, Ubisoft Kiev, Ubisoft Sofia",
-      "publishers": "Ubisoft Entertainment",
-      "metacritic": "74",
-      "playtime": "12 ساعة",
-      "website": "http://assassinscreed.ubi.com/",
-      "updatedAt": "2025-11-25T14:38:11.971Z"
+      "createdAt": "2025-01-15T11:00:00.000Z"
     },
     {
       "id": 1014,
