@@ -2965,16 +2965,29 @@
     },
     {
       "id": 2084,
-      "name": "Murdered - Soul Suspect",
+      "name": "Murdered: Soul Suspect",
       "size": "5.7 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/238010/header.jpg",
+      "image": "https://media.rawg.io/media/games/54a/54a3e4c617217848dc43c4de9989fe37.jpg",
       "categories": [
         "adventure",
         "action",
         "horror",
-        "single-player"
+        "single-player",
+        "rpg",
+        "open-world",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T20:55:00.000Z"
+      "createdAt": "2025-01-15T20:55:00.000Z",
+      "rating": "3.47",
+      "released": "2014-06-03",
+      "description": "The hero is a policeman, talented and devoted to duty. But there is a clarification - this is a dead policeman, killed because of his work, but he did not leave the world, he turned into a ghost and did not lose his passion for investigations.\nA hero can do many things in our world, but not all. Can be present everywhere and even pass through the walls (but not in closed houses, only through open doors and windows). Can see what ordinary people see, read, think. But he can not take and move things, cannot talk with living people - for actions with objects and communication he has to find a girl-medium.\nIn the game, you need to collect evidence and draw conclusions from this. Ways to extract proof are sometimes very exotic. For example, a hero can penetrate the memory of a witness and find there information that the witness himself cannot remember. The hero can meet other ghosts, who were once people and killed - after talking with them, you can learn about the circumstances of this.\nFinding evidence and reasoning is not the only thing that you have to do. The hero can be killed a second time, and it will be definitive - some disembodied beings seek to destroy the hero's soul. But they are vulnerable, and the hero can kill them.",
+      "platforms": "Xbox One, PC, PlayStation 4, PlayStation 3, Xbox 360",
+      "developers": "Square Enix, Airtight Games",
+      "publishers": "Square Enix",
+      "metacritic": "59",
+      "playtime": "5 ساعة",
+      "website": "http://www.murdered.com",
+      "updatedAt": "2025-11-25T21:14:21.400Z"
     },
     {
       "id": 2085,
