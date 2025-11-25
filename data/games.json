@@ -1850,17 +1850,30 @@
     },
     {
       "id": 2040,
-      "name": "Far Cry - New Dawn",
+      "name": "Far Cry New Dawn",
       "size": "16.4 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/939960/header.jpg",
+      "image": "https://media.rawg.io/media/games/6d2/6d27cf9c22f2b28cf3ae706464d138f9.jpg",
       "categories": [
         "shooter",
         "action",
         "open-world",
         "adventure",
-        "single-player"
+        "single-player",
+        "horror",
+        "survival",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T17:15:00.000Z"
+      "createdAt": "2025-01-15T17:15:00.000Z",
+      "rating": "3.36",
+      "released": "2019-02-15",
+      "description": "Dive into a transformed vibrant post-apocalyptic Hope County, Montana, 17 years after a global nuclear catastrophe.\r\nJoin fellow survivors and lead the fight against the dangerous new threat the Highwaymen, and their ruthless leaders The Twins, as they seek to take over the last remaining resources. \r\n\r\nFIGHT FOR SURVIVAL IN A POST-APOCALYPTIC WORLD\r\n• Take up arms on your own or with a friend in two player co-op in an unpredictable and transformed world\r\n\r\nCOLLIDE AGAINST TWO ALL NEW VILLAINS\r\n• Recruit an eclectic cast of Guns and Fangs for Hire and form alliances to fight by your side against the Highwaymen's unruly leaders The Twins\r\n\r\nBUILD UP YOUR HOMEBASE AND THE SURVIVORS\r\n• Recruit Specialists to upgrade your homebase, who will help unlock all new features including crafting weapons, gear and more\r\n\r\nBATTLE FOR RESOURCES IN HOPE COUNTY AND BEYOND\r\n• Engage the Highwaymen in Turf Wars and venture on Expeditions to memorable locations across the USA",
+      "platforms": "PlayStation 4, PC, Xbox One",
+      "developers": "Ubisoft, Ubisoft Montreal",
+      "publishers": "Ubisoft Entertainment",
+      "metacritic": "73",
+      "playtime": "12 ساعة",
+      "website": "http://www.farcrygame.com",
+      "updatedAt": "2025-11-25T19:20:32.585Z"
     },
     {
       "id": 2041,
