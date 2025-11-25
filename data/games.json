@@ -4050,13 +4050,24 @@
       "id": 2129,
       "name": "Titanfall 2",
       "size": "22 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1237970/header.jpg",
+      "image": "https://media.rawg.io/media/games/569/56978b5a77f13aa2ec5d09ec81d01cad.jpg",
       "categories": [
         "shooter",
         "action",
-        "multiplayer"
+        "multiplayer",
+        "single-player"
       ],
-      "createdAt": "2025-01-16T00:40:00.000Z"
+      "createdAt": "2025-01-16T00:40:00.000Z",
+      "rating": "4.31",
+      "released": "2016-10-28",
+      "description": "Now Titanfall 2 has a full-scale story campaign. The main plot is the confrontation of the people's Militia against the IMC Corporation, which seeks to destroy the rebels of the Frontier, a region of star systems that will allow them to get control over their resources.\r\n\r\nYou play as Jack Cooper, a soldier who dreams of becoming an elite pilot with advanced technology and a personal Titan - a fighting machine. Captain Tai Lastimosa trained Cooper and prepared for his candidacy. During the task of finding the missing Major Anderson, who had the information about the plans of the IMC. The entire squad of Cooper, including Lastimosa, dies in the attack of IMC mercenaries. The Captain gives his Titan to Cooper.\r\n\r\nAs the first part of the game, it is a first-person shooter in which you can control the pilot and exoskeleton \"Titan\". The pilot has a diverse arsenal of abilities that allow you to jump and run on steep walls with the help of the \"jump pilot module\". These abilities can be used with each other to move through the game locations quickly.\r\n\r\nWith enough points, the player can call the Titan, landing from the sky. They are much slower than pilots but have more powerful weapons.",
+      "platforms": "Xbox One, PlayStation 4, PC",
+      "developers": "Respawn Entertainment",
+      "publishers": "Electronic Arts",
+      "metacritic": "87",
+      "playtime": "5 ساعة",
+      "website": "https://www.ea.com/games/titanfall/titanfall-2",
+      "updatedAt": "2025-11-25T22:31:40.532Z"
     },
     {
       "id": 2130,
