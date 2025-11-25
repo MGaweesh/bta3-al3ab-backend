@@ -61,19 +61,6 @@
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 18,
-      "name": "Schindler's List",
-      "type": "فيلم",
-      "year": "1993",
-      "rating": "8.9",
-      "image": "https://image.tmdb.org/t/p/w780/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
-      "description": "فيلم دراما تاريخي من إخراج ستيفن سبيلبرغ",
-      "categories": [
-        "drama"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
       "id": 19,
       "name": "The Lion King",
       "type": "فيلم",
