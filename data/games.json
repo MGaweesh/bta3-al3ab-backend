@@ -1001,7 +1001,7 @@
       "publishers": "Focus Home Interactive, Focus Entertainment",
       "playtime": "5 ساعة",
       "website": "https://www.focus-home.com/en-us/games/a-plague-tale-requiem",
-      "updatedAt": "2025-11-25T19:52:43.051Z"
+      "updatedAt": "2025-11-25T19:52:46.966Z"
     },
     {
       "id": 2003,
@@ -1959,14 +1959,13 @@
       "createdAt": "2025-01-15T17:20:00.000Z",
       "rating": "4.25",
       "released": "2012-11-28",
-      "description": "Far Cry 3 is absolute madness. Being the third instalment of the franchise, it has a unique plot. Playing as Jason Brody, you will understand what it is like, to be a Rambo. Vacation on Rook Islands with your friends and family quickly turned into a complete nightmare after Vaas Montenegro kidnapping everyone from the party. Jason manages to escape the cruel pirate lord with a little help from a native supporter called Dennis. Now Brody has to save all his friends and get out of the island.\r\n\r\nTo help Jason save his friends, he will need to learn new skills. Hunting animals, crafting new weapons or different abilities in killing pirates. Skill tree has plenty to offer for the player. There are all kinds of firearms for any player, from a knife to a grenade launcher. This mechanic adds pure madness for the game process, making it very fun, fluent and full of adrenaline. Stunning views of the island, excellent surroundings and a great story make Far Cry 3 an absolute fun to play.",
       "platforms": "Xbox One, Xbox 360, PlayStation 3, PC, PlayStation 4",
       "developers": "Ubisoft, Ubisoft Montreal",
       "publishers": "Ubisoft Entertainment",
       "metacritic": "88",
       "playtime": "16 ساعة",
       "website": "http://farcrygame.com",
-      "updatedAt": "2025-11-25T19:58:47.202Z"
+      "updatedAt": "2025-11-25T20:01:41.979Z"
     },
     {
       "id": 2042,
@@ -1993,51 +1992,26 @@
       "id": 2043,
       "name": "Forza Horizon 3",
       "size": "27.4 GB",
-      "image": "https://media.rawg.io/media/games/30a/30afe3a3cb06849dc032ef3b9295f180.jpg",
+      "image": null,
       "categories": [
         "racing",
         "sports",
-        "simulation",
-        "action",
-        "single-player",
-        "multiplayer",
-        "open-world"
+        "simulation"
       ],
-      "createdAt": "2025-01-15T17:30:00.000Z",
-      "rating": "4.37",
-      "released": "2016-09-27",
-      "description": "Forza Horizon 3 is a racing open-world game developed by Playground Games. It is a part of a large Forza series including 11 titles in it with Horizon 3 being the 9th heading in the row. It is, however, uncertain to claim that there is a unified narrative in racing games, so all 11 titles more likely represent one universe, but do not come in specific order.\r\nAs mentioned earlier, the title series does not follow a distinct storyline. Speaking of surroundings, nonetheless, it is safe to say, that the Horizon 3's scene is an Australia. The previous chapters of racing have pushed a narrative about the players being a participator of Horizon Festival. Now the protagonist becomes a host of the event, so they must play organizing roles, too. For example, hire drivers and adjust the racing grounds.\r\nThere are some events players can be a part of.  For example, drifting competition, Bucket List challenges and time trials. All of them utilize the same mechanics of getting to the finish line as fast as possible. There are more than 350 cars available, let alone DLC ones. 4-person co-op included along with multiplatform races between PC and Xbox One.",
-      "platforms": "PC, Xbox One",
-      "developers": "Playground Games",
-      "publishers": "Microsoft Studios",
-      "metacritic": "88",
-      "website": "https://forza.net/horizon",
-      "updatedAt": "2025-11-25T19:53:55.636Z"
+      "createdAt": "2025-01-15T17:30:00.000Z"
     },
     {
       "id": 2044,
       "name": "Forza Horizon 5",
       "size": "84.6 GB",
-      "image": "https://media.rawg.io/media/games/082/082365507ff04d456c700157072d35db.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1551360/header.jpg",
       "categories": [
         "racing",
         "sports",
         "simulation",
-        "multiplayer",
-        "action",
-        "single-player",
-        "open-world"
+        "multiplayer"
       ],
-      "createdAt": "2025-01-15T17:35:00.000Z",
-      "rating": "4.3",
-      "released": "2021-11-08",
-      "description": "Your Ultimate Horizon Adventure awaits! Explore the vibrant and ever-evolving open world landscapes of Mexico with limitless, fun driving action in hundreds of the world’s greatest cars.\r\nExplore a world of striking contrast and beauty. Discover living deserts, lush jungles, historic cities, hidden ruins, pristine beaches, vast canyons and a towering snow-capped volcano.\r\nImmerse yourself in a deep campaign with hundreds of challenges that reward you for engaging in the activities you love. Meet new characters and choose the outcomes of their Horizon Story missions.\r\nTake on awe-inspiring weather events like towering dust storms and intense tropical storms as Mexico’s unique, dynamic seasons change the world every week. Keep coming back for new events, challenges, collectibles, and rewards, and new areas to explore.\r\nTeam up with other players and enter the Horizon Arcade for a continuing series of fun, over-the-top challenges that keep you and your friends in the action and having fun with no menus, loading screens or lobbies.\r\nCreate your own expressions of fun with the new EventLab gameplay toolset including custom races, challenges, stunts, and new game modes. Customize your cars in more ways than ever before. Use the Gift Drops feature to share your custom creations.",
-      "platforms": "PC, iOS, Xbox One, PlayStation 5, Xbox Series S/X",
-      "developers": "Playground Games",
-      "publishers": "Xbox Game Studios",
-      "playtime": "15 ساعة",
-      "website": "https://forza.net/horizon",
-      "updatedAt": "2025-11-25T19:54:13.636Z"
+      "createdAt": "2025-01-15T17:35:00.000Z"
     },
     {
       "id": 2045,
@@ -2066,23 +2040,14 @@
       "id": 2046,
       "name": "Ghostrunner",
       "size": "7.5 GB",
-      "image": "https://media.rawg.io/media/games/957/957154d665ae676b00c0859551c733b1.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1139900/header.jpg",
       "categories": [
         "action",
         "adventure",
         "platformer",
         "single-player"
       ],
-      "createdAt": "2025-01-15T17:45:00.000Z",
-      "rating": "3.84",
-      "released": "2020-10-27",
-      "description": "Enter an intense cyberpunk world and experience fierce, dynamic combat! Conquer your enemies in the physical world and in cyberspace. Hunt for answers inhumanity’s last remaining shelter.\n\nAscend humanity’s last remaining shelter, a great tower-city. The tower is torn by violence, poverty, and chaos. Conquer your enemies, discover the secrets of the superstructure and your own origin and obtain the power to challenge The Keymaster. \n\nThe game takes place in the future, after a global cataclysm where the remains of humanity live in a tower built by The Architect, who died mysteriously years ago. Everyone knows the truth, no one says it aloud.\n\nThe world ruled by The Keymaster is harsh. A person’s worth depends on the category of implants they have, defining their whole lives. The implants—given to them in childhood—determine which social group a person belongs to. If you weren’t lucky enough to get a good life, there is nothing you can do.\n\nIt's no surprise that a rebellion starts.\n\nYou are a cyber-warrior, the only one capable of fighting both in the physical world and in cyberspace. Lost and hunted, thrown into the middle of the conflict, you must use this bond with technology to ascend the tower.\n\nAs you climb higher, secrets are revealed. The clock starts ticking on a race to uncover the mystery behind the structure that houses humanity’s last hope. Solve the riddle or be killed—there is no other option.",
-      "platforms": "PlayStation 5, Xbox Series S/X, PlayStation 4, Nintendo Switch, PC, Xbox One",
-      "developers": "3D Realms, One More Level, Slipgate Ironworks™",
-      "publishers": "All in! Games",
-      "playtime": "4 ساعة",
-      "website": "https://ghostrunnergame.com/",
-      "updatedAt": "2025-11-25T19:54:30.587Z"
+      "createdAt": "2025-01-15T17:45:00.000Z"
     },
     {
       "id": 2047,
@@ -2202,9 +2167,9 @@
     },
     {
       "id": 2052,
-      "name": "GRIS",
+      "name": "Gris",
       "size": "964 MB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/683320/header.jpg",
+      "image": "https://media.rawg.io/media/games/51c/51c430f1795c79b78f863a9f22dc422d.jpg",
       "categories": [
         "adventure",
         "indie",
@@ -2212,12 +2177,43 @@
         "puzzle",
         "single-player"
       ],
-      "createdAt": "2025-01-15T18:15:00.000Z"
+      "createdAt": "2025-01-15T18:15:00.000Z",
+      "rating": "4.2",
+      "released": "2018-12-13",
+      "description": "Gris is a hopeful young girl lost in her own world, dealing with a painful experience in her life. Her journey through sorrow is manifested in her dress, which grants new abilities to better navigate her faded reality. As the story unfolds, Gris will grow emotionally and see her world in a different way, revealing new paths to explore using her new abilities.\r\nGRIS is a serene and evocative experience, free of danger, frustration or death. Players will explore a meticulously designed world brought to life with delicate art, detailed animation, and an elegant original score. Through the game light puzzles, platforming sequences, and optional skill-based challenges will reveal themselves as more of Gris’s world becomes accessible.",
+      "platforms": "Android, macOS, PC, iOS, Xbox One, PlayStation 5, Xbox Series S/X, PlayStation 4, Nintendo Switch",
+      "developers": "Nomada Studio",
+      "publishers": "Devolver Digital",
+      "metacritic": "83",
+      "playtime": "3 ساعة",
+      "website": "https://nomada.studio/",
+      "updatedAt": "2025-11-25T19:55:09.100Z"
     },
     {
       "id": 2053,
-      "name": "GTA San Andreas Definitive Edition",
+      "name": "Grand Theft Auto: San Andreas – The Definitive Edition",
       "size": "13 GB",
+      "image": "https://media.rawg.io/media/games/ae3/ae3ba4e4d73ab8ec9dd6bfd8ab9d4efb.jpg",
+      "categories": [
+        "action",
+        "adventure",
+        "open-world",
+        "single-player"
+      ],
+      "createdAt": "2025-01-15T18:20:00.000Z",
+      "rating": "3.08",
+      "released": "2021-11-11",
+      "description": "Five years ago, Carl ‘CJ’ Johnson escaped the haze of Los Santos, San Andreas...a city tearing itself apart with gang trouble, drugs, and corruption. Now, it's the early 90s. CJ’s got to go home - his mother has been murdered, his family has fallen apart, and his childhood friends are all heading towards disaster. On his return to the neighborhood, a couple of cops frame him for homicide, forcing CJ on a journey that takes him across the entire state of San Andreas, to save his family and to take control of the streets in the next iteration of the series that changed everything.",
+      "platforms": "PlayStation 5, Xbox Series S/X, PC, PlayStation 4, Nintendo Switch, Xbox One, PS Vita",
+      "developers": "Rockstar Games, Grove Street Games",
+      "publishers": "Rockstar Games",
+      "playtime": "3 ساعة",
+      "updatedAt": "2025-11-25T19:55:33.182Z"
+    },
+    {
+      "id": 2054,
+      "name": "GTA Vice City Definitive Edition",
+      "size": "6.5 GB",
       "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1546970/header.jpg",
       "categories": [
         "action",
@@ -2225,92 +2221,91 @@
         "open-world",
         "single-player"
       ],
-      "createdAt": "2025-01-15T18:20:00.000Z"
-    },
-    {
-      "id": 2054,
-      "name": "Grand Theft Auto: Vice City – The Definitive Edition",
-      "size": "6.5 GB",
-      "image": "https://media.rawg.io/media/games/a0d/a0d4405596639b3fe4de603f4489755e.jpg",
-      "categories": [
-        "action",
-        "adventure",
-        "open-world",
-        "single-player",
-        "shooter",
-        "racing"
-      ],
-      "createdAt": "2025-01-15T18:25:00.000Z",
-      "rating": "3.7",
-      "released": "2021-11-11",
-      "description": "Welcome to the 1980s. From the decade of big hair and pastel suits comes the story of one man's rise to the top of the criminal pile. Grand Theft Auto returns with Tommy Vercetti’s tale of betrayal and revenge in a neon-soaked tropical town full of excess and brimming with possibilities.",
-      "platforms": "PlayStation 5, Xbox Series S/X, PlayStation 4, PC, Xbox One, Nintendo Switch",
-      "developers": "Rockstar Games, Grove Street Games",
-      "publishers": "Rockstar Games",
-      "playtime": "4 ساعة",
-      "updatedAt": "2025-11-25T19:55:57.127Z"
+      "createdAt": "2025-01-15T18:25:00.000Z"
     },
     {
       "id": 2055,
-      "name": "Hades",
+      "name": "HADES",
       "size": "5 GB",
-      "image": "https://media.rawg.io/media/games/1f4/1f47a270b8f241e4676b14d39ec620f7.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/header.jpg",
       "categories": [
         "action",
         "indie",
         "roguelike",
-        "single-player",
-        "adventure",
-        "rpg"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T18:30:00.000Z",
-      "rating": "4.43",
-      "released": "2020-09-17",
-      "description": "Hades is a rogue-like dungeon crawler that combines the best aspects of Supergiant's critically acclaimed titles, including the fast-paced action of Bastion, the rich atmosphere and depth of Transistor, and the character-driven storytelling of Pyre.\n\nBATTLE OUT OF HELL\nAs the immortal Prince of the Underworld, you'll wield the powers and mythic weapons of Olympus to break free from the clutches of the god of the dead himself, while growing stronger and unraveling more of the story with each unique escape attempt.\n\nUNLEASH THE FURY OF OLYMPUS\nThe Olympians have your back! Meet Zeus, Athena, Poseidon, and many more, and choose from their dozens of powerful Boons that enhance your abilities. There are thousands of viable character builds to discover as you go.\n\nBEFRIEND GODS, GHOSTS, AND MONSTERS\nA fully-voiced cast of colorful, larger-than-life characters is waiting to meet you! Grow your relationships with them, and experience hundreds of unique story events as you learn about what's really at stake for this big, dysfunctional family.\n\nBUILT FOR REPLAYABILITY\nNew surprises await each time you delve into the ever-shifting Underworld, whose guardian bosses will remember you. Use the powerful Mirror of Night to grow permanently stronger, and give yourself a leg up the next time you run away from home.\n\nNOTHING IS IMPOSSIBLE\nPermanent upgrades mean you don't have to be a god yourself to experience the exciting combat and gripping story. Though, if you happen to be one, crank up the challenge and get ready for some white-knuckle action that will put your well-practiced skills to the test.\n\nSIGNATURE SUPERGIANT STYLE\nThe rich, atmospheric presentation and unique melding of gameplay and narrative that's been core to Supergiant's games is here in full force: spectacular hand-painted Underworld environments and a blood-pumping original score bring the Underworld to life.",
-      "platforms": "PlayStation 5, Xbox Series S/X, PlayStation 4, Nintendo Switch, PC, Xbox One",
-      "developers": "Supergiant Games",
-      "publishers": "Supergiant Games",
-      "metacritic": "93",
-      "playtime": "10 ساعة",
-      "website": "https://www.supergiantgames.com/games/hades/",
-      "updatedAt": "2025-11-25T19:56:43.924Z"
+      "createdAt": "2025-01-15T18:30:00.000Z"
     },
     {
       "id": 2056,
       "name": "Hell is Us",
       "size": "16.5 GB",
-      "image": null,
+      "image": "https://media.rawg.io/media/games/60b/60b7561ab47a7c0853ae983d419b47cb.jpg",
       "categories": [
         "action",
-        "adventure"
+        "adventure",
+        "single-player",
+        "rpg",
+        "open-world"
       ],
-      "createdAt": "2025-01-15T18:35:00.000Z"
+      "createdAt": "2025-01-15T18:35:00.000Z",
+      "rating": "3.29",
+      "released": "2025-09-04",
+      "description": "If war is the closest we get to hell on earth, it's because Earth harbours the worst of demons: humankind. In an isolated country ravaged by infighting, discover the secrets of your past and deal with the repercussions of a mysterious calamity.",
+      "platforms": "PC, Xbox Series S/X, PlayStation 5",
+      "developers": "Rogue Factor",
+      "publishers": "Nacon",
+      "playtime": "5 ساعة",
+      "website": "https://hell-is-us.com/",
+      "updatedAt": "2025-11-25T19:57:01.478Z"
     },
     {
       "id": 2057,
-      "name": "Hellblade Senuas Sacrifice Enhanced",
+      "name": "Hellblade: Senua's Sacrifice",
       "size": "7.4 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/414340/header.jpg",
+      "image": "https://media.rawg.io/media/games/63f/63f0e68688cad279ed38cde931dbfcdb.jpg",
       "categories": [
         "action",
         "adventure",
         "horror",
-        "single-player"
+        "single-player",
+        "indie"
       ],
-      "createdAt": "2025-01-15T18:40:00.000Z"
+      "createdAt": "2025-01-15T18:40:00.000Z",
+      "rating": "4.22",
+      "released": "2017-08-07",
+      "description": "A dark fantasy game that takes inspiration from Scandinavian and Celtic folklore, Hellblade is set in a gritty barbarian world full of weird wooden structures and creepily masked enemies. \r\n\r\nThe player assumes the role of Senua, a traumatized female warrior from the Pict tribe. She suffers from a growing psychosis after her lover Dillion was brutally murdered by Vikings. Carrying his severed head, Senua sets out to Helheim, the underworld of the dead, to bring her lover's soul back. Her grim and bloody journey mirrors her descent into madness. It becomes increasingly difficult for her (and, thus, the player) to tell fact from fantasy, as she hears voices in her head and sees hallucinations. \r\n\r\nWhen not fighting her enemies, Senua has to solve puzzles to move forward. This is where her distorted perception actually comes out handy, enabling her to \"focus\" and see what regular people can not. The ghostly voices, recorded using the binaural method to create an eery effect, also help to guide Senua or to warn her about dangers. All of Senua movements, expressions and reactions were recorded through motion capture to make them more realistic and emotional.",
+      "platforms": "Xbox One, Nintendo Switch, PlayStation 4, PC",
+      "developers": "Ninja Theory",
+      "publishers": "Ninja Theory",
+      "metacritic": "83",
+      "playtime": "6 ساعة",
+      "website": "http://www.hellblade.com/",
+      "updatedAt": "2025-11-25T19:57:28.333Z"
     },
     {
       "id": 2058,
       "name": "High on Life",
       "size": "30 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1583230/header.jpg",
+      "image": "https://media.rawg.io/media/games/2e7/2e732a02c29c84ca177855848932a5aa.jpg",
       "categories": [
         "shooter",
         "action",
         "adventure",
-        "single-player"
+        "single-player",
+        "multiplayer",
+        "open-world"
       ],
-      "createdAt": "2025-01-15T18:45:00.000Z"
+      "createdAt": "2025-01-15T18:45:00.000Z",
+      "rating": "3.82",
+      "released": "2022-12-13",
+      "description": "From the mind of Justin Roiland (Rick and Morty, Solar Opposites) comes High On Life. Humanity is being threatened by an alien cartel who wants to use them as drugs. It’s up to you to rescue and partner with charismatic, talking guns, take down Garmantuous and his gang, and save the world!",
+      "platforms": "PlayStation 5, PC, PlayStation 4, Xbox Series S/X",
+      "developers": "Squanch Games",
+      "publishers": "Squanch Games",
+      "playtime": "4 ساعة",
+      "website": "https://squanchgames.com/high-on-life/",
+      "updatedAt": "2025-11-25T19:57:46.558Z"
     },
     {
       "id": 2059,
