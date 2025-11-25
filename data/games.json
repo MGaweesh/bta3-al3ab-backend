@@ -1502,27 +1502,15 @@
       "id": 2024,
       "name": "Dead Island 2",
       "size": "37 GB",
-      "image": "https://media.rawg.io/media/games/9cd/9cd22ae5aebd922f96f2bc50efab83df.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/534380/header.jpg",
       "categories": [
         "action",
         "adventure",
         "horror",
         "survival",
-        "multiplayer",
-        "single-player",
-        "shooter"
+        "multiplayer"
       ],
-      "createdAt": "2025-01-15T15:55:00.000Z",
-      "rating": "3.71",
-      "released": "2023-04-21",
-      "description": "A deadly virus is spreading across Los Angeles, California, turning its inhabitants into ravenous zombies. The city is in quarantine and the military have retreated. Bitten, infected, but more than just immune, you learn to harness the zombie inside. Only you, and the handful of other swaggering fellows who happen to be resistant to the pathogen, holds the future of LA (and humanity), in the balance. As you uncover the truth behind the outbreak you’ll discover who – or what – you are. Survive, evolve, save the world – just another day in LA! The much-loved zombie saga is back with a unique formula of horror, dark humor and over the top zombie-slaying, spanning an epic pulp adventure. Dead Island 2 is a thrilling First-Person Action RPG that takes players across a brand-new playground. Stylish, vibrant and flooded with zombie infection, explore iconic, gore-drenched Los Angeles. Meet larger-than-life characters. Slay countless foes in exquisitely bloody detail. And evolve to become the ultimate Zombie Slayer. See you in HELL-A!",
-      "platforms": "PC, Xbox Series S/X, PlayStation 4, PlayStation 5, Xbox One",
-      "developers": "Dambuster Studios",
-      "publishers": "Deep Silver",
-      "metacritic": "75",
-      "playtime": "11 ساعة",
-      "website": "http://deadisland2.deepsilver.com/",
-      "updatedAt": "2025-11-25T19:11:46.363Z"
+      "createdAt": "2025-01-15T15:55:00.000Z"
     },
     {
       "id": 2025,
@@ -1622,79 +1610,96 @@
     },
     {
       "id": 2029,
-      "name": "Detroit - Become Human",
+      "name": "Detroit: Become Human",
       "size": "23 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1222140/header.jpg",
+      "image": "https://media.rawg.io/media/games/951/951572a3dd1e42544bd39a5d5b42d234.jpg",
       "categories": [
         "adventure",
         "action",
         "single-player"
       ],
-      "createdAt": "2025-01-15T16:20:00.000Z"
+      "createdAt": "2025-01-15T16:20:00.000Z",
+      "rating": "4.33",
+      "released": "2018-05-25",
+      "description": "In the future world, androids do almost everything that people do - they even start to think and feel. Although no one taught them this.\r\n\r\nThe plot of \"Become Human\" is built around three characters, each with a separate storyline, but they eventually merge into a single picture.\r\n\r\nConnor is a police investigator and android. He has a simple task - to find androids, deviated from the path given by humans. He has a special vision, it allows him to see events as they happened. And the more information he collects, the higher his chances of acting correctly.\r\n\r\nKara is an android-housekeeper which spontaneously develops self-consciousness. As a result, Kara assumes responsibility for the fate of the little girl whom she worked as a sitter for. She, along with the girl, escapes from the house as a result of a conflict with her father, the owner of Kara.\r\n\r\nMarkus is a caretaker android. He also acquired self-consciousness and came to the idea that androids need freedom. He has the ability to grant androids free will and to calculate the consequences of some actions.\r\n\r\nThe story develops depending on the decisions taken by the characters. Some decisions have to be made quickly. Sometimes a player can return to the moment of making a choice and replay the situation.",
+      "platforms": "PC, PlayStation 4",
+      "developers": "Quantic Dream",
+      "publishers": "Sony Computer Entertainment, Quantic Dream",
+      "metacritic": "79",
+      "playtime": "10 ساعة",
+      "website": "https://www.quanticdream.com/en/detroit-become-human",
+      "updatedAt": "2025-11-25T19:12:16.335Z"
     },
     {
       "id": 2030,
-      "name": "Deus Ex - Mankind Divided",
+      "name": "Deus Ex: Mankind Divided",
       "size": "25.1 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/337000/header.jpg",
+      "image": "https://media.rawg.io/media/games/00d/00d374f12a3ab5f96c500a2cfa901e15.jpg",
       "categories": [
         "shooter",
         "action",
         "adventure",
         "rpg",
-        "single-player"
+        "single-player",
+        "open-world",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T16:25:00.000Z"
+      "createdAt": "2025-01-15T16:25:00.000Z",
+      "rating": "3.96",
+      "released": "2016-08-22",
+      "description": "Deus Ex: Mankind Divided is currently the last entry in the Deus Ex franchise. It was two years after the accident in Human Revolution, where augmented people started to act uncontrollable and aggressive. As it turns out, a rogue group called Illuminati made it look like a proof for their instability and now augmented people are living like outcasts. \r\n\r\nWe follow Adam Jensen once again as he works as a double agent for Interpol and a hackers group called Juggernaut Collective to confront the Illuminati and reveal the truth.\r\n\r\nThe core gameplay of Mankind Divided hasn't changed much except minor changes like no need for batteries anymore because your energy bar slowly regenerates itself back and a non-killing politic. You can beat the game without killing anyone making Mankind Divided a big morality question for the player as he walks it through.",
+      "platforms": "Linux, PC, Xbox One, macOS, PlayStation 4",
+      "developers": "Eidos Montreal",
+      "publishers": "Square Enix, Feral Interactive",
+      "metacritic": "83",
+      "playtime": "7 ساعة",
+      "website": "http://www.deusex.com/",
+      "updatedAt": "2025-11-25T19:12:38.280Z"
     },
     {
       "id": 2031,
       "name": "Devil May Cry 5",
       "size": "27.4 GB",
-      "image": "https://media.rawg.io/media/games/9fb/9fbf956a16249def7625ab5dc3d09515.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/601150/header.jpg",
       "categories": [
         "action",
         "adventure",
         "single-player"
       ],
-      "createdAt": "2025-01-15T16:30:00.000Z",
-      "rating": "4.25",
-      "released": "2019-03-08",
-      "description": "Devil May Cry 5 is the sixth game in the Devil May Cry franchise and the fifth in its main series. \n\n###Plot\nThe game continues the plot of Devil May Cry 2. The demonic threat seems to have been forgotten, but the demons return, and there are new accidents around the world. Nero and Dante have parted ways, and Nero established his own agency. He also received a new robotic arm made by his engineer Nico. It replaces his Devil Bringer prosthetic that was stolen by a villain. At the beginning of the game, Nero rides his van to Red Grave City in which a demonic tree appeared. At the same time, Dante has a new client, a mysterious V, who hires him to investigate the demonic attacks.\n\n###Gameplay\nAs usual in the Devil May Cry series, the player controls his or her character from the third person view. The game features three playable characters. Dante and Nero make a return, and V is newly introduced. Each of the three characters has a unique fighting style. Nero's prosthetic hand allows him to use a variety of options, such as pulling his enemies closer. Nero also uses his legendary weapons, the gun called “Blue Rose” and the sword named “Red Queen”. Dante, as usual, fights with his swords Rebellion and Sparda, as well as a variety of new weapons, such as chainsaws and a motorcycle. V uses a walking cane as a weapon.",
-      "platforms": "PlayStation 5, Xbox One, PC, PlayStation 4",
-      "developers": "Capcom",
-      "publishers": "Capcom",
-      "metacritic": "88",
-      "playtime": "9 ساعة",
-      "website": "http://www.devilmaycry5.com/",
-      "updatedAt": "2025-11-25T19:12:54.633Z"
+      "createdAt": "2025-01-15T16:30:00.000Z"
     },
     {
       "id": 2032,
       "name": "Disco Elysium",
       "size": "6.8 GB",
-      "image": "https://media.rawg.io/media/games/840/8408ad3811289a6a5830cae60fb0b62a.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/632470/header.jpg",
       "categories": [
         "rpg",
         "adventure",
         "indie",
         "single-player"
       ],
-      "createdAt": "2025-01-15T16:35:00.000Z",
-      "rating": "4.37",
-      "released": "2019-10-14",
-      "description": "Disco Elysium is a groundbreaking blend of hardboiled cop show and isometric RPG. Solve a massive, open ended case in a unique urban fantasy setting. Kick in doors, interrogate suspects, or just get lost exploring the gorgeously rendered city of Revachol and unraveling its mysteries. Tough choices need to be made. What kind of cop you are — is up to you.\r\n\r\nYou play a disgraced lieutenant detective in Revachol West, a shore town where corruption’s out of control, murders go unsolved, and the kids just wanna dance. Kick in doors, interrogate suspects, or get lost exploring a gorgeously rendered city and unraveling its mysteries. All the while, tensions rise around you as Revachol threatens to explode.\r\n\r\nDisco Elysium’s completely original skill system makes your innermost feelings, doubts, and memories an integral part of every conversation. Level up your rational faculties, sharpen your wits, or give in to your basest instincts. What kind of cop you are is up to you.",
-      "platforms": "PC, macOS, Xbox One, Nintendo Switch, PlayStation 4, Xbox Series S/X, PlayStation 5",
-      "developers": "ZA/UM",
-      "metacritic": "91",
-      "playtime": "6 ساعة",
-      "website": "http://zaumstudio.com/",
-      "updatedAt": "2025-11-25T19:13:15.571Z"
+      "createdAt": "2025-01-15T16:35:00.000Z"
     },
     {
       "id": 2033,
-      "name": "Dying Light: The Following - Enhanced Edition",
+      "name": "Dying Light - The Following EE",
       "size": "12.8 GB",
-      "image": "https://media.rawg.io/media/games/c11/c11a0b92b4c28f2e0db489f430142653.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/534380/header.jpg",
+      "categories": [
+        "action",
+        "adventure",
+        "horror",
+        "survival",
+        "multiplayer"
+      ],
+      "createdAt": "2025-01-15T16:40:00.000Z"
+    },
+    {
+      "id": 2034,
+      "name": "Dying Light 2 Stay Human",
+      "size": "23.7 GB",
+      "image": "https://media.rawg.io/media/games/73d/73db43df633477d4604c7248292f34b2.jpg",
       "categories": [
         "action",
         "adventure",
@@ -1704,34 +1709,19 @@
         "rpg",
         "single-player",
         "open-world",
-        "shooter",
         "stealth"
       ],
-      "createdAt": "2025-01-15T16:40:00.000Z",
-      "rating": "4.13",
-      "released": "2015-01-26",
-      "description": "Dying Light series introduces a world that was hit by a zombie virus outbreak. Under the daylight, zombies are weak and slow, but after the sunset, they become fast, strong and hungry for human flesh. You play as Kyle Crane, a special operative sent to the Harran city, which became a quarantined zone after the outbreak. In the expansion pack The Following, he learns about a cure for the plague, supposedly invented by a sect, and sets off to find out more about it. Crane will travel the countryside open world that is twice the size of the original game’s map. To fight off zombies, Crane will use not only a variety of weapons but also parkour movements, which are the definitive feature in Dying Light gameplay.\nThe Following introduces new weapons, several new game modes, such as bounty hunting which gives the player a new mission every day. The expansion allows the player to drive a buggy to run zombies over. There is a four-person multiplayer mode, and also the “Be the Zombie” mode, in which players can assume the role of a huge, powerful zombie. The Enhanced Edition includes the original game, the expansion pack, and all the available DLCs, such as Cuisine & Cargo and The Bozak Horde.",
-      "platforms": "macOS, Xbox One, PlayStation 4, PC, Linux",
+      "createdAt": "2025-01-15T16:45:00.000Z",
+      "rating": "3.65",
+      "released": "2022-02-04",
+      "description": "Dying Light 2 brings to life a unique post-apocalyptic vision of the Modern Dark Ages - a brutal, bleak and unforgiving reality where you are as likely to perish at the hand of a human as you are by the infected. \r\n\r\nIn this exhausted world, your quick thinking, exceptional parkour abilities and brutal combat skills are the only things that let you dive into darkness and emerge alive. Make morally grey decisions and witness how they impact the world at multiple levels, shape the transformation of the City, and ultimately decide its fate.",
+      "platforms": "PC, Xbox One, Xbox Series S/X, PlayStation 4, Nintendo Switch, PlayStation 5",
       "developers": "Techland",
-      "publishers": "Techland Publishing, Techland",
-      "metacritic": "87",
-      "playtime": "17 ساعة",
-      "website": "http://www.dyinglightgame.com/",
-      "updatedAt": "2025-11-25T19:13:36.005Z"
-    },
-    {
-      "id": 2034,
-      "name": "Dying Light 2 Stay Human",
-      "size": "23.7 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/534380/header.jpg",
-      "categories": [
-        "action",
-        "adventure",
-        "horror",
-        "survival",
-        "multiplayer"
-      ],
-      "createdAt": "2025-01-15T16:45:00.000Z"
+      "publishers": "Techland Publishing",
+      "metacritic": "77",
+      "playtime": "23 ساعة",
+      "website": "https://dyinglightgame.com/",
+      "updatedAt": "2025-11-25T19:14:08.206Z"
     },
     {
       "id": 2035,
