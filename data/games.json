@@ -1,1952 +1,1011 @@
 {
-  "readyToPlay": [
+  "movies": [
     {
       "id": 1,
-      "name": "Assassin's Creed's collections",
-      "size": "359GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/812140/header.jpg",
+      "name": "The Shawshank Redemption",
+      "type": "فيلم",
+      "year": "1994",
+      "rating": "9.3",
+      "image": "https://image.tmdb.org/t/p/w780/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
+      "description": "فيلم دراما كلاسيكي من أفضل الأفلام على الإطلاق",
       "categories": [
-        "action",
-        "open-world",
-        "adventure",
-        "stealth",
-        "single-player"
+        "drama"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 2,
-      "name": "Battlefield V",
-      "size": "50.6GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1090590/header.jpg",
+      "name": "The Godfather",
+      "type": "فيلم",
+      "year": "1972",
+      "rating": "9.2",
+      "image": "https://image.tmdb.org/t/p/w780/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+      "description": "فيلم جريمة من أفضل الأفلام في التاريخ",
       "categories": [
-        "fighting",
-        "action",
-        "shooter",
-        "single-player",
-        "multiplayer"
+        "crime",
+        "drama",
+        "thriller"
       ],
-      "updatedAt": "2025-11-22T00:33:21.453Z"
+      "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 3,
-      "name": "BioShock Infinite - The Complete Edition",
-      "size": "38.3GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/8870/header.jpg",
+      "name": "The Dark Knight",
+      "type": "فيلم",
+      "year": "2008",
+      "rating": "9.0",
+      "image": "https://image.tmdb.org/t/p/w780/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+      "description": "فيلم حركة وإثارة من بطولة كريستيان بيل",
       "categories": [
-        "shooter",
         "action",
-        "adventure",
-        "single-player"
+        "thriller",
+        "crime"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 4,
-      "name": "BioShock Remastered",
-      "size": "18GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/409710/header.jpg",
+      "name": "Pulp Fiction",
+      "type": "فيلم",
+      "year": "1994",
+      "rating": "8.9",
+      "image": "https://image.tmdb.org/t/p/w780/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg",
+      "description": "فيلم جريمة وإثارة من إخراج كوينتن تارانتينو",
       "categories": [
-        "shooter",
-        "action",
-        "horror",
-        "adventure",
-        "single-player"
+        "crime",
+        "thriller",
+        "drama"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 5,
-      "name": "Dishonored - Death of the Outsider",
-      "size": "23.8GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/614570/header.jpg",
+      "name": "The Lord of the Rings: The Return of the King",
+      "type": "فيلم",
+      "year": "2003",
+      "rating": "8.9",
+      "image": "https://image.tmdb.org/t/p/w780/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
+      "description": "فيلم خيال علمي ومغامرات من سلسلة سيد الخواتم",
       "categories": [
-        "action",
+        "fantasy",
+        "sci-fi",
         "adventure",
-        "stealth",
-        "single-player"
+        "action"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 6,
-      "name": "eFootball PES 2021",
-      "size": "31.8GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1259970/header.jpg",
+      "name": "Fight Club",
+      "type": "فيلم",
+      "year": "1999",
+      "rating": "8.8",
+      "image": "https://image.tmdb.org/t/p/w780/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
+      "description": "فيلم دراما وإثارة من بطولة براد بيت",
       "categories": [
-        "sports",
-        "multiplayer",
-        "single-player"
+        "drama",
+        "thriller",
+        "action"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 7,
-      "name": "Far Cry 5",
-      "size": "24GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/552520/header.jpg",
+      "name": "Inception",
+      "type": "فيلم",
+      "year": "2010",
+      "rating": "8.8",
+      "image": "https://image.tmdb.org/t/p/w780/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg",
+      "description": "فيلم خيال علمي وإثارة من إخراج كريستوفر نولان",
       "categories": [
-        "action",
-        "shooter",
-        "open-world",
-        "adventure",
-        "single-player",
-        "multiplayer"
+        "sci-fi",
+        "thriller",
+        "action"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 8,
-      "name": "Far Cry 6",
-      "size": "76.8GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2369390/header.jpg",
+      "name": "The Matrix",
+      "type": "فيلم",
+      "year": "1999",
+      "rating": "8.7",
+      "image": "https://image.tmdb.org/t/p/w780/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
+      "description": "فيلم خيال علمي وإثارة من بطولة كيانو ريفز",
       "categories": [
+        "sci-fi",
         "action",
-        "shooter",
-        "open-world",
-        "adventure",
-        "single-player",
-        "multiplayer"
+        "thriller"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 9,
-      "name": "FIFA 19",
-      "size": "35.7GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/841370/header.jpg",
+      "name": "Interstellar",
+      "type": "فيلم",
+      "year": "2014",
+      "rating": "8.6",
+      "image": "https://image.tmdb.org/t/p/w780/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+      "description": "فيلم خيال علمي من إخراج كريستوفر نولان",
       "categories": [
-        "sports",
-        "multiplayer",
-        "single-player"
+        "sci-fi",
+        "drama",
+        "adventure"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 10,
-      "name": "FIFA 22",
-      "size": "43GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1506830/header.jpg",
+      "name": "The Avengers",
+      "type": "فيلم",
+      "year": "2012",
+      "rating": "8.0",
+      "image": "https://image.tmdb.org/t/p/w780/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg",
+      "description": "فيلم أكشن وخيال علمي من مارفل",
       "categories": [
-        "sports",
-        "multiplayer",
-        "single-player"
+        "action",
+        "sci-fi",
+        "adventure"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 11,
-      "name": "Hellblade Senuas Sacrifice",
-      "size": "21.6GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/414340/header.jpg",
+      "name": "Parasite",
+      "type": "فيلم",
+      "year": "2019",
+      "rating": "8.5",
+      "image": "https://image.tmdb.org/t/p/w780/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+      "description": "فيلم إثارة ودراما كوري فاز بجائزة الأوسكار",
       "categories": [
-        "adventure",
-        "action",
-        "single-player"
+        "thriller",
+        "drama"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 12,
-      "name": "Horizon - Zero Down",
-      "size": "55GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1151640/header.jpg",
+      "name": "Gladiator",
+      "type": "فيلم",
+      "year": "2000",
+      "rating": "8.5",
+      "image": "https://image.tmdb.org/t/p/w780/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg",
+      "description": "فيلم أكشن ودراما من بطولة راسل كرو",
       "categories": [
         "action",
-        "open-world",
-        "adventure",
-        "rpg",
-        "single-player"
+        "drama",
+        "adventure"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 13,
-      "name": "Inside",
-      "size": "2.5GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/304430/header.jpg",
+      "name": "Avatar",
+      "type": "فيلم",
+      "year": "2009",
+      "rating": "7.8",
+      "image": "https://image.tmdb.org/t/p/w780/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg",
+      "description": "فيلم خيال علمي ومغامرات من إخراج جيمس كاميرون",
       "categories": [
-        "adventure",
-        "puzzle",
-        "indie",
-        "single-player"
+        "sci-fi",
+        "action",
+        "adventure"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 14,
-      "name": "Layers of Fear",
-      "size": "3.3GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/391720/header.jpg",
+      "name": "Dune",
+      "type": "فيلم",
+      "year": "2021",
+      "rating": "8.0",
+      "image": "https://image.tmdb.org/t/p/w780/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
+      "description": "فيلم خيال علمي من إخراج دينيس فيلنوف",
       "categories": [
-        "horror",
+        "sci-fi",
         "adventure",
-        "single-player"
+        "drama"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 15,
-      "name": "Little Nightmares",
-      "size": "6.5GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/424840/header.jpg",
+      "name": "The Good, the Bad and the Ugly",
+      "type": "فيلم",
+      "year": "1966",
+      "rating": "8.8",
+      "image": "https://image.tmdb.org/t/p/w780/bX2xnavhMYjWDoZp1VM6VnU1xwe.jpg",
+      "description": "فيلم وسترن كلاسيكي من أفضل أفلام المغامرات",
       "categories": [
-        "horror",
+        "action",
         "adventure",
-        "platformer",
-        "single-player"
+        "drama"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 16,
-      "name": "Mafia - Definitive Edition",
-      "size": "28.7GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1030840/header.jpg",
+      "name": "Forrest Gump",
+      "type": "فيلم",
+      "year": "1994",
+      "rating": "8.8",
+      "image": "https://image.tmdb.org/t/p/w780/arw2vcBve9OVeag5WJ5K1q4ek5T.jpg",
+      "description": "فيلم دراما وكوميديا من بطولة توم هانكس",
       "categories": [
-        "action",
-        "open-world",
-        "adventure",
-        "single-player"
+        "drama",
+        "comedy"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 17,
-      "name": "old Games",
-      "size": "38GB",
-      "image": null,
+      "name": "The Silence of the Lambs",
+      "type": "فيلم",
+      "year": "1991",
+      "rating": "8.6",
+      "image": "https://image.tmdb.org/t/p/w780/uS9m8OBk1A8eM9I042bx8XXpqAq.jpg",
+      "description": "فيلم إثارة ورعب من بطولة أنتوني هوبكنز",
       "categories": [
-        "action",
-        "single-player"
+        "thriller",
+        "horror",
+        "crime"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 18,
-      "name": "Outlast 2",
-      "size": "25.5GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/414700/header.jpg",
+      "name": "Schindler's List",
+      "type": "فيلم",
+      "year": "1993",
+      "rating": "8.9",
+      "image": "https://image.tmdb.org/t/p/w780/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
+      "description": "فيلم دراما تاريخي من إخراج ستيفن سبيلبرغ",
       "categories": [
-        "horror",
-        "adventure",
-        "survival",
-        "single-player"
+        "drama"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 19,
-      "name": "Portal Collection",
-      "size": "31.9GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/400/header.jpg",
+      "name": "The Lion King",
+      "type": "فيلم",
+      "year": "1994",
+      "rating": "8.5",
+      "image": "https://image.tmdb.org/t/p/w780/bKPtXn9n4M4s8vvZrbw40mY8B1o.jpg",
+      "description": "فيلم رسوم متحركة موسيقي من أفضل أفلام ديزني",
       "categories": [
-        "puzzle",
+        "animation",
         "adventure",
-        "indie",
-        "single-player"
+        "drama"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 20,
-      "name": "Prey",
-      "size": "30.8GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/480490/header.jpg",
+      "name": "Titanic",
+      "type": "فيلم",
+      "year": "1997",
+      "rating": "7.8",
+      "image": "https://image.tmdb.org/t/p/w780/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
+      "description": "فيلم رومانسي ودراما من إخراج جيمس كاميرون",
       "categories": [
-        "shooter",
-        "action",
-        "horror",
-        "adventure",
-        "single-player"
+        "romance",
+        "drama"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 21,
-      "name": "Prince of Persia The Lost Crown",
-      "size": "7.7GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2382250/header.jpg",
+      "name": "Goodfellas",
+      "type": "فيلم",
+      "year": "1990",
+      "rating": "8.7",
+      "image": "https://image.tmdb.org/t/p/w780/aKuFiU82s5ISJpGZp7YkIr3kCUd.jpg",
+      "description": "فيلم جريمة ودراما من إخراج مارتن سكورسيزي",
       "categories": [
-        "action",
-        "adventure",
-        "platformer",
-        "single-player"
+        "crime",
+        "drama",
+        "thriller"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 22,
-      "name": "PRO EVOLUTION SOCCER 2019",
-      "size": "45.6GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/996470/header.jpg",
+      "name": "The Departed",
+      "type": "فيلم",
+      "year": "2006",
+      "rating": "8.5",
+      "image": "https://image.tmdb.org/t/p/w780/nT97ifVT2J1yMQme8x9VXXkReXz.jpg",
+      "description": "فيلم جريمة وإثارة من إخراج مارتن سكورسيزي",
       "categories": [
-        "sports",
-        "multiplayer",
-        "single-player"
+        "crime",
+        "thriller",
+        "drama"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 23,
-      "name": "Red Dead Redemption 2",
-      "size": "116GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/header.jpg",
+      "name": "The Prestige",
+      "type": "فيلم",
+      "year": "2006",
+      "rating": "8.5",
+      "image": "https://image.tmdb.org/t/p/w780/5MXyQfz8xUP3dIFPTubhTsbFY6N.jpg",
+      "description": "فيلم إثارة وخيال علمي من إخراج كريستوفر نولان",
       "categories": [
-        "action",
-        "open-world",
-        "adventure",
-        "rpg",
-        "single-player",
-        "multiplayer"
+        "thriller",
+        "sci-fi",
+        "drama"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 24,
-      "name": "Resident Evil - Village",
-      "size": "37.4GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1196590/header.jpg",
+      "name": "The Green Mile",
+      "type": "فيلم",
+      "year": "1999",
+      "rating": "8.6",
+      "image": "https://image.tmdb.org/t/p/w780/velWPhVMQeQKcxggNEU8YmIo52R.jpg",
+      "description": "فيلم دراما وفانتازيا من بطولة توم هانكس",
       "categories": [
-        "horror",
-        "shooter",
-        "action",
-        "adventure",
-        "single-player"
+        "drama",
+        "fantasy"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
       "id": 25,
-      "name": "Resident Evil 7 Biohazard",
-      "size": "23.4GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/418370/header.jpg",
-      "categories": [
-        "horror",
-        "shooter",
-        "action",
-        "adventure",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 26,
-      "name": "South of Midnight",
-      "size": "60GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1621680/header.jpg",
+      "name": "Saving Private Ryan",
+      "type": "فيلم",
+      "year": "1998",
+      "rating": "8.6",
+      "image": "https://image.tmdb.org/t/p/w780/uqx37cS8cpHg8U35f9U5IBlrCV3.jpg",
+      "description": "فيلم حرب ودراما من إخراج ستيفن سبيلبرغ",
       "categories": [
         "action",
-        "open-world",
-        "adventure",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 27,
-      "name": "Watch Dogs Legion",
-      "size": "54.8GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2239550/header.jpg",
-      "categories": [
-        "action",
-        "open-world",
-        "adventure",
-        "single-player",
-        "multiplayer"
+        "drama"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     }
   ],
-  "repack": [
+  "tvShows": [
     {
-      "id": 101,
-      "name": "A Plague Tale - Innocence [FitGirl Repack]",
-      "size": "10GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/752590/header.jpg",
+      "id": 1,
+      "name": "Breaking Bad",
+      "type": "مسلسل",
+      "year": "2008-2013",
+      "rating": "9.5",
+      "seasons": 5,
+      "image": "https://image.tmdb.org/t/p/w780/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
+      "description": "مسلسل دراما وجريمة من أفضل المسلسلات على الإطلاق",
       "categories": [
-        "adventure",
-        "action",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 102,
-      "name": "A Plague Tale Requiem [DODI Repack]",
-      "size": "28GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1182900/header.jpg",
-      "categories": [
-        "adventure",
-        "action",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 103,
-      "name": "ABZU",
-      "size": "1GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/384190/header.jpg",
-      "categories": [
-        "adventure",
-        "indie",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 104,
-      "name": "Alan Wake - Remastered",
-      "size": "20.7GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1087100/header.jpg",
-      "categories": [
-        "adventure",
-        "action",
-        "horror",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 105,
-      "name": "Amnesia The Bunker [DODI Repack]",
-      "size": "6.26GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1944430/header.jpg",
-      "categories": [
-        "horror",
-        "adventure",
-        "survival",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 106,
-      "name": "Aragami 2 Digital Deluxe Edition - [DODI Repack]",
-      "size": "3.6GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1158370/header.jpg",
-      "categories": [
-        "action",
-        "stealth",
-        "adventure",
-        "single-player",
-        "multiplayer"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 107,
-      "name": "Assassin Creed Mirage [DODI Repack]",
-      "size": "20.6GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2321470/header.jpg",
-      "categories": [
-        "action",
-        "open-world",
-        "adventure",
-        "stealth",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 108,
-      "name": "Atomic Heart",
-      "size": "26.5GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/668580/header.jpg",
-      "categories": [
-        "action",
-        "shooter",
-        "adventure",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 109,
-      "name": "Baldurs Gate 3 [DODI Repack]",
-      "size": "89.7GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg",
-      "categories": [
-        "rpg",
-        "adventure",
-        "single-player",
-        "multiplayer"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 110,
-      "name": "Batman - Arkham Knight",
-      "size": "27GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/208650/header.jpg",
-      "categories": [
-        "action",
-        "open-world",
-        "adventure",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 111,
-      "name": "BioShock 2 Remastered [FitGirl Repack]",
-      "size": "7GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/409720/header.jpg",
-      "categories": [
-        "shooter",
-        "action",
-        "horror",
-        "adventure",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 112,
-      "name": "Borderlands 2 - Remastered [FitGirl Repack]",
-      "size": "11.9GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/49520/header.jpg",
-      "categories": [
-        "shooter",
-        "action",
-        "rpg",
-        "single-player",
-        "multiplayer"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 113,
-      "name": "Call of Duty Black Ops 6 [DODI Repack]",
-      "size": "42.1GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2987780/header.jpg",
-      "categories": [
-        "shooter",
-        "action",
-        "single-player",
-        "multiplayer"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 114,
-      "name": "Call Of Duty Modern Warfare 2",
-      "size": "3.6GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1938090/header.jpg",
-      "categories": [
-        "shooter",
-        "action",
-        "single-player",
-        "multiplayer"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 115,
-      "name": "Call of Duty Modern Warfare 3 [DODI]",
-      "size": "21.6GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2519060/header.jpg",
-      "categories": [
-        "shooter",
-        "action",
-        "single-player",
-        "multiplayer"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 116,
-      "name": "Clair Obscur Expedition 33 [DODI Repack]",
-      "size": "36.7GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2382250/header.jpg",
-      "categories": [
-        "action",
-        "adventure",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 117,
-      "name": "Control DLC [FitGirl Repack]",
-      "size": "18GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/870780/header.jpg",
-      "categories": [
-        "adventure",
-        "action",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 118,
-      "name": "Cronos The New Dawn [DODI Repack]",
-      "size": "17.4GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2382250/header.jpg",
-      "categories": [
-        "action",
-        "adventure",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 119,
-      "name": "Cyberpunk 2077 [DODI Repack]",
-      "size": "66GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg",
-      "categories": [
-        "action",
-        "open-world",
-        "rpg",
-        "adventure",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 120,
-      "name": "Days Gone",
-      "size": "21.5GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1259420/header.jpg",
-      "categories": [
-        "action",
-        "open-world",
-        "adventure",
-        "survival",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 121,
-      "name": "Dead Cells [FitGirl Repack]",
-      "size": "2GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/588650/header.jpg",
-      "categories": [
-        "action",
-        "platformer",
-        "adventure",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 122,
-      "name": "Dead Island 2",
-      "size": "37GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/934050/header.jpg",
-      "categories": [
-        "action",
-        "horror",
-        "survival",
-        "single-player",
-        "multiplayer"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 123,
-      "name": "Deadpool",
-      "size": "3.5GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/234330/header.jpg",
-      "categories": [
-        "action",
-        "adventure",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 124,
-      "name": "Death Stranding Directors Cut [DODI]",
-      "size": "46.6GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1850570/header.jpg",
-      "categories": [
-        "adventure",
-        "action",
-        "open-world",
-        "single-player",
-        "multiplayer"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 125,
-      "name": "DeathLoop - [DODI Repack]",
-      "size": "21.7GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1252330/header.jpg",
-      "categories": [
-        "action",
-        "adventure",
-        "shooter",
-        "single-player",
-        "multiplayer"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 126,
-      "name": "Deliver At All Costs [DODI Repack]",
-      "size": "3GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2382250/header.jpg",
-      "categories": [
-        "action",
-        "adventure",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 127,
-      "name": "Detroit - Become Human [FitGirl Repack]",
-      "size": "23GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1222140/header.jpg",
-      "categories": [
-        "adventure",
         "drama",
-        "single-player"
+        "crime",
+        "thriller"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 128,
-      "name": "Deus Ex - Mankind Divided [FitGirl Repack]",
-      "size": "25.1GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/337000/header.jpg",
+      "id": 2,
+      "name": "Game of Thrones",
+      "type": "مسلسل",
+      "year": "2011-2019",
+      "rating": "9.2",
+      "seasons": 8,
+      "image": "https://image.tmdb.org/t/p/w780/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
+      "description": "مسلسل خيال علمي ودراما من HBO",
       "categories": [
-        "action",
-        "stealth",
-        "rpg",
-        "adventure",
-        "single-player"
+        "fantasy",
+        "sci-fi",
+        "drama",
+        "action"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 129,
-      "name": "Devil May Cry 5 [FitGirl Repack]",
-      "size": "27.4GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/601150/header.jpg",
+      "id": 3,
+      "name": "The Wire",
+      "type": "مسلسل",
+      "year": "2002-2008",
+      "rating": "9.3",
+      "seasons": 5,
+      "image": "https://image.tmdb.org/t/p/w780/4lbclF3JQWmos5WsacfI3Q9AP3P.jpg",
+      "description": "مسلسل دراما وجريمة من HBO",
       "categories": [
-        "action",
-        "adventure",
-        "single-player"
+        "drama",
+        "crime",
+        "thriller"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 130,
-      "name": "Disco Elysium [FitGirl Repack]",
-      "size": "6.8GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/632470/header.jpg",
+      "id": 4,
+      "name": "The Sopranos",
+      "type": "مسلسل",
+      "year": "1999-2007",
+      "rating": "9.2",
+      "seasons": 6,
+      "image": "https://image.tmdb.org/t/p/w780/rTc7ZXdroqjkKivFPvCPXe3f1A3.jpg",
+      "description": "مسلسل جريمة ودراما من HBO",
       "categories": [
-        "adventure",
-        "rpg",
-        "single-player"
+        "crime",
+        "drama",
+        "thriller"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 131,
-      "name": "Dying Light - The Following EE [FitGirl Repack]",
-      "size": "12.8GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/239140/header.jpg",
+      "id": 5,
+      "name": "True Detective",
+      "type": "مسلسل",
+      "year": "2014",
+      "rating": "9.0",
+      "seasons": 4,
+      "image": "https://image.tmdb.org/t/p/w780/6x0sYx1Z6qGf0WxLKq2Zqkgyp2k.jpg",
+      "description": "مسلسل إثارة وجريمة من HBO",
       "categories": [
-        "action",
+        "thriller",
+        "crime",
+        "drama"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "name": "The Crown",
+      "type": "مسلسل",
+      "year": "2016-2023",
+      "rating": "8.7",
+      "seasons": 6,
+      "image": "https://image.tmdb.org/t/p/w780/1M876KPjulVwppEpldhdc8V4o68.jpg",
+      "description": "مسلسل دراما تاريخي من Netflix",
+      "categories": [
+        "drama"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "name": "Stranger Things",
+      "type": "مسلسل",
+      "year": "2016-2022",
+      "rating": "8.7",
+      "seasons": 4,
+      "image": "https://image.tmdb.org/t/p/w780/49WJfeN0moxb9IPfGn8AIqMGskD.jpg",
+      "description": "مسلسل خيال علمي ورعب من Netflix",
+      "categories": [
+        "sci-fi",
         "horror",
-        "survival",
-        "single-player",
-        "multiplayer"
+        "thriller"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 132,
-      "name": "Dying Light 2 Stay Human [DODI Repack]",
-      "size": "23.7GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/534380/header.jpg",
+      "id": 8,
+      "name": "The Last of Us",
+      "type": "مسلسل",
+      "year": "2023",
+      "rating": "8.8",
+      "seasons": 1,
+      "image": "https://image.tmdb.org/t/p/w780/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg",
+      "description": "مسلسل دراما وخيال علمي من HBO",
       "categories": [
-        "action",
-        "horror",
-        "survival",
-        "open-world",
-        "single-player",
-        "multiplayer"
+        "drama",
+        "sci-fi",
+        "action"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 133,
-      "name": "Dying Light The Beast [DODI Repack]",
-      "size": "35.5GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/239140/header.jpg",
+      "id": 9,
+      "name": "House of Cards",
+      "type": "مسلسل",
+      "year": "2013-2018",
+      "rating": "8.7",
+      "seasons": 6,
+      "image": "https://image.tmdb.org/t/p/w780/hKWxWjFwnM5yFKFv3Mu6Ka2F3S9.jpg",
+      "description": "مسلسل دراما سياسية من Netflix",
       "categories": [
-        "action",
-        "horror",
-        "survival",
-        "single-player",
-        "multiplayer"
+        "drama",
+        "thriller"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 134,
-      "name": "EA SPORTS FC 26",
-      "size": "54.7GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2195250/header.jpg",
+      "id": 10,
+      "name": "Better Call Saul",
+      "type": "مسلسل",
+      "year": "2015-2022",
+      "rating": "8.8",
+      "seasons": 6,
+      "image": "https://image.tmdb.org/t/p/w780/fC2HDm5t0kHl7mTm7jxMRFbBqBr.jpg",
+      "description": "مسلسل دراما وجريمة من AMC",
       "categories": [
-        "sports",
-        "multiplayer",
-        "single-player"
+        "drama",
+        "crime",
+        "thriller"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 135,
-      "name": "ELDEN RING [DODI Repack]",
-      "size": "38GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg",
+      "id": 11,
+      "name": "Peaky Blinders",
+      "type": "مسلسل",
+      "year": "2013-2022",
+      "rating": "8.8",
+      "seasons": 6,
+      "image": "https://image.tmdb.org/t/p/w780/1j9s2DlClQABlpKXDbOyX7V8SDt.jpg",
+      "description": "مسلسل جريمة ودراما من BBC",
       "categories": [
-        "rpg",
-        "action",
-        "adventure",
-        "single-player",
-        "multiplayer"
+        "crime",
+        "drama",
+        "thriller"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 136,
-      "name": "Eternights [FitGirl Repack]",
-      "size": "3.6GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2382250/header.jpg",
+      "id": 12,
+      "name": "The Boys",
+      "type": "مسلسل",
+      "year": "2019",
+      "rating": "8.7",
+      "seasons": 4,
+      "image": "https://image.tmdb.org/t/p/w780/mY7SeH4HFFxW1hiI6cWuwCRKptN.jpg",
+      "description": "مسلسل أكشن وخيال علمي من Amazon Prime",
       "categories": [
         "action",
-        "adventure",
-        "single-player"
+        "sci-fi",
+        "comedy"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 137,
-      "name": "Fallout 4 [FitGirl Repack]",
-      "size": "21.6GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/377160/header.jpg",
+      "id": 13,
+      "name": "Black Mirror",
+      "type": "مسلسل",
+      "year": "2011-2019",
+      "rating": "8.8",
+      "seasons": 5,
+      "image": "https://image.tmdb.org/t/p/w780/5TR6G2dbAnBKRxGJEm6h6i3bdN8.jpg",
+      "description": "مسلسل خيال علمي وإثارة من Netflix",
       "categories": [
-        "rpg",
-        "action",
-        "open-world",
-        "adventure",
-        "single-player"
+        "sci-fi",
+        "thriller"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 138,
-      "name": "Far Cry - New Dawn",
-      "size": "16.4GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/939960/header.jpg",
+      "id": 14,
+      "name": "The Mandalorian",
+      "type": "مسلسل",
+      "year": "2019",
+      "rating": "8.7",
+      "seasons": 3,
+      "image": "https://image.tmdb.org/t/p/w780/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg",
+      "description": "مسلسل خيال علمي ومغامرات من Disney+",
       "categories": [
+        "sci-fi",
         "action",
-        "shooter",
-        "open-world",
-        "adventure",
-        "single-player",
-        "multiplayer"
+        "adventure"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 139,
-      "name": "Far Cry 3",
-      "size": "4.9GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/220240/header.jpg",
+      "id": 15,
+      "name": "Money Heist",
+      "type": "مسلسل",
+      "year": "2017-2021",
+      "rating": "8.3",
+      "seasons": 5,
+      "image": "https://image.tmdb.org/t/p/w780/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg",
+      "description": "مسلسل إثارة وجريمة من Netflix",
       "categories": [
-        "action",
-        "shooter",
-        "open-world",
-        "adventure",
-        "single-player",
-        "multiplayer"
+        "thriller",
+        "crime",
+        "action"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 140,
-      "name": "FIFA 23 [FitGirl Repack]",
-      "size": "42.5GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1811260/header.jpg",
+      "id": 16,
+      "name": "The Office",
+      "type": "مسلسل",
+      "year": "2005-2013",
+      "rating": "8.9",
+      "seasons": 9,
+      "image": "https://image.tmdb.org/t/p/w780/qWnJzyZhyy74gjpSjIXWmuk0ifX.jpg",
+      "description": "مسلسل كوميديا من أفضل المسلسلات الكوميدية",
       "categories": [
-        "sports",
-        "multiplayer",
-        "single-player"
+        "comedy"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 141,
-      "name": "Forza Horizon 3 [FitGirl Repack]",
-      "size": "27.4GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/389730/header.jpg",
+      "id": 17,
+      "name": "Friends",
+      "type": "مسلسل",
+      "year": "1994-2004",
+      "rating": "8.9",
+      "seasons": 10,
+      "image": "https://image.tmdb.org/t/p/w780/f496cm9enuEsZkSPzCwnTESEK5s.jpg",
+      "description": "مسلسل كوميديا رومانسية من أشهر المسلسلات",
       "categories": [
-        "racing",
-        "open-world",
-        "single-player",
-        "multiplayer"
+        "comedy",
+        "romance"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 142,
-      "name": "Forza Horizon 5 [DODI Repack]",
-      "size": "84.6GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1551360/header.jpg",
+      "id": 18,
+      "name": "The Witcher",
+      "type": "مسلسل",
+      "year": "2019",
+      "rating": "8.2",
+      "seasons": 3,
+      "image": "https://image.tmdb.org/t/p/w780/7vjaCdMw15FEbXyLQTVa04URsPm.jpg",
+      "description": "مسلسل فانتازيا ومغامرات من Netflix",
       "categories": [
-        "racing",
-        "open-world",
-        "single-player",
-        "multiplayer"
+        "fantasy",
+        "action",
+        "drama"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 143,
-      "name": "Ghost of Tsushima [DODI Repack]",
-      "size": "33.3GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2215430/header.jpg",
+      "id": 19,
+      "name": "Sherlock",
+      "type": "مسلسل",
+      "year": "2010-2017",
+      "rating": "9.1",
+      "seasons": 4,
+      "image": "https://image.tmdb.org/t/p/w780/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg",
+      "description": "مسلسل إثارة وغموض من BBC",
       "categories": [
-        "action",
-        "open-world",
-        "adventure",
-        "single-player",
-        "multiplayer"
+        "thriller",
+        "crime",
+        "drama"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 144,
-      "name": "Ghostrunner [FitGirl Repack]",
-      "size": "7.5GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1139900/header.jpg",
+      "id": 20,
+      "name": "Chernobyl",
+      "type": "مسلسل",
+      "year": "2019",
+      "rating": "9.4",
+      "seasons": 1,
+      "image": "https://image.tmdb.org/t/p/w780/hlLXt2tOPT6RRnjiUmoxyG1qxFi.jpg",
+      "description": "مسلسل دراما تاريخي من HBO",
       "categories": [
-        "action",
-        "adventure",
-        "platformer",
-        "single-player"
+        "drama",
+        "thriller"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 145,
-      "name": "God of War [DODI Repack]",
-      "size": "26GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/header.jpg",
-      "categories": [
-        "action",
-        "adventure",
-        "rpg",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 146,
-      "name": "God of War 1&2",
-      "size": "300MB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/header.jpg",
-      "categories": [
-        "action",
-        "adventure",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 147,
-      "name": "God of War Ragnarok [DODI Repack]",
-      "size": "70.8GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2322010/header.jpg",
-      "categories": [
-        "action",
-        "adventure",
-        "rpg",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 148,
-      "name": "Gotham Knights [DODI Repack]",
-      "size": "30.7GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1496790/header.jpg",
-      "categories": [
-        "action",
-        "open-world",
-        "adventure",
-        "single-player",
-        "multiplayer"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 149,
-      "name": "Grand Theft Auto V",
-      "size": "38.9GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/271590/header.jpg",
-      "categories": [
-        "action",
-        "open-world",
-        "adventure",
-        "single-player",
-        "multiplayer"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 150,
-      "name": "GRIS - [DODI Repack]",
-      "size": "964MB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/683320/header.jpg",
-      "categories": [
-        "adventure",
-        "indie",
-        "single-player"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
-      "id": 151,
-      "name": "GTA San Andreas Definitive Edition - [DODI Repack]",
-      "size": "13GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1546970/header.jpg",
-      "categories": [
-        "action",
-        "open-world",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.245Z"
-    },
-    {
-      "id": 152,
-      "name": "GTA Vice City Definitive Edition - [DODI Repack]",
-      "size": "6.5GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1546970/header.jpg",
-      "categories": [
-        "action",
-        "open-world",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 153,
-      "name": "HADES - [DODI Repack]",
-      "size": "5GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/header.jpg",
-      "categories": [
-        "platformer",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 154,
-      "name": "Hell is Us [FitGirl Repack]",
-      "size": "16.5GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2382250/header.jpg",
-      "categories": [
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 155,
-      "name": "Hellblade Senuas Sacrifice Enhanced - [DODI Repack]",
-      "size": "7.4GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/414340/header.jpg",
-      "categories": [
-        "adventure",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 156,
-      "name": "High on Life [FitGirl Repack]",
-      "size": "30GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1583230/header.jpg",
-      "categories": [
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 157,
-      "name": "Hitman 3",
-      "size": "18.5GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1659040/header.jpg",
-      "categories": [
-        "action",
-        "stealth",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 158,
-      "name": "Hogwarts Legacy [DODI Repack]",
-      "size": "58.6GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/990080/header.jpg",
-      "categories": [
-        "rpg",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 159,
-      "name": "Hollow Knight - [DODI Repack]",
-      "size": "1GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/367520/header.jpg",
-      "categories": [
-        "adventure",
-        "platformer",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 160,
-      "name": "Hollow Knight Silksong [DODI Repack]",
-      "size": "1.7GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1030300/header.jpg",
-      "categories": [
-        "adventure",
-        "platformer",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 161,
-      "name": "Immortals - Fenyx Rising",
-      "size": "20.5GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2224800/header.jpg",
-      "categories": [
-        "open-world",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 162,
-      "name": "Indiana Jones and the Great Circle [DODI]",
-      "size": "64.2GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2188360/header.jpg",
-      "categories": [
-        "action",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 163,
-      "name": "Kingdom Come Deliverance II [DODI]",
-      "size": "70GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2210400/header.jpg",
-      "categories": [
-        "rpg",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 164,
-      "name": "Layers of Fear - Inheritance",
-      "size": "1.4GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/391720/header.jpg",
-      "categories": [
-        "horror",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 165,
-      "name": "Layers of Fear 2 [FitGirl Repack]",
-      "size": "7.8GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/828740/header.jpg",
-      "categories": [
-        "horror",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 166,
-      "name": "Layers of Fear horror reimagined [DODI Repack]",
-      "size": "12.2GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/391720/header.jpg",
-      "categories": [
-        "horror",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 167,
-      "name": "Left for Dead",
-      "size": "2.8GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/500/header.jpg",
-      "categories": [
-        "shooter",
-        "multiplayer"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 168,
-      "name": "Left for Dead 2",
-      "size": "7.3GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/550/header.jpg",
-      "categories": [
-        "shooter",
-        "multiplayer"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 169,
-      "name": "Lies of P [DODI Repack]",
-      "size": "36GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1805480/header.jpg",
-      "categories": [
-        "rpg",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 170,
-      "name": "Little Nightmares II [FitGirl Repack]",
-      "size": "2.7GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/860510/header.jpg",
-      "categories": [
-        "horror",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 171,
-      "name": "Little Nightmares III [DODI Repack]",
-      "size": "8.8GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2671920/header.jpg",
-      "categories": [
-        "horror",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 172,
-      "name": "Mad Max",
-      "size": "3.7GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/234140/header.jpg",
-      "categories": [
-        "action",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 173,
-      "name": "MADISON [DODI Repack]",
-      "size": "3GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1294810/header.jpg",
-      "categories": [
-        "horror",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 174,
-      "name": "Mafia 2 (classic) - [DODI Repack]",
-      "size": "4GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/50130/header.jpg",
-      "categories": [
-        "action",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 175,
-      "name": "Marvels Guardians of the Galaxy [DODI Repack]",
-      "size": "14.8GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1088850/header.jpg",
-      "categories": [
-        "action",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 176,
-      "name": "Marvels SpiderMan 2 [DODI Repack]",
-      "size": "68.7GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1817070/header.jpg",
-      "categories": [
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 177,
-      "name": "Marvels SpiderMan Miles Morales [DODI Repack]",
-      "size": "28.7GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1817190/header.jpg",
-      "categories": [
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 178,
-      "name": "Marvels SpiderMan Remastered [DODI Repack]",
-      "size": "39GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1817070/header.jpg",
-      "categories": [
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 179,
-      "name": "Max Payne 3 - Complete Edition [FitGirl Repack]",
-      "size": "13.8GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/204100/header.jpg",
-      "categories": [
-        "shooter",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 180,
-      "name": "Metal Gear Solid V The Phantom Pain",
-      "size": "21.6GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/287700/header.jpg",
-      "categories": [
-        "stealth",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 181,
-      "name": "Metro - Exodus",
-      "size": "32.9GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/412020/header.jpg",
-      "categories": [
-        "shooter",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 182,
-      "name": "Murdered - Soul Suspect",
-      "size": "5.7GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/238010/header.jpg",
-      "categories": [
-        "adventure",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 183,
-      "name": "My Friend Pedro",
-      "size": "1.8GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/557340/header.jpg",
-      "categories": [
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 184,
-      "name": "Ori and the Blind Forest - Definitive Edition",
-      "size": "3.5GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/387290/header.jpg",
-      "categories": [
-        "adventure",
-        "platformer",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 185,
-      "name": "Ori and the Will of the Wisps",
-      "size": "3.5GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1057090/header.jpg",
-      "categories": [
-        "adventure",
-        "platformer",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 186,
-      "name": "Persona 5 Royal [FitGirl Repack]",
-      "size": "7.6GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1687950/header.jpg",
-      "categories": [
-        "rpg",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 187,
-      "name": "Prince of Persia - 2008 [DODI Repack]",
-      "size": "1.7GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/19980/header.jpg",
-      "categories": [
-        "action",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 188,
-      "name": "Prince of Persia The Forgotten Sand Remastered - [DODI Repack]",
-      "size": "2.1GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1350260/header.jpg",
-      "categories": [
-        "action",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 189,
-      "name": "Prince of Persia The Sands of Time - [DODI Repack]",
-      "size": "979MB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1350260/header.jpg",
-      "categories": [
-        "action",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 190,
-      "name": "Prince of Persia The Two Thrones - [DODI Repack]",
-      "size": "1GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1350260/header.jpg",
-      "categories": [
-        "action",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 191,
-      "name": "Prince of Persia Warrior Within - [DODI Repack]",
-      "size": "2.2GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1350260/header.jpg",
-      "categories": [
-        "action",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 192,
-      "name": "Pro Evolution Soccer 2018",
-      "size": "8.7GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/592580/header.jpg",
-      "categories": [
-        "sports",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 193,
-      "name": "Project Nightmares - Case 36 [FitGirl Repack]",
-      "size": "3.3GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2382250/header.jpg",
-      "categories": [
-        "horror",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 194,
-      "name": "Ratchet & Clank - Rift Apart",
-      "size": "33GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1888930/header.jpg",
-      "categories": [
-        "action",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 195,
-      "name": "Ready or Not [DODI Repack]",
-      "size": "23.6GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1144200/header.jpg",
-      "categories": [
-        "shooter",
-        "multiplayer"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 196,
-      "name": "Red Dead Redemption [DODI Repack]",
-      "size": "8.10GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/397540/header.jpg",
-      "categories": [
-        "action",
-        "open-world",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 197,
-      "name": "Resident Evil 2",
-      "size": "17GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/883710/header.jpg",
-      "categories": [
-        "horror",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 198,
-      "name": "Resident Evil 3 [FitGirl Repack]",
-      "size": "13GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/952060/header.jpg",
-      "categories": [
-        "horror",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.246Z"
-    },
-    {
-      "id": 199,
-      "name": "Resident Evil 4 Remake",
-      "size": "41.8GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2050650/header.jpg",
-      "categories": [
-        "horror",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 200,
-      "name": "Resident Evil Village - [DODI Repack]",
-      "size": "19.7GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1196590/header.jpg",
-      "categories": [
-        "horror",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 201,
-      "name": "Rise of the Tomb Raider",
-      "size": "14.4GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/391220/header.jpg",
-      "categories": [
-        "action",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 202,
-      "name": "RoboCop - Rogue City [FitGirl Repack]",
-      "size": "28.2GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2108710/header.jpg",
-      "categories": [
-        "action",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 203,
-      "name": "Senua Saga Hellblade II [DODI Repack]",
-      "size": "34.4GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2571720/header.jpg",
-      "categories": [
-        "adventure",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 204,
-      "name": "Sifu [DODI Repack]",
-      "size": "8.8GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2138710/header.jpg",
-      "categories": [
-        "fighting",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 205,
-      "name": "Silent Hill 2 [DODI Repack]",
-      "size": "26GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2124490/header.jpg",
-      "categories": [
-        "horror",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 206,
-      "name": "Silent Hill f [DODI Repack]",
-      "size": "28.2GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2124490/header.jpg",
-      "categories": [
-        "horror",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 207,
-      "name": "Spider-Man Web of Shadows - [DODI Repack]",
-      "size": "4.3GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2382250/header.jpg",
-      "categories": [
-        "action",
-        "open-world",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 208,
-      "name": "Splinter Cell - Blacklist [FitGirl Repack]",
-      "size": "11.3GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/235600/header.jpg",
-      "categories": [
-        "action",
-        "stealth",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 209,
-      "name": "Split Fiction [DODI Repack]",
-      "size": "57.4GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2382250/header.jpg",
-      "categories": [
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 210,
-      "name": "Star Wars Jedi - Fallen Order",
-      "size": "37.5GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1172380/header.jpg",
-      "categories": [
-        "action",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 211,
-      "name": "Starfield [FitGirl Repack]",
-      "size": "62.5GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1716740/header.jpg",
-      "categories": [
-        "rpg",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 212,
-      "name": "Stray [FitGirl Repack]",
-      "size": "4GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1332010/header.jpg",
-      "categories": [
-        "adventure",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 213,
-      "name": "Superliminal [FitGirl Repack]",
-      "size": "1.8GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1049410/header.jpg",
-      "categories": [
-        "adventure",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 214,
-      "name": "System Shock - Remake [FitGirl Repack]",
-      "size": "2.8GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/482400/header.jpg",
-      "categories": [
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 215,
-      "name": "The Conjuring House [FitGirl Repack]",
-      "size": "2.7GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2382250/header.jpg",
-      "categories": [
-        "horror",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 216,
-      "name": "The Elder Scrolls - Skyrim - Special Edition [FitGirl Repack]",
-      "size": "8.6GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/489830/header.jpg",
-      "categories": [
-        "rpg",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 217,
-      "name": "The Evil Within [FitGirl Repack]",
-      "size": "12.9GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/268050/header.jpg",
-      "categories": [
-        "horror",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 218,
-      "name": "The Evil Within 2 [FitGirl Repack]",
-      "size": "12.6GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/601430/header.jpg",
-      "categories": [
-        "horror",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 219,
-      "name": "The Last of Us [DODI Repack]",
-      "size": "46.8GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1888930/header.jpg",
-      "categories": [
-        "adventure",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 220,
-      "name": "The Last of Us Part II Remastered [DODI Repack]",
-      "size": "49.6GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1888930/header.jpg",
-      "categories": [
-        "adventure",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 221,
-      "name": "The Legend of Zelda Breath of the Wild (Portable)",
-      "size": "15.8GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2382250/header.jpg",
-      "categories": [
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 222,
-      "name": "The Shattering [FitGirl Repack]",
-      "size": "2.6GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2382250/header.jpg",
-      "categories": [
-        "horror",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 223,
-      "name": "The Stanley Parable - Ultra Deluxe",
-      "size": "2.6GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1703340/header.jpg",
-      "categories": [
-        "adventure",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 224,
-      "name": "The Suicide of Rachel Foster [FitGirl Repack]",
-      "size": "5.3GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1049410/header.jpg",
-      "categories": [
-        "horror",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 225,
-      "name": "The Witcher 3 - GotY Edition [FitGirl Repack]",
-      "size": "23GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/header.jpg",
-      "categories": [
-        "rpg",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 226,
-      "name": "Thief",
-      "size": "14.7GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/239160/header.jpg",
-      "categories": [
-        "stealth",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 227,
-      "name": "Titanfall 2",
-      "size": "22GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1237970/header.jpg",
-      "categories": [
-        "shooter",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 228,
-      "name": "Tomb Raider",
-      "size": "7.2GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/203160/header.jpg",
-      "categories": [
-        "action",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 229,
-      "name": "Uncharted 4: A Thief's End [DODI Repack]",
-      "size": "46.5GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1659420/header.jpg",
-      "categories": [
-        "action",
-        "stealth",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 230,
-      "name": "Watch Dogs 2 Gold Edition - [DODI]",
-      "size": "25.2GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/447040/header.jpg",
-      "categories": [
-        "action",
-        "open-world",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
-    },
-    {
-      "id": 231,
-      "name": "Wo Long Fallen Dynasty [DODI Repack]",
-      "size": "20GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1448440/header.jpg",
-      "categories": [
-        "rpg",
-        "single-player"
-      ],
-      "updatedAt": "2025-11-22T02:55:24.247Z"
     }
   ],
-  "online": [
+  "anime": [
     {
-      "id": 201,
-      "name": "Fortnite",
-      "size": "Online",
-      "image": "https://i.ytimg.com/vi/zRWrVf2AU8g/maxresdefault.jpg",
+      "id": 1,
+      "name": "Fullmetal Alchemist: Brotherhood",
+      "type": "أنمي",
+      "year": "2009-2010",
+      "rating": "9.1",
+      "episodes": 64,
+      "image": "https://image.tmdb.org/t/p/w780/5ZFU5U1L7C8C3loWka93ApRIyhY.jpg",
+      "description": "أنمي أكشن ومغامرات من أفضل الأنميات",
       "categories": [
-        "shooter",
         "action",
-        "multiplayer"
+        "fantasy",
+        "adventure",
+        "animation"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 202,
-      "name": "Valorant",
-      "size": "Online",
-      "image": "https://images.seeklogo.com/logo-png/37/1/valorant-logo-png_seeklogo-379976.png",
+      "id": 2,
+      "name": "Attack on Titan",
+      "type": "أنمي",
+      "year": "2013-2023",
+      "rating": "9.0",
+      "episodes": 75,
+      "image": "https://image.tmdb.org/t/p/w780/hTP1DtLGFamjfu8WqjnuQdP1n4i.jpg",
+      "description": "أنمي أكشن وخيال علمي من أفضل الأنميات",
       "categories": [
-        "shooter",
         "action",
-        "multiplayer"
+        "sci-fi",
+        "thriller",
+        "animation"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 203,
-      "name": "Apex Legends",
-      "size": "Online",
-      "image": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/apex-featured-image-16x9.jpg.adapt.crop16x9.1023w.jpg",
+      "id": 3,
+      "name": "Death Note",
+      "type": "أنمي",
+      "year": "2006-2007",
+      "rating": "9.0",
+      "episodes": 37,
+      "image": "https://image.tmdb.org/t/p/w780/iigTJJSkObPzsa8DtzGjJF4JBr8.jpg",
+      "description": "أنمي إثارة وغموض من أفضل الأنميات",
       "categories": [
-        "shooter",
-        "action",
-        "multiplayer"
+        "thriller",
+        "crime",
+        "sci-fi",
+        "animation"
       ],
       "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "name": "One Piece",
+      "type": "أنمي",
+      "year": "1999",
+      "rating": "9.0",
+      "episodes": 1100,
+      "image": "https://image.tmdb.org/t/p/w780/e3NBGiA10a2u7ntQ6xdL3zQ6lqN.jpg",
+      "description": "أنمي أكشن ومغامرات من أطول الأنميات",
+      "categories": [
+        "action",
+        "adventure",
+        "fantasy",
+        "comedy",
+        "animation"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "name": "Hunter x Hunter",
+      "type": "أنمي",
+      "year": "2011-2014",
+      "rating": "9.0",
+      "episodes": 148,
+      "image": "https://image.tmdb.org/t/p/w780/ucpgmUR1h5Te1BYegKItoPjOeF7.jpg",
+      "description": "أنمي أكشن ومغامرات من أفضل الأنميات",
+      "categories": [
+        "action",
+        "adventure",
+        "fantasy",
+        "animation"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "name": "Steins;Gate",
+      "type": "أنمي",
+      "year": "2011",
+      "rating": "9.0",
+      "episodes": 24,
+      "image": "https://image.tmdb.org/t/p/w780/9H7dHpG9cRQF2XpntE8LVdLln4a.jpg",
+      "description": "أنمي خيال علمي وإثارة من أفضل الأنميات",
+      "categories": [
+        "sci-fi",
+        "thriller",
+        "drama",
+        "animation"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "name": "Naruto",
+      "type": "أنمي",
+      "year": "2002-2017",
+      "rating": "8.7",
+      "episodes": 720,
+      "image": "https://image.tmdb.org/t/p/w780/v6Krzg7Z3IdYjz07ikFd3zCEev.jpg",
+      "description": "أنمي أكشن ومغامرات من أشهر الأنميات",
+      "categories": [
+        "action",
+        "adventure",
+        "fantasy",
+        "animation"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 8,
+      "name": "Demon Slayer",
+      "type": "أنمي",
+      "year": "2019",
+      "rating": "8.7",
+      "episodes": 44,
+      "image": "https://image.tmdb.org/t/p/w780/qjGrUmKW78MCFG8DDLJWr3xc6cs.jpg",
+      "description": "أنمي أكشن وخيال علمي من استوديو Ufotable",
+      "categories": [
+        "action",
+        "sci-fi",
+        "fantasy",
+        "animation"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 9,
+      "name": "My Hero Academia",
+      "type": "أنمي",
+      "year": "2016",
+      "rating": "8.4",
+      "episodes": 113,
+      "image": "https://image.tmdb.org/t/p/w780/phuYuzqWW9ru8EA3HVjE9W2Rr3M.jpg",
+      "description": "أنمي أكشن وخيال علمي من استوديو Bones",
+      "categories": [
+        "action",
+        "sci-fi",
+        "comedy",
+        "animation"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 10,
+      "name": "Jujutsu Kaisen",
+      "type": "أنمي",
+      "year": "2020",
+      "rating": "8.6",
+      "episodes": 24,
+      "image": "https://image.tmdb.org/t/p/w780/7Ir9X8HHD3aOe66HhtxyKE6ZAYX.jpg",
+      "description": "أنمي أكشن وخيال علمي من استوديو MAPPA",
+      "categories": [
+        "action",
+        "sci-fi",
+        "horror",
+        "animation"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 11,
+      "name": "One Punch Man",
+      "type": "أنمي",
+      "year": "2015",
+      "rating": "8.7",
+      "episodes": 24,
+      "image": "https://image.tmdb.org/t/p/w780/iE3s0lG5QVdEHOEZnoAxjmMtvne.jpg",
+      "description": "أنمي أكشن وكوميديا من استوديو Madhouse",
+      "categories": [
+        "action",
+        "comedy",
+        "sci-fi",
+        "animation"
+      ],
+      "updatedAt": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "id": 12,
+      "name": "Spirited Away",
+      "type": "أنمي",
+      "year": "2001",
+      "rating": "8.6",
+      "episodes": 1,
+      "image": "https://image.tmdb.org/t/p/w780/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
+      "description": "فيلم أنمي من إنتاج Studio Ghibli",
+      "categories": [
+        "fantasy",
+        "animation"
+      ],
+      "updatedAt": "2025-11-22T02:55:24.253Z"
+    },
+    {
+      "id": 13,
+      "name": "Your Name",
+      "type": "أنمي",
+      "year": "2016",
+      "rating": "8.4",
+      "episodes": 1,
+      "image": "https://image.tmdb.org/t/p/w780/q719jXXEzOoYaps6babgKnONONX.jpg",
+      "description": "فيلم أنمي رومانسي من إنتاج Makoto Shinkai",
+      "categories": [
+        "fantasy",
+        "romance",
+        "animation"
+      ],
+      "updatedAt": "2025-11-22T02:55:24.253Z"
+    },
+    {
+      "id": 14,
+      "name": "Dragon Ball Z",
+      "type": "أنمي",
+      "year": "1989-1996",
+      "rating": "8.7",
+      "episodes": 291,
+      "image": "https://image.tmdb.org/t/p/w780/2v0xioQ5GnpUMOXyC3Qzjwl6Mqz.jpg",
+      "description": "أنمي أكشن من أشهر الأنميات في التاريخ",
+      "categories": [
+        "action",
+        "fantasy"
+      ],
+      "updatedAt": "2025-11-22T02:55:24.253Z"
+    },
+    {
+      "id": 15,
+      "name": "Tokyo Ghoul",
+      "type": "أنمي",
+      "year": "2014-2018",
+      "rating": "8.1",
+      "episodes": 48,
+      "image": "https://image.tmdb.org/t/p/w780/n3M2Y1QJ6kVxXsPWWCpy2dQa9Vx.jpg",
+      "description": "أنمي رعب وأكشن من استوديو Pierrot",
+      "categories": [
+        "action",
+        "horror"
+      ],
+      "updatedAt": "2025-11-22T02:55:24.253Z"
+    },
+    {
+      "id": 16,
+      "name": "Bleach",
+      "type": "أنمي",
+      "year": "2004-2012",
+      "rating": "8.2",
+      "episodes": 366,
+      "image": "https://image.tmdb.org/t/p/w780/2lbclF3JQWmos5WsacfI3Q9AP3P.jpg",
+      "description": "أنمي أكشن وخيال علمي من أشهر الأنميات",
+      "categories": [
+        "action",
+        "sci-fi",
+        "fantasy"
+      ],
+      "updatedAt": "2025-11-22T02:55:24.253Z"
+    },
+    {
+      "id": 17,
+      "name": "Code Geass",
+      "type": "أنمي",
+      "year": "2006-2008",
+      "rating": "8.7",
+      "episodes": 50,
+      "image": "https://image.tmdb.org/t/p/w780/5MXyQfz8xUP3dIFPTubhTsbFY6N.jpg",
+      "description": "أنمي أكشن واستراتيجية من أفضل الأنميات",
+      "categories": [
+        "action"
+      ],
+      "updatedAt": "2025-11-22T02:55:24.253Z"
+    },
+    {
+      "id": 18,
+      "name": "Cowboy Bebop",
+      "type": "أنمي",
+      "year": "1998-1999",
+      "rating": "8.8",
+      "episodes": 26,
+      "image": "https://image.tmdb.org/t/p/w780/cqWnxP5fzQkdqYqvFdN6fXbBzPr.jpg",
+      "description": "أنمي خيال علمي ومغامرات من أفضل الأنميات",
+      "categories": [
+        "sci-fi"
+      ],
+      "updatedAt": "2025-11-22T02:55:24.254Z"
+    },
+    {
+      "id": 19,
+      "name": "Neon Genesis Evangelion",
+      "type": "أنمي",
+      "year": "1995-1996",
+      "rating": "8.5",
+      "episodes": 26,
+      "image": "https://image.tmdb.org/t/p/w780/n3N2Y1QJ6kVxXsPWWCpy2dQa9Vx.jpg",
+      "description": "أنمي خيال علمي ودراما من أفضل الأنميات",
+      "categories": [
+        "drama",
+        "sci-fi"
+      ],
+      "updatedAt": "2025-11-22T02:55:24.254Z"
+    },
+    {
+      "id": 20,
+      "name": "Mob Psycho 100",
+      "type": "أنمي",
+      "year": "2016",
+      "rating": "8.5",
+      "episodes": 37,
+      "image": "https://image.tmdb.org/t/p/w780/mY7SeH4HFFxW1hiI6cWuwCRKptN.jpg",
+      "description": "أنمي أكشن وخيال علمي من استوديو Bones",
+      "categories": [
+        "action",
+        "sci-fi"
+      ],
+      "updatedAt": "2025-11-22T02:55:24.254Z"
     }
   ]
 }
