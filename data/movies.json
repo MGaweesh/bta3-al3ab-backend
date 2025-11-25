@@ -791,17 +791,27 @@
       "id": 25,
       "name": "Peaky Blinders",
       "type": "مسلسل",
-      "year": "2013-2022",
+      "year": "2013",
       "rating": "8.8",
-      "seasons": 6,
-      "image": "https://image.tmdb.org/t/p/w780/1j9s2DlClQABlpKXDbOyX7V8SDt.jpg",
+      "seasons": "6",
+      "image": "https://m.media-amazon.com/images/M/MV5BOGM0NGY3ZmItOGE2ZC00OWIxLTk0N2EtZWY4Yzg3ZDlhNGI3XkEyXkFqcGc@._V1_SX300.jpg",
       "description": "مسلسل جريمة ودراما من BBC",
       "categories": [
         "crime",
         "drama",
         "thriller"
       ],
-      "updatedAt": "2025-01-16T02:00:00.000Z"
+      "updatedAt": "2025-11-25T15:16:33.751Z",
+      "rate": "8.7",
+      "genre": "Crime, Drama",
+      "writer": "Steven Knight",
+      "actors": "Cillian Murphy, Paul Anderson, Sophie Rundle",
+      "plot": "Thomas Shelby and his brothers return to Birmingham after serving in the British Army during WWI. Shelby and the Peaky Blinders, the gang he is leader of, control the city of Birmingham But as Shelby's ambitions extend beyond Birmingham, he plans to build on the business empire he's created, and stop anyone who gets in his way.",
+      "runtime": "60 min",
+      "language": "English, Romanian, Irish Gaelic, Italian, Yiddish, French",
+      "country": "United Kingdom",
+      "awards": "Won 1 BAFTA Award25 wins & 56 nominations total",
+      "imdbVotes": "739,472"
     },
     {
       "id": 26,
