@@ -3473,16 +3473,24 @@
     },
     {
       "id": 2105,
-      "name": "Senua Saga Hellblade II",
+      "name": "Senua's Saga: Hellblade II",
       "size": "34.4 GB",
-      "image": null,
+      "image": "https://media.rawg.io/media/games/b5c/b5ced2e44396160e62ff8d70e3adda71.jpg",
       "categories": [
         "action",
         "adventure",
         "horror",
         "single-player"
       ],
-      "createdAt": "2025-01-15T22:40:00.000Z"
+      "createdAt": "2025-01-15T22:40:00.000Z",
+      "rating": "3.95",
+      "released": "2024-05-21",
+      "description": "The sequel to the award winning Hellblade: Senua’s Sacrifice, Senua returns in a brutal journey of survival through the myth and torment of Viking Iceland. Intent on saving those who have fallen victim to the horrors of tyranny, Senua faces a battle of overcoming the darkness within and without.\n\nSink deep into the next chapter of Senua’s story, a crafted experience told through cinematic immersion, beautifully realised visuals and encapsulating sound.",
+      "platforms": "Xbox Series S/X, PC",
+      "developers": "Ninja Theory",
+      "publishers": "Microsoft Game Studios",
+      "website": "https://www.xbox.com/en-US/games/senuas-saga-hellblade-ii",
+      "updatedAt": "2025-11-25T21:43:45.947Z"
     },
     {
       "id": 2106,
