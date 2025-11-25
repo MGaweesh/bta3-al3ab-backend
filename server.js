@@ -25,6 +25,10 @@ const MOVIES_FILE_TMP = join(DATA_DIR, 'movies.json.tmp');
 let writeQueueGames = Promise.resolve();
 let writeQueueMovies = Promise.resolve();
 
+// Separate queue for GitHub commits to prevent SHA conflicts
+// This ensures commits happen sequentially, not concurrently
+let githubCommitQueue = Promise.resolve();
+
 // Middleware
 app.use(cors({ origin: '*' }));
 app.use(compression());
@@ -107,6 +111,24 @@ const readMoviesData = () => {
   }
 };
 
+// Helper function to enqueue GitHub commits sequentially
+// This prevents SHA conflicts when multiple commits happen quickly
+const enqueueGitHubCommit = (localFilePath, repoPath, commitMessage) => {
+  githubCommitQueue = githubCommitQueue.then(async () => {
+    try {
+      const result = await commitFileToGitHub(localFilePath, repoPath, commitMessage);
+      console.log("✅ GitHub commit success:", result.commitUrl);
+      return result;
+    } catch (err) {
+      console.error("❌ GitHub commit failed:", err.message);
+      // Don't throw - allow queue to continue even if one commit fails
+      return null;
+    }
+  });
+
+  return githubCommitQueue;
+};
+
 // Helper function to commit file to GitHub
 const commitFileToGitHub = async (localFilePath, repoPath, commitMessage) => {
   const token = process.env.GITHUB_TOKEN;
@@ -120,7 +142,7 @@ const commitFileToGitHub = async (localFilePath, repoPath, commitMessage) => {
 
   try {
     const fileContent = readFileSync(localFilePath, 'utf8');
-    const contentBase64 = Buffer.from(fileContent).toString('base64');
+    let contentBase64 = Buffer.from(fileContent).toString('base64');
 
     // Get current file SHA (if exists)
     let currentSha = null;
@@ -295,20 +317,24 @@ const writeGamesData = async (data, action = 'update') => {
       
       console.log(`✅ Saved games.json locally`);
 
-      // Try to commit to GitHub (non-blocking)
+      // Enqueue GitHub commit (non-blocking, sequential)
+      // This ensures commits happen one at a time to prevent SHA conflicts
       let githubResult = null;
       if (process.env.GITHUB_TOKEN && process.env.GITHUB_OWNER && process.env.GITHUB_REPO) {
-        try {
-          const commitMessage = `Update games.json from dashboard — ${action} — ${new Date().toISOString()}`;
-          githubResult = await commitFileToGitHub(GAMES_FILE, 'data/games.json', commitMessage);
-          
-          if (githubResult && githubResult.commitUrl) {
-            console.log(`✅ Committed games.json to GitHub: ${githubResult.commitUrl}`);
-          }
-        } catch (githubError) {
-          console.error(`⚠️  GitHub commit failed: ${githubError.message}`);
-          // Don't fail the operation if GitHub commit fails
-        }
+        const commitMessage = `Update games.json from dashboard — ${action} — ${new Date().toISOString()}`;
+        // Don't await - let it run in the background queue
+        enqueueGitHubCommit(GAMES_FILE, 'data/games.json', commitMessage)
+          .then(result => {
+            if (result && result.commitUrl) {
+              console.log(`✅ Committed games.json to GitHub: ${result.commitUrl}`);
+            }
+          })
+          .catch(err => {
+            console.error(`⚠️  GitHub commit failed: ${err.message}`);
+          });
+        
+        // Return immediately - commit will happen in queue
+        githubResult = { queued: true };
       }
 
       return {
@@ -317,7 +343,7 @@ const writeGamesData = async (data, action = 'update') => {
         commitUrl: githubResult?.commitUrl || null,
         sha: githubResult?.sha || null,
         commitSha: githubResult?.commitSha || null,
-        message: githubResult ? 'Saved and committed to GitHub' : 'Saved locally (GitHub not configured or failed)'
+        message: githubResult ? 'Saved locally, GitHub commit queued' : 'Saved locally (GitHub not configured or failed)'
       };
     } catch (error) {
       console.error(`❌ Error writing games.json: ${error.message}`);
@@ -348,20 +374,24 @@ const writeMoviesData = async (data, action = 'update') => {
       
       console.log(`✅ Saved movies.json locally`);
 
-      // Try to commit to GitHub (non-blocking)
+      // Enqueue GitHub commit (non-blocking, sequential)
+      // This ensures commits happen one at a time to prevent SHA conflicts
       let githubResult = null;
       if (process.env.GITHUB_TOKEN && process.env.GITHUB_OWNER && process.env.GITHUB_REPO) {
-        try {
-          const commitMessage = `Update movies.json from dashboard — ${action} — ${new Date().toISOString()}`;
-          githubResult = await commitFileToGitHub(MOVIES_FILE, 'data/movies.json', commitMessage);
-          
-          if (githubResult && githubResult.commitUrl) {
-            console.log(`✅ Committed movies.json to GitHub: ${githubResult.commitUrl}`);
-          }
-        } catch (githubError) {
-          console.error(`⚠️  GitHub commit failed: ${githubError.message}`);
-          // Don't fail the operation if GitHub commit fails
-        }
+        const commitMessage = `Update movies.json from dashboard — ${action} — ${new Date().toISOString()}`;
+        // Don't await - let it run in the background queue
+        enqueueGitHubCommit(MOVIES_FILE, 'data/movies.json', commitMessage)
+          .then(result => {
+            if (result && result.commitUrl) {
+              console.log(`✅ Committed movies.json to GitHub: ${result.commitUrl}`);
+            }
+          })
+          .catch(err => {
+            console.error(`⚠️  GitHub commit failed: ${err.message}`);
+          });
+        
+        // Return immediately - commit will happen in queue
+        githubResult = { queued: true };
       }
 
       return {
@@ -370,7 +400,7 @@ const writeMoviesData = async (data, action = 'update') => {
         commitUrl: githubResult?.commitUrl || null,
         sha: githubResult?.sha || null,
         commitSha: githubResult?.commitSha || null,
-        message: githubResult ? 'Saved and committed to GitHub' : 'Saved locally (GitHub not configured or failed)'
+        message: githubResult ? 'Saved locally, GitHub commit queued' : 'Saved locally (GitHub not configured or failed)'
       };
     } catch (error) {
       console.error(`❌ Error writing movies.json: ${error.message}`);
@@ -890,7 +920,8 @@ app.get('/api/health', async (req, res) => {
 app.post('/api/debug/commit-test', async (req, res) => {
   try {
     const testData = { test: true, timestamp: new Date().toISOString() };
-    const testFilePath = join(__dirname, '..', 'data', 'test-commit.json');
+    // Use DATA_DIR instead of hardcoded path to work on both local and Render
+    const testFilePath = join(DATA_DIR, 'test-commit.json');
     const testRepoPath = 'test/test-commit.json';
     
     // Write test file
@@ -965,8 +996,9 @@ app.get('/api/data/status', async (req, res) => {
 // These routes provide compatibility with frontend endpoints that expect different URL patterns
 // IMPORTANT: These routes must be defined BEFORE the catch-all handler
 
-// GET /api/movies/:id → return single movie by id
-app.get('/api/movies/:id', async (req, res) => {
+// GET /api/movie/:id → return single movie by id
+// Note: Using /api/movie/:id instead of /api/movies/:id to avoid conflict with /api/movies/:type
+app.get('/api/movie/:id', async (req, res) => {
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   res.set('Pragma', 'no-cache');
   res.set('Expires', '0');
