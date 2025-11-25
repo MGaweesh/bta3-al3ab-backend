@@ -1502,15 +1502,27 @@
       "id": 2024,
       "name": "Dead Island 2",
       "size": "37 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/534380/header.jpg",
+      "image": "https://media.rawg.io/media/games/9cd/9cd22ae5aebd922f96f2bc50efab83df.jpg",
       "categories": [
         "action",
         "adventure",
         "horror",
         "survival",
-        "multiplayer"
+        "multiplayer",
+        "single-player",
+        "shooter"
       ],
-      "createdAt": "2025-01-15T15:55:00.000Z"
+      "createdAt": "2025-01-15T15:55:00.000Z",
+      "rating": "3.71",
+      "released": "2023-04-21",
+      "description": "A deadly virus is spreading across Los Angeles, California, turning its inhabitants into ravenous zombies. The city is in quarantine and the military have retreated. Bitten, infected, but more than just immune, you learn to harness the zombie inside. Only you, and the handful of other swaggering fellows who happen to be resistant to the pathogen, holds the future of LA (and humanity), in the balance. As you uncover the truth behind the outbreak you’ll discover who – or what – you are. Survive, evolve, save the world – just another day in LA! The much-loved zombie saga is back with a unique formula of horror, dark humor and over the top zombie-slaying, spanning an epic pulp adventure. Dead Island 2 is a thrilling First-Person Action RPG that takes players across a brand-new playground. Stylish, vibrant and flooded with zombie infection, explore iconic, gore-drenched Los Angeles. Meet larger-than-life characters. Slay countless foes in exquisitely bloody detail. And evolve to become the ultimate Zombie Slayer. See you in HELL-A!",
+      "platforms": "PC, Xbox Series S/X, PlayStation 4, PlayStation 5, Xbox One",
+      "developers": "Dambuster Studios",
+      "publishers": "Deep Silver",
+      "metacritic": "75",
+      "playtime": "11 ساعة",
+      "website": "http://deadisland2.deepsilver.com/",
+      "updatedAt": "2025-11-25T19:16:30.056Z"
     },
     {
       "id": 2025,
