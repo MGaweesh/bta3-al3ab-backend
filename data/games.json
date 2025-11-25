@@ -804,17 +804,29 @@
     },
     {
       "id": 1038,
-      "name": "Resident Evil 7 Biohazard",
+      "name": "Resident Evil 7: Biohazard",
       "size": "23.4 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/418370/header.jpg",
+      "image": "https://media.rawg.io/media/games/cee/cee577e2097a59b77193fe2bce94667d.jpg",
       "categories": [
         "horror",
         "action",
         "adventure",
         "survival",
-        "single-player"
+        "single-player",
+        "shooter",
+        "multiplayer"
       ],
-      "createdAt": "2025-01-15T13:05:00.000Z"
+      "createdAt": "2025-01-15T13:05:00.000Z",
+      "rating": "4.33",
+      "released": "2017-01-23",
+      "description": "Resident Evil 7: Biohazard is the latest installment in the Resident Evil series. For 13 long years, Resident Evil series were rejecting the survival-horror aspect and atmosphere of first original games in the series mainly released in nineties on PlayStation one system. From the famous Resident Evil 4 until Resident Evil 6, the series went full-force into action genre leaving horror elements behind and hard-core fans disappointed. Finally, Capcom realized that Resident Evil needs a change and Resident Evil 7: Biohazard delivers those changes at its fullest. First of all, the camera angle changed from over the shoulder view into first-person mode. Another change is that survival-horror elements are back together with light puzzle solving, inventory management and maze-like mansion in which the main story of the game happens. The player controls Ethan Winters who is searching for his lost wife in a dark mansion filled with horrible creatures and insane family. \r\nResident Evil 7: Biohazard can also be played with virtual reality setup and it’s known as one of the best games which supports VR.",
+      "platforms": "macOS, PlayStation 4, PC, Xbox One, Nintendo Switch",
+      "developers": "Capcom, Capcom U.S.A",
+      "publishers": "Capcom",
+      "metacritic": "85",
+      "playtime": "10 ساعة",
+      "website": "http://residentevil7.com",
+      "updatedAt": "2025-11-25T15:24:52.738Z"
     },
     {
       "id": 1039,
