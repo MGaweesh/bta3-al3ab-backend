@@ -2435,9 +2435,9 @@
     },
     {
       "id": 2062,
-      "name": "Hollow Knight Silksong",
+      "name": "Hollow Knight: Silksong",
       "size": "1.7 GB",
-      "image": null,
+      "image": "https://media.rawg.io/media/games/27c/27cd8b7dead05a870f8a514a9a1915ad.jpg",
       "categories": [
         "action",
         "adventure",
@@ -2445,7 +2445,16 @@
         "platformer",
         "single-player"
       ],
-      "createdAt": "2025-01-15T19:05:00.000Z"
+      "createdAt": "2025-01-15T19:05:00.000Z",
+      "rating": "4.3",
+      "released": "2025-09-04",
+      "description": "Hollow Knight: Silksong is the epic sequel to Hollow Knight, the epic action-adventure of bugs and heroes. As the lethal hunter Hornet, journey to all-new lands, discover new powers, battle vast hordes of bugs and beasts and uncover ancient secrets tied to your nature and your past.",
+      "platforms": "Xbox Series S/X, Xbox One, PlayStation 5, PlayStation 4, PC, Linux, macOS, Nintendo Switch",
+      "developers": "Team Cherry",
+      "publishers": "Team Cherry",
+      "playtime": "24 ساعة",
+      "website": "http://hollowknightsilksong.com/",
+      "updatedAt": "2025-11-25T20:12:47.048Z"
     },
     {
       "id": 2063,
