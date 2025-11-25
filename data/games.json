@@ -3562,16 +3562,26 @@
     },
     {
       "id": 2109,
-      "name": "Spider-Man Web of Shadows",
+      "name": "Spider-Man: Web of Shadows",
       "size": "4.3 GB",
-      "image": null,
+      "image": "https://media.rawg.io/media/games/560/560c4a3fc525979b9e1f35e17d267229.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
         "single-player"
       ],
-      "createdAt": "2025-01-15T23:00:00.000Z"
+      "createdAt": "2025-01-15T23:00:00.000Z",
+      "rating": "4.02",
+      "released": "2008-10-21",
+      "description": "New York City has been invaded by a vicious symbiote infection and only\nSpider-Man can save it. Experience an unprecedented level of game play\nchoice, including for the first time, control over the game's direction\nand outcome. Choose how Spider-Man fights, which powers to upgrade, who\nin the Marvel universe to fight with or against & the fate of NY City\nitself. Choose wisely.",
+      "platforms": "PlayStation 2, PlayStation 3, Nintendo DS, Wii, PC, Xbox 360, PSP",
+      "developers": "Treyarch, Shaba Games",
+      "publishers": "Activision Blizzard",
+      "metacritic": "64",
+      "playtime": "1 ساعة",
+      "website": "http://seizecontrol.marvel.com/",
+      "updatedAt": "2025-11-25T21:45:41.634Z"
     },
     {
       "id": 2110,
