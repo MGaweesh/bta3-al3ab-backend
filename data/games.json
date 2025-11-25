@@ -2506,39 +2506,35 @@
     },
     {
       "id": 2065,
-      "name": "Kingdom Come: Deliverance II",
+      "name": "Kingdom Come Deliverance II",
       "size": "70 GB",
-      "image": "https://media.rawg.io/media/games/d84/d842fec4ae7bbd782d330f678c980f7f.jpg",
+      "image": null,
       "categories": [
         "rpg",
         "action",
-        "adventure",
-        "single-player",
-        "open-world"
+        "adventure"
       ],
-      "createdAt": "2025-01-15T19:20:00.000Z",
-      "rating": "4.34",
-      "released": "2025-02-03",
-      "description": "Kingdom of Bohemia, Early 15th Century: chaos has befallen the kingdom.  As invaders pillage this ungoverned land, sowing fear and terror, Henry of Skalitz seeks revenge for his murdered family.\n\nNow a trusted member of the rightful king’s allies, Henry is sent to escort Sir Hans Capon on a diplomatic mission. After they are ambushed and nearly killed, the two young men embark on a series of perilous adventures, putting their skills, character and friendship to the ultimate test.",
-      "platforms": "PC, PlayStation 5, Xbox Series S/X",
-      "developers": "Warhorse Studios",
-      "publishers": "Deep Silver",
-      "playtime": "28 ساعة",
-      "website": "https://www.kingdomcomerpg.com/",
-      "updatedAt": "2025-11-25T20:16:22.617Z"
+      "createdAt": "2025-01-15T19:20:00.000Z"
     },
     {
       "id": 2066,
-      "name": "Layers of Fear - Inheritance",
+      "name": "Layers of Fear: Inheritance",
       "size": "1.4 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/391720/header.jpg",
+      "image": "https://media.rawg.io/media/games/eba/eba3ebb72a958ae9c167ce04e58104ff.jpg",
       "categories": [
         "horror",
         "adventure",
         "indie",
         "single-player"
       ],
-      "createdAt": "2025-01-15T19:25:00.000Z"
+      "createdAt": "2025-01-15T19:25:00.000Z",
+      "rating": "3.54",
+      "released": "2016-08-02",
+      "description": "Time takes its toll on everything that surrounds us. It destroys what is physical, crumbling even the sturdiest foundations, and it destroys our minds—our memories—shaping and twisting them into something new. You are never ready to face the past, but the past never lets you go. And so I find myself at the door, the handle disturbingly cold to the touch. I pull it open and enter what was once a place of solitude turned nightmare. I’m home, Father. \n\nLayers of Fear: Inheritance expands the plot from Layers of Fear and tells the story of the painter’s daughter, who comes back to her childhood home to face her past. Can she forgive her father, or will she resent all that has happened? Relive her experiences and witness the full scope of the tragedy that has swallowed up the family.\nLead the daughter through what’s left of the mansion and take part in the madness that her father bestowed upon the whole family. Face the memories of her past and shape them into the destiny that awaits her. \n\nFeatures:\n-\tA completely new narrative experience that expands the story of Layers of Fear\n-\tExplore the painter’s house from his daughter’s perspective\n-\tMultiple endings based on how you play the game\n-\tA return to the terrifying and psychedelic experience that you loved from the base game",
+      "platforms": "PlayStation 4, PC",
+      "publishers": "Aspyr",
+      "website": "https://store.steampowered.com/app/493530/Layers_of_Fear_Inheritance/",
+      "updatedAt": "2025-11-25T20:22:32.702Z"
     },
     {
       "id": 2067,
