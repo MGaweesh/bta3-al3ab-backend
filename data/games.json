@@ -3002,16 +3002,27 @@
     },
     {
       "id": 2089,
-      "name": "Prince of Persia - 2008",
+      "name": "Prince of Persia (2008)",
       "size": "1.7 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/19980/header.jpg",
+      "image": "https://media.rawg.io/media/games/956/95640d5ea0288c187dbce849a4254a41.jpg",
       "categories": [
         "action",
         "adventure",
         "platformer",
-        "single-player"
+        "single-player",
+        "open-world"
       ],
-      "createdAt": "2025-01-15T21:20:00.000Z"
+      "createdAt": "2025-01-15T21:20:00.000Z",
+      "rating": "3.78",
+      "released": "2008-12-02",
+      "description": "Prince of Persia series is known for its acrobatic platforming gameplay, got a visual rehaul in this installment. It features an open-world ancient Persian city-state, that is fully available for the players.\n\nAt the heart of the game this time is not a fictional plot, but real Persian mythology. According to one of the legends, the god Ariman spewed out dark energy onto the Persian land. And the hero is to liberate it from this. This time, the main character has a trust-worthy sidekick. It is controlled by a AI and the interaction of two characters builds the basic gameplay mechanics.\n\nThe world of the game will have to travel a lot in the empty game world: the whole 24 levels of the game are populated with fewer than 10 NPCs. But hands down: visually they look like an illustration from the ancient Persian book. Acrobatic stunts were reinvented and the movement of the main character now feels more fluid and natural.",
+      "platforms": "PC, macOS, PlayStation 3, Xbox 360",
+      "developers": "Ubisoft, Ubisoft Montreal, Gameloft",
+      "publishers": "Ubisoft Entertainment",
+      "metacritic": "82",
+      "playtime": "1 ساعة",
+      "website": "http://www.princeofpersiagame.com",
+      "updatedAt": "2025-11-25T20:58:08.902Z"
     },
     {
       "id": 2090,
