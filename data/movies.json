@@ -1,21 +1,6 @@
 {
   "movies": [
     {
-      "id": 4,
-      "name": "Pulp Fiction",
-      "type": "فيلم",
-      "year": "1994",
-      "rating": "8.9",
-      "image": "https://image.tmdb.org/t/p/w780/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg",
-      "description": "فيلم جريمة وإثارة من إخراج كوينتن تارانتينو",
-      "categories": [
-        "crime",
-        "thriller",
-        "drama"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
       "id": 8,
       "name": "The Matrix",
       "type": "فيلم",
