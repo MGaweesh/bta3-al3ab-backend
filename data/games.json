@@ -2720,14 +2720,26 @@
       "id": 2074,
       "name": "Mad Max",
       "size": "3.7 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/234140/header.jpg",
+      "image": "https://media.rawg.io/media/games/d7d/d7d33daa1892e2468cd0263d5dfc957e.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
-        "single-player"
+        "single-player",
+        "multiplayer",
+        "rpg",
+        "survival"
       ],
-      "createdAt": "2025-01-15T20:05:00.000Z"
+      "createdAt": "2025-01-15T20:05:00.000Z",
+      "rating": "3.78",
+      "released": "2015-08-31",
+      "description": "Although Mad Max is not related to the film series, it is based on its universe. Max Rockatansky is trying to reach the \"Plains Of Silence\", place in which he believes he will finally find peace. He is confronted by a group of War Boys led by Scabrous Scrotus. Beating Max up and stealing everything from him, they leave him in the desert to face his death. Recovering from his injuries, he chases Scrotus in a duel but fails to defeat him. Wandering in the desert, he meets a technic named Chumbucket that helps him to build a new machine and revenge Scrotus. \n\nBeing in such esthetics, Max is able to travel in an open world post-apocalyptic universe of Mad Max. Utilizing driving as a primary mechanic, you are able to confront and battle your way out on the car while armed with different weapons. Flamethrowers, turbo-boosts, basically anything that may come handy. You can have your preference for playing stealthy or aggressive. To drive, you need gasoline and to customise your car you need experience which you will get over time. Experience all the consequences of being a survivor by driving through the wasteland.",
+      "platforms": "PC, Xbox One, PlayStation 4, Xbox 360, Linux, macOS",
+      "developers": "Avalanche Studios",
+      "publishers": "Feral Interactive, Warner Bros. Interactive",
+      "metacritic": "73",
+      "playtime": "11 ساعة",
+      "updatedAt": "2025-11-25T20:54:55.957Z"
     },
     {
       "id": 2075,
