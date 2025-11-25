@@ -3496,13 +3496,24 @@
       "id": 2106,
       "name": "Sifu",
       "size": "8.8 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2138710/header.jpg",
+      "image": "https://media.rawg.io/media/games/3a9/3a9ea2db24f879e61fe7b824f5888d2a.jpg",
       "categories": [
         "action",
         "adventure",
-        "single-player"
+        "single-player",
+        "fighting"
       ],
-      "createdAt": "2025-01-15T22:45:00.000Z"
+      "createdAt": "2025-01-15T22:45:00.000Z",
+      "rating": "4.07",
+      "released": "2022-02-08",
+      "description": "Is one life enough to have Kung Fu?\r\nIn Sifu, you play a young Kung-Fu student on a path of vengeance.\r\nRunning after shadows from his past, one against all, he will have to draw deep into his unique mastery of Pak-Mei Kung-Fu to prevail.\r\nOn the path of vengeance:\r\nThe hunt for your enemies will take you through the hidden corners of the city, from the gang-ridden suburbs to the cold hallways of the corporate towers. You have got one day, and countless enemies on your way. Time will be the price to pay.\r\nAdaptation is the way:\r\nCareful positioning and clever use of the environment to your advantage are key to your survival. Use everything at your disposal: throwable objects, makeshift weapons, windows and ledges... The odds are stacked against you, and you will be offered no mercy.\r\nTraining never ends:\r\nKung Fu is a path for the body and the mind. Learn from your errors, unlock unique skills, and find the strength within yourself to master the devastating techniques of Pak-Mei Kung-Fu.",
+      "platforms": "PC, Nintendo Switch, Xbox Series S/X, Xbox One, PlayStation 5, PlayStation 4",
+      "developers": "Sloclap",
+      "publishers": "Microids, Kepler Interactive, Sloclap",
+      "metacritic": "79",
+      "playtime": "3 ساعة",
+      "website": "https://www.sifugame.com/",
+      "updatedAt": "2025-11-25T21:44:01.219Z"
     },
     {
       "id": 2107,
