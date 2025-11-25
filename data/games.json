@@ -1975,16 +1975,26 @@
     },
     {
       "id": 2045,
-      "name": "Ghost of Tsushima",
+      "name": "Ghost of Tsushima Director's Cut",
       "size": "33.3 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2215430/header.jpg",
+      "image": "https://media.rawg.io/media/games/193/193c9fe23ca026914fdf41d551ff3df9.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
-        "single-player"
+        "single-player",
+        "rpg"
       ],
-      "createdAt": "2025-01-15T17:40:00.000Z"
+      "createdAt": "2025-01-15T17:40:00.000Z",
+      "rating": "4.59",
+      "released": "2021-08-20",
+      "description": "Explore the brand new Iki Island, plus PS5-specific enhancements like DualSense haptic feedback, Japanese lip sync, and more.",
+      "platforms": "PC, PlayStation 4, PlayStation 5",
+      "developers": "Sucker Punch Productions",
+      "publishers": "Sony Interactive Entertainment",
+      "playtime": "4 ساعة",
+      "website": "https://www.suckerpunch.com/category/games/ghostoftsushima/",
+      "updatedAt": "2025-11-25T19:30:44.055Z"
     },
     {
       "id": 2046,
