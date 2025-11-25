@@ -2795,16 +2795,27 @@
     },
     {
       "id": 2078,
-      "name": "Marvels SpiderMan 2",
+      "name": "Marvel's Spider-Man 2",
       "size": "68.7 GB",
-      "image": null,
+      "image": "https://media.rawg.io/media/games/7ae/7ae5a14cdb4ab222a134c15f4629e430.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
-        "single-player"
+        "single-player",
+        "multiplayer",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T20:25:00.000Z"
+      "createdAt": "2025-01-15T20:25:00.000Z",
+      "rating": "4.35",
+      "released": "2023-10-20",
+      "description": "Marvel's Spider-Man 2 is a 2023 action-adventure game developed by Insomniac Games and published by Sony Interactive Entertainment. It is based on the Marvel Comics character Spider-Man, and features a narrative inspired by its long-running comic book mythology which is also derived from various adaptations in other media. It is the third entry in the Marvel's Spider-Man series, acting as a sequel to Marvel's Spider-Man (2018) and a follow-up to Marvel's Spider-Man: Miles Morales (2020). The plot follows Peter Parker and Miles Morales as they come into conflict with Kraven the Hunter, who transforms New York City into a hunting ground for super-powered individuals; and with the extraterrestrial Venom symbiote, which bonds itself to Parker and negatively influences him, threatening to destroy his personal relationships.",
+      "platforms": "PC, PlayStation 5",
+      "developers": "Insomniac Games, Nixxes software",
+      "publishers": "Sony Interactive Entertainment, PlayStation Publishing",
+      "playtime": "32 ساعة",
+      "website": "https://blog.playstation.com/2021/09/09/marvels-spider-man-2-and-marvels-wolverine-revealed/",
+      "updatedAt": "2025-11-25T20:51:14.502Z"
     },
     {
       "id": 2079,
