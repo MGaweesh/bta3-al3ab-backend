@@ -1147,27 +1147,16 @@
     },
     {
       "id": 2009,
-      "name": "Baldur's Gate III",
+      "name": "Baldurs Gate 3",
       "size": "89.7 GB",
-      "image": "https://media.rawg.io/media/games/699/69907ecf13f172e9e144069769c3be73.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg",
       "categories": [
         "rpg",
         "adventure",
         "strategy",
-        "multiplayer",
-        "single-player"
+        "multiplayer"
       ],
-      "createdAt": "2025-01-15T14:40:00.000Z",
-      "rating": "4.43",
-      "released": "2023-08-03",
-      "description": "Gather your party, and return to the Forgotten Realms in a tale of fellowship and betrayal, sacrifice and survival, and the lure of absolute power.\r\n\r\nMysterious abilities are awakening inside you, drawn from a Mind Flayer parasite planted in your brain. Resist, and turn darkness against itself. Or embrace corruption, and become ultimate evil.\r\n\r\nFrom the creators of Divinity: Original Sin 2 comes a next-generation RPG, set in the world of Dungeons and Dragons.\r\n\r\nChoose from a wide selection of D&D races and classes, or play as an origin character with a hand-crafted background. Adventure, loot, battle and romance as you journey through the Forgotten Realms and beyond. Play alone, and select your companions carefully, or as a party of up to four in multiplayer.\r\n\r\nAbducted, infected, lost. You are turning into a monster, but as the corruption inside you grows, so does your power. That power may help you to survive, but there will be a price to pay, and more than any ability, the bonds of trust that you build within your party could be your greatest strength. Caught in a conflict between devils, deities, and sinister otherworldly forces, you will determine the fate of the Forgotten Realms together.\r\n\r\nForged with the new Divinity 4.0 engine, Baldur’s Gate 3 gives you unprecedented freedom to explore, experiment, and interact with a world that reacts to your choices. A grand, cinematic narrative brings you closer to your characters than ever before, as you venture through our biggest world yet.\r\n\r\nThe Forgotten Realms are a vast, detailed and diverse world, and there are secrets to be discovered all around you -- verticality is a vital part of exploration. Sneak, dip, shove, climb, and jump as you journey from the depths of the Underdark to the glittering rooftops of the Upper City. How you survive, and the mark you leave on the world, is up to you.",
-      "platforms": "macOS, PC, Xbox Series S/X, PlayStation 5",
-      "developers": "Larian Studios",
-      "publishers": "Larian Studios",
-      "metacritic": "97",
-      "playtime": "19 ساعة",
-      "website": "https://baldursgate3.game/",
-      "updatedAt": "2025-11-25T17:37:33.555Z"
+      "createdAt": "2025-01-15T14:40:00.000Z"
     },
     {
       "id": 2010,
@@ -1249,39 +1238,40 @@
       "id": 2013,
       "name": "BioShock 2 Remastered",
       "size": "7 GB",
-      "image": "https://media.rawg.io/media/games/7c4/7c448374df84b607f67ce9182a3a3ca7.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/409720/header.jpg",
       "categories": [
         "shooter",
         "action",
         "adventure",
         "horror",
-        "single-player",
-        "rpg",
-        "multiplayer"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T15:00:00.000Z",
-      "rating": "4",
-      "released": "2016-09-15",
-      "description": "Bioshock 2 is a shooter with RPG elements, centered around resource-management to a great extent: more like an RPG than a shooter. The game is made by 2K studios and represents the final part of a dystopia dilogy — preceded by the original Bioshock. Its successor is Bioshock Infinite.\nYou play as Big Daddy — a giant mech with a drill replacing one of the hands. The game, while they both are telling the story of a charming Rapture — the city descended from Orwell's and Zamyatin's pages where the society's greatest mind have suffered a severe decline.\nThe central feature of the game is the unique abandoned city's aesthetics — minding the time Bioshock 2 is still a beautiful title, with detailed drawn water and strange surroundings, never mind the variety of foes.\nThe remaster introduces a 4k resolution — it is now more enjoyable to explore Rapture and enjoy its various landscapes and sea-filled quarters. Among the other features: high-res textures and a set of Protector Trials,  which can give the player freakish weaponry and ammunition.",
-      "platforms": "PlayStation 4, macOS, PC, Xbox One, Nintendo Switch",
-      "developers": "Digital Extremes, 2K Australia, 2K Marin, Virtuos, 2K China, Blind Squirrel",
-      "publishers": "2K Games, Take Two Interactive",
-      "playtime": "4 ساعة",
-      "website": "https://2k.com/en-US/game/bioshock-the-collection",
-      "updatedAt": "2025-11-25T17:37:58.380Z"
+      "createdAt": "2025-01-15T15:00:00.000Z"
     },
     {
       "id": 2014,
       "name": "Borderlands 2 - Remastered",
       "size": "11.9 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/49520/header.jpg",
+      "image": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg",
       "categories": [
         "shooter",
         "action",
         "rpg",
-        "multiplayer"
+        "multiplayer",
+        "single-player",
+        "open-world"
       ],
-      "createdAt": "2025-01-15T15:05:00.000Z"
+      "createdAt": "2025-01-15T15:05:00.000Z",
+      "rating": "4.02",
+      "released": "2012-09-18",
+      "description": "Sequel to the 4-player cooperative FPS RPG Borderlands, where the new team of Vault Hunters arrives on the infamous planet Pandora in order to get the riches, hidden inside the Vault, and help to free the planet from the Handsome Jack, President of Hyperion. Clear out the endless waves and groups and marauders with various weapon types and character abilities.\r\nUnlike the first game, Borderlands 2 provided DLC not only expanding the world of Pandora with stand-alone story campaigns but adding 2 more characters. Now the main cast consists of Gunzerker Salvador(dual-wields guns at command), Siren Maya (holds and paralyzes the enemy), Commando Axton (summons turrets) and Zer0 the Assasin (invisible sniper ninja). But with the DLC players can try out summoning giant flying robots with Gaige the Mechromancer and Krieg the Psycho. \r\nMost of the game charm and popularity of Borderlands 2 comes from the supporting cast and the personalities of the NPC, making this fast-paced shooter with optional cover stand out.",
+      "platforms": "PlayStation 3, macOS, PC, Android, Linux, PS Vita, Xbox 360",
+      "developers": "Aspyr Media, 2K, Gearbox Software, Sony Computer Entertainment America",
+      "publishers": "2K Games, Aspyr",
+      "metacritic": "89",
+      "playtime": "11 ساعة",
+      "website": "http://www.borderlands2.com/",
+      "updatedAt": "2025-11-25T17:38:24.853Z"
     },
     {
       "id": 2015,
