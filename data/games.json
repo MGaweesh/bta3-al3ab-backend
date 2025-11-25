@@ -1871,15 +1871,27 @@
       "id": 2039,
       "name": "Fallout 4",
       "size": "21.6 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/377160/header.jpg",
+      "image": "https://media.rawg.io/media/games/d82/d82990b9c67ba0d2d09d4e6fa88885a7.jpg",
       "categories": [
         "rpg",
         "action",
         "adventure",
         "open-world",
-        "single-player"
+        "single-player",
+        "shooter",
+        "survival"
       ],
-      "createdAt": "2025-01-15T17:10:00.000Z"
+      "createdAt": "2025-01-15T17:10:00.000Z",
+      "rating": "3.81",
+      "released": "2015-11-09",
+      "description": "The fourth game in the post-apocalyptic action RPG series from Bethesda studious brings players back to the retro-future. After customizing the facial features of the character, players will be admitted to the Vault 111 with their family, and tricked into entering the cryogenic capsule. After the rude awakening after the unknown amount of time has passed, the child is separated from the parents and the loving partner is killed in front of them – the main quest is settled. Now there’s only the giant open world to explore. Fallout 4 introduces the mechanics of settlement building, where players can build their own little town. Gathering material for crafting and building brings more “survival” elements into the old formula. Within their own settlements, players will be able to build all needed utilities, from storage spaces to power armor stations. Visual upgrade from the previous game brings life to what used to be brown wastelands, now filled with details and color.",
+      "platforms": "PlayStation 4, PC, PlayStation 5, Xbox One",
+      "developers": "Bethesda Game Studios",
+      "publishers": "Bethesda Softworks",
+      "metacritic": "84",
+      "playtime": "38 ساعة",
+      "website": "http://www.fallout4.com",
+      "updatedAt": "2025-11-25T19:29:01.642Z"
     },
     {
       "id": 2040,
