@@ -2720,26 +2720,14 @@
       "id": 2074,
       "name": "Mad Max",
       "size": "3.7 GB",
-      "image": "https://media.rawg.io/media/games/d7d/d7d33daa1892e2468cd0263d5dfc957e.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/234140/header.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
-        "single-player",
-        "multiplayer",
-        "rpg",
-        "survival"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T20:05:00.000Z",
-      "rating": "3.78",
-      "released": "2015-08-31",
-      "description": "Although Mad Max is not related to the film series, it is based on its universe. Max Rockatansky is trying to reach the \"Plains Of Silence\", place in which he believes he will finally find peace. He is confronted by a group of War Boys led by Scabrous Scrotus. Beating Max up and stealing everything from him, they leave him in the desert to face his death. Recovering from his injuries, he chases Scrotus in a duel but fails to defeat him. Wandering in the desert, he meets a technic named Chumbucket that helps him to build a new machine and revenge Scrotus. \n\nBeing in such esthetics, Max is able to travel in an open world post-apocalyptic universe of Mad Max. Utilizing driving as a primary mechanic, you are able to confront and battle your way out on the car while armed with different weapons. Flamethrowers, turbo-boosts, basically anything that may come handy. You can have your preference for playing stealthy or aggressive. To drive, you need gasoline and to customise your car you need experience which you will get over time. Experience all the consequences of being a survivor by driving through the wasteland.",
-      "platforms": "PC, Xbox One, PlayStation 4, Xbox 360, Linux, macOS",
-      "developers": "Avalanche Studios",
-      "publishers": "Feral Interactive, Warner Bros. Interactive",
-      "metacritic": "73",
-      "playtime": "11 ساعة",
-      "updatedAt": "2025-11-25T20:54:55.957Z"
+      "createdAt": "2025-01-15T20:05:00.000Z"
     },
     {
       "id": 2075,
@@ -2892,60 +2880,35 @@
     },
     {
       "id": 2081,
-      "name": "Max Payne 3: The Complete Edition",
+      "name": "Max Payne 3 - Complete Edition",
       "size": "13.8 GB",
-      "image": "https://media.rawg.io/media/games/5bf/5bf88a28de96321c86561a65ee48e6c2.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/204100/header.jpg",
       "categories": [
         "shooter",
         "action",
         "adventure",
-        "single-player",
-        "multiplayer",
-        "open-world"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T20:40:00.000Z",
-      "rating": "4.26",
-      "released": "2012-05-15",
-      "description": "In Max Payne III we see Max from a new perspective. Taking place nine years after the second game, Payne left the police department in New York and now serves as a private security contractor in São Paulo, Brazil. Guarding the Branco family - Ricardo, Victor and Marcelo, everything turns into a disaster when a local street gang kidnaps Ricardo's wife. In attempt saving Ricardo's wife, another outlaw involves. In the end, Max has to infiltrate the gang to save Fabiana and perform some justice.\r\n\r\nEven if Max is old, he still can put on a hell of a fight. A cover system provides some good tactical advantages and bullet time is now something iconic for the series. Manipulating with time, Max can perform some amazing tricks to kill his opponent. Also, you can shoot from any angle basically, while lying on the ground. If that isn't enough for you, you can obliterate your enemies with melee attacks or blow them up by using explosives. \r\n\r\nAs another feature of the game, no loading screens are involved. Cut-scenes are also interactive, and with that, the process of the game is absolutely smooth which makes the best experience from an intense shooter.",
-      "platforms": "PlayStation 3, PC, Xbox 360, macOS",
-      "developers": "Rockstar Games",
-      "publishers": "Rockstar Games",
-      "metacritic": "87",
-      "playtime": "10 ساعة",
-      "website": "http://www.rockstargames.com/maxpayne3",
-      "updatedAt": "2025-11-25T20:55:33.575Z"
+      "createdAt": "2025-01-15T20:40:00.000Z"
     },
     {
       "id": 2082,
-      "name": "Metal Gear Solid V: The Phantom Pain",
+      "name": "Metal Gear Solid V The Phantom Pain",
       "size": "21.6 GB",
-      "image": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/287700/header.jpg",
       "categories": [
         "action",
         "adventure",
         "stealth",
-        "single-player",
-        "shooter",
-        "multiplayer",
-        "open-world"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T20:45:00.000Z",
-      "rating": "4.16",
-      "released": "2015-09-01",
-      "description": "Metal Gear Solid 5 continues the story of MGS: Peace Walker and MGS V: Ground Zeroes. Snake seeks revenge for the attack on the MSF group 9 years ago, that placed Big Boss into a coma. After the failed assassination attempt, Big Boss takes the code name Venom Snake, delving back into the world of superhumans and espionage.\r\nA large-scale story that includes 5 hours of cinematic cutscenes compliments open world exploration with hundreds of audio logs and side missions, forming the atmosphere of military drama with sci-fi elements. MGS5: Phantom Pain has an advanced AI system that will allow enemy soldiers constantly call for reinforcements if they see that something is wrong, forcing players to take down communications and fight or retreat and try again. \r\nPlayers will manage the base by gathering and managing staff, weaponry, and resources, in order to upgrade their personal arsenal and companions.",
-      "platforms": "PlayStation 4, PC, Xbox One, PlayStation 3, Xbox 360",
-      "developers": "Kojima Productions",
-      "publishers": "Konami",
-      "metacritic": "91",
-      "playtime": "22 ساعة",
-      "website": "http://www.metalgearsolid.com",
-      "updatedAt": "2025-11-25T20:55:53.577Z"
+      "createdAt": "2025-01-15T20:45:00.000Z"
     },
     {
       "id": 2083,
-      "name": "Metro - Exodus",
+      "name": "Metro Exodus: Enhanced Edition",
       "size": "32.9 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/412020/header.jpg",
+      "image": "https://media.rawg.io/media/games/389/389a26a01446af026608697fff70b675.jpg",
       "categories": [
         "shooter",
         "action",
@@ -2953,120 +2916,89 @@
         "horror",
         "single-player"
       ],
-      "createdAt": "2025-01-15T20:50:00.000Z"
+      "createdAt": "2025-01-15T20:50:00.000Z",
+      "rating": "4.35",
+      "released": "2021-05-06",
+      "description": "The year is 2036.\n\nA quarter-century after nuclear war devastated the earth, a few thousand survivors still cling to existence beneath the ruins of Moscow, in the tunnels of the Metro.\n\nThey have struggled against the poisoned elements, fought mutated beasts and paranormal horrors, and suffered the flames of civil war.\n\nBut now, as Artyom, you must flee the Metro and lead a band of Spartan Rangers on an incredible, continent-spanning journey across post-apocalyptic Russia in search of a new life in the East.\n\nMetro Exodus is an epic, story-driven first person shooter from 4A Games that blends deadly combat and stealth with exploration and survival horror in one of the most immersive game worlds ever created.\n\nExplore the Russian wilderness across vast, non-linear levels and follow a thrilling story-line that spans an entire year through spring, summer and autumn to the depths of nuclear winter.\n\nInspired by the novels of Dmitry Glukhovsky, Metro Exodus continues Artyom’s story in the greatest Metro adventure yet.",
+      "platforms": "PC",
+      "developers": "4A Games",
+      "publishers": "Deep Silver",
+      "website": "https://www.metrothegame.com/news/metro-exodus-pc-enhanced-out-now/",
+      "updatedAt": "2025-11-25T20:56:31.060Z"
     },
     {
       "id": 2084,
-      "name": "Murdered: Soul Suspect",
+      "name": "Murdered - Soul Suspect",
       "size": "5.7 GB",
-      "image": "https://media.rawg.io/media/games/54a/54a3e4c617217848dc43c4de9989fe37.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/238010/header.jpg",
       "categories": [
         "adventure",
         "action",
         "horror",
-        "single-player",
-        "rpg",
-        "open-world",
-        "stealth"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T20:55:00.000Z",
-      "rating": "3.47",
-      "released": "2014-06-03",
-      "description": "The hero is a policeman, talented and devoted to duty. But there is a clarification - this is a dead policeman, killed because of his work, but he did not leave the world, he turned into a ghost and did not lose his passion for investigations.\nA hero can do many things in our world, but not all. Can be present everywhere and even pass through the walls (but not in closed houses, only through open doors and windows). Can see what ordinary people see, read, think. But he can not take and move things, cannot talk with living people - for actions with objects and communication he has to find a girl-medium.\nIn the game, you need to collect evidence and draw conclusions from this. Ways to extract proof are sometimes very exotic. For example, a hero can penetrate the memory of a witness and find there information that the witness himself cannot remember. The hero can meet other ghosts, who were once people and killed - after talking with them, you can learn about the circumstances of this.\nFinding evidence and reasoning is not the only thing that you have to do. The hero can be killed a second time, and it will be definitive - some disembodied beings seek to destroy the hero's soul. But they are vulnerable, and the hero can kill them.",
-      "platforms": "Xbox One, PC, PlayStation 4, PlayStation 3, Xbox 360",
-      "developers": "Square Enix, Airtight Games",
-      "publishers": "Square Enix",
-      "metacritic": "59",
-      "playtime": "5 ساعة",
-      "website": "http://www.murdered.com",
-      "updatedAt": "2025-11-25T20:56:47.497Z"
+      "createdAt": "2025-01-15T20:55:00.000Z"
     },
     {
       "id": 2085,
       "name": "My Friend Pedro",
       "size": "1.8 GB",
-      "image": "https://media.rawg.io/media/games/21d/21dfa5f7f5c0fa2b85f418c4e1c6ab1b.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/557340/header.jpg",
       "categories": [
         "action",
         "indie",
         "platformer",
-        "single-player",
-        "shooter",
-        "adventure"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T21:00:00.000Z",
-      "rating": "3.87",
-      "released": "2019-06-19",
-      "description": "My Friend Pedro is a violent ballet about friendship, imagination, and one man’s struggle to obliterate anyone in his path at the behest of a sentient banana. The strategic use of split aiming, slow motion, and the ol’ stylish window breach create one sensational action sequence after another in an explosive battle through the violent underworld.",
-      "platforms": "PlayStation 4, Xbox One, iOS, PC, Nintendo Switch",
-      "developers": "Devolver, DeadToast Entertainment, Deadtoast",
-      "publishers": "Devolver Digital",
-      "metacritic": "76",
-      "playtime": "3 ساعة",
-      "website": "http://www.deadtoast.com/",
-      "updatedAt": "2025-11-25T20:57:04.851Z"
+      "createdAt": "2025-01-15T21:00:00.000Z"
     },
     {
       "id": 2086,
-      "name": "Ori and the Blind Forest: Definitive Edition",
+      "name": "Ori and the Blind Forest - Definitive Edition",
       "size": "3.5 GB",
-      "image": "https://media.rawg.io/media/games/04a/04a7e7e185fb51493bdcbe1693a8b3dc.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/387290/header.jpg",
       "categories": [
         "adventure",
         "indie",
         "platformer",
-        "single-player",
-        "rpg",
-        "open-world"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T21:05:00.000Z",
-      "rating": "4.42",
-      "released": "2016-04-27",
-      "description": "NEW IN THE DEFINITIVE EDITION\n• Packed with new and additional content: New areas, new secrets, new abilities, more story sequences, multiple difficulty modes, full backtracking support and much more!\n• Discover Naru’s past in two brand new environments.\n• Master two powerful new abilities – Dash and Light Burst.\n• Find new secret areas and explore Nibel faster by teleporting between Spirit Wells.\nThe forest of Nibel is dying. After a powerful storm sets a series of devastating events in motion, Ori must journey to find courage and confront a dark nemesis to save the forest of Nibel. “Ori and the Blind Forest” tells the tale of a young orphan destined for heroics, through a visually stunning Action-Platformer crafted by Moon Studios. Featuring hand-painted artwork, meticulously animated character performance, a fully orchestrated score and dozens of new features in the Definitive Edition, “Ori and the Blind Forest” explores a deeply emotional story about love and sacrifice, and the hope that exists in us all.",
-      "platforms": "Xbox One, PC, Nintendo Switch, Xbox 360",
-      "developers": "Moon Studios",
-      "publishers": "Microsoft Studios",
-      "metacritic": "88",
-      "playtime": "6 ساعة",
-      "website": "http://www.oriblindforest.com/",
-      "updatedAt": "2025-11-25T20:57:22.010Z"
+      "createdAt": "2025-01-15T21:05:00.000Z"
     },
     {
       "id": 2087,
       "name": "Ori and the Will of the Wisps",
       "size": "3.5 GB",
-      "image": "https://media.rawg.io/media/games/718/71891d2484a592d871e91dc826707e1c.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1057090/header.jpg",
       "categories": [
         "adventure",
         "indie",
         "platformer",
-        "single-player",
-        "action",
-        "open-world"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T21:10:00.000Z",
-      "rating": "4.43",
-      "released": "2020-03-10",
-      "description": "A New Journey Begins\r\n\r\nEmbark on an adventure with all new combat and customization options while exploring a vast, exotic world encountering larger than life enemies and challenging puzzles. Seek help from discoverable allies on your path to unravel Ori’s true destiny.\r\n\r\nExplore a vast, beautiful, and immersive world\r\nExplore a vast, beautiful, immersive, and dangerous world filled with gripping enemy encounters, challenging puzzles and thrilling escape sequences. Unravel Ori’s true destiny in this emotionally engaging, hand crafted story driven adventure.\r\n\r\nNew combat system\r\n\r\nWield dozens of new spirit weapons, spells and skills offering new dynamic combat mechanics to the world of Ori. Nimbly fight your way through untold danger and ruin with an entirely new arsenal at your disposal.\r\n\r\nCustomize your style of play\r\n\r\nChoose your tools for adventure from dozens of newly acquired attacks, spells, and skills to match your style of play. In addition, utilize an all new shard system to power up Ori’s capabilities.\r\n\r\nEncounter epic adversaries\r\n\r\nFace large epic bosses and seek support from discoverable allies who will provide services and cast optional quests to extend the adventure.",
-      "platforms": "Xbox One, PC, Nintendo Switch, Xbox Series S/X",
-      "developers": "Moon Studios",
-      "publishers": "Microsoft Studios, Xbox Game Studios",
-      "metacritic": "91",
-      "playtime": "11 ساعة",
-      "website": "https://www.orithegame.com",
-      "updatedAt": "2025-11-25T20:57:35.268Z"
+      "createdAt": "2025-01-15T21:10:00.000Z"
     },
     {
       "id": 2088,
       "name": "Persona 5 Royal",
       "size": "7.6 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1687950/header.jpg",
+      "image": "https://media.rawg.io/media/games/a9c/a9c789951de65da545d51f664b4f2ce0.jpg",
       "categories": [
         "rpg",
         "adventure",
         "single-player"
       ],
-      "createdAt": "2025-01-15T21:15:00.000Z"
+      "createdAt": "2025-01-15T21:15:00.000Z",
+      "rating": "4.76",
+      "released": "2020-03-31",
+      "description": "Wear the mask.  Reveal your truth.\nPrepare for an all-new RPG experience in Persona®5 Royal based in the universe of the award-winning series, Persona®! Don the mask of Joker and join the Phantom Thieves of Hearts. Break free from the chains of modern society and stage grand heists to infiltrate the minds of the corrupt and make them change their ways! Persona®5 Royal is packed with new characters, story depth, new locations to explore, & a new grappling hook mechanic for access to new areas. With a new semester at Shujin Academy, get ready to strengthen your abilities in the metaverse and in your daily life. Persona®5 Royal presents a unique visual style and award nominated composer Shoji Meguro returns with an all-new soundtrack. Explore Tokyo, unlock new Personas, customize your own personal Thieves Den, discover a never-before-seen story arc, cutscenes, alternate endings, and more!",
+      "platforms": "Xbox Series S/X, PC, PlayStation 5, Nintendo Switch, Xbox One, PlayStation 4",
+      "developers": "Atlus",
+      "publishers": "SEGA, Atlus",
+      "metacritic": "94",
+      "playtime": "13 ساعة",
+      "website": "https://atlus.com/p5r/",
+      "updatedAt": "2025-11-25T20:57:50.321Z"
     },
     {
       "id": 2089,
