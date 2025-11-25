@@ -611,17 +611,30 @@
     },
     {
       "id": 1026,
-      "name": "Inside",
+      "name": "INSIDE",
       "size": "2.5 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/304430/header.jpg",
+      "image": "https://media.rawg.io/media/games/d5a/d5a24f9f71315427fa6e966fdd98dfa6.jpg",
       "categories": [
         "adventure",
         "puzzle",
         "indie",
         "platformer",
-        "single-player"
+        "single-player",
+        "action",
+        "horror",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T12:05:00.000Z"
+      "createdAt": "2025-01-15T12:05:00.000Z",
+      "rating": "4.39",
+      "released": "2016-06-28",
+      "description": "INSIDE is a platform adventure game that transfers the atmosphere of a dystopic world. Players assume the role of a lonely boy, who walks through the monochromatic 2.5D environment and solves various puzzles. By the time main antagonists of the character pursue him throughout the whole world. The main storyline follows the unnamed boy through the in-game world locations including a forest, a farm, and a fictional laboratory, where experiments on bodies are held. The gameplay is divided into levels tied to each location. While completing them, the boy, controlled by players, has to swim, run, climb the obstacles and use his supernatural ability to control bodies with his special helmet. In the course of the travel, the protagonist also comes across a siren-like creature, who gives him gear for breathing underwater. The death occurs in several ways ranging from drowning to being shot with a tranquilizer dart. In addition to the basic ending, the storyline features an alternate one, which unlocks after collecting all the hidden glowing orbs.",
+      "platforms": "Nintendo Switch, PC, iOS, macOS, Xbox One, PlayStation 4",
+      "developers": "Playdead",
+      "publishers": "Playdead",
+      "metacritic": "87",
+      "playtime": "4 ساعة",
+      "website": "http://www.playdead.com/",
+      "updatedAt": "2025-11-25T15:00:49.340Z"
     },
     {
       "id": 1027,
