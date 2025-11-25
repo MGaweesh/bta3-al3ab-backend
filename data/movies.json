@@ -122,21 +122,6 @@
       "updatedAt": "2025-01-27T00:00:00.000Z"
     },
     {
-      "id": 17,
-      "name": "The Silence of the Lambs",
-      "type": "فيلم",
-      "year": "1991",
-      "rating": "8.6",
-      "image": "https://image.tmdb.org/t/p/w780/uS9m8OBk1A8eM9I042bx8XXpqAq.jpg",
-      "description": "فيلم إثارة ورعب من بطولة أنتوني هوبكنز",
-      "categories": [
-        "thriller",
-        "horror",
-        "crime"
-      ],
-      "updatedAt": "2025-01-27T00:00:00.000Z"
-    },
-    {
       "id": 18,
       "name": "Schindler's List",
       "type": "فيلم",
