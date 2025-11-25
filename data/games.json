@@ -1237,14 +1237,26 @@
       "id": 2014,
       "name": "Borderlands 2 - Remastered",
       "size": "11.9 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/49520/header.jpg",
+      "image": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg",
       "categories": [
         "shooter",
         "action",
         "rpg",
-        "multiplayer"
+        "multiplayer",
+        "single-player",
+        "open-world"
       ],
-      "createdAt": "2025-01-15T15:05:00.000Z"
+      "createdAt": "2025-01-15T15:05:00.000Z",
+      "rating": "4.02",
+      "released": "2012-09-18",
+      "description": "Sequel to the 4-player cooperative FPS RPG Borderlands, where the new team of Vault Hunters arrives on the infamous planet Pandora in order to get the riches, hidden inside the Vault, and help to free the planet from the Handsome Jack, President of Hyperion. Clear out the endless waves and groups and marauders with various weapon types and character abilities.\r\nUnlike the first game, Borderlands 2 provided DLC not only expanding the world of Pandora with stand-alone story campaigns but adding 2 more characters. Now the main cast consists of Gunzerker Salvador(dual-wields guns at command), Siren Maya (holds and paralyzes the enemy), Commando Axton (summons turrets) and Zer0 the Assasin (invisible sniper ninja). But with the DLC players can try out summoning giant flying robots with Gaige the Mechromancer and Krieg the Psycho. \r\nMost of the game charm and popularity of Borderlands 2 comes from the supporting cast and the personalities of the NPC, making this fast-paced shooter with optional cover stand out.",
+      "platforms": "PlayStation 3, macOS, PC, Android, Linux, PS Vita, Xbox 360",
+      "developers": "Aspyr Media, 2K, Gearbox Software, Sony Computer Entertainment America",
+      "publishers": "2K Games, Aspyr",
+      "metacritic": "89",
+      "playtime": "11 ساعة",
+      "website": "http://www.borderlands2.com/",
+      "updatedAt": "2025-11-25T17:18:21.391Z"
     },
     {
       "id": 2015,
