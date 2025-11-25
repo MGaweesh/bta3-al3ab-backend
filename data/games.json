@@ -673,15 +673,28 @@
       "id": 1033,
       "name": "Prey",
       "size": "30.8 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/480490/header.jpg",
+      "image": "https://media.rawg.io/media/games/e6d/e6de699bd788497f4b52e2f41f9698f2.jpg",
       "categories": [
         "shooter",
         "action",
         "adventure",
         "horror",
-        "single-player"
+        "single-player",
+        "rpg",
+        "open-world",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T12:40:00.000Z"
+      "createdAt": "2025-01-15T12:40:00.000Z",
+      "rating": "4.28",
+      "released": "2017-05-05",
+      "description": "Prey (2017) is a single-player sci-fi first-person shooter developed by Arkane Studios Austin and published by Bethesda Softworks. While it is technically a reboot of the 2006 game of the same name developed by Human Head Studios, of which the sequel suffered a fall into development hell before the license was sold to Bethesda Softworks, there is no relation between the stories and universes of the two games.\r\n\r\nThe game is set in the near future of an alternate reality. You find yourself stranded on the Talos I space station, invaded by hostile aliens referred to as the Typhon. To survive, you must explore Talos I in search of weapons and resources to fight off the invaders. Along the way, you'll use neural modification devices to learn skills and psychic abilites.\r\n\r\nPrey's gameplay loop takes heavy inspiration from System Shock and Bioshock. The game received critical acclaim for its gameplay and its atmosphere. Prey received one paid DLC extension called Mooncrash which introduced a roguelite mode and a free update called Typhon Hunter which introduced a multiplayer mode inspired by classic prop hunt.",
+      "platforms": "Xbox One, PC, PlayStation 4",
+      "developers": "Arkane Studios",
+      "publishers": "Bethesda Softworks",
+      "metacritic": "80",
+      "playtime": "10 ساعة",
+      "website": "https://prey.bethesda.net",
+      "updatedAt": "2025-11-25T15:02:46.684Z"
     },
     {
       "id": 1034,
