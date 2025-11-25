@@ -1342,15 +1342,25 @@
     },
     {
       "id": 2017,
-      "name": "Call of Duty Modern Warfare 3",
+      "name": "Call of Duty: Modern Warfare III",
       "size": "21.6 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2519060/header.jpg",
+      "image": "https://media.rawg.io/media/games/b17/b17ce7ab3187cc3f42d263d9511adac0.jpg",
       "categories": [
         "shooter",
         "action",
-        "multiplayer"
+        "multiplayer",
+        "single-player",
+        "open-world"
       ],
-      "createdAt": "2025-01-15T15:20:00.000Z"
+      "createdAt": "2025-01-15T15:20:00.000Z",
+      "rating": "3.16",
+      "released": "2023-11-09",
+      "description": "ADAPT OR DIE IN A FIGHT AGAINST THE ULTIMATE THREAT\n\nIn the direct sequel to the record-breaking Call of Duty®: Modern Warfare® II, Captain Price and Task Force 141 face off against the ultimate threat. The ultranationalist war criminal Vladimir Makarov is extending his grasp across the world causing Task Force 141 to fight like never before.\n\nIT’S TIME TO SETTLE OLD SCORES AND START NEW ONES\n\nModern Warfare® III celebrates the 20th anniversary of Call of Duty® with one of the greatest collections of Multiplayer maps ever assembled - both fan favorites and all new ones. All 16 launch maps from the original Modern Warfare® 2 (2009) have been modernized with new modes and gameplay features and will be available at launch to get everyone started, while over 12 all-new core 6v6 maps will fuel post-launch live seasons.\n\nALL NEW OPEN WORLD ZOMBIES\n\nFor the first time, team up with other squads to survive and fight massive hordes of the undead in the largest Call of Duty® Zombies map ever. Modern Warfare® Zombies (MWZ) tells a new Treyarch Zombies story with missions, core Zombies features, and secrets to discover.",
+      "platforms": "PC, Xbox One, PlayStation 5, Xbox Series S/X, PlayStation 4",
+      "developers": "Raven Software, Treyarch, Infinity Ward, Beenox, Sledgehammer Games, High Moon Studios, Demonware",
+      "publishers": "Activision Blizzard, Activision Value Publishing",
+      "website": "https://www.callofduty.com",
+      "updatedAt": "2025-11-25T18:12:04.509Z"
     },
     {
       "id": 2018,
