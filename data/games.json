@@ -1672,40 +1672,74 @@
       "id": 2031,
       "name": "Devil May Cry 5",
       "size": "27.4 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/601150/header.jpg",
+      "image": "https://media.rawg.io/media/games/9fb/9fbf956a16249def7625ab5dc3d09515.jpg",
       "categories": [
         "action",
         "adventure",
         "single-player"
       ],
-      "createdAt": "2025-01-15T16:30:00.000Z"
+      "createdAt": "2025-01-15T16:30:00.000Z",
+      "rating": "4.25",
+      "released": "2019-03-08",
+      "description": "Devil May Cry 5 is the sixth game in the Devil May Cry franchise and the fifth in its main series. \n\n###Plot\nThe game continues the plot of Devil May Cry 2. The demonic threat seems to have been forgotten, but the demons return, and there are new accidents around the world. Nero and Dante have parted ways, and Nero established his own agency. He also received a new robotic arm made by his engineer Nico. It replaces his Devil Bringer prosthetic that was stolen by a villain. At the beginning of the game, Nero rides his van to Red Grave City in which a demonic tree appeared. At the same time, Dante has a new client, a mysterious V, who hires him to investigate the demonic attacks.\n\n###Gameplay\nAs usual in the Devil May Cry series, the player controls his or her character from the third person view. The game features three playable characters. Dante and Nero make a return, and V is newly introduced. Each of the three characters has a unique fighting style. Nero's prosthetic hand allows him to use a variety of options, such as pulling his enemies closer. Nero also uses his legendary weapons, the gun called “Blue Rose” and the sword named “Red Queen”. Dante, as usual, fights with his swords Rebellion and Sparda, as well as a variety of new weapons, such as chainsaws and a motorcycle. V uses a walking cane as a weapon.",
+      "platforms": "PlayStation 5, Xbox One, PC, PlayStation 4",
+      "developers": "Capcom",
+      "publishers": "Capcom",
+      "metacritic": "88",
+      "playtime": "9 ساعة",
+      "website": "http://www.devilmaycry5.com/",
+      "updatedAt": "2025-11-25T19:17:11.691Z"
     },
     {
       "id": 2032,
       "name": "Disco Elysium",
       "size": "6.8 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/632470/header.jpg",
+      "image": "https://media.rawg.io/media/games/840/8408ad3811289a6a5830cae60fb0b62a.jpg",
       "categories": [
         "rpg",
         "adventure",
         "indie",
         "single-player"
       ],
-      "createdAt": "2025-01-15T16:35:00.000Z"
+      "createdAt": "2025-01-15T16:35:00.000Z",
+      "rating": "4.37",
+      "released": "2019-10-14",
+      "description": "Disco Elysium is a groundbreaking blend of hardboiled cop show and isometric RPG. Solve a massive, open ended case in a unique urban fantasy setting. Kick in doors, interrogate suspects, or just get lost exploring the gorgeously rendered city of Revachol and unraveling its mysteries. Tough choices need to be made. What kind of cop you are — is up to you.\r\n\r\nYou play a disgraced lieutenant detective in Revachol West, a shore town where corruption’s out of control, murders go unsolved, and the kids just wanna dance. Kick in doors, interrogate suspects, or get lost exploring a gorgeously rendered city and unraveling its mysteries. All the while, tensions rise around you as Revachol threatens to explode.\r\n\r\nDisco Elysium’s completely original skill system makes your innermost feelings, doubts, and memories an integral part of every conversation. Level up your rational faculties, sharpen your wits, or give in to your basest instincts. What kind of cop you are is up to you.",
+      "platforms": "PC, macOS, Xbox One, Nintendo Switch, PlayStation 4, Xbox Series S/X, PlayStation 5",
+      "developers": "ZA/UM",
+      "metacritic": "91",
+      "playtime": "6 ساعة",
+      "website": "http://zaumstudio.com/",
+      "updatedAt": "2025-11-25T19:17:26.873Z"
     },
     {
       "id": 2033,
-      "name": "Dying Light - The Following EE",
+      "name": "Dying Light: The Following - Enhanced Edition",
       "size": "12.8 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/534380/header.jpg",
+      "image": "https://media.rawg.io/media/games/c11/c11a0b92b4c28f2e0db489f430142653.jpg",
       "categories": [
         "action",
         "adventure",
         "horror",
         "survival",
-        "multiplayer"
+        "multiplayer",
+        "rpg",
+        "single-player",
+        "open-world",
+        "shooter",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T16:40:00.000Z"
+      "createdAt": "2025-01-15T16:40:00.000Z",
+      "rating": "4.13",
+      "released": "2015-01-26",
+      "description": "Dying Light series introduces a world that was hit by a zombie virus outbreak. Under the daylight, zombies are weak and slow, but after the sunset, they become fast, strong and hungry for human flesh. You play as Kyle Crane, a special operative sent to the Harran city, which became a quarantined zone after the outbreak. In the expansion pack The Following, he learns about a cure for the plague, supposedly invented by a sect, and sets off to find out more about it. Crane will travel the countryside open world that is twice the size of the original game’s map. To fight off zombies, Crane will use not only a variety of weapons but also parkour movements, which are the definitive feature in Dying Light gameplay.\nThe Following introduces new weapons, several new game modes, such as bounty hunting which gives the player a new mission every day. The expansion allows the player to drive a buggy to run zombies over. There is a four-person multiplayer mode, and also the “Be the Zombie” mode, in which players can assume the role of a huge, powerful zombie. The Enhanced Edition includes the original game, the expansion pack, and all the available DLCs, such as Cuisine & Cargo and The Bozak Horde.",
+      "platforms": "macOS, Xbox One, PlayStation 4, PC, Linux",
+      "developers": "Techland",
+      "publishers": "Techland Publishing, Techland",
+      "metacritic": "87",
+      "playtime": "17 ساعة",
+      "website": "http://www.dyinglightgame.com/",
+      "updatedAt": "2025-11-25T19:17:45.479Z"
     },
     {
       "id": 2034,
@@ -1737,184 +1771,130 @@
     },
     {
       "id": 2035,
-      "name": "Dying Light: The Beast",
+      "name": "Dying Light The Beast",
       "size": "35.5 GB",
-      "image": "https://media.rawg.io/media/games/b20/b2055f1b6d12a6342deec3565e465852.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/534380/header.jpg",
       "categories": [
         "action",
         "adventure",
         "horror",
         "survival",
-        "multiplayer",
-        "shooter",
-        "rpg",
-        "single-player",
-        "open-world"
+        "multiplayer"
       ],
-      "createdAt": "2025-01-15T16:50:00.000Z",
-      "rating": "3.91",
-      "released": "2025-09-18",
-      "description": "Pre-Order BonusPre-order the Standard Edition now to get the exclusive Hero of Harran Bundle, which contains:- Ultimate Survivor Outfit\n- Harran Combat Knife (+ Upgradable Blueprint)\n- The Follower Crossbow (+ Upgradable Blueprint)\n- In Jade’s Memory Pistol (+ Upgradable Blueprint)\n- Castor Woods Patrol\nDeluxe EditionTake your Dying Light: The Beast experience to another level with the Deluxe Edition. You'll receive the Official Soundtrack, wallpapers, and the Castor Woods Prepper Bundle, as well as a detailed tourist map that highlights locations worth exploring.INCLUDES:\n– Official Soundtrack\n– Wallpaper Pack\n– Castor Woods Tourist Map\n– Castor Woods Prepper Bundle\n– Castor Woods Prepper Outfit\n– Survivalist SMG\n– Roadhog\nEditions\nAbout the GameGet ready for a unique blend of open world and action survival horror with Dying Light: The Beast.You are Kyle Crane. After being captured by the Baron and enduring his painful experiments for years, you escape. But now, a battle rages inside you: zombie DNA clashes with human, and you struggle to control the beast within. You want revenge... but first you must tame it. It's your only option.Once you enter the zombie-infested Castor Woods, every battle will be a fight for survival… especially when night falls. Play as Kyle Crane, a hero with the DNA of both man and beast. Freely switch between two playstyles and face a fierce conflict that lead to the acceptance of the monster within.\nPush the brutality of Dying Light’s combat to the extreme. Crush skulls, rip heads off, and tear enemies in half as you constantly fight to control your evolving beastly powers.\nThe distinct experiences of night and day, a signature of the Dying Light series, merge into one unique whole. Explore and scavenge by day, but remember the constantly ticking clock. Because once the sun sets, the night unleashes horrors that leave you with just three choices: run, hide or fight for your life.\nFeel the adrenaline rush of best-in-class first-person parkour. Jump from rooftop to rooftop and overcome any obstacle. And when that’s not enough, grab the wheel of an off-road vehicle and ruthlessly tear through hordes of zombies. The advanced movement system is easily accessible, but rewards those who master it. Next-gen visuals bring the hand-crafted zombie apocalypse to life. Every detail tells a story of survival. Lose yourself in the majesty of Castor Woods: explore the tourist town, industrial area, national park, farmland, swamps and more. All full of beauty… and decay.\nBand together with up to three other players in co-op! Brave the dangers of Castor Woods, where you can experience every encounter, every discovery and every twist as a unit with shared progress.\nImportant: Anyone who purchased the Ultimate Edition of Dying Light 2 Stay Human will receive Dying Light: The Beast at no additional charge.",
-      "platforms": "PC, Xbox Series S/X, PlayStation 5",
-      "developers": "Techland",
-      "publishers": "Techland",
-      "playtime": "3 ساعة",
-      "website": "https://dyinglightgame.com/the-beast/pre-order?page_index=usps001110&amp;utm_medium=usps001110",
-      "updatedAt": "2025-11-25T19:18:32.679Z"
+      "createdAt": "2025-01-15T16:50:00.000Z"
     },
     {
       "id": 2036,
       "name": "EA SPORTS FC 26",
       "size": "54.7 GB",
-      "image": "https://media.rawg.io/media/screenshots/70f/70fb740261ef152d0d3392a9a306c9ca.jpg",
+      "image": null,
       "categories": [
         "sports",
         "simulation",
-        "multiplayer",
-        "single-player",
-        "open-world"
+        "multiplayer"
       ],
-      "createdAt": "2025-01-15T16:55:00.000Z",
-      "rating": "3",
-      "released": "2025-09-25",
-      "description": "The Club is Yours in EA SPORTS FC™ 26.\n\nPlay your way with an overhauled gameplay experience powered by community feedback. The new Authentic Gameplay option delivers the most true-to-football experience ever in Career, while the Competitive Gameplay option — driven by refined fundamentals, added consistency, and enhanced responsiveness — is tailor-made for play in Football Ultimate Team™ and Clubs.\n\nPut your dream squad to the test in Football Ultimate Team™ with new Live Events and Tournament modes, as well as a refreshed Rivals and Champs experience.\n\nExperience Manager Career like never before with all-new Manager Live Challenges. Earn rewards throughout the new season by taking on a variety of real-world scenarios and alternative storylines — ranging from a few minutes of play to multiple seasons.\n\nArchetypes inspired by the greats of the game introduce new classes to Clubs and Player Career, bringing more individuality to your player. Develop your abilities by upgrading attributes and unlocking Archetype Perks to give your player a distinct feel on the pitch.\n\nExperience The World’s Game like never before in EA SPORTS FC™ 26, with match data from the world’s top leagues powering 20,000+ authentic players.\n\nThis game includes optional in-game purchases of virtual currency that can be used to acquire virtual in-game items, including a random selection of virtual in-game items.",
-      "platforms": "PC, Xbox One, PlayStation 5",
-      "developers": "Electronic Arts Canada",
-      "publishers": "Electronic Arts",
-      "playtime": "11 ساعة",
-      "website": "https://www.ea.com/en/games/ea-sports-fc/fc-26",
-      "updatedAt": "2025-11-25T19:18:48.982Z"
+      "createdAt": "2025-01-15T16:55:00.000Z"
     },
     {
       "id": 2037,
-      "name": "ELDEN RING",
+      "name": "Elden Ring",
       "size": "38 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg",
+      "image": "https://media.rawg.io/media/games/b29/b294fdd866dcdb643e7bab370a552855.jpg",
       "categories": [
         "rpg",
         "action",
         "adventure",
         "open-world",
-        "single-player"
+        "single-player",
+        "multiplayer"
       ],
-      "createdAt": "2025-01-15T17:00:00.000Z"
+      "createdAt": "2025-01-15T17:00:00.000Z",
+      "rating": "4.39",
+      "released": "2022-02-25",
+      "description": "The Golden Order has been broken.\n\nRise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.\n\nIn the Lands Between ruled by Queen Marika the Eternal, the Elden Ring, the source of the Erdtree, has been shattered.\n\nMarika's offspring, demigods all, claimed the shards of the Elden Ring known as the Great Runes, and the mad taint of their newfound strength triggered a war: The Shattering. A war that meant abandonment by the Greater Will.\n\nAnd now the guidance of grace will be brought to the Tarnished who were spurned by the grace of gold and exiled from the Lands Between. Ye dead who yet live, your grace long lost, follow the path to the Lands Between beyond the foggy sea to stand before the Elden Ring.",
+      "platforms": "PC, Xbox One, PlayStation 4, Xbox Series S/X, PlayStation 5",
+      "developers": "FromSoftware",
+      "publishers": "Bandai Namco Entertainment, FromSoftware",
+      "metacritic": "95",
+      "playtime": "62 ساعة",
+      "website": "https://en.bandainamcoent.eu/elden-ring/elden-ring",
+      "updatedAt": "2025-11-25T19:19:11.807Z"
     },
     {
       "id": 2038,
       "name": "Eternights",
       "size": "3.6 GB",
-      "image": "https://media.rawg.io/media/games/425/425a58e484eaa1230335d5b0e1732c84.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1985810/header.jpg",
       "categories": [
         "action",
         "adventure",
         "rpg",
-        "single-player",
-        "indie"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T17:05:00.000Z",
-      "rating": "3.58",
-      "released": "2023-09-12",
-      "description": "Eternights an dating action game, blending a love story with adrenaline-driven combat as you make the most out of life during the apocalypse. Scavenge for supplies, explore dungeons... and go on dates!\n\nSave the world, and find love along the way.",
-      "platforms": "PC, PlayStation 4, PlayStation 5",
-      "developers": "Studio Sai",
-      "publishers": "Studio Sai",
-      "playtime": "13 ساعة",
-      "website": "https://www.studiosai.dev/eternights",
-      "updatedAt": "2025-11-25T19:19:57.779Z"
+      "createdAt": "2025-01-15T17:05:00.000Z"
     },
     {
       "id": 2039,
       "name": "Fallout 4",
       "size": "21.6 GB",
-      "image": "https://media.rawg.io/media/games/d82/d82990b9c67ba0d2d09d4e6fa88885a7.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/377160/header.jpg",
       "categories": [
         "rpg",
         "action",
         "adventure",
         "open-world",
-        "single-player",
-        "shooter",
-        "survival"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T17:10:00.000Z",
-      "rating": "3.81",
-      "released": "2015-11-09",
-      "description": "The fourth game in the post-apocalyptic action RPG series from Bethesda studious brings players back to the retro-future. After customizing the facial features of the character, players will be admitted to the Vault 111 with their family, and tricked into entering the cryogenic capsule. After the rude awakening after the unknown amount of time has passed, the child is separated from the parents and the loving partner is killed in front of them – the main quest is settled. Now there’s only the giant open world to explore. Fallout 4 introduces the mechanics of settlement building, where players can build their own little town. Gathering material for crafting and building brings more “survival” elements into the old formula. Within their own settlements, players will be able to build all needed utilities, from storage spaces to power armor stations. Visual upgrade from the previous game brings life to what used to be brown wastelands, now filled with details and color.",
-      "platforms": "PlayStation 4, PC, PlayStation 5, Xbox One",
-      "developers": "Bethesda Game Studios",
-      "publishers": "Bethesda Softworks",
-      "metacritic": "84",
-      "playtime": "38 ساعة",
-      "website": "http://www.fallout4.com",
-      "updatedAt": "2025-11-25T19:20:16.459Z"
+      "createdAt": "2025-01-15T17:10:00.000Z"
     },
     {
       "id": 2040,
-      "name": "Far Cry New Dawn",
+      "name": "Far Cry - New Dawn",
       "size": "16.4 GB",
-      "image": "https://media.rawg.io/media/games/6d2/6d27cf9c22f2b28cf3ae706464d138f9.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/939960/header.jpg",
       "categories": [
         "shooter",
         "action",
         "open-world",
         "adventure",
-        "single-player",
-        "horror",
-        "survival",
-        "stealth"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T17:15:00.000Z",
-      "rating": "3.36",
-      "released": "2019-02-15",
-      "description": "Dive into a transformed vibrant post-apocalyptic Hope County, Montana, 17 years after a global nuclear catastrophe.\r\nJoin fellow survivors and lead the fight against the dangerous new threat the Highwaymen, and their ruthless leaders The Twins, as they seek to take over the last remaining resources. \r\n\r\nFIGHT FOR SURVIVAL IN A POST-APOCALYPTIC WORLD\r\n• Take up arms on your own or with a friend in two player co-op in an unpredictable and transformed world\r\n\r\nCOLLIDE AGAINST TWO ALL NEW VILLAINS\r\n• Recruit an eclectic cast of Guns and Fangs for Hire and form alliances to fight by your side against the Highwaymen's unruly leaders The Twins\r\n\r\nBUILD UP YOUR HOMEBASE AND THE SURVIVORS\r\n• Recruit Specialists to upgrade your homebase, who will help unlock all new features including crafting weapons, gear and more\r\n\r\nBATTLE FOR RESOURCES IN HOPE COUNTY AND BEYOND\r\n• Engage the Highwaymen in Turf Wars and venture on Expeditions to memorable locations across the USA",
-      "platforms": "PlayStation 4, PC, Xbox One",
-      "developers": "Ubisoft, Ubisoft Montreal",
-      "publishers": "Ubisoft Entertainment",
-      "metacritic": "73",
-      "playtime": "12 ساعة",
-      "website": "http://www.farcrygame.com",
-      "updatedAt": "2025-11-25T19:20:32.585Z"
+      "createdAt": "2025-01-15T17:15:00.000Z"
     },
     {
       "id": 2041,
       "name": "Far Cry 3",
       "size": "4.9 GB",
-      "image": "https://media.rawg.io/media/games/15c/15c95a4915f88a3e89c821526afe05fc.jpg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/220240/header.jpg",
       "categories": [
         "shooter",
         "action",
         "open-world",
         "adventure",
-        "single-player",
-        "multiplayer",
-        "rpg",
-        "survival",
-        "stealth"
+        "single-player"
       ],
-      "createdAt": "2025-01-15T17:20:00.000Z",
-      "rating": "4.25",
-      "released": "2012-11-28",
-      "description": "Far Cry 3 is absolute madness. Being the third instalment of the franchise, it has a unique plot. Playing as Jason Brody, you will understand what it is like, to be a Rambo. Vacation on Rook Islands with your friends and family quickly turned into a complete nightmare after Vaas Montenegro kidnapping everyone from the party. Jason manages to escape the cruel pirate lord with a little help from a native supporter called Dennis. Now Brody has to save all his friends and get out of the island.\r\n\r\nTo help Jason save his friends, he will need to learn new skills. Hunting animals, crafting new weapons or different abilities in killing pirates. Skill tree has plenty to offer for the player. There are all kinds of firearms for any player, from a knife to a grenade launcher. This mechanic adds pure madness for the game process, making it very fun, fluent and full of adrenaline. Stunning views of the island, excellent surroundings and a great story make Far Cry 3 an absolute fun to play.",
-      "platforms": "Xbox One, Xbox 360, PlayStation 3, PC, PlayStation 4",
-      "developers": "Ubisoft, Ubisoft Montreal",
-      "publishers": "Ubisoft Entertainment",
-      "metacritic": "88",
-      "playtime": "16 ساعة",
-      "website": "http://farcrygame.com",
-      "updatedAt": "2025-11-25T19:20:50.069Z"
+      "createdAt": "2025-01-15T17:20:00.000Z"
     },
     {
       "id": 2042,
       "name": "FIFA 23",
       "size": "42.5 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1811260/header.jpg",
+      "image": "https://media.rawg.io/media/games/dbc/dbcb05bcdf104264db35de68d1e73909.jpg",
       "categories": [
         "sports",
         "simulation",
         "multiplayer",
         "single-player"
       ],
-      "createdAt": "2025-01-15T17:25:00.000Z"
+      "createdAt": "2025-01-15T17:25:00.000Z",
+      "rating": "3.6",
+      "released": "2022-09-27",
+      "description": "FIFA 23 brings The World’s Game to the pitch, with HyperMotion2 Technology that delivers even more gameplay realism, men’s and women’s FIFA World Cup™ coming during the season, women’s club teams, cross-play features, and more.",
+      "platforms": "PlayStation 4, Nintendo Switch, PC, Xbox One, PlayStation 5, Xbox Series S/X",
+      "developers": "Electronic Arts Canada",
+      "publishers": "Electronic Arts",
+      "website": "https://www.ea.com/es-es/games/fifa/fifa-23",
+      "updatedAt": "2025-11-25T19:21:05.755Z"
     },
     {
       "id": 2043,
