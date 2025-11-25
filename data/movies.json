@@ -832,16 +832,26 @@
       "id": 27,
       "name": "See",
       "type": "مسلسل",
-      "year": "2019-2022",
+      "year": "2019",
       "rating": "7.6",
-      "seasons": 3,
-      "image": "https://image.tmdb.org/t/p/w780/5TR6G2dbAnBKRxGJEm6h6i3bdN8.jpg",
+      "seasons": "3",
+      "image": "https://m.media-amazon.com/images/M/MV5BMDEwYTg3MWQtZTNmMi00ZjU1LTkwNWQtZDFmODQ5NjcwMDc2XkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "sci-fi",
         "drama",
         "action"
       ],
-      "updatedAt": "2025-01-16T02:10:00.000Z"
+      "updatedAt": "2025-11-25T15:16:46.761Z",
+      "rate": "7.6",
+      "genre": "Action, Drama, Sci-Fi",
+      "writer": "Steven Knight",
+      "actors": "Jason Momoa, Sylvia Hoeks, Hera Hilmar",
+      "plot": "In the early twenty-first century, a virus wiped out all human beings but some who survived lost their sense of sight. See takes place several centuries later, where society has found new ways to socially interact, build, hunt, and survive without vision.",
+      "runtime": "60 min",
+      "language": "English",
+      "country": "United States",
+      "awards": "Nominated for 1 Primetime Emmy. 8 wins & 12 nominations total",
+      "imdbVotes": "108,123"
     },
     {
       "id": 28,
