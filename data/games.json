@@ -1415,15 +1415,29 @@
       "id": 2022,
       "name": "Days Gone",
       "size": "21.5 GB",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1259420/header.jpg",
+      "image": "https://media.rawg.io/media/games/a79/a79d2fc90c4dbf07a8580b19600fd61d.jpg",
       "categories": [
         "action",
         "adventure",
         "open-world",
         "survival",
-        "single-player"
+        "single-player",
+        "multiplayer",
+        "rpg",
+        "horror",
+        "stealth"
       ],
-      "createdAt": "2025-01-15T15:45:00.000Z"
+      "createdAt": "2025-01-15T15:45:00.000Z",
+      "rating": "3.97",
+      "released": "2019-04-26",
+      "description": "Days Gone is an open-world action-adventure game set in a harsh wilderness two years after a devastating global pandemic. Play as Deacon St. John, a drifter and bounty hunter who rides the broken road, fighting to survive while searching for a reason to live. \n\nHarsh Open World: Using the power of PlayStation 4 and Unreal Engine 4, Days Gone offers an incredibly realistic and detailed open-world experience. Immerse yourself in vast and hostile environments, and explore their secrets. Search abandoned vehicles, houses, truck stops and towns as you scavenge for resources. But be careful— day and night cycles, along with dynamic weather systems, all affect gameplay and enemy behaviour. \n\nBrutal Sandbox Combat: Perfect your gameplay with an endless combination of strategy and play in every situation. Craft customized items using pieces and parts found in the field, from brutal melee weapons to traps and more. Act wisely, as every choice can be the difference between life and death.",
+      "platforms": "PC, PlayStation 4",
+      "developers": "Bend Studio, SIE Bend Studio",
+      "publishers": "Sony Interactive Entertainment, PlayStation PC, PlayStation Mobile",
+      "metacritic": "74",
+      "playtime": "10 ساعة",
+      "website": "https://www.bendstudio.com/game/days-gone",
+      "updatedAt": "2025-11-25T17:40:56.109Z"
     },
     {
       "id": 2023,
