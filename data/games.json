@@ -2196,7 +2196,27 @@
       "metacritic": "92",
       "playtime": "74 ساعة",
       "website": "http://www.rockstargames.com/V/",
-      "updatedAt": "2025-11-25T19:37:11.136Z"
+      "updatedAt": "2025-11-25T19:37:11.136Z",
+      "systemRequirements": {
+        "minimum": {
+          "cpu": "Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4 CPUs) / AMD Phenom 9850 Quad-Core Processor (4 CPUs) @ 2.5GHz",
+          "gpu": "NVIDIA 9800 GT 1GB / AMD HD 4870 1GB (DX 10, 10.1, 11)",
+          "ram": "4 GB",
+          "storage": "72 GB",
+          "storageGB": 72,
+          "os": "Windows 8.1 64 Bit, Windows 8 64 Bit, Windows 7 64 Bit Service Pack 1"
+        },
+        "recommended": {
+          "cpu": "Intel Core i5 3470 @ 3.2GHZ (4 CPUs) / AMD X8 FX-8350 @ 4GHZ (8 CPUs)",
+          "gpu": "NVIDIA GTX 660 2GB / AMD HD7870 2GB",
+          "ram": "8 GB",
+          "storage": "72 GB",
+          "storageGB": 72,
+          "os": "Windows 8.1 64 Bit, Windows 8 64 Bit, Windows 7 64 Bit Service Pack 1"
+        },
+        "_source": "fallbackRequirements.json",
+        "_mergedAt": "2025-01-16T12:00:00.000Z"
+      }
     },
     {
       "id": 2052,
@@ -4272,7 +4292,27 @@
       "metacritic": "92",
       "playtime": "74 ساعة",
       "website": "http://www.rockstargames.com/V/",
-      "updatedAt": "2025-11-25T17:01:06.290Z"
+      "updatedAt": "2025-11-25T17:01:06.290Z",
+      "systemRequirements": {
+        "minimum": {
+          "cpu": "Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4 CPUs) / AMD Phenom 9850 Quad-Core Processor (4 CPUs) @ 2.5GHz",
+          "gpu": "NVIDIA 9800 GT 1GB / AMD HD 4870 1GB (DX 10, 10.1, 11)",
+          "ram": "4 GB",
+          "storage": "72 GB",
+          "storageGB": 72,
+          "os": "Windows 8.1 64 Bit, Windows 8 64 Bit, Windows 7 64 Bit Service Pack 1"
+        },
+        "recommended": {
+          "cpu": "Intel Core i5 3470 @ 3.2GHZ (4 CPUs) / AMD X8 FX-8350 @ 4GHZ (8 CPUs)",
+          "gpu": "NVIDIA GTX 660 2GB / AMD HD7870 2GB",
+          "ram": "8 GB",
+          "storage": "72 GB",
+          "storageGB": 72,
+          "os": "Windows 8.1 64 Bit, Windows 8 64 Bit, Windows 7 64 Bit Service Pack 1"
+        },
+        "_source": "fallbackRequirements.json",
+        "_mergedAt": "2025-01-16T12:00:00.000Z"
+      }
     },
     {
       "id": 3002,
@@ -4288,13 +4328,33 @@
       "createdAt": "2025-01-16T01:25:00.000Z",
       "rating": "3.53",
       "released": "2020-06-02",
-      "description": "VALORANT is your global competitive stage. It’s a 5v5 tac-shooter matchup to plant or defuse the Spike in a one-life-per-round, first to 13 series. More than guns and bullets, you’ll choose an Agent armed with adaptive, swift, and lethal abilities that create opportunities to let your gunplay shine.\r\n\r\nCreativity is your greatest weapon.\r\n\r\n## The Agents\r\n\r\nAgents and their signature abilities are how you win with skill and style. Adapt and outplay in the role of either a Duelist, Initiator, Controller, or Sentinel.\r\n\r\n## The Maps\r\n\r\nHaven. Bind. Split. Ascent. Each a stage for a multitude of savvy plays, agent clutches, and team strategies.\r\nUnique with their own strategic environment",
+      "description": "VALORANT is your global competitive stage. It's a 5v5 tac-shooter matchup to plant or defuse the Spike in a one-life-per-round, first to 13 series. More than guns and bullets, you'll choose an Agent armed with adaptive, swift, and lethal abilities that create opportunities to let your gunplay shine.\r\n\r\nCreativity is your greatest weapon.\r\n\r\n## The Agents\r\n\r\nAgents and their signature abilities are how you win with skill and style. Adapt and outplay in the role of either a Duelist, Initiator, Controller, or Sentinel.\r\n\r\n## The Maps\r\n\r\nHaven. Bind. Split. Ascent. Each a stage for a multitude of savvy plays, agent clutches, and team strategies.\r\nUnique with their own strategic environment",
       "platforms": "PC, Xbox Series S/X, PlayStation 5",
       "developers": "Riot Games",
       "publishers": "Riot Games",
       "metacritic": "80",
       "website": "https://playvalorant.com/",
-      "updatedAt": "2025-11-25T13:24:52.633Z"
+      "updatedAt": "2025-11-25T13:24:52.633Z",
+      "systemRequirements": {
+        "minimum": {
+          "cpu": "Intel Core 2 Duo E8400 / AMD Athlon 200GE",
+          "gpu": "Intel HD 4000 / Radeon R5 200",
+          "ram": "4 GB",
+          "storage": "8 GB",
+          "storageGB": 8,
+          "os": "Windows 7/8/10 64-bit"
+        },
+        "recommended": {
+          "cpu": "Intel Core i3-4150 / AMD FX-6300",
+          "gpu": "GeForce GT 730 / Radeon R7 240",
+          "ram": "4 GB",
+          "storage": "8 GB",
+          "storageGB": 8,
+          "os": "Windows 7/8/10 64-bit"
+        },
+        "_source": "fallbackRequirements.json",
+        "_mergedAt": "2025-01-16T12:00:00.000Z"
+      }
     },
     {
       "id": 3003,
