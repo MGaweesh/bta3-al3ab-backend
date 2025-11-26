@@ -1,0 +1,20 @@
+{
+  "source": "rawg",
+  "requirements": {
+    "minimum": {
+      "cpu": "Requires a 64-bit processor and operating system",
+      "gpu": "Processor: AMD Ryzen 5 1600 or Intel Core i5 6600k",
+      "ram": "8 GB",
+      "storage": "100 GB",
+      "storageGB": 100
+    },
+    "recommended": {
+      "cpu": "Requires a 64-bit processor and operating system",
+      "gpu": "Processor: AMD Ryzen 7 2700X or Intel Core i7 6700",
+      "ram": "12 GB",
+      "storage": "100 GB",
+      "storageGB": 100
+    }
+  },
+  "fetchedAt": "2025-11-26T15:00:46.605Z"
+}

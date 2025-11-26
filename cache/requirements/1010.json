@@ -1,0 +1,20 @@
+{
+  "source": "rawg",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core2Quad Q8400 @ 2.6 GHz or AMD Athlon II X4 620 @ 2.6 GHz",
+      "gpu": "Processor: Intel Core2Quad Q8400 @ 2.6 GHz or AMD Athlon II X4 620 @ 2.6 GHz",
+      "ram": "2 GB",
+      "storage": "30 GB",
+      "storageGB": 30
+    },
+    "recommended": {
+      "cpu": "Intel Core i5 2400S @ 2.5 GHz or better or AMD Phenom II x4 940 @ 3.0 GHz",
+      "gpu": "Processor: Intel Core i5 2400S @ 2.5 GHz or better or AMD Phenom II x4 940 @ 3.0 GHz",
+      "ram": "4 GB",
+      "storage": "30 GB",
+      "storageGB": 30
+    }
+  },
+  "fetchedAt": "2025-11-26T17:21:42.125Z"
+}

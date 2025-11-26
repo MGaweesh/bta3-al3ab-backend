@@ -1,0 +1,20 @@
+{
+  "source": "rawg",
+  "requirements": {
+    "minimum": {
+      "cpu": "2.60 GHz Intel® Core™2 Duo E8200 or 2.60 GHz AMD Athlon™ II X4 620",
+      "gpu": "Processor: 2.60 GHz Intel® Core™2 Duo E8200 or 2.60 GHz AMD Athlon™ II X4 620",
+      "ram": "2 GB",
+      "storage": "17 GB",
+      "storageGB": 17
+    },
+    "recommended": {
+      "cpu": "2.66 GHz Intel® Core™2 Quad Q9400 or 3.00 GHz AMD Phenom™ II X4 940",
+      "gpu": "Processor: 2.66 GHz Intel® Core™2 Quad Q9400 or 3.00 GHz AMD Phenom™ II X4 940",
+      "ram": "4 GB",
+      "storage": "17 GB",
+      "storageGB": 17
+    }
+  },
+  "fetchedAt": "2025-11-26T15:25:13.098Z"
+}
