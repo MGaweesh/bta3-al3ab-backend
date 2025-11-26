@@ -816,15 +816,26 @@
       "type": "مسلسل",
       "year": "2019",
       "rating": "8.2",
-      "seasons": 3,
-      "image": "https://image.tmdb.org/t/p/w780/7vjaCdMw15FEbXyLQTVa04URsPm.jpg",
+      "seasons": "4",
+      "image": "https://m.media-amazon.com/images/M/MV5BOTQzMzNmMzUtODgwNS00YTdhLTg5N2MtOWU1YTc4YWY3NjRlXkEyXkFqcGc@._V1_SX300.jpg",
       "description": "مسلسل فانتازيا ومغامرات من Netflix",
       "categories": [
         "fantasy",
         "action",
         "drama"
       ],
-      "updatedAt": "2025-11-26T17:30:11.754Z"
+      "updatedAt": "2025-11-26T17:30:33.844Z",
+      "rate": "7.9",
+      "genre": "Action, Adventure, Drama",
+      "director": "Tomek Baginski",
+      "writer": "Lauren Schmidt Hissrich",
+      "actors": "Freya Allan, Henry Cavill, Anya Chalotra",
+      "plot": "The Witcher is a fantasy drama web television series created by Lauren Schmidt Hissrich for Netflix. It is based on the book series of the same name by Polish writer Andrzej Sapkowski. The Witcher follows the story of Geralt of Rivia, a solitary monster hunter, who struggles to find his place in a world where people often prove more wicked than monsters and beasts. But when destiny hurtles him toward a powerful sorceress, and a young princess with a special gift, the three must learn to navigate independently the increasingly volatile Continent.",
+      "runtime": "60 min",
+      "language": "English",
+      "country": "Poland, Hungary, United States, United Kingdom",
+      "awards": "Nominated for 4 Primetime Emmys. 9 wins & 37 nominations total",
+      "imdbVotes": "604,661"
     },
     {
       "id": 36,
