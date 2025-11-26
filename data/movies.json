@@ -279,19 +279,29 @@
     },
     {
       "id": 14,
-      "name": "la casa de papel",
+      "name": "Money Heist",
       "type": "مسلسل",
-      "year": "2017-2021",
+      "year": "2017",
       "rating": "8.3",
-      "seasons": 5,
-      "image": "https://image.tmdb.org/t/p/w780/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg",
+      "seasons": "5",
+      "image": "https://m.media-amazon.com/images/M/MV5BZjkxZWJiNTUtYjQwYS00MTBlLTgwODQtM2FkNWMyMjMwOGZiXkEyXkFqcGc@._V1_SX300.jpg",
       "description": "مسلسل إثارة وجريمة من Netflix",
       "categories": [
         "thriller",
         "crime",
         "action"
       ],
-      "updatedAt": "2025-01-16T01:05:00.000Z"
+      "updatedAt": "2025-11-26T13:02:12.030Z",
+      "rate": "8.2",
+      "genre": "Action, Crime, Drama",
+      "writer": "Álex Pina",
+      "actors": "Úrsula Corberó, Álvaro Morte, Itziar Ituño",
+      "plot": "To carry out the biggest heist in history, a mysterious man called The Professor recruits a band of eight robbers who have a single characteristic: none of them has anything to lose. Five months of seclusion memorizing every step, every detail, every probability culminate in eleven days locked up in the National Coinage and Stamp Factory of Spain, surrounded by police forces and with dozens of hostages in their power, to find out whether their suicide wager will lead to everything or nothing.",
+      "runtime": "70 min",
+      "language": "Spanish, Russian, Serbian, English",
+      "country": "Spain",
+      "awards": "38 wins & 45 nominations total",
+      "imdbVotes": "586,054"
     },
     {
       "id": 15,
