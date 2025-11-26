@@ -63,17 +63,27 @@
       "id": 3,
       "name": "Breaking Bad",
       "type": "مسلسل",
-      "year": "2008-2013",
+      "year": "2008",
       "rating": "9.5",
-      "seasons": 5,
-      "image": "https://image.tmdb.org/t/p/w780/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
+      "seasons": "5",
+      "image": "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_SX300.jpg",
       "description": "مسلسل دراما وجريمة من أفضل المسلسلات على الإطلاق",
       "categories": [
         "drama",
         "crime",
         "thriller"
       ],
-      "updatedAt": "2025-01-16T00:10:00.000Z"
+      "updatedAt": "2025-11-26T12:43:19.462Z",
+      "rate": "9.5",
+      "genre": "Crime, Drama, Thriller",
+      "writer": "Vince Gilligan",
+      "actors": "Bryan Cranston, Anna Gunn, Aaron Paul",
+      "plot": "When chemistry teacher Walter White is diagnosed with Stage III cancer and given only two years to live, he decides he has nothing to lose. He lives with his teenage son, who has cerebral palsy, and his wife, in New Mexico. Determined to ensure that his family will have a secure future, Walt embarks on a career of drugs and crime. He proves to be remarkably proficient in this new world as he begins manufacturing and selling methamphetamine with one of his former students. The series tracks the impacts of a fatal diagnosis on a regular, hard working man, and explores how a fatal diagnosis affects his morality and transforms him into a major player of the drug trade.",
+      "runtime": "49 min",
+      "language": "English, Spanish",
+      "country": "United States",
+      "awards": "Won 16 Primetime Emmys. 172 wins & 269 nominations total",
+      "imdbVotes": "2,427,967"
     },
     {
       "id": 4,
