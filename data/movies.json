@@ -516,18 +516,28 @@
     },
     {
       "id": 23,
-      "name": "Narcos Mexico",
+      "name": "Narcos: Mexico",
       "type": "مسلسل",
-      "year": "2018-2021",
+      "year": "2018",
       "rating": "8.4",
-      "seasons": 3,
-      "image": "https://image.tmdb.org/t/p/w780/7vjaCdMw15FEbXyLQTVa04URsPm.jpg",
+      "seasons": "3",
+      "image": "https://m.media-amazon.com/images/M/MV5BM2FkZGQyODItOGFlNy00ZDA1LWFjMTEtMGUyYzk0ZDYzNmRjXkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "crime",
         "drama",
         "thriller"
       ],
-      "updatedAt": "2025-01-16T01:50:00.000Z"
+      "updatedAt": "2025-11-26T16:13:33.744Z",
+      "rate": "8.3",
+      "genre": "Biography, Crime, Drama",
+      "writer": "Carlo Bernard, Chris Brancato, Doug Miro",
+      "actors": "Scoot McNairy, José María Yazpik, Alejandro Edda",
+      "plot": "Narcos: Mexico exploring the origins of the modern drug war by going back to its roots, beginning at a time when the Mexican trafficking world was a loose and disorganized confederation of independent growers and dealers. Witness the rise of the Guadalajara Cartel in the 1980s as Félix Gallardo takes the helm, unifying traffickers in order to build an empire. When DEA agent Kiki Camarena moves his wife and young son from California to Guadalajara to take on a new post, he quickly learns that his assignment will be more challenging than he ever could have imagined. As Kiki garners intelligence on Félix and becomes more entangled in his mission, a tragic chain of events unfold, affecting the drug trade and the war against it for years to come.",
+      "runtime": "2 min",
+      "language": "English",
+      "country": "United States",
+      "awards": "4 wins & 15 nominations total",
+      "imdbVotes": "99,589"
     },
     {
       "id": 24,
