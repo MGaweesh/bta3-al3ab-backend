@@ -789,16 +789,26 @@
     },
     {
       "id": 34,
-      "name": "The Queens Gambit",
+      "name": "The Queen's Gambit",
       "type": "مسلسل",
       "year": "2020",
       "rating": "8.6",
-      "seasons": 1,
-      "image": "https://image.tmdb.org/t/p/w780/zU0htwkhNvBQdV5KB7n6BdF4mZq.jpg",
+      "seasons": "1",
+      "image": "https://m.media-amazon.com/images/M/MV5BMmRlNjQxNWQtMjk1OS00N2QxLTk0YWQtMzRhYjY5YTFhNjMxXkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "drama"
       ],
-      "updatedAt": "2025-01-16T02:45:00.000Z"
+      "updatedAt": "2025-11-26T17:27:31.604Z",
+      "rate": "8.5",
+      "genre": "Drama",
+      "writer": "Scott Frank, Allan Scott",
+      "actors": "Anya Taylor-Joy, Chloe Pirrie, Bill Camp",
+      "plot": "Nine year-old orphan Beth Harmon is quiet, sullen, and by all appearances unremarkable. That is, until she plays her first game of chess. Her senses grow sharper, her thinking clearer, and for the first time in her life she feels herself fully in control. By the age of sixteen, she's competing for the U.S. Open championship. But as Beth hones her skills on the professional circuit, the stakes get higher, her isolation grows more frightening, and the thought of escape becomes all the more tempting. Based on the book by Walter Tevis.",
+      "runtime": "395 min",
+      "language": "English, French, Spanish, Russian",
+      "country": "United States",
+      "awards": "Won 11 Primetime Emmys. 56 wins & 44 nominations total",
+      "imdbVotes": "640,509"
     },
     {
       "id": 35,
