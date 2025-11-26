@@ -259,14 +259,23 @@
       "type": "مسلسل",
       "year": "2023",
       "rating": "7.0",
-      "seasons": 1,
-      "image": null,
+      "seasons": "1",
+      "image": "https://m.media-amazon.com/images/M/MV5BZmE4ZGMzMzktYzkwMy00NTZiLWFjYzktNzA4MmI4NGEyZTkzXkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "thriller",
         "crime",
         "drama"
       ],
-      "updatedAt": "2025-01-16T01:00:00.000Z"
+      "updatedAt": "2025-11-26T13:01:05.390Z",
+      "rate": "6.6",
+      "genre": "Action, Crime, Drama",
+      "writer": "Eric Garcia",
+      "actors": "Giancarlo Esposito, Rufus Sewell, Paz Vega",
+      "plot": "Spanning 24 years, Jigsaw centers around the largest heist ever attempted, and the vengeance, scheming, loyalties, and betrayals that surround it. It's loosely inspired by the real-life story where seventy billion dollars in bonds went missing in downtown Manhattan during Hurricane Sandy.",
+      "language": "English",
+      "country": "United States",
+      "awards": "3 nominations total",
+      "imdbVotes": "46,300"
     },
     {
       "id": 14,
