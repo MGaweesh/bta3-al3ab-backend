@@ -896,41 +896,41 @@
     },
     {
       "id": 38,
-      "name": "Wednesday",
+      "name": "wednesday",
       "type": "مسلسل",
       "year": "2022",
       "rating": "8.1",
-      "seasons": "3",
-      "image": "https://m.media-amazon.com/images/M/MV5BMDE1NjNmZjgtZTg0OC00NjkxLWEzYzItMDNkMTc3YjgxZWQyXkEyXkFqcGc@._V1_SX300.jpg",
+      "seasons": 1,
+      "image": "https://image.tmdb.org/t/p/w780/jeGtaGwGx0kH2bgN4d7fv6F3x6b.jpg",
       "categories": [
         "comedy",
         "horror",
         "mystery"
       ],
-      "updatedAt": "2025-11-26T17:43:27.020Z",
-      "rate": "8.0",
-      "genre": "Comedy, Crime, Fantasy",
-      "writer": "Alfred Gough, Miles Millar",
-      "actors": "Jenna Ortega, Hunter Doohan, Emma Myers",
-      "plot": "Follows Wednesday Addams' years as a student, when she attempts to master her emerging psychic ability, thwart a killing spree, and solve the mystery that embroiled her parents.",
-      "language": "English",
-      "country": "United States",
-      "awards": "Won 4 Primetime Emmys. 20 wins & 55 nominations total",
-      "imdbVotes": "471,709"
+      "updatedAt": "2025-01-16T03:05:00.000Z"
     },
     {
       "id": 39,
-      "name": "Weird Lawyer Woo Young Woo",
+      "name": "Extraordinary Attorney Woo",
       "type": "مسلسل",
       "year": "2022",
       "rating": "8.5",
-      "seasons": 1,
-      "image": null,
+      "seasons": "1",
+      "image": "https://m.media-amazon.com/images/M/MV5BMGM4ZjU4ZWItZWNmYy00ZDZhLThjY2EtMDEyOTk0NjI3YzJiXkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "drama",
         "comedy"
       ],
-      "updatedAt": "2025-01-16T03:10:00.000Z"
+      "updatedAt": "2025-11-26T17:44:24.821Z",
+      "rate": "8.6",
+      "genre": "Drama",
+      "actors": "Park Eun-bin, Kang Tae-oh, Kang Ki-young",
+      "plot": "Follows the brilliant attorney Woo Young-woo, who tackles challenges in and out of the courtroom as a rookie at a prominent law firm and a woman on the autism spectrum.",
+      "runtime": "1 min",
+      "language": "Korean",
+      "country": "South Korea",
+      "awards": "4 wins & 4 nominations total",
+      "imdbVotes": "33,827"
     }
   ],
   "anime": [
