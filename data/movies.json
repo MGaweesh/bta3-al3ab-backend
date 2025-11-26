@@ -667,18 +667,27 @@
     },
     {
       "id": 29,
-      "name": "shogun",
+      "name": "Shogun",
       "type": "مسلسل",
       "year": "2024",
       "rating": "9.0",
-      "seasons": 1,
-      "image": "https://image.tmdb.org/t/p/w780/1M876KPjulVwppEpldhdc8V4o68.jpg",
+      "seasons": "3",
+      "image": "https://m.media-amazon.com/images/M/MV5BZmJkMDRjYzEtMWI3Ny00OWE3LWJlNTItMGQ1MTQzMzc3NDY5XkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "drama",
         "action",
         "adventure"
       ],
-      "updatedAt": "2025-01-16T02:20:00.000Z"
+      "updatedAt": "2025-11-26T16:28:41.920Z",
+      "rate": "8.6",
+      "genre": "Action, Adventure, Drama",
+      "writer": "James Clavell (based on the novel by)",
+      "actors": "Cosmo Jarvis, Anna Sawai, Tadanobu Asano",
+      "plot": "Set in the 17th Century, the story is told from the perspective of British hero John Blackthorne, a sailor who rises from outsider to samurai, while being used as a pawn in Japanese leader Toranaga's struggle to reach the top of the ruling chain, or Shogun.",
+      "language": "Japanese, English",
+      "country": "United States",
+      "awards": "Won 18 Primetime Emmys. 90 wins & 77 nominations total",
+      "imdbVotes": "233,185"
     },
     {
       "id": 30,
