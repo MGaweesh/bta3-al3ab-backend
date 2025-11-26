@@ -135,21 +135,6 @@
       "imdbVotes": "55"
     },
     {
-      "id": 6,
-      "name": "Daredivil",
-      "type": "مسلسل",
-      "year": "2015-2018",
-      "rating": "8.6",
-      "seasons": 3,
-      "image": "https://image.tmdb.org/t/p/w780/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg",
-      "categories": [
-        "action",
-        "drama",
-        "crime"
-      ],
-      "updatedAt": "2025-01-16T00:25:00.000Z"
-    },
-    {
       "id": 7,
       "name": "Dark",
       "type": "مسلسل",
