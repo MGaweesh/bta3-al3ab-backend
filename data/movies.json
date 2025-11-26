@@ -541,18 +541,27 @@
     },
     {
       "id": 24,
-      "name": "one piece netflix",
+      "name": "One Piece",
       "type": "مسلسل",
       "year": "2023",
       "rating": "8.5",
-      "seasons": 1,
-      "image": "https://image.tmdb.org/t/p/w780/e3NBGiA10a2u7ntQ6xdL3zQ6lqN.jpg",
+      "seasons": "2",
+      "image": "https://m.media-amazon.com/images/M/MV5BNDk5MDFlYjYtZjQ5ZS00ZjhkLWJkYmMtYzhmZjkyOWExY2M3XkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "action",
         "adventure",
         "fantasy"
       ],
-      "updatedAt": "2025-01-16T01:55:00.000Z"
+      "updatedAt": "2025-11-26T16:14:01.156Z",
+      "rate": "8.3",
+      "genre": "Action, Adventure, Comedy",
+      "writer": "Matt Owens, Steven Maeda",
+      "actors": "Iñaki Godoy, Emily Rudd, Mackenyu",
+      "plot": "With his straw hat and ragtag crew, young pirate Monkey D. Luffy goes on an epic voyage for treasure.",
+      "language": "English",
+      "country": "United Kingdom, United States, South Africa, Japan",
+      "awards": "4 wins & 15 nominations total",
+      "imdbVotes": "180,939"
     },
     {
       "id": 25,
