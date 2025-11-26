@@ -315,14 +315,23 @@
       "type": "مسلسل",
       "year": "2022",
       "rating": "7.0",
-      "seasons": 2,
-      "image": "https://image.tmdb.org/t/p/w780/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg",
+      "seasons": "2",
+      "image": "https://m.media-amazon.com/images/M/MV5BMzBlODMyZGQtN2QzOS00MDAzLWFjOGQtMGRjN2JmZWM0NWJkXkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "comedy",
         "animation",
         "adventure"
       ],
-      "updatedAt": "2025-01-16T01:15:00.000Z"
+      "updatedAt": "2025-11-26T12:54:01.159Z",
+      "rate": "6.7",
+      "genre": "Animation, Short, Action",
+      "actors": "Vin Diesel, Fred Tatasciore, Bradley Cooper",
+      "plot": "A series of shorts featuring the seedling Groot along with several new and unusual characters.",
+      "runtime": "31S min",
+      "language": "English",
+      "country": "United States",
+      "awards": "2 wins & 7 nominations total",
+      "imdbVotes": "44,981"
     },
     {
       "id": 17,
