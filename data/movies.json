@@ -769,14 +769,23 @@
       "type": "مسلسل",
       "year": "2024",
       "rating": "8.0",
-      "seasons": 1,
-      "image": null,
+      "seasons": "1",
+      "image": "https://m.media-amazon.com/images/M/MV5BYmU3MzYzOWEtOTdkZi00YzA1LTliMzQtNDdiZDBjY2FiNmFlXkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "crime",
         "drama",
         "thriller"
       ],
-      "updatedAt": "2025-01-16T02:40:00.000Z"
+      "updatedAt": "2025-11-26T16:40:28.823Z",
+      "rate": "8.6",
+      "genre": "Crime, Drama",
+      "writer": "Lauren LeFranc",
+      "actors": "Colin Farrell, Cristin Milioti, Rhenzy Feliz",
+      "plot": "Following the events of The Batman (2022), Oz Cobb, a.k.a. the Penguin, makes a play to seize the reins of the crime world in Gotham.",
+      "language": "English",
+      "country": "United States",
+      "awards": "Nominated for 24 Primetime Emmys. 24 wins & 71 nominations total",
+      "imdbVotes": "207,802"
     },
     {
       "id": 34,
