@@ -91,14 +91,24 @@
       "type": "مسلسل",
       "year": "2019",
       "rating": "9.4",
-      "seasons": 1,
-      "image": "https://m.media-amazon.com/images/M/MV5BYzJkOWMwY2QtZDQ3YS00YzA4LWFjZDYtMWMwYzA4YTU3ODUyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      "seasons": "1",
+      "image": "https://m.media-amazon.com/images/M/MV5BNzU0OTI4YTQtNGQ1ZS00ZjA4LTg3MTMtZjkyZWNjN2RiZDJmXkEyXkFqcGc@._V1_SX300.jpg",
       "description": "مسلسل دراما تاريخي من HBO",
       "categories": [
         "drama",
         "thriller"
       ],
-      "updatedAt": "2025-11-25T14:49:20.257Z"
+      "updatedAt": "2025-11-26T12:46:54.092Z",
+      "rate": "9.3",
+      "genre": "Drama, History, Thriller",
+      "writer": "Craig Mazin",
+      "actors": "Jessie Buckley, Jared Harris, Stellan Skarsgård",
+      "plot": "In April 1986, a huge explosion erupted at the Chernobyl nuclear power station in northern Ukraine. This series follows the stories of the men and women, who tried to contain the disaster, as well as those who gave their lives preventing a subsequent and worse one.",
+      "runtime": "330 min",
+      "language": "English, Russian, Ukrainian",
+      "country": "United States, United Kingdom",
+      "awards": "Won 10 Primetime Emmys. 87 wins & 60 nominations total",
+      "imdbVotes": "982,070"
     },
     {
       "id": 5,
