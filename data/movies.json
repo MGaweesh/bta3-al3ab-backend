@@ -841,16 +841,26 @@
       "id": 36,
       "name": "Vikings",
       "type": "مسلسل",
-      "year": "2013-2020",
+      "year": "2013",
       "rating": "8.5",
-      "seasons": 6,
-      "image": "https://image.tmdb.org/t/p/w780/bQLrHIRNEkE3PdWQ6OjLU7w0Fy2.jpg",
+      "seasons": "6",
+      "image": "https://m.media-amazon.com/images/M/MV5BOTFmZmExYTEtYmE0Mi00MzRmLWE4ZDYtOThiNzNlOTIyODljXkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "action",
         "drama",
         "adventure"
       ],
-      "updatedAt": "2025-01-16T02:55:00.000Z"
+      "updatedAt": "2025-11-26T17:37:20.874Z",
+      "rate": "8.5",
+      "genre": "Action, Adventure, Drama",
+      "writer": "Michael Hirst",
+      "actors": "Katheryn Winnick, Gustaf Skarsgård, Alexander Ludwig",
+      "plot": "The adventures of a Ragnar Lothbrok: the greatest hero of his age. The series tells the saga of Ragnar's band of Viking brothers and his family as he rises to become King of the Viking tribes. As well as being a fearless warrior, Ragnar embodies the Norse traditions of devotion to the gods: legend has it that he was a direct descendant of Odin, the god of war and warriors.",
+      "runtime": "44 min",
+      "language": "English, Old English, Norse, Old, Latin, French, Arabic, Greek, Ancient (to 1453), Russian",
+      "country": "Ireland, Canada",
+      "awards": "Won 1 Primetime Emmy. 46 wins & 133 nominations total",
+      "imdbVotes": "629,346"
     },
     {
       "id": 37,
