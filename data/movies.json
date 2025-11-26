@@ -459,14 +459,24 @@
       "type": "مسلسل",
       "year": "2021",
       "rating": "7.9",
-      "seasons": 1,
-      "image": "https://image.tmdb.org/t/p/w780/glKDfE6btIRcVBfz5gBxAS35wbD.jpg",
+      "seasons": "1",
+      "image": "https://m.media-amazon.com/images/M/MV5BZTMxMmM1ODItMTZiMS00NjI1LWEwODctMjQ4ZjY4ODliNDI0XkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "sci-fi",
         "drama",
         "comedy"
       ],
-      "updatedAt": "2025-01-16T01:35:00.000Z"
+      "updatedAt": "2025-11-26T17:43:09.906Z",
+      "rate": "7.9",
+      "genre": "Action, Comedy, Fantasy",
+      "writer": "Jac Schaeffer",
+      "actors": "Elizabeth Olsen, Paul Bettany, Kathryn Hahn",
+      "plot": "Blends the style of classic sitcoms with the MCU, in which Wanda Maximoff and Vision - two super-powered beings living their ideal suburban lives - begin to suspect that everything is not as it seems.",
+      "runtime": "350 min",
+      "language": "English",
+      "country": "United States",
+      "awards": "Won 3 Primetime Emmys. 33 wins & 96 nominations total",
+      "imdbVotes": "405,999"
     },
     {
       "id": 21,
