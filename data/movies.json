@@ -240,18 +240,27 @@
     },
     {
       "id": 12,
-      "name": "House Of The Dragon",
+      "name": "House of the Dragon",
       "type": "مسلسل",
       "year": "2022",
       "rating": "8.5",
-      "seasons": 1,
-      "image": "https://image.tmdb.org/t/p/w780/z2yahl2uefxDCl0nogcRBstwruJ.jpg",
+      "seasons": "4",
+      "image": "https://m.media-amazon.com/images/M/MV5BM2QzMGVkNjUtN2Y4Yi00ODMwLTg3YzktYzUxYjJlNjFjNDY1XkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "fantasy",
         "drama",
         "action"
       ],
-      "updatedAt": "2025-01-16T00:55:00.000Z"
+      "updatedAt": "2025-11-26T13:12:31.185Z",
+      "rate": "8.3",
+      "genre": "Action, Adventure, Drama",
+      "writer": "Ryan J. Condal, George R.R. Martin",
+      "actors": "Matt Smith, Emma D'Arcy, Olivia Cooke",
+      "plot": "An internal succession war within House Targaryen at the height of its power, 172 years before the birth of Daenerys Targaryen.",
+      "language": "English",
+      "country": "United States",
+      "awards": "Won 2 Primetime Emmys. 22 wins & 91 nominations total",
+      "imdbVotes": "492,351"
     },
     {
       "id": 13,
