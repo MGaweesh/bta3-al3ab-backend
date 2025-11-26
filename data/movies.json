@@ -719,15 +719,25 @@
       "type": "مسلسل",
       "year": "2019",
       "rating": "8.7",
-      "seasons": 4,
-      "image": "https://image.tmdb.org/t/p/w780/mY7SeH4HFFxW1hiI6cWuwCRKptN.jpg",
+      "seasons": "5",
+      "image": "https://m.media-amazon.com/images/M/MV5BMWJlN2U5MzItNjU4My00NTM2LWFjOWUtOWFiNjg3ZTMxZDY1XkEyXkFqcGc@._V1_SX300.jpg",
       "description": "مسلسل أكشن وخيال علمي من Amazon Prime",
       "categories": [
         "action",
         "sci-fi",
         "comedy"
       ],
-      "updatedAt": "2025-01-16T02:30:00.000Z"
+      "updatedAt": "2025-11-26T16:39:58.089Z",
+      "rate": "8.6",
+      "genre": "Action, Comedy, Crime",
+      "writer": "Eric Kripke",
+      "actors": "Karl Urban, Jack Quaid, Antony Starr",
+      "plot": "The Boys is set in a universe in which superpowered people are recognized as heroes by the general public and owned by a powerful corporation, Vought International, which ensures that they are aggressively marketed and monetized. Outside of their heroic personas, most are arrogant and corrupt. The series primarily focuses on two groups: the titular Boys, vigilantes looking to keep the corrupted heroes under control, and the Seven, Vought International's premier superhero team. The Boys are led by Billy Butcher, who despises all superpowered people, and the Seven are led by the egotistical and unstable Homelander. As a conflict ensues between the two groups, the series also follows the new members of each team: Hugh \"Hughie\" Campbell of the Boys, who joins the vigilantes after his girlfriend is killed in a high-speed collision by the Seven's A-Train, and Annie January/Starlight of the Seven, a young and hopeful heroine forced to face the truth about the heroes she admires.",
+      "runtime": "31S min",
+      "language": "English",
+      "country": "United States",
+      "awards": "Won 4 Primetime Emmys. 26 wins & 96 nominations total",
+      "imdbVotes": "814,892"
     },
     {
       "id": 32,
