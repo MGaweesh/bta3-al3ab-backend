@@ -896,18 +896,27 @@
     },
     {
       "id": 38,
-      "name": "wednesday",
+      "name": "Wednesday",
       "type": "مسلسل",
       "year": "2022",
       "rating": "8.1",
-      "seasons": 1,
-      "image": "https://image.tmdb.org/t/p/w780/jeGtaGwGx0kH2bgN4d7fv6F3x6b.jpg",
+      "seasons": "3",
+      "image": "https://m.media-amazon.com/images/M/MV5BMDE1NjNmZjgtZTg0OC00NjkxLWEzYzItMDNkMTc3YjgxZWQyXkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "comedy",
         "horror",
         "mystery"
       ],
-      "updatedAt": "2025-01-16T03:05:00.000Z"
+      "updatedAt": "2025-11-26T17:49:53.850Z",
+      "rate": "8.0",
+      "genre": "Comedy, Crime, Fantasy",
+      "writer": "Alfred Gough, Miles Millar",
+      "actors": "Jenna Ortega, Hunter Doohan, Emma Myers",
+      "plot": "Follows Wednesday Addams' years as a student, when she attempts to master her emerging psychic ability, thwart a killing spree, and solve the mystery that embroiled her parents.",
+      "language": "English",
+      "country": "United States",
+      "awards": "Won 4 Primetime Emmys. 20 wins & 55 nominations total",
+      "imdbVotes": "471,709"
     },
     {
       "id": 39,
