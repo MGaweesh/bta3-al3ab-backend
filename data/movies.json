@@ -378,18 +378,26 @@
     },
     {
       "id": 18,
-      "name": "Marvel What If",
+      "name": "What If...?",
       "type": "مسلسل",
       "year": "2021",
       "rating": "7.5",
-      "seasons": 2,
-      "image": "https://image.tmdb.org/t/p/w780/lztz7K1Sx2c8v1rEuH6SLlQZ1m0.jpg",
+      "seasons": "3",
+      "image": "https://m.media-amazon.com/images/M/MV5BYWFiOTcwNzItMTg5Mi00ZTU4LThkZWYtYWNmZWQ1ODE5ZTVmXkEyXkFqcGc@._V1_SX300.jpg",
       "categories": [
         "sci-fi",
         "action",
         "animation"
       ],
-      "updatedAt": "2025-01-16T01:25:00.000Z"
+      "updatedAt": "2025-11-26T13:06:10.524Z",
+      "rate": "7.3",
+      "genre": "Animation, Action, Adventure",
+      "actors": "Jeffrey Wright, Terri Douglas, Matthew Wood",
+      "plot": "Exploring pivotal moments from the Marvel Cinematic Universe and turning them on their head, leading the audience into uncharted territory.",
+      "language": "English",
+      "country": "United States, Australia",
+      "awards": "Won 1 Primetime Emmy. 4 wins & 17 nominations total",
+      "imdbVotes": "156,958"
     },
     {
       "id": 19,
