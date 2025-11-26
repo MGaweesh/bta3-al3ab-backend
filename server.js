@@ -6,7 +6,6 @@ import axios from 'axios';
 import { existsSync, readFileSync, writeFileSync, renameSync, mkdirSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
-import { parseRequirements } from './utils/parseRequirements.js';
 import { getRequirementsForGame } from './utils/fetchRequirements.js';
 import { computePerformanceScore } from './utils/computeScore.js';
 
@@ -1565,254 +1564,10 @@ function compareHardwareSmart(userSpecs, gameRequirements) {
   };
 }
 
-// Helper function to fetch requirements from RAWG API
-// ⚠️ WARNING: RAWG API is NOT reliable for all games
-// Many games don't have requirements in RAWG (e.g., Assassin's Creed Origins, older AC games)
-// This should ONLY be used as a fallback when games.json has no requirements
-// PRIMARY source should always be games.json
-async function fetchRAWGRequirements(gameTitle) {
-  const RAWG_API_KEY = process.env.RAWG_API_KEY || 'a970ae5d656144a08483c76b8b105d81';
-  
-  try {
-    console.log(`🎮 [RAWG] Starting fetch for game: "${gameTitle}"`);
-    
-    // Step 1: Search for the game
-    const searchUrl = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}&search=${encodeURIComponent(gameTitle)}&page_size=1`;
-    console.log(`🎮 [RAWG] Searching game...`);
-    
-    let searchResponse;
-    try {
-      searchResponse = await axios.get(searchUrl, {
-        timeout: 15000,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-    } catch (searchError) {
-      console.error('❌ [RAWG] Search request failed:', searchError.message);
-      if (searchError.response) {
-        console.error('❌ [RAWG] Search response status:', searchError.response.status);
-        console.error('❌ [RAWG] Search response data:', JSON.stringify(searchError.response.data).substring(0, 300));
-      }
-      throw searchError;
-    }
-
-    if (!searchResponse || !searchResponse.data || !searchResponse.data.results || searchResponse.data.results.length === 0) {
-      console.warn(`⚠️ [RAWG] No game found for: "${gameTitle}"`);
-      console.warn(`⚠️ [RAWG] Search response:`, JSON.stringify(searchResponse?.data).substring(0, 200));
-      return null;
-    }
-
-    const game = searchResponse.data.results[0];
-    console.log(`✅ [RAWG] Game found: "${game.name}" (ID: ${game.id})`);
-
-    // Step 2: Get detailed game info including system requirements
-    const detailUrl = `https://api.rawg.io/api/games/${game.id}?key=${RAWG_API_KEY}`;
-    console.log(`🎮 [RAWG] Fetching game details for ID: ${game.id}...`);
-    
-    let detailResponse;
-    try {
-      detailResponse = await axios.get(detailUrl, {
-        timeout: 15000,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-    } catch (detailError) {
-      console.error('❌ [RAWG] Detail request failed:', detailError.message);
-      if (detailError.response) {
-        console.error('❌ [RAWG] Detail response status:', detailError.response.status);
-        console.error('❌ [RAWG] Detail response data:', JSON.stringify(detailError.response.data).substring(0, 300));
-      }
-      throw detailError;
-    }
-
-    if (!detailResponse || !detailResponse.data) {
-      console.warn(`⚠️ [RAWG] Invalid detail response for: "${gameTitle}"`);
-      return null;
-    }
-
-    const gameDetails = detailResponse.data;
-    console.log(`✅ [RAWG] Game details received`);
-    
-    // Extract system requirements from platforms
-    // RAWG stores requirements in platforms array
-    let pcPlatform = null;
-    if (gameDetails.platforms && Array.isArray(gameDetails.platforms)) {
-      console.log(`🎮 [RAWG] Found ${gameDetails.platforms.length} platforms`);
-      pcPlatform = gameDetails.platforms.find(p => {
-        if (!p || !p.platform) return false;
-        const platformName = (p.platform.name || '').toLowerCase();
-        const platformSlug = (p.platform.slug || '').toLowerCase();
-        return platformSlug === 'pc' || 
-               platformName.includes('pc') ||
-               platformName.includes('windows') ||
-               platformSlug.includes('pc');
-      });
-    }
-
-    if (!pcPlatform) {
-      console.warn(`⚠️ [RAWG] No PC platform found for: "${gameTitle}"`);
-      console.warn(`⚠️ [RAWG] Available platforms:`, gameDetails.platforms?.map(p => p.platform?.name || p.platform?.slug).join(', ') || 'none');
-      return null;
-    }
-
-    if (!pcPlatform.requirements) {
-      console.warn(`⚠️ [RAWG] No requirements object found for PC platform`);
-      return null;
-    }
-
-    const requirements = pcPlatform.requirements;
-    console.log(`✅ [RAWG] Requirements object found`);
-    console.log(`🎮 [RAWG] Requirements structure:`, JSON.stringify(requirements).substring(0, 500));
-
-    // Parse RAWG requirements format to our format
-    const parseRAWGRequirement = (req) => {
-      if (!req) return '';
-      // RAWG sometimes returns HTML, strip it
-      return String(req)
-        .replace(/<[^>]*>/g, '') // Remove HTML tags
-        .replace(/&nbsp;/g, ' ')
-        .replace(/&amp;/g, '&')
-        .replace(/&lt;/g, '<')
-        .replace(/&gt;/g, '>')
-        .replace(/&quot;/g, '"')
-        .replace(/&#39;/g, "'")
-        .trim();
-    };
-
-    const extractRAM = (text) => {
-      if (!text) return '';
-      const match = text.match(/(\d+)\s*(?:GB|MB|gb|mb)/i);
-      if (match) {
-        const num = parseInt(match[1]);
-        const unit = (match[2] || 'gb').toLowerCase();
-        if (unit === 'mb') {
-          return `${Math.round(num / 1024)} GB`;
-        }
-        return `${num} GB`;
-      }
-      return text;
-    };
-
-    const extractStorage = (text) => {
-      if (!text) return '';
-      const match = text.match(/(\d+(?:\.\d+)?)\s*(?:GB|MB|TB|gb|mb|tb)/i);
-      if (match) {
-        return match[0];
-      }
-      return text;
-    };
-
-    // Build requirements object - try multiple field names
-    const getField = (obj, ...keys) => {
-      for (const key of keys) {
-        if (obj && obj[key]) return obj[key];
-      }
-      return '';
-    };
-
-    const minimum = {
-      cpu: parseRAWGRequirement(getField(requirements, 'minimum', 'min')?.processor || 
-                                getField(requirements, 'minimum', 'min')?.cpu || 
-                                requirements.minimum?.processor || 
-                                requirements.minimum?.cpu || ''),
-      gpu: parseRAWGRequirement(getField(requirements, 'minimum', 'min')?.graphics || 
-                                getField(requirements, 'minimum', 'min')?.gpu || 
-                                requirements.minimum?.graphics || 
-                                requirements.minimum?.gpu || ''),
-      ram: extractRAM(parseRAWGRequirement(getField(requirements, 'minimum', 'min')?.memory || 
-                                          getField(requirements, 'minimum', 'min')?.ram || 
-                                          requirements.minimum?.memory || 
-                                          requirements.minimum?.ram || '')),
-      storage: extractStorage(parseRAWGRequirement(getField(requirements, 'minimum', 'min')?.storage || 
-                                                   getField(requirements, 'minimum', 'min')?.space || 
-                                                   requirements.minimum?.storage || 
-                                                   requirements.minimum?.space || '')),
-      os: parseRAWGRequirement(getField(requirements, 'minimum', 'min')?.os || 
-                               getField(requirements, 'minimum', 'min')?.system || 
-                               requirements.minimum?.os || 
-                               requirements.minimum?.system || '')
-    };
-
-    const recommended = {
-      cpu: parseRAWGRequirement(getField(requirements, 'recommended', 'rec')?.processor || 
-                                getField(requirements, 'recommended', 'rec')?.cpu || 
-                                requirements.recommended?.processor || 
-                                requirements.recommended?.cpu || ''),
-      gpu: parseRAWGRequirement(getField(requirements, 'recommended', 'rec')?.graphics || 
-                                getField(requirements, 'recommended', 'rec')?.gpu || 
-                                requirements.recommended?.graphics || 
-                                requirements.recommended?.gpu || ''),
-      ram: extractRAM(parseRAWGRequirement(getField(requirements, 'recommended', 'rec')?.memory || 
-                                           getField(requirements, 'recommended', 'rec')?.ram || 
-                                           requirements.recommended?.memory || 
-                                           requirements.recommended?.ram || '')),
-      storage: extractStorage(parseRAWGRequirement(getField(requirements, 'recommended', 'rec')?.storage || 
-                                                    getField(requirements, 'recommended', 'rec')?.space || 
-                                                    requirements.recommended?.storage || 
-                                                    requirements.recommended?.space || '')),
-      os: parseRAWGRequirement(getField(requirements, 'recommended', 'rec')?.os || 
-                               getField(requirements, 'recommended', 'rec')?.system || 
-                               requirements.recommended?.os || 
-                               requirements.recommended?.system || '')
-    };
-
-    // If recommended is empty, use minimum as recommended
-    const hasRecommended = recommended.cpu || recommended.gpu || recommended.ram;
-    if (!hasRecommended) {
-      recommended.cpu = minimum.cpu;
-      recommended.gpu = minimum.gpu;
-      recommended.ram = minimum.ram;
-      recommended.storage = minimum.storage;
-      recommended.os = minimum.os;
-    }
-
-    // Validate that we got at least some requirements
-    const hasAnyRequirements = minimum.cpu || minimum.gpu || minimum.ram || 
-                                recommended.cpu || recommended.gpu || recommended.ram;
-    
-    if (!hasAnyRequirements) {
-      console.warn(`⚠️ [RAWG] No valid requirements extracted for: "${gameTitle}"`);
-      console.warn(`⚠️ [RAWG] Minimum:`, JSON.stringify(minimum));
-      console.warn(`⚠️ [RAWG] Recommended:`, JSON.stringify(recommended));
-      return null;
-    }
-
-    const result = {
-      minimum,
-      recommended
-    };
-
-    console.log('✅ [RAWG] Requirements parsed successfully');
-    console.log('✅ [RAWG] Minimum CPU:', minimum.cpu || 'N/A');
-    console.log('✅ [RAWG] Minimum GPU:', minimum.gpu || 'N/A');
-    console.log('✅ [RAWG] Minimum RAM:', minimum.ram || 'N/A');
-    console.log('✅ [RAWG] Recommended CPU:', recommended.cpu || 'N/A');
-
-    return result;
-
-  } catch (error) {
-    console.error('❌ [RAWG] Error fetching requirements:', error);
-    console.error('❌ [RAWG] Error name:', error.name);
-    console.error('❌ [RAWG] Error message:', error.message);
-    if (error.code) {
-      console.error('❌ [RAWG] Error code:', error.code);
-    }
-    if (error.response) {
-      console.error('❌ [RAWG] Response status:', error.response.status);
-      console.error('❌ [RAWG] Response headers:', error.response.headers);
-      console.error('❌ [RAWG] Response data:', JSON.stringify(error.response.data).substring(0, 500));
-    }
-    if (error.request) {
-      console.error('❌ [RAWG] Request made but no response received');
-    }
-    if (error.stack) {
-      console.error('❌ [RAWG] Error stack:', error.stack);
-    }
-    return null;
-  }
-}
+// REMOVED: fetchRAWGRequirements function - RAWG API is unreliable for system requirements
+// Now using Steam API and fallback file only
+// This function has been completely removed as part of the refactoring
+// If you need to restore it, check git history
 
 // ============ MULTI-SOURCE REQUIREMENTS ENDPOINT ============
 // GET /api/requirements?game=GAME_NAME → Get game requirements from multiple sources
@@ -2072,8 +1827,7 @@ app.post('/api/compatibility/check', async (req, res) => {
         }
 
         // ✅ PRIMARY SOURCE: games.json (database)
-        // ⚠️ RAWG API is ONLY a fallback - not reliable for all games
-        // Some games like Assassin's Creed Origins don't have requirements in RAWG
+        // Then try: cache -> fallback -> Steam -> none
         let requirements = game.systemRequirements || {};
         let minRequirements = requirements.minimum || {};
         let recRequirements = requirements.recommended || {};
@@ -2084,7 +1838,7 @@ app.post('/api/compatibility/check', async (req, res) => {
                                  recRequirements.cpu || recRequirements.gpu || recRequirements.ram;
 
         if (!hasAnyRequirements) {
-          // ⚠️ FALLBACK: Try new requirements fetcher (RAWG/Steam based on game type)
+          // FALLBACK: Try new requirements fetcher (cache -> fallback -> Steam)
           console.log(`🔍 [COMPATIBILITY] No requirements in database for "${game.name}"`);
           console.log(`🔍 [COMPATIBILITY] Attempting to fetch from external sources...`);
           console.log(`🔍 [COMPATIBILITY] Game ID: ${game.id}, Game Name: "${game.name}"`);
@@ -2113,45 +1867,51 @@ app.post('/api/compatibility/check', async (req, res) => {
               );
               
               if (hasData) {
-                console.log(`✅ [COMPATIBILITY] Successfully received requirements from ${requirementsResult.source} (fallback)`);
+                console.log(`✅ [COMPATIBILITY] Successfully received requirements from ${requirementsResult.source}`);
+                
+                // Normalize requirements structure
                 requirements = {
                   minimum: {
-                    cpu: reqs.minimum?.cpu || 'لا توجد متطلبات',
-                    gpu: reqs.minimum?.gpu || 'لا توجد متطلبات',
-                    ram: reqs.minimum?.ram || 'لا توجد متطلبات',
-                    storage: reqs.minimum?.storage || reqs.minimum?.storageGB ? `${reqs.minimum.storageGB} GB` : 'لا توجد متطلبات',
-                    os: reqs.minimum?.os || 'لا توجد متطلبات'
+                    cpu: reqs.minimum?.cpu || null,
+                    gpu: reqs.minimum?.gpu || null,
+                    ram: reqs.minimum?.ram || null,
+                    ramGB: reqs.minimum?.ramGB || null,
+                    storage: reqs.minimum?.storage || null,
+                    storageGB: reqs.minimum?.storageGB || null,
+                    os: reqs.minimum?.os || null
                   },
                   recommended: {
-                    cpu: reqs.recommended?.cpu || reqs.minimum?.cpu || 'لا توجد متطلبات',
-                    gpu: reqs.recommended?.gpu || reqs.minimum?.gpu || 'لا توجد متطلبات',
-                    ram: reqs.recommended?.ram || reqs.minimum?.ram || 'لا توجد متطلبات',
-                    storage: reqs.recommended?.storage || reqs.recommended?.storageGB ? `${reqs.recommended.storageGB} GB` : reqs.minimum?.storage || reqs.minimum?.storageGB ? `${reqs.minimum.storageGB} GB` : 'لا توجد متطلبات',
-                    os: reqs.recommended?.os || reqs.minimum?.os || 'لا توجد متطلبات'
+                    cpu: reqs.recommended?.cpu || reqs.minimum?.cpu || null,
+                    gpu: reqs.recommended?.gpu || reqs.minimum?.gpu || null,
+                    ram: reqs.recommended?.ram || reqs.minimum?.ram || null,
+                    ramGB: reqs.recommended?.ramGB || reqs.minimum?.ramGB || null,
+                    storage: reqs.recommended?.storage || reqs.minimum?.storage || null,
+                    storageGB: reqs.recommended?.storageGB || reqs.minimum?.storageGB || null,
+                    os: reqs.recommended?.os || reqs.minimum?.os || null
                   }
                 };
                 minRequirements = requirements.minimum || {};
                 recRequirements = requirements.recommended || {};
-                requirementsSource = `${requirementsResult.source}-fallback`;
+                requirementsSource = requirementsResult.source;
                 
                 console.log(`✅ [COMPATIBILITY] Updated requirements source to: ${requirementsSource}`);
                 console.log(`✅ [COMPATIBILITY] Minimum CPU: ${minRequirements.cpu || 'N/A'}`);
                 console.log(`✅ [COMPATIBILITY] Recommended CPU: ${recRequirements.cpu || 'N/A'}`);
               } else {
                 console.warn(`⚠️ [COMPATIBILITY] Requirements fetcher returned empty/invalid requirements for "${game.name}"`);
-                console.warn(`⚠️ [COMPATIBILITY] Recommendation: Add requirements manually to games.json`);
+                console.warn(`⚠️ [COMPATIBILITY] Recommendation: Add requirements manually to games.json or fallbackRequirements.json`);
               }
             } else {
               console.warn(`⚠️ [COMPATIBILITY] Requirements fetcher returned no data for "${game.name}"`);
               console.warn(`⚠️ [COMPATIBILITY] Source: ${requirementsResult?.source || 'unknown'}`);
-              console.warn(`⚠️ [COMPATIBILITY] Recommendation: Add requirements manually to games.json`);
+              console.warn(`⚠️ [COMPATIBILITY] Recommendation: Add requirements manually to games.json or fallbackRequirements.json`);
             }
           } catch (error) {
             console.error(`❌ [COMPATIBILITY] Exception caught while fetching requirements for "${game.name}":`);
             console.error(`❌ [COMPATIBILITY] Error type: ${error.constructor.name}`);
             console.error(`❌ [COMPATIBILITY] Error message: ${error.message}`);
             console.warn(`⚠️ [COMPATIBILITY] Requirements fetcher failed - continuing with empty requirements`);
-            console.warn(`⚠️ [COMPATIBILITY] Recommendation: Add requirements manually to games.json`);
+            console.warn(`⚠️ [COMPATIBILITY] Recommendation: Add requirements manually to games.json or fallbackRequirements.json`);
           }
         } else {
           console.log(`✅ [COMPATIBILITY] Requirements found in database (games.json) for "${game.name}"`);
@@ -2219,13 +1979,26 @@ app.post('/api/compatibility/check', async (req, res) => {
         };
 
         // Prepare user specs for performance score calculation
-        const userSpecs = {
+        let userSpecs = {
           cpu: systemSpecs.cpu || '',
           gpu: systemSpecs.gpu || '',
           ramGB: parseToGB(systemSpecs.ram || '0'),
           storageGB: parseToGB(systemSpecs.storage || '0'),
           os: systemSpecs.os || ''
         };
+
+        // Sanity swap fix: if CPU looks like GPU and GPU looks like CPU, swap them
+        const cpuLower = (userSpecs.cpu || '').toLowerCase();
+        const gpuLower = (userSpecs.gpu || '').toLowerCase();
+        const looksLikeGPU = /nvidia|geforce|gtx|rtx|radeon|rx|amd\s*(radeon|rx)/i.test(cpuLower);
+        const looksLikeCPU = /intel|amd\s*(ryzen|core|threadripper|phenom|athlon)|core\s*i[3579]|ryzen|pentium|celeron/i.test(gpuLower);
+        
+        if (looksLikeGPU && looksLikeCPU) {
+          console.warn(`⚠️ [SANITY] Detected CPU/GPU swap for game "${game.name}" - auto-correcting`);
+          const temp = userSpecs.cpu;
+          userSpecs.cpu = userSpecs.gpu;
+          userSpecs.gpu = temp;
+        }
 
         // Prepare requirements object for performance score
         const reqsForScore = {
@@ -2507,48 +2280,8 @@ if (existsSync(frontendBuildPath)) {
   });
 }
 
-// ============ SIMPLE RAWG ENDPOINT (Alternative simple implementation) ============
-// This is a simpler alternative endpoint that directly queries RAWG API
-app.get('/api/rawg/game', async (req, res) => {
-  try {
-    const gameName = req.query.game;
-
-    if (!gameName) {
-      return res.status(400).json({ error: "game query is required" });
-    }
-
-    const RAWG_KEY = process.env.RAWG_API_KEY || 'a970ae5d656144a08483c76b8b105d81';
-
-    // Step 1: Search for the game ID
-    const searchUrl = `https://api.rawg.io/api/games?search=${encodeURIComponent(gameName)}&key=${RAWG_KEY}`;
-    const searchRes = await axios.get(searchUrl);
-    
-    if (!searchRes.data.results || searchRes.data.results.length === 0) {
-      return res.json({ error: "GAME_NOT_FOUND" });
-    }
-
-    const gameId = searchRes.data.results[0].id;
-
-    // Step 2: Get detailed requirements
-    const detailsUrl = `https://api.rawg.io/api/games/${gameId}?key=${RAWG_KEY}`;
-    const detailsRes = await axios.get(detailsUrl);
-
-    const data = detailsRes.data;
-
-    const requirements = {
-      title: data.name,
-      image: data.background_image,
-      min: data.platforms?.[0]?.requirements?.minimum || "غير متوفر",
-      rec: data.platforms?.[0]?.requirements?.recommended || "غير متوفر",
-    };
-
-    res.json(requirements);
-
-  } catch (err) {
-    console.error("RAWG error:", err.message);
-    res.status(500).json({ error: "RAWG_FETCH_FAILED" });
-  }
-});
+// REMOVED: /api/rawg/game endpoint - RAWG API is unreliable for system requirements
+// This endpoint has been removed as part of the refactoring
 
 // ============ REQUIREMENTS FETCHING FOR ALL GAMES ============
 
