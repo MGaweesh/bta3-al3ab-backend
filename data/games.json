@@ -973,6 +973,28 @@
       "playtime": "2 ساعة",
       "website": "http://www.battlefield2.com",
       "createdAt": "2025-12-01T00:09:08.433Z"
+    },
+    {
+      "id": 1764547776201,
+      "name": "Battlefield 3",
+      "size": "9.6 GB",
+      "image": "https://media.rawg.io/media/games/8bd/8bda6d876f3e241c6024022299553efd.jpg",
+      "categories": [
+        "action",
+        "shooter",
+        "single-player",
+        "multiplayer"
+      ],
+      "rating": "4.08",
+      "released": "2011-10-25",
+      "description": "The eleventh game in the Battlefield series, a direct sequel to Battlefield 2.\nYou can play for 4 characters.\nSgt. Henry Blackburn, \"Black\" - the main character, the American Marine of the 1st reconnaissance battalion.\nSgt. Jonathan Miller, Jono is a sergeant, operator of the M1A2 Abrams tank.\nLt. Jennifer Hawkins, Colby is a lieutenant, pilot of the American F / A-18F Super Hornet bomber.\nDmitry Mayakovsky, \"Dima\" - an operative of the GRU, a former fighter of the special unit \"Vympel\".\nThe main hero is Henry Blackburn, his character is the main part of a single campaign. The missions in the game are presented in the form of memoirs of Blackburn, on whose behalf the story is being conducted.\nLocations - Long Island, Paris, Tehran and Iraqi deserts, Persian Gulf, Azerbaijan. The behavior of various weapons is closest to reality: recharging, portability, the trajectory of bullets, the dependence of the speed of bullets emanating from the barrel and their energy from their caliber and barrel length. The number of additional modules for weapons and the weapons in Battlefield 3 is 10 times more than in Battlefield 2.",
+      "platforms": "PlayStation 3, Xbox One, PC, Xbox 360",
+      "developers": "Electronic Arts DICE",
+      "publishers": "Electronic Arts",
+      "metacritic": "86",
+      "playtime": "4 ساعة",
+      "website": "http://www.ea.com/battlefield3",
+      "createdAt": "2025-12-01T00:09:36.201Z"
     }
   ],
   "repack": [
