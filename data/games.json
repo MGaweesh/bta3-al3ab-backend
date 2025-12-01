@@ -995,6 +995,27 @@
       "playtime": "4 ساعة",
       "website": "http://www.ea.com/battlefield3",
       "createdAt": "2025-12-01T00:09:36.201Z"
+    },
+    {
+      "id": 1764547817045,
+      "name": "Battlefield 4",
+      "size": " 18GB",
+      "image": "https://media.rawg.io/media/games/ac7/ac7b8327343da12c971cfc418f390a11.jpg",
+      "categories": [
+        "shooter",
+        "single-player",
+        "multiplayer"
+      ],
+      "rating": "3.95",
+      "released": "2013-10-29",
+      "description": "The game allows you to gain experience of everything that can happen with the soldiers of the special forces during the most diverse missions. A full arsenal of modern weapons, from dozens of models of knives, small and heavier guns, from boats and helicopters to tanks and warships - all this is either at the player's disposal or meets him during missions. On land and sea, in the city and in the air. The game responds to everyone and everything. Weather - rain and wind change everything, as in life. The wet foliage behaves differently than the dry, gusts of the wind act on everything in the entire space of the map, the shower makes the air less transparent, thickens the darkness. Water is not just a surface, but water, with waves that you swing - in multiplayer, these waves are for everyone, their behavior is calculated exactly as the real waves would behave, players feel them precisely with the same difference for their position, as if they were in the actual sea, on the same wavelength, but in different places. Seven missions, five additions, three variants of the ending. The ability to see the gameplay through the eyes of any of the players, above the entire card, in a third-person mode and in the \"Free Cam\" mode. Multiple multiplayer modes, classes and game factions.",
+      "platforms": "PC, Xbox One, PlayStation 4, Xbox 360, PlayStation 3",
+      "developers": "Electronic Arts, Electronic Arts DICE",
+      "publishers": "Electronic Arts",
+      "metacritic": "81",
+      "playtime": "6 ساعة",
+      "website": "http://www.battlefield.com/battlefield-4",
+      "createdAt": "2025-12-01T00:10:17.045Z"
     }
   ],
   "repack": [
