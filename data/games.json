@@ -4632,6 +4632,27 @@
       "playtime": "20 ساعة",
       "website": "http://www.ea.com/need-for-speed-carbon",
       "createdAt": "2025-12-01T00:46:52.417Z"
+    },
+    {
+      "id": 1764550053202,
+      "name": "Need for Speed: ProStreet",
+      "size": "3.2 GB",
+      "image": "https://media.rawg.io/media/games/269/269cd0c0a196e87ece216b534813df50.jpg",
+      "categories": [
+        "racing",
+        "action",
+        "multiplayer"
+      ],
+      "rating": "3.53",
+      "released": "2007-11-13",
+      "description": "Compete at the highest level of street racing with Need for Speed™: ProStreet. It's no longer good enough to simply rule your local neighborhood; in ProStreet, you need to dominate on a global stage. Build the ultimate battle machine, take it to multi-disciplinary showdowns and pit your skills and reputation against the world's best street racers.",
+      "platforms": "PSP, PlayStation 3, Xbox 360, PC, Nintendo DS, Wii, PlayStation 2",
+      "developers": "Electronic Arts, Electronic Arts Black Box",
+      "publishers": "Electronic Arts",
+      "metacritic": "72",
+      "playtime": "1 ساعة",
+      "website": "https://www.ea.com/games/need-for-speed/need-for-speed-prostreet",
+      "createdAt": "2025-12-01T00:47:33.202Z"
     }
   ],
   "online": [
