@@ -4569,6 +4569,28 @@
       "playtime": "4 ساعة",
       "website": "https://www.emberlab.com/",
       "createdAt": "2025-12-01T00:35:26.743Z"
+    },
+    {
+      "id": 1764549682001,
+      "name": "Mafia II: Definitive Edition",
+      "size": "11 GB",
+      "image": "https://media.rawg.io/media/games/d73/d7364906c530ccc2d89b0b5d8695e03c.jpg",
+      "categories": [
+        "action",
+        "adventure",
+        "single-player",
+        "open-world"
+      ],
+      "rating": "3.89",
+      "released": "2020-05-19",
+      "description": "Part two of the Mafia crime saga – 1940’s - 50’s Empire Bay, NY\nRemastered in stunning HD detail, live the life of a gangster during the Golden-era of organized crime. War hero Vito Scaletta becomes entangled with the mob in hopes of paying his father’s debts. Alongside his buddy Joe, Vito works to prove himself, climbing the family ladder with crimes of larger reward, status and consequence.",
+      "platforms": "Xbox One, PlayStation 4, PC",
+      "developers": "Hangar 13, d3t",
+      "publishers": "2K Games",
+      "metacritic": "65",
+      "playtime": "3 ساعة",
+      "website": "https://mafiagame.com/",
+      "createdAt": "2025-12-01T00:41:22.001Z"
     }
   ],
   "online": [
