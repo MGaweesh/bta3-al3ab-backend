@@ -4456,6 +4456,29 @@
       "playtime": "6 ساعة",
       "website": "http://www.battlefield.com/battlefield-4",
       "createdAt": "2025-12-01T00:21:32.388Z"
+    },
+    {
+      "id": 1764548529528,
+      "name": "Battlefield: Bad Company 2",
+      "size": "2.7 GB",
+      "image": "https://media.rawg.io/media/games/e8f/e8f923180ecb9614ec564a15937cfd9e.jpg",
+      "categories": [
+        "action",
+        "shooter",
+        "single-player",
+        "multiplayer",
+        "open-world"
+      ],
+      "rating": "4.13",
+      "released": "2010-03-02",
+      "description": "The sequel to Battlefield: Bad Company is the ninth game in the Battlefield series overall. The plot is set in an alternate history timeline, in which there's an ongoing war between the United States and Russia; and the Russians are winning. They have already conquered most of Eurasia and made Latin American Countries their allies. The protagonist is a member of Bravo-2 spec ops squad. He is tasked with eliminating colonel Arkady Kirilenko, the leader of a secret project that is about to produce a Russian superweapon that can be used to defeat the US once and for all. The rest of Bravo-2 is computer-controlled. The NPC will assist the player and are technically immortal; however, they cannot complete missions without player's actions.\nWhile most of the time you play as infantry, there are certain stages where players can drive tanks, helicopters, gun turrets and other vehicles. One of the most distinctive features of the game's Frostbite engine is that all elements of the environment are fully destructible. Besides plot-driven single-player campaign, there's also multiplayer that allows five different modes. All characters are divided into four classes: Assault, Engineer, Medic, and Recon. Medics, in particular, can speed up the health regeneration; however, lost hit points are slowly restored by themselves.",
+      "platforms": "Xbox 360, PlayStation 3, PC, Xbox One",
+      "developers": "Electronic Arts, Electronic Arts DICE, Digital Illusions CE",
+      "publishers": "Electronic Arts",
+      "metacritic": "87",
+      "playtime": "7 ساعة",
+      "website": "http://battlefieldbadcompany2.com",
+      "createdAt": "2025-12-01T00:22:09.528Z"
     }
   ],
   "online": [
