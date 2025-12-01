@@ -4265,6 +4265,28 @@
       "playtime": "17 ساعة",
       "website": "http://godofwar.playstation.com",
       "createdAt": "2025-11-25T19:34:00.952Z"
+    },
+    {
+      "id": 1764547201704,
+      "name": "A Way Out",
+      "size": "14.2 GB",
+      "image": "https://media.rawg.io/media/games/473/473bd9a5e9522629d6cb28b701fb836a.jpg",
+      "categories": [
+        "action",
+        "adventure",
+        "multiplayer",
+        "stealth"
+      ],
+      "rating": "4.12",
+      "released": "2018-03-23",
+      "description": "This action-adventure game released under the auspices of EA Originals Electronic Arts initiative. The game can not be played alone: ​​there is simply no singleplayer. The available options are either to play the game on one device using split-screen or using the online multiplayer. You do not need to buy two games to play with somebody: when buying a friend, you can give the code for downloading a full version of the game, which, however, will be active only if you pass it together.\r\n\r\nThe story tells of two prisoners who were together in one prison in the US at the beginning of the 70s. To avoid the dangers of prison, they decide to flee. A Way Out is a third-person adventure game in which the story is told simultaneously for two characters. Since they develop asynchronously, there are often situations where one of the players loses the control over the character because of the story cutscene, and the other can safely move around the prison. Roles are not fixed and can change during the playthrough.",
+      "platforms": "PC, Xbox One, PlayStation 4",
+      "developers": "Electronic Arts, Hazelight",
+      "publishers": "Electronic Arts",
+      "metacritic": "78",
+      "playtime": "6 ساعة",
+      "website": "https://www.ea.com/games/a-way-out",
+      "createdAt": "2025-12-01T00:00:01.704Z"
     }
   ],
   "online": [
