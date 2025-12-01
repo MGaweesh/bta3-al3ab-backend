@@ -4653,6 +4653,29 @@
       "playtime": "1 ساعة",
       "website": "https://www.ea.com/games/need-for-speed/need-for-speed-prostreet",
       "createdAt": "2025-12-01T00:47:33.202Z"
+    },
+    {
+      "id": 1764550320814,
+      "name": "Need for Speed Heat",
+      "size": "21.5 GB",
+      "image": "https://media.rawg.io/media/games/370/3703c683968a54f09630dcf03366ea35.jpg",
+      "categories": [
+        "racing",
+        "action",
+        "single-player",
+        "multiplayer",
+        "open-world"
+      ],
+      "rating": "3.26",
+      "released": "2019-11-08",
+      "description": "Hustle by day and risk it all by night in Need for Speed™ Heat, a thrilling race experience that pits you against a city’s rogue police force as you battle your way into street racing’s elite.",
+      "platforms": "PlayStation 4, PC, Xbox One",
+      "developers": "Ghost Games",
+      "publishers": "Electronic Arts",
+      "metacritic": "73",
+      "playtime": "3 ساعة",
+      "website": "https://www.ea.com/games/need-for-speed/need-for-speed-heat",
+      "createdAt": "2025-12-01T00:52:00.814Z"
     }
   ],
   "online": [
