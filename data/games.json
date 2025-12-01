@@ -4307,6 +4307,29 @@
       "playtime": "20 ساعة",
       "website": "http://www.batmanarkhamcity.com",
       "createdAt": "2025-12-01T00:00:43.168Z"
+    },
+    {
+      "id": 1764547318219,
+      "name": "Battlefield 1",
+      "size": "25.7 GB",
+      "image": "https://media.rawg.io/media/games/998/9980c4296f311d8bcc5b451ca51e4fe1.jpg",
+      "categories": [
+        "action",
+        "shooter",
+        "single-player",
+        "multiplayer",
+        "open-world"
+      ],
+      "rating": "3.84",
+      "released": "2016-10-21",
+      "description": "Battlefield 1 is a first-person action shooter set in the historical period of the World War I. Although the game is a part of the Battlefield franchise, it has no references to the previous chapters. Players are able to experience both single and multiplayer mods to get in action and to feel the era better. As a single-player campaign, Battlefield 1 offers 6 storylines (chapters) one following each other. Each consists of several missions and tells a story of a single man in the middle of a global military conflict. Playing for these soldiers and closing the targets introduces new game mechanics to players. Completing these missions gives an opportunity to dive into the history and to examine the warfare of past ages. Multiplayer experience is divided into 9 different game mods spread on 31 historical maps. You can join the dynamic battle alone or in a squad with your friends. Multiplayer allows you to assume different battlefield roles (classes) starting with a medic, support or assault and following to the tank driver, pilot and some elite units.",
+      "platforms": "Xbox One, PC, PlayStation 4",
+      "developers": "Electronic Arts, Electronic Arts DICE",
+      "publishers": "Electronic Arts",
+      "metacritic": "88",
+      "playtime": "6 ساعة",
+      "website": "http://www.battlefield.com",
+      "createdAt": "2025-12-01T00:01:58.219Z"
     }
   ],
   "online": [
