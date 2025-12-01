@@ -4970,6 +4970,30 @@
       "playtime": "6 ساعة",
       "website": "http://www.prototypegame.com",
       "createdAt": "2025-12-01T01:21:56.693Z"
+    },
+    {
+      "id": 1764552301380,
+      "name": "Shadow of the Tomb Raider",
+      "size": "21.9 GB",
+      "image": "https://media.rawg.io/media/games/7f6/7f6cd70ba2ad57053b4847c13569f2d8.jpg",
+      "categories": [
+        "action",
+        "adventure",
+        "single-player",
+        "open-world",
+        "survival",
+        "stealth"
+      ],
+      "rating": "3.91",
+      "released": "2018-09-14",
+      "description": "Experience Lara Croft’s defining moment as she becomes the Tomb Raider. In Shadow of the Tomb Raider, Lara must master a deadly jungle, overcome terrifying tombs, and persevere through her darkest hour. As she races to save the world from a Maya apocalypse, Lara will ultimately be forged into the Tomb Raider she is destined to be.\r\n\r\nSurvive and Thrive In the Deadliest Place on Earth: Master an unforgiving jungle setting in order to survive. Explore underwater environments filled with crevasses and deep tunnel systems.\r\n\r\nBecome One With the Jungle: Lara must use the jungle to her advantage to strike suddenly and disappear like a jaguar, use mud as camouflage, and instill fear in enemies to sow chaos.\r\n\r\nDiscover Brutal Tombs: Terrifying tombs, filled with deadly puzzles, require advanced traversal techniques to be accessed\r\n\r\nUncover Living History: Discover a hidden city and explore the biggest Tomb Raider hub ever.",
+      "platforms": "Xbox One, PC, PlayStation 4, macOS, Linux",
+      "developers": "Eidos Montreal",
+      "publishers": "Square Enix",
+      "metacritic": "78",
+      "playtime": "10 ساعة",
+      "website": "https://www.tombraider.com/en-gb",
+      "createdAt": "2025-12-01T01:25:01.380Z"
     }
   ],
   "online": [
