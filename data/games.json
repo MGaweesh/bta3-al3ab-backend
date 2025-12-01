@@ -4545,6 +4545,30 @@
       "playtime": "17 ساعة",
       "website": "http://farcrygame.com",
       "createdAt": "2025-12-01T00:34:21.405Z"
+    },
+    {
+      "id": 1764549326743,
+      "name": "Kena: Bridge of Spirits",
+      "size": "13.5 GB",
+      "image": "https://media.rawg.io/media/games/91d/91ddeef8d5ebee7f21faa89efa0f2201.jpg",
+      "categories": [
+        "action",
+        "shooter",
+        "adventure",
+        "strategy",
+        "indie",
+        "single-player"
+      ],
+      "rating": "3.98",
+      "released": "2021-09-21",
+      "description": "Kena Bridge of Spirits is an upcoming game from Ember Lab, a small studio with a background in animation and film.\r\n\r\nHighly stylised and looking like something out of a Pixar movie, , drops its cute exterior to show a protagonist capable of magic. In gameplay to follow, the heroine seems to use a staff to command elements and guide a band of small creatures.",
+      "platforms": "PC, Xbox Series S/X, PlayStation 4, PlayStation 5",
+      "developers": "Ember Lab",
+      "publishers": "Ember Lab",
+      "metacritic": "80",
+      "playtime": "4 ساعة",
+      "website": "https://www.emberlab.com/",
+      "createdAt": "2025-12-01T00:35:26.743Z"
     }
   ],
   "online": [
