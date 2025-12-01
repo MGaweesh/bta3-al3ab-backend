@@ -4806,6 +4806,29 @@
       "playtime": "6 ساعة",
       "website": "https://www.ea.com/games/need-for-speed/need-for-speed-the-run",
       "createdAt": "2025-12-01T01:06:44.711Z"
+    },
+    {
+      "id": 1764551236175,
+      "name": "Need For Speed Undercover",
+      "size": "3.4 GB",
+      "image": "https://media.rawg.io/media/games/4ad/4ad6ab9cfe8146224330598a4a62fb14.jpg",
+      "categories": [
+        "racing",
+        "action",
+        "single-player",
+        "multiplayer",
+        "open-world"
+      ],
+      "rating": "3.22",
+      "released": "2008-11-18",
+      "description": "Need For Speed Undercover is a racing game and the twelfth installment in the twenty-four-title long series of the same name.\n\n###Gameplay \nAlmost every Need For Speed game features the same gameplay features, and Undercover is no different. There is an open world which is permitted to discover at any time in contrary with, for instance, Most Wanted, where the environment was zoned, and the locations opened as the story progressed.\nThe car collisions system has become more realistic compared to the previous parts of the game, but damage remained cosmetic only with no impact on performance. However, the car may be destroyed in Highway Battle — one of the game mods. \nThe title features some RPG elements — wheelman points, which grants the player access to bonus levels and car parts. \nThe police in the game are traced by the bar at the top of the screen varying between Busted and Evade modes. The capturing of the player results in the checkpoint restart.\n\n###Plot \nThe game's title suggests the protagonist role in the story — he is an undercover police agent given a task to infiltrate the group of street-racers to expose them to arrest. The background behind the races is taking down the criminal gangs and cliques. During the narrative player is faced with some dilemmas demanding a hard choice of him on which side to take.",
+      "platforms": "Nintendo DS, PC, PSP, PlayStation 3, PlayStation 2, Xbox 360, Wii",
+      "developers": "Electronic Arts Black Box",
+      "publishers": "Electronic Arts",
+      "metacritic": "65",
+      "playtime": "2 ساعة",
+      "website": "http://undercover.needforspeed.com/home.action",
+      "createdAt": "2025-12-01T01:07:16.175Z"
     }
   ],
   "online": [
