@@ -4287,6 +4287,26 @@
       "playtime": "6 ساعة",
       "website": "https://www.ea.com/games/a-way-out",
       "createdAt": "2025-12-01T00:00:01.704Z"
+    },
+    {
+      "id": 1764547243168,
+      "name": "Batman: Arkham City",
+      "size": "11.3 GB",
+      "image": "https://media.rawg.io/media/games/b5a/b5a1226bfd971284a735a4a0969086b3.jpg",
+      "categories": [
+        "action",
+        "horror"
+      ],
+      "rating": "4.41",
+      "released": "2011-10-18",
+      "description": "The plot of Arkham City begins one and a half years after the events of Arkham Asylum. Quincy Sharp, former superintendent of the Arkham Psychiatric Hospital, became mayor of Gotham and created the prison \"Arkham City\". Prisoners of Arkham City are not controlled by anyone in its borders, they are only forbidden from running away ...\r\nThere are all the regular characters in the game - Joker, Two-Face, Catwoman, Ra's al Ghul, James Gordon and others. Each villain individually and all of them together give Batman difficult tasks that move the game forward.\r\nArkham City has an open world. All gadgets from Arkham Asylum are available to the player from the very beginning. Many of them are improved, there are also new ones. The game has a \"Detective mode\" - the skeletons of enemies are highlighted, it is possible to conduct various examinations, for example, tracking the flight of a sniper's bullet. There is also access to a database that tracks villains in the city.\r\nAt a certain point in the story, you can play as a Catwoman. She has an analogue of \"Detective Mode\" - \"Mode of the thief\".\r\nThe visual decision and soundtrack are very atmospheric, soft, but give a clear sense of gloom and horror, entirely in the spirit of the plot and characters.",
+      "platforms": "PlayStation 3, Nintendo Switch, macOS, PlayStation 4, Xbox One, PC, Xbox 360",
+      "developers": "Rocksteady Studios",
+      "publishers": "Warner Bros. Interactive",
+      "metacritic": "94",
+      "playtime": "20 ساعة",
+      "website": "http://www.batmanarkhamcity.com",
+      "createdAt": "2025-12-01T00:00:43.168Z"
     }
   ],
   "online": [
