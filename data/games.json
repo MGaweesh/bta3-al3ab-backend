@@ -5231,6 +5231,29 @@
       "playtime": "13 ساعة",
       "website": "http://www.ShadowOfWar.com",
       "createdAt": "2025-12-03T04:11:41.064Z"
+    },
+    {
+      "id": 1764735445640,
+      "name": "Mortal Kombat 11",
+      "size": "74.3 GB",
+      "image": "https://media.rawg.io/media/games/eb5/eb514db62d397c64288160d5bd8fd67a.jpg",
+      "categories": [
+        "action",
+        "adventure",
+        "fighting",
+        "single-player",
+        "multiplayer"
+      ],
+      "rating": "3.97",
+      "released": "2019-04-22",
+      "description": "Mortal Kombat is back and better than ever in the next evolution of the iconic franchise. The all new Custom Character Variations give you unprecedented control to customize the fighters and make them your own. The new graphics engine showcasing every skull-shattering, eye-popping moment, brings you so close to the fight you can feel it. And featuring a roster of new and returning Klassic Fighters, Mortal Kombat's best in class cinematic story mode continues the epic saga over 25 years in the making.",
+      "platforms": "Nintendo Switch, Xbox One, PC, PlayStation 4, Xbox Series S/X, PlayStation 5",
+      "developers": "NetherRealm Studios, QLOC, Shiver Games",
+      "publishers": "Warner Bros. Interactive",
+      "metacritic": "82",
+      "playtime": "9 ساعة",
+      "website": "http://mortalkombat.com",
+      "createdAt": "2025-12-03T04:17:25.640Z"
     }
   ],
   "online": [
