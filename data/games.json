@@ -1016,6 +1016,31 @@
       "playtime": "6 ساعة",
       "website": "http://www.battlefield.com/battlefield-4",
       "createdAt": "2025-12-01T00:10:17.045Z"
+    },
+    {
+      "id": 1764722946319,
+      "name": "Outlast Whistleblower",
+      "size": "5.6 GB",
+      "image": "https://media.rawg.io/media/games/9dd/9ddabb34840ea9227556670606cf8ea3.jpg",
+      "categories": [
+        "action",
+        "indie",
+        "single-player",
+        "horror",
+        "shooter",
+        "survival",
+        "stealth"
+      ],
+      "rating": "3.75",
+      "released": "2013-09-03",
+      "description": "Cinematic gameplay is used to make a stylistic point, and this psychological horror game performs just that. Outlast follows the story of investigative journalist Miles Upshur, that got the lead on the inhuman experiments, performed on the asylum patients. Outlast forces players to run away from danger, simply because there is no combat system. All Miles can do is to document what is happening inside the Mount Massive Asylum. Players do not have a flashlight, only a night vision camera, which constantly requires batteries in order to function. Miles will be pursued through the halls, rooms, yards and enclosed laboratories by distressed and aggressive inhabitants. Over the course of the game, players will have to solve puzzles by locating and collecting items and travel through the Asylum with realistic movement animation and horror sting sound effect, in order to make players sympathize with the protagonists.",
+      "platforms": "Linux, macOS, Nintendo Switch, PC, Xbox One, PlayStation 4",
+      "developers": "Red Barrels",
+      "publishers": "Red Barrels",
+      "metacritic": "80",
+      "playtime": "3 ساعة",
+      "website": "http://redbarrelsgames.com/",
+      "createdAt": "2025-12-03T00:49:06.319Z"
     }
   ],
   "repack": [
