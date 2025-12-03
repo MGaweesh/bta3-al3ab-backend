@@ -5297,6 +5297,30 @@
       "playtime": "1 ساعة",
       "website": "https://teamninja-studio.com/ronin/",
       "createdAt": "2025-12-03T04:21:11.261Z"
+    },
+    {
+      "id": 1764735853309,
+      "name": "Sleeping Dogs",
+      "size": "6.3 GB",
+      "image": "https://media.rawg.io/media/games/3d9/3d9bac98d79bcd2d445f829e8d6be902.jpg",
+      "categories": [
+        "action",
+        "adventure",
+        "single-player",
+        "multiplayer",
+        "rpg",
+        "open-world"
+      ],
+      "rating": "4.14",
+      "released": "2012-08-14",
+      "description": "Sleeping Dogs is a third-person action shooter with RPG elements, having Hong Kong as its central location. The city is an open world for the player’s exploration, and many gameplay features revolve around interacting with the surroundings. A huge aspect of immersion would be music, as it is themed according to the geographical location of the city.\nThe main character Wei Shen finds himself in various situations which lead to the development of the main story. Resolving conflicts between local citizens and Hong Kong’s organized crime, the protagonist is offered to join one of the city’s gangs. Due to this, the players need to plan their actions carefully, building trust among both the gangsters and the police. \nThe game features an unlock-based role-playing system, where every consecutive ability or trait is unlocked after the player achieves a specific goal or levels up character’s prestige in each of the three in-game groups. The combat system is heavily reliant on the character’s skill of martial arts, but conventional weaponry is also a favorable choice. Non-story related interactions add flavor to the overall gameplay, as there is a wide choice of how to spend the protagonist’s free time.",
+      "platforms": "PC, Xbox 360, PlayStation 3",
+      "developers": "United Front Games, Square Enix London Studios",
+      "publishers": "Square Enix",
+      "metacritic": "81",
+      "playtime": "14 ساعة",
+      "website": "https://square-enix-games.com/en_US/news/sleeping-dogs",
+      "createdAt": "2025-12-03T04:24:13.309Z"
     }
   ],
   "online": [
