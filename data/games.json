@@ -5102,6 +5102,26 @@
       "playtime": "1 ساعة",
       "website": "https://www.ea.com/games/battlefield/battlefield-6",
       "createdAt": "2025-12-03T03:58:42.838Z"
+    },
+    {
+      "id": 1764734556586,
+      "name": "Avowed",
+      "size": "60 GB",
+      "image": "https://media.rawg.io/media/games/3d3/3d33abf32d9fb92b9f242917abe276ba.jpg",
+      "categories": [
+        "rpg",
+        "single-player",
+        "open-world"
+      ],
+      "rating": "3.24",
+      "released": "2025-02-18",
+      "description": "Welcome to the Living Lands, a mysterious island filled with adventure and danger.\nSet in the fictional world of Eora that was first introduced to players in the Pillars of Eternity franchise, Avowed is a first-person fantasy action RPG from the award-winning team at Obsidian Entertainment.\nYou are the envoy of Aedyr, a distant land, sent to investigate rumors of a spreading plague throughout the Living Lands - an island full of mysteries and secrets, danger and adventure, and choices and consequences, and untamed wilderness. You discover a personal connection to the Living Lands and an ancient secret that threatens to destroy everything. Can you save this unknown frontier and your soul from the forces threatening to tear them asunder?",
+      "platforms": "PC, Xbox Series S/X",
+      "developers": "Obsidian Entertainment",
+      "publishers": "Xbox Game Studios",
+      "playtime": "9 ساعة",
+      "website": "https://avowed.obsidian.net/",
+      "createdAt": "2025-12-03T04:02:36.586Z"
     }
   ],
   "online": [
