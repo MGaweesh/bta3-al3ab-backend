@@ -5363,6 +5363,26 @@
       "playtime": "19 ساعة",
       "website": "https://en.bandainamcoent.eu/tekken/tekken-8",
       "createdAt": "2025-12-03T04:27:39.772Z"
+    },
+    {
+      "id": 1764736089509,
+      "name": "The Rogue Prince of Persia",
+      "size": "587 MB",
+      "image": "https://media.rawg.io/media/games/85c/85c86ed632879f104bb2d6536b14035e.jpg",
+      "categories": [
+        "action",
+        "adventure",
+        "single-player"
+      ],
+      "rating": "3.55",
+      "released": "2025-08-20",
+      "description": "Jump into this action roguelite installment in the Prince of Persia series as you flow between death-defying platforming and acrobatic combat as the Prince himself. Battle through the capital city again and again with one goal – find a way to save Persia from a Hun invasion wielding dark magic.",
+      "platforms": "PlayStation 5, PC",
+      "developers": "Evil Empire",
+      "publishers": "Ubisoft Entertainment",
+      "playtime": "1 ساعة",
+      "website": "https://therogueprinceofpersia.com/",
+      "createdAt": "2025-12-03T04:28:09.509Z"
     }
   ],
   "online": [
