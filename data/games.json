@@ -5083,24 +5083,25 @@
       "createdAt": "2025-12-03T03:57:31.723Z"
     },
     {
-      "id": 1764734286115,
-      "name": "Avowed",
-      "size": "60 GB",
-      "image": "https://media.rawg.io/media/games/3d3/3d33abf32d9fb92b9f242917abe276ba.jpg",
+      "id": 1764734322838,
+      "name": "Battlefield 6",
+      "size": "37 GB",
+      "image": "https://media.rawg.io/media/games/dcc/dcc38d78ab1f1a90fdc4ba1bea3a73ff.jpg",
       "categories": [
-        "rpg",
+        "action",
+        "shooter",
         "single-player",
-        "open-world"
+        "multiplayer"
       ],
-      "rating": "3.24",
-      "released": "2025-02-18",
-      "description": "Welcome to the Living Lands, a mysterious island filled with adventure and danger.\nSet in the fictional world of Eora that was first introduced to players in the Pillars of Eternity franchise, Avowed is a first-person fantasy action RPG from the award-winning team at Obsidian Entertainment.\nYou are the envoy of Aedyr, a distant land, sent to investigate rumors of a spreading plague throughout the Living Lands - an island full of mysteries and secrets, danger and adventure, and choices and consequences, and untamed wilderness. You discover a personal connection to the Living Lands and an ancient secret that threatens to destroy everything. Can you save this unknown frontier and your soul from the forces threatening to tear them asunder?",
-      "platforms": "PC, Xbox Series S/X",
-      "developers": "Obsidian Entertainment",
-      "publishers": "Xbox Game Studios",
-      "playtime": "9 ساعة",
-      "website": "https://avowed.obsidian.net/",
-      "createdAt": "2025-12-03T03:58:06.115Z"
+      "rating": "4.11",
+      "released": "2025-10-10",
+      "description": "Lock & load for the ultimate all-out warfare experience. Fight in high-intensity infantry combat. Rip through the skies in aerial dogfights. Demolish your environment for a strategic advantage. In a war of tanks, fighter jets, and massive combat arsenals, your squad is the deadliest weapon. This is Battlefield 6.",
+      "platforms": "PC, PlayStation 5, Xbox Series S/X",
+      "developers": "Battlefield Studios",
+      "publishers": "Electronic Arts",
+      "playtime": "1 ساعة",
+      "website": "https://www.ea.com/games/battlefield/battlefield-6",
+      "createdAt": "2025-12-03T03:58:42.838Z"
     }
   ],
   "online": [
