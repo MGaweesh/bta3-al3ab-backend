@@ -5163,6 +5163,27 @@
       "metacritic": "82",
       "website": "https://www.crashbandicoot.com/crashteamracing/home",
       "createdAt": "2025-12-03T04:03:15.483Z"
+    },
+    {
+      "id": 1764734879115,
+      "name": "Lost Soul Aside",
+      "size": "48.7 GB",
+      "image": "https://media.rawg.io/media/games/247/24729748f277156a9f6a80c6c829a668.jpg",
+      "categories": [
+        "action",
+        "adventure",
+        "rpg",
+        "indie",
+        "single-player"
+      ],
+      "rating": "3.25",
+      "released": "2025-08-28",
+      "description": "An indie game being made in Unreal Engine 4 with Final Fantasy 15 art as a base that will be changed as the game develops. The game is currently a prototype.\n\nThe game will be a timed-exclusive for PlayStation 4.\n\n\"Lost Soul Aside is an action game with a fantasy art style, something like combining Final Fantasy with Ninja Gaiden.\"",
+      "platforms": "PC, PlayStation 5, PlayStation 4",
+      "developers": "Ultizero Games",
+      "publishers": "PlayStation Publishing",
+      "website": "http://ultizerogames.com/enindex.html",
+      "createdAt": "2025-12-03T04:07:59.116Z"
     }
   ],
   "online": [
