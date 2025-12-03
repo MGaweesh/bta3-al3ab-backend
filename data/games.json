@@ -1157,6 +1157,28 @@
         "survival"
       ],
       "createdAt": "2025-12-03T23:12:13.607Z"
+    },
+    {
+      "id": 1764803628694,
+      "name": "Max Payne duology",
+      "size": "2.6 GB",
+      "image": "https://media.rawg.io/media/games/6fd/6fd971ffa72faa1758960d25ef6196bc.jpg",
+      "categories": [
+        "action",
+        "shooter",
+        "single-player",
+        "adventure"
+      ],
+      "rating": "4.42",
+      "released": "2003-10-14",
+      "description": "Max Payne 2: The Fall of Max Payne is a third-person shooter, serving as a direct sequel to the first game. The player follows the story of an NYPD detective, tasked with resolving crimes and answering many questions of its predecessor’s story. The game is set in noir tones, providing with main character’s monologues and various cutscenes.\nThe titular protagonist, Max Payne, is a traumatized officer of the police. After the first game’s events, Max is once again involved in the bloody conflicts of the mafia, with its drama, romance, and bitterness. The game offers its players various game mechanics for maximum replayability. For instance, the difficulty of each level adapts to how you play overall, with enemies dealing less damage and painkillers being more effective if the player has died too many times. The series’s feature mechanic, Bullet Time, is also present in the game, allowing players to plan their movements and save precious ammunition during the slowed time. \nThe game’s physics engine allows the players to experience the most fearsome battles hand-to-hand, with the realistic destruction of surroundings, cinematographic kills, and dramatic deaths. Max Payne 2 also features a game editor, with user-created modifications serving as a tool to further enhance every playthrough.",
+      "platforms": "PC, Xbox, PlayStation 2",
+      "developers": "Remedy Entertainment",
+      "publishers": "Rockstar Games",
+      "metacritic": "80",
+      "playtime": "3 ساعة",
+      "website": "http://www.rockstargames.com/maxpayne2/",
+      "createdAt": "2025-12-03T23:13:48.694Z"
     }
   ],
   "repack": [
