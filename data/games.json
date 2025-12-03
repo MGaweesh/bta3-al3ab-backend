@@ -1160,7 +1160,7 @@
     },
     {
       "id": 1764803628694,
-      "name": "Max Payne duology",
+      "name": "Max Payne duology (1&2)",
       "size": "2.6 GB",
       "image": "https://media.rawg.io/media/games/6fd/6fd971ffa72faa1758960d25ef6196bc.jpg",
       "categories": [
@@ -1178,7 +1178,8 @@
       "metacritic": "80",
       "playtime": "3 ساعة",
       "website": "http://www.rockstargames.com/maxpayne2/",
-      "createdAt": "2025-12-03T23:13:48.694Z"
+      "createdAt": "2025-12-03T23:13:48.694Z",
+      "updatedAt": "2025-12-03T23:14:36.975Z"
     }
   ],
   "repack": [
