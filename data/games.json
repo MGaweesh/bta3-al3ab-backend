@@ -5274,6 +5274,29 @@
       "playtime": "14 ساعة",
       "website": "https://teamninja-studio.com/ng/us/ng4/",
       "createdAt": "2025-12-03T04:20:38.498Z"
+    },
+    {
+      "id": 1764735671261,
+      "name": "Rise of the Ronin",
+      "size": "60.6 GB",
+      "image": "https://media.rawg.io/media/games/cc9/cc9f5f8f72f386c193dad449f40257c2.jpg",
+      "categories": [
+        "action",
+        "adventure",
+        "rpg",
+        "single-player",
+        "multiplayer",
+        "open-world"
+      ],
+      "rating": "3.33",
+      "released": "2024-03-22",
+      "description": "Japan, 1863.\nAfter three centuries of the Tokugawa Shogunate’s oppressive rule, the Black Ships of the West descend upon the nation’s borders and the country falls into a state of turmoil. Amidst the chaos of war, disease and political unrest, a nameless warrior forges their own path, holding the very fate of Japan in their hands.\n\nShape a dynamic story\nAs a masterless warrior – a Ronin, your destiny is your own. See the story unfold in different ways depending on the choices you make and the characters you ally with along the way. Face critical mission decisions – like whether to assassinate or protect key figures, and shape the course of history through a rich multi-choice system.\n\nEngage in deep accessible combat\nFrom the veteran developers of Nioh and Ninja Gaiden – Rise of the Ronin offers deeply engaging yet accessible combat, with layers of complexity suitable for any playstyle. Face your foes with a selection of close-quarters weaponry or engage from afar with authentic period firearms.\n\nExplore a historically-inspired world\nThe “Bakumatsu” period heralds the end of the Shogunate as a new era begins and East and West collide. Experience this cultural revolution across an open world where you’ll meet the key figures who’ll shape the course of history, and the ordinary citizens seeking a guiding light in the darkness.",
+      "platforms": "PC, PlayStation 5",
+      "developers": "Team NINJA, KOEI TECMO GAMES CO",
+      "publishers": "Koei Tecmo Games, Koei Tecmo",
+      "playtime": "1 ساعة",
+      "website": "https://teamninja-studio.com/ronin/",
+      "createdAt": "2025-12-03T04:21:11.261Z"
     }
   ],
   "online": [
