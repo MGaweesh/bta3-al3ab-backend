@@ -1041,6 +1041,28 @@
       "playtime": "3 ساعة",
       "website": "http://redbarrelsgames.com/",
       "createdAt": "2025-12-03T00:49:06.319Z"
+    },
+    {
+      "id": 1764734838083,
+      "name": "It Takes Two",
+      "size": "43.5 GB",
+      "image": "https://media.rawg.io/media/games/d47/d479582ed0a46496ad34f65c7099d7e5.jpg",
+      "categories": [
+        "action",
+        "adventure",
+        "platformer",
+        "multiplayer"
+      ],
+      "rating": "4.46",
+      "released": "2021-03-26",
+      "description": "Bring your favorite co-op partner and together step into the shoes of May and Cody. As the couple is going through a divorce, through unknown means their minds are transported into two dolls which their daughter, Rose, made to represent them. Now they must reluctantly find a way to get back into their bodies, a quest which takes them through the most wild, unexpected and fantastical journey imaginable.\r\n\r\nIt Takes Two further builds on Hazelight’s proven track record of making rich and engaging co-op experiences. While developing It Takes Two it has been the team’s number one priority to truly merge story and gameplay. Allowing both to influence each other guarantees a game that is as engaging to play as it is compelling to experience.",
+      "platforms": "PlayStation 5, Xbox Series S/X, PlayStation 4, PC, Nintendo Switch, Xbox One",
+      "developers": "Hazelight",
+      "publishers": "Electronic Arts",
+      "metacritic": "88",
+      "playtime": "10 ساعة",
+      "website": "https://hazelight.se/games/it-takes-two/",
+      "createdAt": "2025-12-03T04:07:18.083Z"
     }
   ],
   "repack": [
