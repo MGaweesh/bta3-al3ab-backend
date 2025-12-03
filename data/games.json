@@ -5383,6 +5383,27 @@
       "playtime": "1 ساعة",
       "website": "https://therogueprinceofpersia.com/",
       "createdAt": "2025-12-03T04:28:09.509Z"
+    },
+    {
+      "id": 1764736410510,
+      "name": "Until Dawn (Remake)",
+      "size": "(49.6GB)",
+      "image": "https://media.rawg.io/media/games/d4a/d4adb09d67998e339551acb0e15c1e99.jpg",
+      "categories": [
+        "action",
+        "adventure",
+        "single-player",
+        "horror"
+      ],
+      "rating": "4.08",
+      "released": "2024-10-04",
+      "description": "Rebuilt and enhanced for PC – Until Dawn invites you to relive the nightmare, and immerse yourself in a gripping slasher horror where every decision can make the difference between life and death.",
+      "platforms": "PC, PlayStation 5",
+      "developers": "Ballistic Moon",
+      "publishers": "PlayStation PC, PlayStation Publishing",
+      "playtime": "9 ساعة",
+      "website": "https://ballisticmoon.com/games/",
+      "createdAt": "2025-12-03T04:33:30.510Z"
     }
   ],
   "online": [
