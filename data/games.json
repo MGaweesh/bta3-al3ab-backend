@@ -5620,6 +5620,30 @@
       "playtime": "22 ساعة",
       "website": "http://www.konami.com/games/pes/pro-evolution-soccer-2010.php",
       "createdAt": "2025-12-03T23:03:43.629Z"
+    },
+    {
+      "id": 1764888960202,
+      "name": "Grand Theft Auto IV",
+      "size": "4.5 GB",
+      "image": "https://media.rawg.io/media/games/4a0/4a0a1316102366260e6f38fd2a9cfdce.jpg",
+      "categories": [
+        "action",
+        "single-player",
+        "multiplayer",
+        "open-world",
+        "adventure",
+        "shooter"
+      ],
+      "rating": "4.26",
+      "released": "2008-04-29",
+      "description": "Every crime story is a story of a search for success. The player will become Niko Bellic, immigrant arriving at the Liberty City to reunite with his cousin Roman and find the man that betrayed him and his army unit fifteen years prior to the events of the game. While protecting his cousin, Niko has to deal with loan sharks, Russian mobsters, and other gangs. After the third game, GTA brought more realism to the player, in order to make the city and its people look more believable. Street vendors on every corner will sell food that replenishes health, bars with playable dart boards, bowling alleys and even comedy clubs and movie theatres. Open world will allow players not only hang out with important NPC in order to receive bonuses and unlocks but taking girls on the dates as well, to help Niko settle. Multiplayer mode allows up to 32 players to explore the copy of the single-player city and initiate multiplayer activities, like races or Deathmatches.",
+      "platforms": "Xbox 360, PC, PlayStation 3, Xbox One",
+      "developers": "Rockstar North",
+      "publishers": "Capcom, Rockstar Games, Take Two Interactive",
+      "metacritic": "95",
+      "playtime": "10 ساعة",
+      "website": "http://www.rockstargames.com/iv",
+      "createdAt": "2025-12-04T22:56:00.202Z"
     }
   ],
   "online": [
