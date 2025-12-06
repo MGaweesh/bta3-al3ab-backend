@@ -84,9 +84,9 @@ function computePerformanceScore(user, requirements, weights = null) {
   const reqGpu = req?.gpu || '';
   const reqRamStr = req?.ram || req?.ramGB || '';
   const reqStorageGB = (typeof req?.storageGB === 'number' && req.storageGB > 0) ? req.storageGB :
-                       (req?.storage ? Number(String(req.storage).match(/[\d.]+/)?.[0]) : 0);
+    (req?.storage ? Number(String(req.storage).match(/[\d.]+/)?.[0]) : 0);
   const reqRam = (typeof reqRamStr === 'number' && reqRamStr > 0) ? reqRamStr :
-                 (reqRamStr ? Number(String(reqRamStr).match(/[\d.]+/)?.[0]) : 0);
+    (reqRamStr ? Number(String(reqRamStr).match(/[\d.]+/)?.[0]) : 0);
 
   // CPU/GPU scoring (0..1)
   const cpuScore = clamp01(crudeCpuGpuMatch(user.cpu, reqCpu));
@@ -140,10 +140,34 @@ function computePerformanceScore(user, requirements, weights = null) {
 
   // Determine tier
   let tier = 'Cannot Run';
-  if (score >= 0.85) tier = 'Strong';
-  else if (score >= 0.6) tier = 'Medium';
-  else if (score >= 0.35) tier = 'Weak';
-  else tier = 'Cannot Run';
+
+  // New Logic: Handling "Unknown" matches
+  // If we have very low scores but the user has inputs, it might just be a matching failure.
+  // We should differentiate "Definitely Too Weak" from "Unknown Match".
+
+  const hasUserHardware = user.cpu && user.gpu;
+  const lowMatch = cpuScore < 0.3 && gpuScore < 0.3;
+
+  if (score >= 0.85) {
+    tier = 'Strong';
+  } else if (score >= 0.6) {
+    tier = 'Medium';
+  } else if (score >= 0.35) {
+    tier = 'Weak';
+  } else {
+    // If we have user hardware but got a very low score, check if it might be a mismatch
+    // rather than truly weak hardware.
+    // Heuristic: If user has "RTX" or "Ryzen" or "i7"/"i9" and score is 0, assume it's a mismatch (Unknown)
+    // rather than "Cannot Run".
+    const isModernUserConfig = (user.cpu && (user.cpu.includes('i7') || user.cpu.includes('i9') || user.cpu.includes('Ryzen 7') || user.cpu.includes('Ryzen 9'))) ||
+      (user.gpu && (user.gpu.includes('RTX') || user.gpu.includes('RX 6') || user.gpu.includes('RX 7')));
+
+    if (isModernUserConfig && score < 0.3) {
+      tier = 'Unknown'; // Will show as "Check Manually" instead of red "Cannot Run"
+    } else {
+      tier = 'Cannot Run';
+    }
+  }
 
   return {
     score,
