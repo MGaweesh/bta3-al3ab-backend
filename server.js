@@ -1056,6 +1056,31 @@ app.get('/api/data/status', async (req, res) => {
   }
 });
 
+// ============ ANALYTICS ROUTES ============
+// GET visitor count (realtime)
+// Note: This currently returns a mock value. To get real data, integrate Google Analytics Data API
+app.get('/api/analytics/visitors', async (req, res) => {
+  try {
+    // TODO: Replace with real Google Analytics Data API call
+    // For now, return a mock value between 5 and 50
+    const mockCount = Math.floor(Math.random() * 45) + 5;
+    
+    res.json({
+      success: true,
+      activeUsers: mockCount,
+      timestamp: new Date().toISOString(),
+      note: 'This is a mock value. To get real data, configure Google Analytics Data API.'
+    });
+  } catch (error) {
+    console.error('❌ Error fetching visitor count:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Failed to fetch visitor count',
+      details: error.message
+    });
+  }
+});
+
 // ============ COMPATIBILITY ROUTES (for frontend compatibility) ============
 // These routes provide compatibility with frontend endpoints that expect different URL patterns
 // IMPORTANT: These routes must be defined BEFORE the catch-all handler
