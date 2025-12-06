@@ -5757,6 +5757,24 @@
       "playtime": "1 ساعة",
       "website": "https://www.konami.com/wepes/2020/eu/en/ps4/",
       "updatedAt": "2025-11-25T16:57:07.529Z"
+    },
+    {
+      "id": 1765062162010,
+      "name": "Captain Claw",
+      "size": "77",
+      "image": "https://media.rawg.io/media/games/dee/deeb1bb161d0b9cf8009213df7ff334d.jpg",
+      "categories": [
+        "action",
+        "platformer"
+      ],
+      "rating": "4.41",
+      "released": "1997-01-01",
+      "description": "Claw is a 2D side-scroller platform video game published by Monolith Productions in 1997 about an anthropomorphic pirate cat who sets on a quest to find an ancient amulet while fighting enemies and solving puzzles. It is Monolith's second release after Blood, which was released that same year in May.",
+      "platforms": "PC",
+      "developers": "Monolith Productions, Takarajimasha",
+      "publishers": "Monolith Productions",
+      "website": "https://web.archive.org/web/20050211043635/http://www.captainclaw.com/home.asp",
+      "createdAt": "2025-12-06T23:02:42.010Z"
     }
   ]
 }
