@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "AMD RX 460 (4 GB) or NVIDIA GeForce GTX 960 (4 GB) DirectX: Version 12",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "170 GB",
+      "storageGB": 170,
+      "os": "OS: Windows 10 (20H1 version or newer, 64-bit versions)"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "AMD RX Vega 64 (8 GB) or NVIDIA GeForce GTX 1080 (8 GB) DirectX: Version 12",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "170 GB",
+      "storageGB": 170,
+      "os": "OS: Windows 10 (20H1 version or newer, 64-bit versions)"
+    }
+  },
+  "fetchedAt": "2025-12-06T18:52:09.789Z"
+}
