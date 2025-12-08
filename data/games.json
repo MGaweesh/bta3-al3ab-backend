@@ -5729,6 +5729,28 @@
       "metacritic": "65",
       "playtime": "2 ساعة",
       "createdAt": "2025-12-08T00:53:56.930Z"
+    },
+    {
+      "id": 1765155335556,
+      "name": "DRAGON BALL: Sparking! ZERO",
+      "size": "19.2 GB",
+      "image": "https://media.rawg.io/media/screenshots/64f/64fdee7e7b863fbc22460cb8e38614b9.jpg",
+      "categories": [
+        "action",
+        "fighting",
+        "single-player",
+        "multiplayer",
+        "open-world"
+      ],
+      "rating": "4.6",
+      "released": "2025-10-10",
+      "description": "DRAGON BALL: Sparking! ZERO takes the legendary gameplay of the Budokai Tenkaichi series and raises it to whole new levels. DRAGON BALL: Sparking! ZERO has an incredible number of playable characters, each with signature abilities, transformations and techniques. Unleash the fighting spirit within you and take the fight to arenas that crumble and react to your power as the battle rages on.",
+      "platforms": "PlayStation 5, PC, Nintendo Switch, Xbox Series S/X",
+      "developers": "Spike Chunsoft",
+      "publishers": "Bandai Namco Entertainment",
+      "playtime": "13 ساعة",
+      "website": "https://dragonballsparkingzero.com/",
+      "createdAt": "2025-12-08T00:55:35.556Z"
     }
   ],
   "online": [
