@@ -5751,6 +5751,27 @@
       "playtime": "13 ساعة",
       "website": "https://dragonballsparkingzero.com/",
       "createdAt": "2025-12-08T00:55:35.556Z"
+    },
+    {
+      "id": 1765155440264,
+      "name": "Injustice 2",
+      "size": "28.6 GB",
+      "image": "https://media.rawg.io/media/games/e42/e428e70c97064037326d7863a43a0454.jpg",
+      "categories": [
+        "fighting",
+        "single-player",
+        "multiplayer"
+      ],
+      "rating": "3.92",
+      "released": "2017-05-09",
+      "description": "Injustice 2 is a fighting game developed by NetherRealm Studios.\r\n\r\nThe game begins on Krypton in its last hours. After Brainiac attacked the planet, he decides to destroy it using the beta-bombs. Only Superman and Supergirl survived, as their parents decided to send them to Earth, but these two get separated as the shuttles courses get affected by the planet's explosion. Time passes and Superman becomes a tyrannic Earth dictator, yet Batman destroys his regime at the end of the first game. Batman attempts to rebuild the society after the fall of Superman.\r\n\r\nThe core gameplay resembles the same of the first game. Every character has their own unique set of combos and special attacks. The objective of every fight is to knock out the enemy. The players can use the environment in order to damage their opponent. Every successful attack fills the super meter. Super meter can be used to perform special skills or dodges. Using the full super meter charge allows for a unique attack. \r\n\r\nInjustice 2 features a loot box system. Players can get new outfits with special effects from the crates. An RPG-like mechanics is also present as the characters four base stats can be improved after every fight.",
+      "platforms": "Android, PlayStation 4, PC, Xbox One, iOS",
+      "developers": "Warner Bros. Interactive, NetherRealm Studios, QLOC",
+      "publishers": "Warner Bros. Interactive",
+      "metacritic": "88",
+      "playtime": "6 ساعة",
+      "website": "https://www.injustice.com/",
+      "createdAt": "2025-12-08T00:57:20.264Z"
     }
   ],
   "online": [
