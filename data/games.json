@@ -1203,6 +1203,23 @@
       "playtime": "4 ساعة",
       "website": "https://sonicsuperstars.com/",
       "createdAt": "2025-12-08T00:45:31.002Z"
+    },
+    {
+      "id": 1765154831605,
+      "name": "Super Mario Bros. Wonder",
+      "size": "3.8 GB",
+      "image": "https://media.rawg.io/media/games/1fd/1fd3f030bee73452d46a0678084a7ed9.jpg",
+      "categories": [
+        "adventure"
+      ],
+      "rating": "4.37",
+      "released": "2023-10-20",
+      "description": "Join Mario and friends on a new 2D side-scrolling adventure full of wonder! \n\nEvery course contains its very own Wonder Flower – collect one, and anything can happen. From moving pipes to tilting terrain, singing Piranha Plants to stampeding Bulrushes, skydiving to space walks, you never know what’ll happen next. You might even transform into something totally new!\n\nPick to play as Mario, Luigi, Peach and more! They all play in exactly the same way, so you can freely use your favourite character without having to worry.\n\nThe world of Super Mario Bros. Wonder is even better when enjoyed with others! Play together locally or online and help save the Flower Kingdom from Bowser as a team, or enjoy enhancements to solo play by connecting online.",
+      "platforms": "Nintendo Switch",
+      "developers": "Nintendo",
+      "publishers": "Nintendo",
+      "website": "https://supermariobroswonder.nintendo.com/",
+      "createdAt": "2025-12-08T00:47:11.605Z"
     }
   ],
   "repack": [
