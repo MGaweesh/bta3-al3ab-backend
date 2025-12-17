@@ -15,33 +15,401 @@ const __dirname = dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Determine data directory path
-// On Render: /mnt/data, locally: backend/data
-const DATA_DIR = process.env.DATA_DIR || 
-  (existsSync('/mnt/data') ? '/mnt/data' : join(__dirname, 'data'));
-const GAMES_FILE = join(DATA_DIR, 'games.json');
-const GAMES_FILE_TMP = join(DATA_DIR, 'games.json.tmp');
-const MOVIES_FILE = join(DATA_DIR, 'movies.json');
-const MOVIES_FILE_TMP = join(DATA_DIR, 'movies.json.tmp');
-const CACHE_DIR = join(__dirname, 'cache');
-const CACHE_FILE = join(CACHE_DIR, 'games.json');
-const REQUIREMENTS_CACHE_DIR = join(CACHE_DIR, 'requirements');
-const FALLBACK_REQUIREMENTS_FILE = join(CACHE_DIR, 'fallbackRequirements.json');
-
-// Write queues to prevent concurrent writes
-let writeQueueGames = Promise.resolve();
-let writeQueueMovies = Promise.resolve();
-
-// Separate queue for GitHub commits to prevent SHA conflicts
-// This ensures commits happen sequentially, not concurrently
-let githubCommitQueue = Promise.resolve();
-
-// Middleware
+// ============ MIDDLEWARE ============
+// IMPORTANT: Middleware must be defined BEFORE routes!
 app.use(cors({ origin: '*' }));
 app.use(compression());
 app.use(express.json({ limit: '10mb' })); // Increase limit for large payloads
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
+// Determine data directory path
+// On Render: /mnt/data, locally: backend/data
+const DATA_DIR = process.env.DATA_DIR ||
+  (existsSync('/mnt/data') ? '/mnt/data' : join(__dirname, 'data'));
+
+// Ensure data directory exists
+if (!existsSync(DATA_DIR)) {
+  console.log(`📁 Creating data directory at: ${DATA_DIR}`);
+  mkdirSync(DATA_DIR, { recursive: true });
+}
+
+const GAMES_FILE = join(DATA_DIR, 'games.json');
+const GAMES_FILE_TMP = join(DATA_DIR, 'games.json.tmp');
+const MOVIES_FILE = join(DATA_DIR, 'movies.json');
+const MOVIES_FILE_TMP = join(DATA_DIR, 'movies.json.tmp');
+const NEWS_FILE = join(DATA_DIR, 'news.json');
+const NEWS_FILE_TMP = join(DATA_DIR, 'news.json.tmp');
+const SUBSCRIBERS_FILE = join(DATA_DIR, 'subscribers.json');
+const SUBSCRIBERS_FILE_TMP = join(DATA_DIR, 'subscribers.json.tmp');
+const CACHE_DIR = join(__dirname, 'cache');
+const CACHE_FILE = join(CACHE_DIR, 'games.json');
+const REQUIREMENTS_CACHE_DIR = join(CACHE_DIR, 'requirements');
+const FALLBACK_REQUIREMENTS_FILE = join(CACHE_DIR, 'fallbackRequirements.json');
+
+import nodemailer from 'nodemailer';
+
+// Brevo SMTP Config
+const SMTP_CONFIG = {
+  host: 'smtp-relay.brevo.com',
+  port: 587,
+  secure: false, // true for 465, false for other ports
+  auth: {
+    user: '9a0dc1001@smtp-brevo.com',
+    pass: 'xsmtpsib-01589dc23be04227cffe6ce74dc9dcef31a92664729cb12ef2b9e164b292cef4-xRADKu0GjlamHMkx'
+  }
+};
+
+// Create Transporter
+const transporter = nodemailer.createTransport(SMTP_CONFIG);
+
+// Verify connection configuration
+transporter.verify(function (error, success) {
+  if (error) {
+    console.log('❌ SMTP Connection Error:', error);
+  } else {
+    console.log('✅ SMTP Server is ready to take our messages');
+  }
+});
+
+// Helper: Send Welcome Email via SMTP (Nodemailer)
+// Helper: Send Welcome Email via SMTP (Nodemailer)
+const sendWelcomeEmail = async (email) => {
+  try {
+    const info = await transporter.sendMail({
+      from: '"Bta3 Al3ab" <support@drgaweesh.online>', // sender address
+      to: email, // list of receivers
+      subject: "Welcome to Bta3 Al3ab! 🎮", // Subject line
+      html: `
+            <div style="background-color: #0f172a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: right; direction: rtl; padding: 0; margin: 0; color: #cbd5e1;">
+                
+                <!-- Hero Section with Background Image -->
+                <div style="
+                    background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop');
+                    background-size: cover;
+                    background-position: center;
+                    padding: 40px 20px;
+                    border-bottom: 2px solid #7c3aed;
+                    text-align: center;
+                ">
+                    <h1 style="color: #4ade80; font-size: 28px; margin: 0 0 10px 0; text-shadow: 0 4px 6px rgba(0,0,0,0.3);">🚀 أهلاً بيك في العيلة!</h1>
+                    <p style="color: #e2e8f0; font-size: 16px; margin: 0;">أقوى مجتمع جيمرز في مصر</p>
+                </div>
+
+                <!-- Content Section -->
+                <div style="padding: 30px 20px; background-color: #1e293b; max-width: 600px; margin: 0 auto;">
+                    <p style="color: #fff; font-size: 16px; line-height: 1.6; margin-top: 0;">شكراً لاشتراكك في إشعارات <strong>بتاع ألعاب</strong>.</p>
+                    <p style="color: #94a3b8; margin-bottom: 20px;">هيوصلك:</p>
+                    
+                    <ul style="list-style: none; padding: 0; margin: 0 0 30px 0;">
+                        <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px; color: #e2e8f0;">
+                            <span style="background: rgba(74, 222, 128, 0.1); color: #4ade80; padding: 4px 8px; result-radius: 4px; font-size: 14px;">جديد</span> 
+                            ألعاب وكراكات
+                        </li>
+                        <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px; color: #e2e8f0;">
+                            <span style="background: rgba(56, 189, 248, 0.1); color: #38bdf8; padding: 4px 8px; border-radius: 4px; font-size: 14px;">مجاني</span> 
+                            عروض حصرية
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px; color: #e2e8f0;">
+                            <span style="background: rgba(244, 63, 94, 0.1); color: #f43f5e; padding: 4px 8px; border-radius: 4px; font-size: 14px;">خصم</span> 
+                            تخفيضات الستور
+                        </li>
+                    </ul>
+
+                    <div style="text-align: center;">
+                        <a href="https://bta3al3ab.online/" style="background-color: #7c3aed; color: #fff; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px; display: inline-block;">تصفح الموقع 🎮</a>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div style="padding: 20px; text-align: center; color: #64748b; font-size: 12px; border-top: 1px solid #334155;">
+                    <p style="margin: 0;">&copy; 2026 Bta3 Al3ab</p>
+                    <p style="margin: 5px 0 0 0;">أنشئت بواسطة <a href="https://drgaweesh.online/" style="color: #7c3aed; text-decoration: none; font-weight: bold;">Dr@Gaweesh</a></p>
+                    <!-- Unique ID to prevent Gmail clipping -->
+                    <div style="display: none; opacity: 0; font-size: 1px;">${Date.now()}-${Math.random().toString(36).substring(7)}</div>
+                </div>
+            </div>
+        `,
+    });
+
+    console.log("📧 Welcome email sent: %s", info.messageId);
+    return true;
+  } catch (error) {
+    console.error("❌ Error sending welcome email:", error);
+    return false;
+  }
+};
+
+// Helper: Generate Consistent HTML Email
+const generateEmailHtml = (title, message, imageUrl, link, ctaText = 'تصفح الموقع 🚀') => {
+  return `
+  <div style="background-color: #0f172a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: right; direction: rtl; padding: 0; margin: 0; color: #cbd5e1;">
+      <!-- Header Image -->
+      <div style="
+          background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)), url('${imageUrl || 'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop'}');
+          background-size: cover;
+          background-position: center;
+          padding: 40px 20px;
+          border-bottom: 2px solid #7c3aed;
+          text-align: center;
+      ">
+          <h1 style="color: #4ade80; font-size: 28px; margin: 0 0 10px 0; text-shadow: 0 4px 6px rgba(0,0,0,0.5); font-weight: 800;">${title}</h1>
+          <div style="width: 60px; height: 4px; background: #7c3aed; margin: 10px auto; border-radius: 2px;"></div>
+      </div>
+
+      <!-- Content Body -->
+      <div style="padding: 40px 20px; background-color: #1e293b; max-width: 600px; margin: 0 auto; border-radius: 0 0 16px 16px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);">
+          
+          <!-- Explicit Image Body (if visible) -->
+          <div style="text-align: center; margin-bottom: 25px;">
+              <img src="${imageUrl || 'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop'}" alt="${title}" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border: 1px solid #334155;">
+          </div>
+
+          <div style="color: #e2e8f0; font-size: 18px; line-height: 1.8; margin-bottom: 30px; white-space: pre-line;">
+              ${message}
+          </div>
+
+          <div style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
+              <a href="${link || 'https://bta3al3ab.online/'}" style="
+                  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+                  color: #fff;
+                  padding: 14px 40px;
+                  border-radius: 12px;
+                  text-decoration: none;
+                  font-weight: bold;
+                  font-size: 18px;
+                  display: inline-block;
+                  box-shadow: 0 4px 6px -1px rgba(124, 58, 237, 0.5);
+                  transition: transform 0.2s;
+              ">${ctaText}</a>
+          </div>
+      </div>
+
+      <!-- Footer -->
+      <div style="padding: 30px; text-align: center; color: #64748b; font-size: 14px;">
+          <p style="margin: 0;">&copy; 2026 Bta3 Al3ab</p>
+          <p style="margin: 5px 0 0 0;">أنشئت بواسطة <a href="https://drgaweesh.online/" style="color: #7c3aed; text-decoration: none; font-weight: bold;">Dr@Gaweesh</a></p>
+          <div style="margin-top: 15px;">
+              <a href="https://bta3al3ab.online/" style="color: #94a3b8; text-decoration: none; margin: 0 10px;">الموقع الرسمي</a> |
+              <a href="#" style="color: #94a3b8; text-decoration: none; margin: 0 10px;">إلغاء الاشتراك</a>
+          </div>
+          <!-- Unique ID to prevent Gmail clipping -->
+          <div style="display: none; opacity: 0; font-size: 1px;">${Date.now()}-${Math.random().toString(36).substring(7)}</div>
+      </div>
+  </div>
+  `;
+};
+
+// GET Subscribers
+app.get('/api/subscribers', (req, res) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+
+  try {
+    const subscribers = readSubscribersData();
+    console.log(`📊 API GET /subscribers - Count: ${subscribers.length}`, subscribers);
+    res.json(subscribers);
+  } catch (error) {
+    console.error('❌ Error in GET /subscribers:', error);
+    res.status(500).json({ error: 'Failed to fetch subscribers' });
+  }
+});
+
+// Helper: Send New Game Notification
+const sendNewGameEmail = async (gameTitle, platform, image, unlockDate, endDate) => {
+  try {
+    const subscribers = readSubscribersData();
+    if (subscribers.length === 0) {
+      console.log("⚠️ No subscribers to notify.");
+      return;
+    }
+
+    console.log(`📧 Sending notifications to ${subscribers.length} subscribers for: ${gameTitle}`);
+
+    const formattedUnlockDate = new Date(unlockDate).toLocaleString('ar-EG', {
+      weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'
+    });
+
+    let message = `لعبة <strong>${gameTitle}</strong> على منصة <strong>${platform}</strong> قربت تنزل! 🔥\n\nموعد الانطلاق: ${formattedUnlockDate}`;
+
+    if (endDate) {
+      const formattedEndDate = new Date(endDate).toLocaleString('ar-EG', {
+        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'
+      });
+      message += `\nوموعد الانتهاء: ${formattedEndDate}`;
+    }
+
+    message += `\n\nمتفوتش الفرصة واستعد للمغامرة! 🎮`;
+
+    // Handle Image Attachment (CID or URL)
+    let emailHtmlImage = image;
+    const attachments = [];
+
+    // Check if image is Base64
+    if (image && image.startsWith('data:')) {
+      emailHtmlImage = 'cid:gameImage'; // Reference by CID
+      attachments.push({
+        filename: 'game-image.png',
+        path: image,
+        cid: 'gameImage'
+      });
+    }
+
+    const html = generateEmailHtml(
+      `🎮 لعبة جديدة قربت: ${gameTitle}`,
+      message,
+      emailHtmlImage, // Use CID or URL
+      'https://bta3al3ab.online/',
+      'عرض تفاصيل اللعبة'
+    );
+
+    // Send in batches to avoid overwhelming SMTP
+    for (const email of subscribers) {
+      transporter.sendMail({
+        from: '"Bta3 Al3ab" <support@drgaweesh.online>',
+        to: email,
+        subject: `🎮 استعد! لعبة ${gameTitle} جاية في الطريق`,
+        html: html,
+        attachments: attachments // Attach the image if needed
+      }).catch(err => console.error(`Failed to send to ${email}:`, err.message));
+    }
+
+  } catch (error) {
+    console.error("❌ Error broadcasting game email:", error);
+  } // Fix: Removed extra curly brace if it existed, ensures proper closure
+};
+
+// Helper: Send New Bundle Notification
+const sendBundleEmail = async (bundleTitle, image, type, description, items) => {
+  try {
+    const subscribers = readSubscribersData();
+    if (subscribers.length === 0) {
+      console.log("⚠️ No subscribers to notify.");
+      return;
+    }
+
+    console.log(`📧 Sending bundle notifications to ${subscribers.length} subscribers for: ${bundleTitle}`);
+
+    const typeLabels = {
+      'horror': 'رعب 👻',
+      'action': 'أكشن 💥',
+      'anime': 'أنمي 🍜',
+      'other': 'منوع 🎮'
+    };
+    const typeLabel = typeLabels[type] || type;
+
+    // Format items list if available
+    let itemsList = '';
+    if (items && Array.isArray(items) && items.length > 0) {
+      itemsList = `\n\n🎮 **محتويات الباقة:**\n${items.map(item => `• ${item}`).join('\n')}`;
+    }
+
+    const message = `باقة جديدة وصلت! 📦\n\n**${bundleTitle}** (${typeLabel})\n\n${description}${itemsList}\n\nالحق العرض قبل ما يخلص! 🔥`;
+
+    // Handle Image Attachment (CID or URL)
+    let emailHtmlImage = image;
+    const attachments = [];
+
+    // Check if image is Base64
+    if (image && image.startsWith('data:')) {
+      emailHtmlImage = 'cid:bundleImage'; // Reference by CID
+      attachments.push({
+        filename: 'bundle-image.png',
+        path: image,
+        cid: 'bundleImage'
+      });
+    }
+
+    const html = generateEmailHtml(
+      `📦 باقة جديدة: ${bundleTitle}`,
+      message,
+      emailHtmlImage, // Use CID or URL
+      'https://bta3al3ab.online/',
+      'شوف الباقة'
+    );
+
+    for (const email of subscribers) {
+      transporter.sendMail({
+        from: '"Bta3 Al3ab" <support@drgaweesh.online>',
+        to: email,
+        subject: `📦 باقة جديدة وصلت: ${bundleTitle}`,
+        html: html,
+        attachments: attachments // Attach the image if needed
+      }).catch(err => console.error(`Failed to send to ${email}:`, err.message));
+    }
+
+  } catch (error) {
+    console.error("❌ Error broadcasting bundle email:", error);
+  }
+};
+
+// Start: Helper functions for Subscribers
+const readSubscribersData = () => {
+  try {
+    if (!existsSync(SUBSCRIBERS_FILE)) return [];
+    const content = readFileSync(SUBSCRIBERS_FILE, 'utf8');
+    return JSON.parse(content);
+  } catch (error) {
+    console.error(`❌ Error reading subscribers.json: ${error.message}`);
+    return [];
+  }
+};
+
+const writeSubscribersData = (data) => {
+  try {
+    writeFileSync(SUBSCRIBERS_FILE_TMP, JSON.stringify(data, null, 2), 'utf8');
+    renameSync(SUBSCRIBERS_FILE_TMP, SUBSCRIBERS_FILE);
+    // Optional: Sync to GitHub if needed (omitted for speed for now, can add later)
+    return true;
+  } catch (error) {
+    console.error(`❌ Error writing subscribers.json: ${error.message}`);
+    return false;
+  }
+};
+// End: Helper functions for Subscribers
+
+// Write queues to prevent concurrent writes
+let writeQueueGames = Promise.resolve();
+let writeQueueMovies = Promise.resolve();
+let writeQueueNews = Promise.resolve();
+
+// Separate queue for GitHub commits to prevent SHA conflicts
+// This ensures commits happen sequentially, not concurrently
+let githubCommitQueue = Promise.resolve();
+
+// ============ EMAIL ROUTES ============
+// POST /api/subscribe
+app.post('/api/subscribe', async (req, res) => {
+  const { email } = req.body;
+
+  if (!email) {
+    return res.status(400).json({ error: 'Email is required' });
+  }
+
+  // 0. Save subscriber
+  const subscribers = readSubscribersData();
+  if (!subscribers.includes(email)) {
+    subscribers.push(email);
+    writeSubscribersData(subscribers);
+    console.log(`✅ New subscriber added: ${email}`);
+  } else {
+    console.log(`ℹ️ Subscriber already exists: ${email}`);
+  }
+
+  // 1. Send Welcome Email
+  console.log(`📧 Sending welcome email to: ${email}...`);
+  const emailSent = await sendWelcomeEmail(email);
+
+  // 2. Respond to client
+  if (emailSent) {
+    res.json({ success: true, message: 'Subscribed successfully and email sent' });
+  } else {
+    // Return success even if email fails, as subscription is saved
+    res.json({ success: true, message: 'Subscribed successfully (email delivery pending)' });
+  }
+});
+
+// Error handling middleware for JSON parsing
 // Error handling middleware for JSON parsing
 app.use((err, req, res, next) => {
   if (err instanceof SyntaxError && err.status === 400 && 'body' in err) {
@@ -57,7 +425,7 @@ app.use((err, req, res, next) => {
 
 // ----- ROOT route -----
 app.get('/', (req, res) => {
-  res.json({ 
+  res.json({
     message: 'Backend is running! متاح على /api',
     api: {
       health: '/api/health',
@@ -84,12 +452,12 @@ const readGamesData = () => {
 
     const fileContent = readFileSync(GAMES_FILE, 'utf8');
     const data = JSON.parse(fileContent);
-    
+
     // Ensure structure exists
     if (!data.readyToPlay) data.readyToPlay = [];
     if (!data.repack) data.repack = [];
     if (!data.online) data.online = [];
-    
+
     return data;
   } catch (error) {
     console.error(`❌ Error reading games.json: ${error.message}`);
@@ -115,12 +483,12 @@ const readMoviesData = () => {
 
     const fileContent = readFileSync(MOVIES_FILE, 'utf8');
     const data = JSON.parse(fileContent);
-    
+
     // Ensure structure exists
     if (!data.movies) data.movies = [];
     if (!data.tvShows) data.tvShows = [];
     if (!data.anime) data.anime = [];
-    
+
     return data;
   } catch (error) {
     console.error(`❌ Error reading movies.json: ${error.message}`);
@@ -190,7 +558,7 @@ const commitFileToGitHub = async (localFilePath, repoPath, commitMessage) => {
     let commitResponse;
     let retries = 3;
     let lastError = null;
-    
+
     while (retries > 0) {
       try {
         commitResponse = await fetch(
@@ -261,7 +629,7 @@ const commitFileToGitHub = async (localFilePath, repoPath, commitMessage) => {
     }
 
     const commitData = await commitResponse.json();
-    
+
     return {
       commitUrl: commitData.commit.html_url,
       sha: commitData.content.sha,
@@ -331,11 +699,11 @@ const writeGamesData = async (data, action = 'update') => {
       if (!data.online) data.online = [];
 
       const jsonContent = JSON.stringify(data, null, 2);
-      
+
       // Atomic write: write to temp file, then rename
       writeFileSync(GAMES_FILE_TMP, jsonContent, 'utf8');
       renameSync(GAMES_FILE_TMP, GAMES_FILE);
-      
+
       console.log(`✅ Saved games.json locally`);
 
       // Enqueue GitHub commit (non-blocking, sequential)
@@ -353,7 +721,7 @@ const writeGamesData = async (data, action = 'update') => {
           .catch(err => {
             console.error(`⚠️  GitHub commit failed: ${err.message}`);
           });
-        
+
         // Return immediately - commit will happen in queue
         githubResult = { queued: true };
       }
@@ -388,11 +756,11 @@ const writeMoviesData = async (data, action = 'update') => {
       if (!data.anime) data.anime = [];
 
       const jsonContent = JSON.stringify(data, null, 2);
-      
+
       // Atomic write: write to temp file, then rename
       writeFileSync(MOVIES_FILE_TMP, jsonContent, 'utf8');
       renameSync(MOVIES_FILE_TMP, MOVIES_FILE);
-      
+
       console.log(`✅ Saved movies.json locally`);
 
       // Enqueue GitHub commit (non-blocking, sequential)
@@ -410,7 +778,7 @@ const writeMoviesData = async (data, action = 'update') => {
           .catch(err => {
             console.error(`⚠️  GitHub commit failed: ${err.message}`);
           });
-        
+
         // Return immediately - commit will happen in queue
         githubResult = { queued: true };
       }
@@ -424,7 +792,7 @@ const writeMoviesData = async (data, action = 'update') => {
         message: githubResult ? 'Saved locally, GitHub commit queued' : 'Saved locally (GitHub not configured or failed)'
       };
     } catch (error) {
-      console.error(`❌ Error writing movies.json: ${error.message}`);
+
       return {
         success: false,
         error: error.message,
@@ -435,6 +803,328 @@ const writeMoviesData = async (data, action = 'update') => {
   });
 };
 
+// Helper function to read news data from JSON file
+const readNewsData = () => {
+  try {
+    if (!existsSync(NEWS_FILE)) {
+      console.log('📊 news.json not found, returning empty array');
+      return [];
+    }
+
+    const fileContent = readFileSync(NEWS_FILE, 'utf8');
+    const data = JSON.parse(fileContent);
+    return Array.isArray(data) ? data : [];
+  } catch (error) {
+    console.error(`❌ Error reading news.json: ${error.message}`);
+    return [];
+  }
+};
+
+// Helper function to write news data to JSON file and commit to GitHub
+const writeNewsData = async (data, action = 'update') => {
+  return writeQueueNews = writeQueueNews.then(async () => {
+    try {
+      const jsonContent = JSON.stringify(data, null, 2);
+
+      // Atomic write
+      writeFileSync(NEWS_FILE_TMP, jsonContent, 'utf8');
+      renameSync(NEWS_FILE_TMP, NEWS_FILE);
+
+      console.log(`✅ Saved news.json locally`);
+
+      // Enqueue GitHub commit
+      let githubResult = null;
+      if (process.env.GITHUB_TOKEN && process.env.GITHUB_OWNER && process.env.GITHUB_REPO) {
+        const commitMessage = `Update news.json from dashboard — ${action} — ${new Date().toISOString()}`;
+        // Don't await - let it run in the background queue
+        enqueueGitHubCommit(NEWS_FILE, 'data/news.json', commitMessage)
+          .then(result => {
+            if (result && result.commitUrl) {
+              console.log(`✅ Committed news.json to GitHub: ${result.commitUrl}`);
+            }
+          })
+          .catch(err => {
+            console.error(`⚠️  GitHub commit failed: ${err.message}`);
+          });
+
+        githubResult = { queued: true };
+      }
+
+      return {
+        success: true,
+        github: !!githubResult,
+        commitUrl: githubResult?.commitUrl || null,
+        message: githubResult ? 'Saved locally, GitHub commit queued' : 'Saved locally'
+      };
+    } catch (error) {
+      console.error(`❌ Error writing news.json: ${error.message}`);
+      return {
+        success: false,
+        error: error.message,
+        message: `Failed to save: ${error.message}`
+      };
+    }
+  });
+};
+
+// ============ NEWS ROUTES ============
+
+// GET all news
+app.get('/api/news', async (req, res) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+
+  try {
+    const data = readNewsData();
+    res.json(data);
+  } catch (error) {
+    console.error('❌ Error fetching news:', error);
+    res.status(500).json({ error: 'Failed to fetch news', details: error.message });
+  }
+});
+
+// POST - Add news
+app.post('/api/news', async (req, res) => {
+  try {
+    const newItem = {
+      id: Date.now(),
+      ...req.body,
+      createdAt: new Date().toISOString()
+    };
+
+    const data = readNewsData();
+    data.unshift(newItem); // Add to beginning
+
+    const writeResult = await writeNewsData(data, `add news: ${newItem.title}`);
+
+    if (writeResult.success) {
+      res.status(201).json(newItem);
+    } else {
+      res.status(500).json({ error: 'Failed to save news', details: writeResult.message });
+    }
+  } catch (error) {
+    console.error('❌ Error adding news:', error);
+    res.status(500).json({ error: 'Failed to add news', details: error.message });
+  }
+});
+
+// DELETE - Delete news
+app.delete('/api/news/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const itemId = parseInt(id);
+    const data = readNewsData();
+
+    const initialLength = data.length;
+    const newData = data.filter(item => item.id !== itemId);
+
+    if (newData.length === initialLength) {
+      return res.status(404).json({ error: 'News item not found' });
+    }
+
+    const writeResult = await writeNewsData(newData, `delete news id: ${itemId}`);
+
+    if (writeResult.success) {
+      res.json({ status: 'ok', message: 'News deleted successfully' });
+    } else {
+      res.status(500).json({ error: 'Failed to delete news', details: writeResult.message });
+    }
+  } catch (error) {
+    console.error('❌ Error deleting news:', error);
+    res.status(500).json({ error: 'Failed to delete news', details: error.message });
+  }
+});
+
+// ============ BUNDLES ROUTES ============
+
+const BUNDLES_FILE = join(DATA_DIR, 'bundles.json');
+const BUNDLES_FILE_TMP = join(DATA_DIR, 'bundles.json.tmp');
+let writeQueueBundles = Promise.resolve();
+
+// Helper to read bundles
+const readBundlesData = () => {
+  try {
+    if (!existsSync(BUNDLES_FILE)) return [];
+    const content = readFileSync(BUNDLES_FILE, 'utf8');
+    return JSON.parse(content);
+  } catch (error) {
+    console.error(`❌ Error reading bundles.json: ${error.message}`);
+    return [];
+  }
+};
+
+// Helper to write bundles
+const writeBundlesData = async (data, action = 'update') => {
+  return writeQueueBundles = writeQueueBundles.then(async () => {
+    try {
+      writeFileSync(BUNDLES_FILE_TMP, JSON.stringify(data, null, 2), 'utf8');
+      renameSync(BUNDLES_FILE_TMP, BUNDLES_FILE);
+
+      // GitHub Sync
+      let githubResult = null;
+      if (process.env.GITHUB_TOKEN && process.env.GITHUB_OWNER && process.env.GITHUB_REPO) {
+        const commitMessage = `Update bundles.json from dashboard — ${action} — ${new Date().toISOString()}`;
+        enqueueGitHubCommit(BUNDLES_FILE, 'data/bundles.json', commitMessage)
+          .catch(err => console.error(`⚠️ GitHub commit failed: ${err.message}`));
+        githubResult = { queued: true };
+      }
+
+      return { success: true, github: !!githubResult };
+    } catch (error) {
+      console.error(`❌ Error writing bundles.json: ${error.message}`);
+      return { success: false, error: error.message };
+    }
+  });
+};
+
+// GET Bundles
+app.get('/api/bundles', async (req, res) => {
+  try {
+    const data = readBundlesData();
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch bundles' });
+  }
+});
+
+// POST Bundle
+app.post('/api/bundles', async (req, res) => {
+  try {
+    const newItem = { id: Date.now(), ...req.body, createdAt: new Date().toISOString() };
+    const data = readBundlesData();
+    data.unshift(newItem);
+    const result = await writeBundlesData(data, `add bundle: ${newItem.title}`);
+
+    if (result.success) {
+      res.status(201).json(newItem);
+
+      // Send Email Notification
+      const { notify } = req.body;
+      if (notify) {
+        console.log(`🔔 Notification requested for new bundle: ${newItem.title}`);
+        // Function signature: sendBundleEmail(bundleTitle, image, type, description, items)
+        sendBundleEmail(newItem.title, newItem.image, newItem.type, newItem.description, newItem.games);
+      }
+    } else {
+      res.status(500).json({ error: 'Failed to save bundle' });
+    }
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// DELETE Bundle
+app.delete('/api/bundles/:id', async (req, res) => {
+  try {
+    const id = parseInt(req.params.id);
+    const data = readBundlesData();
+    const newData = data.filter(item => item.id !== id);
+    if (newData.length === data.length) return res.status(404).json({ error: 'Bundle not found' });
+
+    const result = await writeBundlesData(newData, `delete bundle: ${id}`);
+    if (result.success) res.json({ status: 'ok' });
+    else res.status(500).json({ error: 'Failed to delete bundle' });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
+// ============ UPCOMING GAMES ROUTES ============
+
+const UPCOMING_FILE = join(DATA_DIR, 'upcomingGames.json');
+const UPCOMING_FILE_TMP = join(DATA_DIR, 'upcomingGames.json.tmp');
+let writeQueueUpcoming = Promise.resolve();
+
+// Helper to read upcoming games
+const readUpcomingData = () => {
+  try {
+    if (!existsSync(UPCOMING_FILE)) return [];
+    const content = readFileSync(UPCOMING_FILE, 'utf8');
+    return JSON.parse(content);
+  } catch (error) {
+    console.error(`❌ Error reading upcomingGames.json: ${error.message}`);
+    return [];
+  }
+};
+
+// Helper to write upcoming games
+const writeUpcomingData = async (data, action = 'update') => {
+  return writeQueueUpcoming = writeQueueUpcoming.then(async () => {
+    try {
+      writeFileSync(UPCOMING_FILE_TMP, JSON.stringify(data, null, 2), 'utf8');
+      renameSync(UPCOMING_FILE_TMP, UPCOMING_FILE);
+
+      // GitHub Sync
+      let githubResult = null;
+      if (process.env.GITHUB_TOKEN && process.env.GITHUB_OWNER && process.env.GITHUB_REPO) {
+        const commitMessage = `Update upcomingGames.json from dashboard — ${action} — ${new Date().toISOString()}`;
+        enqueueGitHubCommit(UPCOMING_FILE, 'data/upcomingGames.json', commitMessage)
+          .catch(err => console.error(`⚠️ GitHub commit failed: ${err.message}`));
+        githubResult = { queued: true };
+      }
+
+      return { success: true, github: !!githubResult };
+    } catch (error) {
+      console.error(`❌ Error writing upcomingGames.json: ${error.message}`);
+      return { success: false, error: error.message };
+    }
+  });
+};
+
+// GET Upcoming Games
+app.get('/api/upcoming-games', async (req, res) => {
+  try {
+    const data = readUpcomingData();
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch upcoming games' });
+  }
+});
+
+// POST Upcoming Game
+app.post('/api/upcoming-games', async (req, res) => {
+  try {
+    const { notify, ...gameData } = req.body; // Extract notify flag
+    const newItem = { id: Date.now(), ...gameData, createdAt: new Date().toISOString() };
+
+    const data = readUpcomingData();
+    data.unshift(newItem); // Add new items to the top
+    const result = await writeUpcomingData(data, `add upcoming: ${newItem.title}`);
+
+    if (result.success) {
+      // Check if notification is requested
+      if (notify) {
+        // Trigger email broadcast in background
+        console.log(`🔔 Notification requested for: ${newItem.title}`);
+        sendNewGameEmail(newItem.title, newItem.platform, newItem.image, newItem.unlockDate, newItem.endDate);
+      }
+      res.status(201).json(newItem);
+    } else {
+      res.status(500).json({ error: 'Failed to save upcoming game' });
+    }
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// DELETE Upcoming Game
+app.delete('/api/upcoming-games/:id', async (req, res) => {
+  try {
+    const id = parseInt(req.params.id);
+    const data = readUpcomingData();
+    const newData = data.filter(item => item.id !== id);
+    if (newData.length === data.length) return res.status(404).json({ error: 'Item not found' });
+
+    const result = await writeUpcomingData(newData, `delete upcoming: ${id}`);
+    if (result.success) res.json({ status: 'ok' });
+    else res.status(500).json({ error: 'Failed to delete item' });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // ============ GAMES ROUTES (Movies, TV Shows, Anime) ============
 
 // GET all games data (readyToPlay, repack, online)
@@ -442,7 +1132,7 @@ app.get('/api/games', async (req, res) => {
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   res.set('Pragma', 'no-cache');
   res.set('Expires', '0');
-  
+
   try {
     const data = readGamesData();
     console.log('📊 Games data loaded:', {
@@ -462,17 +1152,17 @@ app.get('/api/games/:type', async (req, res) => {
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   res.set('Pragma', 'no-cache');
   res.set('Expires', '0');
-  
+
   try {
     const { type } = req.params;
     const validTypes = ['readyToPlay', 'repack', 'online'];
-    
+
     if (!validTypes.includes(type)) {
-      return res.status(400).json({ 
-        error: 'Invalid type. Must be one of: readyToPlay, repack, online' 
+      return res.status(400).json({
+        error: 'Invalid type. Must be one of: readyToPlay, repack, online'
       });
     }
-    
+
     const data = readGamesData();
     res.json(data[type] || []);
   } catch (error) {
@@ -485,7 +1175,7 @@ app.get('/api/games/:type', async (req, res) => {
 app.get('/api/games/:id/requirements', async (req, res) => {
   try {
     const idRaw = req.params.id;
-    
+
     // Read games data
     const gamesData = readGamesData();
     const allGames = [
@@ -493,10 +1183,10 @@ app.get('/api/games/:id/requirements', async (req, res) => {
       ...(gamesData.repack || []),
       ...(gamesData.online || [])
     ];
-    
+
     // Find game by ID (handle both string and number IDs)
     const gameMeta = allGames.find(g => String(g.id) === String(idRaw));
-    
+
     if (!gameMeta) {
       return res.status(404).json({
         ok: false,
@@ -504,10 +1194,10 @@ app.get('/api/games/:id/requirements', async (req, res) => {
         gameId: idRaw
       });
     }
-    
+
     // Fetch requirements using the new system
     const result = await getRequirementsForGame(gameMeta);
-    
+
     return res.json({
       ok: true,
       gameId: gameMeta.id,
@@ -529,55 +1219,66 @@ app.post('/api/games/:type', async (req, res) => {
   try {
     const { type } = req.params;
     const validTypes = ['readyToPlay', 'repack', 'online'];
-    
+
     if (!validTypes.includes(type)) {
-      return res.status(400).json({ 
-        error: 'Invalid type. Must be one of: readyToPlay, repack, online' 
+      return res.status(400).json({
+        error: 'Invalid type. Must be one of: readyToPlay, repack, online'
       });
     }
-    
+
     console.log(`📝 [${new Date().toISOString()}] Adding new game to type: ${type}`);
-    
+
     // Read data from file
     const data = readGamesData();
+
+    // Create new game item
+    // Supported fields: name, image, size, rating, platforms, developers, released, year, startDate, endDate, etc.
     const newItem = {
       id: Date.now(),
       ...req.body,
       createdAt: new Date().toISOString()
     };
-    
+
     if (!data[type]) {
       data[type] = [];
     }
-    
+
     data[type].push(newItem);
-    
+
     // Write to file and commit to GitHub
     const writeResult = await writeGamesData(data, `add ${type}: ${newItem.name || 'unnamed'}`);
-    
+
     if (writeResult.success) {
       console.log(`✅ [${new Date().toISOString()}] Game saved: ${newItem.name} (ID: ${newItem.id})`);
       if (writeResult.github) {
         console.log(`✅ Committed to GitHub: ${writeResult.commitUrl}`);
       }
-      
+
       res.status(201).json({
         ...newItem,
         _github: writeResult.github ? { committed: true, commitUrl: writeResult.commitUrl } : { committed: false, message: writeResult.message }
       });
+
+      const { notify } = req.body;
+      if (notify) {
+        console.log(`🔔 Notification requested for new game: ${newItem.name}`);
+        // Assuming 'platforms' is a string like "PC, Xbox". pass it as is.
+        // Ensure arguments match: gameTitle, platform, image, unlockDate, endDate
+        sendNewGameEmail(newItem.name, newItem.platforms || 'All Platforms', newItem.imageUrl || newItem.image, newItem.startDate || new Date().toISOString(), newItem.endDate);
+      }
     } else {
       console.error(`❌ [${new Date().toISOString()}] Failed to save game: ${newItem.name}`);
-      res.status(500).json({ 
+      res.status(500).json({
         status: 'error',
-        error: 'Failed to save game', 
+        error: 'Failed to save game',
         details: writeResult.error || 'Unknown error'
       });
     }
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error adding game:`, error);
-    res.status(500).json({ 
+    res.status(500).json({
       status: 'error',
-      error: 'Failed to add game', 
+      error: 'Failed to add game',
       details: error.message
     });
   }
@@ -588,29 +1289,29 @@ app.put('/api/games/:type/:id', async (req, res) => {
   try {
     const { type, id } = req.params;
     const validTypes = ['readyToPlay', 'repack', 'online'];
-    
+
     if (!validTypes.includes(type)) {
-      return res.status(400).json({ 
-        error: 'Invalid type. Must be one of: readyToPlay, repack, online' 
+      return res.status(400).json({
+        error: 'Invalid type. Must be one of: readyToPlay, repack, online'
       });
     }
-    
+
     console.log(`📝 [${new Date().toISOString()}] Updating game in type: ${type}, ID: ${id}`);
-    
+
     // Read data from file
     const data = readGamesData();
     const itemId = parseInt(id);
-    
+
     if (!data[type]) {
       return res.status(404).json({ error: 'Type not found' });
     }
-    
+
     const itemIndex = data[type].findIndex(item => item.id === itemId);
-    
+
     if (itemIndex === -1) {
       return res.status(404).json({ error: 'Game not found' });
     }
-    
+
     const oldItem = { ...data[type][itemIndex] };
     data[type][itemIndex] = {
       ...data[type][itemIndex],
@@ -618,34 +1319,34 @@ app.put('/api/games/:type/:id', async (req, res) => {
       id: itemId,
       updatedAt: new Date().toISOString()
     };
-    
+
     // Write to file and commit to GitHub
     const writeResult = await writeGamesData(data, `update ${type}: ${data[type][itemIndex].name || 'unnamed'}`);
-    
+
     if (writeResult.success) {
       console.log(`✅ [${new Date().toISOString()}] Game updated: ${data[type][itemIndex].name} (ID: ${itemId})`);
       if (writeResult.github) {
         console.log(`✅ Committed to GitHub: ${writeResult.commitUrl}`);
       }
-      
+
       res.json({
         ...data[type][itemIndex],
         _github: writeResult.github ? { committed: true, commitUrl: writeResult.commitUrl } : { committed: false, message: writeResult.message }
       });
     } else {
       console.error(`❌ [${new Date().toISOString()}] Failed to update game: ${oldItem.name}`);
-      res.status(500).json({ 
+      res.status(500).json({
         status: 'error',
-        error: 'Failed to update game', 
+        error: 'Failed to update game',
         details: writeResult.error || 'Unknown error'
       });
     }
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error updating game:`, error);
-    res.status(500).json({ 
+    res.status(500).json({
       status: 'error',
-      error: 'Failed to update game', 
-      details: error.message 
+      error: 'Failed to update game',
+      details: error.message
     });
   }
 });
@@ -655,60 +1356,60 @@ app.delete('/api/games/:type/:id', async (req, res) => {
   try {
     const { type, id } = req.params;
     const validTypes = ['readyToPlay', 'repack', 'online'];
-    
+
     if (!validTypes.includes(type)) {
-      return res.status(400).json({ 
-        error: 'Invalid type. Must be one of: readyToPlay, repack, online' 
+      return res.status(400).json({
+        error: 'Invalid type. Must be one of: readyToPlay, repack, online'
       });
     }
-    
+
     console.log(`🗑️  [${new Date().toISOString()}] Deleting game from type: ${type}, ID: ${id}`);
-    
+
     // Read data from file
     const data = readGamesData();
     const itemId = parseInt(id);
-    
+
     if (!data[type]) {
       return res.status(404).json({ error: 'Type not found' });
     }
-    
+
     const itemIndex = data[type].findIndex(item => item.id === itemId);
-    
+
     if (itemIndex === -1) {
       return res.status(404).json({ error: 'Game not found' });
     }
-    
+
     const deletedItem = data[type][itemIndex];
     data[type].splice(itemIndex, 1);
-    
+
     // Write to file and commit to GitHub
     const writeResult = await writeGamesData(data, `delete ${type}: ${deletedItem.name || 'unnamed'}`);
-    
+
     if (writeResult.success) {
       console.log(`✅ [${new Date().toISOString()}] Game deleted: ${deletedItem.name} (ID: ${itemId})`);
       if (writeResult.github) {
         console.log(`✅ Committed to GitHub: ${writeResult.commitUrl}`);
       }
-      
-      res.json({ 
+
+      res.json({
         status: 'ok',
         message: 'Game deleted successfully',
         _github: writeResult.github ? { committed: true, commitUrl: writeResult.commitUrl } : { committed: false, message: writeResult.message }
       });
     } else {
       console.error(`❌ [${new Date().toISOString()}] Failed to delete game: ${deletedItem.name}`);
-      res.status(500).json({ 
+      res.status(500).json({
         status: 'error',
-        error: 'Failed to delete game', 
+        error: 'Failed to delete game',
         details: writeResult.error || 'Unknown error'
       });
     }
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error deleting game:`, error);
-    res.status(500).json({ 
+    res.status(500).json({
       status: 'error',
-      error: 'Failed to delete game', 
-      details: error.message 
+      error: 'Failed to delete game',
+      details: error.message
     });
   }
 });
@@ -721,7 +1422,7 @@ app.get('/api/movies', async (req, res) => {
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   res.set('Pragma', 'no-cache');
   res.set('Expires', '0');
-  
+
   try {
     const data = readMoviesData();
     console.log('📊 Movies data loaded:', {
@@ -746,17 +1447,17 @@ app.get('/api/movies/:type', async (req, res) => {
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   res.set('Pragma', 'no-cache');
   res.set('Expires', '0');
-  
+
   try {
     const { type } = req.params;
     const validTypes = ['movies', 'tvShows', 'anime'];
-    
+
     if (!validTypes.includes(type)) {
-      return res.status(400).json({ 
-        error: 'Invalid type. Must be one of: movies, tvShows, anime' 
+      return res.status(400).json({
+        error: 'Invalid type. Must be one of: movies, tvShows, anime'
       });
     }
-    
+
     const data = readMoviesData();
     res.json(data[type] || []);
   } catch (error) {
@@ -770,15 +1471,15 @@ app.post('/api/movies/:type', async (req, res) => {
   try {
     const { type } = req.params;
     const validTypes = ['movies', 'tvShows', 'anime'];
-    
+
     if (!validTypes.includes(type)) {
-      return res.status(400).json({ 
-        error: 'Invalid type. Must be one of: movies, tvShows, anime' 
+      return res.status(400).json({
+        error: 'Invalid type. Must be one of: movies, tvShows, anime'
       });
     }
-    
+
     console.log(`📝 [${new Date().toISOString()}] Adding new item to type: ${type}`);
-    
+
     // Read data from file
     const data = readMoviesData();
     const newItem = {
@@ -786,39 +1487,39 @@ app.post('/api/movies/:type', async (req, res) => {
       ...req.body,
       createdAt: new Date().toISOString()
     };
-    
+
     if (!data[type]) {
       data[type] = [];
     }
-    
+
     data[type].push(newItem);
-    
+
     // Write to file and commit to GitHub
     const writeResult = await writeMoviesData(data, `add ${type}: ${newItem.name || 'unnamed'}`);
-    
+
     if (writeResult.success) {
       console.log(`✅ [${new Date().toISOString()}] Item saved: ${newItem.name} (ID: ${newItem.id})`);
       if (writeResult.github) {
         console.log(`✅ Committed to GitHub: ${writeResult.commitUrl}`);
       }
-      
+
       res.status(201).json({
         ...newItem,
         _github: writeResult.github ? { committed: true, commitUrl: writeResult.commitUrl } : { committed: false, message: writeResult.message }
       });
     } else {
       console.error(`❌ [${new Date().toISOString()}] Failed to save item: ${newItem.name}`);
-      res.status(500).json({ 
+      res.status(500).json({
         status: 'error',
-        error: 'Failed to save item', 
+        error: 'Failed to save item',
         details: writeResult.error || 'Unknown error'
       });
     }
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error adding item:`, error);
-    res.status(500).json({ 
+    res.status(500).json({
       status: 'error',
-      error: 'Failed to add item', 
+      error: 'Failed to add item',
       details: error.message
     });
   }
@@ -829,29 +1530,29 @@ app.put('/api/movies/:type/:id', async (req, res) => {
   try {
     const { type, id } = req.params;
     const validTypes = ['movies', 'tvShows', 'anime'];
-    
+
     if (!validTypes.includes(type)) {
-      return res.status(400).json({ 
-        error: 'Invalid type. Must be one of: movies, tvShows, anime' 
+      return res.status(400).json({
+        error: 'Invalid type. Must be one of: movies, tvShows, anime'
       });
     }
-    
+
     console.log(`📝 [${new Date().toISOString()}] Updating item in type: ${type}, ID: ${id}`);
-    
+
     // Read data from file
     const data = readMoviesData();
     const itemId = parseInt(id);
-    
+
     if (!data[type]) {
       return res.status(404).json({ error: 'Type not found' });
     }
-    
+
     const itemIndex = data[type].findIndex(item => item.id === itemId);
-    
+
     if (itemIndex === -1) {
       return res.status(404).json({ error: 'Item not found' });
     }
-    
+
     const oldItem = { ...data[type][itemIndex] };
     data[type][itemIndex] = {
       ...data[type][itemIndex],
@@ -859,34 +1560,34 @@ app.put('/api/movies/:type/:id', async (req, res) => {
       id: itemId,
       updatedAt: new Date().toISOString()
     };
-    
+
     // Write to file and commit to GitHub
     const writeResult = await writeMoviesData(data, `update ${type}: ${data[type][itemIndex].name || 'unnamed'}`);
-    
+
     if (writeResult.success) {
       console.log(`✅ [${new Date().toISOString()}] Item updated: ${data[type][itemIndex].name} (ID: ${itemId})`);
       if (writeResult.github) {
         console.log(`✅ Committed to GitHub: ${writeResult.commitUrl}`);
       }
-      
+
       res.json({
         ...data[type][itemIndex],
         _github: writeResult.github ? { committed: true, commitUrl: writeResult.commitUrl } : { committed: false, message: writeResult.message }
       });
     } else {
       console.error(`❌ [${new Date().toISOString()}] Failed to update item: ${oldItem.name}`);
-      res.status(500).json({ 
+      res.status(500).json({
         status: 'error',
-        error: 'Failed to update item', 
+        error: 'Failed to update item',
         details: writeResult.error || 'Unknown error'
       });
     }
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error updating item:`, error);
-    res.status(500).json({ 
+    res.status(500).json({
       status: 'error',
-      error: 'Failed to update item', 
-      details: error.message 
+      error: 'Failed to update item',
+      details: error.message
     });
   }
 });
@@ -896,60 +1597,60 @@ app.delete('/api/movies/:type/:id', async (req, res) => {
   try {
     const { type, id } = req.params;
     const validTypes = ['movies', 'tvShows', 'anime'];
-    
+
     if (!validTypes.includes(type)) {
-      return res.status(400).json({ 
-        error: 'Invalid type. Must be one of: movies, tvShows, anime' 
+      return res.status(400).json({
+        error: 'Invalid type. Must be one of: movies, tvShows, anime'
       });
     }
-    
+
     console.log(`🗑️  [${new Date().toISOString()}] Deleting item from type: ${type}, ID: ${id}`);
-    
+
     // Read data from file
     const data = readMoviesData();
     const itemId = parseInt(id);
-    
+
     if (!data[type]) {
       return res.status(404).json({ error: 'Type not found' });
     }
-    
+
     const itemIndex = data[type].findIndex(item => item.id === itemId);
-    
+
     if (itemIndex === -1) {
       return res.status(404).json({ error: 'Item not found' });
     }
-    
+
     const deletedItem = data[type][itemIndex];
     data[type].splice(itemIndex, 1);
-    
+
     // Write to file and commit to GitHub
     const writeResult = await writeMoviesData(data, `delete ${type}: ${deletedItem.name || 'unnamed'}`);
-    
+
     if (writeResult.success) {
       console.log(`✅ [${new Date().toISOString()}] Item deleted: ${deletedItem.name} (ID: ${itemId})`);
       if (writeResult.github) {
         console.log(`✅ Committed to GitHub: ${writeResult.commitUrl}`);
       }
-      
-      res.json({ 
+
+      res.json({
         status: 'ok',
         message: 'Item deleted successfully',
         _github: writeResult.github ? { committed: true, commitUrl: writeResult.commitUrl } : { committed: false, message: writeResult.message }
       });
     } else {
       console.error(`❌ [${new Date().toISOString()}] Failed to delete item: ${deletedItem.name}`);
-      res.status(500).json({ 
+      res.status(500).json({
         status: 'error',
-        error: 'Failed to delete item', 
+        error: 'Failed to delete item',
         details: writeResult.error || 'Unknown error'
       });
     }
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error deleting item:`, error);
-    res.status(500).json({ 
+    res.status(500).json({
       status: 'error',
-      error: 'Failed to delete item', 
-      details: error.message 
+      error: 'Failed to delete item',
+      details: error.message
     });
   }
 });
@@ -960,9 +1661,9 @@ app.delete('/api/movies/:type/:id', async (req, res) => {
 app.get('/api/health', async (req, res) => {
   try {
     const githubTest = await testGitHubConnection();
-    
-    res.json({ 
-      status: 'ok', 
+
+    res.json({
+      status: 'ok',
       message: 'API is running',
       storage: 'JSON files',
       github: {
@@ -972,10 +1673,10 @@ app.get('/api/health', async (req, res) => {
       }
     });
   } catch (error) {
-    res.status(503).json({ 
-      status: 'error', 
+    res.status(503).json({
+      status: 'error',
       message: 'API is running but health check failed',
-      error: error.message 
+      error: error.message
     });
   }
 });
@@ -987,15 +1688,15 @@ app.post('/api/debug/commit-test', async (req, res) => {
     // Use DATA_DIR instead of hardcoded path to work on both local and Render
     const testFilePath = join(DATA_DIR, 'test-commit.json');
     const testRepoPath = 'test/test-commit.json';
-    
+
     // Write test file
     const fs = await import('fs');
     fs.writeFileSync(testFilePath, JSON.stringify(testData, null, 2), 'utf8');
-    
+
     // Try to commit
     const commitMessage = `Test commit from dashboard — ${new Date().toISOString()}`;
     const result = await commitFileToGitHub(testFilePath, testRepoPath, commitMessage);
-    
+
     res.json({
       status: 'ok',
       message: 'Test commit successful',
@@ -1021,7 +1722,7 @@ app.get('/api/data/status', async (req, res) => {
   try {
     const gamesData = readGamesData();
     const githubTest = await testGitHubConnection();
-    
+
     res.json({
       status: 'ok',
       platform: 'JSON files with GitHub sync',
@@ -1048,10 +1749,10 @@ app.get('/api/data/status', async (req, res) => {
       timestamp: new Date().toISOString()
     });
   } catch (error) {
-    res.status(500).json({ 
-      status: 'error', 
+    res.status(500).json({
+      status: 'error',
       message: 'Failed to check data status',
-      error: error.message 
+      error: error.message
     });
   }
 });
@@ -1064,7 +1765,7 @@ app.get('/api/analytics/visitors', async (req, res) => {
     // TODO: Replace with real Google Analytics Data API call
     // For now, return a mock value between 5 and 50
     const mockCount = Math.floor(Math.random() * 45) + 5;
-    
+
     res.json({
       success: true,
       activeUsers: mockCount,
@@ -1091,18 +1792,18 @@ app.get('/api/movie/:id', async (req, res) => {
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   res.set('Pragma', 'no-cache');
   res.set('Expires', '0');
-  
+
   try {
     const { id } = req.params;
     const itemId = parseInt(id);
     const data = readMoviesData();
     const movies = data.movies || [];
     const movie = movies.find(item => item.id === itemId);
-    
+
     if (!movie) {
       return res.status(404).json({ error: 'Movie not found' });
     }
-    
+
     res.json(movie);
   } catch (error) {
     console.error('❌ Error fetching movie by id:', error);
@@ -1115,7 +1816,7 @@ app.get('/api/tv', async (req, res) => {
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   res.set('Pragma', 'no-cache');
   res.set('Expires', '0');
-  
+
   try {
     const data = readMoviesData();
     console.log('📊 TV Shows data loaded (compatibility route):', {
@@ -1133,7 +1834,7 @@ app.get('/api/anime', async (req, res) => {
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   res.set('Pragma', 'no-cache');
   res.set('Expires', '0');
-  
+
   try {
     const data = readMoviesData();
     console.log('📊 Anime data loaded (compatibility route):', {
@@ -1332,7 +2033,7 @@ async function fetchFromPCGamingWiki(gameName) {
     }
 
     const htmlContent = response.data.parse.text['*'];
-    
+
     // Parse HTML requirements
     const minimumParsed = parseRequirements(htmlContent, 'pcgamingwiki');
     const recommendedParsed = parseRequirements(htmlContent, 'pcgamingwiki');
@@ -1610,7 +2311,7 @@ app.get('/api/requirements', async (req, res) => {
 
     console.log(`\n🎮 [API] Fetching requirements for: "${gameName}"`);
     const result = await fetchGameRequirements(gameName);
-    
+
     // Format response - ensure minimumParsed and recommendedParsed are always present
     // Always return minimumParsed and recommendedParsed objects
     const response = {
@@ -1686,7 +2387,7 @@ app.get('/api/rawg/requirements', async (req, res) => {
     const gameName = req.query.game || req.query.title;
 
     if (!gameName || gameName.trim() === '') {
-      return res.status(400).json({ 
+      return res.status(400).json({
         error: "game query is required",
         message: "Please provide 'game' or 'title' query parameter"
       });
@@ -1732,7 +2433,7 @@ app.post('/api/compatibility/check', async (req, res) => {
     // Log raw request body for debugging
     console.log('📥 Raw request body:', JSON.stringify(req.body, null, 2));
     console.log('📥 Request headers:', req.headers);
-    
+
     const { systemSpecs, gameIds } = req.body;
 
     console.log('🔍 Compatibility check request:', {
@@ -1754,8 +2455,8 @@ app.post('/api/compatibility/check', async (req, res) => {
     }
 
     if (!systemSpecs || !gameIds) {
-      console.error('❌ Missing required fields:', { 
-        hasSystemSpecs: !!systemSpecs, 
+      console.error('❌ Missing required fields:', {
+        hasSystemSpecs: !!systemSpecs,
         hasGameIds: !!gameIds,
         body: req.body
       });
@@ -1816,14 +2517,14 @@ app.post('/api/compatibility/check', async (req, res) => {
       if (!userSpec || userSpec.trim() === '') {
         return { meets: false, message: `❌ غير محدد (مطلوب: ${requiredSpec})` };
       }
-      
+
       const userLower = userSpec.toLowerCase();
       const requiredLower = requiredSpec.toLowerCase();
-      
+
       // Extract numbers for comparison (basic)
       const userNum = parseFloat(userLower.match(/([\d.]+)/)?.[1] || '0');
       const requiredNum = parseFloat(requiredLower.match(/([\d.]+)/)?.[1] || '0');
-      
+
       // Simple comparison - can be improved with better parsing
       if (userNum >= requiredNum * 0.8) {
         return { meets: true, message: `✅ ${userSpec} (مطلوب: ${requiredSpec})` };
@@ -1838,7 +2539,7 @@ app.post('/api/compatibility/check', async (req, res) => {
         // Convert gameId to number if it's a string
         const id = typeof gameId === 'string' ? parseInt(gameId, 10) : gameId;
         const game = allGames.find(g => g.id === id || String(g.id) === String(id));
-        
+
         if (!game) {
           console.warn(`⚠️ Game not found with ID: ${gameId} (parsed as: ${id})`);
           return {
@@ -1859,41 +2560,41 @@ app.post('/api/compatibility/check', async (req, res) => {
         let requirementsSource = 'database';
 
         // Check if we have valid requirements in database
-        let hasAnyRequirements = minRequirements.cpu || minRequirements.gpu || minRequirements.ram || 
-                                 recRequirements.cpu || recRequirements.gpu || recRequirements.ram;
+        let hasAnyRequirements = minRequirements.cpu || minRequirements.gpu || minRequirements.ram ||
+          recRequirements.cpu || recRequirements.gpu || recRequirements.ram;
 
         if (!hasAnyRequirements) {
           // FALLBACK: Try new requirements fetcher (cache -> fallback -> Steam)
           console.log(`🔍 [COMPATIBILITY] No requirements in database for "${game.name}"`);
           console.log(`🔍 [COMPATIBILITY] Attempting to fetch from external sources...`);
           console.log(`🔍 [COMPATIBILITY] Game ID: ${game.id}, Game Name: "${game.name}"`);
-          
+
           try {
             console.log(`🔍 [COMPATIBILITY] Calling getRequirementsForGame (new system)...`);
             const requirementsResult = await getRequirementsForGame(game);
-            
+
             if (requirementsResult && requirementsResult.requirements) {
               const reqs = requirementsResult.requirements;
-              
+
               // Check if we have valid data
               const hasData = (
                 (reqs.minimum && (
-                  reqs.minimum.cpu || 
-                  reqs.minimum.gpu || 
-                  reqs.minimum.ram || 
+                  reqs.minimum.cpu ||
+                  reqs.minimum.gpu ||
+                  reqs.minimum.ram ||
                   reqs.minimum.storage
                 )) ||
                 (reqs.recommended && (
-                  reqs.recommended.cpu || 
-                  reqs.recommended.gpu || 
-                  reqs.recommended.ram || 
+                  reqs.recommended.cpu ||
+                  reqs.recommended.gpu ||
+                  reqs.recommended.ram ||
                   reqs.recommended.storage
                 ))
               );
-              
+
               if (hasData) {
                 console.log(`✅ [COMPATIBILITY] Successfully received requirements from ${requirementsResult.source}`);
-                
+
                 // Normalize requirements structure
                 requirements = {
                   minimum: {
@@ -1918,7 +2619,7 @@ app.post('/api/compatibility/check', async (req, res) => {
                 minRequirements = requirements.minimum || {};
                 recRequirements = requirements.recommended || {};
                 requirementsSource = requirementsResult.source;
-                
+
                 console.log(`✅ [COMPATIBILITY] Updated requirements source to: ${requirementsSource}`);
                 console.log(`✅ [COMPATIBILITY] Minimum CPU: ${minRequirements.cpu || 'N/A'}`);
                 console.log(`✅ [COMPATIBILITY] Recommended CPU: ${recRequirements.cpu || 'N/A'}`);
@@ -2017,7 +2718,7 @@ app.post('/api/compatibility/check', async (req, res) => {
         const gpuLower = (userSpecs.gpu || '').toLowerCase();
         const looksLikeGPU = /nvidia|geforce|gtx|rtx|radeon|rx|amd\s*(radeon|rx)/i.test(cpuLower);
         const looksLikeCPU = /intel|amd\s*(ryzen|core|threadripper|phenom|athlon)|core\s*i[3579]|ryzen|pentium|celeron/i.test(gpuLower);
-        
+
         if (looksLikeGPU && looksLikeCPU) {
           console.warn(`⚠️ [SANITY] Detected CPU/GPU swap for game "${game.name}" - auto-correcting`);
           const temp = userSpecs.cpu;
@@ -2044,7 +2745,7 @@ app.post('/api/compatibility/check', async (req, res) => {
         // Determine overall status (legacy - keep for backward compatibility)
         const allMeet = Object.values(requirementChecks).every(check => check.meets);
         const someMeet = Object.values(requirementChecks).some(check => check.meets);
-        
+
         let status = 'cannot_run';
         if (allMeet) {
           status = 'can_run';
@@ -2062,12 +2763,12 @@ app.post('/api/compatibility/check', async (req, res) => {
         }
 
         const notes = [];
-        
+
         // If no requirements are set, show a note
         // Re-check requirements (they may have been updated from RAWG API)
-        hasAnyRequirements = minRequirements.cpu || minRequirements.gpu || minRequirements.ram || 
-                             recRequirements.cpu || recRequirements.gpu || recRequirements.ram;
-        
+        hasAnyRequirements = minRequirements.cpu || minRequirements.gpu || minRequirements.ram ||
+          recRequirements.cpu || recRequirements.gpu || recRequirements.ram;
+
         if (!hasAnyRequirements) {
           notes.push('⚠️ لا توجد متطلبات نظام محددة لهذه اللعبة. النتيجة تعتمد على حجم اللعبة فقط.');
           status = 'unknown';
@@ -2161,7 +2862,7 @@ app.post('/api/compatibility/check', async (req, res) => {
     console.error('Error message:', error.message);
     console.error('Error stack:', error.stack);
     console.error('Request body was:', JSON.stringify(req.body, null, 2));
-    
+
     res.status(500).json({
       error: 'Failed to check compatibility',
       message: error.message,
@@ -2205,7 +2906,7 @@ app.get('/api/github/last-commit', async (req, res) => {
 
         if (fileResponse.ok) {
           const fileData = await fileResponse.json();
-          
+
           // Get commit info
           const commitResponse = await fetch(
             `https://api.github.com/repos/${owner}/${repo}/commits?path=${filePath}&per_page=1`,
@@ -2262,7 +2963,7 @@ app.get('/api/github/last-commit', async (req, res) => {
   } catch (error) {
     res.status(500).json({
       status: 'error',
-      error: error.message 
+      error: error.message
     });
   }
 });
@@ -2280,7 +2981,7 @@ if (existsSync(frontendBuildPath)) {
     }
     express.static(frontendBuildPath)(req, res, next);
   });
-  
+
   // Catch-all route for SPA routing (ONLY for non-API routes)
   // This must be the LAST route
   app.get('*', (req, res) => {
@@ -2298,7 +2999,7 @@ if (existsSync(frontendBuildPath)) {
     if (req.path.startsWith('/api')) {
       return res.status(404).json({ error: 'API route not found' });
     }
-    res.json({ 
+    res.json({
       message: 'Frontend build not found. Run "npm run build" in frontend folder.',
       note: 'API is available at /api'
     });
@@ -2318,7 +3019,7 @@ async function fetchRequirementsForAllGames() {
   console.log('\n' + '='.repeat(60));
   console.log('🔄 Starting requirements fetch for all games...');
   console.log('='.repeat(60));
-  
+
   try {
     const gamesData = readGamesData();
     const allGames = [
@@ -2326,61 +3027,61 @@ async function fetchRequirementsForAllGames() {
       ...(gamesData.repack || []),
       ...(gamesData.online || [])
     ];
-    
+
     console.log(`📊 Total games: ${allGames.length}`);
-    
+
     // Find games that need requirements
     const gamesNeedingRequirements = allGames.filter(game => {
       // Check if game has no requirements or marked as unknown
-      const hasReqs = game.systemRequirements && 
-                      game.systemRequirements.minimum && 
-                      (game.systemRequirements.minimum.cpu || 
-                       game.systemRequirements.minimum.gpu || 
-                       game.systemRequirements.minimum.ram);
-      
-      const isUnknown = game.requirements === 'unknown' || 
-                       game.requirements === 'No requirements specified' ||
-                       (game.systemRequirements && 
-                        game.systemRequirements.minimum && 
-                        (game.systemRequirements.minimum.cpu === 'غير محدد' ||
-                         game.systemRequirements.minimum.cpu === 'لا توجد متطلبات'));
-      
+      const hasReqs = game.systemRequirements &&
+        game.systemRequirements.minimum &&
+        (game.systemRequirements.minimum.cpu ||
+          game.systemRequirements.minimum.gpu ||
+          game.systemRequirements.minimum.ram);
+
+      const isUnknown = game.requirements === 'unknown' ||
+        game.requirements === 'No requirements specified' ||
+        (game.systemRequirements &&
+          game.systemRequirements.minimum &&
+          (game.systemRequirements.minimum.cpu === 'غير محدد' ||
+            game.systemRequirements.minimum.cpu === 'لا توجد متطلبات'));
+
       return !hasReqs || isUnknown;
     });
-    
+
     console.log(`📊 Games needing requirements: ${gamesNeedingRequirements.length}`);
     console.log(`✅ Games with requirements: ${allGames.length - gamesNeedingRequirements.length}\n`);
-    
+
     if (gamesNeedingRequirements.length === 0) {
       console.log('✅ All games already have requirements!');
       return { success: true, updated: 0, failed: 0, total: 0 };
     }
-    
+
     // Process in batches
     const BATCH_SIZE = 3;
     const DELAY_MS = 2000;
     let updated = 0;
     let failed = 0;
-    
+
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-    
+
     for (let i = 0; i < gamesNeedingRequirements.length; i += BATCH_SIZE) {
       const batch = gamesNeedingRequirements.slice(i, i + BATCH_SIZE);
       const batchNum = Math.floor(i / BATCH_SIZE) + 1;
       const totalBatches = Math.ceil(gamesNeedingRequirements.length / BATCH_SIZE);
-      
+
       console.log(`\n🔄 Batch ${batchNum}/${totalBatches} (${batch.length} games)`);
-      
+
       for (const game of batch) {
         try {
           console.log(`  🔍 [${game.id}] "${game.name}"`);
-          
+
           // Force fetch if marked as unknown
-          const forceFetch = game.requirements === 'unknown' || 
-                           game.requirements === 'No requirements specified';
-          
+          const forceFetch = game.requirements === 'unknown' ||
+            game.requirements === 'No requirements specified';
+
           const result = await getRequirementsForGame(game, forceFetch);
-          
+
           if (result && result.requirements && result.source !== 'none') {
             // Find and update game in data structure
             for (const arrayName of ['readyToPlay', 'repack', 'online']) {
@@ -2390,7 +3091,7 @@ async function fetchRequirementsForAllGames() {
                 const reqs = result.requirements;
                 const min = reqs.minimum || {};
                 const rec = reqs.recommended || {};
-                
+
                 // Parse storage
                 const parseStorage = (storage) => {
                   if (!storage) return 'لا توجد متطلبات';
@@ -2402,7 +3103,7 @@ async function fetchRequirementsForAllGames() {
                   }
                   return 'لا توجد متطلبات';
                 };
-                
+
                 // Update game with requirements
                 array[idx].requirements = {
                   cpu: min.cpu || rec.cpu || 'لا توجد متطلبات',
@@ -2412,7 +3113,7 @@ async function fetchRequirementsForAllGames() {
                   os: min.os || rec.os || 'لا توجد متطلبات'
                 };
                 array[idx].requirementsSource = result.source;
-                
+
                 // Also update systemRequirements for compatibility
                 if (!array[idx].systemRequirements) {
                   array[idx].systemRequirements = {};
@@ -2431,7 +3132,7 @@ async function fetchRequirementsForAllGames() {
                   storage: parseStorage(rec.storage || rec.storageGB || min.storage || min.storageGB),
                   os: rec.os || min.os || 'لا توجد متطلبات'
                 };
-                
+
                 console.log(`  ✅ Updated from ${result.source}`);
                 updated++;
                 break;
@@ -2455,25 +3156,25 @@ async function fetchRequirementsForAllGames() {
           console.error(`  ❌ Error: ${error.message}`);
           failed++;
         }
-        
+
         // Small delay between games
         await delay(1000);
       }
-      
+
       // Save progress after each batch
       if (updated > 0) {
         writeFileSync(GAMES_FILE_TMP, JSON.stringify(gamesData, null, 2), 'utf8');
         renameSync(GAMES_FILE_TMP, GAMES_FILE);
         console.log(`  💾 Progress saved (${updated} updated, ${failed} failed)`);
       }
-      
+
       // Delay between batches
       if (i + BATCH_SIZE < gamesNeedingRequirements.length) {
         console.log(`  ⏳ Waiting ${DELAY_MS}ms...`);
         await delay(DELAY_MS);
       }
     }
-    
+
     console.log('\n' + '='.repeat(60));
     console.log('📊 FINAL SUMMARY');
     console.log('='.repeat(60));
@@ -2481,7 +3182,7 @@ async function fetchRequirementsForAllGames() {
     console.log(`⚠️  Games failed/not found: ${failed}`);
     console.log(`📊 Remaining without requirements: ${gamesNeedingRequirements.length - updated}`);
     console.log('='.repeat(60) + '\n');
-    
+
     return { success: true, updated, failed, total: gamesNeedingRequirements.length };
   } catch (error) {
     console.error('❌ Fatal error in fetchRequirementsForAllGames:', error);
@@ -2500,6 +3201,73 @@ app.post('/api/games/fetch-all-requirements', async (req, res) => {
   }
 });
 
+// ============ NEWS ROUTES ============
+
+// GET - Get all news
+app.get('/api/news', async (req, res) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  try {
+    const data = readNewsData();
+    // Sort by date new to old
+    const sortedData = data.sort((a, b) => new Date(b.date || b.createdAt) - new Date(a.date || a.createdAt));
+    res.json(sortedData);
+  } catch (error) {
+    console.error('❌ Error fetching news:', error);
+    res.status(500).json({ error: 'Failed to fetch news' });
+  }
+});
+
+// POST - Add news item
+app.post('/api/news', async (req, res) => {
+  try {
+    const data = readNewsData();
+    const newItem = {
+      id: Date.now(),
+      ...req.body,
+      createdAt: new Date().toISOString()
+    };
+
+    data.push(newItem);
+
+    const writeResult = await writeNewsData(data, `add news: ${newItem.title || 'untitled'}`);
+
+    if (writeResult.success) {
+      res.status(201).json(newItem);
+    } else {
+      res.status(500).json({ error: 'Failed to save news' });
+    }
+  } catch (error) {
+    console.error('❌ Error adding news:', error);
+    res.status(500).json({ error: 'Failed to add news' });
+  }
+});
+
+// DELETE - Delete news item
+app.delete('/api/news/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const data = readNewsData();
+    const itemId = parseInt(id);
+
+    const filteredData = data.filter(item => item.id !== itemId);
+
+    if (data.length === filteredData.length) {
+      return res.status(404).json({ error: 'News item not found' });
+    }
+
+    const writeResult = await writeNewsData(filteredData, `delete news id: ${itemId}`);
+
+    if (writeResult.success) {
+      res.json({ status: 'ok', message: 'News deleted' });
+    } else {
+      res.status(500).json({ error: 'Failed to delete news' });
+    }
+  } catch (error) {
+    console.error('❌ Error deleting news:', error);
+    res.status(500).json({ error: 'Failed to delete news' });
+  }
+});
+
 // Start server
 app.listen(PORT, () => {
   console.log(`🚀 Server is running on http://localhost:${PORT}`);
@@ -2510,7 +3278,7 @@ app.listen(PORT, () => {
   } else {
     console.log(`⚠️  Frontend build not found. Run "npm run build" in frontend folder to serve frontend.`);
   }
-  
+
   // Auto-fetch requirements on server start (optional - can be disabled)
   // Uncomment the line below to auto-fetch on startup
   // fetchRequirementsForAllGames().catch(console.error);
