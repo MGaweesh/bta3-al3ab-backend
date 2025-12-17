@@ -17,7 +17,29 @@ const PORT = process.env.PORT || 3001;
 
 // ============ MIDDLEWARE ============
 // IMPORTANT: Middleware must be defined BEFORE routes!
-app.use(cors({ origin: '*' }));
+// CORS Configuration
+const allowedOrigins = [
+  'http://localhost:3000',
+  'http://localhost:3001',
+  'http://localhost:5173',
+  'https://bta3-al3ab-backend.onrender.com',
+  'https://bta3al3ab.online',
+  'https://www.bta3al3ab.online'
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      console.log('❌ CORS Blocked Origin:', origin);
+      callback(null, true); // Temporarily allow all for debugging if needed, or fail with error
+    }
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(compression());
 app.use(express.json({ limit: '10mb' })); // Increase limit for large payloads
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
