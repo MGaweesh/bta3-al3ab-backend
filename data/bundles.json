@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1766005210768,
+    "title": "باقة",
+    "type": "other",
+    "description": "باقة",
+    "games": [
+      "Squid Game",
+      "Better Call Saul",
+      "Mercy for None",
+      "Far Cry 6"
+    ],
+    "image": "https://m.media-amazon.com/images/M/MV5BYTU3ZDVhNmMtMDVlNC00MDc0LTgwNDMtYWE5MTI2ZGI4YWIwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "notify": true,
+    "createdAt": "2025-12-17T21:00:10.768Z"
+  },
+  {
+    "id": 1766005070668,
+    "title": "باقة الانمى",
+    "type": "anime",
+    "description": "باقة الانمى",
+    "games": [
+      "Breaking Bad",
+      "What If...?",
+      "Loki",
+      "The Boys",
+      "BlackClover"
+    ],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpagLijElVXaVYJs_KpU23FF9Cf0epr7jUHA&s",
+    "notify": true,
+    "createdAt": "2025-12-17T20:57:50.668Z"
+  },
+  {
+    "id": 1766004481525,
+    "title": "باقة المتعة",
+    "type": "action",
+    "description": "باقة الاكشن وصلت",
+    "games": [
+      "Assassin's Creed Unity",
+      "Far Cry 6",
+      "The Boys",
+      "Squid Game"
+    ],
+    "image": "https://catnessgames.com/wp-content/uploads/2024/12/tipos-videojuegos-consolas-y-plataformas.jpg",
+    "notify": true,
+    "createdAt": "2025-12-17T20:48:01.525Z"
+  },
+  {
+    "id": 1765936766211,
+    "title": "باقة الرعب",
+    "type": "horror",
+    "description": "باقة الرعب",
+    "games": [
+      "Resident Evil 7: Biohazard",
+      "Resident Evil: Village",
+      "Bloodhounds",
+      "What If...?"
+    ],
+    "image": "",
+    "createdAt": "2025-12-17T01:59:26.211Z"
+  }
+]
