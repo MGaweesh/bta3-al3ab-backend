@@ -418,17 +418,14 @@ app.post('/api/subscribe', async (req, res) => {
     console.log(`ℹ️ Subscriber already exists: ${email}`);
   }
 
-  // 1. Send Welcome Email
+  // 1. Send Welcome Email (Non-blocking)
   console.log(`📧 Sending welcome email to: ${email}...`);
-  const emailSent = await sendWelcomeEmail(email);
+  sendWelcomeEmail(email)
+    .then(sent => console.log(`📧 Welcome email result for ${email}: ${sent ? 'Sent' : 'Failed'}`))
+    .catch(err => console.error(`❌ Error sending welcome email to ${email}:`, err));
 
-  // 2. Respond to client
-  if (emailSent) {
-    res.json({ success: true, message: 'Subscribed successfully and email sent' });
-  } else {
-    // Return success even if email fails, as subscription is saved
-    res.json({ success: true, message: 'Subscribed successfully (email delivery pending)' });
-  }
+  // 2. Respond to client immediately
+  res.json({ success: true, message: 'Subscribed successfully' });
 });
 
 // Error handling middleware for JSON parsing
