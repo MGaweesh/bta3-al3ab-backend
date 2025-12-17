@@ -377,16 +377,46 @@ const readSubscribersData = () => {
   }
 };
 
-const writeSubscribersData = (data) => {
-  try {
-    writeFileSync(SUBSCRIBERS_FILE_TMP, JSON.stringify(data, null, 2), 'utf8');
-    renameSync(SUBSCRIBERS_FILE_TMP, SUBSCRIBERS_FILE);
-    // Optional: Sync to GitHub if needed (omitted for speed for now, can add later)
-    return true;
-  } catch (error) {
-    console.error(`❌ Error writing subscribers.json: ${error.message}`);
-    return false;
-  }
+const writeSubscribersData = async (data) => {
+  return writeQueueSubscribers = writeQueueSubscribers.then(async () => {
+    try {
+      const jsonContent = JSON.stringify(data, null, 2);
+      writeFileSync(SUBSCRIBERS_FILE_TMP, jsonContent, 'utf8');
+      renameSync(SUBSCRIBERS_FILE_TMP, SUBSCRIBERS_FILE);
+
+      console.log(`✅ Saved subscribers.json locally`);
+
+      // Enqueue GitHub commit (non-blocking, sequential)
+      let githubResult = null;
+      if (process.env.GITHUB_TOKEN && process.env.GITHUB_OWNER && process.env.GITHUB_REPO) {
+        const commitMessage = `Update subscribers.json — ${new Date().toISOString()}`;
+        enqueueGitHubCommit(SUBSCRIBERS_FILE, 'data/subscribers.json', commitMessage)
+          .then(result => {
+            if (result && result.commitUrl) {
+              console.log(`✅ Committed subscribers.json to GitHub: ${result.commitUrl}`);
+            }
+          })
+          .catch(err => {
+            console.error(`⚠️  GitHub commit failed for subscribers: ${err.message}`);
+          });
+
+        githubResult = { queued: true };
+      }
+
+      return {
+        success: true,
+        github: !!githubResult,
+        message: githubResult ? 'Saved locally, GitHub commit queued' : 'Saved locally'
+      };
+    } catch (error) {
+      console.error(`❌ Error writing subscribers.json: ${error.message}`);
+      return {
+        success: false,
+        error: error.message,
+        message: `Failed to save: ${error.message}`
+      };
+    }
+  });
 };
 // End: Helper functions for Subscribers
 
@@ -394,6 +424,7 @@ const writeSubscribersData = (data) => {
 let writeQueueGames = Promise.resolve();
 let writeQueueMovies = Promise.resolve();
 let writeQueueNews = Promise.resolve();
+let writeQueueSubscribers = Promise.resolve();
 
 // Separate queue for GitHub commits to prevent SHA conflicts
 // This ensures commits happen sequentially, not concurrently
@@ -412,7 +443,7 @@ app.post('/api/subscribe', async (req, res) => {
   const subscribers = readSubscribersData();
   if (!subscribers.includes(email)) {
     subscribers.push(email);
-    writeSubscribersData(subscribers);
+    await writeSubscribersData(subscribers);
     console.log(`✅ New subscriber added: ${email}`);
   } else {
     console.log(`ℹ️ Subscriber already exists: ${email}`);
