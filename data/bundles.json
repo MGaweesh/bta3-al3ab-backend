@@ -1,21 +1,5 @@
 [
   {
-    "id": 1766005070668,
-    "title": "باقة الانمى",
-    "type": "anime",
-    "description": "باقة الانمى",
-    "games": [
-      "Breaking Bad",
-      "What If...?",
-      "Loki",
-      "The Boys",
-      "BlackClover"
-    ],
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpagLijElVXaVYJs_KpU23FF9Cf0epr7jUHA&s",
-    "notify": true,
-    "createdAt": "2025-12-17T20:57:50.668Z"
-  },
-  {
     "id": 1766004481525,
     "title": "باقة المتعة",
     "type": "action",
