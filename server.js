@@ -73,11 +73,11 @@ import nodemailer from 'nodemailer';
 // Brevo SMTP Config
 const SMTP_CONFIG = {
   host: 'smtp-relay.brevo.com',
-  port: 587,
+  port: 2525,
   secure: false, // true for 465, false for other ports
   auth: {
-    user: '9a0dc1001@smtp-brevo.com',
-    pass: 'xsmtpsib-01589dc23be04227cffe6ce74dc9dcef31a92664729cb12ef2b9e164b292cef4-xRADKu0GjlamHMkx'
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS
   }
 };
 
