@@ -66,7 +66,7 @@ app.use(compression());
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
-import nodemailer from 'nodemailer';
+
 
 // Brevo SMTP Config
 const SMTP_CONFIG = {
