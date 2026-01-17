@@ -77,9 +77,9 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 // Helper: Send Email via Brevo API (v3) - Bypasses SMTP port restrictions on Railway
 const sendEmailViaBrevoAPI = async (to, subject, htmlContent, attachments = []) => {
   try {
-    const apiKey = process.env.SMTP_PASS; // Using the API key stored in SMTP_PASS
+    const apiKey = process.env.BREVO_API_KEY;
     if (!apiKey) {
-      console.error('❌ Brevo API Key (SMTP_PASS) is missing');
+      console.error('❌ Brevo API Key (BREVO_API_KEY) is missing');
       return false;
     }
 
@@ -121,7 +121,7 @@ const sendEmailViaBrevoAPI = async (to, subject, htmlContent, attachments = []) 
 
 console.log('📦 Brevo API Config Check:', {
   sender: "support@drgaweesh.online",
-  hasApiKey: !!process.env.SMTP_PASS
+  hasApiKey: !!process.env.BREVO_API_KEY
 });
 
 // Helper: Send Welcome Email via Brevo API
