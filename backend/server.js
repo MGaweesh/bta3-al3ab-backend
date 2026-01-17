@@ -99,7 +99,7 @@ transporter.verify(function (error, success) {
 const sendWelcomeEmail = async (email) => {
   try {
     const info = await transporter.sendMail({
-      from: '"Bta3 Al3ab" <9a0dc1001@smtp-brevo.com>', // Match SMTP_USER for better deliverability if not verified domain
+      from: '"Bta3 Al3ab" <support@drgaweesh.online>', // Verified sender address
       to: email, // list of receivers
       subject: "Welcome to Bta3 Al3ab! 🎮", // Subject line
       html: `
@@ -289,7 +289,7 @@ const sendNewGameEmail = async (gameTitle, platform, image, unlockDate, endDate)
     // Send in batches to avoid overwhelming SMTP
     for (const email of subscribers) {
       transporter.sendMail({
-        from: '"Bta3 Al3ab" <9a0dc1001@smtp-brevo.com>',
+        from: '"Bta3 Al3ab" <support@drgaweesh.online>',
         to: email,
         subject: `🎮 استعد! لعبة ${gameTitle} جاية في الطريق`,
         html: html,
@@ -353,7 +353,7 @@ const sendBundleEmail = async (bundleTitle, image, type, description, items) => 
 
     for (const email of subscribers) {
       transporter.sendMail({
-        from: '"Bta3 Al3ab" <9a0dc1001@smtp-brevo.com>',
+        from: '"Bta3 Al3ab" <support@drgaweesh.online>',
         to: email,
         subject: `📦 باقة جديدة وصلت: ${bundleTitle}`,
         html: html,
@@ -622,22 +622,36 @@ app.get('/api/bundles', async (req, res) => {
 app.post('/api/bundles', async (req, res) => {
   try {
     const newItem = { id: Date.now(), ...req.body, createdAt: new Date().toISOString() };
-    const data = await readBundlesData();
-    data.unshift(newItem);
-    const result = await writeBundlesData(data); // Updated to match new signature
+    const db = getCollection('bundles');
+    await db.insertOne(newItem);
 
-    if (result.success) {
-      res.status(201).json(newItem);
-
-      // Send Email Notification
-      const { notify } = req.body;
-      if (notify) {
-        console.log(`🔔 Notification requested for new bundle: ${newItem.title}`);
-        sendBundleEmail(newItem.title, newItem.image, newItem.type, newItem.description, newItem.games);
-      }
-    } else {
-      res.status(500).json({ error: 'Failed to save bundle' });
+    // Send Email Notification
+    const { notify } = req.body;
+    if (notify) {
+      console.log(`🔔 Notification requested for new bundle: ${newItem.title}`);
+      sendBundleEmail(newItem.title, newItem.image, newItem.type, newItem.description, newItem.games);
     }
+
+    res.status(201).json(newItem);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// PUT Bundle
+app.put('/api/bundles/:id', async (req, res) => {
+  try {
+    const id = parseInt(req.params.id);
+    const db = getCollection('bundles');
+
+    const result = await db.updateOne(
+      { id },
+      { $set: { ...req.body, id, updatedAt: new Date().toISOString() } }
+    );
+
+    if (result.matchedCount === 0) return res.status(404).json({ error: 'Bundle not found' });
+
+    res.json({ id, ...req.body, status: 'updated' });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -647,13 +661,11 @@ app.post('/api/bundles', async (req, res) => {
 app.delete('/api/bundles/:id', async (req, res) => {
   try {
     const id = parseInt(req.params.id);
-    const data = await readBundlesData();
-    const newData = data.filter(item => item.id !== id);
-    if (newData.length === data.length) return res.status(404).json({ error: 'Bundle not found' });
+    const db = getCollection('bundles');
+    const result = await db.deleteOne({ id });
 
-    const result = await writeBundlesData(newData);
-    if (result.success) res.json({ status: 'ok' });
-    else res.status(500).json({ error: 'Failed to delete bundle' });
+    if (result.deletedCount === 0) return res.status(404).json({ error: 'Bundle not found' });
+    res.json({ status: 'ok' });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -675,24 +687,35 @@ app.get('/api/upcoming-games', async (req, res) => {
 // POST Upcoming Game
 app.post('/api/upcoming-games', async (req, res) => {
   try {
-    const { notify, ...gameData } = req.body; // Extract notify flag
+    const { notify, ...gameData } = req.body;
     const newItem = { id: Date.now(), ...gameData, createdAt: new Date().toISOString() };
+    const db = getCollection('upcoming_games');
+    await db.insertOne(newItem);
 
-    const data = await readUpcomingData();
-    data.unshift(newItem); // Add new items to the top
-    const result = await writeUpcomingData(data);
-
-    if (result.success) {
-      // Check if notification is requested
-      if (notify) {
-        // Trigger email broadcast in background
-        console.log(`🔔 Notification requested for: ${newItem.title}`);
-        sendNewGameEmail(newItem.title, newItem.platform, newItem.image, newItem.unlockDate, newItem.endDate);
-      }
-      res.status(201).json(newItem);
-    } else {
-      res.status(500).json({ error: 'Failed to save upcoming game' });
+    if (notify) {
+      console.log(`🔔 Notification requested for: ${newItem.title}`);
+      sendNewGameEmail(newItem.title, newItem.platform, newItem.image, newItem.unlockDate, newItem.endDate);
     }
+    res.status(201).json(newItem);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// PUT Upcoming Game
+app.put('/api/upcoming-games/:id', async (req, res) => {
+  try {
+    const id = parseInt(req.params.id);
+    const db = getCollection('upcoming_games');
+
+    const result = await db.updateOne(
+      { id },
+      { $set: { ...req.body, id, updatedAt: new Date().toISOString() } }
+    );
+
+    if (result.matchedCount === 0) return res.status(404).json({ error: 'Upcoming game not found' });
+
+    res.json({ id, ...req.body, status: 'updated' });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -702,13 +725,11 @@ app.post('/api/upcoming-games', async (req, res) => {
 app.delete('/api/upcoming-games/:id', async (req, res) => {
   try {
     const id = parseInt(req.params.id);
-    const data = await readUpcomingData();
-    const newData = data.filter(item => item.id !== id);
-    if (newData.length === data.length) return res.status(404).json({ error: 'Item not found' });
+    const db = getCollection('upcoming_games');
+    const result = await db.deleteOne({ id });
 
-    const result = await writeUpcomingData(newData);
-    if (result.success) res.json({ status: 'ok' });
-    else res.status(500).json({ error: 'Failed to delete item' });
+    if (result.deletedCount === 0) return res.status(404).json({ error: 'Item not found' });
+    res.json({ status: 'ok' });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -907,79 +928,6 @@ app.get('/api/movies/:type', async (req, res) => {
   }
 });
 
-// POST - Add movie
-app.post('/api/movies/:type', async (req, res) => {
-  try {
-    const { type } = req.params;
-    const validTypes = ['movies', 'tvShows', 'anime'];
-    if (!validTypes.includes(type)) return res.status(400).json({ error: 'Invalid type' });
-
-    const newItem = { id: Date.now(), ...req.body, createdAt: new Date().toISOString() };
-    const data = await readMoviesData();
-
-    if (!data[type]) data[type] = [];
-    data[type].push(newItem);
-
-    const result = await writeMoviesData(data);
-    if (result.success) {
-      res.status(201).json(newItem);
-    } else {
-      res.status(500).json({ error: 'Failed to save item' });
-    }
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-
-// PUT - Update movie
-app.put('/api/movies/:type/:id', async (req, res) => {
-  try {
-    const { type, id } = req.params;
-    const itemId = parseInt(id);
-    const data = await readMoviesData();
-
-    if (!data[type]) return res.status(404).json({ error: 'Type not found' });
-
-    const itemIndex = data[type].findIndex(item => item.id === itemId);
-    if (itemIndex === -1) return res.status(404).json({ error: 'Item not found' });
-
-    data[type][itemIndex] = { ...data[type][itemIndex], ...req.body, id: itemId, updatedAt: new Date().toISOString() };
-
-    const result = await writeMoviesData(data);
-    if (result.success) {
-      res.json({ ...data[type][itemIndex], _db: true });
-    } else {
-      res.status(500).json({ error: 'Failed to update item' });
-    }
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-
-// DELETE - Delete movie
-app.delete('/api/movies/:type/:id', async (req, res) => {
-  try {
-    const { type, id } = req.params;
-    const itemId = parseInt(id);
-    const data = await readMoviesData();
-
-    if (!data[type]) return res.status(404).json({ error: 'Type not found' });
-
-    const itemIndex = data[type].findIndex(item => item.id === itemId);
-    if (itemIndex === -1) return res.status(404).json({ error: 'Item not found' });
-
-    data[type].splice(itemIndex, 1);
-
-    const result = await writeMoviesData(data);
-    if (result.success) {
-      res.json({ status: 'ok' });
-    } else {
-      res.status(500).json({ error: 'Failed to delete item' });
-    }
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
 
 // POST - Add a new movie/tv show/anime
 app.post('/api/movies/:type', async (req, res) => {
@@ -1044,6 +992,7 @@ app.post('/api/movies/:type', async (req, res) => {
 app.put('/api/movies/:type/:id', async (req, res) => {
   try {
     const { type, id } = req.params;
+    const itemId = parseInt(id);
     const validTypes = ['movies', 'tvShows', 'anime'];
 
     if (!validTypes.includes(type)) {
@@ -1054,49 +1003,31 @@ app.put('/api/movies/:type/:id', async (req, res) => {
 
     console.log(`📝 [${new Date().toISOString()}] Updating item in type: ${type}, ID: ${id}`);
 
-    // Read data from file
-    const data = readMoviesData();
-    const itemId = parseInt(id);
+    const db = getCollection('movies');
 
-    if (!data[type]) {
-      return res.status(404).json({ error: 'Type not found' });
-    }
-
-    const itemIndex = data[type].findIndex(item => item.id === itemId);
-
-    if (itemIndex === -1) {
-      return res.status(404).json({ error: 'Item not found' });
-    }
-
-    const oldItem = { ...data[type][itemIndex] };
-    data[type][itemIndex] = {
-      ...data[type][itemIndex],
+    // Build update object
+    const updateData = {
       ...req.body,
       id: itemId,
+      category: type,
       updatedAt: new Date().toISOString()
     };
 
-    // Write to file and commit to GitHub
-    const writeResult = await writeMoviesData(data, `update ${type}: ${data[type][itemIndex].name || 'unnamed'}`);
+    const result = await db.updateOne(
+      { id: itemId },
+      { $set: updateData }
+    );
 
-    if (writeResult.success) {
-      console.log(`✅ [${new Date().toISOString()}] Item updated: ${data[type][itemIndex].name} (ID: ${itemId})`);
-      if (writeResult.github) {
-        console.log(`✅ Committed to GitHub: ${writeResult.commitUrl}`);
-      }
-
-      res.json({
-        ...data[type][itemIndex],
-        _github: writeResult.github ? { committed: true, commitUrl: writeResult.commitUrl } : { committed: false, message: writeResult.message }
-      });
-    } else {
-      console.error(`❌ [${new Date().toISOString()}] Failed to update item: ${oldItem.name}`);
-      res.status(500).json({
-        status: 'error',
-        error: 'Failed to update item',
-        details: writeResult.error || 'Unknown error'
-      });
+    if (result.matchedCount === 0) {
+      return res.status(404).json({ error: 'Item not found' });
     }
+
+    console.log(`✅ [${new Date().toISOString()}] Item updated: ${req.body.name || 'unnamed'} (ID: ${id})`);
+
+    res.json({
+      ...updateData,
+      status: 'updated'
+    });
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error updating item:`, error);
     res.status(500).json({
@@ -2495,19 +2426,33 @@ app.post('/api/news', async (req, res) => {
       createdAt: new Date().toISOString()
     };
 
-    const data = await readNewsData();
-    data.unshift(newItem); // Add to beginning
+    const db = getCollection('news');
+    await db.insertOne(newItem);
 
-    const writeResult = await writeNewsData(data); // Removed 2nd arg
-
-    if (writeResult.success) {
-      res.status(201).json(newItem);
-    } else {
-      res.status(500).json({ error: 'Failed to save news' });
-    }
+    res.status(201).json(newItem);
   } catch (error) {
     console.error('❌ Error adding news:', error);
     res.status(500).json({ error: 'Failed to add news' });
+  }
+});
+
+// PUT - Update news item
+app.put('/api/news/:id', async (req, res) => {
+  try {
+    const id = parseInt(req.params.id);
+    const db = getCollection('news');
+
+    const result = await db.updateOne(
+      { id },
+      { $set: { ...req.body, id, updatedAt: new Date().toISOString() } }
+    );
+
+    if (result.matchedCount === 0) return res.status(404).json({ error: 'News item not found' });
+
+    res.json({ id, ...req.body, status: 'updated' });
+  } catch (error) {
+    console.error('❌ Error updating news:', error);
+    res.status(500).json({ error: 'Failed to update news' });
   }
 });
 
@@ -2516,21 +2461,15 @@ app.delete('/api/news/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const itemId = parseInt(id);
-    const data = await readNewsData();
+    const db = getCollection('news');
 
-    const filteredData = data.filter(item => item.id !== itemId);
+    const result = await db.deleteOne({ id: itemId });
 
-    if (data.length === filteredData.length) {
+    if (result.deletedCount === 0) {
       return res.status(404).json({ error: 'News item not found' });
     }
 
-    const writeResult = await writeNewsData(filteredData);
-
-    if (writeResult.success) {
-      res.json({ status: 'ok', message: 'News deleted' });
-    } else {
-      res.status(500).json({ error: 'Failed to delete news' });
-    }
+    res.json({ status: 'ok', message: 'News deleted' });
   } catch (error) {
     return res.status(500).json({ error: 'Failed to delete news' });
   }

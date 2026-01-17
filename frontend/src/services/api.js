@@ -265,6 +265,14 @@ class ApiService {
     });
   }
 
+  // Update news item
+  async updateNews(id, newsItem) {
+    return await this.request(`/news/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(newsItem)
+    });
+  }
+
   // ============ BUNDLES ============
 
   // Get all bundles
@@ -288,6 +296,14 @@ class ApiService {
     });
   }
 
+  // Update a bundle
+  async updateBundle(id, bundle) {
+    return await this.request(`/bundles/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(bundle)
+    });
+  }
+
   // ============ UPCOMING GAMES ============
 
   // Get all upcoming games
@@ -308,6 +324,14 @@ class ApiService {
   async deleteUpcomingGame(id) {
     return await this.request(`/upcoming-games/${id}`, {
       method: 'DELETE'
+    });
+  }
+
+  // Update an upcoming game
+  async updateUpcomingGame(id, game) {
+    return await this.request(`/upcoming-games/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(game)
     });
   }
 

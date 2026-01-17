@@ -3,9 +3,10 @@ import { motion } from 'framer-motion'
 import { useToast } from '../../hooks/useToast'
 import api from '../../services/api'
 
-function BundleForm({ onClose, onSave }) {
+function BundleForm({ onClose, onSave, item = null }) {
     const { success, error } = useToast()
     const [loading, setLoading] = useState(false)
+    const [imageInputType, setImageInputType] = useState('url') // 'url' or 'file'
     const [formData, setFormData] = useState({
         title: '',
         type: 'other', // horror, action, anime, other
@@ -57,6 +58,15 @@ function BundleForm({ onClose, onSave }) {
         fetchData()
     }, [])
 
+    useEffect(() => {
+        if (item) {
+            setFormData({
+                ...item,
+                games: Array.isArray(item.games) ? item.games.join(', ') : (item.games || '')
+            })
+        }
+    }, [item])
+
     const handleToggleItem = (itemName) => {
         const currentItems = formData.games ? formData.games.split(',').map(g => g.trim()).filter(g => g) : []
         if (currentItems.includes(itemName)) {
@@ -66,16 +76,37 @@ function BundleForm({ onClose, onSave }) {
         }
     }
 
+    const handleFileChange = (e) => {
+        const file = e.target.files[0]
+        if (file) {
+            const reader = new FileReader()
+            reader.onloadend = () => {
+                setFormData(prev => ({
+                    ...prev,
+                    image: reader.result
+                }))
+            }
+            reader.readAsDataURL(file)
+        }
+    }
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         setLoading(true)
 
         try {
-            await api.addBundle({
+            const bundleData = {
                 ...formData,
                 games: formData.games.split(',').map(g => g.trim()).filter(g => g)
-            })
-            success('تمت إضافة الباقة بنجاح! 🎉')
+            }
+
+            if (item) {
+                await api.updateBundle(item.id, bundleData)
+                success('تم تحديث الباقة بنجاح! 🎉')
+            } else {
+                await api.addBundle(bundleData)
+                success('تمت إضافة الباقة بنجاح! 🎉')
+            }
             onSave()
             onClose()
         } catch (err) {
@@ -92,9 +123,9 @@ function BundleForm({ onClose, onSave }) {
         <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-[#1a1a1a] p-8 rounded-2xl border border-white/10 w-full max-w-2xl mx-auto shadow-2xl relative z-50"
+            className="bg-[#1a1a1a] p-8 rounded-2xl border border-white/10 w-full max-w-2xl mx-auto shadow-2xl relative z-50 fixed inset-0 m-auto h-fit max-h-[90vh] overflow-y-auto overflow-x-hidden backdrop-blur-xl"
         >
-            <h2 className="text-2xl font-bold text-white mb-6 text-center">إضافة باقة جديدة 📦</h2>
+            <h2 className="text-2xl font-bold text-white mb-6 text-center">{item ? 'تعديل باقة' : 'إضافة باقة جديدة'} 📦</h2>
 
             <form onSubmit={handleSubmit} className="space-y-6" dir="rtl">
                 <div>
@@ -123,17 +154,58 @@ function BundleForm({ onClose, onSave }) {
                             <option value="anime">أنمي 🍜</option>
                         </select>
                     </div>
+                </div>
+
+                {/* Image Selection Toggle */}
+                <div className="flex gap-4 p-1 bg-white/5 rounded-xl border border-white/10">
+                    <button
+                        type="button"
+                        onClick={() => setImageInputType('url')}
+                        className={`flex-1 py-2 rounded-lg text-sm font-bold transition-all ${imageInputType === 'url' ? 'bg-blue-600 text-white shadow-lg' : 'text-white/50 hover:bg-white/5'}`}
+                    >
+                        رابط الصورة
+                    </button>
+                    <button
+                        type="button"
+                        onClick={() => setImageInputType('file')}
+                        className={`flex-1 py-2 rounded-lg text-sm font-bold transition-all ${imageInputType === 'file' ? 'bg-blue-600 text-white shadow-lg' : 'text-white/50 hover:bg-white/5'}`}
+                    >
+                        رفع ملف
+                    </button>
+                </div>
+
+                {imageInputType === 'url' ? (
                     <div>
-                        <label className="block text-white/70 mb-2">رابط الصورة (اختياري)</label>
+                        <label className="block text-white/70 mb-2">رابط صورة الباقة</label>
                         <input
                             type="text"
-                            value={formData.image}
+                            value={formData.image && !formData.image.startsWith('data:') ? formData.image : ''}
                             onChange={(e) => setFormData({ ...formData, image: e.target.value })}
                             className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 text-left"
                             placeholder="https://..."
                         />
                     </div>
-                </div>
+                ) : (
+                    <div>
+                        <label className="block text-white/70 mb-2">اختيار ملف صورة</label>
+                        <input
+                            type="file"
+                            accept="image/*"
+                            onChange={handleFileChange}
+                            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500"
+                        />
+                        {formData.image && formData.image.startsWith('data:') && (
+                            <div className="mt-2 text-xs text-green-500 font-bold">✅ تم اختيار ملف الصورة</div>
+                        )}
+                    </div>
+                )}
+
+                {formData.image && (
+                    <div className="mt-2">
+                        <label className="block text-xs text-white/50 mb-1">معاينة الصورة:</label>
+                        <img src={formData.image} alt="Preview" className="w-full h-32 object-cover rounded-xl border border-white/10" />
+                    </div>
+                )}
 
                 <div>
                     <label className="block text-white/70 mb-2">الوصف</label>
@@ -149,12 +221,12 @@ function BundleForm({ onClose, onSave }) {
                 <div className="flex items-center gap-2 bg-white/5 p-4 rounded-xl border border-white/10">
                     <input
                         type="checkbox"
-                        id="notify"
-                        checked={formData.notify !== false} // Default to true (if undefined, it should be true-ish logic, but safe to init state)
+                        id="notify-bundle"
+                        checked={formData.notify !== false}
                         onChange={(e) => setFormData({ ...formData, notify: e.target.checked })}
                         className="w-5 h-5 accent-blue-600 rounded cursor-pointer"
                     />
-                    <label htmlFor="notify" className="text-white cursor-pointer select-none">
+                    <label htmlFor="notify-bundle" className="text-white cursor-pointer select-none">
                         إرسال إشعار للمشتركين 📧
                     </label>
                 </div>
@@ -256,7 +328,7 @@ function BundleForm({ onClose, onSave }) {
                         disabled={loading}
                         className="flex-1 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-xl transition-colors disabled:opacity-50"
                     >
-                        {loading ? 'جاري الحفظ...' : 'حفظ'}
+                        {loading ? 'جاري الحفظ...' : (item ? 'تحديث' : 'حفظ')}
                     </button>
                     <button
                         type="button"

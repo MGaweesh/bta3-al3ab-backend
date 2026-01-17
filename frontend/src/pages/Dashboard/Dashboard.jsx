@@ -34,6 +34,22 @@ function Dashboard() {
   const [password, setPassword] = useState('')
   const [confirmDialog, setConfirmDialog] = useState({ isOpen: false, onConfirm: null, message: '', title: '' })
 
+  // DEBUG LOGS
+  useEffect(() => {
+    console.log(`🔍 [DEBUG] [TIMESTAMP: ${new Date().toISOString()}] Dashboard State Updated:`, {
+      activeSection,
+      activeTab,
+      showBundleForm,
+      showUpcomingForm,
+      showNewsForm,
+      showForm,
+      showMovieForm,
+      isAuthenticated,
+      editingItem: editingItem ? editingItem.id : null,
+      editingGame: editingGame ? editingGame.id : null
+    })
+  }, [activeSection, activeTab, showBundleForm, showUpcomingForm, showNewsForm, showForm, showMovieForm, isAuthenticated, editingItem, editingGame])
+
 
   const loadGames = async () => {
     try {
@@ -127,6 +143,7 @@ function Dashboard() {
     const auth = localStorage.getItem('dashboard_auth')
     if (auth === 'true') {
       setIsAuthenticated(true)
+      console.log('🔓 [DEBUG] Already authenticated from localStorage')
       loadGames()
       loadMovies()
       loadNews()
@@ -138,6 +155,7 @@ function Dashboard() {
     // Simple password check
     if (password === 'Eslam@bta3') {
       setIsAuthenticated(true)
+      console.log('🔓 [DEBUG] Login successful, setting isAuthenticated to true')
       localStorage.setItem('dashboard_auth', 'true')
       loadGames()
       loadMovies()
@@ -339,14 +357,25 @@ function Dashboard() {
 
   const handleSaveNews = async (newsData) => {
     try {
-      await api.addNews(newsData)
+      if (editingItem) {
+        await api.updateNews(editingItem.id, newsData)
+        success('تم تحديث الخبر بنجاح! ✅')
+      } else {
+        await api.addNews(newsData)
+        success('تم إضافة الخبر بنجاح! ✅')
+      }
       await loadNews()
       setShowNewsForm(false)
-      success('تم إضافة الخبر بنجاح! ✅')
+      setEditingItem(null)
     } catch (err) {
       console.error('Error saving news:', err)
       error('فشل حفظ الخبر')
     }
+  }
+
+  const handleEditNews = (item) => {
+    setEditingItem(item)
+    setShowNewsForm(true)
   }
 
   const handleDeleteNews = async (id) => {
@@ -366,6 +395,52 @@ function Dashboard() {
         }
       }
     })
+  }
+
+  const handleEditBundle = (bundle) => {
+    setEditingItem(bundle)
+    setShowBundleForm(true)
+  }
+
+  const handleEditUpcoming = (game) => {
+    setEditingItem(game)
+    setShowUpcomingForm(true)
+  }
+
+  const handleSaveBundle = async (bundleData) => {
+    try {
+      if (editingItem) {
+        await api.updateBundle(editingItem.id, bundleData)
+        success('تم تحديث الباقة بنجاح! ✅')
+      } else {
+        await api.addBundle(bundleData)
+        success('تم إضافة الباقة بنجاح! ✅')
+      }
+      await loadBundles()
+      setShowBundleForm(false)
+      setEditingItem(null)
+    } catch (err) {
+      console.error('Error saving bundle:', err)
+      error('فشل حفظ الباقة')
+    }
+  }
+
+  const handleSaveUpcoming = async (upcomingData) => {
+    try {
+      if (editingItem) {
+        await api.updateUpcomingGame(editingItem.id, upcomingData)
+        success('تم تحديث اللعبة المنتظرة بنجاح! ✅')
+      } else {
+        await api.addUpcomingGame(upcomingData)
+        success('تم إضافة اللعبة المنتظرة بنجاح! ✅')
+      }
+      await loadUpcomingGames()
+      setShowUpcomingForm(false)
+      setEditingItem(null)
+    } catch (err) {
+      console.error('Error saving upcoming game:', err)
+      error('فشل حفظ اللعبة')
+    }
   }
 
 
@@ -910,8 +985,12 @@ function Dashboard() {
         <AnimatePresence>
           {showNewsForm && (
             <NewsForm
+              item={editingItem}
               onSubmit={handleSaveNews}
-              onCancel={() => setShowNewsForm(false)}
+              onCancel={() => {
+                setShowNewsForm(false)
+                setEditingItem(null)
+              }}
             />
           )}
         </AnimatePresence>
@@ -1050,6 +1129,15 @@ function Dashboard() {
             {/* Sub-Tabs for Explore */}
             <div className="flex justify-center gap-4 mb-8">
               <button
+                onClick={() => setActiveTab('news')}
+                className={`px-6 py-2 rounded-xl font-bold transition-all ${activeTab === 'news'
+                  ? 'bg-blue-600 text-white shadow-lg scale-105'
+                  : 'bg-white/5 text-white/70 hover:bg-white/10'
+                  }`}
+              >
+                📰 الأخبار (News)
+              </button>
+              <button
                 onClick={() => setActiveTab('bundles')}
                 className={`px-6 py-2 rounded-xl font-bold transition-all ${activeTab === 'bundles'
                   ? 'bg-blue-600 text-white shadow-lg scale-105'
@@ -1068,6 +1156,68 @@ function Dashboard() {
                 ⏳ ألعاب قادمة (Upcoming)
               </button>
             </div>
+
+            {/* News Section */}
+            {activeTab === 'news' && (
+              <div>
+                <motion.button
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => {
+                    setEditingItem(null)
+                    setShowNewsForm(true)
+                  }}
+                  className="mb-8 px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-bold shadow-lg flex items-center gap-2 mx-auto"
+                >
+                  <span>+</span> إضافة خبر جديد
+                </motion.button>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {news.map((item, index) => (
+                    <motion.div
+                      key={item.id || index}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: index * 0.1 }}
+                      className="bg-white/10 border border-white/10 rounded-2xl overflow-hidden group relative"
+                    >
+                      <div className="h-48 relative overflow-hidden">
+                        {item.image ? (
+                          <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                        ) : (
+                          <div className="w-full h-full bg-gradient-to-br from-blue-600/20 to-purple-600/20 flex items-center justify-center">
+                            <span className="text-4xl text-white/20">📰</span>
+                          </div>
+                        )}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div className="absolute bottom-4 left-4 right-4">
+                          <h3 className="text-lg font-bold text-white line-clamp-2">{item.title}</h3>
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <p className="text-white/60 text-sm line-clamp-3 mb-4">{item.description}</p>
+                        <div className="flex gap-2">
+                          <button
+                            onClick={() => handleEditNews(item)}
+                            className="flex-1 bg-blue-500/20 hover:bg-blue-500 text-blue-200 hover:text-white py-2 rounded-lg transition-colors text-sm font-bold"
+                          >
+                            تعديل
+                          </button>
+                          <button
+                            onClick={() => handleDeleteNews(item.id)}
+                            className="flex-1 bg-red-500/20 hover:bg-red-500 text-red-200 hover:text-white py-2 rounded-lg transition-colors text-sm font-bold"
+                          >
+                            حذف
+                          </button>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Bundles Section */}
             {activeTab === 'bundles' && (
@@ -1111,10 +1261,13 @@ function Dashboard() {
 
                         <div className="flex gap-2 mt-4">
                           <button
+                            onClick={() => handleEditBundle(bundle)}
+                            className="flex-1 bg-blue-500/20 hover:bg-blue-500 text-blue-200 hover:text-white py-2 rounded-lg transition-colors text-sm font-bold"
+                          >
+                            تعديل
+                          </button>
+                          <button
                             onClick={() => {
-                              // Handle Delete Bundle
-                              // api.deleteBundle(bundle.id).then(loadBundles)
-                              // For now using existing confirm dialog pattern if possible or direct
                               if (window.confirm('مسح الباقة؟')) {
                                 api.deleteBundle(bundle.id).then(loadBundles)
                               }
@@ -1174,16 +1327,24 @@ function Dashboard() {
                           </span>
                         </div>
 
-                        <button
-                          onClick={() => {
-                            if (window.confirm('مسح اللعبة المنتظرة؟')) {
-                              api.deleteUpcomingGame(game.id).then(loadUpcomingGames)
-                            }
-                          }}
-                          className="w-full bg-red-500/20 hover:bg-red-500 text-red-200 hover:text-white py-2 rounded-lg transition-colors text-sm font-bold"
-                        >
-                          حذف
-                        </button>
+                        <div className="flex gap-2">
+                          <button
+                            onClick={() => handleEditUpcoming(game)}
+                            className="flex-1 bg-blue-500/20 hover:bg-blue-500 text-blue-200 hover:text-white py-2 rounded-lg transition-colors text-sm font-bold"
+                          >
+                            تعديل
+                          </button>
+                          <button
+                            onClick={() => {
+                              if (window.confirm('مسح اللعبة المنتظرة؟')) {
+                                api.deleteUpcomingGame(game.id).then(loadUpcomingGames)
+                              }
+                            }}
+                            className="flex-1 bg-red-500/20 hover:bg-red-500 text-red-200 hover:text-white py-2 rounded-lg transition-colors text-sm font-bold"
+                          >
+                            حذف
+                          </button>
+                        </div>
                       </div>
                     </motion.div>
                   ))}
@@ -1195,18 +1356,28 @@ function Dashboard() {
             <AnimatePresence>
               {showBundleForm && (
                 <BundleForm
-                  onClose={() => setShowBundleForm(false)}
+                  item={editingItem}
+                  onClose={() => {
+                    setShowBundleForm(false)
+                    setEditingItem(null)
+                  }}
                   onSave={() => {
                     setShowBundleForm(false)
+                    setEditingItem(null)
                     loadBundles()
                   }}
                 />
               )}
               {showUpcomingForm && (
                 <UpcomingGameForm
-                  onClose={() => setShowUpcomingForm(false)}
+                  item={editingItem}
+                  onClose={() => {
+                    setShowUpcomingForm(false)
+                    setEditingItem(null)
+                  }}
                   onSave={() => {
                     setShowUpcomingForm(false)
+                    setEditingItem(null)
                     loadUpcomingGames()
                   }}
                 />
