@@ -77,11 +77,14 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 // Brevo SMTP Config
 const SMTP_CONFIG = {
   host: 'smtp-relay.brevo.com',
-  port: 2525,
-  secure: false,
+  port: 587,
+  secure: false, // Use STARTTLS
   auth: {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS
+  },
+  tls: {
+    rejectUnauthorized: false
   }
 };
 
