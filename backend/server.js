@@ -74,45 +74,60 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
 
 
-// Brevo SMTP Config
-const SMTP_CONFIG = {
-  host: 'smtp-relay.brevo.com',
-  port: 587,
-  secure: false, // Use STARTTLS
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS
-  },
-  tls: {
-    rejectUnauthorized: false
+// Helper: Send Email via Brevo API (v3) - Bypasses SMTP port restrictions on Railway
+const sendEmailViaBrevoAPI = async (to, subject, htmlContent, attachments = []) => {
+  try {
+    const apiKey = process.env.SMTP_PASS; // Using the API key stored in SMTP_PASS
+    if (!apiKey) {
+      console.error('❌ Brevo API Key (SMTP_PASS) is missing');
+      return false;
+    }
+
+    const payload = {
+      sender: { name: "Bta3 Al3ab", email: "support@drgaweesh.online" },
+      to: [{ email: to }],
+      subject: subject,
+      htmlContent: htmlContent
+    };
+
+    if (attachments && attachments.length > 0) {
+      payload.attachment = attachments.map(att => {
+        // Brevo API expects base64 content without the 'data:image/png;base64,' prefix
+        let base64Content = att.path;
+        if (base64Content.startsWith('data:')) {
+          base64Content = base64Content.split(',')[1];
+        }
+        return {
+          content: base64Content,
+          name: att.filename
+        };
+      });
+    }
+
+    const response = await axios.post('https://api.brevo.com/v3/smtp/email', payload, {
+      headers: {
+        'api-key': apiKey,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    console.log(`✅ Email sent via API to ${to}. MessageID: ${response.data.messageId}`);
+    return true;
+  } catch (error) {
+    console.error(`❌ Brevo API Error for ${to}:`, error.response?.data || error.message);
+    return false;
   }
 };
 
-// Create Transporter
-const transporter = nodemailer.createTransport(SMTP_CONFIG);
-transporter.verify(function (error, success) {
-  if (error) {
-    console.error('❌ SMTP Connection Error:', error.message);
-  } else {
-    console.log('✅ SMTP Server is ready and authenticated');
-  }
+console.log('📦 Brevo API Config Check:', {
+  sender: "support@drgaweesh.online",
+  hasApiKey: !!process.env.SMTP_PASS
 });
 
-console.log('📦 SMTP Config Loaded:', {
-  host: SMTP_CONFIG.host,
-  port: SMTP_CONFIG.port,
-  user: SMTP_CONFIG.auth.user ? `${SMTP_CONFIG.auth.user.substring(0, 3)}...` : 'MISSING',
-  hasPass: !!SMTP_CONFIG.auth.pass
-});
-
-// Helper: Send Welcome Email via SMTP (Nodemailer)
+// Helper: Send Welcome Email via Brevo API
 const sendWelcomeEmail = async (email) => {
   try {
-    const info = await transporter.sendMail({
-      from: '"Bta3 Al3ab" <support@drgaweesh.online>', // Verified sender address
-      to: email, // list of receivers
-      subject: "Welcome to Bta3 Al3ab! 🎮", // Subject line
-      html: `
+    const html = `
             <div style="background-color: #0f172a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: right; direction: rtl; padding: 0; margin: 0; color: #cbd5e1;">
                 
                 <!-- Hero Section with Background Image -->
@@ -161,11 +176,9 @@ const sendWelcomeEmail = async (email) => {
                     <div style="display: none; opacity: 0; font-size: 1px;">${Date.now()}-${Math.random().toString(36).substring(7)}</div>
                 </div>
             </div>
-        `,
-    });
-
-    console.log("📧 Welcome email sent: %s", info.messageId);
-    return true;
+        `;
+    const success = await sendEmailViaBrevoAPI(email, "Welcome to Bta3 Al3ab! 🎮", html);
+    return success;
   } catch (error) {
     console.error("❌ Error sending welcome email:", error);
     return false;
@@ -296,17 +309,14 @@ const sendNewGameEmail = async (gameTitle, platform, image, unlockDate, endDate)
       'عرض تفاصيل اللعبة'
     );
 
-    // Send in batches to avoid overwhelming SMTP
+    // Send to each subscriber via API
     for (const email of subscribers) {
-      transporter.sendMail({
-        from: '"Bta3 Al3ab" <support@drgaweesh.online>',
-        to: email,
-        subject: `🎮 استعد! لعبة ${gameTitle} جاية في الطريق`,
-        html: html,
-        attachments: attachments // Attach the image if needed
-      })
-        .then(info => console.log(`✅ Email sent successfully to ${email}. MessageID: ${info.messageId}`))
-        .catch(err => console.error(`❌ Failed to send email to ${email}:`, err.message));
+      sendEmailViaBrevoAPI(
+        email,
+        `🎮 استعد! لعبة ${gameTitle} جاية في الطريق`,
+        html,
+        attachments
+      );
     }
 
   } catch (error) {
@@ -363,16 +373,14 @@ const sendBundleEmail = async (bundleTitle, image, type, description, items) => 
       'شوف الباقة'
     );
 
+    // Send to each subscriber via API
     for (const email of subscribers) {
-      transporter.sendMail({
-        from: '"Bta3 Al3ab" <support@drgaweesh.online>',
-        to: email,
-        subject: `📦 باقة جديدة وصلت: ${bundleTitle}`,
-        html: html,
-        attachments: attachments // Attach the image if needed
-      })
-        .then(info => console.log(`✅ Bundle email sent successfully to ${email}. MessageID: ${info.messageId}`))
-        .catch(err => console.error(`❌ Failed to send bundle email to ${email}:`, err.message));
+      sendEmailViaBrevoAPI(
+        email,
+        `📦 باقة جديدة وصلت: ${bundleTitle}`,
+        html,
+        attachments
+      );
     }
 
   } catch (error) {
