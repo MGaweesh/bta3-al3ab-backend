@@ -89,10 +89,17 @@ const SMTP_CONFIG = {
 const transporter = nodemailer.createTransport(SMTP_CONFIG);
 transporter.verify(function (error, success) {
   if (error) {
-    console.log('❌ SMTP Connection Error:', error);
+    console.error('❌ SMTP Connection Error:', error.message);
   } else {
-    console.log('✅ SMTP Server is ready');
+    console.log('✅ SMTP Server is ready and authenticated');
   }
+});
+
+console.log('📦 SMTP Config Loaded:', {
+  host: SMTP_CONFIG.host,
+  port: SMTP_CONFIG.port,
+  user: SMTP_CONFIG.auth.user ? `${SMTP_CONFIG.auth.user.substring(0, 3)}...` : 'MISSING',
+  hasPass: !!SMTP_CONFIG.auth.pass
 });
 
 // Helper: Send Welcome Email via SMTP (Nodemailer)
@@ -294,7 +301,9 @@ const sendNewGameEmail = async (gameTitle, platform, image, unlockDate, endDate)
         subject: `🎮 استعد! لعبة ${gameTitle} جاية في الطريق`,
         html: html,
         attachments: attachments // Attach the image if needed
-      }).catch(err => console.error(`Failed to send to ${email}:`, err.message));
+      })
+        .then(info => console.log(`✅ Email sent successfully to ${email}. MessageID: ${info.messageId}`))
+        .catch(err => console.error(`❌ Failed to send email to ${email}:`, err.message));
     }
 
   } catch (error) {
@@ -358,7 +367,9 @@ const sendBundleEmail = async (bundleTitle, image, type, description, items) => 
         subject: `📦 باقة جديدة وصلت: ${bundleTitle}`,
         html: html,
         attachments: attachments // Attach the image if needed
-      }).catch(err => console.error(`Failed to send to ${email}:`, err.message));
+      })
+        .then(info => console.log(`✅ Bundle email sent successfully to ${email}. MessageID: ${info.messageId}`))
+        .catch(err => console.error(`❌ Failed to send bundle email to ${email}:`, err.message));
     }
 
   } catch (error) {
