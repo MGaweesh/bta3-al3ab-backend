@@ -3,7 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import compression from 'compression';
 import { MongoClient } from 'mongodb';
-import nodemailer from 'nodemailer';
+import axios from 'axios';
 import { existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
