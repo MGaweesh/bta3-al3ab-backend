@@ -31,30 +31,48 @@ const Explore = () => {
     // Load all data
     useEffect(() => {
         const fetchData = async () => {
-            try {
-                const [newsData, bundlesData, upcomingData, gamesData, moviesData] = await Promise.all([
-                    api.getNews(),
-                    api.getBundles(),
-                    api.getUpcomingGames(),
-                    api.getAllGames(),
-                    api.getAllMovies()
-                ])
-                setNews(newsData || [])
-                setBundles(bundlesData || [])
-                setUpcomingGames(upcomingData || [])
-                setAllGames([
-                    ...(gamesData?.readyToPlay || []).map(g => ({ ...g, category: 'readyToPlay' })),
-                    ...(gamesData?.repack || []).map(g => ({ ...g, category: 'repack' })),
-                    ...(gamesData?.online || []).map(g => ({ ...g, category: 'online' })),
-                    ...(upcomingData || []).map(g => ({ ...g, category: 'upcoming' }))
-                ])
-                setAllMovies([...(moviesData?.movies || []), ...(moviesData?.tvShows || []), ...(moviesData?.anime || [])])
-            } catch (error) {
-                console.error('Failed to load explore data:', error)
-            }
-        }
-        fetchData()
-    }, [])
+            // Helper to fetch data safely
+            const safeFetch = async (apiCall, setter, fallback = []) => {
+                try {
+                    const data = await apiCall();
+                    setter(data || fallback);
+                    return data || fallback;
+                } catch (err) {
+                    console.error(`Failed to load data:`, err);
+                    setter(fallback);
+                    return fallback;
+                }
+            };
+
+            await Promise.all([
+                safeFetch(() => api.getNews(), setNews),
+                safeFetch(() => api.getBundles(), setBundles),
+                safeFetch(() => api.getUpcomingGames(), setUpcomingGames),
+                (async () => {
+                    try {
+                        const gamesData = await api.getAllGames();
+                        const upcomingData = await api.getUpcomingGames(); // Re-fetch or pass from above
+                        setAllGames([
+                            ...(gamesData?.readyToPlay || []).map(g => ({ ...g, category: 'readyToPlay' })),
+                            ...(gamesData?.repack || []).map(g => ({ ...g, category: 'repack' })),
+                            ...(gamesData?.online || []).map(g => ({ ...g, category: 'online' })),
+                            ...(upcomingData || []).map(g => ({ ...g, category: 'upcoming' }))
+                        ]);
+                    } catch (err) {
+                        console.error("Failed to load games:", err);
+                    }
+                })(),
+                safeFetch(() => api.getAllMovies(), (moviesData) => {
+                    setAllMovies([
+                        ...(moviesData?.movies || []),
+                        ...(moviesData?.tvShows || []),
+                        ...(moviesData?.anime || [])
+                    ]);
+                })
+            ]);
+        };
+        fetchData();
+    }, []);
 
     const handleRandomPick = async () => {
         setIsSpinning(true)

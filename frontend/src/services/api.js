@@ -22,7 +22,7 @@ const getApiBaseUrl = () => {
   return LOCAL_BACKEND_URL;
 };
 
-const API_BASE_URL = getApiBaseUrl();
+export const API_BASE_URL = getApiBaseUrl();
 
 // Always log API URL for debugging (helps identify issues in production)
 console.log('🔗 API Base URL:', API_BASE_URL);

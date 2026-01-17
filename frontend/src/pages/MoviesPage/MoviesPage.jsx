@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useParams, Link, useLocation } from 'react-router-dom'
 import { useMovies } from '../../hooks/useMovies'
+import { API_BASE_URL } from '../../services/api'
 import { useMovieSelection } from '../../hooks/useMovieSelection'
 import { useSelection } from '../../context/SelectionContext'
 import { useDarkMode } from '../../context/DarkModeContext'
@@ -155,7 +156,7 @@ function MoviesPage() {
             transition={{ delay: 0.2 }}
             className="text-gray-300 mb-6 text-lg"
           >
-            تأكد من أن الـ Backend يعمل على <span className="text-blue-400 font-mono">http://localhost:3001</span>
+            تأكد من أن الـ Backend يعمل على <span className="text-blue-400 font-mono">{API_BASE_URL}</span>
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -176,11 +177,11 @@ function MoviesPage() {
               whileTap={{ scale: 0.95 }}
               onClick={() => {
                 console.log('🔍 Debug Info:', {
-                  API_URL: import.meta.env.VITE_API_URL || 'http://localhost:3001/api',
+                  API_URL: API_BASE_URL,
                   Environment: import.meta.env.MODE,
                   Production: import.meta.env.PROD
                 });
-                window.open('http://localhost:3001/api/movies', '_blank');
+                window.open(`${API_BASE_URL}/movies`, '_blank');
               }}
               className="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-xl font-semibold transition-colors shadow-lg"
             >

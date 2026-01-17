@@ -178,7 +178,7 @@ function Footer() {
             className="text-gray-400 text-sm"
           >
             <motion.a
-              href="https://drgaweesh.online/"
+              href="https://bta3al3ab.online/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
