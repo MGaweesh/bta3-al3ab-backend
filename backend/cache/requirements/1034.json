@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "NVIDIA GeForce GTX 950 (2GB V",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "30 GB",
+      "storageGB": 30,
+      "os": "OS: Windows 10 (64 bit only)"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "NVIDIA GeForce GTX 960 (4GB V",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "30 GB",
+      "storageGB": 30,
+      "os": "OS: Windows 10 (64 bit only)"
+    }
+  },
+  "fetchedAt": "2025-12-06T18:52:09.570Z"
+}

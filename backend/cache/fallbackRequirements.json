@@ -1,0 +1,31 @@
+{
+  "GTA V": {
+    "cpu": "Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4 CPUs) / AMD Phenom 9850 Quad-Core Processor (4 CPUs) @ 2.5GHz",
+    "gpu": "NVIDIA 9800 GT 1GB / AMD HD 4870 1GB (DX 10, 10.1, 11)",
+    "ram": "4 GB",
+    "storage": "72 GB",
+    "os": "Windows 8.1 64 Bit, Windows 8 64 Bit, Windows 7 64 Bit Service Pack 1"
+  },
+  "Valorant": {
+    "cpu": "Intel Core 2 Duo E8400 / AMD Athlon 200GE",
+    "gpu": "Intel HD 4000 / Radeon R5 200",
+    "ram": "4 GB",
+    "storage": "8 GB",
+    "os": "Windows 7/8/10 64-bit"
+  },
+  "Counter-Strike 2": {
+    "cpu": "4 hardware CPU cores - Intel® Core™ i5 750 or higher",
+    "gpu": "Video card must be 1 GB or more and should be DirectX 11 compatible with support for Shader Model 5.0",
+    "ram": "8 GB",
+    "storage": "85 GB",
+    "os": "Windows® 10"
+  },
+  "Minecraft": {
+    "cpu": "Intel Core i3-3210 3.2 GHz / AMD A8-7600 APU 3.1 GHz or equivalent",
+    "gpu": "Intel HD Graphics 4000 (Ivy Bridge) or AMD Radeon R5 series (Kaveri line) with OpenGL 4.4",
+    "ram": "4 GB",
+    "storage": "4 GB",
+    "os": "Windows 7 and up"
+  }
+}
+

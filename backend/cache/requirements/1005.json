@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "AMD R9 380 /NVIDIA GeForce GTX 960 DirectX: Version 12",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "160 GB",
+      "storageGB": 160,
+      "os": "OS: Windows 10 (versions 64 bits uniquement)"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "AMD R9 380 /NVIDIA GeForce GTX 960 DirectX: Version 12",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "160 GB",
+      "storageGB": 160,
+      "os": "OS: Windows 10 (versions 64 bits uniquement)"
+    }
+  },
+  "fetchedAt": "2025-12-06T21:30:06.714Z"
+}

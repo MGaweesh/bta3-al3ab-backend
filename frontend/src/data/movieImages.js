@@ -1,0 +1,55 @@
+// Movie, TV Show, and Anime poster images from reliable sources
+// Using high-quality sources like TMDB, Fandom, etc.
+
+export const movieImages = {
+    // Movies
+    "Inception": "http://www.impawards.com/2010/posters/inception.jpg",
+    "The Dark Knight": "http://www.impawards.com/2008/posters/dark_knight.jpg",
+    "Interstellar": "http://www.impawards.com/2014/posters/interstellar.jpg",
+    "Avatar": "http://www.impawards.com/2009/posters/avatar.jpg",
+    "Avengers: Endgame": "http://www.impawards.com/2019/posters/avengers_endgame.jpg",
+    "The Matrix": "http://www.impawards.com/1999/posters/matrix.jpg",
+    "Fight Club": "http://www.impawards.com/1999/posters/fight_club.jpg",
+    "Pulp Fiction": "http://www.impawards.com/1994/posters/pulp_fiction.jpg",
+    "The Shawshank Redemption": "http://www.impawards.com/1994/posters/shawshank_redemption.jpg",
+    "Godfather": "http://www.impawards.com/1972/posters/godfather.jpg",
+    "Spider-Man: No Way Home": "http://www.impawards.com/2021/posters/spider_man_no_way_home.jpg",
+    "Dune": "http://www.impawards.com/2021/posters/dune.jpg",
+    "Oppenheimer": "http://www.impawards.com/2023/posters/oppenheimer.jpg",
+    "Barbie": "http://www.impawards.com/2023/posters/barbie.jpg",
+    "Top Gun: Maverick": "http://www.impawards.com/2022/posters/top_gun_maverick.jpg",
+
+    // TV Shows
+    "Breaking Bad": "https://static.wikia.nocookie.net/breakingbad/images/e/e7/BB_S5B_poster.jpg",
+    "Game of Thrones": "http://www.impawards.com/tv/posters/game_of_thrones_ver26.jpg",
+    "Stranger Things": "http://www.impawards.com/tv/posters/stranger_things_ver4.jpg",
+    "The Witcher": "http://www.impawards.com/tv/posters/witcher_ver3.jpg",
+    "The Mandalorian": "http://www.impawards.com/tv/posters/mandalorian_ver2.jpg",
+    "Squid Game": "http://www.impawards.com/tv/posters/squid_game.jpg",
+    "The Last of Us": "http://www.impawards.com/tv/posters/last_of_us.jpg",
+    "Succession": "http://www.impawards.com/tv/posters/succession_ver4.jpg",
+    "The Boys": "http://www.impawards.com/tv/posters/boys_ver3.jpg",
+    "Better Call Saul": "http://www.impawards.com/tv/posters/better_call_saul_ver7.jpg",
+    "Chernobyl": "http://www.impawards.com/tv/posters/chernobyl.jpg",
+    "Black Mirror": "http://www.impawards.com/tv/posters/black_mirror_ver4.jpg",
+    "Friends": "https://static.wikia.nocookie.net/friends/images/f/f0/Friends_Season_10_DVD_Cover.jpg",
+    "The Office": "http://www.impawards.com/tv/posters/office_ver6.jpg",
+    "Sherlock": "http://www.impawards.com/tv/posters/sherlock_ver6.jpg",
+
+    // Anime
+    "Attack on Titan": "https://static.wikia.nocookie.net/shingekinokyojin/images/d/d8/Attack_on_Titan_Season_1.jpg",
+    "Death Note": "https://static.wikia.nocookie.net/deathnote/images/7/76/Death_note_anime_poster.jpg",
+    "One Piece": "https://static.wikia.nocookie.net/onepiece/images/5/5a/One_Piece_Anime_Visual_2.png",
+    "Naruto Shippuden": "https://static.wikia.nocookie.net/naruto/images/a/a2/Naruto_Shippuden.jpg",
+    "Demon Slayer": "https://static.wikia.nocookie.net/kimetsu-no-yaiba/images/0/09/Demon_Slayer_Poster.jpg",
+    "Jujutsu Kaisen": "https://static.wikia.nocookie.net/jujutsu-kaisen/images/7/75/Jujutsu_Kaisen_Anime_Key_Visual_2.png",
+    "Fullmetal Alchemist: Brotherhood": "https://static.wikia.nocookie.net/fma/images/c/cb/Brotherhood_Poster.jpg",
+    "One Punch Man": "https://static.wikia.nocookie.net/onepunchman/images/d/d2/Season_1_Poster.png",
+    "My Hero Academia": "https://static.wikia.nocookie.net/bokunoheroacademia/images/6/62/Season_1_Poster.png",
+    "Dragon Ball Z": "https://static.wikia.nocookie.net/dragonball/images/3/36/Dragon_Ball_Z_Poster.jpg",
+    "Hunter x Hunter": "https://static.wikia.nocookie.net/hunterxhunter/images/c/c8/Hunter_x_Hunter_2011_Key_Visual.jpg",
+    "Tokyo Ghoul": "https://static.wikia.nocookie.net/tokyoghoul/images/5/5a/Tokyo_Ghoul_Anime_Visual.jpg",
+    "Steins;Gate": "https://static.wikia.nocookie.net/steins-gate/images/0/05/Steins%3BGate_Anime_Poster.jpg",
+    "Cowboy Bebop": "https://static.wikia.nocookie.net/cowboybebop/images/8/87/Cowboy_Bebop_Poster.jpg",
+    "Neon Genesis Evangelion": "https://static.wikia.nocookie.net/evangelion/images/b/b2/Neon_Genesis_Evangelion_Poster.jpg",
+}

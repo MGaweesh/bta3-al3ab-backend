@@ -1,0 +1,20 @@
+{
+  "source": "rawg",
+  "requirements": {
+    "minimum": {
+      "cpu": "Dual Core 2GHz Intel or 2.8GHz AMD",
+      "gpu": "Processor: Dual Core 2GHz Intel or 2.8GHz AMD",
+      "ram": "2 GB",
+      "storage": "8 GB",
+      "storageGB": 8
+    },
+    "recommended": {
+      "cpu": "Quad Core 2.66GHz Intel or 3.2GHz AMD",
+      "gpu": "Processor: Quad Core 2.66GHz Intel or 3.2GHz AMD",
+      "ram": "4 GB",
+      "storage": "8 GB",
+      "storageGB": 8
+    }
+  },
+  "fetchedAt": "2025-11-26T15:00:46.655Z"
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>بتاع العاب - Bta3 Al3ab</title>
+    <meta name="description" content="موقع بيع واختيار الألعاب - اكتشف هل جهازك يشغل الألعاب المفضلة لديك؟" />
+    
+    <!-- Social Media Tags (Open Graph) -->
+    <meta property="og:title" content="بتاع العاب - Bta3 Al3ab" />
+    <meta property="og:description" content="أفضل موقع لاكتشاف الألعاب ومعرفة متطلبات تشغيلها." />
+    <meta property="og:image" content="/logo.png" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Mobile Theme Color -->
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-165E4FVGFM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-165E4FVGFM');
+    </script>
+    <script>
+      // Apply dark mode immediately before React loads to prevent flash
+      try {
+        var saved = localStorage.getItem('darkMode');
+        var isDark = saved ? JSON.parse(saved) : true;
+        if (isDark) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+

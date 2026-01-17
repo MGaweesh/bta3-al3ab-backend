@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core® 2 Duo 1.8 GHZ or AMD Athlon X2 64 2.4GHZ",
+      "gpu": "256 MB DirectX® 9.0–compliant card with Shader Model 3.0 or higher (see supported list) DirectX®: DirectX 9.0 Hard Drive: 8 GB free space Sound: DirectX 9.0 –compliant sound card Supported Peripherals",
+      "ram": "1 GB",
+      "ramGB": 1,
+      "storage": "8 GB",
+      "storageGB": 8,
+      "os": "*: Windows® XP (32-64 bits) /Windows Vista®(32-64 bits) *"
+    },
+    "recommended": {
+      "cpu": "Intel Core® 2 Duo E6700 2.6 GHz or AMD Athlon 64 X2 6000+ or better",
+      "gpu": "GeForce 8800 GT or ATI Radeon HD 4700 or better DirectX®: DirectX 9.0 Hard Drive: 8 GB free space Sound: 5.1 sound card Supported Peripherals: Keyboard, mouse, joystick optional (Xbox 360® Controller",
+      "ram": "1 GB",
+      "ramGB": 1,
+      "storage": "8 GB",
+      "storageGB": 8,
+      "os": "*: Windows® XP (32-64 bits) /Windows Vista®(32-64 bits) *"
+    }
+  },
+  "fetchedAt": "2025-12-06T18:52:09.636Z"
+}

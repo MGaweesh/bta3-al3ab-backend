@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "NVidia GTX 660 2GB/AMD Radeon 7970 3GB",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "32 GB",
+      "storageGB": 32,
+      "os": "OS *: Windows 7/8/10 (64 bit version)"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "NVidia GTX 1060 6GB/ AMD Radeon RX 480 8GB",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "32 GB",
+      "storageGB": 32,
+      "os": "OS: Windows 10 (64 bit version)"
+    }
+  },
+  "fetchedAt": "2025-12-06T18:52:10.733Z"
+}
