@@ -604,7 +604,7 @@ const writeSubscribersData = async (data) => {
 
 
 // GET /api/status - Health check
-app.get('/api/status', (req, res) => {
+app.get(['/api/status', '/api/health'], (req, res) => {
   res.json({ status: 'ok', db: db ? 'connected' : 'disconnected' })
 })
 
