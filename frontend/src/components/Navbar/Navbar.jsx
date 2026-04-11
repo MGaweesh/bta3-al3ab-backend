@@ -45,7 +45,7 @@ function Navbar() {
 
               <motion.img
                 src="/logo.png"
-                alt="بتاع العاب Logo"
+                alt="Techno Core Logo"
                 animate={{
                   scale: [1, 1.05, 1],
                 }}
@@ -68,7 +68,7 @@ function Navbar() {
                 whileHover={{ scale: 1.05 }}
                 className="text-2xl font-extrabold text-gradient-animated leading-tight"
               >
-                بتاع العاب
+                Techno Core
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0 }}
@@ -76,7 +76,7 @@ function Navbar() {
                 transition={{ delay: 0.5 }}
                 className="text-xs text-gray-500 dark:text-gray-400 font-medium -mt-1"
               >
-                Bta3 Al3ab
+                Gaming Hub
               </motion.p>
             </motion.div>
           </Link>

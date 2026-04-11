@@ -4,7 +4,7 @@ import './AboutUs.css'
 
 function AboutUs() {
   const { isDark } = useDarkMode()
-  const coverImage = isDark ? '/dark.jpg' : '/day.jpg'
+  const coverImage = isDark ? '/wallpaper_black.png' : '/wallpaper_white.png'
 
   return (
     <div className="min-h-screen">

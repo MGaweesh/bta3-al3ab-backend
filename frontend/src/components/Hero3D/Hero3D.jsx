@@ -78,12 +78,12 @@ const Hero3D = ({ isDark }) => {
             <div ref={bgRef} className="absolute inset-0 transition-transform duration-100 ease-out will-change-transform">
                 <div className="absolute inset-0 bg-gray-900">
                     <img
-                        src="/day.jpg"
+                        src="/wallpaper_white.png"
                         alt="Day Background"
                         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${!isDark ? 'opacity-60' : 'opacity-0'}`}
                     />
                     <img
-                        src="/dark.jpg"
+                        src="/wallpaper_black.png"
                         alt="Dark Background"
                         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${isDark ? 'opacity-60' : 'opacity-0'}`}
                     />
@@ -127,7 +127,7 @@ const Hero3D = ({ isDark }) => {
                 {/* Text Content */}
                 <div ref={textRef} className="text-center transition-transform duration-100 ease-out will-change-transform px-4">
                     <h1 className="text-4xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-white to-purple-300 drop-shadow-2xl mb-4 md:mb-6 tracking-tight pb-4 leading-normal">
-                        بتاع ألعاب
+                        Techno Core
                     </h1>
                     <p className="text-lg md:text-2xl text-blue-100/90 font-light max-w-2xl mx-auto leading-relaxed text-shadow-sm">
                         نجمع لك أفضل الألعاب، الأفلام، والأنمي في مكان واحد

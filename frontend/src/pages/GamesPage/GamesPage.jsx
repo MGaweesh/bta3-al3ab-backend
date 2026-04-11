@@ -16,7 +16,7 @@ function GamesPage() {
   const { selectedGames, toggleGame } = useGameSelection()
   const { totalSelectedCount } = useSelection()
   const { isDark } = useDarkMode()
-  const coverImage = isDark ? '/dark.jpg' : '/day.jpg'
+  const coverImage = isDark ? '/wallpaper_black.png' : '/wallpaper_white.png'
   const [filteredGames, setFilteredGames] = useState([])
 
   // Get games based on category (already sorted alphabetically from useGames hook)

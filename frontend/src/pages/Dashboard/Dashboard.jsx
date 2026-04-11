@@ -517,7 +517,7 @@ function Dashboard() {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-purple-400 to-cyan-300 opacity-0 group-hover/logo:opacity-100 transition-opacity duration-500"></div>
               <motion.img
                 src="/logo.png"
-                alt="بتاع العاب Logo"
+                alt="Techno Core Logo"
                 animate={{
                   rotate: [0, 10, -10, 0],
                   scale: [1, 1.1, 1],

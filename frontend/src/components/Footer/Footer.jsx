@@ -150,7 +150,7 @@ function Footer() {
             whileHover={{ scale: 1.05 }}
             className="text-gray-300 text-lg font-medium"
           >
-            © 2026 <span className="text-gradient-animated font-bold">بتاع العاب</span> - جميع الحقوق محفوظة
+            © 2026 <span className="text-gradient-animated font-bold">Techno Core</span> - جميع الحقوق محفوظة
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 10 }}

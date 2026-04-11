@@ -22,14 +22,7 @@ function MoviesPage() {
 
   // Get cover image based on type and dark mode
   const getCoverImage = () => {
-    if (type === 'movies') {
-      return isDark ? '/movies dark.jpg' : '/movies light.jpg'
-    } else if (type === 'tv-shows') {
-      return isDark ? '/series dark.jpg' : '/series light.jpg'
-    } else if (type === 'anime') {
-      return isDark ? '/anime dark.png' : '/anime light.png'
-    }
-    return isDark ? '/dark.jpg' : '/day.jpg'
+    return isDark ? '/wallpaper_black.png' : '/wallpaper_white.png'
   }
 
   const coverImage = getCoverImage()
