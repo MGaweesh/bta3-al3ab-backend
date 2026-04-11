@@ -80,12 +80,12 @@ const Hero3D = ({ isDark }) => {
                     <img
                         src="/wallpaper_white.png"
                         alt="Day Background"
-                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${!isDark ? 'opacity-60' : 'opacity-0'}`}
+                        className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-1000 ${!isDark ? 'opacity-60' : 'opacity-0'}`}
                     />
                     <img
                         src="/wallpaper_black.png"
                         alt="Dark Background"
-                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${isDark ? 'opacity-60' : 'opacity-0'}`}
+                        className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-1000 ${isDark ? 'opacity-60' : 'opacity-0'}`}
                     />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/40 to-cyan-900/40 mix-blend-overlay"></div>
