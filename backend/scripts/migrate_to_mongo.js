@@ -2,11 +2,13 @@ import { MongoClient } from 'mongodb';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const uri = "mongodb+srv://Eslam:1996@bta3al3ab.0vuycgo.mongodb.net/?appName=bta3al3ab";
+dotenv.config({ path: path.join(__dirname, '../.env') });
+const uri = process.env.MONGODB_URI;
 const client = new MongoClient(uri);
 
 const dataDir = path.join(__dirname, '../data');
