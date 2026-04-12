@@ -4,9 +4,10 @@ import cors from 'cors';
 import compression from 'compression';
 import { MongoClient } from 'mongodb';
 import axios from 'axios';
-import { existsSync } from 'fs';
+import { existsSync, readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { parseRequirements } from './utils/parseRequirements.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -1286,6 +1287,8 @@ app.get('/api/anime', async (req, res) => {
 
 // ============ REQUIREMENTS ENGINE (MongoDB Cache) ============
 
+const FALLBACK_REQUIREMENTS_FILE = join(__dirname, 'cache', 'fallbackRequirements.json');
+
 // Read cache (MongoDB)
 async function readRequirementsCache(gameName) {
   try {
@@ -1526,8 +1529,54 @@ async function fetchGameRequirements(gameName) {
     return result;
   }
 
-  // No data found from Steam or PCGamingWiki
-  console.log(`❌ [MULTI-SOURCE] No valid data found from Steam or PCGamingWiki`);
+  // Try Source 3: Fallback Requirements File
+  console.log(`📂 [FALLBACK] Checking fallback requirements file for: "${gameName}"`);
+  const fallbackData = readFallbackRequirements();
+  
+  // Try exact match first, then fuzzy match
+  let fallbackReqs = fallbackData[gameName];
+  if (!fallbackReqs) {
+    // Try case-insensitive and partial matching
+    const gameNameLower = gameName.toLowerCase();
+    for (const [key, value] of Object.entries(fallbackData)) {
+      if (key.toLowerCase() === gameNameLower || 
+          key.toLowerCase().includes(gameNameLower) || 
+          gameNameLower.includes(key.toLowerCase())) {
+        fallbackReqs = value;
+        console.log(`✅ [FALLBACK] Fuzzy matched: "${gameName}" → "${key}"`);
+        break;
+      }
+    }
+  }
+
+  if (fallbackReqs && (fallbackReqs.cpu || fallbackReqs.gpu || fallbackReqs.ram)) {
+    console.log(`✅ [FALLBACK] Found requirements in fallback file`);
+    const fallbackResult = {
+      title: gameName,
+      source: 'fallback',
+      status: 'success',
+      minimumParsed: {
+        cpu: fallbackReqs.cpu || 'لا توجد متطلبات',
+        gpu: fallbackReqs.gpu || 'لا توجد متطلبات',
+        ram: fallbackReqs.ram || 'لا توجد متطلبات',
+        storage: fallbackReqs.storage || 'لا توجد متطلبات',
+        os: fallbackReqs.os || 'لا توجد متطلبات'
+      },
+      recommendedParsed: {
+        cpu: fallbackReqs.cpu || 'لا توجد متطلبات',
+        gpu: fallbackReqs.gpu || 'لا توجد متطلبات',
+        ram: fallbackReqs.ram || 'لا توجد متطلبات',
+        storage: fallbackReqs.storage || 'لا توجد متطلبات',
+        os: fallbackReqs.os || 'لا توجد متطلبات'
+      }
+    };
+    // Cache it for future use
+    await writeRequirementsCache(gameName, fallbackResult);
+    return fallbackResult;
+  }
+
+  // No data found from any source
+  console.log(`❌ [MULTI-SOURCE] No valid data found from Steam, PCGamingWiki, or Fallback`);
   return {
     title: gameName,
     source: 'none',
@@ -1554,64 +1603,191 @@ async function fetchGameRequirements(gameName) {
 
 // CPU Power Mapping (approximate)
 const CPU_POWER_MAP = {
-  // Intel
+  // Intel Core Ultra (Arrow Lake)
+  'core ultra 9': 110, 'core ultra 7': 95, 'core ultra 5': 75,
+  // Intel Desktop
+  'i9-14900k': 108, 'i9-13900k': 105, 'i9-12900k': 100,
+  'i9-11900k': 90, 'i9-10900k': 88, 'i9-9900k': 85,
+  'i7-14700k': 95, 'i7-13700k': 93, 'i7-12700k': 90,
+  'i7-11700k': 82, 'i7-10700k': 80, 'i7-9700k': 75,
+  'i7-8700k': 72, 'i7-8700': 70,
+  'i5-14600k': 80, 'i5-13600k': 78, 'i5-12600k': 75,
+  'i5-12400': 68, 'i5-11400': 65, 'i5-10400': 60,
+  'i5-9400': 55, 'i5-8400': 52,
+  'i3-14100': 50, 'i3-13100': 48, 'i3-12100': 45, 'i3-10100': 42,
+  // Intel generic tiers
   'i9': 100, 'i7': 85, 'i5': 65, 'i3': 45, 'pentium': 30, 'celeron': 20,
-  // AMD
+  // AMD Ryzen 9000
+  'ryzen 9 9950x': 112, 'ryzen 9 9900x': 108, 'ryzen 9 9900': 105,
+  'ryzen 7 9800x3d': 115, 'ryzen 7 9700x': 92,
+  'ryzen 5 9600x': 82, 'ryzen 5 9600': 78,
+  // AMD Ryzen 7000
+  'ryzen 9 7950x3d': 110, 'ryzen 9 7950x': 108, 'ryzen 9 7900x': 105,
+  'ryzen 7 7800x3d': 100, 'ryzen 7 7700x': 90,
+  'ryzen 5 7600x': 78, 'ryzen 5 7600': 75,
+  // AMD Ryzen 5000
+  'ryzen 9 5950x': 100, 'ryzen 9 5900x': 98,
+  'ryzen 7 5800x3d': 95, 'ryzen 7 5800x': 88, 'ryzen 7 5700x': 82,
+  'ryzen 5 5600x': 72, 'ryzen 5 5600': 68,
+  // AMD Ryzen 3000
+  'ryzen 9 3950x': 92, 'ryzen 9 3900x': 90,
+  'ryzen 7 3800x': 80, 'ryzen 7 3700x': 78,
+  'ryzen 5 3600x': 65, 'ryzen 5 3600': 62,
+  // AMD Ryzen 2000/1000
+  'ryzen 7 2700x': 65, 'ryzen 7 2700': 60,
+  'ryzen 5 2600x': 55, 'ryzen 5 2600': 52,
+  'ryzen 5 1600': 48, 'ryzen 3 3300x': 50, 'ryzen 3 3100': 45,
+  // AMD generic tiers
   'ryzen 9': 100, 'ryzen 7': 85, 'ryzen 5': 65, 'ryzen 3': 45,
-  'threadripper': 120, 'fx': 40, 'a10': 35, 'a12': 40
+  'threadripper': 120, 'fx-8': 42, 'fx-6': 38, 'fx': 38,
+  'a10': 35, 'a12': 40, 'a8': 30,
+  'phenom': 28, 'athlon': 25,
+  'core 2 quad': 22, 'core 2 duo': 18
 };
 
 // GPU Class Mapping (approximate)
 const GPU_CLASS_MAP = {
-  // NVIDIA
-  'rtx 4090': 100, 'rtx 4080': 90, 'rtx 4070': 75, 'rtx 4060': 60,
-  'rtx 3090': 95, 'rtx 3080': 85, 'rtx 3070': 70, 'rtx 3060': 55,
-  'rtx 2080 ti': 80, 'rtx 2080': 70, 'rtx 2070': 60, 'rtx 2060': 50,
-  'gtx 1080 ti': 65, 'gtx 1080': 55, 'gtx 1070': 45, 'gtx 1060': 35,
-  'gtx 1660': 40, 'gtx 1650': 25,
-  // AMD
-  'rx 7900 xtx': 95, 'rx 7900 xt': 85, 'rx 7800 xt': 70, 'rx 7700 xt': 60,
-  'rx 6900 xt': 80, 'rx 6800 xt': 75, 'rx 6800': 70, 'rx 6700 xt': 60,
-  'rx 6600 xt': 50, 'rx 6600': 45,
-  'rx 5700 xt': 50, 'rx 5700': 45, 'rx 5600 xt': 40,
-  'rx 580': 35, 'rx 570': 30, 'rx 560': 25
+  // NVIDIA RTX 50 Series
+  'rtx 5090': 140, 'rtx 5080': 120, 'rtx 5070 ti': 110,
+  'rtx 5070': 102, 'rtx 5060 ti': 88, 'rtx 5060': 78,
+  // NVIDIA RTX 40 Series
+  'rtx 4090': 120, 'rtx 4080 super': 108, 'rtx 4080': 105,
+  'rtx 4070 ti super': 98, 'rtx 4070 ti': 95, 'rtx 4070 super': 90,
+  'rtx 4070': 85, 'rtx 4060 ti': 75, 'rtx 4060': 68, 'rtx 4050': 58,
+  // NVIDIA RTX 30 Series
+  'rtx 3090 ti': 110, 'rtx 3090': 105, 'rtx 3080 ti': 100,
+  'rtx 3080': 95, 'rtx 3070 ti': 85, 'rtx 3070': 80,
+  'rtx 3060 ti': 72, 'rtx 3060': 62, 'rtx 3050': 48,
+  // NVIDIA RTX 20 Series
+  'rtx 2080 ti': 88, 'rtx 2080 super': 82, 'rtx 2080': 78,
+  'rtx 2070 super': 72, 'rtx 2070': 68, 'rtx 2060 super': 62,
+  'rtx 2060': 58,
+  // NVIDIA GTX 16 Series
+  'gtx 1660 ti': 52, 'gtx 1660 super': 50, 'gtx 1660': 48,
+  'gtx 1650 super': 42, 'gtx 1650': 35, 'gtx 1630': 25,
+  // NVIDIA GTX 10 Series
+  'gtx 1080 ti': 72, 'gtx 1080': 62, 'gtx 1070 ti': 58, 'gtx 1070': 52,
+  'gtx 1060 6gb': 42, 'gtx 1060 3gb': 38, 'gtx 1060': 40,
+  'gtx 1050 ti': 32, 'gtx 1050': 28, 'gtx 1030': 18,
+  // NVIDIA GTX 9 Series
+  'gtx 980 ti': 55, 'gtx 980': 48, 'gtx 970': 42, 'gtx 960': 32,
+  'gtx 950': 28,
+  // NVIDIA GTX 7 Series
+  'gtx 780 ti': 42, 'gtx 780': 38, 'gtx 770': 32, 'gtx 760': 28,
+  'gtx 750 ti': 22, 'gtx 750': 20,
+  // NVIDIA Older
+  'gtx 660': 22, 'gtx 650': 18, 'gt 1030': 15, 'gt 730': 10, 'gt 710': 5,
+  // NVIDIA Laptop
+  'rtx 4090 laptop': 95, 'rtx 4080 laptop': 82, 'rtx 4070 laptop': 72,
+  'rtx 4060 laptop': 58, 'rtx 4050 laptop': 48,
+  'rtx 3080 laptop': 75, 'rtx 3070 laptop': 65, 'rtx 3060 laptop': 52,
+  'rtx 3050 laptop': 38, 'rtx 3050 ti laptop': 42,
+  'mx550': 22, 'mx450': 20, 'mx350': 18, 'mx250': 15,
+  // AMD RX 9000
+  'rx 9070 xt': 95, 'rx 9070': 85,
+  // AMD RX 7000
+  'rx 7900 xtx': 110, 'rx 7900 xt': 100, 'rx 7900 gre': 88,
+  'rx 7800 xt': 82, 'rx 7700 xt': 72, 'rx 7600 xt': 62, 'rx 7600': 58,
+  // AMD RX 6000
+  'rx 6950 xt': 98, 'rx 6900 xt': 92, 'rx 6800 xt': 85, 'rx 6800': 78,
+  'rx 6750 xt': 72, 'rx 6700 xt': 68, 'rx 6650 xt': 58,
+  'rx 6600 xt': 55, 'rx 6600': 50, 'rx 6500 xt': 28, 'rx 6400': 22,
+  // AMD RX 5000
+  'rx 5700 xt': 58, 'rx 5700': 52, 'rx 5600 xt': 48,
+  'rx 5500 xt': 38,
+  // AMD RX 500
+  'rx 590': 42, 'rx 580': 38, 'rx 570': 32, 'rx 560': 25, 'rx 550': 20,
+  // AMD R9/R7
+  'r9 fury': 45, 'r9 390x': 42, 'r9 390': 40, 'r9 380x': 35,
+  'r9 380': 32, 'r9 290x': 35, 'r9 290': 32, 'r9 285': 28,
+  'r9 280x': 28, 'r9 280': 25, 'r9 270x': 22, 'r9 270': 20,
+  'r7 370': 18, 'r7 360': 15, 'r7 260x': 15,
+  // AMD HD
+  'hd 7970': 22, 'hd 7950': 20, 'hd 7870': 18, 'hd 7850': 16,
+  // Intel Arc
+  'arc a770': 58, 'arc a750': 52, 'arc a580': 42, 'arc a380': 22,
+  // Integrated
+  'iris xe': 18, 'uhd 770': 12, 'uhd 730': 10, 'uhd 630': 8,
+  'hd 630': 8, 'hd 530': 7, 'hd 4600': 5, 'hd 4000': 4,
+  'vega 11': 15, 'vega 8': 12, 'vega 7': 10,
+  '780m': 25, '760m': 22, '680m': 20, 'radeon graphics': 12
 };
 
 // Extract CPU power score
-function getCPUPower(cpuString) {
-  if (!cpuString || cpuString === 'غير موجود') return 0;
-  const cpuLower = cpuString.toLowerCase();
-  for (const [key, power] of Object.entries(CPU_POWER_MAP)) {
+function evaluateSingleCPU(cpuString) {
+  const cpuLower = cpuString.toLowerCase().trim();
+  
+  // Dynamic parsing for Intel Core i3/i5/i7/i9
+  const intelMatch = cpuLower.match(/i([3579])[- ]?(\d+)/i);
+  if (intelMatch) {
+    const tier = parseInt(intelMatch[1]);
+    const num = parseInt(intelMatch[2]);
+    let gen = 1;
+    if (num >= 10000) gen = Math.floor(num / 1000);
+    else if (num >= 1000) gen = Math.floor(num / 1000);
+    let score = (tier * 4) + (gen * 5);
+    return Math.min(110, score);
+  }
+
+  // Dynamic parsing for AMD Ryzen
+  const ryzenMatch = cpuLower.match(/ryzen\s*([3579])[- ]?(\d+)/i);
+  if (ryzenMatch) {
+    const tier = parseInt(ryzenMatch[1]);
+    const num = parseInt(ryzenMatch[2]);
+    let gen = Math.floor(num / 1000);
+    let score = (tier * 4) + (gen * 6) + 12;
+    if (cpuLower.includes('x3d')) score += 10;
+    return Math.min(110, score);
+  }
+
+  // Fallback to map
+  const sortedEntries = Object.entries(CPU_POWER_MAP).sort((a, b) => b[0].length - a[0].length);
+  for (const [key, power] of sortedEntries) {
     if (cpuLower.includes(key)) {
-      // Extract generation number if available
-      const genMatch = cpuLower.match(/(\d{4,5})/);
-      if (genMatch) {
-        const gen = parseInt(genMatch[1]);
-        // Adjust power based on generation (newer = more power)
-        if (gen >= 12000) return power + 10;
-        if (gen >= 10000) return power + 5;
-        if (gen < 8000) return Math.max(0, power - 10);
-      }
       return power;
     }
   }
-  // Default: try to extract number
+
+  // Default generic
   const numMatch = cpuLower.match(/(\d+)/);
-  return numMatch ? parseInt(numMatch[1]) / 10 : 30;
+  return numMatch ? Math.min(50, parseInt(numMatch[1]) / 20) : 30;
+}
+
+function getCPUPower(cpuString) {
+  if (!cpuString || cpuString === 'غير موجود' || cpuString === 'لا توجد متطلبات') return 0;
+  const parts = cpuString.split(/\s*(?:\/|or|\||أو)\s*/i);
+  let minScore = Infinity;
+  for (const part of parts) {
+    if (!part.trim()) continue;
+    const score = evaluateSingleCPU(part);
+    if (score < minScore) minScore = score;
+  }
+  return minScore === Infinity ? 30 : minScore;
 }
 
 // Extract GPU power score
-function getGPUPower(gpuString) {
-  if (!gpuString || gpuString === 'غير موجود') return 0;
-  const gpuLower = gpuString.toLowerCase();
-  for (const [key, power] of Object.entries(GPU_CLASS_MAP)) {
+function evaluateSingleGPU(gpuString) {
+  const gpuLower = gpuString.toLowerCase().trim();
+  const sortedEntries = Object.entries(GPU_CLASS_MAP).sort((a, b) => b[0].length - a[0].length);
+  for (const [key, power] of sortedEntries) {
     if (gpuLower.includes(key)) {
       return power;
     }
   }
-  // Default: try to extract number
   const numMatch = gpuLower.match(/(\d{4})/);
-  return numMatch ? parseInt(numMatch[1]) / 100 : 20;
+  return numMatch ? Math.min(80, parseInt(numMatch[1]) / 100) : 20;
+}
+
+function getGPUPower(gpuString) {
+  if (!gpuString || gpuString === 'غير موجود' || gpuString === 'لا توجد متطلبات') return 0;
+  const parts = gpuString.split(/\s*(?:\/|or|\||أو)\s*/i);
+  let minScore = Infinity;
+  for (const part of parts) {
+    if (!part.trim()) continue;
+    const score = evaluateSingleGPU(part);
+    if (score < minScore) minScore = score;
+  }
+  return minScore === Infinity ? 20 : minScore;
 }
 
 // Compare hardware and return rating
@@ -1628,6 +1804,23 @@ function compareHardwareSmart(userSpecs, gameRequirements) {
   const userGPUPower = getGPUPower(userSpecs.gpu || '');
   const minGPUPower = getGPUPower(minReq.gpu || '');
   const recGPUPower = getGPUPower(recReq.gpu || '');
+
+  console.log('--- DEBUG PERFORMANCE ENGINE ---');
+  console.log('CPU:', { 
+    user: userSpecs.cpu, userPower: userCPUPower, 
+    minReq: minReq.cpu, minPower: minCPUPower, 
+    recReq: recReq.cpu, recPower: recCPUPower,
+    score: cpuScore 
+  });
+  console.log('GPU:', { 
+    user: userSpecs.gpu, userPower: userGPUPower, 
+    minReq: minReq.gpu, minPower: minGPUPower, 
+    recReq: recReq.gpu, recPower: recCPUPower,
+    score: gpuScore 
+  });
+  console.log('RAM:', { user: userRAM, min: minRAM, rec: recRAM, score: ramScore });
+  console.log('Overall:', { score: overallScore, rating });
+  console.log('--------------------------------');
 
   // RAM comparison
   const parseRAM = (ram) => {
@@ -1649,37 +1842,56 @@ function compareHardwareSmart(userSpecs, gameRequirements) {
   const minStorage = parseStorage(minReq.storage || '');
   const recStorage = parseStorage(recReq.storage || '');
 
-  // Calculate scores (0-100)
-  let cpuScore = 0;
-  if (userCPUPower >= recCPUPower && recCPUPower > 0) cpuScore = 100;
-  else if (userCPUPower >= minCPUPower && minCPUPower > 0) cpuScore = 70;
-  else if (userCPUPower > 0 && minCPUPower > 0) cpuScore = Math.max(0, (userCPUPower / minCPUPower) * 50);
+  // Calculate scores (0-100) using a continuous ratio-based approach
+  const calculateComponentScore = (userPower, minPower, recPower) => {
+    if (userPower <= 0 || minPower <= 0) return 0;
+    
+    // If we have recommended power, use a curve that hits 70% at min and 100% at rec
+    if (recPower > minPower) {
+      if (userPower >= recPower) {
+        // Exceeds recommended: scale up to 110% for "Future Proof" feeling
+        const bonus = Math.min(10, ((userPower / recPower) - 1) * 20);
+        return 100 + bonus;
+      }
+      if (userPower >= minPower) {
+        // Between min and rec: Linear scale between 70% and 100%
+        const range = recPower - minPower;
+        const progress = userPower - minPower;
+        return 70 + (progress / range) * 30;
+      }
+      // Below min: Scale between 0 and 70%
+      return (userPower / minPower) * 60; // Max 60% if just below min
+    }
+    
+    // If only min power is known
+    const ratio = userPower / minPower;
+    if (ratio >= 1.2) return 100;
+    if (ratio >= 1.0) return 70 + (ratio - 1.0) * 150; // hits 100 at 1.2
+    return ratio * 60;
+  };
 
-  let gpuScore = 0;
-  if (userGPUPower >= recGPUPower && recGPUPower > 0) gpuScore = 100;
-  else if (userGPUPower >= minGPUPower && minGPUPower > 0) gpuScore = 70;
-  else if (userGPUPower > 0 && minGPUPower > 0) gpuScore = Math.max(0, (userGPUPower / minGPUPower) * 50);
+  const cpuScore = calculateComponentScore(userCPUPower, minCPUPower, recCPUPower || minCPUPower);
+  const gpuScore = calculateComponentScore(userGPUPower, minGPUPower, recGPUPower || minGPUPower);
+  
+  // RAM/Storage follow a similar logic but simpler
+  const ramScore = userRAM >= recRAM && recRAM > 0 ? 100 + Math.min(10, ((userRAM/recRAM)-1)*5) : 
+                   userRAM >= minRAM && minRAM > 0 ? 70 + ((userRAM-minRAM)/(recRAM-minRAM||minRAM))*30 : 
+                   (userRAM/minRAM)*60;
 
-  let ramScore = 0;
-  if (userRAM >= recRAM && recRAM > 0) ramScore = 100;
-  else if (userRAM >= minRAM && minRAM > 0) ramScore = 70;
-  else if (userRAM > 0 && minRAM > 0) ramScore = Math.max(0, (userRAM / minRAM) * 50);
-
-  let storageScore = 0;
-  if (userStorage >= recStorage && recStorage > 0) storageScore = 100;
-  else if (userStorage >= minStorage && minStorage > 0) storageScore = 70;
-  else if (userStorage > 0 && minStorage > 0) storageScore = Math.max(0, (userStorage / minStorage) * 50);
+  const storageScore = userStorage >= recStorage && recStorage > 0 ? 100 : 
+                       userStorage >= minStorage && minStorage > 0 ? 70 + ((userStorage-minStorage)/(recStorage-minStorage||minStorage))*30 :
+                       (userStorage/minStorage)*60;
 
   // Overall score (weighted average)
-  const overallScore = (cpuScore * 0.3 + gpuScore * 0.4 + ramScore * 0.2 + storageScore * 0.1);
+  const overallScore = Math.min(110, (cpuScore * 0.4 + gpuScore * 0.4 + ramScore * 0.15 + storageScore * 0.05));
 
   // Determine rating
   let rating = 'Cannot Run';
-  if (overallScore >= 90) rating = 'Ultra';
-  else if (overallScore >= 75) rating = 'High';
-  else if (overallScore >= 60) rating = 'Medium';
-  else if (overallScore >= 45) rating = 'Low';
-  else if (overallScore >= 30) rating = 'Very Low';
+  if (overallScore >= 95) rating = 'Ultra';
+  else if (overallScore >= 80) rating = 'High';
+  else if (overallScore >= 65) rating = 'Medium';
+  else if (overallScore >= 50) rating = 'Low';
+  else if (overallScore >= 35) rating = 'Very Low';
   else if (overallScore > 0) rating = 'Cannot Run';
 
   return {
@@ -1917,27 +2129,56 @@ app.post('/api/compatibility/check', async (req, res) => {
       return isNaN(num) ? 0 : num;
     };
 
-    // Helper function to compare CPU/GPU (simple string matching for now)
-    const compareHardware = (userSpec, requiredSpec) => {
-      if (!requiredSpec || requiredSpec.trim() === '' || requiredSpec === 'غير متوفر' || requiredSpec === 'غير موجود') {
-        return { meets: true, message: 'غير محدد - لا توجد متطلبات' };
+    // Helper function to compare CPU/GPU using power maps for accurate scoring
+    const compareHardware = (userSpec, requiredSpec, type = 'generic') => {
+      if (!requiredSpec || requiredSpec.trim() === '' || requiredSpec === 'غير متوفر' || requiredSpec === 'غير موجود' || requiredSpec === 'لا توجد متطلبات') {
+        return { meets: true, message: 'غير محدد - لا توجد متطلبات', score: 100 };
       }
       if (!userSpec || userSpec.trim() === '') {
-        return { meets: false, message: `❌ غير محدد (مطلوب: ${requiredSpec})` };
+        return { meets: false, message: `❌ غير محدد (مطلوب: ${requiredSpec})`, score: 0 };
       }
 
+      if (type === 'cpu') {
+        const userPower = getCPUPower(userSpec);
+        const reqPower = getCPUPower(requiredSpec);
+        if (userPower > 0 && reqPower > 0) {
+          const ratio = userPower / reqPower;
+          if (ratio >= 1.0) {
+            return { meets: true, message: `✅ ${userSpec} (مطلوب: ${requiredSpec})`, score: Math.min(ratio * 100, 100) };
+          } else if (ratio >= 0.75) {
+            return { meets: true, message: `⚠️ ${userSpec} — قريب من الحد الأدنى (مطلوب: ${requiredSpec})`, score: ratio * 100 };
+          } else {
+            return { meets: false, message: `❌ ${userSpec} — غير كافي (مطلوب: ${requiredSpec})`, score: ratio * 100 };
+          }
+        }
+      }
+
+      if (type === 'gpu') {
+        const userPower = getGPUPower(userSpec);
+        const reqPower = getGPUPower(requiredSpec);
+        if (userPower > 0 && reqPower > 0) {
+          const ratio = userPower / reqPower;
+          if (ratio >= 1.0) {
+            return { meets: true, message: `✅ ${userSpec} (مطلوب: ${requiredSpec})`, score: Math.min(ratio * 100, 100) };
+          } else if (ratio >= 0.75) {
+            return { meets: true, message: `⚠️ ${userSpec} — قريب من الحد الأدنى (مطلوب: ${requiredSpec})`, score: ratio * 100 };
+          } else {
+            return { meets: false, message: `❌ ${userSpec} — غير كافي (مطلوب: ${requiredSpec})`, score: ratio * 100 };
+          }
+        }
+      }
+
+      // Fallback: simple text match
       const userLower = userSpec.toLowerCase();
       const requiredLower = requiredSpec.toLowerCase();
-
-      // Extract numbers for comparison (basic)
-      const userNum = parseFloat(userLower.match(/([\d.]+)/)?.[1] || '0');
-      const requiredNum = parseFloat(requiredLower.match(/([\d.]+)/)?.[1] || '0');
-
-      // Simple comparison - can be improved with better parsing
-      if (userNum >= requiredNum * 0.8) {
-        return { meets: true, message: `✅ ${userSpec} (مطلوب: ${requiredSpec})` };
+      
+      // Exact match or partial match
+      if (userLower.includes(requiredLower) || requiredLower.includes(userLower)) {
+        return { meets: true, message: `✅ ${userSpec} (مطلوب: ${requiredSpec})`, score: 85 };
       }
-      return { meets: false, message: `❌ ${userSpec} (مطلوب: ${requiredSpec})` };
+
+      // No match
+      return { meets: false, message: `❌ ${userSpec} — غير معروف التوافق (مطلوب: ${requiredSpec})`, score: 20 };
     };
 
     // Check compatibility for each game
@@ -2033,19 +2274,61 @@ app.post('/api/compatibility/check', async (req, res) => {
                 console.log(`✅ [COMPATIBILITY] Recommended CPU: ${recRequirements.cpu || 'N/A'}`);
               } else {
                 console.warn(`⚠️ [COMPATIBILITY] Requirements fetcher returned empty/invalid requirements for "${game.name}"`);
-                console.warn(`⚠️ [COMPATIBILITY] Recommendation: Add requirements manually to games.json or fallbackRequirements.json`);
               }
             } else {
               console.warn(`⚠️ [COMPATIBILITY] Requirements fetcher returned no data for "${game.name}"`);
-              console.warn(`⚠️ [COMPATIBILITY] Source: ${requirementsResult?.source || 'unknown'}`);
-              console.warn(`⚠️ [COMPATIBILITY] Recommendation: Add requirements manually to games.json or fallbackRequirements.json`);
             }
           } catch (error) {
-            console.error(`❌ [COMPATIBILITY] Exception caught while fetching requirements for "${game.name}":`);
-            console.error(`❌ [COMPATIBILITY] Error type: ${error.constructor.name}`);
-            console.error(`❌ [COMPATIBILITY] Error message: ${error.message}`);
-            console.warn(`⚠️ [COMPATIBILITY] Requirements fetcher failed - continuing with empty requirements`);
-            console.warn(`⚠️ [COMPATIBILITY] Recommendation: Add requirements manually to games.json or fallbackRequirements.json`);
+            console.error(`❌ [COMPATIBILITY] Exception caught while fetching requirements for "${game.name}":`, error.message);
+          }
+
+          // LAST RESORT: Try direct fallback file check if still no requirements
+          const hasReqsAfterFetch = minRequirements.cpu || minRequirements.gpu || minRequirements.ram ||
+            recRequirements.cpu || recRequirements.gpu || recRequirements.ram;
+          
+          if (!hasReqsAfterFetch) {
+            console.log(`📂 [COMPATIBILITY] Trying direct fallback file for: "${game.name}"`);
+            const fallbackData = readFallbackRequirements();
+            
+            // Try exact match, then fuzzy match
+            let fbReqs = fallbackData[game.name];
+            if (!fbReqs) {
+              const nameL = game.name.toLowerCase();
+              for (const [key, value] of Object.entries(fallbackData)) {
+                if (key.toLowerCase() === nameL || 
+                    key.toLowerCase().includes(nameL) || 
+                    nameL.includes(key.toLowerCase())) {
+                  fbReqs = value;
+                  console.log(`✅ [COMPATIBILITY] Fuzzy matched fallback: "${game.name}" → "${key}"`);
+                  break;
+                }
+              }
+            }
+
+            if (fbReqs && (fbReqs.cpu || fbReqs.gpu || fbReqs.ram)) {
+              console.log(`✅ [COMPATIBILITY] Found requirements in fallback file for "${game.name}"`);
+              requirements = {
+                minimum: {
+                  cpu: fbReqs.cpu || null,
+                  gpu: fbReqs.gpu || null,
+                  ram: fbReqs.ram || null,
+                  storage: fbReqs.storage || null,
+                  os: fbReqs.os || null
+                },
+                recommended: {
+                  cpu: fbReqs.cpu || null,
+                  gpu: fbReqs.gpu || null,
+                  ram: fbReqs.ram || null,
+                  storage: fbReqs.storage || null,
+                  os: fbReqs.os || null
+                }
+              };
+              minRequirements = requirements.minimum;
+              recRequirements = requirements.recommended;
+              requirementsSource = 'fallback';
+            } else {
+              console.warn(`⚠️ [COMPATIBILITY] No fallback data found for "${game.name}"`);
+            }
           }
         } else {
           console.log(`✅ [COMPATIBILITY] Requirements found in database (games.json) for "${game.name}"`);
@@ -2060,14 +2343,14 @@ app.post('/api/compatibility/check', async (req, res) => {
             if (!requiredCPU || requiredCPU === 'غير متوفر' || requiredCPU === 'غير موجود' || requiredCPU.trim() === '') {
               return { meets: true, message: 'غير محدد - لا توجد متطلبات' };
             }
-            return compareHardware(systemSpecs.cpu || '', requiredCPU);
+            return compareHardware(systemSpecs.cpu || '', requiredCPU, 'cpu');
           })(),
           gpu: (() => {
             const requiredGPU = minRequirements.gpu || recRequirements.gpu || '';
             if (!requiredGPU || requiredGPU === 'غير متوفر' || requiredGPU === 'غير موجود' || requiredGPU.trim() === '') {
               return { meets: true, message: 'غير محدد - لا توجد متطلبات' };
             }
-            return compareHardware(systemSpecs.gpu || '', requiredGPU);
+            return compareHardware(systemSpecs.gpu || '', requiredGPU, 'gpu');
           })(),
           ram: (() => {
             const requiredRAMStr = minRequirements.ram || recRequirements.ram || '';
@@ -2116,6 +2399,8 @@ app.post('/api/compatibility/check', async (req, res) => {
         let userSpecs = {
           cpu: systemSpecs.cpu || '',
           gpu: systemSpecs.gpu || '',
+          ram: systemSpecs.ram || '',
+          storage: systemSpecs.storage || '',
           ramGB: parseToGB(systemSpecs.ram || '0'),
           storageGB: parseToGB(systemSpecs.storage || '0'),
           os: systemSpecs.os || ''
@@ -2140,11 +2425,19 @@ app.post('/api/compatibility/check', async (req, res) => {
           recommended: recRequirements
         };
 
-        // Compute performance score
+        // Compute performance score using Smart Comparison Engine
         let perf = null;
         try {
-          perf = computePerformanceScore(userSpecs, reqsForScore);
-          console.log(`📊 [PERFORMANCE] Game: "${game.name}", Score: ${perf.score.toFixed(3)}, Tier: ${perf.tier}`);
+          const smartResult = compareHardwareSmart(userSpecs, { minimumParsed: minRequirements, recommendedParsed: recRequirements });
+          perf = {
+            score: smartResult.score / 100,
+            tier: smartResult.rating,
+            cpuScore: smartResult.cpuScore,
+            gpuScore: smartResult.gpuScore,
+            ramScore: smartResult.ramScore,
+            storageScore: smartResult.storageScore
+          };
+          console.log(`📊 [PERFORMANCE] Game: "${game.name}", Score: ${smartResult.score}%, Tier: ${smartResult.rating}`);
         } catch (error) {
           console.error(`❌ [PERFORMANCE] Error computing score for "${game.name}":`, error.message);
           // Continue without perf score
@@ -2164,10 +2457,11 @@ app.post('/api/compatibility/check', async (req, res) => {
         // Use performance tier if available, otherwise use legacy status
         if (perf && perf.tier) {
           // Map tier to status for backward compatibility
-          if (perf.tier === 'Strong') status = 'can_run';
-          else if (perf.tier === 'Medium') status = 'can_run_low';
-          else if (perf.tier === 'Weak') status = 'can_run_low';
-          else if (perf.tier === 'Cannot Run') status = 'cannot_run';
+          const tierLower = perf.tier.toLowerCase();
+          if (tierLower === 'ultra' || tierLower === 'high') status = 'can_run';
+          else if (tierLower === 'medium' || tierLower === 'low') status = 'can_run_low';
+          else if (tierLower === 'very low') status = 'can_run_low';
+          else if (tierLower === 'cannot run') status = 'cannot_run';
         }
 
         const notes = [];
@@ -2209,6 +2503,7 @@ app.post('/api/compatibility/check', async (req, res) => {
           gameName: game.name,
           gameImage: game.image || null,
           status,
+          rating: perf?.tier || null,
           requirements: requirementChecks,
           notes,
           requirementsSource: requirementsSource,

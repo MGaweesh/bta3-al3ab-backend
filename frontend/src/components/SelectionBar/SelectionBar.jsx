@@ -69,13 +69,49 @@ function SelectionBar() {
     })
   }
 
+  const calculateItemsPrice = () => {
+    const allItems = [
+      ...movies.map(item => ({ ...item, category: 'movies', type: 'فيلم' })),
+      ...tvShows.map(item => ({ ...item, category: 'tvShows', type: 'مسلسل' })),
+      ...anime.map(item => ({ ...item, category: 'anime', type: 'أنمي' }))
+    ]
+    const selected = selectedItems
+      .map(uniqueId => {
+        const { type, id } = parseUniqueId(uniqueId)
+        return allItems.find(item => item.category === type && item.id === id)
+      })
+      .filter(Boolean)
+
+    let price = 0;
+    const famousTitles = [
+      "breaking bad", "game of thrones", "the last of us", "better call saul", 
+      "chernobyl", "stranger things", "attack on titan", "death note", 
+      "one piece", "naruto", "demon slayer", "jujutsu kaisen", "the witcher", "succession"
+    ];
+
+    selected.forEach(item => {
+       const itemName = (item.name || item.title || '').toLowerCase();
+       const isFamousTitle = famousTitles.some(title => itemName.includes(title));
+       const ratingNum = parseFloat(item.rating || item.rate || 0);
+       
+       if (isFamousTitle || ratingNum >= 9.0) {
+           price += 50;
+       } else {
+           price += 30;
+       }
+    });
+
+    return price;
+  }
+
   const sendAllToWhatsApp = () => {
     trackWhatsAppClick('selection_bar')
     const gamesList = getSelectedGamesNames()
     const itemsList = getSelectedItemsNames()
     const allItems = [...gamesList, ...itemsList]
     const totalGB = calculateTotalSize().toFixed(2)
-    let message = `ازيك ي بشمهندس اسلام\nيارب تكون بخير دى الالعاب/الافلام اللى محتاجها\n\n${allItems.join('\n')}\n\n*المساحة الإجمالية: ${totalGB} GB*`
+    const estimatedPrice = totalGB > 0 ? (totalGB <= 500 ? 250 : totalGB <= 1000 ? 400 : 750) : calculateItemsPrice()
+    let message = `ازيك ي بشمهندس اسلام\nيارب تكون بخير دى الالعاب/الافلام اللى محتاجها\n\n${allItems.join('\n')}\n\n*المساحة الإجمالية: ${totalGB} GB*\n*السعر التقريبي: ${estimatedPrice} جنيه*`
     window.open(`https://wa.me/+201004694666?text=${encodeURIComponent(message)}`, '_blank')
   }
 
@@ -84,7 +120,8 @@ function SelectionBar() {
     const itemsList = getSelectedItemsNames()
     const allItems = [...gamesList, ...itemsList]
     const totalGB = calculateTotalSize().toFixed(2)
-    let message = `ازيك ي بشمهندس اسلام\nيارب تكون بخير دى الالعاب/الافلام اللى محتاجها\n\n${allItems.join('\n')}\n\n*المساحة الإجمالية: ${totalGB} GB*`
+    const estimatedPrice = totalGB > 0 ? (totalGB <= 500 ? 250 : totalGB <= 1000 ? 400 : 750) : calculateItemsPrice()
+    let message = `ازيك ي بشمهندس اسلام\nيارب تكون بخير دى الالعاب/الافلام اللى محتاجها\n\n${allItems.join('\n')}\n\n*المساحة الإجمالية: ${totalGB} GB*\n*السعر التقريبي: ${estimatedPrice} جنيه*`
     window.open(`https://m.me/bta3al3ab96?text=${encodeURIComponent(message)}`, '_blank')
   }
 
@@ -124,10 +161,15 @@ function SelectionBar() {
                     {selectedGamesCount === 0 && selectedItemsCount > 0 ? ` (${selectedItemsCount} فيلم/مسلسل/أنمي)` : ''}
                   </span>
                 </span>
-                {selectedGamesCount > 0 && (
-                  <span className={`text-[10px] sm:text-base font-semibold ${isOverLimit ? 'text-red-500' : 'text-gradient'}`}>
-                    {totalSizeGB.toFixed(1)} GB
-                  </span>
+                {(selectedGamesCount > 0 || selectedItemsCount > 0) && (
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className={`text-[10px] sm:text-base font-semibold ${isOverLimit ? 'text-red-500' : 'text-gradient'}`}>
+                      المساحة: {totalSizeGB.toFixed(1)} GB
+                    </span>
+                    <span className="text-[10px] sm:text-sm font-semibold bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400 px-2 py-0.5 rounded-full">
+                      السعر التقريبي: {totalSizeGB > 0 ? (totalSizeGB <= 500 ? 250 : totalSizeGB <= 1000 ? 400 : 750) : calculateItemsPrice()} جنيه
+                    </span>
+                  </div>
                 )}
               </div>
               <motion.button

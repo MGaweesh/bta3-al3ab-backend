@@ -516,7 +516,7 @@ function Dashboard() {
             <div className="relative w-20 h-20 bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-400 rounded-2xl flex items-center justify-center shadow-2xl overflow-hidden group/logo p-2">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-purple-400 to-cyan-300 opacity-0 group-hover/logo:opacity-100 transition-opacity duration-500"></div>
               <motion.img
-                src="/logo.png"
+                src="/logo.png?v=2"
                 alt="Techno Core Logo"
                 animate={{
                   rotate: [0, 10, -10, 0],
@@ -1033,7 +1033,7 @@ function Dashboard() {
                         className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-400 flex items-center justify-center shadow-xl overflow-hidden p-2"
                       >
                         <motion.img
-                          src="/logo.png"
+                          src="/logo.png?v=2"
                           alt="Game Logo"
                           animate={{
                             rotate: [0, 5, -5, 0],
@@ -1422,7 +1422,7 @@ function Dashboard() {
                         className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-400 flex items-center justify-center shadow-xl overflow-hidden p-2"
                       >
                         <motion.img
-                          src="/logo.png"
+                          src="/logo.png?v=2"
                           alt="Logo"
                           animate={{
                             rotate: [0, 5, -5, 0],
@@ -1525,7 +1525,7 @@ function Dashboard() {
               className="flex justify-center mb-4"
             >
               <motion.img
-                src="/logo.png"
+                src="/logo.png?v=2"
                 alt="Game Logo"
                 animate={{
                   rotate: [0, 10, -10, 0],
@@ -1559,7 +1559,7 @@ function Dashboard() {
               className="flex justify-center mb-4"
             >
               <motion.img
-                src="/logo.png"
+                src="/logo.png?v=2"
                 alt="Logo"
                 animate={{
                   rotate: [0, 10, -10, 0],

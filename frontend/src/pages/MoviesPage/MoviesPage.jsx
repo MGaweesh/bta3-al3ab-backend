@@ -341,7 +341,7 @@ function MoviesPage() {
               className="text-center py-20"
             >
               <motion.img
-                src="/logo.png"
+                src="/logo.png?v=2"
                 alt="Logo"
                 className="w-24 h-24 mx-auto mb-4 opacity-50"
                 animate={{

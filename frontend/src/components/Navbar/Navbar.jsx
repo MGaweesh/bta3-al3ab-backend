@@ -44,7 +44,7 @@ function Navbar() {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400/50 to-purple-400/50 rounded-2xl blur-xl opacity-0 group-hover/logo:opacity-100 transition-opacity duration-500"></div>
 
               <motion.img
-                src="/logo.png"
+                src="/logo.png?v=2"
                 alt="Techno Core Logo"
                 animate={{
                   scale: [1, 1.05, 1],
@@ -86,7 +86,8 @@ function Navbar() {
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6, type: "spring" }}
-            className="hidden md:flex items-center space-x-6 space-x-reverse"
+            dir="ltr"
+            className="hidden md:flex items-center space-x-6"
           >
             {/* Home Link */}
             <motion.div
@@ -99,6 +100,20 @@ function Navbar() {
               >
                 Home
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></span>
+              </Link>
+            </motion.div>
+
+            {/* Explore Link ✨ */}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link
+                to="/explore"
+                className="text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-400 font-bold text-base transition-colors duration-300 relative group flex items-center gap-1"
+              >
+                <span>🚀</span> Explore
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-500 group-hover:w-full transition-all duration-300"></span>
               </Link>
             </motion.div>
 
@@ -132,7 +147,7 @@ function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-full right-0 pt-2 w-48 z-50"
+                  className="absolute top-full left-0 pt-2 w-48 z-50"
                   onMouseEnter={() => setMoviesMenuOpen(true)}
                   onMouseLeave={() => setMoviesMenuOpen(false)}
                 >
@@ -160,20 +175,6 @@ function Navbar() {
               )}
             </motion.div>
 
-            {/* Explore Link ✨ */}
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link
-                to="/explore"
-                className="text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-400 font-bold text-base transition-colors duration-300 relative group flex items-center gap-1"
-              >
-                <span>🚀</span> Explore
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-500 group-hover:w-full transition-all duration-300"></span>
-              </Link>
-            </motion.div>
-
             {/* Can I Run It Link */}
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -183,7 +184,7 @@ function Navbar() {
                 to="/can-i-run-it"
                 className="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 font-semibold text-base transition-colors duration-300 relative group"
               >
-                ? Can I Run It
+                Can I Run It ?
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></span>
               </Link>
             </motion.div>
@@ -197,7 +198,7 @@ function Navbar() {
                 to="/about"
                 className="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 font-semibold text-base transition-colors duration-300 relative group"
               >
-                About Us
+                Pricing
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></span>
               </Link>
             </motion.div>
@@ -300,18 +301,18 @@ function Navbar() {
                 Home
               </Link>
               <Link
+                to="/explore"
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-4 py-2 text-purple-600 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 rounded-lg transition-colors duration-200 font-bold flex items-center gap-2"
+              >
+                <span>🚀</span> Explore
+              </Link>
+              <Link
                 to="/games/all-games"
                 onClick={() => setMobileMenuOpen(false)}
                 className="px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 hover:text-blue-500 dark:hover:text-blue-400 rounded-lg transition-colors duration-200 font-semibold"
               >
                 Games
-              </Link>
-              <Link
-                to="/explore"
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-gray-700 hover:text-purple-500 dark:hover:text-purple-400 rounded-lg transition-colors duration-200 font-bold flex items-center gap-2"
-              >
-                <span>🚀</span> Explore
               </Link>
               <div className="px-4 py-2 text-gray-700 dark:text-gray-300 font-semibold">
                 Movies & Shows:
@@ -342,14 +343,14 @@ function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 hover:text-blue-500 dark:hover:text-blue-400 rounded-lg transition-colors duration-200 font-semibold"
               >
-                ? Can I Run It
+                Can I Run It ?
               </Link>
               <Link
                 to="/about"
                 onClick={() => setMobileMenuOpen(false)}
                 className="px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 hover:text-blue-500 dark:hover:text-blue-400 rounded-lg transition-colors duration-200 font-semibold"
               >
-                About Us
+                Pricing
               </Link>
             </div>
           </motion.div>

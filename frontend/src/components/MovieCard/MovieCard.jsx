@@ -85,7 +85,7 @@ function MovieCard({ item, isSelected, onToggle, onShowDetails }) {
         ) : (
           <div className="w-full h-64 bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-400 flex items-center justify-center">
             <motion.img
-              src="/logo.png"
+              src="/logo.png?v=2"
               alt="Logo"
               className="w-24 h-24 opacity-50"
               animate={{

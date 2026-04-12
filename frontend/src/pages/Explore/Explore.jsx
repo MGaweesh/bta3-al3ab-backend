@@ -345,7 +345,7 @@ const Explore = () => {
                                 accent: "text-indigo-300",
                                 borderColor: "border-indigo-500/20",
                                 glowColor: "group-hover:shadow-[0_0_40px_-10px_rgba(99,102,241,0.3)]",
-                                bg: "/logo.png"
+                                bg: "/logo.png?v=2"
                             }
                         }
 

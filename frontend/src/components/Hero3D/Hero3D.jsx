@@ -110,7 +110,7 @@ const Hero3D = ({ isDark }) => {
                             <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                             <motion.img
-                                src="/logo.png"
+                                src="/logo.png?v=2"
                                 alt="Logo"
                                 className="w-3/4 h-3/4 object-contain drop-shadow-[0_0_25px_rgba(255,255,255,0.3)]"
                                 animate={{ rotate: [0, 5, -5, 0] }}
