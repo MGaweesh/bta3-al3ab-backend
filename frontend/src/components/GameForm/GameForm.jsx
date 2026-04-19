@@ -48,6 +48,7 @@ function GameForm({ game, onSave, onCancel, gameType }) {
     metacritic: '',
     playtime: '',
     website: '',
+    price: '',
     systemRequirements: {
       minimum: {
         cpu: '',
@@ -85,6 +86,7 @@ function GameForm({ game, onSave, onCancel, gameType }) {
         metacritic: game.metacritic || '',
         playtime: game.playtime || '',
         website: game.website || '',
+        price: game.price || '',
         systemRequirements: game.systemRequirements || {
           minimum: {
             cpu: '',
@@ -120,6 +122,7 @@ function GameForm({ game, onSave, onCancel, gameType }) {
         metacritic: '',
         playtime: '',
         website: '',
+        price: '',
         systemRequirements: {
           minimum: {
             cpu: '',
@@ -327,6 +330,7 @@ function GameForm({ game, onSave, onCancel, gameType }) {
     if (formData.metacritic) gameData.metacritic = formData.metacritic
     if (formData.playtime) gameData.playtime = formData.playtime
     if (formData.website) gameData.website = formData.website
+    if (formData.price) gameData.price = formData.price
 
 
     // Add system requirements if they exist
@@ -369,6 +373,23 @@ function GameForm({ game, onSave, onCancel, gameType }) {
                   placeholder="أدخل اسم اللعبة"
                   required
                 />
+              </div>
+
+              {/* Price */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  السعر (يدوي) - اختياري
+                </label>
+                <input
+                  type="text"
+                  value={formData.price}
+                  onChange={(e) => setFormData({ ...formData, price: e.target.value })}
+                  className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="مثال: 50"
+                />
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                  إذا تركت هذا الحقل فارغاً، سيتم حساب السعر تلقائياً بناءً على المساحة.
+                </p>
               </div>
 
               {/* Game Size */}

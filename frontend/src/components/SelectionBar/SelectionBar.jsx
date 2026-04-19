@@ -69,39 +69,67 @@ function SelectionBar() {
     })
   }
 
-  const calculateItemsPrice = () => {
+  const calculateTotalPrice = () => {
+    const allGames = [...readyToPlayGames, ...repackGames, ...onlineGames]
     const allItems = [
       ...movies.map(item => ({ ...item, category: 'movies', type: 'فيلم' })),
       ...tvShows.map(item => ({ ...item, category: 'tvShows', type: 'مسلسل' })),
       ...anime.map(item => ({ ...item, category: 'anime', type: 'أنمي' }))
     ]
-    const selected = selectedItems
+
+    let total = 0
+    let gamesSizeForStoragePrice = 0
+
+    // Calculate Games
+    selectedGames.forEach(id => {
+      const game = allGames.find(g => g.id === id)
+      if (game) {
+        if (game.price && !isNaN(parseFloat(game.price))) {
+          total += parseFloat(game.price)
+        } else {
+          gamesSizeForStoragePrice += parseSizeToGB(game.size)
+        }
+      }
+    })
+
+    // Add storage-based price for games without manual price
+    if (gamesSizeForStoragePrice > 0) {
+      if (gamesSizeForStoragePrice <= 500) total += 250
+      else if (gamesSizeForStoragePrice <= 1000) total += 400
+      else total += 750
+    }
+
+    // Calculate Movies/TV/Anime
+    const selectedItemsList = selectedItems
       .map(uniqueId => {
         const { type, id } = parseUniqueId(uniqueId)
         return allItems.find(item => item.category === type && item.id === id)
       })
       .filter(Boolean)
 
-    let price = 0;
     const famousTitles = [
-      "breaking bad", "game of thrones", "the last of us", "better call saul", 
-      "chernobyl", "stranger things", "attack on titan", "death note", 
+      "breaking bad", "game of thrones", "the last of us", "better call saul",
+      "chernobyl", "stranger things", "attack on titan", "death note",
       "one piece", "naruto", "demon slayer", "jujutsu kaisen", "the witcher", "succession"
-    ];
+    ]
 
-    selected.forEach(item => {
-       const itemName = (item.name || item.title || '').toLowerCase();
-       const isFamousTitle = famousTitles.some(title => itemName.includes(title));
-       const ratingNum = parseFloat(item.rating || item.rate || 0);
-       
-       if (isFamousTitle || ratingNum >= 9.0) {
-           price += 50;
-       } else {
-           price += 30;
-       }
-    });
+    selectedItemsList.forEach(item => {
+      if (item.price && !isNaN(parseFloat(item.price))) {
+        total += parseFloat(item.price)
+      } else {
+        const itemName = (item.name || item.title || '').toLowerCase()
+        const isFamousTitle = famousTitles.some(title => itemName.includes(title))
+        const ratingNum = parseFloat(item.rating || item.rate || 0)
 
-    return price;
+        if (isFamousTitle || ratingNum >= 9.0) {
+          total += 50
+        } else {
+          total += 30
+        }
+      }
+    })
+
+    return total
   }
 
   const sendAllToWhatsApp = () => {
@@ -110,7 +138,7 @@ function SelectionBar() {
     const itemsList = getSelectedItemsNames()
     const allItems = [...gamesList, ...itemsList]
     const totalGB = calculateTotalSize().toFixed(2)
-    const estimatedPrice = totalGB > 0 ? (totalGB <= 500 ? 250 : totalGB <= 1000 ? 400 : 750) : calculateItemsPrice()
+    const estimatedPrice = calculateTotalPrice()
     let message = `ازيك ي بشمهندس اسلام\nيارب تكون بخير دى الالعاب/الافلام اللى محتاجها\n\n${allItems.join('\n')}\n\n*المساحة الإجمالية: ${totalGB} GB*\n*السعر التقريبي: ${estimatedPrice} جنيه*`
     window.open(`https://wa.me/+201004694666?text=${encodeURIComponent(message)}`, '_blank')
   }
@@ -120,7 +148,7 @@ function SelectionBar() {
     const itemsList = getSelectedItemsNames()
     const allItems = [...gamesList, ...itemsList]
     const totalGB = calculateTotalSize().toFixed(2)
-    const estimatedPrice = totalGB > 0 ? (totalGB <= 500 ? 250 : totalGB <= 1000 ? 400 : 750) : calculateItemsPrice()
+    const estimatedPrice = calculateTotalPrice()
     let message = `ازيك ي بشمهندس اسلام\nيارب تكون بخير دى الالعاب/الافلام اللى محتاجها\n\n${allItems.join('\n')}\n\n*المساحة الإجمالية: ${totalGB} GB*\n*السعر التقريبي: ${estimatedPrice} جنيه*`
     window.open(`https://m.me/bta3al3ab96?text=${encodeURIComponent(message)}`, '_blank')
   }
@@ -167,7 +195,7 @@ function SelectionBar() {
                       المساحة: {totalSizeGB.toFixed(1)} GB
                     </span>
                     <span className="text-[10px] sm:text-sm font-semibold bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400 px-2 py-0.5 rounded-full">
-                      السعر التقريبي: {totalSizeGB > 0 ? (totalSizeGB <= 500 ? 250 : totalSizeGB <= 1000 ? 400 : 750) : calculateItemsPrice()} جنيه
+                      السعر التقريبي: {calculateTotalPrice()} جنيه
                     </span>
                   </div>
                 )}

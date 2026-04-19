@@ -28,7 +28,8 @@ function MovieForm({ item, onSave, onCancel, itemType }) {
     country: '',
     awards: '',
     metascore: '',
-    imdbVotes: ''
+    imdbVotes: '',
+    price: ''
   })
 
   useEffect(() => {
@@ -54,7 +55,8 @@ function MovieForm({ item, onSave, onCancel, itemType }) {
         country: item.country || '',
         awards: item.awards || '',
         metascore: item.metascore || '',
-        imdbVotes: item.imdbVotes || ''
+        imdbVotes: item.imdbVotes || '',
+        price: item.price || ''
       })
     } else {
       setFormData({
@@ -78,7 +80,8 @@ function MovieForm({ item, onSave, onCancel, itemType }) {
         country: '',
         awards: '',
         metascore: '',
-        imdbVotes: ''
+        imdbVotes: '',
+        price: ''
       })
     }
   }, [item, itemType])
@@ -211,6 +214,7 @@ function MovieForm({ item, onSave, onCancel, itemType }) {
     if (formData.awards) itemData.awards = formData.awards
     if (formData.metascore) itemData.metascore = formData.metascore
     if (formData.imdbVotes) itemData.imdbVotes = formData.imdbVotes
+    if (formData.price) itemData.price = formData.price
 
     onSave(itemData)
   }
@@ -256,6 +260,22 @@ function MovieForm({ item, onSave, onCancel, itemType }) {
                   placeholder="مثال: 2023"
                   required
                 />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  السعر (يدوي) - اختياري
+                </label>
+                <input
+                  type="text"
+                  value={formData.price}
+                  onChange={(e) => setFormData({ ...formData, price: e.target.value })}
+                  className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="مثال: 50"
+                />
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                  إذا تركت هذا الحقل فارغاً، سيتم حساب السعر تلقائياً.
+                </p>
               </div>
 
               <div>

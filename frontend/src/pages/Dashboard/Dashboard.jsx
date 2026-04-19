@@ -1052,9 +1052,14 @@ function Dashboard() {
                       <h3 className="font-bold text-white text-lg line-clamp-2 mb-1 group-hover:text-gradient transition-colors duration-300">
                         {game.name}
                       </h3>
-                      <p className="text-sm text-white/70 font-medium mb-2">
+                      <p className="text-sm text-white/70 font-medium mb-1">
                         {game.size}
                       </p>
+                      {game.price && (
+                        <p className="text-sm text-green-400 font-bold mb-2 flex items-center gap-1">
+                          <span className="text-xs">السعر:</span> {game.price} ج.م
+                        </p>
+                      )}
                       {/* Game Categories */}
                       {game.categories && game.categories.length > 0 && (
                         <div className="flex flex-wrap gap-1 mt-2">
@@ -1448,6 +1453,13 @@ function Dashboard() {
                           </svg>
                           <span className="text-sm text-white font-semibold">
                             {item.size}
+                          </span>
+                        </div>
+                      )}
+                      {item.price && (
+                        <div className="flex items-center gap-2 mb-2 px-3 py-1.5 bg-green-500/20 rounded-lg border border-green-400/30 w-fit">
+                          <span className="text-xs text-white font-bold">
+                            السعر: {item.price} ج.م
                           </span>
                         </div>
                       )}
