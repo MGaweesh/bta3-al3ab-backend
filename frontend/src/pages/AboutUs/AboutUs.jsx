@@ -86,9 +86,9 @@ function AboutUs() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
               {[
-                { size: '500 جيجا', price: '250', color: 'from-green-500 to-emerald-600' },
-                { size: '1 تيرا', price: '400', color: 'from-blue-500 to-indigo-600', popular: true },
-                { size: '2 تيرا', price: '750', color: 'from-purple-500 to-fuchsia-600' }
+                { size: '500 جيجا', price: '300', color: 'from-green-500 to-emerald-600' },
+                { size: '1 تيرا', price: '500', color: 'from-blue-500 to-indigo-600', popular: true },
+                { size: '2 تيرا', price: '800', color: 'from-purple-500 to-fuchsia-600' }
               ].map((tier, idx) => (
                 <div key={idx} className={`relative bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-xl border ${tier.popular ? 'border-blue-500 dark:border-blue-400 transform md:-translate-y-4' : 'border-gray-100 dark:border-gray-700'}`}>
                   {tier.popular && <div className="absolute top-0 right-1/2 transform translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">الأكثر طلباً</div>}
@@ -103,7 +103,7 @@ function AboutUs() {
             
             <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800/50 rounded-xl p-6 mb-6 text-gray-700 dark:text-gray-300">
               <p className="mb-2 text-lg font-semibold text-blue-800 dark:text-blue-300">💡 في الباقات دي تقدر تشكل براحتك ألعاب على مسلسلات على أنمي زي ما تحب.</p>
-              <p className="text-lg">لو هتجيب اللاب توب بتاعك ننقلك عليه الداتا الباقة بتزيد <strong>50 جنيه بس</strong> علشان الداتا بتتنقل على هاردنا الخارجي الأول وبعدين تتنقل للاب توب بتاعك علشان نحافظ على أجهزتنا وأجهزتك. (يعني مثلاً باقة الـ 500 جيجا للاب توب هتكون بـ 300 جنيه).</p>
+              <p className="text-lg">لو هتجيب اللاب توب بتاعك ننقلك عليه الداتا الباقة بتزيد <strong>50 جنيه بس</strong> علشان الداتا بتتنقل على هاردنا الخارجي الأول وبعدين تتنقل للاب توب بتاعك علشان نحافظ على أجهزتنا وأجهزتك. (يعني مثلاً باقة الـ 500 جيجا للاب توب هتكون بـ 350 جنيه).</p>
             </div>
           </motion.div>
 
@@ -169,11 +169,11 @@ function AboutUs() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-4">
               <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 dark:from-red-900/20 dark:to-orange-900/20 rounded-xl p-6 border border-red-100 dark:border-red-900/30 flex justify-between items-center">
                 <span className="text-lg font-semibold text-gray-800 dark:text-gray-200">هارد 500 جيجا ممتلئ داتا من اختيارك</span>
-                <span className="text-2xl font-bold text-red-600 dark:text-red-400">750 جنيه</span>
+                <span className="text-2xl font-bold text-red-600 dark:text-red-400">800 جنيه</span>
               </div>
               <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 dark:from-red-900/20 dark:to-orange-900/20 rounded-xl p-6 border border-red-100 dark:border-red-900/30 flex justify-between items-center">
                 <span className="text-lg font-semibold text-gray-800 dark:text-gray-200">هارد 1 تيرا ممتلئ داتا من اختيارك</span>
-                <span className="text-2xl font-bold text-red-600 dark:text-red-400">1800 جنيه</span>
+                <span className="text-2xl font-bold text-red-600 dark:text-red-400">1900 جنيه</span>
               </div>
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-400 italic">
