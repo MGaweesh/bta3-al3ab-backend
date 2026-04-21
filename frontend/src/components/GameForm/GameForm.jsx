@@ -30,6 +30,8 @@ function GameForm({ game, onSave, onCancel, gameType }) {
   const [searchResults, setSearchResults] = useState([])
   const [loadingSearch, setLoadingSearch] = useState(false)
   const [loadingCategories, setLoadingCategories] = useState(false)
+  const [searchSource, setSearchSource] = useState('igdb') // 'igdb' or 'rawg'
+
   const [formData, setFormData] = useState({
     name: '',
     size: '',
@@ -185,7 +187,35 @@ function GameForm({ game, onSave, onCancel, gameType }) {
     return genreMap[genre] || null
   }
 
-  // Search for games by name in RAWG
+  // Map IGDB genres to our categories
+  const mapIgdbGenreToCategory = (genreName) => {
+    const genreMap = {
+      'Action': 'action',
+      'Adventure': 'adventure',
+      'Open World': 'open-world',
+      'Fighting': 'fighting',
+      'Horror': 'horror',
+      'Racing': 'racing',
+      'Sport': 'sports',
+      'Sports': 'sports',
+      'Shooter': 'shooter',
+      'Role-playing (RPG)': 'rpg',
+      'Strategy': 'strategy',
+      'Simulator': 'simulation',
+      'Simulation': 'simulation',
+      'Puzzle': 'puzzle',
+      'Indie': 'indie',
+      'Platform': 'platformer',
+      'Stealth': 'stealth',
+      'Survival': 'survival',
+      'Multiplayer': 'multiplayer',
+      'Single-player': 'single-player'
+    }
+    return genreMap[genreName] || null
+  }
+
+
+  // Search for games by name
   const searchGames = async () => {
     if (!searchQuery.trim()) {
       alert('الرجاء إدخال اسم اللعبة')
@@ -195,26 +225,30 @@ function GameForm({ game, onSave, onCancel, gameType }) {
     setLoadingSearch(true)
     setSearchResults([])
     try {
-      // RAWG API search
-      const apiKey = 'a970ae5d656144a08483c76b8b105d81'
-      const searchResponse = await fetch(
-        `https://api.rawg.io/api/games?key=${apiKey}&search=${encodeURIComponent(searchQuery.trim())}&page_size=5`
-      )
+      if (searchSource === 'rawg') {
+        // RAWG API search
+        const apiKey = 'a970ae5d656144a08483c76b8b105d81'
+        const searchResponse = await fetch(
+          `https://api.rawg.io/api/games?key=${apiKey}&search=${encodeURIComponent(searchQuery.trim())}&page_size=5`
+        )
 
-      if (!searchResponse.ok) {
-        throw new Error('Search failed')
+        if (!searchResponse.ok) throw new Error('Search failed')
+        const searchData = await searchResponse.json()
+        setSearchResults(searchData.results || [])
+      } else {
+        // IGDB Backend search
+        const response = await fetch(`/api/igdb/search?q=${encodeURIComponent(searchQuery.trim())}`)
+        if (!response.ok) throw new Error('IGDB search failed')
+        const results = await response.json()
+        setSearchResults(results)
       }
 
-      const searchData = await searchResponse.json()
-
-      if (searchData.results && searchData.results.length > 0) {
-        setSearchResults(searchData.results) // Show first 5 results
-      } else {
-        alert('لم يتم العثور على نتائج')
+      if (searchResults.length === 0 && !loadingSearch) {
+        // This check might be too early due to state async, but keeping for logic
       }
     } catch (error) {
       console.error('Error searching:', error)
-      alert('فشل البحث. يمكنك إدخال البيانات يدوياً.')
+      alert('فشل البحث. تأكد من إعداد مفاتيح API في الـ Backend.')
     } finally {
       setLoadingSearch(false)
     }
@@ -224,61 +258,59 @@ function GameForm({ game, onSave, onCancel, gameType }) {
   const importFromSearchResult = async (result) => {
     setLoadingCategories(true)
     try {
-      // Get detailed game info from RAWG
-      const apiKey = 'a970ae5d656144a08483c76b8b105d81'
-      const detailResponse = await fetch(
-        `https://api.rawg.io/api/games/${result.id}?key=${apiKey}`
-      )
-      const gameData = await detailResponse.json()
+      if (searchSource === 'rawg') {
+        // Detailed game info from RAWG
+        const apiKey = 'a970ae5d656144a08483c76b8b105d81'
+        const detailResponse = await fetch(`https://api.rawg.io/api/games/${result.id}?key=${apiKey}`)
+        const gameData = await detailResponse.json()
 
-      if (gameData && gameData.id) {
-        // Extract genres
-        const genres = gameData.genres ? gameData.genres.map(g => g.name) : []
-        const tags = gameData.tags ? gameData.tags.map(t => t.name) : []
-        const allGenres = [...genres, ...tags]
+        if (gameData && gameData.id) {
+          const genres = gameData.genres ? gameData.genres.map(g => g.name) : []
+          const tags = gameData.tags ? gameData.tags.map(t => t.name) : []
+          const allGenres = [...genres, ...tags]
+          const mappedCategories = allGenres.map(mapRawgGenreToCategory).filter(cat => cat !== null)
 
-        const mappedCategories = allGenres
-          .map(mapRawgGenreToCategory)
-          .filter(cat => cat !== null)
+          setFormData(prev => ({
+            ...prev,
+            name: gameData.name || prev.name,
+            imageUrl: gameData.background_image || gameData.background_image_additional || prev.imageUrl,
+            categories: [...new Set([...prev.categories, ...mappedCategories])],
+            rating: gameData.rating ? gameData.rating.toString() : prev.rating,
+            released: gameData.released || prev.released,
+            description: gameData.description_raw || gameData.description || prev.description,
+            platforms: gameData.platforms ? gameData.platforms.map(p => p.platform.name).join(', ') : prev.platforms,
+            developers: gameData.developers ? gameData.developers.map(d => d.name).join(', ') : prev.developers,
+            publishers: gameData.publishers ? gameData.publishers.map(p => p.name).join(', ') : prev.publishers,
+            metacritic: gameData.metacritic ? gameData.metacritic.toString() : prev.metacritic,
+            playtime: gameData.playtime ? `${gameData.playtime} ساعة` : prev.playtime,
+            website: gameData.website || prev.website
+          }))
+        }
+      } else {
+        // Detailed game info from IGDB Backend
+        const response = await fetch(`/api/igdb/game/${result.id}`)
+        if (!response.ok) throw new Error('IGDB detail fetch failed')
+        const gameData = await response.json()
 
-        // Extract platforms
-        const platformsList = gameData.platforms
-          ? gameData.platforms.map(p => p.platform.name).join(', ')
-          : ''
+        const mappedCategories = gameData.genres.map(mapIgdbGenreToCategory).filter(cat => cat !== null)
 
-        // Extract developers
-        const developersList = gameData.developers
-          ? gameData.developers.map(d => d.name).join(', ')
-          : ''
-
-        // Extract publishers
-        const publishersList = gameData.publishers
-          ? gameData.publishers.map(p => p.name).join(', ')
-          : ''
-
-        // Update form data
         setFormData(prev => ({
           ...prev,
           name: gameData.name || prev.name,
-          imageUrl: gameData.background_image || gameData.background_image_additional || prev.imageUrl,
+          imageUrl: gameData.image || prev.imageUrl,
           categories: [...new Set([...prev.categories, ...mappedCategories])],
-          rating: gameData.rating ? gameData.rating.toString() : prev.rating,
+          rating: gameData.rating || prev.rating,
           released: gameData.released || prev.released,
-          description: gameData.description_raw || gameData.description || prev.description,
-          platforms: platformsList || prev.platforms,
-          developers: developersList || prev.developers,
-          publishers: publishersList || prev.publishers,
-          metacritic: gameData.metacritic ? gameData.metacritic.toString() : prev.metacritic,
-          playtime: gameData.playtime ? `${gameData.playtime} ساعة` : prev.playtime,
+          description: gameData.description || prev.description,
+          platforms: gameData.platforms || prev.platforms,
+          developers: gameData.developers || prev.developers,
           website: gameData.website || prev.website
         }))
-
-        setSearchResults([])
-        setSearchQuery('')
-        alert(`تم استيراد ${mappedCategories.length} تصنيف وبيانات اللعبة`)
-      } else {
-        alert('لم يتم العثور على بيانات اللعبة')
       }
+
+      setSearchResults([])
+      setSearchQuery('')
+      alert(`تم استيراد بيانات اللعبة بنجاح`)
     } catch (error) {
       console.error('Error importing:', error)
       alert('فشل استيراد البيانات')
@@ -286,6 +318,7 @@ function GameForm({ game, onSave, onCancel, gameType }) {
       setLoadingCategories(false)
     }
   }
+
 
   const handleImageChange = (e) => {
     const file = e.target.files[0]
@@ -504,8 +537,33 @@ function GameForm({ game, onSave, onCancel, gameType }) {
               {/* Auto Import from RAWG */}
               <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-200 dark:border-blue-800">
                 <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                  استيراد تلقائي من RAWG (ابحث بالاسم)
+                  استيراد تلقائي للبيانات (ابحث بالاسم)
                 </label>
+                
+                {/* Source Toggle */}
+                <div className="flex gap-2 mb-4">
+                  <button
+                    type="button"
+                    onClick={() => setSearchSource('igdb')}
+                    className={`flex-1 py-1.5 rounded-lg text-xs font-bold transition-all ${searchSource === 'igdb'
+                      ? 'bg-purple-600 text-white shadow-md'
+                      : 'bg-white/50 dark:bg-gray-700 text-gray-500 border border-gray-200 dark:border-gray-600'
+                      }`}
+                  >
+                    IGDB (أفضل)
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setSearchSource('rawg')}
+                    className={`flex-1 py-1.5 rounded-lg text-xs font-bold transition-all ${searchSource === 'rawg'
+                      ? 'bg-blue-600 text-white shadow-md'
+                      : 'bg-white/50 dark:bg-gray-700 text-gray-500 border border-gray-200 dark:border-gray-600'
+                      }`}
+                  >
+                    RAWG
+                  </button>
+                </div>
+
                 <div className="flex gap-2 mb-2">
                   <input
                     type="text"

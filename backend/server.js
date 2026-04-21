@@ -8,6 +8,8 @@ import { existsSync, readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { parseRequirements } from './utils/parseRequirements.js';
+import * as igdb from './utils/igdb.js';
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -854,70 +856,89 @@ app.post('/api/games/:type', async (req, res) => {
     const validTypes = ['readyToPlay', 'repack', 'online'];
     if (!validTypes.includes(type)) return res.status(400).json({ error: 'Invalid type' });
 
-    const newItem = { id: Date.now(), ...req.body, createdAt: new Date().toISOString() };
-    const data = await readGamesData();
+    const db = getCollection('games');
+    const newItem = { 
+      id: Date.now(), 
+      ...req.body, 
+      category: type,
+      createdAt: new Date().toISOString() 
+    };
 
-    if (!data[type]) data[type] = [];
-    data[type].push(newItem); // Add to end (or unshift if prefer new at top? Old Games used push I think, News/Bundles used unshift)
-    // Actually for games usually order doesn't matter as much or they ARE sorted by something else. 
-    // Let's assume push for now.
-
-    const result = await writeGamesData(data);
-    if (result.success) {
-      res.status(201).json(newItem);
-    } else {
-      res.status(500).json({ error: 'Failed to save game' });
-    }
+    await db.insertOne(newItem);
+    res.status(201).json(newItem);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 });
+
 
 // PUT - Update a game
 app.put('/api/games/:type/:id', async (req, res) => {
   try {
     const { type, id } = req.params;
     const itemId = parseInt(id);
-    const data = await readGamesData();
+    const db = getCollection('games');
 
-    if (!data[type]) return res.status(404).json({ error: 'Type not found' });
+    const updateData = {
+      ...req.body,
+      id: itemId,
+      category: type,
+      updatedAt: new Date().toISOString()
+    };
 
-    const itemIndex = data[type].findIndex(item => item.id === itemId);
-    if (itemIndex === -1) return res.status(404).json({ error: 'Game not found' });
+    const result = await db.updateOne(
+      { id: itemId },
+      { $set: updateData }
+    );
 
-    data[type][itemIndex] = { ...data[type][itemIndex], ...req.body, id: itemId, updatedAt: new Date().toISOString() };
+    if (result.matchedCount === 0) return res.status(404).json({ error: 'Game not found' });
 
-    const result = await writeGamesData(data);
-    if (result.success) {
-      res.json({ ...data[type][itemIndex], _db: true });
-    } else {
-      res.status(500).json({ error: 'Failed to update game' });
-    }
+    res.json({ ...updateData, _db: true });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 });
+
 
 // DELETE - Delete a game
 app.delete('/api/games/:type/:id', async (req, res) => {
   try {
     const { type, id } = req.params;
     const itemId = parseInt(id);
-    const data = await readGamesData();
+    const db = getCollection('games');
 
-    if (!data[type]) return res.status(404).json({ error: 'Type not found' });
+    const result = await db.deleteOne({ id: itemId });
 
-    const itemIndex = data[type].findIndex(item => item.id === itemId);
-    if (itemIndex === -1) return res.status(404).json({ error: 'Game not found' });
+    if (result.deletedCount === 0) return res.status(404).json({ error: 'Game not found' });
 
-    data[type].splice(itemIndex, 1);
+    res.json({ status: 'ok' });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
-    const result = await writeGamesData(data);
-    if (result.success) {
-      res.json({ status: 'ok' });
-    } else {
-      res.status(500).json({ error: 'Failed to delete game' });
-    }
+
+// ============ IGDB API ROUTES ============
+
+// GET /api/igdb/search?q=...
+app.get('/api/igdb/search', async (req, res) => {
+  const query = req.query.q;
+  if (!query) return res.status(400).json({ error: 'Search query is required' });
+
+  try {
+    const results = await igdb.searchGames(query);
+    res.json(results);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// GET /api/igdb/game/:id
+app.get('/api/igdb/game/:id', async (req, res) => {
+  try {
+    const game = await igdb.getGameDetails(req.params.id);
+    if (!game) return res.status(404).json({ error: 'Game not found' });
+    res.json(game);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -966,41 +987,19 @@ app.post('/api/movies/:type', async (req, res) => {
 
     console.log(`📝 [${new Date().toISOString()}] Adding new item to type: ${type}`);
 
-    // Read data from file
-    const data = await readMoviesData(); // Added await
+    const db = getCollection('movies');
     const newItem = {
       id: Date.now(),
       ...req.body,
+      category: type,
       createdAt: new Date().toISOString()
     };
 
-    if (!data[type]) {
-      data[type] = [];
-    }
+    await db.insertOne(newItem);
 
-    data[type].push(newItem);
+    console.log(`✅ [${new Date().toISOString()}] Item saved: ${newItem.name} (ID: ${newItem.id})`);
+    res.status(201).json(newItem);
 
-    // Write to file and commit to GitHub
-    const writeResult = await writeMoviesData(data, `add ${type}: ${newItem.name || 'unnamed'}`);
-
-    if (writeResult.success) {
-      console.log(`✅ [${new Date().toISOString()}] Item saved: ${newItem.name} (ID: ${newItem.id})`);
-      if (writeResult.github) {
-        console.log(`✅ Committed to GitHub: ${writeResult.commitUrl}`);
-      }
-
-      res.status(201).json({
-        ...newItem,
-        _github: writeResult.github ? { committed: true, commitUrl: writeResult.commitUrl } : { committed: false, message: writeResult.message }
-      });
-    } else {
-      console.error(`❌ [${new Date().toISOString()}] Failed to save item: ${newItem.name}`);
-      res.status(500).json({
-        status: 'error',
-        error: 'Failed to save item',
-        details: writeResult.error || 'Unknown error'
-      });
-    }
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error adding item:`, error);
     res.status(500).json({
@@ -1075,45 +1074,21 @@ app.delete('/api/movies/:type/:id', async (req, res) => {
 
     console.log(`🗑️  [${new Date().toISOString()}] Deleting item from type: ${type}, ID: ${id}`);
 
-    // Read data from file
-    const data = readMoviesData();
+    const db = getCollection('movies');
     const itemId = parseInt(id);
 
-    if (!data[type]) {
-      return res.status(404).json({ error: 'Type not found' });
-    }
+    const result = await db.deleteOne({ id: itemId });
 
-    const itemIndex = data[type].findIndex(item => item.id === itemId);
-
-    if (itemIndex === -1) {
+    if (result.deletedCount === 0) {
       return res.status(404).json({ error: 'Item not found' });
     }
 
-    const deletedItem = data[type][itemIndex];
-    data[type].splice(itemIndex, 1);
+    console.log(`✅ [${new Date().toISOString()}] Item deleted (ID: ${itemId})`);
+    res.json({
+      status: 'ok',
+      message: 'Item deleted successfully'
+    });
 
-    // Write to file and commit to GitHub
-    const writeResult = await writeMoviesData(data, `delete ${type}: ${deletedItem.name || 'unnamed'}`);
-
-    if (writeResult.success) {
-      console.log(`✅ [${new Date().toISOString()}] Item deleted: ${deletedItem.name} (ID: ${itemId})`);
-      if (writeResult.github) {
-        console.log(`✅ Committed to GitHub: ${writeResult.commitUrl}`);
-      }
-
-      res.json({
-        status: 'ok',
-        message: 'Item deleted successfully',
-        _github: writeResult.github ? { committed: true, commitUrl: writeResult.commitUrl } : { committed: false, message: writeResult.message }
-      });
-    } else {
-      console.error(`❌ [${new Date().toISOString()}] Failed to delete item: ${deletedItem.name}`);
-      res.status(500).json({
-        status: 'error',
-        error: 'Failed to delete item',
-        details: writeResult.error || 'Unknown error'
-      });
-    }
   } catch (error) {
     console.error(`❌ [${new Date().toISOString()}] Error deleting item:`, error);
     res.status(500).json({
