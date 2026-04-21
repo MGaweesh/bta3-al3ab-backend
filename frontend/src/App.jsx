@@ -14,12 +14,14 @@ import CanIRunIt from './pages/CanIRunIt/CanIRunIt'
 import Explore from './pages/Explore/Explore'
 import { DarkModeProvider } from './context/DarkModeContext'
 import { SelectionProvider } from './context/SelectionContext'
+import { MoviesProvider } from './hooks/useMovies'
 
 function App() {
   return (
     <DarkModeProvider>
       <SelectionProvider>
-        <Router>
+        <MoviesProvider>
+          <Router>
           <ScrollToTop />
           <GoogleAnalytics />
           <FloatingSocialBar />
@@ -106,7 +108,8 @@ function App() {
             />
           </Routes>
           <SelectionBar />
-        </Router>
+          </Router>
+        </MoviesProvider>
       </SelectionProvider>
     </DarkModeProvider>
   )

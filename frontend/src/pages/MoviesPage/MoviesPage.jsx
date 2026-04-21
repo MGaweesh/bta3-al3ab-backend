@@ -79,10 +79,11 @@ function MoviesPage() {
   const [displayCount, setDisplayCount] = useState(12)
   const loaderRef = useRef(null)
 
-  // Reset display count when items change
+  // Reset display count when the dataset identity changes (category or item count),
+  // not on every new array reference — that was causing the infinite scroll to flicker back.
   useEffect(() => {
     setDisplayCount(12)
-  }, [items, type, filteredItems])
+  }, [type, items.length])
 
   // Native IntersectionObserver for Infinite Scroll
   useEffect(() => {

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext, createContext, useCallback, useMemo } from 'react'
 import api from '../services/api'
 import { movieImages } from '../data/movieImages'
 
@@ -62,104 +62,96 @@ const initialAnime = [
   { id: 215, name: "Neon Genesis Evangelion", seasons: "1", rating: "8.5", genre: "Sci-Fi, Mecha", image: getMovieImage("Neon Genesis Evangelion"), description: "A teenage boy finds himself recruited as a member of an elite team of pilots by his father." }
 ]
 
-export const useMovies = () => {
+const addImagesToItems = (items) =>
+  items.map((item) => ({
+    ...item,
+    image: item.image || getMovieImage(item.name || item.title),
+  }))
+
+const deduplicateById = (items) => {
+  const seen = new Map()
+  for (const item of items) {
+    const key =
+      item?.id != null ? String(item.id) : `${item?.name || ''}-${item?.year || ''}`
+    seen.set(key, item)
+  }
+  return Array.from(seen.values())
+}
+
+const sortItemsAlphabetically = (items) =>
+  [...items].sort((a, b) => {
+    const nameA = (a.name || '').toLowerCase().trim()
+    const nameB = (b.name || '').toLowerCase().trim()
+    return nameA.localeCompare(nameB, 'en', { numeric: true, sensitivity: 'base' })
+  })
+
+const normalize = (items) =>
+  sortItemsAlphabetically(deduplicateById(addImagesToItems(items || [])))
+
+const getLocalData = (key) => {
+  try {
+    const item = localStorage.getItem(key)
+    return item ? JSON.parse(item) : []
+  } catch {
+    return []
+  }
+}
+
+const MoviesContext = createContext(null)
+
+export const MoviesProvider = ({ children }) => {
   const [movies, setMovies] = useState([])
   const [tvShows, setTvShows] = useState([])
   const [anime, setAnime] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
-  // Helper to add images to items if missing
-  const addImagesToItems = (items) => {
-    return items.map(item => ({
-      ...item,
-      image: item.image || getMovieImage(item.name || item.title)
-    }))
-  }
-
-  // Helper to deduplicate items by id (keep last occurrence)
-  const deduplicateById = (items) => {
-    const seen = new Map()
-    for (const item of items) {
-      // Normalize id key to avoid duplicates like 123 vs "123"
-      const key = item?.id != null ? String(item.id) : `${item?.name || ''}-${item?.year || ''}`
-      seen.set(key, item)
-    }
-    return Array.from(seen.values())
-  }
-
-  // Helper to sort items alphabetically by name
-  const sortItemsAlphabetically = (items) => {
-    return [...items].sort((a, b) => {
-      const nameA = (a.name || '').toLowerCase().trim()
-      const nameB = (b.name || '').toLowerCase().trim()
-      return nameA.localeCompare(nameB, 'en', { numeric: true, sensitivity: 'base' })
-    })
-  }
-
-  // Helper to get local data safely
-  const getLocalData = (key) => {
-    try {
-      const item = localStorage.getItem(key)
-      return item ? JSON.parse(item) : []
-    } catch {
-      return []
-    }
-  }
-
-  const loadMovies = async (forceRefresh = false) => {
+  const loadMovies = useCallback(async (forceRefresh = false) => {
     try {
       setLoading(true)
       setError(null)
 
       console.log('🔄 Loading movies...')
-
-      // Always fetch from API first to avoid stale UI after edits.
       const data = await api.getAllMovies()
-
       console.log('✅ Movies data received:', {
         movies: data.movies?.length || 0,
         tvShows: data.tvShows?.length || 0,
-        anime: data.anime?.length || 0
+        anime: data.anime?.length || 0,
       })
 
-      // Add images and sort items alphabetically
-      const sortedMovies = sortItemsAlphabetically(deduplicateById(addImagesToItems(data.movies || [])))
-      const sortedTvShows = sortItemsAlphabetically(deduplicateById(addImagesToItems(data.tvShows || [])))
-      const sortedAnime = sortItemsAlphabetically(deduplicateById(addImagesToItems(data.anime || [])))
+      const sortedMovies = normalize(data.movies)
+      const sortedTvShows = normalize(data.tvShows)
+      const sortedAnime = normalize(data.anime)
 
-      // 3. Update State
       setMovies(sortedMovies)
       setTvShows(sortedTvShows)
       setAnime(sortedAnime)
 
-      // Update LocalStorage (fallback cache only)
       localStorage.setItem('movies_cache', JSON.stringify(sortedMovies))
       localStorage.setItem('tvShows_cache', JSON.stringify(sortedTvShows))
       localStorage.setItem('anime_cache', JSON.stringify(sortedAnime))
-
     } catch (err) {
       console.error('❌ Error loading movies from API:', err)
-      const isNetworkError = err.message.includes('fetch') ||
+      const isNetworkError =
+        err.message.includes('fetch') ||
         err.message.includes('Network') ||
         err.message.includes('Failed to fetch')
 
       if (isNetworkError) {
-        // Fallback to local cache first, then hardcoded data
         const savedMovies = forceRefresh ? [] : getLocalData('movies_cache')
         const savedTvShows = forceRefresh ? [] : getLocalData('tvShows_cache')
         const savedAnime = forceRefresh ? [] : getLocalData('anime_cache')
 
         if (savedMovies.length || savedTvShows.length || savedAnime.length) {
           console.warn('⚠️ Network error, using cached data')
-          setMovies(sortItemsAlphabetically(deduplicateById(addImagesToItems(savedMovies))))
-          setTvShows(sortItemsAlphabetically(deduplicateById(addImagesToItems(savedTvShows))))
-          setAnime(sortItemsAlphabetically(deduplicateById(addImagesToItems(savedAnime))))
+          setMovies(normalize(savedMovies))
+          setTvShows(normalize(savedTvShows))
+          setAnime(normalize(savedAnime))
         } else {
           console.warn('⚠️ Network error, using fallback data')
-          setMovies(sortItemsAlphabetically(deduplicateById(addImagesToItems(initialMovies))))
-          setTvShows(sortItemsAlphabetically(deduplicateById(addImagesToItems(initialTvShows))))
-          setAnime(sortItemsAlphabetically(deduplicateById(addImagesToItems(initialAnime))))
+          setMovies(normalize(initialMovies))
+          setTvShows(normalize(initialTvShows))
+          setAnime(normalize(initialAnime))
         }
       } else {
         setError('فشل تحميل الأفلام من السيرفر: ' + err.message)
@@ -170,18 +162,30 @@ export const useMovies = () => {
     } finally {
       setLoading(false)
     }
-  }
+  }, [])
 
   useEffect(() => {
     loadMovies()
-  }, [])
+  }, [loadMovies])
 
+  const value = useMemo(
+    () => ({ movies, tvShows, anime, loading, error, refreshMovies: loadMovies }),
+    [movies, tvShows, anime, loading, error, loadMovies]
+  )
+
+  return React.createElement(MoviesContext.Provider, { value }, children)
+}
+
+export const useMovies = () => {
+  const ctx = useContext(MoviesContext)
+  if (ctx) return ctx
+  // Safety fallback so components still render outside the provider (should not happen in prod).
   return {
-    movies,
-    tvShows,
-    anime,
-    loading,
-    error,
-    refreshMovies: loadMovies,
+    movies: [],
+    tvShows: [],
+    anime: [],
+    loading: false,
+    error: null,
+    refreshMovies: async () => { },
   }
 }
