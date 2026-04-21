@@ -269,9 +269,9 @@ function GameForm({ game, onSave, onCancel, gameType }) {
           const allGenres = [...genres, ...tags]
           const mappedCategories = allGenres.map(mapRawgGenreToCategory).filter(cat => cat !== null)
 
-          let sysReqs = { ...prev.systemRequirements };
+          let sysReqs = { ...formData.systemRequirements };
           try {
-            const reqData = await api.getSteamRequirements(gameData.name || prev.name);
+            const reqData = await api.getSteamRequirements(gameData.name || formData.name);
             if (reqData && reqData.minimumParsed) {
               sysReqs = {
                 minimum: reqData.minimumParsed,
@@ -306,9 +306,9 @@ function GameForm({ game, onSave, onCancel, gameType }) {
 
         const mappedCategories = gameData.genres ? gameData.genres.map(mapIgdbGenreToCategory).filter(cat => cat !== null) : []
 
-        let sysReqs = { ...prev.systemRequirements };
+        let sysReqs = { ...formData.systemRequirements };
         try {
-          const reqData = await api.getSteamRequirements(gameData.name || prev.name);
+          const reqData = await api.getSteamRequirements(gameData.name || formData.name);
           if (reqData && reqData.minimumParsed) {
             sysReqs = {
               minimum: reqData.minimumParsed,
