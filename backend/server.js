@@ -4,7 +4,7 @@ import cors from 'cors';
 import compression from 'compression';
 import { MongoClient } from 'mongodb';
 import axios from 'axios';
-import { existsSync, readFileSync } from 'fs';
+import { existsSync, readFileSync, statSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { parseRequirements } from './utils/parseRequirements.js';
@@ -1203,6 +1203,73 @@ app.get('/api/debug/movies-summary', async (req, res) => {
         tvShows: summarize(byCategory.tvShows),
         anime: summarize(byCategory.anime),
         unknown: summarize(byCategory.unknown)
+      }
+    });
+  } catch (error) {
+    return res.status(500).json({ ok: false, error: error.message });
+  }
+});
+
+// Debug: which Vite bundle is baked into ../frontend/dist (on the server disk)
+app.get('/api/debug/frontend-bundle', async (req, res) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+
+  try {
+    const indexPath = join(frontendBuildPath, 'index.html');
+    if (!existsSync(frontendBuildPath) || !existsSync(indexPath)) {
+      return res.status(404).json({
+        ok: false,
+        error: 'frontend dist not found on server',
+        hint: 'Run npm run build in frontend/ (or ensure deploy runs backend postinstall)',
+        frontendBuildPath
+      });
+    }
+
+    const html = readFileSync(indexPath, 'utf8');
+    const scriptMatch = html.match(/<script[^>]+src="(\/assets\/index-[^"]+\.js)"/i);
+    const mainJsWebPath = scriptMatch?.[1] || null;
+    const mainJsDiskPath = mainJsWebPath
+      ? join(frontendBuildPath, mainJsWebPath.replace(/^\//, ''))
+      : null;
+
+    let jsMtimeMs = null;
+    let jsSize = null;
+    let usesCacheFirstPattern = null;
+    let fetchesApiFirstPattern = null;
+
+    if (mainJsDiskPath && existsSync(mainJsDiskPath)) {
+      const st = statSync(mainJsDiskPath);
+      jsMtimeMs = st.mtimeMs;
+      jsSize = st.size;
+      // Read a bounded prefix: enough to cover the `useMovies` hook after minification
+      const head = readFileSync(mainJsDiskPath, { encoding: 'utf8', end: 1200000, start: 0 });
+      const loadingIdx = head.indexOf('Loading movies');
+      const windowAfterLoading =
+        loadingIdx === -1 ? '' : head.slice(loadingIdx, loadingIdx + 2000);
+      // Old bundle: logs cache hydration ("Loaded items from cache") *before* calling the API
+      // New bundle: goes straight to `getAllMovies()` after the "Loading movies" log
+      usesCacheFirstPattern = windowAfterLoading.includes('Loaded items from cache');
+      fetchesApiFirstPattern =
+        loadingIdx !== -1 &&
+        !usesCacheFirstPattern &&
+        windowAfterLoading.includes('getAllMovies');
+    }
+
+    return res.json({
+      ok: true,
+      frontendBuildPath,
+      indexHtml: indexPath,
+      mainJs: {
+        webPath: mainJsWebPath,
+        diskPath: mainJsDiskPath,
+        size: jsSize,
+        mtimeMs: jsMtimeMs
+      },
+      heuristics: {
+        usesCacheFirstPattern,
+        fetchesApiFirstPattern
       }
     });
   } catch (error) {
