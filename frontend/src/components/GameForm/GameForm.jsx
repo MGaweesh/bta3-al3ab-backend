@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import api from '../../services/api'
 import './GameForm.css'
 
 // Available game categories
@@ -237,10 +238,8 @@ function GameForm({ game, onSave, onCancel, gameType }) {
         setSearchResults(searchData.results || [])
       } else {
         // IGDB Backend search
-        const response = await fetch(`/api/igdb/search?q=${encodeURIComponent(searchQuery.trim())}`)
-        if (!response.ok) throw new Error('IGDB search failed')
-        const results = await response.json()
-        setSearchResults(results)
+        const results = await api.searchIgdb(searchQuery.trim())
+        setSearchResults(results || [])
       }
 
       if (searchResults.length === 0 && !loadingSearch) {
@@ -288,11 +287,10 @@ function GameForm({ game, onSave, onCancel, gameType }) {
         }
       } else {
         // Detailed game info from IGDB Backend
-        const response = await fetch(`/api/igdb/game/${result.id}`)
-        if (!response.ok) throw new Error('IGDB detail fetch failed')
-        const gameData = await response.json()
+        const gameData = await api.getIgdbGame(result.id)
+        if (!gameData) throw new Error('IGDB detail fetch failed')
 
-        const mappedCategories = gameData.genres.map(mapIgdbGenreToCategory).filter(cat => cat !== null)
+        const mappedCategories = gameData.genres ? gameData.genres.map(mapIgdbGenreToCategory).filter(cat => cat !== null) : []
 
         setFormData(prev => ({
           ...prev,

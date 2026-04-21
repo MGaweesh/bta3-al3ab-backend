@@ -242,6 +242,19 @@ class ApiService {
     console.log('🎮 Fetching Steam requirements for:', gameTitle);
     return this.request(`/requirements?game=${encodeURIComponent(gameTitle)}`);
   }
+
+  // ============ IGDB API ============
+
+  // Search games on IGDB
+  async searchIgdb(query) {
+    return this.request(`/igdb/search?q=${encodeURIComponent(query)}`);
+  }
+
+  // Get full game details from IGDB
+  async getIgdbGame(gameId) {
+    return this.request(`/igdb/game/${gameId}`);
+  }
+
   // ============ NEWS ============
 
   // Get all news
