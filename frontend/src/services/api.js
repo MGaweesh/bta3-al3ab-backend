@@ -1,8 +1,5 @@
-// API Base URL - Production: Render, Development: localhost or Render
-// You can use Render backend directly by setting VITE_API_URL in .env file
-// Or it will try localhost first, then fallback to Render if localhost fails
-const RENDER_BACKEND_URL = 'https://bta3-al3ab-backend.onrender.com/api';
-const BASE_URL = 'http://localhost:3001/api'; // Changed to localhost for development
+// API Base URL - Production: Railway, Development: localhost
+const RAILWAY_BACKEND_URL = 'https://bta3-al3ab-backend-production.up.railway.app/api';
 const LOCAL_BACKEND_URL = 'http://localhost:3001/api';
 
 const getApiBaseUrl = () => {
@@ -13,12 +10,10 @@ const getApiBaseUrl = () => {
 
   // In production, always use Railway
   if (import.meta.env.PROD) {
-    return BASE_URL;
+    return RAILWAY_BACKEND_URL;
   }
 
-  // In development, use localhost by default
-  // If you want to use Render instead, create .env file with:
-  // VITE_API_URL=https://bta3-al3ab-backend.onrender.com/api
+  // In development, use localhost
   return LOCAL_BACKEND_URL;
 };
 
