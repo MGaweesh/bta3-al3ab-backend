@@ -269,6 +269,19 @@ function GameForm({ game, onSave, onCancel, gameType }) {
           const allGenres = [...genres, ...tags]
           const mappedCategories = allGenres.map(mapRawgGenreToCategory).filter(cat => cat !== null)
 
+          let sysReqs = { ...prev.systemRequirements };
+          try {
+            const reqData = await api.getSteamRequirements(gameData.name || prev.name);
+            if (reqData && reqData.minimumParsed) {
+              sysReqs = {
+                minimum: reqData.minimumParsed,
+                recommended: reqData.recommendedParsed || reqData.minimumParsed
+              };
+            }
+          } catch (reqError) {
+            console.warn('Could not fetch Steam requirements:', reqError);
+          }
+
           setFormData(prev => ({
             ...prev,
             name: gameData.name || prev.name,
@@ -282,7 +295,8 @@ function GameForm({ game, onSave, onCancel, gameType }) {
             publishers: gameData.publishers ? gameData.publishers.map(p => p.name).join(', ') : prev.publishers,
             metacritic: gameData.metacritic ? gameData.metacritic.toString() : prev.metacritic,
             playtime: gameData.playtime ? `${gameData.playtime} ساعة` : prev.playtime,
-            website: gameData.website || prev.website
+            website: gameData.website || prev.website,
+            systemRequirements: sysReqs
           }))
         }
       } else {
@@ -291,6 +305,19 @@ function GameForm({ game, onSave, onCancel, gameType }) {
         if (!gameData) throw new Error('IGDB detail fetch failed')
 
         const mappedCategories = gameData.genres ? gameData.genres.map(mapIgdbGenreToCategory).filter(cat => cat !== null) : []
+
+        let sysReqs = { ...prev.systemRequirements };
+        try {
+          const reqData = await api.getSteamRequirements(gameData.name || prev.name);
+          if (reqData && reqData.minimumParsed) {
+            sysReqs = {
+              minimum: reqData.minimumParsed,
+              recommended: reqData.recommendedParsed || reqData.minimumParsed
+            };
+          }
+        } catch (reqError) {
+          console.warn('Could not fetch Steam requirements:', reqError);
+        }
 
         setFormData(prev => ({
           ...prev,
@@ -302,7 +329,8 @@ function GameForm({ game, onSave, onCancel, gameType }) {
           description: gameData.description || prev.description,
           platforms: gameData.platforms || prev.platforms,
           developers: gameData.developers || prev.developers,
-          website: gameData.website || prev.website
+          website: gameData.website || prev.website,
+          systemRequirements: sysReqs
         }))
       }
 
