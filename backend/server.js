@@ -29,11 +29,14 @@ let db;
 
 async function connectToMongo() {
   try {
-    if (!client.topology || !client.topology.isConnected()) {
-      await client.connect();
-      console.log("✅ Using MongoDB Database");
-      db = client.db('bta3al3ab');
+    if (db) return;
+    if (!uri) {
+      throw new Error('MONGODB_URI is missing');
     }
+
+    await client.connect();
+    console.log("✅ Using MongoDB Database");
+    db = client.db(process.env.MONGODB_DB || 'bta3al3ab');
   } catch (err) {
     console.error("❌ MongoDB connection error:", err);
   }
@@ -636,8 +639,8 @@ const writeSubscribersData = async (data) => {
 
 
 
-// GET /api/status - Health check
-app.get(['/api/status', '/api/health'], (req, res) => {
+// GET /api/status - Basic health check (kept for backward compatibility)
+app.get('/api/status', (req, res) => {
   res.json({ status: 'ok', db: db ? 'connected' : 'disconnected' })
 })
 
@@ -1112,16 +1115,12 @@ app.delete('/api/movies/:type/:id', async (req, res) => {
 // Health check
 app.get('/api/health', async (req, res) => {
   try {
-    const githubTest = await testGitHubConnection();
-
     res.json({
       status: 'ok',
       message: 'API is running',
-      storage: 'JSON files',
-      github: {
-        configured: !!process.env.GITHUB_TOKEN && !!process.env.GITHUB_OWNER && !!process.env.GITHUB_REPO,
-        connection: githubTest.success ? 'ok' : 'failed',
-        error: githubTest.error || null
+      mongo: {
+        connected: !!db,
+        dbName: db?.databaseName || null
       }
     });
   } catch (error) {
@@ -1130,6 +1129,48 @@ app.get('/api/health', async (req, res) => {
       message: 'API is running but health check failed',
       error: error.message
     });
+  }
+});
+
+// Debug: quick MongoDB summary for movies/tvShows/anime
+app.get('/api/debug/movies-summary', async (req, res) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+
+  try {
+    const moviesCol = getCollection('movies');
+    const docs = await moviesCol.find({}).project({ _id: 0, id: 1, category: 1, name: 1, updatedAt: 1, createdAt: 1 }).toArray();
+
+    const byCategory = docs.reduce((acc, doc) => {
+      const key = doc.category || 'unknown';
+      if (!acc[key]) acc[key] = [];
+      acc[key].push(doc);
+      return acc;
+    }, {});
+
+    const summarize = (arr = []) => {
+      const count = arr.length;
+      const last = [...arr].sort((a, b) => {
+        const ta = new Date(a.updatedAt || a.createdAt || 0).getTime();
+        const tb = new Date(b.updatedAt || b.createdAt || 0).getTime();
+        return tb - ta;
+      })[0] || null;
+      return { count, last };
+    };
+
+    return res.json({
+      ok: true,
+      mongo: { connected: !!db, dbName: db?.databaseName || null },
+      categories: {
+        movies: summarize(byCategory.movies),
+        tvShows: summarize(byCategory.tvShows),
+        anime: summarize(byCategory.anime),
+        unknown: summarize(byCategory.unknown)
+      }
+    });
+  } catch (error) {
+    return res.status(500).json({ ok: false, error: error.message });
   }
 });
 
