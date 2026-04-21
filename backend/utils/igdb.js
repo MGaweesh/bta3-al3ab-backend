@@ -90,7 +90,7 @@ export const getGameDetails = async (gameId) => {
   const query = `
     fields name, summary, storyline, first_release_date, total_rating, 
     cover.url, artworks.url, screenshots.url,
-    genres.name, platforms.name, developers.name, involved_companies.company.name, involved_companies.developer,
+    genres.name, platforms.name, involved_companies.company.name, involved_companies.developer,
     websites.url, websites.category;
     where id = ${gameId};
   `;
