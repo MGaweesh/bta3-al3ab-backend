@@ -269,6 +269,24 @@ function Dashboard() {
     try {
       const currentType = activeTab === 'movies' ? 'movies' : activeTab === 'tvShows' ? 'tvShows' : 'anime'
 
+      // #region agent log
+      if (import.meta.env.DEV) {
+        fetch('http://127.0.0.1:7784/ingest/e350e58d-ac89-4e70-b52d-c1f38e44c968', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'X-Debug-Session-Id': '04047f' },
+          body: JSON.stringify({
+            sessionId: '04047f',
+            runId: 'pre-fix',
+            hypothesisId: 'H3',
+            location: 'frontend/src/pages/Dashboard/Dashboard.jsx:handleSaveMovie',
+            message: 'dashboard save movie',
+            data: { activeTab, currentType, isEdit: !!editingItem, editingId: editingItem?.id, payloadKeys: Object.keys(itemData || {}) },
+            timestamp: Date.now()
+          })
+        }).catch(() => { })
+      }
+      // #endregion agent log
+
       console.log(`💾 [${new Date().toISOString()}] Saving item to MongoDB...`)
 
       if (editingItem) {
@@ -283,6 +301,26 @@ function Dashboard() {
 
       // Reload movies from API to get fresh data from MongoDB
       await loadMovies()
+
+      // #region agent log
+      const idKey = editingItem?.id != null ? String(editingItem.id) : null
+      const after = (movies?.[currentType] || []).find(m => String(m?.id) === idKey) || null
+      if (import.meta.env.DEV) {
+        fetch('http://127.0.0.1:7784/ingest/e350e58d-ac89-4e70-b52d-c1f38e44c968', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'X-Debug-Session-Id': '04047f' },
+          body: JSON.stringify({
+            sessionId: '04047f',
+            runId: 'pre-fix',
+            hypothesisId: 'H4',
+            location: 'frontend/src/pages/Dashboard/Dashboard.jsx:handleSaveMovie',
+            message: 'dashboard after loadMovies',
+            data: { currentType, listCount: (movies?.[currentType] || []).length, editedId: idKey, foundAfterLoad: !!after, foundName: after?.name, foundUpdatedAt: after?.updatedAt },
+            timestamp: Date.now()
+          })
+        }).catch(() => { })
+      }
+      // #endregion agent log
 
       setShowMovieForm(false)
       setEditingItem(null)

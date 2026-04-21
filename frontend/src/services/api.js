@@ -36,7 +36,23 @@ class ApiService {
       console.log('📤 API Request:', url, options.method || 'GET');
     }
 
+    // #region agent log
+    const dbg = (hypothesisId, message, data) => {
+      if (!import.meta.env.DEV) return;
+      try {
+        fetch('http://127.0.0.1:7784/ingest/e350e58d-ac89-4e70-b52d-c1f38e44c968', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'X-Debug-Session-Id': '04047f' },
+          body: JSON.stringify({ sessionId: '04047f', runId: 'pre-fix', hypothesisId, location: 'frontend/src/services/api.js:dbg', message, data, timestamp: Date.now() })
+        }).catch(() => { });
+      } catch { }
+    };
+    // #endregion agent log
+
     try {
+      // #region agent log
+      dbg('H1', 'api.request start', { endpoint, method: options.method || 'GET', url });
+      // #endregion agent log
       const response = await fetch(url, {
         headers: {
           'Content-Type': 'application/json',
@@ -100,6 +116,12 @@ class ApiService {
         });
         throw new Error('فشل في تحليل استجابة الخادم');
       }
+
+      // #region agent log
+      if ((options.method === 'PUT' || options.method === 'POST') && endpoint.startsWith('/movies/')) {
+        dbg('H2', 'api.request mutation ok', { endpoint, method: options.method, status: response.status, returnedId: data?.id, returnedStatus: data?.status });
+      }
+      // #endregion agent log
 
       return data;
     } catch (error) {

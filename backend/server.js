@@ -1040,6 +1040,24 @@ app.put('/api/movies/:type/:id', async (req, res) => {
 
     const db = getCollection('movies');
 
+    // #region agent log
+    if (process.env.NODE_ENV !== 'production') {
+      fetch('http://127.0.0.1:7784/ingest/e350e58d-ac89-4e70-b52d-c1f38e44c968', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'X-Debug-Session-Id': '04047f' },
+        body: JSON.stringify({
+          sessionId: '04047f',
+          runId: 'pre-fix',
+          hypothesisId: 'H5',
+          location: 'backend/server.js:/api/movies/:type/:id',
+          message: 'backend updateMovie received',
+          data: { type, idRaw: id, idNumeric: Number.isFinite(Number(id)) ? Number(id) : null, bodyKeys: Object.keys(req.body || {}) },
+          timestamp: Date.now()
+        })
+      }).catch(() => { });
+    }
+    // #endregion agent log
+
     // Build update object
     const updateData = {
       ...req.body,
@@ -1052,6 +1070,24 @@ app.put('/api/movies/:type/:id', async (req, res) => {
       { id: buildIdQuery(id) },
       { $set: updateData }
     );
+
+    // #region agent log
+    if (process.env.NODE_ENV !== 'production') {
+      fetch('http://127.0.0.1:7784/ingest/e350e58d-ac89-4e70-b52d-c1f38e44c968', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'X-Debug-Session-Id': '04047f' },
+        body: JSON.stringify({
+          sessionId: '04047f',
+          runId: 'pre-fix',
+          hypothesisId: 'H5',
+          location: 'backend/server.js:/api/movies/:type/:id',
+          message: 'backend updateMovie result',
+          data: { matchedCount: result?.matchedCount, modifiedCount: result?.modifiedCount, upsertedId: result?.upsertedId || null },
+          timestamp: Date.now()
+        })
+      }).catch(() => { });
+    }
+    // #endregion agent log
 
     if (result.matchedCount === 0) {
       return res.status(404).json({ error: 'Item not found' });
