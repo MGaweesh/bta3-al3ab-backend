@@ -8,6 +8,7 @@
     "node": "18.x"
   },
   "scripts": {
+    "postinstall": "npm install --no-audit --no-fund && npm --prefix ../frontend install --no-audit --no-fund && npm --prefix ../frontend run build",
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
