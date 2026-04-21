@@ -1810,8 +1810,8 @@ const CPU_POWER_MAP = {
 // Benchmarks: UserBenchmark / TechPowerUp / Digital Foundry averages @ 1080p
 const GPU_CLASS_MAP = {
   // NVIDIA RTX 50 Series
-  'rtx 5090': 280, 'rtx 5080': 225, 'rtx 5070 ti': 195,
-  'rtx 5070': 175, 'rtx 5060 ti': 155, 'rtx 5060': 135, 'rtx 5050': 110,
+  'rtx 5090': 320, 'rtx 5080': 250, 'rtx 5070 ti': 210,
+  'rtx 5070': 185, 'rtx 5060 ti': 165, 'rtx 5060': 145, 'rtx 5050': 115,
   // NVIDIA RTX 40 Series
   'rtx 4090': 200, 'rtx 4080 super': 175, 'rtx 4080': 168,
   'rtx 4070 ti super': 155, 'rtx 4070 ti': 148, 'rtx 4070 super': 138,
@@ -1903,7 +1903,7 @@ function evaluateSingleCPU(cpuString) {
     // tier bases: i3=45, i5=70, i7=95, i9=120  + gen bonus 5/gen
     const tierBase = { 3: 45, 5: 70, 7: 95, 9: 120 }[tier] || 60;
     const score = tierBase + (gen * 5);
-    return Math.min(160, score);
+    return Math.min(250, score);
   }
 
   // Dynamic parsing for AMD Ryzen
@@ -1916,7 +1916,7 @@ function evaluateSingleCPU(cpuString) {
     let score = tierBase + (gen * 6);
     if (cpuLower.includes('x3d')) score += 15;
     else if (cpuLower.includes('x'))  score += 8;
-    return Math.min(165, score);
+    return Math.min(250, score);
   }
 
   // Fallback to map (longest key first for specificity)
@@ -1952,7 +1952,7 @@ function evaluateSingleGPU(gpuString) {
   }
   // Fallback: try to extract a 4-digit model number and estimate
   const numMatch = gpuLower.match(/(\d{4})/);
-  if (numMatch) return Math.min(150, parseInt(numMatch[1]) / 40);
+  if (numMatch) return Math.min(250, parseInt(numMatch[1]) / 35);
   return 20; // unknown GPU, assume low-end
 }
 
@@ -2001,17 +2001,11 @@ function compareHardwareSmart(userSpecs, gameRequirements) {
   const userPixels = userRes.w * userRes.h;
   const resolutionFactor = userPixels / basePixels; // 1.0 at 1080p, 4.0 at 4K
 
-  // Refresh rate factor: 60 Hz = 1.0, 144 Hz ≈ 1.10, 240 Hz ≈ 1.18
-  // Refresh rate has a minor effect on GPU demand (frame pacing, not raw pixel count)
-  const refreshFactor = 1 + (Math.log(userHz / 60) / Math.log(4)) * 0.2;
-
-  // Combined GPU demand multiplier (resolution dominates, refresh adds ~5-20%)
-  const gpuDemandMultiplier = Math.sqrt(resolutionFactor) * refreshFactor;
-  // √ because GPU scales roughly with √(pixels) in practice (bandwidth + fill-rate)
-  // Examples: 1080p/60 → 1.0 | 1440p/60 → 1.15 | 4K/60 → 2.0 | 1440p/180 → 1.27
-
-  // CPU comparison
   const userCPUPower = getCPUPower(userSpecs.cpu || '');
+  // Refresh rate factor: dampen effect for ultra-high Hz (360Hz+)
+  const refreshFactor = 1 + (Math.log(userHz / 60) / Math.log(10)) * 0.15;
+  const gpuDemandMultiplier = Math.sqrt(resolutionFactor) * refreshFactor;
+  // CPU comparison
   const minCPUPower  = getCPUPower(minReq.cpu || '');
   const recCPUPower  = getCPUPower(recReq.cpu || '');
 
@@ -2047,30 +2041,31 @@ function compareHardwareSmart(userSpecs, gameRequirements) {
   const calculateComponentScore = (userPower, minPower, recPower) => {
     if (userPower <= 0 || minPower <= 0) return 0;
 
-    // If user is way above minimum (>3x), give full score regardless
-    if (userPower >= minPower * 3) return 110;
+    // Minimum requirement mapping (70% score if you exactly meet it)
+    if (userPower < minPower) {
+      return (userPower / minPower) * 70;
+    }
 
+    // Between Minimum and Recommended
     if (recPower > minPower) {
       if (userPower >= recPower) {
+        // Above recommended (100-110%)
         const bonus = Math.min(10, ((userPower / recPower) - 1) * 20);
         return 100 + bonus;
       }
-      if (userPower >= minPower) {
-        const range    = recPower - minPower;
-        const progress = userPower - minPower;
-        return 70 + (progress / range) * 30;
-      }
-      return (userPower / minPower) * 60;
+      // Linear interpolation between 70 and 100
+      const range    = recPower - minPower;
+      const progress = userPower - minPower;
+      return 70 + (progress / range) * 30;
     }
 
-    // min == rec (same requirement for both): use ratio directly
+    // No Recommended info or user meets Min == Rec
     const ratio = userPower / minPower;
     if (ratio >= 2.0) return 110;
-    if (ratio >= 1.5) return 100;
-    if (ratio >= 1.2) return 90;
-    if (ratio >= 1.0) return 80;
-    if (ratio >= 0.75) return 60;
-    return ratio * 60;
+    if (ratio >= 1.5) return 105;
+    if (ratio >= 1.2) return 100;
+    if (ratio >= 1.0) return 85 + (ratio - 1.0) * 50; // Smooth jump from 85 up to 100+
+    return (userPower / minPower) * 85;
   };
 
   const cpuScore     = calculateComponentScore(userCPUPower, minCPUPower, recCPUPower || minCPUPower);
