@@ -1578,154 +1578,200 @@ async function fetchGameRequirements(gameName) {
 
 // CPU Power Mapping (approximate)
 const CPU_POWER_MAP = {
-  // Intel Core Ultra (Arrow Lake)
-  'core ultra 9': 110, 'core ultra 7': 95, 'core ultra 5': 75,
-  // Intel Desktop
-  'i9-14900k': 108, 'i9-13900k': 105, 'i9-12900k': 100,
-  'i9-11900k': 90, 'i9-10900k': 88, 'i9-9900k': 85,
-  'i7-14700k': 95, 'i7-13700k': 93, 'i7-12700k': 90,
-  'i7-11700k': 82, 'i7-10700k': 80, 'i7-9700k': 75,
-  'i7-8700k': 72, 'i7-8700': 70,
-  'i5-14600k': 80, 'i5-13600k': 78, 'i5-12600k': 75,
-  'i5-12400': 68, 'i5-11400': 65, 'i5-10400': 60,
-  'i5-9400': 55, 'i5-8400': 52,
-  'i3-14100': 50, 'i3-13100': 48, 'i3-12100': 45, 'i3-10100': 42,
+  // Intel Core Ultra
+  'core ultra 9 285k': 155, 'core ultra 9 275hx': 145, 'core ultra 9': 145,
+  'core ultra 7 265k': 135, 'core ultra 7': 125,
+  'core ultra 5 245k': 110, 'core ultra 5': 100,
+  // Intel 14th Gen
+  'i9-14900ks': 160, 'i9-14900k': 155, 'i9-14900': 145,
+  'i7-14700k': 135, 'i7-14700': 125,
+  'i5-14600k': 115, 'i5-14600': 105, 'i5-14400': 95,
+  'i3-14100': 75,
+  // Intel 13th Gen
+  'i9-13900ks': 155, 'i9-13900k': 150, 'i9-13900': 140,
+  'i7-13700k': 130, 'i7-13700': 120,
+  'i5-13600k': 112, 'i5-13600': 102, 'i5-13400': 90,
+  'i3-13100': 72,
+  // Intel 12th Gen
+  'i9-12900k': 140, 'i9-12900': 130,
+  'i7-12700k': 122, 'i7-12700': 112,
+  'i5-12600k': 105, 'i5-12600': 95, 'i5-12400': 85,
+  'i3-12100': 65,
+  // Intel 11th Gen
+  'i9-11900k': 120, 'i7-11700k': 108, 'i5-11600k': 95,
+  'i5-11400': 80, 'i3-11100': 60,
+  // Intel 10th Gen
+  'i9-10900k': 115, 'i7-10700k': 105, 'i5-10600k': 90,
+  'i5-10400': 75, 'i3-10100': 55,
+  // Intel 9th Gen
+  'i9-9900k': 110, 'i7-9700k': 95, 'i5-9600k': 82,
+  'i5-9400': 68, 'i3-9100': 50,
+  // Intel 8th Gen
+  'i7-8700k': 90, 'i7-8700': 82, 'i5-8600k': 78,
+  'i5-8400': 65, 'i3-8100': 48,
+  // Intel 7th/6th Gen
+  'i7-7700k': 78, 'i7-7700': 70, 'i5-7600k': 65,
+  'i5-7400': 55, 'i7-6700k': 72, 'i5-6600k': 62, 'i5-6400': 50,
   // Intel generic tiers
-  'i9': 100, 'i7': 85, 'i5': 65, 'i3': 45, 'pentium': 30, 'celeron': 20,
+  'i9': 140, 'i7': 110, 'i5': 85, 'i3': 60,
+  'pentium gold': 40, 'pentium': 35, 'celeron': 22,
   // AMD Ryzen 9000
-  'ryzen 9 9950x': 112, 'ryzen 9 9900x': 108, 'ryzen 9 9900': 105,
-  'ryzen 7 9800x3d': 115, 'ryzen 7 9700x': 92,
-  'ryzen 5 9600x': 82, 'ryzen 5 9600': 78,
+  'ryzen 9 9950x': 160, 'ryzen 9 9900x': 150, 'ryzen 9 9900': 140,
+  'ryzen 7 9800x3d': 165, 'ryzen 7 9700x': 130,
+  'ryzen 5 9600x': 115, 'ryzen 5 9600': 105,
   // AMD Ryzen 7000
-  'ryzen 9 7950x3d': 110, 'ryzen 9 7950x': 108, 'ryzen 9 7900x': 105,
-  'ryzen 7 7800x3d': 100, 'ryzen 7 7700x': 90,
-  'ryzen 5 7600x': 78, 'ryzen 5 7600': 75,
+  'ryzen 9 7950x3d': 155, 'ryzen 9 7950x': 150, 'ryzen 9 7900x': 145,
+  'ryzen 7 7800x3d': 150, 'ryzen 7 7700x': 128, 'ryzen 7 7700': 118,
+  'ryzen 5 7600x': 112, 'ryzen 5 7600': 105,
   // AMD Ryzen 5000
-  'ryzen 9 5950x': 100, 'ryzen 9 5900x': 98,
-  'ryzen 7 5800x3d': 95, 'ryzen 7 5800x': 88, 'ryzen 7 5700x': 82,
-  'ryzen 5 5600x': 72, 'ryzen 5 5600': 68,
+  'ryzen 9 5950x': 140, 'ryzen 9 5900x': 135,
+  'ryzen 7 5800x3d': 138, 'ryzen 7 5800x': 122, 'ryzen 7 5700x': 112,
+  'ryzen 5 5600x': 102, 'ryzen 5 5600': 95, 'ryzen 5 5500': 85,
   // AMD Ryzen 3000
-  'ryzen 9 3950x': 92, 'ryzen 9 3900x': 90,
-  'ryzen 7 3800x': 80, 'ryzen 7 3700x': 78,
-  'ryzen 5 3600x': 65, 'ryzen 5 3600': 62,
+  'ryzen 9 3950x': 128, 'ryzen 9 3900x': 122,
+  'ryzen 7 3800x': 108, 'ryzen 7 3700x': 102,
+  'ryzen 5 3600x': 88, 'ryzen 5 3600': 82,
+  'ryzen 3 3300x': 65, 'ryzen 3 3100': 58,
   // AMD Ryzen 2000/1000
-  'ryzen 7 2700x': 65, 'ryzen 7 2700': 60,
-  'ryzen 5 2600x': 55, 'ryzen 5 2600': 52,
-  'ryzen 5 1600': 48, 'ryzen 3 3300x': 50, 'ryzen 3 3100': 45,
+  'ryzen 7 2700x': 88, 'ryzen 7 2700': 80,
+  'ryzen 5 2600x': 72, 'ryzen 5 2600': 65,
+  'ryzen 5 1600x': 60, 'ryzen 5 1600': 55,
+  'ryzen 3 2200g': 45,
   // AMD generic tiers
-  'ryzen 9': 100, 'ryzen 7': 85, 'ryzen 5': 65, 'ryzen 3': 45,
-  'threadripper': 120, 'fx-8': 42, 'fx-6': 38, 'fx': 38,
-  'a10': 35, 'a12': 40, 'a8': 30,
-  'phenom': 28, 'athlon': 25,
-  'core 2 quad': 22, 'core 2 duo': 18
+  'ryzen 9': 140, 'ryzen 7': 115, 'ryzen 5': 90, 'ryzen 3': 58,
+  'threadripper pro': 180, 'threadripper': 160,
+  'fx-9590': 52, 'fx-8350': 48, 'fx-8300': 45, 'fx-6300': 38, 'fx': 40,
+  'a10': 32, 'a12': 36, 'a8': 28,
+  'phenom ii x6': 35, 'phenom ii x4': 30, 'phenom': 28,
+  'athlon x4': 32, 'athlon': 25,
+  // Intel legacy
+  'core 2 quad q9': 28, 'core 2 quad q6': 22, 'core 2 quad': 24,
+  'core 2 duo e8': 18, 'core 2 duo': 16,
+  'xeon e5-2690': 95, 'xeon e5-2680': 88, 'xeon e5': 75, 'xeon e3': 65,
 };
 
-// GPU Class Mapping (approximate)
+// GPU Power Map (scale: 6 = GT 710 … 200 = RTX 4090/5090)
+// Benchmarks: UserBenchmark / TechPowerUp / Digital Foundry averages @ 1080p
 const GPU_CLASS_MAP = {
   // NVIDIA RTX 50 Series
-  'rtx 5090': 140, 'rtx 5080': 120, 'rtx 5070 ti': 110,
-  'rtx 5070': 102, 'rtx 5060 ti': 88, 'rtx 5060': 78,
+  'rtx 5090': 200, 'rtx 5080': 175, 'rtx 5070 ti': 158,
+  'rtx 5070': 142, 'rtx 5060 ti': 118, 'rtx 5060': 100,
   // NVIDIA RTX 40 Series
-  'rtx 4090': 120, 'rtx 4080 super': 108, 'rtx 4080': 105,
-  'rtx 4070 ti super': 98, 'rtx 4070 ti': 95, 'rtx 4070 super': 90,
-  'rtx 4070': 85, 'rtx 4060 ti': 75, 'rtx 4060': 68, 'rtx 4050': 58,
+  'rtx 4090': 200, 'rtx 4080 super': 175, 'rtx 4080': 168,
+  'rtx 4070 ti super': 155, 'rtx 4070 ti': 148, 'rtx 4070 super': 138,
+  'rtx 4070': 125, 'rtx 4060 ti 16gb': 108, 'rtx 4060 ti': 105,
+  'rtx 4060': 88, 'rtx 4050': 72,
   // NVIDIA RTX 30 Series
-  'rtx 3090 ti': 110, 'rtx 3090': 105, 'rtx 3080 ti': 100,
-  'rtx 3080': 95, 'rtx 3070 ti': 85, 'rtx 3070': 80,
-  'rtx 3060 ti': 72, 'rtx 3060': 62, 'rtx 3050': 48,
+  'rtx 3090 ti': 162, 'rtx 3090': 155, 'rtx 3080 ti': 148,
+  'rtx 3080 12gb': 142, 'rtx 3080': 138,
+  'rtx 3070 ti': 122, 'rtx 3070': 115,
+  'rtx 3060 ti': 102, 'rtx 3060': 82, 'rtx 3050': 58,
   // NVIDIA RTX 20 Series
-  'rtx 2080 ti': 88, 'rtx 2080 super': 82, 'rtx 2080': 78,
-  'rtx 2070 super': 72, 'rtx 2070': 68, 'rtx 2060 super': 62,
-  'rtx 2060': 58,
+  'rtx 2080 ti': 128, 'rtx 2080 super': 115, 'rtx 2080': 108,
+  'rtx 2070 super': 100, 'rtx 2070': 92,
+  'rtx 2060 super': 85, 'rtx 2060': 78,
   // NVIDIA GTX 16 Series
-  'gtx 1660 ti': 52, 'gtx 1660 super': 50, 'gtx 1660': 48,
-  'gtx 1650 super': 42, 'gtx 1650': 35, 'gtx 1630': 25,
+  'gtx 1660 ti': 68, 'gtx 1660 super': 65, 'gtx 1660': 60,
+  'gtx 1650 super': 52, 'gtx 1650': 42, 'gtx 1630': 28,
   // NVIDIA GTX 10 Series
-  'gtx 1080 ti': 72, 'gtx 1080': 62, 'gtx 1070 ti': 58, 'gtx 1070': 52,
-  'gtx 1060 6gb': 42, 'gtx 1060 3gb': 38, 'gtx 1060': 40,
-  'gtx 1050 ti': 32, 'gtx 1050': 28, 'gtx 1030': 18,
+  'gtx 1080 ti': 95, 'gtx 1080': 82, 'gtx 1070 ti': 72, 'gtx 1070': 65,
+  'gtx 1060 6gb': 52, 'gtx 1060 3gb': 46, 'gtx 1060': 50,
+  'gtx 1050 ti': 38, 'gtx 1050': 30, 'gtx 1030': 18,
   // NVIDIA GTX 9 Series
-  'gtx 980 ti': 55, 'gtx 980': 48, 'gtx 970': 42, 'gtx 960': 32,
-  'gtx 950': 28,
-  // NVIDIA GTX 7 Series
-  'gtx 780 ti': 42, 'gtx 780': 38, 'gtx 770': 32, 'gtx 760': 28,
-  'gtx 750 ti': 22, 'gtx 750': 20,
+  'gtx 980 ti': 72, 'gtx 980': 62, 'gtx 970': 55, 'gtx 960': 40, 'gtx 950': 34,
+  // NVIDIA GTX 7/6 Series
+  'gtx 780 ti': 52, 'gtx 780': 46, 'gtx 770': 40, 'gtx 760': 34,
+  'gtx 750 ti': 26, 'gtx 750': 22,
+  'gtx 680': 42, 'gtx 670': 38, 'gtx 660 ti': 32, 'gtx 660': 28,
+  'gtx 650 ti': 22, 'gtx 650': 18,
   // NVIDIA Older
-  'gtx 660': 22, 'gtx 650': 18, 'gt 1030': 15, 'gt 730': 10, 'gt 710': 5,
+  'gt 1030': 16, 'gt 730': 10, 'gt 710': 6,
   // NVIDIA Laptop
-  'rtx 4090 laptop': 95, 'rtx 4080 laptop': 82, 'rtx 4070 laptop': 72,
-  'rtx 4060 laptop': 58, 'rtx 4050 laptop': 48,
-  'rtx 3080 laptop': 75, 'rtx 3070 laptop': 65, 'rtx 3060 laptop': 52,
-  'rtx 3050 laptop': 38, 'rtx 3050 ti laptop': 42,
-  'mx550': 22, 'mx450': 20, 'mx350': 18, 'mx250': 15,
+  'rtx 4090 laptop': 148, 'rtx 4080 laptop': 128, 'rtx 4070 laptop': 108,
+  'rtx 4060 laptop': 82, 'rtx 4050 laptop': 62,
+  'rtx 3080 ti laptop': 118, 'rtx 3080 laptop': 108,
+  'rtx 3070 ti laptop': 95, 'rtx 3070 laptop': 88,
+  'rtx 3060 laptop': 70, 'rtx 3050 ti laptop': 52, 'rtx 3050 laptop': 46,
+  'rtx 2080 laptop': 88, 'rtx 2070 laptop': 78, 'rtx 2060 laptop': 65,
+  'gtx 1660 ti laptop': 55, 'gtx 1650 laptop': 38,
+  'mx570': 28, 'mx550': 24, 'mx450': 20, 'mx350': 16, 'mx250': 12,
   // AMD RX 9000
-  'rx 9070 xt': 95, 'rx 9070': 85,
+  'rx 9070 xt': 148, 'rx 9070': 132,
   // AMD RX 7000
-  'rx 7900 xtx': 110, 'rx 7900 xt': 100, 'rx 7900 gre': 88,
-  'rx 7800 xt': 82, 'rx 7700 xt': 72, 'rx 7600 xt': 62, 'rx 7600': 58,
+  'rx 7900 xtx': 175, 'rx 7900 xt': 158, 'rx 7900 gre': 138,
+  'rx 7800 xt': 122, 'rx 7700 xt': 105, 'rx 7600 xt': 88, 'rx 7600': 80,
   // AMD RX 6000
-  'rx 6950 xt': 98, 'rx 6900 xt': 92, 'rx 6800 xt': 85, 'rx 6800': 78,
-  'rx 6750 xt': 72, 'rx 6700 xt': 68, 'rx 6650 xt': 58,
-  'rx 6600 xt': 55, 'rx 6600': 50, 'rx 6500 xt': 28, 'rx 6400': 22,
+  'rx 6950 xt': 148, 'rx 6900 xt': 138, 'rx 6800 xt': 128, 'rx 6800': 118,
+  'rx 6750 xt': 105, 'rx 6700 xt': 98, 'rx 6700': 90,
+  'rx 6650 xt': 82, 'rx 6600 xt': 75, 'rx 6600': 68,
+  'rx 6500 xt': 35, 'rx 6400': 28,
   // AMD RX 5000
-  'rx 5700 xt': 58, 'rx 5700': 52, 'rx 5600 xt': 48,
-  'rx 5500 xt': 38,
-  // AMD RX 500
-  'rx 590': 42, 'rx 580': 38, 'rx 570': 32, 'rx 560': 25, 'rx 550': 20,
+  'rx 5700 xt': 80, 'rx 5700': 72, 'rx 5600 xt': 65,
+  'rx 5500 xt': 50, 'rx 5500': 44,
+  // AMD RX 500/400
+  'rx 590': 58, 'rx 580': 54, 'rx 570': 46, 'rx 560': 32, 'rx 550': 22,
+  'rx 480': 52, 'rx 470': 44, 'rx 460': 28,
   // AMD R9/R7
-  'r9 fury': 45, 'r9 390x': 42, 'r9 390': 40, 'r9 380x': 35,
-  'r9 380': 32, 'r9 290x': 35, 'r9 290': 32, 'r9 285': 28,
-  'r9 280x': 28, 'r9 280': 25, 'r9 270x': 22, 'r9 270': 20,
-  'r7 370': 18, 'r7 360': 15, 'r7 260x': 15,
+  'r9 fury x': 58, 'r9 fury': 55,
+  'r9 390x': 52, 'r9 390': 48, 'r9 380x': 40, 'r9 380': 36,
+  'r9 290x': 48, 'r9 290': 44, 'r9 285': 36,
+  'r9 280x': 34, 'r9 280': 30, 'r9 270x': 26, 'r9 270': 22,
+  'r7 370': 22, 'r7 360': 18, 'r7 260x': 16,
   // AMD HD
-  'hd 7970': 22, 'hd 7950': 20, 'hd 7870': 18, 'hd 7850': 16,
+  'hd 7970': 28, 'hd 7950': 24, 'hd 7870': 20, 'hd 7850': 18,
+  'hd 6970': 20, 'hd 6950': 18,
   // Intel Arc
-  'arc a770': 58, 'arc a750': 52, 'arc a580': 42, 'arc a380': 22,
+  'arc a770 16gb': 82, 'arc a770': 78, 'arc a750': 68,
+  'arc a580': 52, 'arc a380': 28, 'arc a310': 18,
   // Integrated
-  'iris xe': 18, 'uhd 770': 12, 'uhd 730': 10, 'uhd 630': 8,
-  'hd 630': 8, 'hd 530': 7, 'hd 4600': 5, 'hd 4000': 4,
-  'vega 11': 15, 'vega 8': 12, 'vega 7': 10,
-  '780m': 25, '760m': 22, '680m': 20, 'radeon graphics': 12
+  'iris xe': 20, 'iris plus': 12,
+  'uhd 770': 14, 'uhd 750': 12, 'uhd 730': 10, 'uhd 630': 8,
+  'hd 630': 8, 'hd 530': 7, 'hd 520': 6, 'hd 4600': 5, 'hd 4000': 4,
+  'vega 11': 18, 'vega 8': 14, 'vega 7': 12,
+  'radeon 780m': 32, 'radeon 760m': 26, 'radeon 680m': 22,
+  '780m': 32, '760m': 26, '680m': 22,
+  'radeon graphics': 14,
 };
 
 // Extract CPU power score
 function evaluateSingleCPU(cpuString) {
   const cpuLower = cpuString.toLowerCase().trim();
-  
+
   // Dynamic parsing for Intel Core i3/i5/i7/i9
-  const intelMatch = cpuLower.match(/i([3579])[- ]?(\d+)/i);
+  // Score = tier_base + generation_bonus
+  const intelMatch = cpuLower.match(/i([3579])[- ]?(\d{4,5})/i);
   if (intelMatch) {
     const tier = parseInt(intelMatch[1]);
-    const num = parseInt(intelMatch[2]);
-    let gen = 1;
-    if (num >= 10000) gen = Math.floor(num / 1000);
-    else if (num >= 1000) gen = Math.floor(num / 1000);
-    let score = (tier * 4) + (gen * 5);
-    return Math.min(110, score);
+    const num  = parseInt(intelMatch[2]);
+    const gen  = num >= 10000 ? Math.floor(num / 1000) : Math.floor(num / 1000);
+    // tier bases: i3=45, i5=70, i7=95, i9=120  + gen bonus 5/gen
+    const tierBase = { 3: 45, 5: 70, 7: 95, 9: 120 }[tier] || 60;
+    const score = tierBase + (gen * 5);
+    return Math.min(160, score);
   }
 
   // Dynamic parsing for AMD Ryzen
-  const ryzenMatch = cpuLower.match(/ryzen\s*([3579])[- ]?(\d+)/i);
+  const ryzenMatch = cpuLower.match(/ryzen\s*([3579])\s+(\d{4})/i);
   if (ryzenMatch) {
     const tier = parseInt(ryzenMatch[1]);
-    const num = parseInt(ryzenMatch[2]);
-    let gen = Math.floor(num / 1000);
-    let score = (tier * 4) + (gen * 6) + 12;
-    if (cpuLower.includes('x3d')) score += 10;
-    return Math.min(110, score);
+    const num  = parseInt(ryzenMatch[2]);
+    const gen  = Math.floor(num / 1000);
+    const tierBase = { 3: 42, 5: 68, 7: 92, 9: 118 }[tier] || 65;
+    let score = tierBase + (gen * 6);
+    if (cpuLower.includes('x3d')) score += 15;
+    else if (cpuLower.includes('x'))  score += 8;
+    return Math.min(165, score);
   }
 
-  // Fallback to map
+  // Fallback to map (longest key first for specificity)
   const sortedEntries = Object.entries(CPU_POWER_MAP).sort((a, b) => b[0].length - a[0].length);
   for (const [key, power] of sortedEntries) {
-    if (cpuLower.includes(key)) {
-      return power;
-    }
+    if (cpuLower.includes(key)) return power;
   }
 
-  // Default generic
+  // Last resort: extract any number
   const numMatch = cpuLower.match(/(\d+)/);
-  return numMatch ? Math.min(50, parseInt(numMatch[1]) / 20) : 30;
+  return numMatch ? Math.min(60, parseInt(numMatch[1]) / 20) : 30;
 }
 
 function getCPUPower(cpuString) {
@@ -1743,14 +1789,15 @@ function getCPUPower(cpuString) {
 // Extract GPU power score
 function evaluateSingleGPU(gpuString) {
   const gpuLower = gpuString.toLowerCase().trim();
+  // Longest key first for specificity
   const sortedEntries = Object.entries(GPU_CLASS_MAP).sort((a, b) => b[0].length - a[0].length);
   for (const [key, power] of sortedEntries) {
-    if (gpuLower.includes(key)) {
-      return power;
-    }
+    if (gpuLower.includes(key)) return power;
   }
+  // Fallback: try to extract a 4-digit model number and estimate
   const numMatch = gpuLower.match(/(\d{4})/);
-  return numMatch ? Math.min(80, parseInt(numMatch[1]) / 100) : 20;
+  if (numMatch) return Math.min(100, parseInt(numMatch[1]) / 50);
+  return 20; // unknown GPU, assume low-end
 }
 
 function getGPUPower(gpuString) {
@@ -1770,15 +1817,54 @@ function compareHardwareSmart(userSpecs, gameRequirements) {
   const minReq = gameRequirements.minimumParsed || {};
   const recReq = gameRequirements.recommendedParsed || {};
 
+  // ── Resolution penalty multiplier ──────────────────────────────────────────
+  // Game requirements are usually stated for 1080p. Higher resolutions demand
+  // more GPU power. We scale the effective GPU requirement up accordingly.
+  const parseResolution = (res) => {
+    if (!res) return { w: 1920, h: 1080 };
+    const m = String(res).match(/(\d{3,4})\s*[x×]\s*(\d{3,4})/i);
+    if (m) return { w: parseInt(m[1]), h: parseInt(m[2]) };
+    if (res.includes('4K') || res.includes('2160')) return { w: 3840, h: 2160 };
+    if (res.includes('1440') || res.includes('2K'))  return { w: 2560, h: 1440 };
+    if (res.includes('1080'))                         return { w: 1920, h: 1080 };
+    if (res.includes('720'))                          return { w: 1280, h: 720  };
+    return { w: 1920, h: 1080 };
+  };
+
+  const parseRefreshRate = (rr) => {
+    if (!rr) return 60;
+    const m = String(rr).match(/(\d+)/);
+    return m ? parseInt(m[1]) : 60;
+  };
+
+  const userRes = parseResolution(userSpecs.resolution || '1920x1080');
+  const userHz  = parseRefreshRate(userSpecs.refreshRate || '60');
+
+  // Pixel count relative to 1080p (baseline)
+  const basePixels = 1920 * 1080;
+  const userPixels = userRes.w * userRes.h;
+  const resolutionFactor = userPixels / basePixels; // 1.0 at 1080p, 4.0 at 4K
+
+  // Refresh rate factor: 60 Hz = 1.0, 144 Hz ≈ 1.2, 240 Hz ≈ 1.35
+  const refreshFactor = Math.sqrt(userHz / 60);
+
+  // Combined GPU demand multiplier (resolution dominates, refresh adds ~10-35%)
+  const gpuDemandMultiplier = Math.sqrt(resolutionFactor) * refreshFactor;
+  // √ because GPU scales roughly with √(pixels) in practice (bandwidth + fill-rate)
+  // Examples: 1080p/60 → 1.0 | 1440p/60 → 1.15 | 4K/60 → 2.0 | 4K/144 → 2.38
+
   // CPU comparison
   const userCPUPower = getCPUPower(userSpecs.cpu || '');
-  const minCPUPower = getCPUPower(minReq.cpu || '');
-  const recCPUPower = getCPUPower(recReq.cpu || '');
+  const minCPUPower  = getCPUPower(minReq.cpu || '');
+  const recCPUPower  = getCPUPower(recReq.cpu || '');
 
-  // GPU comparison
-  const userGPUPower = getGPUPower(userSpecs.gpu || '');
-  const minGPUPower = getGPUPower(minReq.gpu || '');
-  const recGPUPower = getGPUPower(recReq.gpu || '');
+  // GPU comparison – apply resolution/refresh demand to the requirement side
+  const userGPUPower    = getGPUPower(userSpecs.gpu || '');
+  const rawMinGPUPower  = getGPUPower(minReq.gpu || '');
+  const rawRecGPUPower  = getGPUPower(recReq.gpu || '');
+  // Effective requirement = base requirement × demand multiplier
+  const minGPUPower = rawMinGPUPower * gpuDemandMultiplier;
+  const recGPUPower = rawRecGPUPower * gpuDemandMultiplier;
 
   // RAM comparison
   const parseRAM = (ram) => {
@@ -1787,8 +1873,8 @@ function compareHardwareSmart(userSpecs, gameRequirements) {
     return match ? parseInt(match[1]) : 0;
   };
   const userRAM = parseRAM(userSpecs.ram || '');
-  const minRAM = parseRAM(minReq.ram || '');
-  const recRAM = parseRAM(recReq.ram || '');
+  const minRAM  = parseRAM(minReq.ram || '');
+  const recRAM  = parseRAM(recReq.ram || '');
 
   // Storage comparison
   const parseStorage = (storage) => {
@@ -1797,60 +1883,65 @@ function compareHardwareSmart(userSpecs, gameRequirements) {
     return match ? parseFloat(match[1]) : 0;
   };
   const userStorage = parseStorage(userSpecs.storage || '');
-  const minStorage = parseStorage(minReq.storage || '');
-  const recStorage = parseStorage(recReq.storage || '');
+  const minStorage  = parseStorage(minReq.storage || '');
+  const recStorage  = parseStorage(recReq.storage || '');
 
-  // Calculate scores (0-100) using a continuous ratio-based approach
+  // ── Score calculator (0–110) ───────────────────────────────────────────────
   const calculateComponentScore = (userPower, minPower, recPower) => {
     if (userPower <= 0 || minPower <= 0) return 0;
-    
-    // If we have recommended power, use a curve that hits 70% at min and 100% at rec
+
+    // If user is way above minimum (>3x), give full score regardless
+    if (userPower >= minPower * 3) return 110;
+
     if (recPower > minPower) {
       if (userPower >= recPower) {
-        // Exceeds recommended: scale up to 110% for "Future Proof" feeling
         const bonus = Math.min(10, ((userPower / recPower) - 1) * 20);
         return 100 + bonus;
       }
       if (userPower >= minPower) {
-        // Between min and rec: Linear scale between 70% and 100%
-        const range = recPower - minPower;
+        const range    = recPower - minPower;
         const progress = userPower - minPower;
         return 70 + (progress / range) * 30;
       }
-      // Below min: Scale between 0 and 70%
-      return (userPower / minPower) * 60; // Max 60% if just below min
+      return (userPower / minPower) * 60;
     }
-    
-    // If only min power is known
+
+    // min == rec (same requirement for both): use ratio directly
     const ratio = userPower / minPower;
-    if (ratio >= 1.2) return 100;
-    if (ratio >= 1.0) return 70 + (ratio - 1.0) * 150; // hits 100 at 1.2
+    if (ratio >= 2.0) return 110;
+    if (ratio >= 1.5) return 100;
+    if (ratio >= 1.2) return 90;
+    if (ratio >= 1.0) return 80;
+    if (ratio >= 0.75) return 60;
     return ratio * 60;
   };
 
-  const cpuScore = calculateComponentScore(userCPUPower, minCPUPower, recCPUPower || minCPUPower);
-  const gpuScore = calculateComponentScore(userGPUPower, minGPUPower, recGPUPower || minGPUPower);
-  
-  // RAM/Storage follow a similar logic but simpler
-  const ramScore = userRAM >= recRAM && recRAM > 0 ? 100 + Math.min(10, ((userRAM/recRAM)-1)*5) : 
-                   userRAM >= minRAM && minRAM > 0 ? 70 + ((userRAM-minRAM)/(recRAM-minRAM||minRAM))*30 : 
-                   (userRAM/minRAM)*60;
+  const cpuScore     = calculateComponentScore(userCPUPower, minCPUPower, recCPUPower || minCPUPower);
+  const gpuScore     = calculateComponentScore(userGPUPower, minGPUPower, recGPUPower || minGPUPower);
 
-  const storageScore = userStorage >= recStorage && recStorage > 0 ? 100 : 
-                       userStorage >= minStorage && minStorage > 0 ? 70 + ((userStorage-minStorage)/(recStorage-minStorage||minStorage))*30 :
-                       (userStorage/minStorage)*60;
+  const ramScore = userRAM >= recRAM && recRAM > 0
+    ? 100 + Math.min(10, ((userRAM / recRAM) - 1) * 5)
+    : userRAM >= minRAM && minRAM > 0
+      ? 70 + ((userRAM - minRAM) / (recRAM - minRAM || minRAM)) * 30
+      : (userRAM / (minRAM || 1)) * 60;
 
-  // Overall score (weighted average)
-  const overallScore = Math.min(110, (cpuScore * 0.4 + gpuScore * 0.4 + ramScore * 0.15 + storageScore * 0.05));
+  const storageScore = userStorage >= recStorage && recStorage > 0
+    ? 100
+    : userStorage >= minStorage && minStorage > 0
+      ? 70 + ((userStorage - minStorage) / (recStorage - minStorage || minStorage)) * 30
+      : (userStorage / (minStorage || 1)) * 60;
 
-  // Determine rating
+  // Weighted average – GPU carries more weight because resolution affects it most
+  const overallScore = Math.min(110,
+    cpuScore * 0.35 + gpuScore * 0.45 + ramScore * 0.15 + storageScore * 0.05
+  );
+
   let rating = 'Cannot Run';
-  if (overallScore >= 95) rating = 'Ultra';
+  if (overallScore >= 95)      rating = 'Ultra';
   else if (overallScore >= 80) rating = 'High';
   else if (overallScore >= 65) rating = 'Medium';
   else if (overallScore >= 50) rating = 'Low';
   else if (overallScore >= 35) rating = 'Very Low';
-  else if (overallScore > 0) rating = 'Cannot Run';
 
   return {
     rating,
@@ -1859,11 +1950,12 @@ function compareHardwareSmart(userSpecs, gameRequirements) {
     gpuScore: Math.round(gpuScore),
     ramScore: Math.round(ramScore),
     storageScore: Math.round(storageScore),
+    resolutionFactor: Math.round(gpuDemandMultiplier * 100) / 100,
     details: {
-      cpu: { user: userCPUPower, min: minCPUPower, rec: recCPUPower, meets: cpuScore >= 70 },
-      gpu: { user: userGPUPower, min: minGPUPower, rec: recGPUPower, meets: gpuScore >= 70 },
-      ram: { user: userRAM, min: minRAM, rec: recRAM, meets: ramScore >= 70 },
-      storage: { user: userStorage, min: minStorage, rec: recStorage, meets: storageScore >= 70 }
+      cpu:     { user: userCPUPower, min: minCPUPower,    rec: recCPUPower,    meets: cpuScore >= 70 },
+      gpu:     { user: userGPUPower, min: minGPUPower,    rec: recGPUPower,    meets: gpuScore >= 70 },
+      ram:     { user: userRAM,      min: minRAM,          rec: recRAM,          meets: ramScore >= 70 },
+      storage: { user: userStorage,  min: minStorage,      rec: recStorage,      meets: storageScore >= 70 }
     }
   };
 }
@@ -2361,7 +2453,9 @@ app.post('/api/compatibility/check', async (req, res) => {
           storage: systemSpecs.storage || '',
           ramGB: parseToGB(systemSpecs.ram || '0'),
           storageGB: parseToGB(systemSpecs.storage || '0'),
-          os: systemSpecs.os || ''
+          os: systemSpecs.os || '',
+          resolution: systemSpecs.resolution || '1920x1080',
+          refreshRate: systemSpecs.refreshRate || '60'
         };
 
         // Sanity swap fix: if CPU looks like GPU and GPU looks like CPU, swap them
@@ -2393,9 +2487,10 @@ app.post('/api/compatibility/check', async (req, res) => {
             cpuScore: smartResult.cpuScore,
             gpuScore: smartResult.gpuScore,
             ramScore: smartResult.ramScore,
-            storageScore: smartResult.storageScore
+            storageScore: smartResult.storageScore,
+            resolutionFactor: smartResult.resolutionFactor
           };
-          console.log(`📊 [PERFORMANCE] Game: "${game.name}", Score: ${smartResult.score}%, Tier: ${smartResult.rating}`);
+          console.log(`📊 [PERFORMANCE] Game: "${game.name}", Score: ${smartResult.score}%, Tier: ${smartResult.rating}, ResolutionFactor: ${smartResult.resolutionFactor}x`);
         } catch (error) {
           console.error(`❌ [PERFORMANCE] Error computing score for "${game.name}":`, error.message);
           // Continue without perf score
