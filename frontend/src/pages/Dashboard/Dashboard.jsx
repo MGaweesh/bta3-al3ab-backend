@@ -9,10 +9,12 @@ import ConfirmationDialog from '../../components/ConfirmationDialog/Confirmation
 import SubscribersList from '../../components/SubscribersList/SubscribersList' // Import new component
 import api from '../../services/api'
 import { useToast } from '../../hooks/useToast.jsx'
+import { useMovies } from '../../hooks/useMovies.js'
 import './Dashboard.css'
 
 function Dashboard() {
   const { success, error, warning, info, ToastContainer } = useToast()
+  const { refreshMovies } = useMovies()
   const [activeTab, setActiveTab] = useState('readyToPlay')
   const [games, setGames] = useState({ readyToPlay: [], repack: [], online: [] })
   const [movies, setMovies] = useState({ movies: [], tvShows: [], anime: [] })
@@ -301,6 +303,12 @@ function Dashboard() {
 
       // Reload movies from API to get fresh data from MongoDB
       await loadMovies()
+      
+      // Update global Movies context to ensure public pages see changes immediately
+      if (typeof refreshMovies === 'function') {
+        console.log('🔄 [DEBUG] Refreshing global movies context...')
+        await refreshMovies(true) // forceRefresh = true
+      }
 
       // #region agent log
       const idKey = editingItem?.id != null ? String(editingItem.id) : null
@@ -367,6 +375,12 @@ function Dashboard() {
           console.log(`✅ [${new Date().toISOString()}] Item deleted from MongoDB`)
           // Reload movies from API to get fresh data from MongoDB
           await loadMovies()
+
+          // Update global Movies context
+          if (typeof refreshMovies === 'function') {
+            await refreshMovies(true)
+          }
+
           success('تم حذف العنصر بنجاح! ✅')
         } catch (error) {
           console.error(`❌ [${new Date().toISOString()}] Error deleting item:`, error)

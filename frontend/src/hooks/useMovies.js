@@ -107,6 +107,7 @@ export const MoviesProvider = ({ children }) => {
   const [error, setError] = useState(null)
 
   const loadMovies = useCallback(async (forceRefresh = false) => {
+    console.log(`🔄 [${new Date().toISOString()}] loadMovies called (forceRefresh: ${forceRefresh})`)
     try {
       setLoading(true)
       setError(null)

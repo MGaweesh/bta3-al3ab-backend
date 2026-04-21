@@ -490,6 +490,7 @@ const readMoviesData = async () => {
 };
 
 const buildIdQuery = (rawId) => {
+  if (!rawId) return { $exists: false };
   const numericId = Number(rawId);
   if (Number.isFinite(numericId)) {
     return { $in: [numericId, String(numericId)] };
@@ -889,18 +890,18 @@ app.post('/api/games/:type', async (req, res) => {
 app.put('/api/games/:type/:id', async (req, res) => {
   try {
     const { type, id } = req.params;
-    const itemId = parseInt(id);
     const db = getCollection('games');
 
+    const { _id, ...cleanBody } = req.body;
     const updateData = {
-      ...req.body,
-      id: itemId,
+      ...cleanBody,
+      id: Number.isFinite(Number(id)) ? Number(id) : id,
       category: type,
       updatedAt: new Date().toISOString()
     };
 
     const result = await db.updateOne(
-      { id: itemId },
+      { id: buildIdQuery(id) },
       { $set: updateData }
     );
 
@@ -1061,10 +1062,11 @@ app.put('/api/movies/:type/:id', async (req, res) => {
     // #endregion agent log
 
     // Build update object
+    const { _id, ...cleanBody } = req.body;
     const updateData = {
-      ...req.body,
+      ...cleanBody,
       id: Number.isFinite(Number(id)) ? Number(id) : id,
-      category: type,
+      category: type, // Ensure category is correctly set
       updatedAt: new Date().toISOString()
     };
 

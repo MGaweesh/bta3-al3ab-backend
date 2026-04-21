@@ -26,7 +26,7 @@ function MoviesPage() {
   }
 
   const coverImage = getCoverImage()
-  const [filteredItems, setFilteredItems] = useState([])
+  const [filteredItems, setFilteredItems] = useState(null)
 
   // Get items based on type (already sorted alphabetically from useMovies hook)
   const items = useMemo(() => {
@@ -44,8 +44,8 @@ function MoviesPage() {
 
   // Initialize filtered items with all items and reset when route changes
   useEffect(() => {
-    setFilteredItems(items)
-  }, [location.pathname, items])
+    setFilteredItems(null)
+  }, [location.pathname, items.length])
 
   // Get type info
   const getTypeInfo = () => {
@@ -89,10 +89,18 @@ function MoviesPage() {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const first = entries[0]
-      if (first.isIntersecting) {
+      if (first.isIntersecting && !loading) {
         // Load more items
-        const totalItems = filteredItems.length > 0 ? filteredItems.length : items.length
-        setDisplayCount(prev => Math.min(prev + 12, totalItems))
+        const totalItems = filteredItems !== null ? filteredItems.length : items.length
+        
+        console.log(`[DEBUG] Infinite Scroll Triggered. Current displayCount: ${displayCount}, Total items available: ${totalItems}`)
+        
+        setDisplayCount(prev => {
+          if (prev >= totalItems) return prev;
+          const next = Math.min(prev + 12, totalItems);
+          console.log(`[DEBUG] Incrementing displayCount from ${prev} to ${next}`)
+          return next;
+        })
       }
     }, { threshold: 0.1, rootMargin: '100px' })
 
@@ -109,7 +117,10 @@ function MoviesPage() {
   }, [items.length, filteredItems.length])
 
   // Get visible items
-  const currentItems = (filteredItems.length > 0 ? filteredItems : items)
+  // Logic to determine which items to show
+  // If filteredItems is null, it means no filter is applied (show all)
+  // If filteredItems is an empty array [], it means filter applied but no matches (show none)
+  const currentItems = (filteredItems !== null ? filteredItems : items)
   const visibleItems = currentItems.slice(0, displayCount)
 
   if (loading) {
