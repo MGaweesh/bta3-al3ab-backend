@@ -1,0 +1,82 @@
+[
+  {
+    "_id": "69e7b9b7c9a9c1f5e7e345cc",
+    "id": 1766965315412,
+    "title": "باقة العاب الزومبي",
+    "type": "other",
+    "description": "مستعد تواجه نهاية العالم؟\nلو مستعد فأحنا جمعنالك أخطر فيروسات الجيمينج في مكان واحد. باقة \"الزومبي\" مش لأي حد، دي للي أعصابهم حديد بس! \nفلو قلبك ميت وبتعشق أجواء الرعب والنجاة، يبقى الباقة دي هي اختبارك الحقيقي!",
+    "games": [
+      "Resident Evil: Village",
+      "Resident Evil 7: Biohazard",
+      "Resident Evil 2",
+      "Resident Evil 3",
+      "Resident Evil 4 Remake",
+      "Dying Light: The Following - Enhanced Edition",
+      "Dying Light 2 Stay Human",
+      "Dying Light: The Beast",
+      "Left 4 Dead",
+      "Left 4 Dead 2",
+      "World War Z: Aftermath",
+      "Days Gone",
+      "Dead Island 2",
+      "The Evil Within 2",
+      "The Evil Within",
+      "The Last of Us Part II Remastered",
+      "The Last Of Us"
+    ],
+    "image": "https://i.ibb.co/4wt4txft/image.png",
+    "notify": true,
+    "createdAt": "2025-12-28T23:41:55.412Z"
+  },
+  {
+    "_id": "69e7b9b7c9a9c1f5e7e345cd",
+    "id": 1766964426860,
+    "title": "باقة العاب الشوتينج والحروب",
+    "type": "other",
+    "description": "لو قلبك ميت وبتعشق صوت الرصاص، الباقة دي معمولة مخصوص عشانك! 🔥 جمعنالك أقوى تجميعة ألعاب تصويب (Shooting) والحروب في تاريخ الجيمينج. مش بس كده، وفرنا عليك عناء التحميل واستهلاك الباقة.",
+    "games": [
+      "Call of Duty: Black Ops 6",
+      "Call of Duty: Modern Warfare II",
+      "Call of Duty: Modern Warfare III",
+      "Call of Duty: Vanguard",
+      "Battlefield V",
+      "Battlefield 2",
+      "Battlefield 3",
+      "Battlefield 4",
+      "Battlefield: Bad Company 2",
+      "Battlefield 6"
+    ],
+    "image": "https://i.ibb.co/Tj4SBq1/image.png",
+    "notify": true,
+    "createdAt": "2025-12-28T23:27:06.860Z"
+  },
+  {
+    "_id": "69e7b9b7c9a9c1f5e7e345ce",
+    "id": 1766963750386,
+    "title": "باقة العاب السيارات",
+    "type": "other",
+    "description": "لكل عشاق السباق والادرينالين والنايترو دلوقتي جميع العاب السيارات متوفرة دلوقتي في باقة واحدة بس وبسعر ولا في الخيال",
+    "games": [
+      "Need For Speed Carbon",
+      "Need for Speed: ProStreet",
+      "Need for Speed Heat",
+      "Need For Speed: Hot Pursuit",
+      "Need for Speed: Hot Pursuit 2",
+      "Need for Speed: Most Wanted (2012)",
+      "Need For Speed: Most Wanted (2005)",
+      "Need for Speed Rivals",
+      "Need for Speed: The Run (Limited Edition)",
+      "Need For Speed Undercover",
+      "Need for Speed: Underground",
+      "Need for Speed: Underground 2",
+      "Need for Speed Payback",
+      "Forza Horizon 3",
+      "Forza Horizon 5",
+      "Blur",
+      "Crash Team Racing Nitro-Fueled"
+    ],
+    "image": "https://i.ibb.co/HD8gc8VP/Gemini-Generated-Image-nsd3bnsd3bnsd3bn.png",
+    "notify": true,
+    "createdAt": "2025-12-28T23:15:50.386Z"
+  }
+]
