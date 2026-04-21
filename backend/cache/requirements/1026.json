@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "Nvidia GeForce GTX 760, (2 GB V",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "5 GB",
+      "storageGB": 5,
+      "os": "OS *: Windows 7 64-bit or higher"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "AMD Radeon RX 560 with (4GB V",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "5 GB",
+      "storageGB": 5,
+      "os": "OS *: Windows 7 64-bit or higher"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:01:23.386Z"
+}

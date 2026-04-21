@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "Nvidia GeForce GTX 570, 1 GB | AMD Radeon HD 7850, 2 GB DirectX: Version 11 Additional Notes: Estimated performance: 1080p/60fps with graphics settings at \"Low\". F",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": null,
+      "storageGB": null,
+      "os": "OS: Windows 10"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "Nvidia GeForce GTX 760, 2 GB | AMD Radeon HD 7870, 2 GB DirectX: Version 11 Additional Notes: Estimated performance: 1080p/60fps with graphics settings at \"High\". F",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": null,
+      "storageGB": null,
+      "os": "OS: Windows 10"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:04:30.565Z"
+}

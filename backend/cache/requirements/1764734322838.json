@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "Nvidia RTX 2060, AMD Radeon RX 5600 XT 6GB, Intel Arc A380 DirectX: Version 12 Network: Broadband Internet connection",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "55 GB",
+      "storageGB": 55,
+      "os": "OS: Windows 10"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "Nvidia RTX 3060Ti, AMD Radeon RX 6700-XT, Intel Arc B580 DirectX: Version 12 Network: Broadband Internet connection",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "80 GB",
+      "storageGB": 80,
+      "os": "OS: Windows 11"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:07:46.589Z"
+}

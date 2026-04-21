@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-4460 / AMD FX-6300",
+      "gpu": "NVIDIA GeForce GTX 760 / AMD Radeon R7 260x",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "35 GB",
+      "storageGB": 35,
+      "os": "Windows 7/8/10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-4460 / AMD FX-6300",
+      "gpu": "NVIDIA GeForce GTX 760 / AMD Radeon R7 260x",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "35 GB",
+      "storageGB": 35,
+      "os": "Windows 7/8/10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:03:11.068Z"
+}

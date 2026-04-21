@@ -1,20 +1,24 @@
 {
-  "source": "steam",
+  "source": "fallback",
   "requirements": {
     "minimum": {
-      "cpu": "Minimum:Requires a 64-bit processor and operating systemOS: Windows 10 (20H1 64 bits)Processor: Intel Core i5-4690K (3.5 GHz)/AMD FX-8300 (3.3 GHz)Memory: 16 GB RAMGraphics: 4 GB, GeForce GTX 970/Radeon RX 590DirectX: Version 12Storage: 55 GB available spaceAdditional Notes: 30 FPS, 1920x1080 in low. DirectX 12 Feature Level 12 and Shader Model 6.0 are needed.",
-      "gpu": "Minimum:Requires a 64-bit processor and operating systemOS: Windows 10 (20H1 64 bits)Processor: Intel Core i5-4690K (3.5 GHz)/AMD FX-8300 (3.3 GHz)Memory: 16 GB RAMGraphics: 4 GB, GeForce GTX 970/Radeon RX 590DirectX: Version 12Storage: 55 GB available spaceAdditional Notes: 30 FPS, 1920x1080 in low. DirectX 12 Feature Level 12 and Shader Model 6.0 are needed.",
-      "ram": "16 GB",
-      "storage": "16 GB",
-      "storageGB": 16
+      "cpu": "Intel Core i3-2120 / AMD FX-4100",
+      "gpu": "NVIDIA GeForce GTX 660 / AMD Radeon HD 7870 (2 GB VRAM)",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "Windows 7/8/10 64-bit"
     },
     "recommended": {
-      "cpu": "Recommended:Requires a 64-bit processor and operating systemOS: Windows 10 (20H1 64 bits)Processor: Intel Core i7-8700K (3.7 GHz) / AMD Ryzen 5 3600 (3.6 GHz)Memory: 16 GB RAMGraphics: 8 GB, GeForce RTX 3070/Radeon RX 6800 XTDirectX: Version 12Storage: 55 GB available spaceAdditional Notes: 60 FPS, 1920x1080 in ultra. SSD storage is recommended.",
-      "gpu": "Recommended:Requires a 64-bit processor and operating systemOS: Windows 10 (20H1 64 bits)Processor: Intel Core i7-8700K (3.7 GHz) / AMD Ryzen 5 3600 (3.6 GHz)Memory: 16 GB RAMGraphics: 8 GB, GeForce RTX 3070/Radeon RX 6800 XTDirectX: Version 12Storage: 55 GB available spaceAdditional Notes: 60 FPS, 1920x1080 in ultra. SSD storage is recommended.",
-      "ram": "16 GB",
-      "storage": "16 GB",
-      "storageGB": 16
+      "cpu": "Intel Core i3-2120 / AMD FX-4100",
+      "gpu": "NVIDIA GeForce GTX 660 / AMD Radeon HD 7870 (2 GB VRAM)",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "Windows 7/8/10 64-bit"
     }
   },
-  "fetchedAt": "2025-11-26T15:00:46.837Z"
+  "fetchedAt": "2026-04-21T17:02:15.443Z"
 }

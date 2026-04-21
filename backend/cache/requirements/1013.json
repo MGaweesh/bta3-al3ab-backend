@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core2Quad Q6600 @ 2.4 GHz or AMD Athlon II X4 620 @ 2.6 GHzH",
+      "gpu": "nVidia GeForce GTS450 or AMD Radeon HD5670 (1024MB V",
+      "ram": "2 GB",
+      "ramGB": 2,
+      "storage": "12 GB",
+      "storageGB": 12,
+      "os": "Windows 10 (64-bit versions only)"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5 2400s @ 2.5 GHz or better / AMD FX-6100 @ 3.3 GHz or better",
+      "gpu": "nVidia GeForce GTX 560Ti (1024 V",
+      "ram": null,
+      "ramGB": null,
+      "storage": "12 GB",
+      "storageGB": 12,
+      "os": "Windows 10 (64-bit versions only)"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:00:58.276Z"
+}

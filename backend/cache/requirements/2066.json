@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core2 Quad Q8400",
+      "gpu": "NVIDIA GeForce GTX 560 1GB / Radeon R7 250X 1GB DirectX: Version 11",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "5 GB",
+      "storageGB": 5,
+      "os": "*: Windows 7"
+    },
+    "recommended": {
+      "cpu": "Intel Core2 Quad Q8400",
+      "gpu": "NVIDIA GeForce GTX 560 1GB / Radeon R7 250X 1GB DirectX: Version 11",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "5 GB",
+      "storageGB": 5,
+      "os": "*: Windows 7"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:04:18.043Z"
+}

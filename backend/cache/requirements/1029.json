@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-2550K 3.4GHz / AMD FX 8120 3.1GHz",
+      "gpu": "NVIDIA GeForce GTX 660 / AMD Radeon HD 7870",
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "Windows 10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-2550K 3.4GHz / AMD FX 8120 3.1GHz",
+      "gpu": "NVIDIA GeForce GTX 660 / AMD Radeon HD 7870",
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "Windows 10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:01:29.694Z"
+}

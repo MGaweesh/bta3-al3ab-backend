@@ -1,20 +1,24 @@
 {
-  "source": "rawg",
+  "source": "steam",
   "requirements": {
     "minimum": {
       "cpu": "Intel Core2Quad Q8400 @ 2.6 GHz or AMD Athlon II X4 620 @ 2.6 GHz",
-      "gpu": "Processor: Intel Core2Quad Q8400 @ 2.6 GHz or AMD Athlon II X4 620 @ 2.6 GHz",
+      "gpu": "Nvidia Geforce GTX 260 or AMD Radeon HD 4870 (512MB V",
       "ram": "2 GB",
+      "ramGB": 2,
       "storage": "30 GB",
-      "storageGB": 30
+      "storageGB": 30,
+      "os": "*: Windows Vista SP2"
     },
     "recommended": {
       "cpu": "Intel Core i5 2400S @ 2.5 GHz or better or AMD Phenom II x4 940 @ 3.0 GHz",
-      "gpu": "Processor: Intel Core i5 2400S @ 2.5 GHz or better or AMD Phenom II x4 940 @ 3.0 GHz",
+      "gpu": "Nvidia GeForce GTX 470 or AMD Radeon HD 5850 (1024MB V",
       "ram": "4 GB",
+      "ramGB": 4,
       "storage": "30 GB",
-      "storageGB": 30
+      "storageGB": 30,
+      "os": "*: Windows Vista SP2"
     }
   },
-  "fetchedAt": "2025-11-26T17:21:42.125Z"
+  "fetchedAt": "2026-04-21T17:00:52.185Z"
 }

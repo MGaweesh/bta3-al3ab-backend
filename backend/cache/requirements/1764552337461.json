@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i7-7700K / AMD Ryzen 5 1400",
+      "gpu": "NVIDIA GeForce RTX 2070 / AMD RX 6700 XT (8 GB VRAM)",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "155 GB",
+      "storageGB": 155,
+      "os": "Windows 10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i7-7700K / AMD Ryzen 5 1400",
+      "gpu": "NVIDIA GeForce RTX 2070 / AMD RX 6700 XT (8 GB VRAM)",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "155 GB",
+      "storageGB": 155,
+      "os": "Windows 10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:07:39.296Z"
+}

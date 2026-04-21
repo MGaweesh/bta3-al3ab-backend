@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i3-6300 / AMD FX 8150",
+      "gpu": "NVIDIA GeForce GTX 750 Ti / AMD Radeon HD 7850 (2 GB VRAM)",
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "30 GB",
+      "storageGB": 30,
+      "os": "Windows 7/8.1/10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i3-6300 / AMD FX 8150",
+      "gpu": "NVIDIA GeForce GTX 750 Ti / AMD Radeon HD 7850 (2 GB VRAM)",
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "30 GB",
+      "storageGB": 30,
+      "os": "Windows 7/8.1/10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:07:29.377Z"
+}

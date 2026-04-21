@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel® Core™2 Duo 2.6 GHz or AMD Athlon™ 64 X2 4000+ or better",
+      "gpu": "All NVIDIA® GeForce® 7800 GT 256 MB and better chipsets. All ATI Radeon™ X1800 256 MB and better chipsets DirectX®: Micr",
+      "ram": "2 GB",
+      "ramGB": 2,
+      "storage": "8GB",
+      "storageGB": 8,
+      "os": "*: Windows® XP (with Service Pack 3) or Windows Vista®"
+    },
+    "recommended": {
+      "cpu": "Intel® Core™2 Duo 2.6 GHz or AMD Athlon™ 64 X2 4000+ or better",
+      "gpu": "All NVIDIA® GeForce® 7800 GT 256 MB and better chipsets. All ATI Radeon™ X1800 256 MB and better chipsets DirectX®: Micr",
+      "ram": "2 GB",
+      "ramGB": 2,
+      "storage": "8GB",
+      "storageGB": 8,
+      "os": "*: Windows® XP (with Service Pack 3) or Windows Vista®"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:07:34.349Z"
+}

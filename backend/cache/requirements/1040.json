@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-4460 / AMD Ryzen 5 1400",
+      "gpu": "NVIDIA GeForce GTX 960 4GB / AMD Radeon R9 290",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "45 GB",
+      "storageGB": 45,
+      "os": "Windows 10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-4460 / AMD Ryzen 5 1400",
+      "gpu": "NVIDIA GeForce GTX 960 4GB / AMD Radeon R9 290",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "45 GB",
+      "storageGB": 45,
+      "os": "Windows 10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:01:47.476Z"
+}

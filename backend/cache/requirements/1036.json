@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-2500K / AMD FX-6300",
+      "gpu": "NVIDIA GeForce GTX 770 2GB / AMD Radeon R9 280 3GB",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "150 GB",
+      "storageGB": 150,
+      "os": "Windows 7 SP1 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-2500K / AMD FX-6300",
+      "gpu": "NVIDIA GeForce GTX 770 2GB / AMD Radeon R9 280 3GB",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "150 GB",
+      "storageGB": 150,
+      "os": "Windows 7 SP1 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:01:41.406Z"
+}

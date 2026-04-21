@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "2GB of Video",
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "OS *: Windows 7 64-bit"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "4GB of Video",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "OS *: Windows 7 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:04:39.178Z"
+}

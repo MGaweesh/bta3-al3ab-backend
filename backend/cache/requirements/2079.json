@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i3-4160 / AMD equivalent",
+      "gpu": "NVIDIA GeForce GTX 950 / AMD Radeon RX 470",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "75 GB",
+      "storageGB": 75,
+      "os": "Windows 10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i3-4160 / AMD equivalent",
+      "gpu": "NVIDIA GeForce GTX 950 / AMD Radeon RX 470",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "75 GB",
+      "storageGB": 75,
+      "os": "Windows 10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:04:44.807Z"
+}

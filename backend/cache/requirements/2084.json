@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "High-Performance Dual Core CPU or Quad Core CPU",
+      "gpu": "AMD Radeon™ HD 3870 512MB",
+      "ram": "2 GB",
+      "ramGB": 2,
+      "storage": "12 GB",
+      "storageGB": 12,
+      "os": "*: Windows Vista 64bit with Platform Update for Windows Vista"
+    },
+    "recommended": {
+      "cpu": "AMD FX-8000 series or better / Intel Quad i7 Core CPU",
+      "gpu": "AMD Radeon™ TM R9 270 or better / Nvidia GTX 660 series or better DirectX: Version 11",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "12 GB",
+      "storageGB": 12,
+      "os": "*: Windows 7 64bit / Windows 8 64bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:04:55.013Z"
+}

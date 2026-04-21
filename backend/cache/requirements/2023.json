@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core 2 Duo / AMD equivalent",
+      "gpu": "NVIDIA GeForce 8600 / ATI Radeon HD 4650",
+      "ram": "2 GB",
+      "ramGB": 2,
+      "storage": "500 MB",
+      "storageGB": 500,
+      "os": "Windows 7+"
+    },
+    "recommended": {
+      "cpu": "Intel Core 2 Duo / AMD equivalent",
+      "gpu": "NVIDIA GeForce 8600 / ATI Radeon HD 4650",
+      "ram": "2 GB",
+      "ramGB": 2,
+      "storage": "500 MB",
+      "storageGB": 500,
+      "os": "Windows 7+"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:02:55.207Z"
+}

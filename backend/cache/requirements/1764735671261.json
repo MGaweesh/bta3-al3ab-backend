@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i3-2100 or AMD equivalent",
+      "gpu": "NVIDIA GTX 650 2GB or AMD HD7770 2GB DirectX: Version 11",
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "25 GB",
+      "storageGB": 25,
+      "os": "*: Windows 7 64bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i7-3770K",
+      "gpu": "NVIDIA GTX 980Ti 2560x1440 or NVIDIA GTX 970 1920x1080 DirectX: Version 11",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "25 GB",
+      "storageGB": 25,
+      "os": "Windows 10 64 bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:08:03.653Z"
+}

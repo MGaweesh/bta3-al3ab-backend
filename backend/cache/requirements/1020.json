@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-2400 @ 3.1 GHz / AMD FX-6300 @ 3.5 GHz",
+      "gpu": "NVIDIA GeForce GTX 670 / AMD Radeon R9 270 (2 GB VRAM)",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "40 GB",
+      "storageGB": 40,
+      "os": "Windows 7 SP1 / 8.1 / 10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-2400 @ 3.1 GHz / AMD FX-6300 @ 3.5 GHz",
+      "gpu": "NVIDIA GeForce GTX 670 / AMD Radeon R9 270 (2 GB VRAM)",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "40 GB",
+      "storageGB": 40,
+      "os": "Windows 7 SP1 / 8.1 / 10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:01:11.270Z"
+}

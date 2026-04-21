@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "3Ghz Intel or AMD or any Dual Core",
+      "gpu": "PCI Express SM3 NVidia 6600/ ATI 1300 DirectX®: 9 Hard Drive: 8GB free space Sound: Any onboard sound card",
+      "ram": "1GB",
+      "ramGB": 1,
+      "storage": "8GB",
+      "storageGB": 8,
+      "os": "Vista/XP"
+    },
+    "recommended": {
+      "cpu": "3Ghz Intel or AMD or any Dual Core",
+      "gpu": "PCI Express SM3 NVidia 6600/ ATI 1300 DirectX®: 9 Hard Drive: 8GB free space Sound: Any onboard sound card",
+      "ram": "1GB",
+      "ramGB": 1,
+      "storage": "8GB",
+      "storageGB": 8,
+      "os": "Vista/XP"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:02:33.995Z"
+}

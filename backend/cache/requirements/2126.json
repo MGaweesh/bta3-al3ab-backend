@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "1 GB, GeForce GTX 660 / AMD Radeon RX 540 DirectX: Version 11",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "10 GB",
+      "storageGB": 10,
+      "os": "OS *: Windows 8.1 64bit or Windows 10 64bit"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "GeForce GTX 1060 / Radeon RX 580 DirectX: Version 11",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "10 GB",
+      "storageGB": 10,
+      "os": "OS: Windows 10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:06:16.613Z"
+}

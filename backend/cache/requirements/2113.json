@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "AMD Ryzen 5 2600X / Intel Core i7-6800K",
+      "gpu": "AMD Radeon RX 5700 / NVIDIA GeForce 1070 Ti",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "125 GB",
+      "storageGB": 125,
+      "os": "Windows 10 64-bit"
+    },
+    "recommended": {
+      "cpu": "AMD Ryzen 5 2600X / Intel Core i7-6800K",
+      "gpu": "AMD Radeon RX 5700 / NVIDIA GeForce 1070 Ti",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "125 GB",
+      "storageGB": 125,
+      "os": "Windows 10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:05:51.191Z"
+}

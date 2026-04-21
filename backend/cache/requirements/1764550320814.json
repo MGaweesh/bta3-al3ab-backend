@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-3570 / AMD FX 6350",
+      "gpu": "NVIDIA GeForce GTX 760 / AMD Radeon R9 270 (2 GB VRAM)",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "Windows 10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-3570 / AMD FX 6350",
+      "gpu": "NVIDIA GeForce GTX 760 / AMD Radeon R9 270 (2 GB VRAM)",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "Windows 10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:07:09.967Z"
+}

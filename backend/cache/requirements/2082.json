@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-4460 / AMD FX-6300",
+      "gpu": "NVIDIA GeForce GTX 650 2GB / AMD Radeon HD 6870 2GB",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "28 GB",
+      "storageGB": 28,
+      "os": "Windows 7/8/10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-4460 / AMD FX-6300",
+      "gpu": "NVIDIA GeForce GTX 650 2GB / AMD Radeon HD 6870 2GB",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "28 GB",
+      "storageGB": 28,
+      "os": "Windows 7/8/10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:04:50.215Z"
+}

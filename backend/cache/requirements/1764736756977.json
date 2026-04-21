@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "GeForce GTX 1060 / Radeon RX 480 DirectX: Version 12",
+      "ram": "12 GB",
+      "ramGB": 12,
+      "storage": "103 GB",
+      "storageGB": 103,
+      "os": "OS: Win 10 64 Bit"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "GeForce GTX 1070 / Radeon RX 5600 XT DirectX: Version 12",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "103 GB",
+      "storageGB": 103,
+      "os": "OS: Win 10 64 Bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:08:16.653Z"
+}

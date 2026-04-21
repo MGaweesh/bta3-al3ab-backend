@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core 2 Duo, 2.4 GHz; AMD Athlon X2, 2.8 GHz",
+      "gpu": "NVIDIA GeForce 8800 GTS; AMD Radeon HD 3850 DirectX: Version 10 Network: Broadband Internet connection",
+      "ram": "2 GB",
+      "ramGB": 2,
+      "storage": "3 GB",
+      "storageGB": 3,
+      "os": "*: 32-bit: Vista, Win 7, Win 8"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-750, 2.67 GHz; AMD Phenom II X4 965, 3.4 GHz",
+      "gpu": "NVIDIA GeForce GTX 560; AMD Radeon HD 6950 DirectX: Version 11 Network: Broadband Internet connection",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "3 GB",
+      "storageGB": 3,
+      "os": "*: 64-bit: Vista, Win 7, Win 8"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:02:35.534Z"
+}

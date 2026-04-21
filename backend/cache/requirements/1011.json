@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i3 2105 @ 3.1 GHz or AMD Phenom 2 X4 955 @ 3.2GHz",
+      "gpu": "Nvidia GeForce 8800GT or AMD Radeon HD4870 (512MB V",
+      "ram": "2 GB",
+      "ramGB": 2,
+      "storage": "3500 MB",
+      "storageGB": 3500,
+      "os": "*: Windows Vista SP2, Windows 10(64-bit versions only)"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5 2400S @ 2.5 GHz or AMD FX 4100 @ 3,6 GHz or better",
+      "gpu": "Nvidia GeForce GTX 570 or AMD Radeon HD7870 (1250MB V",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "3500 MB",
+      "storageGB": 3500,
+      "os": "*: Windows Vista SP2, Windows 10(64-bit versions only)"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:00:53.725Z"
+}

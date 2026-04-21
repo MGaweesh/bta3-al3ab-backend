@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i3-530 / AMD Athlon II X4 620",
+      "gpu": "NVIDIA GeForce GT 440 / AMD Radeon HD 5770 (512 MB)",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "15 GB",
+      "storageGB": 15,
+      "os": "Windows XP/Vista/7/8 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i3-530 / AMD Athlon II X4 620",
+      "gpu": "NVIDIA GeForce GT 440 / AMD Radeon HD 5770 (512 MB)",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "15 GB",
+      "storageGB": 15,
+      "os": "Windows XP/Vista/7/8 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:03:30.082Z"
+}

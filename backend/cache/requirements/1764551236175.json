@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "AMD: Radeon 7970/Radeon R9 280x or Equivalent; NVIDIA: GeForce GTX 760 or Equivalent DirectX: Version 11",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "OS: Windows 10"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "AMD: Radeon RX 480 or Equivalent; NVIDIA: GeForce GTX 1060 or Equivalent DirectX: Version 11 Network: Broadband Internet connection",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "OS: Windows 10"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:07:24.121Z"
+}

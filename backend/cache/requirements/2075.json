@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel® Core™ i3 or AMD Ryzen™ 3",
+      "gpu": "NVIDIA® GeForce® GTX 950 or AMD Radeon™ R7 370 DirectX: Version 10",
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "10 GB",
+      "storageGB": 10,
+      "os": "*: WINDOWS® 7, 8, 8.1, 10, 11"
+    },
+    "recommended": {
+      "cpu": "Intel® Core™ i5 or AMD Ryzen™ 5",
+      "gpu": "NVIDIA® GeForce® GTX 1060 or AMD Radeon™ RX 480",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "10 GB",
+      "storageGB": 10,
+      "os": "Windows 10"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:04:37.635Z"
+}

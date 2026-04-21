@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-4690 / AMD FX 8350",
+      "gpu": "NVIDIA GeForce GTX 970 / AMD Radeon RX 480 (4 GB VRAM)",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "150 GB",
+      "storageGB": 150,
+      "os": "Windows 10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-4690 / AMD FX 8350",
+      "gpu": "NVIDIA GeForce GTX 970 / AMD Radeon RX 480 (4 GB VRAM)",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "150 GB",
+      "storageGB": 150,
+      "os": "Windows 10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:02:29.085Z"
+}

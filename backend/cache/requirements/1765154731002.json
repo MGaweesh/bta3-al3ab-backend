@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "NVIDIA GeForce GTS 450, 1 GB or AMD Radeon HD 5770, 1 GB DirectX: Version 11",
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "20 GB",
+      "storageGB": 20,
+      "os": "OS: Windows 10 / 11"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "NVIDIA GeForce GTX 560, 1 GB or AMD Radeon HD 5870, 2 GB DirectX: Version 11",
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "20 GB",
+      "storageGB": 20,
+      "os": "OS: Windows 10 / 11"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:02:11.206Z"
+}

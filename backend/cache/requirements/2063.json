@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "AMD R9 280x (3 GB) or NVIDIA GeForce GTX 660 (2 GB) DirectX: Version 11",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "33 GB",
+      "storageGB": 33,
+      "os": "OS: Windows 10 (64-bit versions)"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "AMD R9 290 (4 GB) or NVIDIA GeForce GTX 970 (4GB) DirectX: Version 11",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "33 GB",
+      "storageGB": 33,
+      "os": "OS: Windows 10 (64-bit versions)"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:04:12.188Z"
+}

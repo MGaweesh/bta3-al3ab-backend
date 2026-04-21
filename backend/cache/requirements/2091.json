@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "800 MHz Pentium® III or AMD Athlon™",
+      "gpu": "64 MB GeForce™ 3 or higher, or ATI® Radeon™ 8500 or higher, Matrox Parhelia™. (GeForce4 MX not supported) Sound Card: DirectX® 9.0 or higher compliant sound card DirectX Version: DirectX® version 9.0c",
+      "ram": "256 MB",
+      "ramGB": 256,
+      "storage": "1.5 GB",
+      "storageGB": 1.5,
+      "os": "Windows® 2000/XP (only)"
+    },
+    "recommended": {
+      "cpu": "800 MHz Pentium® III or AMD Athlon™",
+      "gpu": "64 MB GeForce™ 3 or higher, or ATI® Radeon™ 8500 or higher, Matrox Parhelia™. (GeForce4 MX not supported) Sound Card: DirectX® 9.0 or higher compliant sound card DirectX Version: DirectX® version 9.0c",
+      "ram": "256 MB",
+      "ramGB": 256,
+      "storage": "1.5 GB",
+      "storageGB": 1.5,
+      "os": "Windows® 2000/XP (only)"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:05:09.294Z"
+}

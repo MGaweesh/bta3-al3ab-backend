@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-2300 / AMD FX-6350",
+      "gpu": "NVIDIA GeForce GTX 650 Ti 2GB / AMD Radeon R7 360 2GB",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "10 GB",
+      "storageGB": 10,
+      "os": "Windows 10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-2300 / AMD FX-6350",
+      "gpu": "NVIDIA GeForce GTX 650 Ti 2GB / AMD Radeon R7 360 2GB",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "10 GB",
+      "storageGB": 10,
+      "os": "Windows 10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:05:52.198Z"
+}

@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "AMD FX-6350 / Intel Core i5-6600K",
+      "gpu": "NVIDIA GeForce GTX 660 / AMD Radeon HD 7850 (2 GB VRAM)",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "Windows 7/8.1/10 64-bit"
+    },
+    "recommended": {
+      "cpu": "AMD FX-6350 / Intel Core i5-6600K",
+      "gpu": "NVIDIA GeForce GTX 660 / AMD Radeon HD 7850 (2 GB VRAM)",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "Windows 7/8.1/10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:06:43.922Z"
+}

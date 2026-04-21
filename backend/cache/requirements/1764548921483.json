@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel i5-4460 or AMD 2600X",
+      "gpu": "NVIDIA® GeForce® GTX 760 or AMD Radeon™ R7 270 DirectX: Version 11",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "10 GB",
+      "storageGB": 10,
+      "os": "*: Windows 7 or Windows 10"
+    },
+    "recommended": {
+      "cpu": "Intel i7-3770 or AMD 3600X",
+      "gpu": "NVIDIA GeForce GTX1060 or AMD Radeon™ R7 570 DirectX: Version 11 Network: Broadband Internet connection",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "16 GB",
+      "storageGB": 16,
+      "os": "*: Windows 7 or Windows 10"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:06:54.544Z"
+}

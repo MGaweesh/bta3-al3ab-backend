@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i3-530",
+      "gpu": "NVIDIA Geforce GTX 260 / ATI Radeon HD 4870 DirectX: Version 10",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "30 GB",
+      "storageGB": 30,
+      "os": "*: Windows Vista / 7 / 8 / 10, 64-bits"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5",
+      "gpu": "1.5GB V",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "30 GB",
+      "storageGB": 30,
+      "os": "*: Windows Vista / 7 / 8 / 10, 64-bits"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:01:31.231Z"
+}

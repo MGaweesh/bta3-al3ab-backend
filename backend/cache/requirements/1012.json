@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel® Core™2 Duo E4400 @ 2.0 GHz or AMD Athlon™ 64 X2 4000+ @ 2.1GHz",
+      "gpu": "256 MB DirectX® 9.0–compliant card with Shader Model 4.0 or higher (see supported list)* DirectX®: DirectX® June2010 or newer Hard Drive: 12 GB Sound: DirectX 9.0–compliant sound card Peripherals: Key",
+      "ram": "1 GB",
+      "ramGB": 1,
+      "storage": "12 GB",
+      "storageGB": 12,
+      "os": "*: Windows® XP SP3 / Windows Vista® SP2"
+    },
+    "recommended": {
+      "cpu": "Intel® Core™2 Duo E6700 @ 2.6 GHz or AMD Athlon™ 64 X2 6000+ @ 3.0 GHz or better",
+      "gpu": "512 MB DirectX® 9.0–compliant card with Shader Model 5.0 or higher (see supported list)* DirectX®: DirectX® June2010 or newer Hard Drive: 12 GB Sound: Surround Sound 5.1 capable sound card Peripherals",
+      "ram": "2 GB",
+      "ramGB": 2,
+      "storage": "12 GB",
+      "storageGB": 12,
+      "os": "*: Windows® XP SP3 / Windows Vista® SP2"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:00:54.704Z"
+}

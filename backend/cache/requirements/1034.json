@@ -1,24 +1,24 @@
 {
-  "source": "steam",
+  "source": "fallback",
   "requirements": {
     "minimum": {
-      "cpu": "and operating",
-      "gpu": "NVIDIA GeForce GTX 950 (2GB V",
+      "cpu": "Intel Core i5-4460 / AMD Ryzen 3 1200",
+      "gpu": "NVIDIA GeForce GTX 950 / AMD Radeon RX 460 (2 GB VRAM)",
       "ram": "8 GB",
       "ramGB": 8,
-      "storage": "30 GB",
-      "storageGB": 30,
-      "os": "OS: Windows 10 (64 bit only)"
+      "storage": "15 GB",
+      "storageGB": 15,
+      "os": "Windows 10 64-bit"
     },
     "recommended": {
-      "cpu": "and operating",
-      "gpu": "NVIDIA GeForce GTX 960 (4GB V",
+      "cpu": "Intel Core i5-4460 / AMD Ryzen 3 1200",
+      "gpu": "NVIDIA GeForce GTX 950 / AMD Radeon RX 460 (2 GB VRAM)",
       "ram": "8 GB",
       "ramGB": 8,
-      "storage": "30 GB",
-      "storageGB": 30,
-      "os": "OS: Windows 10 (64 bit only)"
+      "storage": "15 GB",
+      "storageGB": 15,
+      "os": "Windows 10 64-bit"
     }
   },
-  "fetchedAt": "2025-12-06T18:52:09.570Z"
+  "fetchedAt": "2026-04-21T17:01:37.145Z"
 }

@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i3-3220 / AMD Ryzen 3 1200",
+      "gpu": "NVIDIA GeForce GTX 1060 6GB / AMD Radeon RX 470 4GB",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "40 GB",
+      "storageGB": 40,
+      "os": "Windows 10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i3-3220 / AMD Ryzen 3 1200",
+      "gpu": "NVIDIA GeForce GTX 1060 6GB / AMD Radeon RX 470 4GB",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "40 GB",
+      "storageGB": 40,
+      "os": "Windows 10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:07:38.278Z"
+}

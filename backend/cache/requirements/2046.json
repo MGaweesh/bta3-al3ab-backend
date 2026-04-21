@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-2500K (4 * 3300) AMD Phenom II X4 965 (4 * 3400) or equivalent",
+      "gpu": "GeForce GTX 1050 (2048 MB) / Radeon RX 550 (4096 MB)",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "22 GB",
+      "storageGB": 22,
+      "os": "*: Windows 7, 8.1, 10 x64"
+    },
+    "recommended": {
+      "cpu": "Intel Core i7-6700K (4 * 4000) or AMD Ryzen 5 1500X (4 * 3500) or equivalent",
+      "gpu": "GeForce GTX 970 (4096 MB) or Radeon RX 5700 (8192 MB)",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "22 GB",
+      "storageGB": 22,
+      "os": "*: Windows 7, 8.1, 10 x64"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:03:40.464Z"
+}

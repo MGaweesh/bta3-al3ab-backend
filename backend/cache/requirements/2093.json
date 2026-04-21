@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "1 GHz Pentium® III, AMD Athlon™, or equivalent",
+      "gpu": "NVIDIA GeForce 3 or higher, ATI Radeon 7500 or higher, Intel 915G (NVIDIA GeForce 4 or ATI Radeon 9500, or higher recommended)* Sound: DirectX 9.0-compliant sound card DirectX: DirectX 9.0c Hard Disk",
+      "ram": "256 MB",
+      "ramGB": 256,
+      "storage": "1.5 GB",
+      "storageGB": 1.5,
+      "os": "Windows® 2000/XP (only)"
+    },
+    "recommended": {
+      "cpu": "1 GHz Pentium® III, AMD Athlon™, or equivalent",
+      "gpu": "NVIDIA GeForce 3 or higher, ATI Radeon 7500 or higher, Intel 915G (NVIDIA GeForce 4 or ATI Radeon 9500, or higher recommended)* Sound: DirectX 9.0-compliant sound card DirectX: DirectX 9.0c Hard Disk",
+      "ram": "256 MB",
+      "ramGB": 256,
+      "storage": "1.5 GB",
+      "storageGB": 1.5,
+      "os": "Windows® 2000/XP (only)"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:05:14.434Z"
+}

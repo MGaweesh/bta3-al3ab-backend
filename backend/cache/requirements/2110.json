@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "2.53 GHz Intel® Core™2 Duo E6400 or 2.80 GHz AMD Athlon™ 64 X2 5600+ or better",
+      "gpu": "512 MB DirectX® 10–compliant with Shader Model 4.0 or higher DirectX®: 9 Hard Drive: 25 GB HD space Sound: DirectX 10–compliant DirectX 9.0c–compliant Additional: Peripherals Supported: Windows-compat",
+      "ram": "2 GB",
+      "ramGB": 2,
+      "storage": "25 GB",
+      "storageGB": 25,
+      "os": "*: Originally released for Windows 7, the game can be played on Windows 10 and Windows 11 OS Process"
+    },
+    "recommended": {
+      "cpu": "2.66 GHz Intel® Core™2 Quad Q8400 or 3.00 GHz AMD Phenom™ II X4 940 or better",
+      "gpu": "AMD Phenom™ II X4 940 or better",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "25 GB",
+      "storageGB": 25,
+      "os": "Windows-compatible keyboard, mouse, headset, optional con"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:05:46.658Z"
+}

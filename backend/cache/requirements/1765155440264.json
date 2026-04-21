@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-750 / AMD Phenom II X4 965",
+      "gpu": "NVIDIA GeForce GTX 670 / AMD Radeon HD 7950",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "60 GB",
+      "storageGB": 60,
+      "os": "Windows 7 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-750 / AMD Phenom II X4 965",
+      "gpu": "NVIDIA GeForce GTX 670 / AMD Radeon HD 7950",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "60 GB",
+      "storageGB": 60,
+      "os": "Windows 7 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:08:31.989Z"
+}

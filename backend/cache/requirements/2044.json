@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-4460 / AMD Ryzen 3 1200",
+      "gpu": "NVIDIA GeForce GTX 970 / AMD Radeon RX 470",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "110 GB",
+      "storageGB": 110,
+      "os": "Windows 10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-4460 / AMD Ryzen 3 1200",
+      "gpu": "NVIDIA GeForce GTX 970 / AMD Radeon RX 470",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "110 GB",
+      "storageGB": 110,
+      "os": "Windows 10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:03:35.581Z"
+}

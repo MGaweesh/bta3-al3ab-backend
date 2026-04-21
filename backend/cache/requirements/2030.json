@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i3-2100 or AMD equivalent",
+      "gpu": "AMD Radeon HD 7870 (2GB) or NVIDIA GeForce GTX 660 (2GB)",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "45 GB",
+      "storageGB": 45,
+      "os": "*: Windows 7.1SP1 or above (64-bit Operating System Required)"
+    },
+    "recommended": {
+      "cpu": "Intel Core i7-3770K or AMD FX 8350 Wraith",
+      "gpu": "AMD Radeon RX 480 - 1920 x 1080 or NVIDIA GTX 970 - 1920 x 1080",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "55 GB",
+      "storageGB": 55,
+      "os": "Windows 10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:03:08.052Z"
+}

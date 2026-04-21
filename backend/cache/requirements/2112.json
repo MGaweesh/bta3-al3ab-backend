@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "AMD FX-6100 / Intel Core i3-3220",
+      "gpu": "AMD Radeon HD 7750 / NVIDIA GeForce GTX 650",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "55 GB",
+      "storageGB": 55,
+      "os": "Windows 7/8.1/10 64-bit"
+    },
+    "recommended": {
+      "cpu": "AMD FX-6100 / Intel Core i3-3220",
+      "gpu": "AMD Radeon HD 7750 / NVIDIA GeForce GTX 650",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "55 GB",
+      "storageGB": 55,
+      "os": "Windows 7/8.1/10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:05:48.164Z"
+}

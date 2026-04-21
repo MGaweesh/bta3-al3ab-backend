@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-2400s @ 2.5 GHz / AMD FX-6350 @ 3.9 GHz",
+      "gpu": "NVIDIA GeForce GTX 660 / AMD Radeon R9 270 (2 GB VRAM)",
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "42 GB",
+      "storageGB": 42,
+      "os": "Windows 7 SP1 / 8.1 / 10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-2400s @ 2.5 GHz / AMD FX-6350 @ 3.9 GHz",
+      "gpu": "NVIDIA GeForce GTX 660 / AMD Radeon R9 270 (2 GB VRAM)",
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "42 GB",
+      "storageGB": 42,
+      "os": "Windows 7 SP1 / 8.1 / 10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:00:35.200Z"
+}

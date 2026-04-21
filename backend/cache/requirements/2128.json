@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "NVidia GeForce GTX 750 DirectX: Version 10",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "5 GB",
+      "storageGB": 5,
+      "os": "OS *: Windows 7"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "NVidia GeForce GTX 1050 DirectX: Version 10",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "5 GB",
+      "storageGB": 5,
+      "os": "OS: Windows 10"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:06:21.603Z"
+}

@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-750 / AMD Phenom II X4-945",
+      "gpu": "NVIDIA GTX 470 1GB / AMD HD 7870 2GB",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "12 GB",
+      "storageGB": 12,
+      "os": "Windows 7/8/10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-750 / AMD Phenom II X4-945",
+      "gpu": "NVIDIA GTX 470 1GB / AMD HD 7870 2GB",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "12 GB",
+      "storageGB": 12,
+      "os": "Windows 7/8/10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:05:59.523Z"
+}

@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "GeForce GT 440 (1024 MB)",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "4 GB",
+      "storageGB": 4,
+      "os": "OS *: Windows 7, 8, 8.1, 10 x64"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "GeForce GTX 760 (2048 MB)",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "4 GB",
+      "storageGB": 4,
+      "os": "OS *: Windows 7, 8, 8.1, 10 x64"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:04:56.649Z"
+}

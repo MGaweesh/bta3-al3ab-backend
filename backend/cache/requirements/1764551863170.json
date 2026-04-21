@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i3 2100 / AMD A8-6500",
+      "gpu": "NVIDIA GeForce GTX 770 VRAM 2GB / AMD Radeon R9 270X VRAM 2GB",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "Windows 7/8.1/10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i3 2100 / AMD A8-6500",
+      "gpu": "NVIDIA GeForce GTX 770 VRAM 2GB / AMD Radeon R9 270X VRAM 2GB",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "Windows 7/8.1/10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:07:32.281Z"
+}

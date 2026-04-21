@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "GeForce GT 430, Radeon HD 5570, or Intel HD 4400 with an average Passmark G3D Mark of 570 or better @720p DirectX: Version 11 Network: Broadband Internet connection",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "42 GB",
+      "storageGB": 42,
+      "os": "OS: Windows 10 version 18362.0 or higher"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "GeForce GTX 980 or Radeon R9 Fury or equivalent with an average Passmark G3D Mark of 9500 or better @1080p DirectX: Version 11 Network: Broadband Internet connection",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "42 GB",
+      "storageGB": 42,
+      "os": "OS: Windows 10 version 18362.0 or higher"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:07:04.329Z"
+}

@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "2 GHz Dual Core (Core 2 Duo 2.4 GHz or Althon X2 2.7 GHz)",
+      "gpu": "card (AMD): DirectX 10.1 compatible with 512 MB",
+      "ram": "2 GB",
+      "ramGB": 2,
+      "storage": "20 GB",
+      "storageGB": 20,
+      "os": "*: Windows 7 64-bit"
+    },
+    "recommended": {
+      "cpu": "Quad-core CPU",
+      "gpu": "Card: DirectX 11 compatible with 1024 MB",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "20 GB",
+      "storageGB": 20,
+      "os": "*: Windows 7 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:01:52.909Z"
+}

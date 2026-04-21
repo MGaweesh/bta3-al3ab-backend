@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Dual Core 2.4 GHz+",
+      "gpu": "1 GB VRAM / DirectX 10+ support",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "15 GB",
+      "storageGB": 15,
+      "os": "Windows 7 SP1"
+    },
+    "recommended": {
+      "cpu": "Dual Core 2.4 GHz+",
+      "gpu": "1 GB VRAM / DirectX 10+ support",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "15 GB",
+      "storageGB": 15,
+      "os": "Windows 7 SP1"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:03:55.431Z"
+}

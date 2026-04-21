@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "AMD Radeon RX 560,Nvidia GeForce GTX 1050 Ti DirectX: Version 12 Network: Broadband Internet connection",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "100 GB",
+      "storageGB": 100,
+      "os": "OS: 64-bit Windows 10"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "AMD Radeon RX 6600 XT, Nvidia GeForce RTX 3060 DirectX: Version 12 Network: Broadband Internet connection",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "100 GB",
+      "storageGB": 100,
+      "os": "OS: 64-bit Windows 10"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:01:51.317Z"
+}

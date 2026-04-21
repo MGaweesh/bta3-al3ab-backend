@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core2 Duo E6750 (2 * 2660) or equivalent / AMD Athlon 64 X2 Dual Core 5000+ (2 * 2600) or equivalent",
+      "gpu": "Geforce GT 430 (1024 MB) / Radeon HD 5570 (1024 MB)",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "4 GB",
+      "storageGB": 4,
+      "os": "*: Windows 7 or later"
+    },
+    "recommended": {
+      "cpu": "Intel Core2 Duo E6750 (2 * 2660) or equivalent / AMD Athlon 64 X2 Dual Core 5000+ (2 * 2600) or equivalent",
+      "gpu": "Geforce GT 430 (1024 MB) / Radeon HD 5570 (1024 MB)",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "4 GB",
+      "storageGB": 4,
+      "os": "*: Windows 7 or later"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:03:49.314Z"
+}

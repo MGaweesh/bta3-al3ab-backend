@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Pentium 4 3.0GHz",
+      "gpu": "card with 128 MB, Shader model 2.0. ATI X800, NVidia 6600 or better DirectX: Version 9.0c",
+      "ram": "2 GB",
+      "ramGB": 2,
+      "storage": "13 GB",
+      "storageGB": 13,
+      "os": "*: Windows® 7 32/64-bit / Vista 32/64 / XP"
+    },
+    "recommended": {
+      "cpu": "Intel core 2 duo 2.4GHz",
+      "gpu": "Card Shader model 3.0. NVidia 7600, ATI X1600 or better DirectX: Version 9.0c",
+      "ram": "2 GB",
+      "ramGB": 2,
+      "storage": "13 GB",
+      "storageGB": 13,
+      "os": "*: Windows® 7 32/64-bit / Vista 32/64 / XP"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:04:25.999Z"
+}

@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-2300 2.8 GHz / AMD Phenom II X4 945 3.0 GHz",
+      "gpu": "NVIDIA GTX 550 Ti 2GB / AMD Radeon HD 7870 2GB",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "30 GB",
+      "storageGB": 30,
+      "os": "Windows 7/8/10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-2300 2.8 GHz / AMD Phenom II X4 945 3.0 GHz",
+      "gpu": "NVIDIA GTX 550 Ti 2GB / AMD Radeon HD 7870 2GB",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "30 GB",
+      "storageGB": 30,
+      "os": "Windows 7/8/10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:03:25.333Z"
+}

@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "GeForce GTX 1650 4GB、Radeon RX 570 4GB DirectX: Version 12 Network: Broadband Internet connection",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "60 GB",
+      "storageGB": 60,
+      "os": "OS: Windows® 10, Windows® 11, 64bit"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "GeForce RTX 2060 6GB、Radeon RX 5700XT 8GB DirectX: Version 12 Network: Broadband Internet connection",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "60 GB",
+      "storageGB": 60,
+      "os": "OS: Windows® 10, Windows® 11, 64bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:06:37.228Z"
+}

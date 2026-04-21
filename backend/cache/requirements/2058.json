@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "NVIDIA GeForce GTX 1060 (3GB)/AMD Radeon R9 290x (4GB) DirectX: Version 11",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "59 GB",
+      "storageGB": 59,
+      "os": "OS: Windows 10 64-bit"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "NVIDIA GeForce RTX 2060 (6GB)/AMD RX 5600 XT (6GB) DirectX: Version 12",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "59 GB",
+      "storageGB": 59,
+      "os": "OS: Windows 10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:04:01.559Z"
+}

@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel® Core™ i5-8400 or AMD Ryzen™ 5 3400G",
+      "gpu": "NVIDIA® GeForce® GTX 1060 (V",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "100 GB",
+      "storageGB": 100,
+      "os": "Windows® 10/11, 64bit"
+    },
+    "recommended": {
+      "cpu": "Intel® Core™ i5-10400 or AMD Ryzen™ 5 3600",
+      "gpu": "NVIDIA® GeForce® RTX 2060 Super(V",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "100 GB",
+      "storageGB": 100,
+      "os": "Windows® 10/11, 64bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:08:00.004Z"
+}

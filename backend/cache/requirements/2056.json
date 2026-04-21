@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "NVIDIA GeForce GTX 1070, 8GB or AMD Radeon RX 5600 XT, 6GB or Intel Arc A750, 8GB DirectX: Version 12",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "30 GB",
+      "storageGB": 30,
+      "os": "OS: Windows 10/11 64-bit"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "NVIDIA GeForce RTX 2080 Ti, 11GB or AMD Radeon RX 6750 XT, 12GB or Intel Arc B580, 12GB DirectX: Version 12",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "30 GB",
+      "storageGB": 30,
+      "os": "OS: Windows 10/11 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:03:58.957Z"
+}

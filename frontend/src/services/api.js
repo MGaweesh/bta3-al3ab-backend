@@ -2,7 +2,7 @@
 // You can use Render backend directly by setting VITE_API_URL in .env file
 // Or it will try localhost first, then fallback to Render if localhost fails
 const RENDER_BACKEND_URL = 'https://bta3-al3ab-backend.onrender.com/api';
-const BASE_URL = 'https://bta3-al3ab-backend-production.up.railway.app/api';
+const BASE_URL = 'http://localhost:3001/api'; // Changed to localhost for development
 const LOCAL_BACKEND_URL = 'http://localhost:3001/api';
 
 const getApiBaseUrl = () => {

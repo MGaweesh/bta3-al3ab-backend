@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core 2 Duo E5200",
+      "gpu": "GeForce 9800GTX+ (1GB)",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "9 GB",
+      "storageGB": 9,
+      "os": "Windows 7 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core 2 Duo E5200",
+      "gpu": "GeForce 9800GTX+ (1GB)",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "9 GB",
+      "storageGB": 9,
+      "os": "Windows 7 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:04:06.595Z"
+}

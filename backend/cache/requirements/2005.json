@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "OpenGL 4.0, Nvidia GTX 460 / AMD Radeon HD 5750 / Intel HD 630",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "35 GB",
+      "storageGB": 35,
+      "os": "OS *: Windows 7 / 8 / 10, 64-bits"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "OpenGL 4.3, Nvidia GTX 970 / AMD Radeon RX 5600 XT / Intel Xe-HPG",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "35 GB",
+      "storageGB": 35,
+      "os": "OS *: Windows 7 / 8 / 10, 64-bits"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:02:22.797Z"
+}

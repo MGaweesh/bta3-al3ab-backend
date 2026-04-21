@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "Nvidia GeForce GTX 660 with 2GB V",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "49 GB",
+      "storageGB": 49,
+      "os": "OS *: Windows 7 or later (64 bit)"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "Nvidia GeForce GTX 970 with 4GB V",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "49 GB",
+      "storageGB": 49,
+      "os": "OS *: Windows 7 or later (64 bit)"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:08:27.023Z"
+}

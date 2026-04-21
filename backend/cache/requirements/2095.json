@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "NVIDIA GeForce GTX 1050 Ti 4GB or AMD Radeon RX 560 4GB DirectX: Version 11",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "10 GB",
+      "storageGB": 10,
+      "os": "OS *: Windows® 7 64-bit / Windows® 8 64-bit / Windows® 10 64-bit"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "Nvidia GeForce GTX1060 6GB or AMD Radeon RX 5700 DirectX: Version 11",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "10 GB",
+      "storageGB": 10,
+      "os": "OS *: Windows® 7 64-bit / Windows® 8 64-bit / Windows® 10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:05:19.274Z"
+}

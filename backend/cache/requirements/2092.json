@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "1.0 GHz AMD Athlon or Intel Pentium III (1.5 GHz Pentium IV or AMD Athlon recommended)",
+      "gpu": "32 MB DirectX 9.0c compliant (128 MB recommended) (see supported list*) DirectX: DirectX 9.0c Sound DirectX 9.0c compliant (Dolby Digital Live required for Dolby Digital audio) Hard Drive: 1.5 GB Peri",
+      "ram": "256 MB",
+      "ramGB": 256,
+      "storage": "1.5 GB",
+      "storageGB": 1.5,
+      "os": "Windows® 2000/XP (only)"
+    },
+    "recommended": {
+      "cpu": "1.0 GHz AMD Athlon or Intel Pentium III (1.5 GHz Pentium IV or AMD Athlon recommended)",
+      "gpu": "32 MB DirectX 9.0c compliant (128 MB recommended) (see supported list*) DirectX: DirectX 9.0c Sound DirectX 9.0c compliant (Dolby Digital Live required for Dolby Digital audio) Hard Drive: 1.5 GB Peri",
+      "ram": "256 MB",
+      "ramGB": 256,
+      "storage": "1.5 GB",
+      "storageGB": 1.5,
+      "os": "Windows® 2000/XP (only)"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:05:12.883Z"
+}

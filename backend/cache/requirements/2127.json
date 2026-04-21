@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel CPU Core i5-2500K 3.3GHz / AMD CPU Phenom II X4 940",
+      "gpu": "NVIDIA GPU GeForce GTX 660 / AMD GPU Radeon HD 7870",
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "Windows 7/8/8.1/10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel CPU Core i5-2500K 3.3GHz / AMD CPU Phenom II X4 940",
+      "gpu": "NVIDIA GPU GeForce GTX 660 / AMD GPU Radeon HD 7870",
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "Windows 7/8/8.1/10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:06:17.629Z"
+}

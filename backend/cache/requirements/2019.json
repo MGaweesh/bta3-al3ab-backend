@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-4690 / AMD FX 4350",
+      "gpu": "NVIDIA GeForce GTX 780 / AMD Radeon R9 280X",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "42 GB",
+      "storageGB": 42,
+      "os": "Windows 7 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-4690 / AMD FX 4350",
+      "gpu": "NVIDIA GeForce GTX 780 / AMD Radeon R9 280X",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "42 GB",
+      "storageGB": 42,
+      "os": "Windows 7 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:02:49.152Z"
+}

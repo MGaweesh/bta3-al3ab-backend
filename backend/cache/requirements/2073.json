@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "Nvidia GeForce GTX 1060 or AMD Radeon RX 580 Additional Notes: Low 1080p @ 60 FPS",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": null,
+      "storageGB": null,
+      "os": "OS: Windows 11"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "Nvidia GeForce RTX 2080, 8 GB or AMD RX 6800 Additional Notes: High 1080p @ 60 FPS",
+      "ram": "12 GB",
+      "ramGB": 12,
+      "storage": null,
+      "storageGB": null,
+      "os": "OS: Windows 11"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:04:32.130Z"
+}

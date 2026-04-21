@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "NVIDIA® GeForce® GTX 1070 Ti or AMD Radeon™ RX 5700 DirectX: Version 12",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "OS: Windows 11 x64"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "NVIDIA® GeForce® RTX 2080 or AMD Radeon™ RX 6800XT DirectX: Version 12",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "OS: Windows 11 x64"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:05:41.292Z"
+}

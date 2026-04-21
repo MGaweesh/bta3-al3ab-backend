@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core 2 Duo / AMD equivalent",
+      "gpu": "Intel HD 4000 / NVIDIA GeForce 8600 GT",
+      "ram": "2 GB",
+      "ramGB": 2,
+      "storage": "20 GB",
+      "storageGB": 20,
+      "os": "Windows 7/8/10"
+    },
+    "recommended": {
+      "cpu": "Intel Core 2 Duo / AMD equivalent",
+      "gpu": "Intel HD 4000 / NVIDIA GeForce 8600 GT",
+      "ram": "2 GB",
+      "ramGB": 2,
+      "storage": "20 GB",
+      "storageGB": 20,
+      "os": "Windows 7/8/10"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:03:12.081Z"
+}

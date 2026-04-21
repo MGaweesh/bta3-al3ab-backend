@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core 2 Duo 2.4 GHz or AMD Athlon X2 4800+",
+      "gpu": "ATI 3850HD 512 MB or NVIDIA GeForce 8800 GT 512MB DirectX®: 9.0c",
+      "ram": "2GB",
+      "ramGB": 2,
+      "storage": "17 GB",
+      "storageGB": 17,
+      "os": "*: Windows XP, Vista, 7"
+    },
+    "recommended": {
+      "cpu": "Intel Core 2 Duo 2.4 GHz or AMD Athlon X2 4800+",
+      "gpu": "ATI 3850HD 512 MB or NVIDIA GeForce 8800 GT 512MB DirectX®: 9.0c",
+      "ram": "2GB",
+      "ramGB": 2,
+      "storage": "17 GB",
+      "storageGB": 17,
+      "os": "*: Windows XP, Vista, 7"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:06:42.445Z"
+}

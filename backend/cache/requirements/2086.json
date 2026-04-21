@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core 2 Duo E4500 @ 2.2GHz or AMD Athlon 64 X2 5600+ @ 2.8 GHz",
+      "gpu": "GeForce 240 GT or Radeon HD 6570 – 1024 MB (1 gig) DirectX: Version 9.0c",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "11 GB",
+      "storageGB": 11,
+      "os": "*: Windows 7"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5 2300 or AMD FX6120",
+      "gpu": "GeForce GTX 550 Ti or Radeon HD 6770 DirectX: Version 11",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "11 GB",
+      "storageGB": 11,
+      "os": "*: Windows 7"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:05:00.272Z"
+}

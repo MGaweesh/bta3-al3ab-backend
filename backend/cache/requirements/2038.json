@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "NVIDIA Geforce GTX 1050m | AMD Radeon RX 560 DirectX: Version 12",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "12 GB",
+      "storageGB": 12,
+      "os": "OS: Windows 10+"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "NVIDIA Geforce GTX 1650 DirectX: Version 12",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "12 GB",
+      "storageGB": 12,
+      "os": "OS: Windows 10 +"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:03:24.325Z"
+}

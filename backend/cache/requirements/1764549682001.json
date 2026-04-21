@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core 2 Duo or AMD Athlon 64x2 5600+",
+      "gpu": "NVIDIA® GeForce® GT 420 or ATI™ Radeon™ HD 6850 or Intel® HD Graphics 4000 or better with 2 GB V",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "15 GB",
+      "storageGB": 15,
+      "os": "Windows 10 64bit"
+    },
+    "recommended": {
+      "cpu": "2.4 Ghz i5 or greater or AMD equivalent",
+      "gpu": "Nvidia® GTX 650 or AMD HD 5850 or better DirectX: Version 11 Network: Broadband Internet connection",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "15 GB",
+      "storageGB": 15,
+      "os": "Windows 10 64bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:07:03.501Z"
+}

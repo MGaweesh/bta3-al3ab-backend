@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-650, 3.2 GHz or AMD Phenom II X4 965, 3.4 Ghz",
+      "gpu": "NVIDIA GeForce GTX 660ti (2 GB",
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "32 GB",
+      "storageGB": 32,
+      "os": "*: 64 bit: Vista, Win 7, Win 8, Win 10"
+    },
+    "recommended": {
+      "cpu": "Intel Core i7-3770, 3.4 GHz or AMD FX-8350, 4.0 GHz",
+      "gpu": "NVIDIA GeForce GTX 760 (3 GB",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "32 GB",
+      "storageGB": 32,
+      "os": "*: 64 bit: Win 7 SP1, Win 8.1, Win 10"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:04:35.892Z"
+}

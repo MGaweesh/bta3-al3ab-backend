@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "Card with 2GB V",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "7 GB",
+      "storageGB": 7,
+      "os": "OS: Windows 10/11 64 Bit"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": null,
+      "ram": null,
+      "ramGB": null,
+      "storage": null,
+      "storageGB": null,
+      "os": null
+    }
+  },
+  "fetchedAt": "2026-04-21T17:08:18.208Z"
+}

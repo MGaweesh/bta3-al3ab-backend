@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i3-2100T / AMD FX 6100",
+      "gpu": "NVIDIA GeForce GTX 660 / AMD Radeon R7 260X",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "Windows 8.1 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i3-2100T / AMD FX 6100",
+      "gpu": "NVIDIA GeForce GTX 660 / AMD Radeon R7 260X",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "Windows 8.1 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:01:58.715Z"
+}

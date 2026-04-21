@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-2400s @ 2.5 GHz / AMD FX 6120 @ 3.5 GHz",
+      "gpu": "NVIDIA GeForce GTX 660 / AMD Radeon HD 7870 (2 GB VRAM)",
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "Windows 7 SP1 / 8 / 8.1 / 10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-2400s @ 2.5 GHz / AMD FX 6120 @ 3.5 GHz",
+      "gpu": "NVIDIA GeForce GTX 660 / AMD Radeon HD 7870 (2 GB VRAM)",
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "Windows 7 SP1 / 8 / 8.1 / 10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:06:33.474Z"
+}

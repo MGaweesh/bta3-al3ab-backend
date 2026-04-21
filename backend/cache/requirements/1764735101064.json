@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "AMD HD 7870, 2 GB / NVIDIA GTX 660, 2 GB DirectX: Version 11 Network: Broadband Internet connection",
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "70 GB",
+      "storageGB": 70,
+      "os": "OS *: Windows 7 SP1 with Platform Update"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "AMD RX 480, 4 GB or RX580, 4GB / NVIDIA GTX 970, 4GB or GTX1060, 6GB DirectX: Version 11 Network: Broadband Internet connection",
+      "ram": "12 GB",
+      "ramGB": 12,
+      "storage": "70 GB",
+      "storageGB": 70,
+      "os": "OS: Windows 10 Creators Update"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:07:57.123Z"
+}

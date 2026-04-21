@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "(AMD) Radeon HD 5870 or equivalent (Nvidia) GeForce GT 640 or equivalent DirectX: Version 11 Network: Broadband Internet connection",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "45 GB",
+      "storageGB": 45,
+      "os": "OS: WIndows 10, 64 Bit"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "(AMD) Radeon R9 270x or equivalent (Nvidia) GeForce GTX 660 or Equivalent DirectX: Version 11 Network: Broadband Internet connection",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "45 GB",
+      "storageGB": 45,
+      "os": "OS: WIndows 10, 64 Bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:07:11.988Z"
+}

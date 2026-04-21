@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "AMD Radeon™ RX 470, NVIDIA® GeForce® GTX 970 / 1060 or Intel® Arc™ A580 DirectX: Version 12 Network: Broadband Internet connection Additional Notes: SSD with 161 GB available space at launch",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "161 GB",
+      "storageGB": 161,
+      "os": "OS: Windows® 10 64 Bit (latest update)"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "AMD Radeon™ RX 6600XT, NVIDIA® GeForce® RTX 3060 or Intel® Arc™ B580 DirectX: Version 12 Network: Broadband Internet connection Additional Notes: SSD with 161 GB available space at launch",
+      "ram": "12 GB",
+      "ramGB": 12,
+      "storage": "161 GB",
+      "storageGB": 161,
+      "os": "OS: Windows® 11 64 Bit (latest update)"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:06:56.721Z"
+}

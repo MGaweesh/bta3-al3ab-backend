@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i3-2100 / AMD equivalent",
+      "gpu": "NVIDIA GeForce GTX 480 / AMD Radeon HD 5870",
+      "ram": "2 GB",
+      "ramGB": 2,
+      "storage": "12 GB",
+      "storageGB": 12,
+      "os": "Windows XP / Vista / 7 / 8"
+    },
+    "recommended": {
+      "cpu": "Intel Core i3-2100 / AMD equivalent",
+      "gpu": "NVIDIA GeForce GTX 480 / AMD Radeon HD 5870",
+      "ram": "2 GB",
+      "ramGB": 2,
+      "storage": "12 GB",
+      "storageGB": 12,
+      "os": "Windows XP / Vista / 7 / 8"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:06:23.626Z"
+}

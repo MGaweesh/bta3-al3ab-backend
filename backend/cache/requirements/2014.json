@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "2.4 GHz Dual Core Processor",
+      "gpu": "NVIDIA GeForce 8500 / ATI Radeon HD 2600",
+      "ram": "2 GB",
+      "ramGB": 2,
+      "storage": "13 GB",
+      "storageGB": 13,
+      "os": "Windows XP SP3"
+    },
+    "recommended": {
+      "cpu": "2.4 GHz Dual Core Processor",
+      "gpu": "NVIDIA GeForce 8500 / ATI Radeon HD 2600",
+      "ram": "2 GB",
+      "ramGB": 2,
+      "storage": "13 GB",
+      "storageGB": 13,
+      "os": "Windows XP SP3"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:02:40.068Z"
+}

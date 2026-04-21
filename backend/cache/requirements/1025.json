@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-2500K @ 3.3GHz / AMD FX 6300 @ 3.5GHz",
+      "gpu": "NVIDIA GeForce GTX 780 3GB / AMD Radeon R9 290 4GB",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "100 GB",
+      "storageGB": 100,
+      "os": "Windows 10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-2500K @ 3.3GHz / AMD FX 6300 @ 3.5GHz",
+      "gpu": "NVIDIA GeForce GTX 780 3GB / AMD Radeon R9 290 4GB",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "100 GB",
+      "storageGB": 100,
+      "os": "Windows 10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:01:21.402Z"
+}

@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "i7 or an equivalent with four plus core processor",
+      "gpu": "GTX 460 or equivalent 1 GB V",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "*: 64-bit Windows 7 SP1/Windows 8.1"
+    },
+    "recommended": {
+      "cpu": "i7 with four plus cores",
+      "gpu": "GeForce GTX 670 or equivalent with 4GBs of V",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "50 GB",
+      "storageGB": 50,
+      "os": "*: 64-bit Windows 7 SP1/Windows 8.1"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:06:03.252Z"
+}

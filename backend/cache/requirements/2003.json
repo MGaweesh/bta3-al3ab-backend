@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "3.0GHz CPU Dual Core",
+      "gpu": "Geforce GTX 750 / Radeon R7 260X DirectX: Version 11",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "6 GB",
+      "storageGB": 6,
+      "os": "*: Windows 7, 64-bit"
+    },
+    "recommended": {
+      "cpu": "2.4GHz CPU Quad Core",
+      "gpu": "Geforce GTX 780 / Radeon R9 290X DirectX: Version 11",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "6 GB",
+      "storageGB": 6,
+      "os": "*: Windows 7, 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:02:18.229Z"
+}

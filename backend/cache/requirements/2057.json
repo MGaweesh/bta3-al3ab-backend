@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-4590 / AMD FX 8350",
+      "gpu": "NVIDIA GeForce GTX 770 / AMD Radeon R9 280X",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "25 GB",
+      "storageGB": 25,
+      "os": "Windows 7/8/10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-4590 / AMD FX 8350",
+      "gpu": "NVIDIA GeForce GTX 770 / AMD Radeon R9 280X",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "25 GB",
+      "storageGB": 25,
+      "os": "Windows 7/8/10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:03:59.960Z"
+}

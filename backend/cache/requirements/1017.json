@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "2GB AMD Radeon HD 7770 / 2GB NVIDIA GeForce GTX 670 DirectX: Version 11",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "25 GB",
+      "storageGB": 25,
+      "os": "OS *: Windows 7 Service Pack 1 64-bit. Platform Update for Windows 7 SP1 and Windows Server 2008 R2"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "2GB ATI Radeon HD 7970, 2GB NVIDIA GeForce GTX 770 or better DirectX: Version 11",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "25 GB",
+      "storageGB": 25,
+      "os": "OS *: Windows 7 Service Pack 1 64-bit. Platform Update for Windows 7 SP1 and Windows Server 2008 R2"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:01:05.468Z"
+}

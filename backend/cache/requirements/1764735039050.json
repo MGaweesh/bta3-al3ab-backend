@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "RTX 2060 Super (8GB) DirectX: Version 12",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "118 GB",
+      "storageGB": 118,
+      "os": "OS: Windows® 10, Windows® 11 (64-bit OS required)"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "RTX 3080 DirectX: Version 12",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "118 GB",
+      "storageGB": 118,
+      "os": "OS: Windows® 10, Windows® 11 (64-bit OS required)"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:07:54.102Z"
+}

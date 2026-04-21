@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "GeForce GTX 560 Ti (1GB), Radeon HD 7750 (1GB) DirectX: Version 10",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "8 GB",
+      "storageGB": 8,
+      "os": "OS: Windows 10 version 21H1 (build 19043) or newer"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "GeForce GTX 1050 (2GB), Radeon R9 380 (2GB) DirectX: Version 10",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "8 GB",
+      "storageGB": 8,
+      "os": "OS: Windows 10 version 21H1 (build 19043) or newer"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:04:10.567Z"
+}

@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-8400/AMD Ryzen 5 1600",
+      "gpu": "NVIDIA GeForce GTX 1060 6GB/AMD Radeon RX 580 8GB DirectX: Version 12",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "60 GB",
+      "storageGB": 60,
+      "os": "Windows10 64bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i7-9700/AMD Ryzen 5 5500",
+      "gpu": "NVIDIA GeForce RTX 2070/AMD Radeon RX 5700 XT/INTEL Arc A750 DirectX: Version 12",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "60 GB",
+      "storageGB": 60,
+      "os": "Windows10/11 64bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:08:15.015Z"
+}

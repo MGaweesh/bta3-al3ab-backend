@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "(AMD): Athlon X2 2.8 GHz Processor (Intel): Core 2 Duo 2.4 GHz",
+      "gpu": "card (AMD): AMD Radeon HD 3870 Graphics card (NVIDIA): Nvidia GeForce 8800 GT Network: Broadband Internet connection",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "30 GB",
+      "storageGB": 30,
+      "os": "*: Windows 8 32-bit"
+    },
+    "recommended": {
+      "cpu": "(AMD): Six-core CPU Processor (Intel): Quad-core CPU",
+      "gpu": "card (AMD): AMD Radeon HD 7870 Graphics card (Nvidia): NVIDIA GeForce GTX 660 Network: Broadband Internet connection",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "30 GB",
+      "storageGB": 30,
+      "os": "*: Windows 8 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:01:54.471Z"
+}

@@ -184,8 +184,7 @@ async function fetchAllRequirements() {
       
       // Save progress after each batch
       if (updated > 0) {
-        writeFileSync(GAMES_FILE_TMP, JSON.stringify(gamesData, null, 2), 'utf8');
-        renameSync(GAMES_FILE_TMP, GAMES_FILE);
+        writeFileSync(GAMES_FILE, JSON.stringify(gamesData, null, 2), 'utf8');
         console.log(`  💾 Progress saved (${updated} updated, ${failed} failed)`);
       }
       

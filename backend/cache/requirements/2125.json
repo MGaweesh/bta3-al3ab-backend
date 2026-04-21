@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i3 2.00 GHz or AMD equivalent",
+      "gpu": "NVIDIA GeForce 450 or higher with 1GB",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "5 GB",
+      "storageGB": 5,
+      "os": "*: Windows 7 or higher 64bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i3 2.00 GHz or AMD equivalent",
+      "gpu": "NVIDIA GeForce 450 or higher with 1GB",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "5 GB",
+      "storageGB": 5,
+      "os": "*: Windows 7 or higher 64bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:06:14.746Z"
+}

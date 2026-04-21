@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "NVIDIA GTX 1060 (6GB) or AMD RX 5500 XT (8GB) or Intel Arc A750 DirectX: Version 12",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "190 GB",
+      "storageGB": 190,
+      "os": "OS: Windows 10 20H1"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "NVIDIA RTX 2060 Super or AMD RX 5700 or Intel Arc A770 DirectX: Version 12",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "190 GB",
+      "storageGB": 190,
+      "os": "OS: Windows 10 20H1"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:03:42.343Z"
+}

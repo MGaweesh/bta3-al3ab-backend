@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-2300 @ 2.8 GHz / AMD FX-8350 @ 4.2 GHz",
+      "gpu": "NVIDIA GeForce GTX 780 / AMD Radeon HD 7950 (3 GB VRAM)",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "55 GB",
+      "storageGB": 55,
+      "os": "Windows 10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-2300 @ 2.8 GHz / AMD FX-8350 @ 4.2 GHz",
+      "gpu": "NVIDIA GeForce GTX 780 / AMD Radeon HD 7950 (3 GB VRAM)",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "55 GB",
+      "storageGB": 55,
+      "os": "Windows 10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:03:06.464Z"
+}

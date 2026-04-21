@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-750 / AMD Phenom II X4 955",
+      "gpu": "NVIDIA GeForce GTX 460 / AMD Radeon HD 5850",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "30 GB",
+      "storageGB": 30,
+      "os": "Windows 7 SP1/8/8.1/10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-750 / AMD Phenom II X4 955",
+      "gpu": "NVIDIA GeForce GTX 460 / AMD Radeon HD 5850",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "30 GB",
+      "storageGB": 30,
+      "os": "Windows 7 SP1/8/8.1/10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:06:57.733Z"
+}

@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "NVIDIA GeForce GTX 550 Ti, 1GB or AMD Radeon HD 5770, 1GB",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "35.3 GB",
+      "storageGB": 35.3,
+      "os": "OS: Windows 10"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "NVIDIA GeForce GTX 780, 3GB or AMD Radeon RX 470, 4GB or Intel Arc A310, 4GB",
+      "ram": "12 GB",
+      "ramGB": 12,
+      "storage": "35.3 GB",
+      "storageGB": 35.3,
+      "os": "OS: Windows 10"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:08:06.193Z"
+}

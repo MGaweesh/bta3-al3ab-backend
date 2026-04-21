@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5 2400 @ 3.1 GHz or AMD FX 6350 @ 3.9 GHz",
+      "gpu": "NVIDIA GeForce GTX 670 (2GB) or AMD Radeon R9 270X (2GB) or better",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "30 GB",
+      "storageGB": 30,
+      "os": "Windows 10 (64bit versions only)"
+    },
+    "recommended": {
+      "cpu": "Intel Core i7-4790 @ 3.6 GHz or AMD Ryzen 5 1600 @ 3.2 GHz",
+      "gpu": "NVIDIA GeForce GTX 970 (4GB) or AMD Radeon R9 290X (4GB) or better",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "30 GB",
+      "storageGB": 30,
+      "os": "Windows 10 (64bit versions only)"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:03:29.069Z"
+}

@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core i5-8600K / AMD Ryzen 5 3600",
+      "gpu": "NVIDIA GeForce GTX 970 4GB / AMD Radeon RX 590 8GB",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "55 GB",
+      "storageGB": 55,
+      "os": "Windows 10 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-8600K / AMD Ryzen 5 3600",
+      "gpu": "NVIDIA GeForce GTX 970 4GB / AMD Radeon RX 590 8GB",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "55 GB",
+      "storageGB": 55,
+      "os": "Windows 10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:02:16.456Z"
+}

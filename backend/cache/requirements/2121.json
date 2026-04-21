@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "AMD Ryzen 5 3600 / Intel Core i7-8700",
+      "gpu": "AMD Radeon RX 5700 XT 8GB / NVIDIA GeForce RTX 2070 SUPER 8GB",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "110 GB",
+      "storageGB": 110,
+      "os": "Windows 10 64-bit"
+    },
+    "recommended": {
+      "cpu": "AMD Ryzen 5 3600 / Intel Core i7-8700",
+      "gpu": "AMD Radeon RX 5700 XT 8GB / NVIDIA GeForce RTX 2070 SUPER 8GB",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "110 GB",
+      "storageGB": 110,
+      "os": "Windows 10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:06:05.762Z"
+}

@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Core 2 Duo 2.6GHz, AMD Phenom X3 8750",
+      "gpu": "NVIDIA GeForce 8800 GT with 512 MB",
+      "ram": "2 GB",
+      "ramGB": 2,
+      "storage": "10 GB",
+      "storageGB": 10,
+      "os": "*: Windows® XP / Vista / 7"
+    },
+    "recommended": {
+      "cpu": "Intel Core 2 Quad 2.7 GHz or better, AMD Phenom II X4 3 GHz or better",
+      "gpu": "NVIDIA GeForce GTX 460 (1GB) or better, ATI Radeon HD 5850 (1GB) or better",
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": null,
+      "storageGB": null,
+      "os": "*: Windows 7"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:07:35.913Z"
+}

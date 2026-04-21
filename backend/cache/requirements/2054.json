@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "and operating",
+      "gpu": "Nvidia GeForce GTX 760 2GB / AMD Radeon R9 280 3GB",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "10 GB",
+      "storageGB": 10,
+      "os": "OS: Windows 10"
+    },
+    "recommended": {
+      "cpu": "and operating",
+      "gpu": "Nvidia GeForce GTX 970 4GB / AMD Radeon RX 570 4GB",
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "10 GB",
+      "storageGB": 10,
+      "os": "OS: Windows 10"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:03:54.428Z"
+}

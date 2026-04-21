@@ -1,0 +1,24 @@
+{
+  "source": "fallback",
+  "requirements": {
+    "minimum": {
+      "cpu": "AMD FX-6100 / Intel Core i3-3220",
+      "gpu": "AMD Radeon R7 360 / NVIDIA GeForce GTX 650",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "25 GB",
+      "storageGB": 25,
+      "os": "Windows 10 64-bit"
+    },
+    "recommended": {
+      "cpu": "AMD FX-6100 / Intel Core i3-3220",
+      "gpu": "AMD Radeon R7 360 / NVIDIA GeForce GTX 650",
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "25 GB",
+      "storageGB": 25,
+      "os": "Windows 10 64-bit"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:06:59.573Z"
+}

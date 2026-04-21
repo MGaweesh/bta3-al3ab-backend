@@ -1,0 +1,24 @@
+{
+  "source": "steam",
+  "requirements": {
+    "minimum": {
+      "cpu": "Intel Pentium 4 3+GHz or AMD Athlon 2.5+GHz",
+      "gpu": "Card: NVIDIA GeForce 6 series 6800GT (or better) / ATI 1800XT (or better) Sound Card: Direct X 9.0c compatible sound card and drivers Hard Drive Space: 8 GB Free Space",
+      "ram": "1GB",
+      "ramGB": 1,
+      "storage": "8 GB",
+      "storageGB": 8,
+      "os": "Microsoft Windows XP (admin rights required)/Microsoft Windows Vista (admin rights required) Process"
+    },
+    "recommended": {
+      "cpu": "Intel Core 2 Duo 2.2 GHz or Athlon 64 X2 4400+",
+      "gpu": "Card: NVIDIA GeForce 9800 GTX or ATI HD4800 Sound Card: Direct X 9.0c compatible sound card and drivers Hard Drive Space: 8 GB Free Space Controller: Micr",
+      "ram": "2 GB",
+      "ramGB": 2,
+      "storage": "8 GB",
+      "storageGB": 8,
+      "os": "Microsoft Windows XP (admin rights required)/Microsoft Windows Vista (admin rights required) Process"
+    }
+  },
+  "fetchedAt": "2026-04-21T17:06:30.496Z"
+}
