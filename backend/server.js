@@ -1810,8 +1810,8 @@ const CPU_POWER_MAP = {
 // Benchmarks: UserBenchmark / TechPowerUp / Digital Foundry averages @ 1080p
 const GPU_CLASS_MAP = {
   // NVIDIA RTX 50 Series
-  'rtx 5090': 200, 'rtx 5080': 175, 'rtx 5070 ti': 158,
-  'rtx 5070': 142, 'rtx 5060 ti': 118, 'rtx 5060': 100,
+  'rtx 5090': 280, 'rtx 5080': 225, 'rtx 5070 ti': 195,
+  'rtx 5070': 175, 'rtx 5060 ti': 155, 'rtx 5060': 135, 'rtx 5050': 110,
   // NVIDIA RTX 40 Series
   'rtx 4090': 200, 'rtx 4080 super': 175, 'rtx 4080': 168,
   'rtx 4070 ti super': 155, 'rtx 4070 ti': 148, 'rtx 4070 super': 138,
@@ -1852,7 +1852,7 @@ const GPU_CLASS_MAP = {
   'gtx 1660 ti laptop': 55, 'gtx 1650 laptop': 38,
   'mx570': 28, 'mx550': 24, 'mx450': 20, 'mx350': 16, 'mx250': 12,
   // AMD RX 9000
-  'rx 9070 xt': 148, 'rx 9070': 132,
+  'rx 9070 xt': 185, 'rx 9070': 165,
   // AMD RX 7000
   'rx 7900 xtx': 175, 'rx 7900 xt': 158, 'rx 7900 gre': 138,
   'rx 7800 xt': 122, 'rx 7700 xt': 105, 'rx 7600 xt': 88, 'rx 7600': 80,
@@ -1952,7 +1952,7 @@ function evaluateSingleGPU(gpuString) {
   }
   // Fallback: try to extract a 4-digit model number and estimate
   const numMatch = gpuLower.match(/(\d{4})/);
-  if (numMatch) return Math.min(100, parseInt(numMatch[1]) / 50);
+  if (numMatch) return Math.min(150, parseInt(numMatch[1]) / 40);
   return 20; // unknown GPU, assume low-end
 }
 
