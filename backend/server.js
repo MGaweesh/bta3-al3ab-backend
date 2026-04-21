@@ -1780,23 +1780,6 @@ function compareHardwareSmart(userSpecs, gameRequirements) {
   const minGPUPower = getGPUPower(minReq.gpu || '');
   const recGPUPower = getGPUPower(recReq.gpu || '');
 
-  console.log('--- DEBUG PERFORMANCE ENGINE ---');
-  console.log('CPU:', { 
-    user: userSpecs.cpu, userPower: userCPUPower, 
-    minReq: minReq.cpu, minPower: minCPUPower, 
-    recReq: recReq.cpu, recPower: recCPUPower,
-    score: cpuScore 
-  });
-  console.log('GPU:', { 
-    user: userSpecs.gpu, userPower: userGPUPower, 
-    minReq: minReq.gpu, minPower: minGPUPower, 
-    recReq: recReq.gpu, recPower: recCPUPower,
-    score: gpuScore 
-  });
-  console.log('RAM:', { user: userRAM, min: minRAM, rec: recRAM, score: ramScore });
-  console.log('Overall:', { score: overallScore, rating });
-  console.log('--------------------------------');
-
   // RAM comparison
   const parseRAM = (ram) => {
     if (!ram || ram === 'غير موجود') return 0;
