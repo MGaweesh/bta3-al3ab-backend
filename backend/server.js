@@ -440,10 +440,12 @@ app.use((err, req, res, next) => {
   next();
 });
 
-// ----- ROOT route -----
-app.get('/', (req, res) => {
+// ----- API index route -----
+// NOTE: '/' is intentionally NOT overridden here so the SPA (frontend/dist/index.html)
+// is served when this backend also hosts the frontend. Use '/api' for the JSON summary.
+app.get('/api', (req, res) => {
   res.json({
-    message: 'Backend is running! متاح على /api',
+    message: 'Backend is running!',
     api: {
       health: '/api/health',
       games: '/api/games',
@@ -451,7 +453,7 @@ app.get('/', (req, res) => {
       movies: '/api/movies',
       moviesByType: '/api/movies/:type (movies, tvShows, anime)'
     },
-    storage: 'JSON files with GitHub sync'
+    storage: 'MongoDB'
   });
 });
 
