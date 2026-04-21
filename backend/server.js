@@ -484,6 +484,14 @@ const readMoviesData = async () => {
   }
 };
 
+const buildIdQuery = (rawId) => {
+  const numericId = Number(rawId);
+  if (Number.isFinite(numericId)) {
+    return { $in: [numericId, String(numericId)] };
+  }
+  return { $in: [rawId, String(rawId)] };
+};
+
 // Helper function to write/update games data to MongoDB
 // NOTE: usage is writeGamesData(fullJsonObject)
 const writeGamesData = async (data, action = 'update') => {
@@ -960,6 +968,9 @@ app.get('/api/movies', async (req, res) => {
 
 // GET movies by type
 app.get('/api/movies/:type', async (req, res) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
   try {
     const { type } = req.params;
     const validTypes = ['movies', 'tvShows', 'anime'];
@@ -1014,7 +1025,6 @@ app.post('/api/movies/:type', async (req, res) => {
 app.put('/api/movies/:type/:id', async (req, res) => {
   try {
     const { type, id } = req.params;
-    const itemId = parseInt(id);
     const validTypes = ['movies', 'tvShows', 'anime'];
 
     if (!validTypes.includes(type)) {
@@ -1030,13 +1040,13 @@ app.put('/api/movies/:type/:id', async (req, res) => {
     // Build update object
     const updateData = {
       ...req.body,
-      id: itemId,
+      id: Number.isFinite(Number(id)) ? Number(id) : id,
       category: type,
       updatedAt: new Date().toISOString()
     };
 
     const result = await db.updateOne(
-      { id: itemId },
+      { id: buildIdQuery(id) },
       { $set: updateData }
     );
 
@@ -1075,15 +1085,13 @@ app.delete('/api/movies/:type/:id', async (req, res) => {
     console.log(`🗑️  [${new Date().toISOString()}] Deleting item from type: ${type}, ID: ${id}`);
 
     const db = getCollection('movies');
-    const itemId = parseInt(id);
-
-    const result = await db.deleteOne({ id: itemId });
+    const result = await db.deleteOne({ id: buildIdQuery(id) });
 
     if (result.deletedCount === 0) {
       return res.status(404).json({ error: 'Item not found' });
     }
 
-    console.log(`✅ [${new Date().toISOString()}] Item deleted (ID: ${itemId})`);
+    console.log(`✅ [${new Date().toISOString()}] Item deleted (ID: ${id})`);
     res.json({
       status: 'ok',
       message: 'Item deleted successfully'
