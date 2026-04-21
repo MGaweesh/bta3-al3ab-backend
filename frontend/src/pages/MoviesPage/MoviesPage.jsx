@@ -91,7 +91,7 @@ function MoviesPage() {
       const first = entries[0]
       if (first.isIntersecting && !loading) {
         // Load more items
-        const totalItems = filteredItems !== null ? filteredItems.length : items.length
+        const totalItems = (filteredItems && Array.isArray(filteredItems)) ? filteredItems.length : items.length
         
         console.log(`[DEBUG] Infinite Scroll Triggered. Current displayCount: ${displayCount}, Total items available: ${totalItems}`)
         
@@ -114,7 +114,7 @@ function MoviesPage() {
         observer.unobserve(currentLoader)
       }
     }
-  }, [items.length, filteredItems.length])
+  }, [items.length, filteredItems?.length])
 
   // Get visible items
   // Logic to determine which items to show
