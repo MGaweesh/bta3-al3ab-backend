@@ -134,6 +134,104 @@ function GameDetailsModal({ game, isOpen, onClose, isSelected, onToggle, onWhats
                                 )}
                             </div>
 
+                            {/* System Requirements */}
+                            {(game.requirements || game.systemRequirements) && (
+                                <div>
+                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                                        <svg className="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                                        </svg>
+                                        متطلبات التشغيل
+                                    </h3>
+                                    <div className="grid grid-cols-1 gap-3">
+                                        {/* Minimum Requirements */}
+                                        {(game.requirements || game.systemRequirements?.minimum) && (
+                                            <div className="p-4 bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 rounded-xl border border-purple-200 dark:border-purple-700/50">
+                                                <h4 className="font-bold text-purple-700 dark:text-purple-300 mb-3">الحد الأدنى</h4>
+                                                <div className="space-y-2 text-sm">
+                                                    {(() => {
+                                                        const reqs = game.requirements || game.systemRequirements?.minimum || {};
+                                                        return (
+                                                            <>
+                                                                {reqs.cpu && reqs.cpu !== 'N/A' && (
+                                                                    <div>
+                                                                        <span className="font-semibold text-gray-700 dark:text-gray-300">المعالج:</span>
+                                                                        <span className="text-gray-600 dark:text-gray-400 mr-2">{reqs.cpu}</span>
+                                                                    </div>
+                                                                )}
+                                                                {reqs.gpu && reqs.gpu !== 'N/A' && (
+                                                                    <div>
+                                                                        <span className="font-semibold text-gray-700 dark:text-gray-300">كرت الشاشة:</span>
+                                                                        <span className="text-gray-600 dark:text-gray-400 mr-2">{reqs.gpu}</span>
+                                                                    </div>
+                                                                )}
+                                                                {reqs.ram && reqs.ram !== 'N/A' && (
+                                                                    <div>
+                                                                        <span className="font-semibold text-gray-700 dark:text-gray-300">الرام:</span>
+                                                                        <span className="text-gray-600 dark:text-gray-400 mr-2">{reqs.ram}</span>
+                                                                    </div>
+                                                                )}
+                                                                {reqs.storage && reqs.storage !== 'N/A' && (
+                                                                    <div>
+                                                                        <span className="font-semibold text-gray-700 dark:text-gray-300">المساحة:</span>
+                                                                        <span className="text-gray-600 dark:text-gray-400 mr-2">{reqs.storage}</span>
+                                                                    </div>
+                                                                )}
+                                                                {reqs.os && reqs.os !== 'N/A' && (
+                                                                    <div>
+                                                                        <span className="font-semibold text-gray-700 dark:text-gray-300">نظام التشغيل:</span>
+                                                                        <span className="text-gray-600 dark:text-gray-400 mr-2">{reqs.os}</span>
+                                                                    </div>
+                                                                )}
+                                                            </>
+                                                        );
+                                                    })()}
+                                                </div>
+                                            </div>
+                                        )}
+                                        
+                                        {/* Recommended Requirements */}
+                                        {game.systemRequirements?.recommended && (
+                                            <div className="p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl border border-green-200 dark:border-green-700/50">
+                                                <h4 className="font-bold text-green-700 dark:text-green-300 mb-3">الموصى به</h4>
+                                                <div className="space-y-2 text-sm">
+                                                    {game.systemRequirements.recommended.cpu && (
+                                                        <div>
+                                                            <span className="font-semibold text-gray-700 dark:text-gray-300">المعالج:</span>
+                                                            <span className="text-gray-600 dark:text-gray-400 mr-2">{game.systemRequirements.recommended.cpu}</span>
+                                                        </div>
+                                                    )}
+                                                    {game.systemRequirements.recommended.gpu && (
+                                                        <div>
+                                                            <span className="font-semibold text-gray-700 dark:text-gray-300">كرت الشاشة:</span>
+                                                            <span className="text-gray-600 dark:text-gray-400 mr-2">{game.systemRequirements.recommended.gpu}</span>
+                                                        </div>
+                                                    )}
+                                                    {game.systemRequirements.recommended.ram && (
+                                                        <div>
+                                                            <span className="font-semibold text-gray-700 dark:text-gray-300">الرام:</span>
+                                                            <span className="text-gray-600 dark:text-gray-400 mr-2">{game.systemRequirements.recommended.ram}</span>
+                                                        </div>
+                                                    )}
+                                                    {game.systemRequirements.recommended.storage && (
+                                                        <div>
+                                                            <span className="font-semibold text-gray-700 dark:text-gray-300">المساحة:</span>
+                                                            <span className="text-gray-600 dark:text-gray-400 mr-2">{game.systemRequirements.recommended.storage}</span>
+                                                        </div>
+                                                    )}
+                                                    {game.systemRequirements.recommended.os && (
+                                                        <div>
+                                                            <span className="font-semibold text-gray-700 dark:text-gray-300">نظام التشغيل:</span>
+                                                            <span className="text-gray-600 dark:text-gray-400 mr-2">{game.systemRequirements.recommended.os}</span>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            )}
+
                             {/* Call to Action for Specs */}
                             <div className="p-4 bg-blue-500/10 rounded-xl border border-blue-500/20 text-center">
                                 <p className="text-sm text-blue-600 dark:text-blue-400 font-medium mb-3">

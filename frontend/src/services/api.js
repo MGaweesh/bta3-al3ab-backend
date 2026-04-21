@@ -31,9 +31,10 @@ console.log('📦 Production mode:', import.meta.env.PROD);
 
 class ApiService {
   async request(endpoint, options = {}) {
-    // Standard request without cache busting
+    // Add cache buster for GET requests
     const separator = endpoint.includes('?') ? '&' : '?';
-    const url = `${API_BASE_URL}${endpoint}`;
+    const cacheBuster = options.method === 'GET' || !options.method ? `${separator}_t=${Date.now()}` : '';
+    const url = `${API_BASE_URL}${endpoint}${cacheBuster}`;
 
     // Log request in development
     if (import.meta.env.DEV || import.meta.env.VITE_DEBUG === 'true') {
