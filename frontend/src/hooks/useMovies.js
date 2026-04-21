@@ -77,6 +77,15 @@ export const useMovies = () => {
     }))
   }
 
+  // Helper to deduplicate items by id (keep last occurrence)
+  const deduplicateById = (items) => {
+    const seen = new Map()
+    for (const item of items) {
+      seen.set(item.id, item)
+    }
+    return Array.from(seen.values())
+  }
+
   // Helper to sort items alphabetically by name
   const sortItemsAlphabetically = (items) => {
     return [...items].sort((a, b) => {
@@ -103,6 +112,24 @@ export const useMovies = () => {
 
       console.log('🔄 Loading movies...')
 
+      // Clear potentially corrupted/duplicate cache on first load
+      if (!forceRefresh) {
+        try {
+          const savedAnime = getLocalData('anime_cache')
+          // If cache has duplicates (same id appears more than once), clear it
+          const animeIds = savedAnime.map(a => a.id)
+          const hasDuplicates = animeIds.length !== new Set(animeIds).size
+          if (hasDuplicates) {
+            console.warn('⚠️ Duplicate IDs detected in cache, clearing...')
+            localStorage.removeItem('movies_cache')
+            localStorage.removeItem('tvShows_cache')
+            localStorage.removeItem('anime_cache')
+          }
+        } catch (e) {
+          // ignore
+        }
+      }
+
       // 1. Try to load from LocalStorage first (Instant Load)
       if (!forceRefresh) {
         try {
@@ -112,9 +139,9 @@ export const useMovies = () => {
 
           if (savedMovies.length > 0 || savedTvShows.length > 0 || savedAnime.length > 0) {
             console.log('📦 Loaded items from cache')
-            setMovies(sortItemsAlphabetically(addImagesToItems(savedMovies)))
-            setTvShows(sortItemsAlphabetically(addImagesToItems(savedTvShows)))
-            setAnime(sortItemsAlphabetically(addImagesToItems(savedAnime)))
+            setMovies(sortItemsAlphabetically(deduplicateById(addImagesToItems(savedMovies))))
+            setTvShows(sortItemsAlphabetically(deduplicateById(addImagesToItems(savedTvShows))))
+            setAnime(sortItemsAlphabetically(deduplicateById(addImagesToItems(savedAnime))))
             setLoading(false)
           }
         } catch (e) {
@@ -132,9 +159,9 @@ export const useMovies = () => {
       })
 
       // Add images and sort items alphabetically
-      const sortedMovies = sortItemsAlphabetically(addImagesToItems(data.movies || []))
-      const sortedTvShows = sortItemsAlphabetically(addImagesToItems(data.tvShows || []))
-      const sortedAnime = sortItemsAlphabetically(addImagesToItems(data.anime || []))
+      const sortedMovies = sortItemsAlphabetically(deduplicateById(addImagesToItems(data.movies || [])))
+      const sortedTvShows = sortItemsAlphabetically(deduplicateById(addImagesToItems(data.tvShows || [])))
+      const sortedAnime = sortItemsAlphabetically(deduplicateById(addImagesToItems(data.anime || [])))
 
       // 3. Update State
       setMovies(sortedMovies)
@@ -157,9 +184,9 @@ export const useMovies = () => {
         if (isNetworkError) {
           // Instead of failing, load fallback data like useGames does!
           console.warn('⚠️ Network error, using fallback data')
-          setMovies(sortItemsAlphabetically(addImagesToItems(initialMovies)))
-          setTvShows(sortItemsAlphabetically(addImagesToItems(initialTvShows)))
-          setAnime(sortItemsAlphabetically(addImagesToItems(initialAnime)))
+          setMovies(sortItemsAlphabetically(deduplicateById(addImagesToItems(initialMovies))))
+          setTvShows(sortItemsAlphabetically(deduplicateById(addImagesToItems(initialTvShows))))
+          setAnime(sortItemsAlphabetically(deduplicateById(addImagesToItems(initialAnime))))
           // IMPORTANT: Do NOT set error here, otherwise UI will block the content with error screen
           // We only set error if we couldn't even load fallback data (which is hardcoded, so unlikely)
         } else {

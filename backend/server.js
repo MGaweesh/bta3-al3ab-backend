@@ -1845,13 +1845,14 @@ function compareHardwareSmart(userSpecs, gameRequirements) {
   const userPixels = userRes.w * userRes.h;
   const resolutionFactor = userPixels / basePixels; // 1.0 at 1080p, 4.0 at 4K
 
-  // Refresh rate factor: 60 Hz = 1.0, 144 Hz ≈ 1.2, 240 Hz ≈ 1.35
-  const refreshFactor = Math.sqrt(userHz / 60);
+  // Refresh rate factor: 60 Hz = 1.0, 144 Hz ≈ 1.10, 240 Hz ≈ 1.18
+  // Refresh rate has a minor effect on GPU demand (frame pacing, not raw pixel count)
+  const refreshFactor = 1 + (Math.log(userHz / 60) / Math.log(4)) * 0.2;
 
-  // Combined GPU demand multiplier (resolution dominates, refresh adds ~10-35%)
+  // Combined GPU demand multiplier (resolution dominates, refresh adds ~5-20%)
   const gpuDemandMultiplier = Math.sqrt(resolutionFactor) * refreshFactor;
   // √ because GPU scales roughly with √(pixels) in practice (bandwidth + fill-rate)
-  // Examples: 1080p/60 → 1.0 | 1440p/60 → 1.15 | 4K/60 → 2.0 | 4K/144 → 2.38
+  // Examples: 1080p/60 → 1.0 | 1440p/60 → 1.15 | 4K/60 → 2.0 | 1440p/180 → 1.27
 
   // CPU comparison
   const userCPUPower = getCPUPower(userSpecs.cpu || '');

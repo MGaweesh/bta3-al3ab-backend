@@ -3573,9 +3573,9 @@
           "os": "Windows 10 64-bit"
         },
         "recommended": {
-          "cpu": "Intel Core i7-6700 / AMD Ryzen 5 1600",
-          "gpu": "NVIDIA GeForce GTX 1060 6GB / AMD Radeon RX 580 8GB",
-          "ram": "12 GB",
+          "cpu": "Intel Core i7-8700K / AMD Ryzen 5 3600",
+          "gpu": "NVIDIA GeForce RTX 2060 Super / AMD Radeon RX 5700 XT",
+          "ram": "16 GB",
           "storage": "70 GB",
           "os": "Windows 10 64-bit"
         }

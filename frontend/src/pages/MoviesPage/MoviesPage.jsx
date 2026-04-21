@@ -317,7 +317,7 @@ function MoviesPage() {
             <AnimatePresence mode="popLayout">
               {visibleItems.map((item, index) => (
                 <MovieCard
-                  key={item.id}
+                  key={`${item.id}-${index}`}
                   item={item}
                   isSelected={isItemSelected(item, item.categoryType)}
                   onToggle={() => toggleItem(item, item.categoryType)}

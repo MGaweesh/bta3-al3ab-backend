@@ -515,7 +515,7 @@ function Home() {
             {anime.length > 0 ? (
               getPopularItems(anime, 8).map((animeItem, index) => (
                 <MovieCard
-                  key={animeItem.id}
+                  key={`${animeItem.id}-${index}`}
                   item={animeItem}
                   isSelected={selectedItems.includes(`anime-${animeItem.id}`)}
                   onToggle={() => toggleItem(animeItem, animeItem.type)}
